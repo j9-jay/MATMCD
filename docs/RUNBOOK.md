@@ -12,7 +12,7 @@ python3 -B scripts/setup_environment.py
 python3 -B scripts/prepare_workspace.py
 ```
 
-패키지 설치와 파일 링크만 수행하며 실험을 호출하지 않는다. 원본 requirements를 사용한다. 현재 전체 버전은 `docs/evidence/installed_freeze.txt`로 보존했다. 저자가 고정하지 않은 Python 패치와 setuptools는 재설치 시 달라질 수 있으므로 로컬 snapshot과 비교해야 한다. 경로의 기준은 `configs/paths.json`이다.
+패키지 설치, 파일 링크, 공식 코드가 요구하는 요약 저장 경로 준비만 수행하며 실험을 호출하지 않는다. 원본 requirements를 사용한다. 현재 전체 버전은 `docs/evidence/installed_freeze.txt`로 보존했다. 저자가 고정하지 않은 Python 패치와 setuptools는 재설치 시 달라질 수 있으므로 로컬 snapshot과 비교해야 한다. 경로의 기준은 `configs/paths.json`이다.
 
 ```bash
 MATMCD_ENV_PY=$(python3 -B -c 'import sys; sys.path.insert(0,"scripts"); from project_paths import asset_path; print(asset_path("environment")/"bin"/"python")')
@@ -27,7 +27,7 @@ MATMCD_ENV_PY=$(python3 -B -c 'import sys; sys.path.insert(0,"scripts"); from pr
 
 현재 작업공간은 `MATMCD_DATA/workspaces/d2i_matmcd_original`이다. 공식 코드와 확보한 CSV/BIF를 상대 symlink로 연결했다. WSL에서 사용한다. 원본 코드는 `./data`, `./cache`, `./image`를 쓰므로 이후 실행 시 현재 디렉터리는 반드시 이 외부 작업공간이어야 한다. `official/matmcd` 안에서 실행하여 Git 내부에 실험 자산을 쌓지 않는다.
 
-향후 출력은 작업공간의 `cache/`, `image/`, stdout에 생긴다. 출력 폴더를 미리 만들지 않았다. 필요한 원본 상대경로 구조를 보존하기 위한 실행 작업공간이며 원본 다운로드와 논문 분석 자료는 별도 위치에 있다.
+향후 출력은 작업공간의 `cache/`, `image/`, stdout에 생긴다. `cache/Summarized_info`는 공식 저장 함수가 부모를 생성하지 않으므로 준비 스크립트에서 생성한다(CODE-03 해결). 이 폴더에는 아직 요약 파일이 없다. 그 밖의 출력 폴더는 미리 만들지 않는다. 필요한 원본 상대경로 구조를 보존하기 위한 실행 작업공간이며 원본 다운로드와 논문 분석 자료는 별도 위치에 있다.
 
 `GTdatasets_experiment.py`, `LEMMA_experiment.py`, `LEMMA_Metrics.py`, `data/SampleFromBIF.py`는 module import만으로 실행될 수 있다. 환경 확인 목적으로 import하지 않는다.
 

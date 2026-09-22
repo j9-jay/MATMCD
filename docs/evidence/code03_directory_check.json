@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-09-22T14:50:42.636070+00:00",
+  "blocker": "CODE-03",
+  "status": "RESOLVED",
+  "path_relative_to_asset_root": "workspaces/d2i_matmcd_original/cache/Summarized_info",
+  "directory_exists": true,
+  "temporary_write_check_passed": true,
+  "temporary_file_removed": true,
+  "summary_directory_entries": [],
+  "official_files_checked": 43,
+  "official_bytes_match_preserved_archive": true,
+  "experiments_executed": false,
+  "api_calls": false,
+  "generated_summary_or_model_cache": false
+}

@@ -15,8 +15,15 @@
 | ACCESS-01 | API 키는 원본에서 모두 빈 값. 기본 모델·embedding·검색은 외부 서비스 | 별도 과금 API 금지 조건에서 원본 end-to-end 실행 불가. 임의 로컬 모델 대체 안 함 |
 | CODE-01 | `Web_tools.py:75` 프롬프트는 `Search Query`, `:89` 응답 검사는 `Search Question` | 지시대로 응답하면 검색이 종료되어 RAG 자료가 생성되지 않을 수 있음. 파서 수정 안 함 |
 | CODE-02 | `GTdatasets_experiment.py` MATMCD/MATMCD-RE 단계가 `use_cache=True`; `ConstrainNormalAgent.generate_domain_knowledge`는 존재 확인/재생성 없이 np.load | 새 환경에는 `_with_info`/`_reasoning` 캐시가 없어 첫 실행이 완주하지 못함. 캐시 조작이나 옵션 변경 안 함 |
-| CODE-03 | `generate_dataset_summary`는 `output_dir` 생성 없이 파일을 씀 | 공개 실행이 요구하는 `cache/Summarized_info`가 없으면 저장 실패. 이번에는 실행을 성공시키기 위한 빈 폴더/우회 생성 안 함 |
 | CODE-04 | BIF 생성 파일에 `_1000`이 붙고 loader 기대 파일에는 없음 | 파일명 대응 절차가 README에 명확히 없음. 정확 표본 확보 전 임의 이름 변경 안 함 |
+
+## 해결한 항목
+
+| ID | 원인 | 처리 및 검증 |
+|---|---|---|
+| CODE-03 | `generate_dataset_summary`가 부모 폴더 생성 없이 요약 파일을 저장함 | 2026-09-22: 두 공식 진입점에 명시된 `cache/Summarized_info`를 외부 작업공간에 준비. `scripts/prepare_workspace.py`에도 반영. WSL 임시 파일 쓰기/정리 확인, 공식 파일 43개 보존 확인. 요약·캐시 내용과 실험 결과는 생성하지 않음. [TASK_011](../tasks/TASK_011_summary_output_directory.md), [검증 기록](evidence/code03_directory_check.json) |
+
+CODE-03의 해결은 저장 경로에 한정된다. 요약 생성에 필요한 입력·패키지·API와 나머지 코드 문제는 여전히 미해결이다.
 
 ## 논문과 코드의 과학적 조건 차이
 

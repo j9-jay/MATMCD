@@ -1,4 +1,4 @@
-"""외부 작업공간에 원본 코드와 확보된 입력만 연결한다. 실험을 실행하지 않는다."""
+"""외부 작업공간에 원본 코드·입력을 연결하고 필수 저장 경로를 준비한다."""
 import json
 import os
 import sys
@@ -35,8 +35,14 @@ def main():
         source = ASSETS / f"datasets/bnlearn_{name}_network/{name}.bif"
         if source.exists():
             link(source, workspace / "data" / "BIF" / source.name)
+    # 원본 두 실험 진입점이 이 경로를 지정하지만 저장 함수는 부모를 만들지 않는다.
+    summary_dir = workspace / "cache" / "Summarized_info"
+    if not summary_dir.resolve().is_relative_to(workspace):
+        raise RuntimeError(f"요약 저장 경로가 작업공간 밖을 가리킵니다: {summary_dir}")
+    summary_dir.mkdir(parents=True, exist_ok=True)
     print(f"작업공간: {workspace}")
-    print("원본 코드/확보된 입력만 링크했습니다. 누락 CSV, 캐시, 결과 폴더는 생성하지 않았습니다.")
+    print(f"원본 코드가 요구하는 요약 저장 폴더: {summary_dir}")
+    print("코드/입력 링크와 필수 경로만 준비했습니다. 실험·API 호출·캐시 내용 생성은 수행하지 않았습니다.")
 
 
 if __name__ == "__main__":
