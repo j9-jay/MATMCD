@@ -1,0 +1,129 @@
+{
+  "checked_utc": "2026-09-21T15:57:18.875918+00:00",
+  "files": [
+    {
+      "url": "https://www.bnlearn.com/bnrepository/asia/asia.bif.gz",
+      "path": "raw_downloads/bnlearn_asia_network/asia.bif.gz",
+      "role": "Bayesian network; 논문 실제 샘플 아님",
+      "status": "downloaded_verified",
+      "sha256": "7d5e7b8549834824c1b05f367eb7860fa3fca3adaf3649f0c7be6035af197197",
+      "bytes": 310
+    },
+    {
+      "url": "https://www.bnlearn.com/bnrepository/child/child.bif.gz",
+      "path": "raw_downloads/bnlearn_child_network/child.bif.gz",
+      "role": "Bayesian network; 논문 실제 샘플 아님",
+      "status": "downloaded_verified",
+      "sha256": "2bc3236dcbdbf9c9f1bbdeb060aa93c0bdee389d23a549b7248b9d89ed8a980c",
+      "bytes": 1443
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Cloud_Computing_Preprocessed/resolve/03f82a2c4b16afe09e9315def9f5d6990427000a/Log%20Data/20231207.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed/Log Data/20231207.zip",
+      "bytes": 277339693,
+      "sha256": "72563cc9a78f3398a7fd37c5fbb1e06fe63ab18af6de24d3c6e2d26ca289c587",
+      "revision": "03f82a2c4b16afe09e9315def9f5d6990427000a",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Cloud_Computing_Preprocessed/resolve/03f82a2c4b16afe09e9315def9f5d6990427000a/Metrics%20Data/20231207.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed/Metrics Data/20231207.zip",
+      "bytes": 36190702,
+      "sha256": "17f6b57e75ab38e1657f3324ed91b71d5ab3540ed6cea93c23324f696a228b27",
+      "revision": "03f82a2c4b16afe09e9315def9f5d6990427000a",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Cloud_Computing_Preprocessed/resolve/03f82a2c4b16afe09e9315def9f5d6990427000a/README.md?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed/README.md",
+      "bytes": 1487,
+      "sha256": "05cc6707f3697b14c7166d62f4923dca4514485f91be18a9f3ee1a9ebea57a72",
+      "revision": "03f82a2c4b16afe09e9315def9f5d6990427000a",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Log%20Data/20210517.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20210517.zip",
+      "bytes": 1601666419,
+      "sha256": "409b5a022466da368abd896a947fb7462441d50a28425c548ef41bdb4c8b5789",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Log%20Data/20210524.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20210524.zip",
+      "bytes": 1596661007,
+      "sha256": "fb02696ad2e87e72281df044bf768d26a0b16e628840aebd9d9da344cfefe1a3",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Log%20Data/20211203.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20211203.zip",
+      "bytes": 1327897003,
+      "sha256": "d41e122c605425d975e4f40314579731f7d79b14b7791e08859bcebddf09e4f8",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Log%20Data/20220606.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20220606.zip",
+      "bytes": 1443654612,
+      "sha256": "f79d42748649daf3fb6f3536bd7ff4a206ab7784ee976cb6ac74b0ec5226553e",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Metrics%20Data/20210517.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20210517.zip",
+      "bytes": 231033802,
+      "sha256": "7a44a4186fb495770a9349d689d6d972edd2acfece50c9444c1970eed43c0a50",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Metrics%20Data/20210524.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20210524.zip",
+      "bytes": 240598842,
+      "sha256": "d5ea121d30cc8e0c71100344d37b8265a7fd2eb06e1634abfc0906055d289437",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Metrics%20Data/20211203.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20211203.zip",
+      "bytes": 144944525,
+      "sha256": "44ba14d4547dc30ac5b98318bdcf07ddddcfcbd741faa4a6b830285db5059735",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/Metrics%20Data/20220606.zip?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20220606.zip",
+      "bytes": 69027896,
+      "sha256": "aff69acf7b5c26e0b783623cce37bc67d1509677bda318507a5795ff2545bfe7",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/resolve/df25484004e50483de6f6756c3a4d7ab03174b83/README.md?download=true",
+      "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/README.md",
+      "bytes": 1322,
+      "sha256": "798b21071ec0d31d237fcdbb65279e34a0824dab510926e3011234e2b2d6f73a",
+      "revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+      "role": "공식 전처리 배포본; MATMCD의 EVT 필터 후 입력과 동일성 미확인",
+      "status": "downloaded_verified"
+    }
+  ]
+}

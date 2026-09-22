@@ -1,0 +1,47 @@
+{
+  "started_utc": "20260921T155108Z",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "commands": [
+    {
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "venv",
+        "--python",
+        "3.11",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python",
+        "-r",
+        "/mnt/e/연구/MATMCD/official/matmcd/requirements.txt"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "check",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "log": "/mnt/e/연구/MATMCD_DATA/logs/setup/environment_20260921T155108Z.log",
+  "success": true
+}

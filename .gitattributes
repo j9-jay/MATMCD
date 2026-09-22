@@ -1,0 +1,5 @@
+*.md text eol=lf
+*.json text eol=lf
+scripts/*.py text eol=lf
+# 공식 export는 Windows checkout에서도 원본 바이트를 보존한다.
+official/matmcd/** -text

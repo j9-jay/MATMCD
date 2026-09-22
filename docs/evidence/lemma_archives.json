@@ -1,0 +1,248 @@
+[
+  {
+    "archive": "huggingface_lemma_rca_cloud_computing_preprocessed\\Log Data\\20231207.zip",
+    "entries": 394,
+    "uncompressed_bytes": 5610880683,
+    "npy_files": [
+      "log_data/pod_level_log_frequency.npy",
+      "log_data/pod_level_log_golden_signal.npy"
+    ],
+    "csv_examples": [
+      "log_data/pod_removed/adservice-7df8c84f69-zgsdx_messages_structured.csv",
+      "log_data/pod_removed/adservice-7df8c84f69-zgsdx_messages_templates.csv",
+      "log_data/pod_removed/aws-load-balancer-controller-69bd799c8c-489sn_messages_structured.csv",
+      "log_data/pod_removed/aws-load-balancer-controller-69bd799c8c-489sn_messages_templates.csv",
+      "log_data/pod_removed/aws-load-balancer-controller-69bd799c8c-8mmpq_messages_structured.csv",
+      "log_data/pod_removed/aws-load-balancer-controller-69bd799c8c-8mmpq_messages_templates.csv",
+      "log_data/pod_removed/aws-load-balancer-controller-69bd799c8c-f8qn9_messages_structured.csv",
+      "log_data/pod_removed/aws-load-balancer-controller-69bd799c8c-f8qn9_messages_templates.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_cloud_computing_preprocessed\\Metrics Data\\20231207.zip",
+    "entries": 16,
+    "uncompressed_bytes": 825325833,
+    "npy_files": [
+      "20231207/node_level_data_cpu_usage.npy",
+      "20231207/node_level_data_memory_usage.npy",
+      "20231207/node_level_data_net_disk_io_usage.npy",
+      "20231207/node_level_data_net_disk_space_usage.npy",
+      "20231207/node_level_data_net_receive.npy",
+      "20231207/node_level_data_net_transmit.npy",
+      "20231207/pod_level_data_cpu_usage.npy",
+      "20231207/pod_level_data_memory_usage.npy",
+      "20231207/pod_level_data_rate_received_packets.npy",
+      "20231207/pod_level_data_rate_storage_iops.npy",
+      "20231207/pod_level_data_rate_transmitted_packets.npy",
+      "20231207/pod_level_data_received_bandwidth.npy",
+      "20231207/pod_level_data_transmit_bandwidth.npy"
+    ],
+    "csv_examples": [
+      "20231207/kpi_20231207.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Log Data\\20210517.zip",
+    "entries": 2114,
+    "uncompressed_bytes": 23846260181,
+    "npy_files": [
+      "log_data/pod_level_log_golden_signal.npy",
+      "log_data/pod_level_log_frequency.npy"
+    ],
+    "csv_examples": [
+      "log_data/node_removed/ocp4-control-plane-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-compute-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-control-plane-2_messages_templates.csv",
+      "log_data/node_removed/ocp4-infra-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-control-plane-3_messages_structured.csv",
+      "log_data/node_removed/ocp4-control-plane-3_messages_templates.csv",
+      "log_data/node_removed/ocp4-compute-2_messages_structured.csv",
+      "log_data/node_removed/ocp4-control-plane-1_messages_structured.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Log Data\\20210524.zip",
+    "entries": 2097,
+    "uncompressed_bytes": 23849207631,
+    "npy_files": [
+      "log_data/pod_level_log_frequency.npy",
+      "log_data/pod_level_log_golden_signal.npy"
+    ],
+    "csv_examples": [
+      "log_data/pod_removed/redhat-operators-2cxxs_messages_templates.csv",
+      "log_data/pod_removed/certified-operators-574x5_messages_structured.csv",
+      "log_data/pod_removed/community-operators-j5xnw_messages_templates.csv",
+      "log_data/pod_removed/redhat-operators-g2vh7_messages_structured.csv",
+      "log_data/pod_removed/certified-operators-pbbvv_messages_templates.csv",
+      "log_data/pod_removed/community-operators-4lnsf_messages_structured.csv",
+      "log_data/pod_removed/community-operators-59rpx_messages_templates.csv",
+      "log_data/pod_removed/redhat-marketplace-xn2nf_messages_templates.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Log Data\\20211203.zip",
+    "entries": 2358,
+    "uncompressed_bytes": 14557332406,
+    "npy_files": [
+      "log_data/pod_level_log_golden_signal.npy",
+      "log_data/pod_level_log_frequency.npy"
+    ],
+    "csv_examples": [
+      "log_data/node_removed/ocp4-control-plane-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-compute-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-control-plane-2_messages_templates.csv",
+      "log_data/node_removed/ocp4-infra-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-control-plane-3_messages_structured.csv",
+      "log_data/node_removed/ocp4-control-plane-3_messages_templates.csv",
+      "log_data/node_removed/ocp4-compute-2_messages_structured.csv",
+      "log_data/node_removed/ocp4-control-plane-1_messages_structured.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Log Data\\20220606.zip",
+    "entries": 2376,
+    "uncompressed_bytes": 17361901058,
+    "npy_files": [
+      "log_data/pod_level_log_frequency.npy",
+      "log_data/pod_level_log_golden_signal.npy"
+    ],
+    "csv_examples": [
+      "log_data/node_removed/ocp4-control-plane-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-compute-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-control-plane-2_messages_templates.csv",
+      "log_data/node_removed/ocp4-infra-1_messages_templates.csv",
+      "log_data/node_removed/ocp4-control-plane-3_messages_structured.csv",
+      "log_data/node_removed/ocp4-control-plane-3_messages_templates.csv",
+      "log_data/node_removed/ocp4-compute-2_messages_structured.csv",
+      "log_data/node_removed/ocp4-control-plane-1_messages_structured.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Metrics Data\\20210517.zip",
+    "entries": 21,
+    "uncompressed_bytes": 3839809946,
+    "npy_files": [
+      "20210517/node_level_data_cpu_saturation.npy",
+      "20210517/node_level_data_cpu_usage.npy",
+      "20210517/node_level_data_memory_saturation.npy",
+      "20210517/node_level_data_memory_usage.npy",
+      "20210517/node_level_data_net_disk_io_saturation.npy",
+      "20210517/node_level_data_net_disk_io_usage.npy",
+      "20210517/node_level_data_net_disk_space_usage.npy",
+      "20210517/node_level_data_net_saturation_receive.npy",
+      "20210517/node_level_data_net_saturation_transmit.npy",
+      "20210517/node_level_data_net_usage_receive(bytes).npy",
+      "20210517/node_level_data_net_usage_transmit(bytes).npy",
+      "20210517/p2n.npy",
+      "20210517/pod_level_data_cpu_usage.npy",
+      "20210517/pod_level_data_memory_usage.npy",
+      "20210517/pod_level_data_rate_received_packets.npy",
+      "20210517/pod_level_data_rate_transmitted_packets.npy",
+      "20210517/pod_level_data_received_bandwidth.npy",
+      "20210517/pod_level_data_transmit_bandwidth.npy"
+    ],
+    "csv_examples": [
+      "20210517/KPI.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Metrics Data\\20210524.zip",
+    "entries": 21,
+    "uncompressed_bytes": 4032776774,
+    "npy_files": [
+      "20210524/node_level_data_cpu_saturation.npy",
+      "20210524/node_level_data_cpu_usage.npy",
+      "20210524/node_level_data_memory_saturation.npy",
+      "20210524/node_level_data_memory_usage.npy",
+      "20210524/node_level_data_net_disk_io_saturation.npy",
+      "20210524/node_level_data_net_disk_io_usage.npy",
+      "20210524/node_level_data_net_disk_space_usage.npy",
+      "20210524/node_level_data_net_saturation_receive.npy",
+      "20210524/node_level_data_net_saturation_transmit.npy",
+      "20210524/node_level_data_net_usage_receive(bytes).npy",
+      "20210524/node_level_data_net_usage_transmit(bytes).npy",
+      "20210524/p2n.npy",
+      "20210524/pod_level_data_cpu_usage.npy",
+      "20210524/pod_level_data_memory_usage.npy",
+      "20210524/pod_level_data_rate_received_packets.npy",
+      "20210524/pod_level_data_rate_transmitted_packets.npy",
+      "20210524/pod_level_data_received_bandwidth.npy",
+      "20210524/pod_level_data_transmit_bandwidth.npy"
+    ],
+    "csv_examples": [
+      "20210524/KPI.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Metrics Data\\20211203.zip",
+    "entries": 27,
+    "uncompressed_bytes": 1710964135,
+    "npy_files": [
+      "20211203/node_level_data.npy",
+      "20211203/node_level_data_cpu.npy",
+      "20211203/node_level_data_cpu_saturation.npy",
+      "20211203/node_level_data_cpu_usage.npy",
+      "20211203/node_level_data_memory_saturation.npy",
+      "20211203/node_level_data_memory_usage.npy",
+      "20211203/node_level_data_net.npy",
+      "20211203/node_level_data_net_disk_io_saturation.npy",
+      "20211203/node_level_data_net_disk_io_usage.npy",
+      "20211203/node_level_data_net_disk_space_usage.npy",
+      "20211203/node_level_data_net_saturation_receive.npy",
+      "20211203/node_level_data_net_saturation_transmit.npy",
+      "20211203/node_level_data_net_usage_receive(bytes).npy",
+      "20211203/node_level_data_net_usage_transmit(bytes).npy",
+      "20211203/node_level_data_successful_rate.npy",
+      "20211203/p2n.npy",
+      "20211203/pod_level_data.npy",
+      "20211203/pod_level_data_cpu_usage.npy",
+      "20211203/pod_level_data_memory_usage.npy",
+      "20211203/pod_level_data_rate_received_packets.npy",
+      "20211203/pod_level_data_rate_transmitted_packets.npy",
+      "20211203/pod_level_data_received_bandwidth.npy",
+      "20211203/pod_level_data_successful_rate.npy",
+      "20211203/pod_level_data_transmit_bandwidth.npy"
+    ],
+    "csv_examples": [
+      "20211203/kpi.csv"
+    ],
+    "expected_matmcd_csvs": []
+  },
+  {
+    "archive": "huggingface_lemma_rca_product_review_preprocessed\\Metrics Data\\20220606.zip",
+    "entries": 21,
+    "uncompressed_bytes": 1382991227,
+    "npy_files": [
+      "20220606/node_level_data_cpu_saturation.npy",
+      "20220606/node_level_data_cpu_usage.npy",
+      "20220606/node_level_data_memory_saturation.npy",
+      "20220606/node_level_data_memory_usage.npy",
+      "20220606/node_level_data_net_disk_io_saturation.npy",
+      "20220606/node_level_data_net_disk_io_usage.npy",
+      "20220606/node_level_data_net_disk_space_usage.npy",
+      "20220606/node_level_data_net_saturation_receive.npy",
+      "20220606/node_level_data_net_saturation_transmit.npy",
+      "20220606/node_level_data_net_usage_receive(bytes).npy",
+      "20220606/node_level_data_net_usage_transmit(bytes).npy",
+      "20220606/p2n.npy",
+      "20220606/pod_level_data_cpu_usage.npy",
+      "20220606/pod_level_data_memory_usage.npy",
+      "20220606/pod_level_data_rate_received_packets.npy",
+      "20220606/pod_level_data_rate_transmitted_packets.npy",
+      "20220606/pod_level_data_received_bandwidth.npy",
+      "20220606/pod_level_data_transmit_bandwidth.npy"
+    ],
+    "csv_examples": [
+      "20220606/reviews-v3_Incoming_Success_Rate_non5xxresponses_By_Source.csv"
+    ],
+    "expected_matmcd_csvs": []
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "benchmark_source_commit": "5aaeaea89e71e2cff443289e473c06d2f79172c5",
+  "benchmark_files": {
+    "Auto_MPG_data.csv": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/Auto MPG data.csv",
+    "Auto_MPG_GTmatrix.csv": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_Auto MPG data.csv",
+    "DWD_climate_data.csv": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/DWD climate data.csv",
+    "DWD_climate_GTmatrix.csv": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_DWD climate data.csv",
+    "Sachs_data.csv": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/Sachs data.csv",
+    "Sachs_GTmatrix.csv": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_Sachs data.csv"
+  },
+  "missing_benchmark_inputs": [
+    "asia_data.csv", "asia_GTmatrix.csv", "child_data.csv", "child_GTmatrix.csv"
+  ],
+  "missing_rca_inputs": [
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210517.csv",
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210524.csv",
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv",
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20220606.csv",
+    "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv"
+  ],
+  "notes": [
+    "누락 목록은 저자가 실제 사용한 입력이 확보되기 전까지 생성하지 않는다.",
+    "Asia/Child BIF가 있어도 동일한 1000개 샘플이라는 뜻은 아니다.",
+    "LEMMA 공식 배포 NPY/로그는 MATMCD의 EVT 필터 이후 CSV와 구분한다."
+  ]
+}

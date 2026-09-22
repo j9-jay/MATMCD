@@ -1,0 +1,7 @@
+{
+  "asset_root": "../../MATMCD_DATA",
+  "official_source": "official/matmcd",
+  "runtime_workspace": "workspaces/d2i_matmcd_original",
+  "environment": "environments/d2i_matmcd_py311",
+  "setup_logs": "logs/setup"
+}

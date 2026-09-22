@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-09-21T16:01:48.298661+00:00",
+  "paper": {
+    "provided_path": "../MATMCD.pdf",
+    "arxiv": "2412.13667v2",
+    "sha256": "4d8bdb33a382ddceb73dfba2ee752075225b13b01231a033d99235a825baf2f5",
+    "pages": 25,
+    "asset_copy": "raw_downloads/user_matmcd_paper/MATMCD.pdf",
+    "analysis": "analysis/user_matmcd_paper"
+  },
+  "sources": [
+    {
+      "id": "matmcd",
+      "url": "https://github.com/D2I-Group/matmcd",
+      "commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+      "path": "official/matmcd",
+      "path_base": "project"
+    },
+    {
+      "id": "benchmark_csv",
+      "url": "https://github.com/mas-takayama/LLM-and-SCD",
+      "commit": "5aaeaea89e71e2cff443289e473c06d2f79172c5",
+      "path": "raw_downloads/github_mas_takayama_llm_and_scd",
+      "path_base": "asset_root"
+    },
+    {
+      "id": "lemma_preprocessing",
+      "url": "https://github.com/lemma-rca/rca_baselines",
+      "commit": "c560d8cc39c19f04c9ae74fac2404b1e5e8c3b4d",
+      "path": "raw_downloads/github_lemma_rca_preprocessing",
+      "path_base": "asset_root"
+    },
+    {
+      "id": "efficient_cdlms",
+      "url": "https://github.com/superkaiba/causal-llm-bfs",
+      "commit": "80c9f5d1eb49b74335ec178798671b34c3742776",
+      "path": "raw_downloads/github_superkaiba_causal_llm_bfs",
+      "path_base": "asset_root"
+    }
+  ],
+  "source_archive_sha256": "3cf8a201c477d857e3e32715656e7f7329469dffa086aaabd97c621a48be2647",
+  "requirements_sha256": "77f447f5b87343e32e5554e7ab22072e0fdbafab16db7dafaa21c37b481f798a"
+}

@@ -1,0 +1,1337 @@
+{
+  "checked_utc": "2026-09-21T16:05:42.166853+00:00",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.11.13 (main, Sep  2 2025, 14:20:25) [Clang 20.1.4 ]",
+  "python_executable": "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python",
+  "experiments_executed": false,
+  "api_calls": false,
+  "official_source": {
+    "commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+    "all_match": true,
+    "files": [
+      {
+        "path": "Client/LlamaClient.py",
+        "sha256": "79e4392930fe5191939b0457cdc85166fa1e37befd1fd02ca2a3f5845f4f9642",
+        "matches": true
+      },
+      {
+        "path": "Client/MistralClient.py",
+        "sha256": "ee1b2ed804451c7c6abd5a80c632cf878e1a289921d91df6d25fa189e3f1662f",
+        "matches": true
+      },
+      {
+        "path": "Client/OpenAiClient.py",
+        "sha256": "4cd896fe5070908dfad0f124c2c35a5de288537b1df53d9e91062579ecf24f7e",
+        "matches": true
+      },
+      {
+        "path": "Client/ReactClient.py",
+        "sha256": "c3eb525babfb0f412231156d6d55f428299be55e0720d944e45eaaea2b1da009",
+        "matches": true
+      },
+      {
+        "path": "ConstrainAgent/ConstrainAgent.py",
+        "sha256": "755241696847d358bc68f645e82ea438836190f8741af01674029c499b41c9e1",
+        "matches": true
+      },
+      {
+        "path": "ConstrainAgent/LLMs.py",
+        "sha256": "e4f482fbedb28f311e985c8465b622b14e297d22367216bde471e8fcc206eed7",
+        "matches": true
+      },
+      {
+        "path": "GTdatasets_experiment.py",
+        "sha256": "751afbbdcb3a2ceb9fb8603b95b03e51fd9ccaf5636bc3385683d021d318ef78",
+        "matches": true
+      },
+      {
+        "path": "LEMMA_Metrics.py",
+        "sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+        "matches": true
+      },
+      {
+        "path": "LEMMA_experiment.py",
+        "sha256": "b7714e30ed516bfa8e978ff2f602ac9df1cb8163b19331429a316c3352875035",
+        "matches": true
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "4f5a4d351d3cc12d1007d1c18d84381723da2a714a8cde41d3b29b6e9c1e7162",
+        "matches": true
+      },
+      {
+        "path": "Log_tools.py",
+        "sha256": "be8fe013eb6dfc382045739c015b4c28fe5605c7ad5e4228589d6619cc8ec7be",
+        "matches": true
+      },
+      {
+        "path": "README.md",
+        "sha256": "62a4a00b3ac81bff4c6612276ad4fed926461d3103dd0d9b0d89c186f5b548d7",
+        "matches": true
+      },
+      {
+        "path": "Utils/CausalDiscovery.py",
+        "sha256": "9fae6eebc7f49d742564d01134f2b235269981b90f9d655942bc0a8e714e8db0",
+        "matches": true
+      },
+      {
+        "path": "Utils/RCA.py",
+        "sha256": "479d1540c1c5f89e62fedfb89d871af7f1297fd849e187aa149cd16ddd71c47d",
+        "matches": true
+      },
+      {
+        "path": "Utils/data.py",
+        "sha256": "3e0a2ebe42877df49c1084d7ac0d437475c17a7a7ccb1b17b2de38832d1a39f6",
+        "matches": true
+      },
+      {
+        "path": "Utils/metrics.py",
+        "sha256": "e82b2c59d0aac2be2484e31ff167db2c65bc098745b5d378e11169ee02659115",
+        "matches": true
+      },
+      {
+        "path": "Utils/visualize.py",
+        "sha256": "0a841d77ccfe0d108a8f719b9131ae2eaf7805b394ee33989ef0359b37c0ce1f",
+        "matches": true
+      },
+      {
+        "path": "Web_tools.py",
+        "sha256": "6c81ea50b3963b623a21895063bb6a593d3f3b8d42c18519d79d2d9affa3c673",
+        "matches": true
+      },
+      {
+        "path": "config.py",
+        "sha256": "fe29aa5570d5be10590276076baa671f282d95615448afc0bc9b6c55b1fc0c77",
+        "matches": true
+      },
+      {
+        "path": "data/SampleFromBIF.py",
+        "sha256": "ba382a20ed9266d909000c6e4538556f0b7249bbead7a87424ca7a9c48e19eda",
+        "matches": true
+      },
+      {
+        "path": "docs/.nojekyll",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches": true
+      },
+      {
+        "path": "docs/assets/fig1.png",
+        "sha256": "a0837b7f8f2ad66ae8c8bc09c52ca9b90ed77899bba414cdc53d40facc591f4f",
+        "matches": true
+      },
+      {
+        "path": "docs/assets/fig2.png",
+        "sha256": "6324090543b4488249717b9a22c790167bf89a9547365d5cd586e72c3707c5e8",
+        "matches": true
+      },
+      {
+        "path": "docs/assets/fig3.png",
+        "sha256": "5727372f0e538b8b797dd05873244a0caae55b370ea5b1dda402a9d215506b5d",
+        "matches": true
+      },
+      {
+        "path": "docs/assets/fig4.png",
+        "sha256": "9787cb1f344ae3078402dd31a9537845e9b2a472a5ba03f323b397e26bf14e7e",
+        "matches": true
+      },
+      {
+        "path": "docs/assets/fig5.png",
+        "sha256": "644db6e97319ab4f6a0bbd15c720b7c91490c4161f4bf251b0254d34c1865077",
+        "matches": true
+      },
+      {
+        "path": "docs/index.html",
+        "sha256": "e9d09ce4d1c72c81ed5716e2dc6b3bf07551502f4327995d8811bef12927e678",
+        "matches": true
+      },
+      {
+        "path": "docs/static/css/style.css",
+        "sha256": "bb9303662fb7723e8190850b902abce095ff295129e0ebc8cd1e4f1b092265da",
+        "matches": true
+      },
+      {
+        "path": "docs/static/js/core.js",
+        "sha256": "580519b09acf0a4660df742cb71e87e41cee741bf99621963e8a3f01275e2e06",
+        "matches": true
+      },
+      {
+        "path": "docs/static/js/main.js",
+        "sha256": "14671ce03e8b8528f3330853454713edecf186d9ccec14183c7af59f6ce1553b",
+        "matches": true
+      },
+      {
+        "path": "image/model_framework.jpg",
+        "sha256": "19d536de7808b319c48b6ee53e620f19ba6173c671267b8492c8bbe90206e03a",
+        "matches": true
+      },
+      {
+        "path": "image/table1.png",
+        "sha256": "355e96ced49e312329f59de3f2d9f2e57f87c3a594540d934b69b05703fa3046",
+        "matches": true
+      },
+      {
+        "path": "image/table2.png",
+        "sha256": "e357d5429b5486a446c4c8cbdd900a0c8271e66d04d4ffd734ed480a26a64af3",
+        "matches": true
+      },
+      {
+        "path": "image/table4.png",
+        "sha256": "e87e56f4a37892b45890579d58fb1924f445e6d05b16057ff982537cfb693315",
+        "matches": true
+      },
+      {
+        "path": "requirements.txt",
+        "sha256": "77f447f5b87343e32e5554e7ab22072e0fdbafab16db7dafaa21c37b481f798a",
+        "matches": true
+      },
+      {
+        "path": "web_utils/config/config.yaml",
+        "sha256": "7b8c59c29516fa001db029168a6f7069d50176cd0f2ab05a7448520218b559b6",
+        "matches": true
+      },
+      {
+        "path": "web_utils/fetch_web_content.py",
+        "sha256": "d59d6b2706c6720e2ce76906cf59d8deb412c523867d400f718d2a9feebaebe4",
+        "matches": true
+      },
+      {
+        "path": "web_utils/llm_answer.py",
+        "sha256": "ea5cb71bca72b65b7fdeda66527ecfa40defe3eafacbf74eb07006976cd8b31e",
+        "matches": true
+      },
+      {
+        "path": "web_utils/locate_reference.py",
+        "sha256": "ae6939b138b4db3590d9744e92485da775ce24be80d39adfcf659a15d715e684",
+        "matches": true
+      },
+      {
+        "path": "web_utils/main.py",
+        "sha256": "a98ac49c562b8b727c297018c9265d8ae9e3209a365b385d806fe9c665d05a3b",
+        "matches": true
+      },
+      {
+        "path": "web_utils/retrieval.py",
+        "sha256": "8625edc14588e94f7e52538dfa35344afa90e17e473b12a786f3131f9cc39f2e",
+        "matches": true
+      },
+      {
+        "path": "web_utils/serper_service.py",
+        "sha256": "b39c1912994b525185776ebfc62ffcce803cd00284c725273bb6ec02e74727dc",
+        "matches": true
+      },
+      {
+        "path": "web_utils/web_crawler.py",
+        "sha256": "a9c96b1013c33e9f95b590e2bb9c8871149a3912e1abcff35dd2db5853da80fb",
+        "matches": true
+      }
+    ]
+  },
+  "source_syntax": [
+    {
+      "path": "Client/LlamaClient.py",
+      "ok": true
+    },
+    {
+      "path": "Client/MistralClient.py",
+      "ok": true
+    },
+    {
+      "path": "Client/OpenAiClient.py",
+      "ok": true
+    },
+    {
+      "path": "Client/ReactClient.py",
+      "ok": true
+    },
+    {
+      "path": "ConstrainAgent/ConstrainAgent.py",
+      "ok": true
+    },
+    {
+      "path": "ConstrainAgent/LLMs.py",
+      "ok": true
+    },
+    {
+      "path": "GTdatasets_experiment.py",
+      "ok": true
+    },
+    {
+      "path": "LEMMA_Metrics.py",
+      "ok": true
+    },
+    {
+      "path": "LEMMA_experiment.py",
+      "ok": true
+    },
+    {
+      "path": "Log_tools.py",
+      "ok": true
+    },
+    {
+      "path": "Utils/CausalDiscovery.py",
+      "ok": true
+    },
+    {
+      "path": "Utils/RCA.py",
+      "ok": true
+    },
+    {
+      "path": "Utils/data.py",
+      "ok": true
+    },
+    {
+      "path": "Utils/metrics.py",
+      "ok": true
+    },
+    {
+      "path": "Utils/visualize.py",
+      "ok": true
+    },
+    {
+      "path": "Web_tools.py",
+      "ok": true
+    },
+    {
+      "path": "config.py",
+      "ok": true
+    },
+    {
+      "path": "data/SampleFromBIF.py",
+      "ok": true
+    },
+    {
+      "path": "web_utils/fetch_web_content.py",
+      "ok": true
+    },
+    {
+      "path": "web_utils/llm_answer.py",
+      "ok": true
+    },
+    {
+      "path": "web_utils/locate_reference.py",
+      "ok": true
+    },
+    {
+      "path": "web_utils/main.py",
+      "ok": true
+    },
+    {
+      "path": "web_utils/retrieval.py",
+      "ok": true
+    },
+    {
+      "path": "web_utils/serper_service.py",
+      "ok": true
+    },
+    {
+      "path": "web_utils/web_crawler.py",
+      "ok": true
+    }
+  ],
+  "benchmark_csvs": [
+    {
+      "name": "Auto_MPG_data.csv",
+      "source": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/Auto MPG data.csv",
+      "exists": true,
+      "sha256": "52a14349bc2b115831a9ed1558d5e95e791b430ae762db913b3ef50ba377cdd3",
+      "rows": 392,
+      "columns": 5,
+      "labels": [
+        "Displacement",
+        "Mpg",
+        "Horsepower",
+        "Weight",
+        "Acceleration"
+      ],
+      "numeric": true,
+      "rectangular": true
+    },
+    {
+      "name": "Auto_MPG_GTmatrix.csv",
+      "source": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_Auto MPG data.csv",
+      "exists": true,
+      "sha256": "609dd33ad37831d2f4f9baa940c7f31d42cbf1bdfe10d7bd06fa3a2e8b7eebb7",
+      "rows": 5,
+      "columns": 5,
+      "labels": null,
+      "numeric": true,
+      "rectangular": true
+    },
+    {
+      "name": "DWD_climate_data.csv",
+      "source": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/DWD climate data.csv",
+      "exists": true,
+      "sha256": "81f7cb2ceb9784cf9642fecd99acbbcfe0de888e18d9a840fef881f884439307",
+      "rows": 349,
+      "columns": 6,
+      "labels": [
+        "Altitude",
+        "Temperature",
+        "Precipitation",
+        "Longitude",
+        "Sunshine",
+        "Latitude"
+      ],
+      "numeric": true,
+      "rectangular": true
+    },
+    {
+      "name": "DWD_climate_GTmatrix.csv",
+      "source": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_DWD climate data.csv",
+      "exists": true,
+      "sha256": "daafa5b31ab52106af107940f180e0c84f1c2cca078c8b049587deffb05ded74",
+      "rows": 6,
+      "columns": 6,
+      "labels": null,
+      "numeric": true,
+      "rectangular": true
+    },
+    {
+      "name": "Sachs_data.csv",
+      "source": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/Sachs data.csv",
+      "exists": true,
+      "sha256": "981b533bec148baeec3fe00f1ee637cbde7558787eecdc596c3882ae7b3ebb9d",
+      "rows": 7466,
+      "columns": 11,
+      "labels": [
+        "raf",
+        "mek",
+        "plc",
+        "pip2",
+        "pip3",
+        "erk",
+        "akt",
+        "pka",
+        "pkc",
+        "p38",
+        "jnk"
+      ],
+      "numeric": true,
+      "rectangular": true
+    },
+    {
+      "name": "Sachs_GTmatrix.csv",
+      "source": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_Sachs data.csv",
+      "exists": true,
+      "sha256": "5d4e7d78571520f3a39c7347ff45361682e02f9c363698a7e12c3d37f0d9be47",
+      "rows": 11,
+      "columns": 11,
+      "labels": null,
+      "numeric": true,
+      "rectangular": true
+    }
+  ],
+  "missing_inputs": [
+    "asia_data.csv",
+    "asia_GTmatrix.csv",
+    "child_data.csv",
+    "child_GTmatrix.csv",
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210517.csv",
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210524.csv",
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv",
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20220606.csv",
+    "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv"
+  ],
+  "pinned_packages": [
+    {
+      "name": "absl-py",
+      "expected": "2.3.0",
+      "installed": "2.3.0",
+      "matches": true
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "expected": "2.6.1",
+      "installed": "2.6.1",
+      "matches": true
+    },
+    {
+      "name": "aiohttp",
+      "expected": "3.12.3",
+      "installed": "3.12.3",
+      "matches": true
+    },
+    {
+      "name": "aiosignal",
+      "expected": "1.3.2",
+      "installed": "1.3.2",
+      "matches": true
+    },
+    {
+      "name": "aiosqlite",
+      "expected": "0.21.0",
+      "installed": "0.21.0",
+      "matches": true
+    },
+    {
+      "name": "annotated-types",
+      "expected": "0.7.0",
+      "installed": "0.7.0",
+      "matches": true
+    },
+    {
+      "name": "anyio",
+      "expected": "4.8.0",
+      "installed": "4.8.0",
+      "matches": true
+    },
+    {
+      "name": "async-timeout",
+      "expected": "4.0.3",
+      "installed": "4.0.3",
+      "matches": true
+    },
+    {
+      "name": "attrs",
+      "expected": "25.3.0",
+      "installed": "25.3.0",
+      "matches": true
+    },
+    {
+      "name": "banks",
+      "expected": "2.1.2",
+      "installed": "2.1.2",
+      "matches": true
+    },
+    {
+      "name": "beautifulsoup4",
+      "expected": "4.13.4",
+      "installed": "4.13.4",
+      "matches": true
+    },
+    {
+      "name": "causal-learn",
+      "expected": "0.1.4.1",
+      "installed": "0.1.4.1",
+      "matches": true
+    },
+    {
+      "name": "certifi",
+      "expected": "2025.4.26",
+      "installed": "2025.4.26",
+      "matches": true
+    },
+    {
+      "name": "charset-normalizer",
+      "expected": "3.4.2",
+      "installed": "3.4.2",
+      "matches": true
+    },
+    {
+      "name": "click",
+      "expected": "8.2.1",
+      "installed": "8.2.1",
+      "matches": true
+    },
+    {
+      "name": "colorama",
+      "expected": "0.4.6",
+      "installed": "0.4.6",
+      "matches": true
+    },
+    {
+      "name": "contourpy",
+      "expected": "1.3.2",
+      "installed": "1.3.2",
+      "matches": true
+    },
+    {
+      "name": "cycler",
+      "expected": "0.12.1",
+      "installed": "0.12.1",
+      "matches": true
+    },
+    {
+      "name": "dataclasses-json",
+      "expected": "0.6.7",
+      "installed": "0.6.7",
+      "matches": true
+    },
+    {
+      "name": "Deprecated",
+      "expected": "1.2.18",
+      "installed": "1.2.18",
+      "matches": true
+    },
+    {
+      "name": "dirtyjson",
+      "expected": "1.0.8",
+      "installed": "1.0.8",
+      "matches": true
+    },
+    {
+      "name": "distro",
+      "expected": "1.9.0",
+      "installed": "1.9.0",
+      "matches": true
+    },
+    {
+      "name": "eval_type_backport",
+      "expected": "0.2.2",
+      "installed": "0.2.2",
+      "matches": true
+    },
+    {
+      "name": "exceptiongroup",
+      "expected": "1.2.2",
+      "installed": "1.2.2",
+      "matches": true
+    },
+    {
+      "name": "filelock",
+      "expected": "3.18.0",
+      "installed": "3.18.0",
+      "matches": true
+    },
+    {
+      "name": "filetype",
+      "expected": "1.2.0",
+      "installed": "1.2.0",
+      "matches": true
+    },
+    {
+      "name": "fonttools",
+      "expected": "4.58.1",
+      "installed": "4.58.1",
+      "matches": true
+    },
+    {
+      "name": "frozenlist",
+      "expected": "1.6.0",
+      "installed": "1.6.0",
+      "matches": true
+    },
+    {
+      "name": "fsspec",
+      "expected": "2025.5.1",
+      "installed": "2025.5.1",
+      "matches": true
+    },
+    {
+      "name": "graphviz",
+      "expected": "0.20.3",
+      "installed": "0.20.3",
+      "matches": true
+    },
+    {
+      "name": "greenlet",
+      "expected": "3.2.2",
+      "installed": "3.2.2",
+      "matches": true
+    },
+    {
+      "name": "griffe",
+      "expected": "1.7.3",
+      "installed": "1.7.3",
+      "matches": true
+    },
+    {
+      "name": "grpcio",
+      "expected": "1.71.0",
+      "installed": "1.71.0",
+      "matches": true
+    },
+    {
+      "name": "h11",
+      "expected": "0.14.0",
+      "installed": "0.14.0",
+      "matches": true
+    },
+    {
+      "name": "httpcore",
+      "expected": "1.0.7",
+      "installed": "1.0.7",
+      "matches": true
+    },
+    {
+      "name": "httpx",
+      "expected": "0.28.1",
+      "installed": "0.28.1",
+      "matches": true
+    },
+    {
+      "name": "httpx-sse",
+      "expected": "0.4.0",
+      "installed": "0.4.0",
+      "matches": true
+    },
+    {
+      "name": "idna",
+      "expected": "3.10",
+      "installed": "3.10",
+      "matches": true
+    },
+    {
+      "name": "Jinja2",
+      "expected": "3.1.6",
+      "installed": "3.1.6",
+      "matches": true
+    },
+    {
+      "name": "jiter",
+      "expected": "0.10.0",
+      "installed": "0.10.0",
+      "matches": true
+    },
+    {
+      "name": "joblib",
+      "expected": "1.5.1",
+      "installed": "1.5.1",
+      "matches": true
+    },
+    {
+      "name": "jsonpatch",
+      "expected": "1.33",
+      "installed": "1.33",
+      "matches": true
+    },
+    {
+      "name": "jsonpath-python",
+      "expected": "1.0.6",
+      "installed": "1.0.6",
+      "matches": true
+    },
+    {
+      "name": "jsonpointer",
+      "expected": "3.0.0",
+      "installed": "3.0.0",
+      "matches": true
+    },
+    {
+      "name": "kiwisolver",
+      "expected": "1.4.8",
+      "installed": "1.4.8",
+      "matches": true
+    },
+    {
+      "name": "langchain",
+      "expected": "0.3.25",
+      "installed": "0.3.25",
+      "matches": true
+    },
+    {
+      "name": "langchain-community",
+      "expected": "0.3.24",
+      "installed": "0.3.24",
+      "matches": true
+    },
+    {
+      "name": "langchain-core",
+      "expected": "0.3.62",
+      "installed": "0.3.62",
+      "matches": true
+    },
+    {
+      "name": "langchain-openai",
+      "expected": "0.3.18",
+      "installed": "0.3.18",
+      "matches": true
+    },
+    {
+      "name": "langchain-text-splitters",
+      "expected": "0.3.8",
+      "installed": "0.3.8",
+      "matches": true
+    },
+    {
+      "name": "langgraph",
+      "expected": "0.4.7",
+      "installed": "0.4.7",
+      "matches": true
+    },
+    {
+      "name": "langgraph-checkpoint",
+      "expected": "2.0.26",
+      "installed": "2.0.26",
+      "matches": true
+    },
+    {
+      "name": "langgraph-prebuilt",
+      "expected": "0.2.2",
+      "installed": "0.2.2",
+      "matches": true
+    },
+    {
+      "name": "langgraph-sdk",
+      "expected": "0.1.70",
+      "installed": "0.1.70",
+      "matches": true
+    },
+    {
+      "name": "langsmith",
+      "expected": "0.3.42",
+      "installed": "0.3.42",
+      "matches": true
+    },
+    {
+      "name": "llama-index-core",
+      "expected": "0.12.37",
+      "installed": "0.12.37",
+      "matches": true
+    },
+    {
+      "name": "llama-index-llms-openai",
+      "expected": "0.3.44",
+      "installed": "0.3.44",
+      "matches": true
+    },
+    {
+      "name": "llamaapi",
+      "expected": "0.1.36",
+      "installed": "0.1.36",
+      "matches": true
+    },
+    {
+      "name": "Markdown",
+      "expected": "3.8",
+      "installed": "3.8",
+      "matches": true
+    },
+    {
+      "name": "MarkupSafe",
+      "expected": "3.0.2",
+      "installed": "3.0.2",
+      "matches": true
+    },
+    {
+      "name": "marshmallow",
+      "expected": "3.26.1",
+      "installed": "3.26.1",
+      "matches": true
+    },
+    {
+      "name": "matplotlib",
+      "expected": "3.10.3",
+      "installed": "3.10.3",
+      "matches": true
+    },
+    {
+      "name": "mistralai",
+      "expected": "1.4.0",
+      "installed": "1.4.0",
+      "matches": true
+    },
+    {
+      "name": "momentchi2",
+      "expected": "0.1.8",
+      "installed": "0.1.8",
+      "matches": true
+    },
+    {
+      "name": "mpmath",
+      "expected": "1.3.0",
+      "installed": "1.3.0",
+      "matches": true
+    },
+    {
+      "name": "multidict",
+      "expected": "6.4.4",
+      "installed": "6.4.4",
+      "matches": true
+    },
+    {
+      "name": "mypy-extensions",
+      "expected": "1.0.0",
+      "installed": "1.0.0",
+      "matches": true
+    },
+    {
+      "name": "nest-asyncio",
+      "expected": "1.6.0",
+      "installed": "1.6.0",
+      "matches": true
+    },
+    {
+      "name": "networkx",
+      "expected": "3.4.2",
+      "installed": "3.4.2",
+      "matches": true
+    },
+    {
+      "name": "nltk",
+      "expected": "3.9.1",
+      "installed": "3.9.1",
+      "matches": true
+    },
+    {
+      "name": "numpy",
+      "expected": "2.2.6",
+      "installed": "2.2.6",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "expected": "12.6.4.1",
+      "installed": "12.6.4.1",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "expected": "12.6.80",
+      "installed": "12.6.80",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "expected": "12.6.77",
+      "installed": "12.6.77",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "expected": "12.6.77",
+      "installed": "12.6.77",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "expected": "9.5.1.17",
+      "installed": "9.5.1.17",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "expected": "11.3.0.4",
+      "installed": "11.3.0.4",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "expected": "1.11.1.6",
+      "installed": "1.11.1.6",
+      "matches": true
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "expected": "10.3.7.77",
+      "installed": "10.3.7.77",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "expected": "11.7.1.2",
+      "installed": "11.7.1.2",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "expected": "12.5.4.2",
+      "installed": "12.5.4.2",
+      "matches": true
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "expected": "0.6.3",
+      "installed": "0.6.3",
+      "matches": true
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "expected": "2.26.2",
+      "installed": "2.26.2",
+      "matches": true
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "expected": "12.6.85",
+      "installed": "12.6.85",
+      "matches": true
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "expected": "12.6.77",
+      "installed": "12.6.77",
+      "matches": true
+    },
+    {
+      "name": "openai",
+      "expected": "1.82.0",
+      "installed": "1.82.0",
+      "matches": true
+    },
+    {
+      "name": "opt_einsum",
+      "expected": "3.4.0",
+      "installed": "3.4.0",
+      "matches": true
+    },
+    {
+      "name": "orjson",
+      "expected": "3.10.18",
+      "installed": "3.10.18",
+      "matches": true
+    },
+    {
+      "name": "ormsgpack",
+      "expected": "1.10.0",
+      "installed": "1.10.0",
+      "matches": true
+    },
+    {
+      "name": "packaging",
+      "expected": "24.2",
+      "installed": "24.2",
+      "matches": true
+    },
+    {
+      "name": "pandas",
+      "expected": "2.2.3",
+      "installed": "2.2.3",
+      "matches": true
+    },
+    {
+      "name": "patsy",
+      "expected": "1.0.1",
+      "installed": "1.0.1",
+      "matches": true
+    },
+    {
+      "name": "pgmpy",
+      "expected": "1.0.0",
+      "installed": "1.0.0",
+      "matches": true
+    },
+    {
+      "name": "pillow",
+      "expected": "11.2.1",
+      "installed": "11.2.1",
+      "matches": true
+    },
+    {
+      "name": "platformdirs",
+      "expected": "4.3.8",
+      "installed": "4.3.8",
+      "matches": true
+    },
+    {
+      "name": "propcache",
+      "expected": "0.3.1",
+      "installed": "0.3.1",
+      "matches": true
+    },
+    {
+      "name": "protobuf",
+      "expected": "6.31.1",
+      "installed": "6.31.1",
+      "matches": true
+    },
+    {
+      "name": "ptflops",
+      "expected": "0.7.4",
+      "installed": "0.7.4",
+      "matches": true
+    },
+    {
+      "name": "pydantic",
+      "expected": "2.10.6",
+      "installed": "2.10.6",
+      "matches": true
+    },
+    {
+      "name": "pydantic-settings",
+      "expected": "2.9.1",
+      "installed": "2.9.1",
+      "matches": true
+    },
+    {
+      "name": "pydantic_core",
+      "expected": "2.27.2",
+      "installed": "2.27.2",
+      "matches": true
+    },
+    {
+      "name": "pydot",
+      "expected": "4.0.0",
+      "installed": "4.0.0",
+      "matches": true
+    },
+    {
+      "name": "pyparsing",
+      "expected": "3.2.3",
+      "installed": "3.2.3",
+      "matches": true
+    },
+    {
+      "name": "pyro-api",
+      "expected": "0.1.2",
+      "installed": "0.1.2",
+      "matches": true
+    },
+    {
+      "name": "pyro-ppl",
+      "expected": "1.9.1",
+      "installed": "1.9.1",
+      "matches": true
+    },
+    {
+      "name": "python-dateutil",
+      "expected": "2.9.0.post0",
+      "installed": "2.9.0.post0",
+      "matches": true
+    },
+    {
+      "name": "python-dotenv",
+      "expected": "1.1.0",
+      "installed": "1.1.0",
+      "matches": true
+    },
+    {
+      "name": "pytz",
+      "expected": "2025.2",
+      "installed": "2025.2",
+      "matches": true
+    },
+    {
+      "name": "PyYAML",
+      "expected": "6.0.2",
+      "installed": "6.0.2",
+      "matches": true
+    },
+    {
+      "name": "regex",
+      "expected": "2024.11.6",
+      "installed": "2024.11.6",
+      "matches": true
+    },
+    {
+      "name": "requests",
+      "expected": "2.32.3",
+      "installed": "2.32.3",
+      "matches": true
+    },
+    {
+      "name": "requests-toolbelt",
+      "expected": "1.0.0",
+      "installed": "1.0.0",
+      "matches": true
+    },
+    {
+      "name": "scikit-learn",
+      "expected": "1.6.1",
+      "installed": "1.6.1",
+      "matches": true
+    },
+    {
+      "name": "scipy",
+      "expected": "1.15.3",
+      "installed": "1.15.3",
+      "matches": true
+    },
+    {
+      "name": "six",
+      "expected": "1.17.0",
+      "installed": "1.17.0",
+      "matches": true
+    },
+    {
+      "name": "sniffio",
+      "expected": "1.3.1",
+      "installed": "1.3.1",
+      "matches": true
+    },
+    {
+      "name": "soupsieve",
+      "expected": "2.7",
+      "installed": "2.7",
+      "matches": true
+    },
+    {
+      "name": "SQLAlchemy",
+      "expected": "2.0.41",
+      "installed": "2.0.41",
+      "matches": true
+    },
+    {
+      "name": "statsmodels",
+      "expected": "0.14.4",
+      "installed": "0.14.4",
+      "matches": true
+    },
+    {
+      "name": "sympy",
+      "expected": "1.14.0",
+      "installed": "1.14.0",
+      "matches": true
+    },
+    {
+      "name": "tavily-python",
+      "expected": "0.7.3",
+      "installed": "0.7.3",
+      "matches": true
+    },
+    {
+      "name": "tenacity",
+      "expected": "9.1.2",
+      "installed": "9.1.2",
+      "matches": true
+    },
+    {
+      "name": "tensorboard",
+      "expected": "2.19.0",
+      "installed": "2.19.0",
+      "matches": true
+    },
+    {
+      "name": "tensorboard-data-server",
+      "expected": "0.7.2",
+      "installed": "0.7.2",
+      "matches": true
+    },
+    {
+      "name": "threadpoolctl",
+      "expected": "3.6.0",
+      "installed": "3.6.0",
+      "matches": true
+    },
+    {
+      "name": "tiktoken",
+      "expected": "0.9.0",
+      "installed": "0.9.0",
+      "matches": true
+    },
+    {
+      "name": "torch",
+      "expected": "2.7.0",
+      "installed": "2.7.0",
+      "matches": true
+    },
+    {
+      "name": "torch-tb-profiler",
+      "expected": "0.4.3",
+      "installed": "0.4.3",
+      "matches": true
+    },
+    {
+      "name": "tqdm",
+      "expected": "4.67.1",
+      "installed": "4.67.1",
+      "matches": true
+    },
+    {
+      "name": "triton",
+      "expected": "3.3.0",
+      "installed": "3.3.0",
+      "matches": true
+    },
+    {
+      "name": "typing-inspect",
+      "expected": "0.9.0",
+      "installed": "0.9.0",
+      "matches": true
+    },
+    {
+      "name": "typing-inspection",
+      "expected": "0.4.1",
+      "installed": "0.4.1",
+      "matches": true
+    },
+    {
+      "name": "typing_extensions",
+      "expected": "4.12.2",
+      "installed": "4.12.2",
+      "matches": true
+    },
+    {
+      "name": "tzdata",
+      "expected": "2025.2",
+      "installed": "2025.2",
+      "matches": true
+    },
+    {
+      "name": "urllib3",
+      "expected": "2.4.0",
+      "installed": "2.4.0",
+      "matches": true
+    },
+    {
+      "name": "Werkzeug",
+      "expected": "3.1.3",
+      "installed": "3.1.3",
+      "matches": true
+    },
+    {
+      "name": "wrapt",
+      "expected": "1.17.2",
+      "installed": "1.17.2",
+      "matches": true
+    },
+    {
+      "name": "xxhash",
+      "expected": "3.5.0",
+      "installed": "3.5.0",
+      "matches": true
+    },
+    {
+      "name": "yarl",
+      "expected": "1.20.0",
+      "installed": "1.20.0",
+      "matches": true
+    },
+    {
+      "name": "zstandard",
+      "expected": "0.23.0",
+      "installed": "0.23.0",
+      "matches": true
+    }
+  ],
+  "all_pins_match": true,
+  "unlisted_installed_packages": [
+    {
+      "name": "setuptools",
+      "version": "84.0.0"
+    }
+  ],
+  "import_checks": {
+    "core_imports": {
+      "ok": true,
+      "exit_code": 0,
+      "stdout": "core imports OK\n",
+      "stderr": ""
+    },
+    "causal_imports": {
+      "ok": true,
+      "exit_code": 0,
+      "stdout": "causal imports OK; no fit executed\n",
+      "stderr": ""
+    },
+    "agent_imports": {
+      "ok": true,
+      "exit_code": 0,
+      "stdout": "agent module imports OK; no client constructed\n",
+      "stderr": "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/lib/python3.11/site-packages/langchain/chat_models/__init__.py:33: LangChainDeprecationWarning: Importing chat models from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:\n\n`from langchain_community.chat_models import ChatOpenAI`.\n\nTo install langchain-community run `pip install -U langchain-community`.\n  warnings.warn(\n/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/lib/python3.11/site-packages/langchain/chat_models/__init__.py:33: LangChainDeprecationWarning: Importing chat models from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:\n\n`from langchain_community.chat_models import ChatOpenAI`.\n\nTo install langchain-community run `pip install -U langchain-community`.\n  warnings.warn(\n/mnt/e/연구/MATMCD/official/matmcd/web_utils/retrieval.py:4: LangChainDeprecationWarning: Importing OpenAIEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:\n\n>> from langchain.embeddings import OpenAIEmbeddings\n\nwith new imports of:\n\n>> from langchain_community.embeddings import OpenAIEmbeddings\nYou can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>\n  from langchain.embeddings import OpenAIEmbeddings\n/mnt/e/연구/MATMCD/official/matmcd/web_utils/retrieval.py:6: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:\n\n>> from langchain.vectorstores import Chroma\n\nwith new imports of:\n\n>> from langchain_community.vectorstores import Chroma\nYou can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>\n  from langchain.vectorstores import Chroma\n"
+    },
+    "chromadb": {
+      "ok": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\nModuleNotFoundError: No module named 'chromadb'\n"
+    },
+    "lxml_parser": {
+      "ok": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\n  File \"/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/lib/python3.11/site-packages/bs4/__init__.py\", line 364, in __init__\n    raise FeatureNotFound(\nbs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?\n"
+    },
+    "llama_embeddings": {
+      "ok": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\nModuleNotFoundError: No module named 'llama_index.embeddings'\n"
+    },
+    "cuda": {
+      "ok": true,
+      "exit_code": 0,
+      "stdout": "{'torch': '2.7.0+cu126', 'cuda_build': '12.6', 'cuda_available': True, 'gpu': 'NVIDIA GeForce RTX 2080 SUPER'}\n",
+      "stderr": ""
+    },
+    "pc_defaults": {
+      "ok": true,
+      "exit_code": 0,
+      "stdout": "(data: 'ndarray', alpha=0.05, indep_test='fisherz', stable: 'bool' = True, uc_rule: 'int' = 0, uc_priority: 'int' = 2, mvpc: 'bool' = False, correction_name: 'str' = 'MV_Crtn_Fisher_Z', background_knowledge: 'BackgroundKnowledge | None' = None, verbose: 'bool' = False, show_progress: 'bool' = True, node_names: 'List[str] | None' = None, **kwargs)\n",
+      "stderr": ""
+    }
+  },
+  "graphviz_dot": null,
+  "ready_for_original_experiments": false,
+  "readiness_note": "누락 입력·API 접근·논문/공개코드 차이 해소 전 실행 준비 완료로 판정하지 않는다."
+}

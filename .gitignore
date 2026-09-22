@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv*/
+.env
+*.local.json
+!configs/paths.json
+/runtime/
+/logs/
+/results/
+/cache/
+/data/
+*.partial
