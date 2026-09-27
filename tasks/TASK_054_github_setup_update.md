@@ -11,8 +11,8 @@
 - [x] Python 구문과 JSON 형식 확인.
 - [x] README와 작업 규칙의 최신 완료 상태 반영.
 - [x] 공식 코드 보존 및 stage된 변경 최종 확인.
-- [ ] 현재 구성을 commit하고 origin/main에 push.
-- [ ] 원격 commit 일치 및 작업 폴더 상태 확인.
+- [x] 현재 구성을 commit하고 origin/main에 push.
+- [x] 원격 commit 일치 및 작업 폴더 상태 확인.
 
 ## 확인 사항
 
@@ -27,6 +27,8 @@
 
 남은 공식 파일37개를 원본 ZIP과 바이트 단위로 비교하여 일치를 확인했다. 승인된6개 제외 외에 추가·변경된 공식 파일은 없다. Stage된 변경은265개 파일이며 `git diff --cached --check`를 통과했다. 새 실험·모델 호출·조건 변경은0건이다.
 
+2026-09-27 구성 스냅샷을 [3fe751c244ebd7ad19034bdba255cf586535079a](https://github.com/j9-jay/MATMCD/commit/3fe751c244ebd7ad19034bdba255cf586535079a) (`Configure local RCA workflow and record oracle30 experiment results`)로 커밋하고 `origin/main`에 정상 push했다. `git ls-remote`의 main과 로컬 HEAD가 같은 해시임을 확인했고 당시 작업 폴더는 clean이었다. 본 완료 기록은 후속 문서 커밋으로 게시한다.
+
 ## 상태
 
-IN_PROGRESS
+DONE

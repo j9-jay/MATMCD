@@ -1,6 +1,6 @@
 # RCA 작업 현황
 
-**GitHub 업데이트:** [TASK_054](TASK_054_github_setup_update.md)에서 현재 설정·구현·문서·검증 기록을 `origin/main`에 게시한다. 실험 자산은 MATMCD_DATA에 유지한다.
+**2026-09-27 GitHub 업데이트 완료:** [TASK_054](TASK_054_github_setup_update.md) DONE. 현재 설정·구현·문서·검증 기록을 구성 커밋 `3fe751c`로 `origin/main`에 push하고 원격 일치를 확인했다. 실험 자산은 MATMCD_DATA에 유지한다.
 
 **2026-09-27 결과 분석 보고서 작성 완료:** [TASK_053](TASK_053_oracle30_result_report.md) DONE. [상세 보고서](../docs/RCA_ORACLE30_RESULT_REPORT_20260927.md)에 목적·실제 조건·논문 차이·전체 순위·원인별 증거/가설을 정리했다. MongoDB 장애 근거의 RAG 미전달, 공개 프롬프트의 첫 쌍/방향 문제, 후보 축소로 제외된 시나리오 경로를 확인했다. 추가 실험·코드/조건 교정은 하지 않았다.
 
@@ -80,7 +80,7 @@ DONE은 해당 조사·설치·정리 작업의 완료이며 RCA 전체 완료�
 | [051](TASK_051_rag_format_continuation.md) | RAG 응답 경계 보정·완료 단계 연결 | DONE — 본문 보존·부모 해시 검증, 후속 MATMCD 완주 |
 | [052](TASK_052_domain_generation_repetition.md) | 설명 반복 실패 진단·승인된 presence1.5 적용 | DONE — 진단3개 및 새 설명930개 정상 종료, 제약presence0 유지 |
 | [053](TASK_053_oracle30_result_report.md) | 완료 결과와 논문 차이 상세 분석 보고서 | DONE — 근거 전달·후보 경로·프롬프트·그래프/순위 분석, 원인 가설과 사실 구분 |
-| [054](TASK_054_github_setup_update.md) | 현재 로컬 RCA 구성과 결과 기록 GitHub 업데이트 | IN_PROGRESS — 게시 대상·자산/인증정보 제외 확인, commit/push 진행 |
+| [054](TASK_054_github_setup_update.md) | 현재 로컬 RCA 구성과 결과 기록 GitHub 업데이트 | DONE — 구성 커밋3fe751c push 및 원격 일치 확인, 대용량 자산 제외 |
 
 작업 번호는 이력 식별자로 유지한다. 30 Pod 한 사례 개발 실행·평가는 TASK_050에서 완료했다. 아래 전체 후보 실행·평가·논문 비교는 별도 미완료 범위다.
 
