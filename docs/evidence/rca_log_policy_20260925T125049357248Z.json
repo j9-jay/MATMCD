@@ -1,0 +1,198 @@
+{
+  "checked_utc": "20260925T125049357248Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "official_file_set_preserved",
+      "passed": true
+    },
+    {
+      "name": "official_source_byte_identical",
+      "passed": true
+    },
+    {
+      "name": "verified_actual_coverage",
+      "passed": true
+    },
+    {
+      "name": "selected_cases_only_in_approved_order",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "known_pair_disappearance_is_error_not_absence",
+      "passed": true
+    },
+    {
+      "name": "partial_pair_is_error",
+      "passed": true
+    },
+    {
+      "name": "new_file_for_missing_pod_requires_review",
+      "passed": true
+    },
+    {
+      "name": "changed_file_size_is_error",
+      "passed": true
+    },
+    {
+      "name": "empty_summary_is_error_not_absence",
+      "passed": true
+    },
+    {
+      "name": "reader_failure_propagates",
+      "passed": true
+    },
+    {
+      "name": "official_source_unchanged_after_checks",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:rca_files",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:rca_log_directories",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:input_profile",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:connection_evidence",
+      "passed": true
+    }
+  ],
+  "inference_calls": 0,
+  "experiments_executed": false,
+  "real_log_csvs_parsed": false,
+  "D02_implemented": false,
+  "author_equivalence": "UNCONFIRMED",
+  "full_rca_ready": false,
+  "cases": [
+    {
+      "case": "Product_Review/20211203",
+      "counts": {
+        "pods": 218,
+        "available": 154,
+        "missing": 64,
+        "kpi": 1
+      },
+      "csv_sha256": "5ba4c4ba9e23d37d7dac38a7e68fabe037b81fe3443d0eb488091e89efdf79b5",
+      "input_manifest_sha256": "305bab6454854de47c3615f7faa3d4d4956d4da7b00f6d5913203d35abb58925"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "counts": {
+        "pods": 228,
+        "available": 148,
+        "missing": 80,
+        "kpi": 1
+      },
+      "csv_sha256": "d5de896e19dfb053f74ee9b47f5195b0a38b72c0cdca95f57b537293d6cd7a8b",
+      "input_manifest_sha256": "c41073bc06f2ec34b59c1de9dfb8577f793332492a6dcaf9999ed895fc71d956"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "counts": {
+        "pods": 196,
+        "available": 124,
+        "missing": 72,
+        "kpi": 1
+      },
+      "csv_sha256": "0752a85906b4811be9be089e69810133ebd79c3042358680a3a1582b350d55a4",
+      "input_manifest_sha256": "b192dc67f5924dfe2175b9feda393564d5d58d08ba6d745e6b7a6e42b69e2105"
+    }
+  ],
+  "totals": {
+    "pods": 642,
+    "available": 426,
+    "missing": 216,
+    "kpi": 3
+  },
+  "case_scope_sha256": "32162d44645947aa81e99b5b2a58d21af98732f5e32d79e0fb196af6c9980eaf",
+  "prepared_plan_verification": {
+    "status": "PASS",
+    "cases": 3,
+    "available_pods": 426,
+    "missing_pods": 216,
+    "full_rca_ready": false
+  },
+  "official_files_preserved": 37,
+  "scripts_sha256": {
+    "rca_log_evidence": "09b3c355eeec4bdd159a4b69cadfbcaef8911a9853b300ce14347d33fb189b00",
+    "check_rca_log_evidence": "b5bcc8e8c1c2e8541f9bd74fa012e3a84254934209623886e7de48d14040bc07"
+  }
+}

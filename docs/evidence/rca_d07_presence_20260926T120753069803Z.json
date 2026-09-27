@@ -1,0 +1,44 @@
+{
+  "checked_utc": "20260926T120753069803Z",
+  "status": "GENERATED_PENDING_SEMANTIC_REVIEW",
+  "decision": "D07_A_USER_APPROVED",
+  "logs": "logs/setup/rca_d07_presence_20260926T120753069803Z",
+  "original_call": "logs/setup/rca_real_rag_20260926T100603005620Z/calls/call_0000149.json",
+  "original_call_sha256": "e0b50a022ea18efe400a3d5cddf83681ee8c5e049bf68ba85be345047667a545",
+  "only_requested_change": {
+    "presence_penalty": {
+      "before": 0.0,
+      "after": 1.5
+    }
+  },
+  "automatic_retries": 0,
+  "maximum_generation_attempts": 1,
+  "adoption_requires_response_review": true,
+  "full_pipeline_ready": false,
+  "request_diff_only_presence_penalty": true,
+  "usage": {
+    "completion_tokens": 533,
+    "prompt_tokens": 4018,
+    "total_tokens": 4551,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "response_sha256": "edfda7f259c7b0c09c88b46b37febb62d188ef511dfd245191ff5c85e2cf2d7f",
+  "nonempty_lines": 14,
+  "unique_lines": 14,
+  "duplicate_occurrences": 0,
+  "repeated_lines": {},
+  "generation_attempts": 1,
+  "seconds": 65.34505745099978,
+  "preservation": {
+    "official_sources": true,
+    "python_packages": true,
+    "configs": true,
+    "original_failed_call": true
+  },
+  "script_sha256": "103164e8481e63bb0012fa78c3b8566f66590f540293fc0ee663521390b95ee7"
+}

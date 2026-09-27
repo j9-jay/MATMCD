@@ -1,0 +1,208 @@
+{
+  "timestamp_utc": "20260926T063028658928Z",
+  "status": "PASS",
+  "policy": "re_gp_boundary_v1",
+  "log_directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260926T063028658928Z_re_format_offline",
+  "checks": [
+    {
+      "name": "saved_valid_response_unchanged",
+      "passed": true,
+      "detail": {
+        "changed": false,
+        "edge": 1,
+        "records": 2
+      }
+    },
+    {
+      "name": "saved_nonthinking_failure_repaired",
+      "passed": true,
+      "detail": {
+        "changed": true,
+        "edge": 0,
+        "records": 2
+      }
+    },
+    {
+      "name": "saved_thinking_failure_repaired",
+      "passed": true,
+      "detail": {
+        "changed": true,
+        "edge": 1,
+        "records": 2
+      }
+    },
+    {
+      "name": "failed_response_fields_exact",
+      "passed": true,
+      "detail": {
+        "guess_texts_and_probability_literals_exact": true
+      }
+    },
+    {
+      "name": "tie_selection_and_internal_text_preserved",
+      "passed": true,
+      "detail": {
+        "original_tie_winner_preserved": true,
+        "internal_whitespace_preserved": true
+      }
+    },
+    {
+      "name": "parseable_response_without_separator_unchanged",
+      "passed": true,
+      "detail": {
+        "already_parseable_text_passed_through": true
+      }
+    },
+    {
+      "name": "missing_P2",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Expected exactly ordered G1/P1 ... Gn/Pn records; no missing or duplicate labels"
+      }
+    },
+    {
+      "name": "duplicate_P",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Expected exactly ordered G1/P1 ... Gn/Pn records; no missing or duplicate labels"
+      }
+    },
+    {
+      "name": "duplicate_G",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Expected exactly ordered G1/P1 ... Gn/Pn records; no missing or duplicate labels"
+      }
+    },
+    {
+      "name": "wrong_order",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Expected exactly ordered G1/P1 ... Gn/Pn records; no missing or duplicate labels"
+      }
+    },
+    {
+      "name": "out_of_range_probability",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Probability outside [0, 1]"
+      }
+    },
+    {
+      "name": "negative_probability",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Probability must be a bare decimal; no inferred values or extra comments"
+      }
+    },
+    {
+      "name": "exponent_probability",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Probability must be a bare decimal; no inferred values or extra comments"
+      }
+    },
+    {
+      "name": "probability_comment",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Probability must be a bare decimal; no inferred values or extra comments"
+      }
+    },
+    {
+      "name": "missing_answer_tag",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Guess must end in <yes>/<no> and have unambiguous internal boundaries"
+      }
+    },
+    {
+      "name": "internal_blank_line",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Guess must end in <yes>/<no> and have unambiguous internal boundaries"
+      }
+    },
+    {
+      "name": "internal_separator",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Guess must end in <yes>/<no> and have unambiguous internal boundaries"
+      }
+    },
+    {
+      "name": "unexpected_preamble",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Unexpected text before G1"
+      }
+    },
+    {
+      "name": "unexpected_tail",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Probability must be a bare decimal; no inferred values or extra comments"
+      }
+    },
+    {
+      "name": "indented_ambiguous_label",
+      "passed": true,
+      "detail": {
+        "rejected_without_guessing": "Expected exactly ordered G1/P1 ... Gn/Pn records; no missing or duplicate labels"
+      }
+    },
+    {
+      "name": "unchanged_original_method_with_audited_adapter",
+      "passed": true,
+      "detail": {
+        "matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "underlying_replay_calls": 2,
+        "extra_retries": 0,
+        "original_method_unmodified": true,
+        "prompts_and_temperature_preserved": true
+      }
+    },
+    {
+      "name": "rejection_preserved_without_retry",
+      "passed": true,
+      "detail": {
+        "raw_failure_preserved": true,
+        "underlying_replay_calls": 1,
+        "extra_retries": 0
+      }
+    }
+  ],
+  "model_generation_calls": 0,
+  "experiments_executed": false,
+  "paper_equivalence": false,
+  "official_37_files_preserved": true,
+  "python_201_packages_preserved": true,
+  "system_packages_preserved": true,
+  "inference_config_preserved": true,
+  "saved_raw_files_preserved": true,
+  "original_parser_sha256": "755241696847d358bc68f645e82ea438836190f8741af01674029c499b41c9e1",
+  "fixture_paths": {
+    "nonthinking_forward": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T044215843311Z_verification/response_04.json",
+    "nonthinking_reverse": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T044215843311Z_verification/response_05.json",
+    "thinking_forward": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260925T042550544006Z_verification/response_03.json"
+  },
+  "fixture_sha256": {
+    "nonthinking_forward": "9c9f23a1909dc94e95e2478e0f7379de518d3e735e800877f3a2648947ec8ed3",
+    "nonthinking_reverse": "e68c6442597c81d49f9d98b1800cc455828420d70f6a2860bea71e106a96a1c2",
+    "thinking_forward": "f91397bf44e18747bdf4b1cca37bb61b8842e98b18641da03fcdcc406936d914"
+  },
+  "script_sha256": {
+    "local_re_response.py": "16e43b3aa8d21a574520e5b80dfc7e4ca03c046acb8d98e8ab31a5c3d620f4ae",
+    "check_local_re_format.py": "87d4f4c3d32b5623c8271beec6f572118167624be998c7c15592d13b0365bc72",
+    "check_local_llm_runtime.py": "c7642e1f2b1411da9d6c5f1c9291dbfc1a7a7e01e0bc4c3ee60eea3746d992b4"
+  }
+}

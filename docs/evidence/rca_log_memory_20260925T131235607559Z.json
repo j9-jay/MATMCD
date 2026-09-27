@@ -1,0 +1,120 @@
+{
+  "started_utc": "20260925T131235607559Z",
+  "status": "FAILED",
+  "cases": [
+    {
+      "case": "Product_Review/20211203",
+      "pod": "olm-operator-77996d498f-dspdc",
+      "status": "FAILED",
+      "error": "Worker exited without final result; inspect progress.json and worker.log",
+      "exit_code": 1,
+      "guard_stop": null,
+      "before_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7639031808,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "after_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7638245376,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "wall_seconds": 0.5079269200000027,
+      "minimum_wsl_available_bytes": 7638032384,
+      "maximum_wsl_swap_used_bytes": 0,
+      "details_directory": "logs/setup/rca_log_memory_20260925T131235607559Z/Product_Review_20211203"
+    }
+  ],
+  "inference_calls": 0,
+  "experiments_executed": false,
+  "full_rca_ready": false,
+  "scope": "Largest exact structured log per active case, in ascending file-size order",
+  "guard": {
+    "memory_max_bytes": 4294967296,
+    "memory_swap_max_bytes": 0,
+    "minimum_wsl_available_bytes": 1073741824,
+    "timeout_seconds_per_case": 1800,
+    "paper_parameter": false
+  },
+  "script_sha256": "dd212cb7747efcfa1e19554962c130355247795831d03c5f15826131f852a81f",
+  "logs": "logs/setup/rca_log_memory_20260925T131235607559Z",
+  "prepared_input_verification": {
+    "status": "PASS",
+    "cases": 3,
+    "available_pods": 426,
+    "missing_pods": 216,
+    "full_rca_ready": false
+  },
+  "selected": [
+    {
+      "case": "Product_Review/20211203",
+      "pod": "olm-operator-77996d498f-dspdc",
+      "sources": {
+        "templates": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203/olm-operator-77996d498f-dspdc_messages_templates.csv",
+          "member": "log_data/pod_removed/olm-operator-77996d498f-dspdc_messages_templates.csv",
+          "bytes": 3755,
+          "sha256": "7a194eef0cd07ec71767c4ec2261460698159a2d8c5e6edabb5919a1e1768b34"
+        },
+        "structured": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203/olm-operator-77996d498f-dspdc_messages_structured.csv",
+          "member": "log_data/pod_removed/olm-operator-77996d498f-dspdc_messages_structured.csv",
+          "bytes": 1162726915,
+          "sha256": "01345a20dba8f9d21a8b77f15fb4c0f72a5ece98073a725b89a95493f19fe338"
+        }
+      }
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "currencyservice-696d6df76c-xdz9b",
+      "sources": {
+        "templates": {
+          "path": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207/currencyservice-696d6df76c-xdz9b_messages_templates.csv",
+          "member": "log_data/pod_removed/currencyservice-696d6df76c-xdz9b_messages_templates.csv",
+          "bytes": 106,
+          "sha256": "efcf7d844654a5648666e3bceb3febf9cfd863f3d6f73df42e13b5a4c6bdfce2"
+        },
+        "structured": {
+          "path": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207/currencyservice-696d6df76c-xdz9b_messages_structured.csv",
+          "member": "log_data/pod_removed/currencyservice-696d6df76c-xdz9b_messages_structured.csv",
+          "bytes": 1238134721,
+          "sha256": "bc956aa572363a103644a45d81599abe087c9ac06334cfb43524c85c47333b80"
+        }
+      }
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "productpage-v1-5f9dbcd669-z2prs",
+      "sources": {
+        "templates": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20220606/productpage-v1-5f9dbcd669-z2prs_messages_templates.csv",
+          "member": "log_data/pod_removed/productpage-v1-5f9dbcd669-z2prs_messages_templates.csv",
+          "bytes": 947,
+          "sha256": "bcca59d00d3f91b07039c80812b49c3aba2719c15569b97ee096d0cacf9cc109"
+        },
+        "structured": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20220606/productpage-v1-5f9dbcd669-z2prs_messages_structured.csv",
+          "member": "log_data/pod_removed/productpage-v1-5f9dbcd669-z2prs_messages_structured.csv",
+          "bytes": 1576968813,
+          "sha256": "38dc22a6302cf71885a4ab880878bc9ea43666976407b40ed8fbebbf5ffad49f"
+        }
+      }
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_rca_log_memory.py\", line 235, in run\n    raise RuntimeError(\"Probe failed; do not retry with changed reader/data or start larger files\")\nRuntimeError: Probe failed; do not retry with changed reader/data or start larger files\n",
+  "preservation": {
+    "official_source_unchanged": true,
+    "python_packages_unchanged": true,
+    "configs_unchanged": true,
+    "official_file_count": 37
+  },
+  "completed_utc": "2026-09-25T13:13:04.047995+00:00",
+  "limits": [
+    "Three representative files only; other files may have different memory expansion",
+    "No models loaded or inference called; concurrent model memory not validated",
+    "Prompt token count/context fit and full RCA integration remain unvalidated",
+    "Disk reads may benefit from cache; no cache flushing or performance extrapolation"
+  ]
+}

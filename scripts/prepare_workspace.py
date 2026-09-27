@@ -4,6 +4,7 @@ import os
 import sys
 
 from project_paths import ASSETS, PROJECT, SOURCE, asset_path
+from rca_case_scope import validate_input_scope
 
 
 def link(source, target):
@@ -24,18 +25,20 @@ def main():
         raise SystemExit("WSL Ubuntu에서 실행하세요.")
     workspace = asset_path("runtime_workspace")
     inputs = json.loads((PROJECT / "configs" / "inputs.json").read_text(encoding="utf-8"))
-    for source in sorted(SOURCE.glob("*.py")):
-        link(source, workspace / source.name)
+    validate_input_scope(inputs)
+    for name in ("LEMMA_experiment.py", "LEMMA_Metrics.py", "Log_tools.py", "Web_tools.py", "config.py"):
+        link(SOURCE / name, workspace / name)
     for name in ("Client", "ConstrainAgent", "Utils", "web_utils"):
         link(SOURCE / name, workspace / name)
-    link(SOURCE / "data" / "SampleFromBIF.py", workspace / "data" / "SampleFromBIF.py")
-    for name, path in inputs["benchmark_files"].items():
-        link(ASSETS / path, workspace / "data" / name)
-    for name in ("asia", "child"):
-        source = ASSETS / f"datasets/bnlearn_{name}_network/{name}.bif"
-        if source.exists():
-            link(source, workspace / "data" / "BIF" / source.name)
-    # 원본 두 실험 진입점이 이 경로를 지정하지만 저장 함수는 부모를 만들지 않는다.
+    for name, path in {**inputs["rca_files"], **inputs.get("rca_log_directories", {})}.items():
+        source = (ASSETS / path).resolve()
+        target = workspace / "data" / name
+        # Existing file/directory links intentionally resolve into external
+        # assets. Check the containing path, then let link() verify the target.
+        if not source.is_relative_to(ASSETS) or not target.parent.resolve().is_relative_to(workspace):
+            raise RuntimeError(f"RCA 입력 경로가 지정 루트 밖을 가리킵니다: {name}")
+        link(source, target)
+    # RCA 진입점이 이 경로를 지정하지만 저장 함수는 부모를 만들지 않는다.
     summary_dir = workspace / "cache" / "Summarized_info"
     if not summary_dir.resolve().is_relative_to(workspace):
         raise RuntimeError(f"요약 저장 경로가 작업공간 밖을 가리킵니다: {summary_dir}")
@@ -43,6 +46,7 @@ def main():
     print(f"작업공간: {workspace}")
     print(f"원본 코드가 요구하는 요약 저장 폴더: {summary_dir}")
     print("코드/입력 링크와 필수 경로만 준비했습니다. 실험·API 호출·캐시 내용 생성은 수행하지 않았습니다.")
+    print("범위: RCA. 미확보 입력을 생성하거나 전처리하지 않습니다.")
 
 
 if __name__ == "__main__":

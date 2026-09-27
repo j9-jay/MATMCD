@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "scope": "settings_only_no_algorithm_resume_or_control_flow_changes",
+  "checks": {
+    "scripts/local_llm_client.py_only_expected_setting_changes": true,
+    "scripts/local_llm_runtime.py_only_expected_setting_changes": true,
+    "scripts/check_rca_local_transport.py_only_expected_setting_changes": true,
+    "only_cache_metadata_added_to_config": true,
+    "no_pc_adapter_created": true
+  },
+  "script_sha256": {
+    "scripts/local_llm_client.py": {
+      "before": "c40640baf2b492696d52a6c8513753c1304352f4d21e0015915e4c99d42f09b0",
+      "after": "db95baee1f4c9c44960fd2478a1e6241685a078b762952ac4f110e5583fed7a9"
+    },
+    "scripts/local_llm_runtime.py": {
+      "before": "a6bbbcecbf5ee091d3f417af2f9f4cad817a0d597ba066432865d8d126bcaa9d",
+      "after": "b89425893a4369dd6584af87b777b633c6dcb2401685adf29572bbf26ded1803"
+    },
+    "scripts/check_rca_local_transport.py": {
+      "before": "4ebac1a5683fcd8a5f0e1a22fabcf97eacea7a68a9224c57a77c7eade7be234b",
+      "after": "98161144f8bfc7343d0da8e75420e4ba282288d0893dcbc062bec4c1614dbc30"
+    }
+  },
+  "before_files": "E:\\연구\\MATMCD_DATA\\logs\\setup\\rca_cache_settings_20260926T1309299865715Z",
+  "paid_API_calls": 0,
+  "generation_calls": 0,
+  "cache_hit_and_speed_measured": false,
+  "launcher_checks": {
+    "server_prompt_cache_enabled": true,
+    "RAM_cache_zero": true,
+    "single_slot": true,
+    "context_81920": true,
+    "cache_metadata_matches": true
+  },
+  "launch_command": [
+    "/mnt/e/연구/MATMCD_DATA/tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-server",
+    "--model",
+    "/mnt/e/연구/MATMCD_DATA/models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M/Qwen3.5-4B-Q5_K_M.gguf",
+    "--alias",
+    "qwen35-4b-q5km-nonthinking",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18080",
+    "--ctx-size",
+    "81920",
+    "--parallel",
+    "1",
+    "--n-gpu-layers",
+    "all",
+    "--fit",
+    "off",
+    "--batch-size",
+    "512",
+    "--ubatch-size",
+    "128",
+    "--cache-type-k",
+    "f16",
+    "--cache-type-v",
+    "f16",
+    "--no-context-shift",
+    "--jinja",
+    "--chat-template-kwargs",
+    "{\"enable_thinking\": false}",
+    "--reasoning",
+    "off",
+    "--reasoning-format",
+    "deepseek",
+    "--reasoning-budget",
+    "-1",
+    "--offline",
+    "--no-webui",
+    "--cache-prompt",
+    "--cache-ram",
+    "0",
+    "--log-verbosity",
+    "4"
+  ],
+  "model_and_executable_hash_verified": true
+}

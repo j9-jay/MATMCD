@@ -1,0 +1,313 @@
+{
+  "checked_utc": "2026-09-23T06:58:42.765349+00:00",
+  "scope": "rca",
+  "all_pass": true,
+  "checks": {
+    "official_subset": true,
+    "original_archive_preserved": true,
+    "syntax": true,
+    "local_import_targets": true,
+    "environment_metadata": true,
+    "rca_downloads_exist_and_size_match": true,
+    "deletions_complete": true,
+    "active_markdown_links": true,
+    "rca_configuration": true,
+    "rca_todo_only": true,
+    "git_preserved": true
+  },
+  "official_source": [
+    {
+      "path": "Client/LlamaClient.py",
+      "sha256": "79e4392930fe5191939b0457cdc85166fa1e37befd1fd02ca2a3f5845f4f9642",
+      "matches": true
+    },
+    {
+      "path": "Client/MistralClient.py",
+      "sha256": "ee1b2ed804451c7c6abd5a80c632cf878e1a289921d91df6d25fa189e3f1662f",
+      "matches": true
+    },
+    {
+      "path": "Client/OpenAiClient.py",
+      "sha256": "4cd896fe5070908dfad0f124c2c35a5de288537b1df53d9e91062579ecf24f7e",
+      "matches": true
+    },
+    {
+      "path": "Client/ReactClient.py",
+      "sha256": "c3eb525babfb0f412231156d6d55f428299be55e0720d944e45eaaea2b1da009",
+      "matches": true
+    },
+    {
+      "path": "ConstrainAgent/ConstrainAgent.py",
+      "sha256": "755241696847d358bc68f645e82ea438836190f8741af01674029c499b41c9e1",
+      "matches": true
+    },
+    {
+      "path": "ConstrainAgent/LLMs.py",
+      "sha256": "e4f482fbedb28f311e985c8465b622b14e297d22367216bde471e8fcc206eed7",
+      "matches": true
+    },
+    {
+      "path": "LEMMA_Metrics.py",
+      "sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+      "matches": true
+    },
+    {
+      "path": "LEMMA_experiment.py",
+      "sha256": "b7714e30ed516bfa8e978ff2f602ac9df1cb8163b19331429a316c3352875035",
+      "matches": true
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "4f5a4d351d3cc12d1007d1c18d84381723da2a714a8cde41d3b29b6e9c1e7162",
+      "matches": true
+    },
+    {
+      "path": "Log_tools.py",
+      "sha256": "be8fe013eb6dfc382045739c015b4c28fe5605c7ad5e4228589d6619cc8ec7be",
+      "matches": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "62a4a00b3ac81bff4c6612276ad4fed926461d3103dd0d9b0d89c186f5b548d7",
+      "matches": true
+    },
+    {
+      "path": "Utils/CausalDiscovery.py",
+      "sha256": "9fae6eebc7f49d742564d01134f2b235269981b90f9d655942bc0a8e714e8db0",
+      "matches": true
+    },
+    {
+      "path": "Utils/RCA.py",
+      "sha256": "479d1540c1c5f89e62fedfb89d871af7f1297fd849e187aa149cd16ddd71c47d",
+      "matches": true
+    },
+    {
+      "path": "Utils/data.py",
+      "sha256": "3e0a2ebe42877df49c1084d7ac0d437475c17a7a7ccb1b17b2de38832d1a39f6",
+      "matches": true
+    },
+    {
+      "path": "Utils/visualize.py",
+      "sha256": "0a841d77ccfe0d108a8f719b9131ae2eaf7805b394ee33989ef0359b37c0ce1f",
+      "matches": true
+    },
+    {
+      "path": "Web_tools.py",
+      "sha256": "6c81ea50b3963b623a21895063bb6a593d3f3b8d42c18519d79d2d9affa3c673",
+      "matches": true
+    },
+    {
+      "path": "config.py",
+      "sha256": "fe29aa5570d5be10590276076baa671f282d95615448afc0bc9b6c55b1fc0c77",
+      "matches": true
+    },
+    {
+      "path": "docs/.nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "path": "docs/assets/fig1.png",
+      "sha256": "a0837b7f8f2ad66ae8c8bc09c52ca9b90ed77899bba414cdc53d40facc591f4f",
+      "matches": true
+    },
+    {
+      "path": "docs/assets/fig2.png",
+      "sha256": "6324090543b4488249717b9a22c790167bf89a9547365d5cd586e72c3707c5e8",
+      "matches": true
+    },
+    {
+      "path": "docs/assets/fig3.png",
+      "sha256": "5727372f0e538b8b797dd05873244a0caae55b370ea5b1dda402a9d215506b5d",
+      "matches": true
+    },
+    {
+      "path": "docs/assets/fig5.png",
+      "sha256": "644db6e97319ab4f6a0bbd15c720b7c91490c4161f4bf251b0254d34c1865077",
+      "matches": true
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "e9d09ce4d1c72c81ed5716e2dc6b3bf07551502f4327995d8811bef12927e678",
+      "matches": true
+    },
+    {
+      "path": "docs/static/css/style.css",
+      "sha256": "bb9303662fb7723e8190850b902abce095ff295129e0ebc8cd1e4f1b092265da",
+      "matches": true
+    },
+    {
+      "path": "docs/static/js/core.js",
+      "sha256": "580519b09acf0a4660df742cb71e87e41cee741bf99621963e8a3f01275e2e06",
+      "matches": true
+    },
+    {
+      "path": "docs/static/js/main.js",
+      "sha256": "14671ce03e8b8528f3330853454713edecf186d9ccec14183c7af59f6ce1553b",
+      "matches": true
+    },
+    {
+      "path": "image/model_framework.jpg",
+      "sha256": "19d536de7808b319c48b6ee53e620f19ba6173c671267b8492c8bbe90206e03a",
+      "matches": true
+    },
+    {
+      "path": "image/table4.png",
+      "sha256": "e87e56f4a37892b45890579d58fb1924f445e6d05b16057ff982537cfb693315",
+      "matches": true
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "77f447f5b87343e32e5554e7ab22072e0fdbafab16db7dafaa21c37b481f798a",
+      "matches": true
+    },
+    {
+      "path": "web_utils/config/config.yaml",
+      "sha256": "7b8c59c29516fa001db029168a6f7069d50176cd0f2ab05a7448520218b559b6",
+      "matches": true
+    },
+    {
+      "path": "web_utils/fetch_web_content.py",
+      "sha256": "d59d6b2706c6720e2ce76906cf59d8deb412c523867d400f718d2a9feebaebe4",
+      "matches": true
+    },
+    {
+      "path": "web_utils/llm_answer.py",
+      "sha256": "ea5cb71bca72b65b7fdeda66527ecfa40defe3eafacbf74eb07006976cd8b31e",
+      "matches": true
+    },
+    {
+      "path": "web_utils/locate_reference.py",
+      "sha256": "ae6939b138b4db3590d9744e92485da775ce24be80d39adfcf659a15d715e684",
+      "matches": true
+    },
+    {
+      "path": "web_utils/main.py",
+      "sha256": "a98ac49c562b8b727c297018c9265d8ae9e3209a365b385d806fe9c665d05a3b",
+      "matches": true
+    },
+    {
+      "path": "web_utils/retrieval.py",
+      "sha256": "8625edc14588e94f7e52538dfa35344afa90e17e473b12a786f3131f9cc39f2e",
+      "matches": true
+    },
+    {
+      "path": "web_utils/serper_service.py",
+      "sha256": "b39c1912994b525185776ebfc62ffcce803cd00284c725273bb6ec02e74727dc",
+      "matches": true
+    },
+    {
+      "path": "web_utils/web_crawler.py",
+      "sha256": "a9c96b1013c33e9f95b590e2bb9c8871149a3912e1abcff35dd2db5853da80fb",
+      "matches": true
+    }
+  ],
+  "approved_exclusions": [
+    "GTdatasets_experiment.py",
+    "Utils/metrics.py",
+    "data/SampleFromBIF.py",
+    "docs/assets/fig4.png",
+    "image/table1.png",
+    "image/table2.png"
+  ],
+  "syntax_files": 34,
+  "syntax_errors": [],
+  "local_import_errors": [],
+  "environment": {
+    "method": "Windows에서 WSL site-packages 배포 메타데이터를 읽고 마지막 승인 freeze와 비교; import·pip check 재실행 아님",
+    "packages": 201,
+    "official_pins": 140,
+    "package_diff": {}
+  },
+  "rca_assets": {
+    "method": "존재·파일 크기 대조. 과거 다운로드 SHA256은 manifest에 보존하며 이번에는 대용량 파일 재해시 안 함",
+    "files": [
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed/Log Data/20231207.zip",
+        "expected_bytes": 277339693,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed/Metrics Data/20231207.zip",
+        "expected_bytes": 36190702,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed/README.md",
+        "expected_bytes": 1487,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20210517.zip",
+        "expected_bytes": 1601666419,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20210524.zip",
+        "expected_bytes": 1596661007,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20211203.zip",
+        "expected_bytes": 1327897003,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Log Data/20220606.zip",
+        "expected_bytes": 1443654612,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20210517.zip",
+        "expected_bytes": 231033802,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20210524.zip",
+        "expected_bytes": 240598842,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20211203.zip",
+        "expected_bytes": 144944525,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/Metrics Data/20220606.zip",
+        "expected_bytes": 69027896,
+        "size_matches": true
+      },
+      {
+        "path": "raw_downloads/huggingface_lemma_rca_product_review_preprocessed/README.md",
+        "expected_bytes": 1322,
+        "size_matches": true
+      }
+    ]
+  },
+  "deletion_target_count": 36,
+  "removed_entry_count": 122,
+  "remaining_targets": [],
+  "broken_links": [],
+  "tasks": {
+    "TASK_001_paper_analysis.md": "DONE",
+    "TASK_002_official_code_setup.md": "DONE",
+    "TASK_003_dataset_download.md": "BLOCKED",
+    "TASK_004_environment_setup.md": "BLOCKED",
+    "TASK_005_model_setup.md": "BLOCKED",
+    "TASK_006_paths_and_preflight.md": "DONE",
+    "TASK_007_run_original_experiments.md": "TODO",
+    "TASK_008_evaluate_results.md": "TODO",
+    "TASK_009_compare_with_paper.md": "TODO",
+    "TASK_010_supplementary_artifacts.md": "DONE",
+    "TASK_011_summary_output_directory.md": "DONE",
+    "TASK_012_chromadb_compatibility.md": "DONE",
+    "TASK_013_install_chromadb.md": "DONE",
+    "TASK_014_install_lxml.md": "DONE",
+    "TASK_015_install_openai_embeddings.md": "DONE",
+    "TASK_017_scope_rca_only.md": "DONE"
+  },
+  "git_head": "cd77a61959f4ec3965c0c3cb347fd59fe45d72b8",
+  "experiments_executed": false,
+  "api_calls": false,
+  "limits": "정적·파일 보존 점검이며 전체 RCA 실행 준비·실행 성공을 뜻하지 않음. WSL runtime 재실행 없음."
+}

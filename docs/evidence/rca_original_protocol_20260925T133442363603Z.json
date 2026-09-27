@@ -1,0 +1,450 @@
+{
+  "checked_utc": "20260925T133442363603Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "official_archive_and_37_files_match",
+      "passed": true
+    },
+    {
+      "name": "causal_matrix_effect_row_cause_column",
+      "passed": true
+    },
+    {
+      "name": "matrix_text_preserves_A_to_B",
+      "passed": true
+    },
+    {
+      "name": "released_prompt_reverses_directed_graph_description",
+      "passed": true
+    },
+    {
+      "name": "released_target_checks_transposed_entry",
+      "passed": true
+    },
+    {
+      "name": "released_prompt_reuses_first_pair_sentence",
+      "passed": true
+    },
+    {
+      "name": "released_edge_type_-1_described_as_two_causes",
+      "passed": true
+    },
+    {
+      "name": "released_edge_type_2_described_as_two_causes",
+      "passed": true
+    },
+    {
+      "name": "constraint_matrix_cause_row_effect_column",
+      "passed": true
+    },
+    {
+      "name": "RWR_stage_inputs_original_original_refined_refined",
+      "passed": true
+    },
+    {
+      "name": "RWR_calls_use_last_column_and_defaults",
+      "passed": true
+    },
+    {
+      "name": "RWR_public_defaults",
+      "passed": true
+    },
+    {
+      "name": "recorded_RNG_state_replays_unchanged_RWR",
+      "passed": true
+    },
+    {
+      "name": "RWR_preserves_input_matrix",
+      "passed": true
+    },
+    {
+      "name": "RWR_reaches_upstream_A_without_transpose",
+      "passed": true
+    },
+    {
+      "name": "stable_count_descending_sort_retains_KPI",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:PC",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:PC",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:Efficient-CDLMs",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:Efficient-CDLMs",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:SCD-LLM",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:SCD-LLM",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:ReAct",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:ReAct",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:LLM-KBCI",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:LLM-KBCI",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:LLM-KBCI-RA",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:LLM-KBCI-RA",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:LLM-KBCI-RE",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:LLM-KBCI-RE",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:MATMCD",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:MATMCD",
+      "passed": true
+    },
+    {
+      "name": "table4_published_ranks:MATMCD-RE",
+      "passed": true
+    },
+    {
+      "name": "table4_metrics_match_display_precision:MATMCD-RE",
+      "passed": true
+    },
+    {
+      "name": "selected_ground_truth_prefix_cardinalities",
+      "passed": true
+    },
+    {
+      "name": "CC_not_silently_resolved",
+      "passed": true
+    }
+  ],
+  "actual_experiment_results": false,
+  "inference_calls": 0,
+  "scientific_corrections_applied": false,
+  "author_run_equivalence": "UNCONFIRMED",
+  "synthetic_rng_seed": 173,
+  "synthetic_seed_is_experiment_seed": false,
+  "D03_prompt_examples": {
+    "labels": [
+      "A",
+      "B",
+      "Latency"
+    ],
+    "causal_matrix": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "matrix_text": "A -> B",
+    "first_prompt": "We want to perform causal discovery on synthetic graph, considering A, B, Latency as variables.\n\nWe have conducted the statistical causal discovery with pc algorithm.\n\nThe edges and their coefficients of the structural causal model suggested by the statistical causal discovery are as follows:\nB is the cause of A.\n\nBased on the results above, it seems that changes in A do not directly affect B.\n\nYour task is to interpret this result from a domain knowledge perspective and determine whether this statistically suggested hypothesis is plausible in the context of the domain.\n\nPlease provide an explanation that leverages your expert knowledge on the causal relationship between A and B, and assess the correctness of this causal discovery result.\n Your response should consider the relevant factors and provide a reasonable explanation based on your understanding of the domain.",
+    "second_prompt": "We want to perform causal discovery on synthetic graph, considering A, B, Latency as variables.\n\nWe have conducted the statistical causal discovery with pc algorithm.\n\nThe edges and their coefficients of the structural causal model suggested by the statistical causal discovery are as follows:\nB is the cause of A.\n\nBased on the results above, it seems that changes in A do not directly affect B.\n\nYour task is to interpret this result from a domain knowledge perspective and determine whether this statistically suggested hypothesis is plausible in the context of the domain.\n\nPlease provide an explanation that leverages your expert knowledge on the causal relationship between B and Latency, and assess the correctness of this causal discovery result.\n Your response should consider the relevant factors and provide a reasonable explanation based on your understanding of the domain.",
+    "ambiguous_edge_types": {
+      "-1": {
+        "matrix_text": "B -- A",
+        "released_graph_prompt": "We have conducted the statistical causal discovery with pc algorithm.\n\nThe edges and their coefficients of the structural causal model suggested by the statistical causal discovery are as follows:\nA is the cause of B.\nB is the cause of A.\n\nBased on the results above, it seems that changes in A do not directly affect B.\n\n"
+      },
+      "2": {
+        "matrix_text": "B <-> A, A <-> B",
+        "released_graph_prompt": "We have conducted the statistical causal discovery with pc algorithm.\n\nThe edges and their coefficients of the structural causal model suggested by the statistical causal discovery are as follows:\nA is the cause of B.\nB is the cause of A.\n\nBased on the results above, it seems that changes in A do not directly affect B.\n\n"
+      }
+    }
+  },
+  "RWR_calls": [
+    {
+      "line": 37,
+      "expression": "random_walk_with_restart(adjacency_matrix, len(labels) - 1)"
+    },
+    {
+      "line": 72,
+      "expression": "random_walk_with_restart(adjacency_matrix, len(labels) - 1)"
+    },
+    {
+      "line": 131,
+      "expression": "random_walk_with_restart(adjacency_matrix_optimized, len(labels) - 1)"
+    },
+    {
+      "line": 178,
+      "expression": "random_walk_with_restart(adjacency_matrix_optimized, len(labels) - 1)"
+    }
+  ],
+  "RWR_defaults": {
+    "steps": 1000,
+    "rp": 0.05,
+    "max_self": 10
+  },
+  "synthetic_RWR_counts": [
+    193.0,
+    394.0,
+    181.0
+  ],
+  "sort_example": [
+    [
+      3,
+      "Latency"
+    ],
+    [
+      2,
+      "A"
+    ],
+    [
+      2,
+      "B"
+    ]
+  ],
+  "table4_crosscheck": [
+    {
+      "paper_method": "PC",
+      "code_label": "PC",
+      "published_ranks_PR_CC": [
+        5,
+        13
+      ],
+      "metrics": {
+        "MAP@5": 0.0,
+        "MAP@10": 0.25,
+        "MRR": 0.13846153846153847
+      },
+      "paper_display": [
+        0.0,
+        0.25,
+        0.14
+      ]
+    },
+    {
+      "paper_method": "Efficient-CDLMs",
+      "code_label": "Efficient CDLMs",
+      "published_ranks_PR_CC": [
+        10,
+        10
+      ],
+      "metrics": {
+        "MAP@5": 0.0,
+        "MAP@10": 0.0,
+        "MRR": 0.1
+      },
+      "paper_display": [
+        0.0,
+        0.0,
+        0.1
+      ]
+    },
+    {
+      "paper_method": "SCD-LLM",
+      "code_label": "Individual LLM",
+      "published_ranks_PR_CC": [
+        5,
+        13
+      ],
+      "metrics": {
+        "MAP@5": 0.0,
+        "MAP@10": 0.25,
+        "MRR": 0.13846153846153847
+      },
+      "paper_display": [
+        0.0,
+        0.25,
+        0.14
+      ]
+    },
+    {
+      "paper_method": "ReAct",
+      "code_label": "React",
+      "published_ranks_PR_CC": [
+        5,
+        12
+      ],
+      "metrics": {
+        "MAP@5": 0.0,
+        "MAP@10": 0.25,
+        "MRR": 0.14166666666666666
+      },
+      "paper_display": [
+        0.0,
+        0.25,
+        0.14
+      ]
+    },
+    {
+      "paper_method": "LLM-KBCI",
+      "code_label": "LLM-KBCI",
+      "published_ranks_PR_CC": [
+        4,
+        13
+      ],
+      "metrics": {
+        "MAP@5": 0.1,
+        "MAP@10": 0.3,
+        "MRR": 0.16346153846153846
+      },
+      "paper_display": [
+        0.1,
+        0.3,
+        0.16
+      ]
+    },
+    {
+      "paper_method": "LLM-KBCI-RA",
+      "code_label": "LLM-KBCI(React)",
+      "published_ranks_PR_CC": [
+        5,
+        12
+      ],
+      "metrics": {
+        "MAP@5": 0.0,
+        "MAP@10": 0.25,
+        "MRR": 0.14166666666666666
+      },
+      "paper_display": [
+        0.0,
+        0.25,
+        0.14
+      ]
+    },
+    {
+      "paper_method": "LLM-KBCI-RE",
+      "code_label": "LLM-KBCI-R",
+      "published_ranks_PR_CC": [
+        4,
+        13
+      ],
+      "metrics": {
+        "MAP@5": 0.1,
+        "MAP@10": 0.3,
+        "MRR": 0.16346153846153846
+      },
+      "paper_display": [
+        0.1,
+        0.3,
+        0.16
+      ]
+    },
+    {
+      "paper_method": "MATMCD",
+      "code_label": "TAMCD",
+      "published_ranks_PR_CC": [
+        2,
+        7
+      ],
+      "metrics": {
+        "MAP@5": 0.3,
+        "MAP@10": 0.55,
+        "MRR": 0.3214285714285714
+      },
+      "paper_display": [
+        0.3,
+        0.55,
+        0.32
+      ]
+    },
+    {
+      "paper_method": "MATMCD-RE",
+      "code_label": "TamCD-R",
+      "published_ranks_PR_CC": [
+        3,
+        6
+      ],
+      "metrics": {
+        "MAP@5": 0.2,
+        "MAP@10": 0.55,
+        "MRR": 0.25
+      },
+      "paper_display": [
+        0.2,
+        0.55,
+        0.25
+      ]
+    }
+  ],
+  "rank_boundary": {
+    "rank1_MAP5": 0.8,
+    "rank5_MAP5": 0.0
+  },
+  "ground_truth_candidates": [
+    {
+      "case": "Product_Review/20211203",
+      "official_helper_label": "mongodb-v1",
+      "matches": [
+        "mongodb-v1-64c6b69879-p4wfp"
+      ],
+      "mapping": "UNIQUE_PREFIX_CANDIDATE",
+      "mapping_is_author_ground_truth_confirmation": false,
+      "plan_sha256": "c70248cf1dd3292d031436de29ae78f785ae7f8b4216fb1ed88320ab6b174a59"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "official_helper_label": "istio-ingressgateway",
+      "matches": [
+        "istio-ingressgateway-c5c48c9f4-997nl"
+      ],
+      "mapping": "UNIQUE_PREFIX_CANDIDATE",
+      "mapping_is_author_ground_truth_confirmation": false,
+      "plan_sha256": "3a2acb554463628afae7a9a7a90fdb5c1c8b3c8ef2c3279fb5614907e8506592"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "official_helper_label": "productpage-v1",
+      "matches": [
+        "productpage-v1-94d68db49-j7t55",
+        "productpage-v1-94d68db49-vc8ct"
+      ],
+      "mapping": "AMBIGUOUS",
+      "mapping_is_author_ground_truth_confirmation": false,
+      "plan_sha256": "ad928dea9428e8e20c7e0e5820705de9b09538daca7b6247902d5f0c7c142978"
+    }
+  ],
+  "preservation": {
+    "official_source": true,
+    "python_packages": true,
+    "configs": true
+  },
+  "source_sha256": {
+    "Utils/CausalDiscovery.py": "9fae6eebc7f49d742564d01134f2b235269981b90f9d655942bc0a8e714e8db0",
+    "Utils/RCA.py": "479d1540c1c5f89e62fedfb89d871af7f1297fd849e187aa149cd16ddd71c47d",
+    "ConstrainAgent/LLMs.py": "e4f482fbedb28f311e985c8465b622b14e297d22367216bde471e8fcc206eed7",
+    "LEMMA_experiment.py": "b7714e30ed516bfa8e978ff2f602ac9df1cb8163b19331429a316c3352875035",
+    "LEMMA_Metrics.py": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+    "Log_tools.py": "be8fe013eb6dfc382045739c015b4c28fe5605c7ad5e4228589d6619cc8ec7be"
+  },
+  "script_sha256": "53fa65c252b28b9071243c0a984edfa3a1b59b3866b081fc0c0a6b2ce23cb86c"
+}

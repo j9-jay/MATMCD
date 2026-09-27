@@ -1,0 +1,63 @@
+{
+  "checked_utc": "20260926T074401371546Z",
+  "requested": "User rebooted PC and requested re-test and alternative proposals",
+  "status": "RETEST_COMPLETE_CAPACITY_STILL_BLOCKED",
+  "settings_changed": false,
+  "generation_calls": 0,
+  "rca_experiments": 0,
+  "logs": "logs/setup/rca_reboot_retest_20260926T074401371546Z",
+  "windows_before": {
+    "checked_local": "2026-09-26T16:42:46.3911512+09:00",
+    "last_boot_local": "2026-09-26T16:37:39.5000000+09:00",
+    "total_ram_kib": 16682916,
+    "free_ram_kib": 8779056
+  },
+  "gpu_preliminary": {
+    "name": "NVIDIA GeForce RTX 2080 SUPER",
+    "total_mib": 8192,
+    "used_mib": 491,
+    "free_mib": 7497,
+    "driver": "591.86"
+  },
+  "before": {
+    "time_utc": "2026-09-26T07:44:01.588360+00:00",
+    "wsl_memory_kib": {
+      "MemTotal": 8081052,
+      "MemAvailable": 7375528,
+      "SwapTotal": 2097152,
+      "SwapFree": 2097152
+    },
+    "gpu_total_used_free_utilization": "8192, 532, 7456, 0"
+  },
+  "capacity_exit_code": 2,
+  "capacity_evidence": "docs/evidence/rca_context_20260926T074401590811Z.json",
+  "capacity_status": "BLOCKED_CAPACITY",
+  "capacity_summary": {
+    "prompt_count": 426,
+    "fits": 219,
+    "unprepared_count": 0,
+    "max_input_tokens": 131003,
+    "max_required_context": 139196
+  },
+  "owned_server_stopped": true,
+  "preservation": {
+    "official_source": true,
+    "python_packages": true,
+    "configs": true
+  },
+  "all_426_identical_to_before_reboot": true,
+  "after": {
+    "time_utc": "2026-09-26T07:45:34.916583+00:00",
+    "wsl_memory_kib": {
+      "MemTotal": 8081052,
+      "MemAvailable": 7400916,
+      "SwapTotal": 2097152,
+      "SwapFree": 2097152
+    },
+    "gpu_total_used_free_utilization": "8192, 540, 7448, 0"
+  },
+  "all_configs_unchanged": true,
+  "samples_count": 46,
+  "gpu_peak_used_mib": 4253,
+  "wsl_min_available_kib": 6947888
+}

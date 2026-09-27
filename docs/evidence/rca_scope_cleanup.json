@@ -1,0 +1,686 @@
+{
+  "checked_utc": "2026-09-23T06:52:36.3965966Z",
+  "success": true,
+  "scope": "rca",
+  "authorization": "사용자 요청: 1번 전용 파일 삭제 및 TODO 제외",
+  "targets": [
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\GTdatasets_experiment.py",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Auto_MPG_data.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Auto_MPG_GTmatrix.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\DWD_climate_data.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\DWD_climate_GTmatrix.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Sachs_data.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Sachs_GTmatrix.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\asia_data.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\asia_GTmatrix.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\child_data.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\child_GTmatrix.csv",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\SampleFromBIF.py",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\BIF\\asia.bif",
+    "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\BIF\\child.bif",
+    "E:\\연구\\MATMCD\\official\\matmcd\\GTdatasets_experiment.py",
+    "E:\\연구\\MATMCD\\official\\matmcd\\Utils\\metrics.py",
+    "E:\\연구\\MATMCD\\official\\matmcd\\data\\SampleFromBIF.py",
+    "E:\\연구\\MATMCD\\official\\matmcd\\image\\table1.png",
+    "E:\\연구\\MATMCD\\official\\matmcd\\image\\table2.png",
+    "E:\\연구\\MATMCD\\scripts\\prepare_bif_samples.py",
+    "E:\\연구\\MATMCD\\scripts\\check_bif_inputs.py",
+    "E:\\연구\\MATMCD\\docs\\LOCAL_SAMPLE_DEVIATION.md",
+    "E:\\연구\\MATMCD\\docs\\evidence\\asia_local_sample.json",
+    "E:\\연구\\MATMCD\\docs\\evidence\\child_local_sample.json",
+    "E:\\연구\\MATMCD\\docs\\evidence\\bif_input_check.json",
+    "E:\\연구\\MATMCD\\tasks\\TASK_016_prepare_local_bif_samples.md",
+    "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_matmcd_local_sample",
+    "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_matmcd_local_sample",
+    "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_network",
+    "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_network",
+    "E:\\연구\\MATMCD_DATA\\raw_downloads\\bnlearn_asia_network",
+    "E:\\연구\\MATMCD_DATA\\raw_downloads\\bnlearn_child_network",
+    "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd",
+    "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling",
+    "E:\\연구\\MATMCD_DATA\\logs\\bif_input_check",
+    "E:\\연구\\MATMCD\\official\\matmcd\\docs\\assets\\fig4.png"
+  ],
+  "removed": [
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\GTdatasets_experiment.py",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Auto_MPG_data.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Auto_MPG_GTmatrix.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\DWD_climate_data.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\DWD_climate_GTmatrix.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Sachs_data.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\Sachs_GTmatrix.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\asia_data.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\asia_GTmatrix.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\child_data.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\child_GTmatrix.csv",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\SampleFromBIF.py",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\BIF\\asia.bif",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\BIF\\child.bif",
+      "kind": "link"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\official\\matmcd\\GTdatasets_experiment.py",
+      "kind": "file",
+      "bytes": 5993,
+      "sha256": "751afbbdcb3a2ceb9fb8603b95b03e51fd9ccaf5636bc3385683d021d318ef78"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\official\\matmcd\\Utils\\metrics.py",
+      "kind": "file",
+      "bytes": 3715,
+      "sha256": "e82b2c59d0aac2be2484e31ff167db2c65bc098745b5d378e11169ee02659115"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\official\\matmcd\\data\\SampleFromBIF.py",
+      "kind": "file",
+      "bytes": 1303,
+      "sha256": "ba382a20ed9266d909000c6e4538556f0b7249bbead7a87424ca7a9c48e19eda"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\official\\matmcd\\image\\table1.png",
+      "kind": "file",
+      "bytes": 238456,
+      "sha256": "355e96ced49e312329f59de3f2d9f2e57f87c3a594540d934b69b05703fa3046"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\official\\matmcd\\image\\table2.png",
+      "kind": "file",
+      "bytes": 183739,
+      "sha256": "e357d5429b5486a446c4c8cbdd900a0c8271e66d04d4ffd734ed480a26a64af3"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\scripts\\prepare_bif_samples.py",
+      "kind": "file",
+      "bytes": 10270,
+      "sha256": "098add666ddc55c6cba3ff94904c703d485a095f2233d0e9ed34e6c5c5afd4f0"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\scripts\\check_bif_inputs.py",
+      "kind": "file",
+      "bytes": 4626,
+      "sha256": "36a6b4ccc510f1d152cd523038a394a38ee583237e16a75a08327b2df5fc540e"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\docs\\LOCAL_SAMPLE_DEVIATION.md",
+      "kind": "file",
+      "bytes": 5136,
+      "sha256": "ea63a8e7302985fc6f860f0009f8b1d48385cbf1317d108961b3ee4921cbf942"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\docs\\evidence\\asia_local_sample.json",
+      "kind": "file",
+      "bytes": 3215,
+      "sha256": "bb3287004674b7f28b5e46a7d65080bcf633ff3ea6fe3cbfe29054aa242d68a2"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\docs\\evidence\\child_local_sample.json",
+      "kind": "file",
+      "bytes": 5655,
+      "sha256": "5df743e1daa24400535d7b21aef853eaad0c197d2149829d7d119a2e28981e0a"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\docs\\evidence\\bif_input_check.json",
+      "kind": "file",
+      "bytes": 3081,
+      "sha256": "86d3ce2b980633c2eba0ffe97f80d474f527b24edc79aa59bb4881ef3822c6f0"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\tasks\\TASK_016_prepare_local_bif_samples.md",
+      "kind": "file",
+      "bytes": 3397,
+      "sha256": "3003ca40d43799bdbc50ae52f00049b5e121d35ab81c44833fa0e5282d720691"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_matmcd_local_sample\\asia_1000_data.csv",
+      "kind": "file",
+      "bytes": 16043,
+      "sha256": "355b7b0de099fbc5d26d2ba25d0874e777d74e0caebf4a974663af030e97efb0"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_matmcd_local_sample\\asia_1000_GTmatrix.csv",
+      "kind": "file",
+      "bytes": 128,
+      "sha256": "d39da025af3e80a5c179a4b4da3608a6c5cfc56b19e1786aef83fba9a317b716"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_matmcd_local_sample\\provenance.json",
+      "kind": "file",
+      "bytes": 3215,
+      "sha256": "bb3287004674b7f28b5e46a7d65080bcf633ff3ea6fe3cbfe29054aa242d68a2"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_matmcd_local_sample",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_matmcd_local_sample\\child_1000_data.csv",
+      "kind": "file",
+      "bytes": 40189,
+      "sha256": "b7b87a9b4e6bac6b38bd8c655f734f51d8f0594d1f36fc88465a598d8c2f6825"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_matmcd_local_sample\\child_1000_GTmatrix.csv",
+      "kind": "file",
+      "bytes": 800,
+      "sha256": "f7773785b229f59ab3ef847f1a81149244a93cec447e9150332072701834dd20"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_matmcd_local_sample\\provenance.json",
+      "kind": "file",
+      "bytes": 5655,
+      "sha256": "5df743e1daa24400535d7b21aef853eaad0c197d2149829d7d119a2e28981e0a"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_matmcd_local_sample",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_network\\asia.bif",
+      "kind": "file",
+      "bytes": 1074,
+      "sha256": "9f770c96940dc4d860b581602120790ac538983b30b28d38631b8184dc7b5f89"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_asia_network",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_network\\child.bif",
+      "kind": "file",
+      "bytes": 5863,
+      "sha256": "432c22e661cd0e8235c8d95599ac22ccc261002459f5c4e6e7235b057908fe6e"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets\\bnlearn_child_network",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\bnlearn_asia_network\\asia.bif.gz",
+      "kind": "file",
+      "bytes": 310,
+      "sha256": "7d5e7b8549834824c1b05f367eb7860fa3fca3adaf3649f0c7be6035af197197"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\bnlearn_asia_network",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\bnlearn_child_network\\child.bif.gz",
+      "kind": "file",
+      "bytes": 1443,
+      "sha256": "2bc3236dcbdbf9c9f1bbdeb060aa93c0bdee389d23a549b7248b9d89ed8a980c"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\bnlearn_child_network",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\applypatch-msg.sample",
+      "kind": "file",
+      "bytes": 478,
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\commit-msg.sample",
+      "kind": "file",
+      "bytes": 896,
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\fsmonitor-watchman.sample",
+      "kind": "file",
+      "bytes": 4655,
+      "sha256": "f3c0228d8e827f1c5260ac59fdd92c3d425c46e54711ef713c5a54ae0a4db2b4"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\post-update.sample",
+      "kind": "file",
+      "bytes": 189,
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\pre-applypatch.sample",
+      "kind": "file",
+      "bytes": 424,
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\pre-commit.sample",
+      "kind": "file",
+      "bytes": 1643,
+      "sha256": "f9af7d95eb1231ecf2eba9770fedfa8d4797a12b02d7240e98d568201251244a"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\pre-merge-commit.sample",
+      "kind": "file",
+      "bytes": 416,
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\pre-push.sample",
+      "kind": "file",
+      "bytes": 1374,
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\pre-rebase.sample",
+      "kind": "file",
+      "bytes": 4898,
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\pre-receive.sample",
+      "kind": "file",
+      "bytes": 544,
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\prepare-commit-msg.sample",
+      "kind": "file",
+      "bytes": 1492,
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\push-to-checkout.sample",
+      "kind": "file",
+      "bytes": 2783,
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks\\update.sample",
+      "kind": "file",
+      "bytes": 3650,
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\hooks",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\info\\exclude",
+      "kind": "file",
+      "bytes": 240,
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\info",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs\\refs\\heads\\main",
+      "kind": "file",
+      "bytes": 193,
+      "sha256": "aa7750fbfff2964fd7df36af59174dccb94d743b54e488154dd5e5052902d467"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs\\refs\\heads",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+      "kind": "file",
+      "bytes": 193,
+      "sha256": "aa7750fbfff2964fd7df36af59174dccb94d743b54e488154dd5e5052902d467"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs\\refs\\remotes\\origin",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs\\refs\\remotes",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs\\refs",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs\\HEAD",
+      "kind": "file",
+      "bytes": 193,
+      "sha256": "aa7750fbfff2964fd7df36af59174dccb94d743b54e488154dd5e5052902d467"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\logs",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\objects\\info",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\objects\\pack\\pack-25178608ea217771bfd7a82cff44a7bb496dc799.idx",
+      "kind": "file",
+      "bytes": 1660,
+      "sha256": "9754c98c60368ec9587577a0c3cb5e670ad21f1df15b72adbadf765f772189a8"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\objects\\pack\\pack-25178608ea217771bfd7a82cff44a7bb496dc799.pack",
+      "kind": "file",
+      "bytes": 173118,
+      "sha256": "16ff3b7e16a83e4555c4643c29bfddea7d04d90760cb53d95d8916fea625d577"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\objects\\pack",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\objects",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\refs\\heads\\main",
+      "kind": "file",
+      "bytes": 41,
+      "sha256": "f68ba7db14938d315ee8070f0eefd87105c275d52f2b00e7bd0af4399d4caed5"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\refs\\heads",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\refs\\remotes\\origin\\HEAD",
+      "kind": "file",
+      "bytes": 30,
+      "sha256": "2bb6a24aa0fc6c484100f5d51a29bbad841cd2c755f5d93faa204e5dbb4eb2b4"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\refs\\remotes\\origin",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\refs\\remotes",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\refs\\tags",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\refs",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\config",
+      "kind": "file",
+      "bytes": 306,
+      "sha256": "eadf5b8b069ad2705fce33ed4a871e7b157331b6e1e2d319578f0dfd49135964"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\description",
+      "kind": "file",
+      "bytes": 73,
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\HEAD",
+      "kind": "file",
+      "bytes": 21,
+      "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\index",
+      "kind": "file",
+      "bytes": 1463,
+      "sha256": "a9b58a12bb0374c927bf929530014a747f90038e242552fbbc81a2eec319142d"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git\\packed-refs",
+      "kind": "file",
+      "bytes": 112,
+      "sha256": "ed6d4fc7963b452dd35fa1eee3e142c44aca8e31167630721dd6c09653b672e9"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\.git",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\benchmark datasets\\Auto MPG data.csv",
+      "kind": "file",
+      "bytes": 8384,
+      "sha256": "52a14349bc2b115831a9ed1558d5e95e791b430ae762db913b3ef50ba377cdd3"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\benchmark datasets\\DWD climate data.csv",
+      "kind": "file",
+      "bytes": 11316,
+      "sha256": "81f7cb2ceb9784cf9642fecd99acbbcfe0de888e18d9a840fef881f884439307"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\benchmark datasets\\read me.txt",
+      "kind": "file",
+      "bytes": 148,
+      "sha256": "60c24d958f7a7e422dac8ac830322440adbf276eaaf28a63c49c4c9a3f2e4237"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\benchmark datasets\\Sachs data.csv",
+      "kind": "file",
+      "bytes": 388460,
+      "sha256": "981b533bec148baeec3fe00f1ee637cbde7558787eecdc596c3882ae7b3ebb9d"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\benchmark datasets",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\codes\\Calculating_Metrics_of_Causal_Graphs.ipynb",
+      "kind": "file",
+      "bytes": 10597,
+      "sha256": "d7d2bbcdd464a98e3c0d02edffe5ba28aef614e25f6db140a324254528fe61ef"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\codes\\Model_codes_for_1st_step.ipynb",
+      "kind": "file",
+      "bytes": 26527,
+      "sha256": "9156003d6c707188c7f185f26e03690d3fac09692c88e72c8baaeedb761e793b"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\codes\\Model_codes_for_2nd_and_3rd_steps.ipynb",
+      "kind": "file",
+      "bytes": 89209,
+      "sha256": "77f93d553bef34cd7b30aa672c73ad036733796dc4205fa55235e0081638f9f1"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\codes\\Model_codes_for_4th_step.ipynb",
+      "kind": "file",
+      "bytes": 26294,
+      "sha256": "3ee0d1975f350a126e793e9860e6eb137b3f1975b3225630b268ea420e848bcc"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\codes\\model_codes_of_transformation_A.ipynb",
+      "kind": "file",
+      "bytes": 9107,
+      "sha256": "d0af8d03ff55cb8b157ec0d583b99e6f3fb638c147e1e5ae345de59773be419b"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\codes",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\ground truth matrix\\GTmatrix_Auto MPG data.csv",
+      "kind": "file",
+      "bytes": 55,
+      "sha256": "609dd33ad37831d2f4f9baa940c7f31d42cbf1bdfe10d7bd06fa3a2e8b7eebb7"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\ground truth matrix\\GTmatrix_DWD climate data.csv",
+      "kind": "file",
+      "bytes": 78,
+      "sha256": "daafa5b31ab52106af107940f180e0c84f1c2cca078c8b049587deffb05ded74"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\ground truth matrix\\GTmatrix_Sachs data.csv",
+      "kind": "file",
+      "bytes": 253,
+      "sha256": "5d4e7d78571520f3a39c7347ff45361682e02f9c363698a7e12c3d37f0d9be47"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd\\ground truth matrix",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_mas_takayama_llm_and_scd",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163457Z_asia\\execution_source.py",
+      "kind": "file",
+      "bytes": 1302,
+      "sha256": "f22e5cafb05daa85a1d1dd5dfb331efffe92764563d07ae3969e42f853f6e014"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163457Z_asia\\generation.log",
+      "kind": "file",
+      "bytes": 1105,
+      "sha256": "bd40c61176645c600c63e1794839501876f7ee5ca0442d844c177aeffbb49056"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163457Z_asia\\report.json",
+      "kind": "file",
+      "bytes": 3215,
+      "sha256": "bb3287004674b7f28b5e46a7d65080bcf633ff3ea6fe3cbfe29054aa242d68a2"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163457Z_asia\\rng_after_generation.json",
+      "kind": "file",
+      "bytes": 22364,
+      "sha256": "1a41bf1a458ef61ed0e0cf8acb8bc41597fe96b466839cb4a706b84226f5585c"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163457Z_asia\\rng_before_sampling.json",
+      "kind": "file",
+      "bytes": 22363,
+      "sha256": "a47d3fe0690da4cce9596ab4d0712158a14cc69c6a96f5a3e5bd567251644068"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163457Z_asia",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163642Z_child\\execution_source.py",
+      "kind": "file",
+      "bytes": 1303,
+      "sha256": "ba382a20ed9266d909000c6e4538556f0b7249bbead7a87424ca7a9c48e19eda"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163642Z_child\\generation.log",
+      "kind": "file",
+      "bytes": 3862,
+      "sha256": "7c0ac1f65f877be1b69ecb686843ba6976a629b4e25f1d97683a693cfeb69e48"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163642Z_child\\observed_stderr.log",
+      "kind": "file",
+      "bytes": 937,
+      "sha256": "893f0cb2c8fc8202e9d0ee8f8ce334d43e87ab03a21902fb01e68430d1fa38af"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163642Z_child\\report.json",
+      "kind": "file",
+      "bytes": 5655,
+      "sha256": "5df743e1daa24400535d7b21aef853eaad0c197d2149829d7d119a2e28981e0a"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163642Z_child\\rng_after_generation.json",
+      "kind": "file",
+      "bytes": 22358,
+      "sha256": "42d3dbfa6df8980e5101e3e6cc1bd64a65e43cbd55aea72b705c3434c3244e4d"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163642Z_child\\rng_before_sampling.json",
+      "kind": "file",
+      "bytes": 22362,
+      "sha256": "ee336a44f9bba1bac4645ebda251560d6f7139fe886a84a9cf63d6cfdeb3e0c1"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling\\20260922T163642Z_child",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_sampling",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_input_check\\20260922T164221Z\\report.json",
+      "kind": "file",
+      "bytes": 3081,
+      "sha256": "86d3ce2b980633c2eba0ffe97f80d474f527b24edc79aa59bb4881ef3822c6f0"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_input_check\\20260922T164221Z",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\logs\\bif_input_check",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\official\\matmcd\\data",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\datasets",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data\\BIF",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD_DATA\\workspaces\\d2i_matmcd_original\\data",
+      "kind": "directory"
+    },
+    {
+      "path": "E:\\연구\\MATMCD\\official\\matmcd\\docs\\assets\\fig4.png",
+      "kind": "file",
+      "bytes": 96108,
+      "sha256": "9787cb1f344ae3078402dd31a9537845e9b2a472a5ba03f323b397e26bf14e7e"
+    }
+  ],
+  "git_head": "cd77a61959f4ec3965c0c3cb347fd59fe45d72b8",
+  "git_config_sha256": "dcba9f01661c35ce0f343111f2bd9f5b14634e1edb4606c5ff43ea9748a5d0e9",
+  "git_preserved": true,
+  "experiments_executed": false,
+  "api_calls": false,
+  "supplemental_checked_utc": "2026-09-23T06:55:40.9588956Z"
+}

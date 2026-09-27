@@ -1,0 +1,19 @@
+{
+  "profile_id": "pr20211203_oracle30_domain_presence1_5_v1",
+  "authorization": "USER_APPROVED_DIAGNOSTICS_THEN_UNIFORM_DOMAIN_RESTART",
+  "user_instruction": "presence_penalty=1.5 값은 적절한 값이야? 맞으면 바로 적용해서 처음부터 다시 진행해줘. 옵션 변경 내용은 또 따로 기록해놔.",
+  "base_profile": "pr20211203_oracle30_matmcd_v1",
+  "phase": "MATMCD_domain",
+  "overrides": {"presence_penalty": 1.5},
+  "base_presence_penalty": 0.0,
+  "constraints_presence_penalty": 0.0,
+  "diagnostic_call_numbers": [41, 1, 15],
+  "failed_run": "runs/matmcd_oracle30_pr20211203_v1/20260926T135543690567Z",
+  "completed_stages_parent": "runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z",
+  "review_receipt": "docs/evidence/rca_domain_presence_review_20260926.json",
+  "restart_all_domain_pairs": 930,
+  "reuse_old_domain_responses": false,
+  "reuse_diagnostic_responses": false,
+  "automatic_retries": 0,
+  "paper_equivalence": false
+}

@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-09-26T10:04:03.062067+00:00",
+  "status": "PASS",
+  "method": "unchanged original RAG query captured; pinned BGE tokenizer only",
+  "retrieval_or_generation_performed": false,
+  "cases": [
+    {
+      "case": "Product_Review/20211203",
+      "label_count": 219,
+      "query_tokens_including_special": 3261,
+      "embedding_limit": 8192,
+      "fits": true,
+      "query_sha256": "f5a15722efc2d654ce3c83b177b907ec5d6f6fd12bc2c57f5a56f1a7807521a3"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "label_count": 197,
+      "query_tokens_including_special": 2946,
+      "embedding_limit": 8192,
+      "fits": true,
+      "query_sha256": "015fe886b7a069e1b5fda9cdd3cb0a870d170947991e8da89190208a7416ce69"
+    }
+  ]
+}

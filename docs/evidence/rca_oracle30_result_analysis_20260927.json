@@ -1,0 +1,802 @@
+{
+  "status": "READ_ONLY_ANALYSIS_COMPLETE",
+  "created_utc": "2026-09-27T02:00:47.741120+00:00",
+  "run_directory": "runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z",
+  "parent_directory": "runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z",
+  "new_LLM_requests": 0,
+  "new_RWR_runs": 0,
+  "experiment_conditions_modified": false,
+  "paper_sha256": "4d8bdb33a382ddceb73dfba2ee752075225b13b01231a033d99235a825baf2f5",
+  "paper_reference": {
+    "version": "arXiv:2412.13667v2",
+    "section": "4.3",
+    "table": 4,
+    "PC": {
+      "PR_rank": 5,
+      "CC_rank": 13,
+      "MAP@5": 0.0,
+      "MAP@10": 0.25,
+      "MRR_rounded": 0.14
+    },
+    "MATMCD": {
+      "PR_rank": 2,
+      "CC_rank": 7,
+      "MAP@5": 0.3,
+      "MAP@10": 0.55,
+      "MRR_rounded": 0.32
+    },
+    "MATMCD_RE": {
+      "PR_rank": 3,
+      "CC_rank": 6,
+      "MAP@5": 0.2,
+      "MAP@10": 0.55,
+      "MRR_rounded": 0.25
+    }
+  },
+  "rag": {
+    "indexed_documents": 31,
+    "indexed_chunks": 31,
+    "root_chunks_indexed": 1,
+    "root_chunk_has_disk_full_evidence": true,
+    "actually_supplied_context_files": [
+      "amq-streams-cluster-operator-v1.7.3-5f6b9df578-kbgtc_summary.txt",
+      "ratings-755c5794c9-m8fxz_summary.txt"
+    ],
+    "root_summary_retrieved": false,
+    "marker_check_method": "case-insensitive literal substring; not semantic recall",
+    "fault_marker_presence_by_stage": {
+      "prepared_root_log_prompt": {
+        "no space left on device": true,
+        "wiredtiger": true,
+        "sigabrt": false,
+        "fassert": true
+      },
+      "root_log_summary": {
+        "no space left on device": true,
+        "wiredtiger": true,
+        "sigabrt": true,
+        "fassert": true
+      },
+      "rag_actual_input": {
+        "no space left on device": false,
+        "wiredtiger": false,
+        "sigabrt": false,
+        "fassert": false
+      },
+      "rag_output": {
+        "no space left on device": false,
+        "wiredtiger": false,
+        "sigabrt": false,
+        "fassert": false
+      },
+      "final_root_node_information": {
+        "no space left on device": false,
+        "wiredtiger": false,
+        "sigabrt": false,
+        "fassert": false
+      }
+    },
+    "domain_prompt_marker_counts": {
+      "no space left on device": 0,
+      "wiredtiger": 0,
+      "sigabrt": 0,
+      "fassert": 0
+    },
+    "domain_response_marker_counts": {
+      "no space left on device": 0,
+      "wiredtiger": 0,
+      "sigabrt": 0,
+      "fassert": 0
+    }
+  },
+  "d03": {
+    "stale_first_pair_sentence": "Based on the results above, it seems that changes in amq-streams-cluster-operator-v1.7.3-5f6b9df578-kbgtc do not directly affect apiserver-574856c48c-r2586.",
+    "domain_prompts_with_stale_sentence": 930,
+    "graph_prompt_nonzero_statements": 167,
+    "PC_definite_directed_edges_reversed_in_prompt": 161,
+    "PC_undirected_pairs_rendered_as_both_causes": 3,
+    "manually_reviewed_examples": [
+      {
+        "domain_call": 469,
+        "constraint_call": 1399,
+        "pair": [
+          "mongodb-v1-64c6b69879-p4wfp",
+          "ratings-755c5794c9-m8fxz"
+        ],
+        "constraint_response": "<No>",
+        "domain_file": "calls/call_0000469.json",
+        "constraint_file": "calls/call_0001399.json",
+        "domain_sha256": "179e4e4850d089f41512e8cbad82cd0b43f4551474c0ccd61be2d0ddac8be572",
+        "constraint_sha256": "147ce6dfd85099a99008061c5876d8a1236f8644f74cd1c8cd9ef794797b2954",
+        "domain_output_tokens": 1654
+      },
+      {
+        "domain_call": 479,
+        "constraint_call": 1409,
+        "pair": [
+          "mongodb-v1-64c6b69879-p4wfp",
+          "web-7565876947-ccncc"
+        ],
+        "constraint_response": "<Yes>",
+        "domain_file": "calls/call_0000479.json",
+        "constraint_file": "calls/call_0001409.json",
+        "domain_sha256": "b01960be68c901d4076ee6410b63b6e775dfb681105d34e0ebb9e9c2d1e2297e",
+        "constraint_sha256": "8c9be0f11dce98808717aeb6559b86796fbb7c71ff0299ad1ccfd99bab7d2139",
+        "domain_output_tokens": 1365
+      },
+      {
+        "domain_call": 480,
+        "constraint_call": 1410,
+        "pair": [
+          "mongodb-v1-64c6b69879-p4wfp",
+          "Latency"
+        ],
+        "constraint_response": "<Yes>",
+        "domain_file": "calls/call_0000480.json",
+        "constraint_file": "calls/call_0001410.json",
+        "domain_sha256": "dcb74ee60170665382dcb809a4bb3ebfa7e82fe33b3f557e481912da66beaf6b",
+        "constraint_sha256": "f47170325d8f96a97ca95970448ef44f68dae127913f439df1ce2a886e4eaca0",
+        "domain_output_tokens": 1390
+      },
+      {
+        "domain_call": 916,
+        "constraint_call": 1846,
+        "pair": [
+          "Latency",
+          "mongodb-v1-64c6b69879-p4wfp"
+        ],
+        "constraint_response": "<No>",
+        "domain_file": "calls/call_0000916.json",
+        "constraint_file": "calls/call_0001846.json",
+        "domain_sha256": "604e17959c410fe98d19ec5d64eadfa3201a18cdef46ff8b6b3c2bb90215d90f",
+        "constraint_sha256": "720a96a3171234a7f5d01cd4567d8092702e448f035462cce8513faab74f4eff",
+        "domain_output_tokens": 1396
+      },
+      {
+        "domain_call": 476,
+        "constraint_call": 1406,
+        "pair": [
+          "mongodb-v1-64c6b69879-p4wfp",
+          "sdn-tk6x5"
+        ],
+        "constraint_response": "<No>",
+        "domain_file": "calls/call_0000476.json",
+        "constraint_file": "calls/call_0001406.json",
+        "domain_sha256": "4f23b24a6dcd5a295adb1ef3a8efc2366c9da7120679be2d66ef2a94060e306c",
+        "constraint_sha256": "1e247a20e30781eb42debb0ac9ace5a3d47dae2892abc0b37d188ecf291658d6",
+        "domain_output_tokens": 1376
+      }
+    ],
+    "effect_size_on_rank_not_estimated": true,
+    "all_167_graph_statements_verified_in_all_930_prompts": true
+  },
+  "graph_stats": {
+    "PC": {
+      "directed_edges": 161,
+      "undirected_pairs": 3,
+      "root_causes_graph": [
+        "apiserver-574856c48c-r2586",
+        "network-metrics-daemon-z4xj7",
+        "ratings-755c5794c9-m8fxz",
+        "sdn-5bn6f",
+        "sdn-6tgg6",
+        "sdn-controller-7lxkx",
+        "sdn-xfv8t",
+        "shipping-6468d694bf-hl7g7",
+        "web-7565876947-ccncc",
+        "Latency"
+      ],
+      "root_effects_graph": [
+        "amq-streams-cluster-operator-v1.7.3-5f6b9df578-kbgtc",
+        "cluster-samples-operator-5946f69576-whhb9",
+        "downloads-6c764df6bf-42l9l",
+        "elasticsearch-cdm-ocpc483p-3-5c5b8999fd-cb2zd",
+        "fluentd-5px22",
+        "fluentd-nvmx9",
+        "local-storage-operator-57dd6dd86c-v2xv7",
+        "migrator-775b59c45-dsx4b",
+        "sdn-fcqbl"
+      ],
+      "RWR_first_step_neighbors": [
+        "downloads-6c764df6bf-42l9l",
+        "fluentd-5px22",
+        "mongodb-v1-64c6b69879-p4wfp",
+        "router-default-849d8946d4-w45hm",
+        "shipping-6468d694bf-hl7g7",
+        "web-7565876947-ccncc"
+      ],
+      "root_in_first_step": true,
+      "root_first_step_conditional_move_probability": 0.16666666666666666,
+      "RWR_root_neighbors": [
+        "apiserver-574856c48c-r2586",
+        "network-metrics-daemon-z4xj7",
+        "ratings-755c5794c9-m8fxz",
+        "sdn-5bn6f",
+        "sdn-6tgg6",
+        "sdn-controller-7lxkx",
+        "sdn-xfv8t",
+        "shipping-6468d694bf-hl7g7",
+        "web-7565876947-ccncc",
+        "Latency"
+      ],
+      "root_latency_entries": {
+        "A_root_latency": 1,
+        "A_latency_root": 0
+      },
+      "total_counted_visits": 835.0
+    },
+    "MATMCD": {
+      "directed_edges": 69,
+      "undirected_pairs": 0,
+      "root_causes_graph": [
+        "migrator-775b59c45-dsx4b",
+        "ratings-755c5794c9-m8fxz",
+        "sdn-5bn6f",
+        "sdn-6tgg6",
+        "sdn-controller-7lxkx",
+        "sdn-fcqbl",
+        "sdn-xfv8t",
+        "shipping-6468d694bf-hl7g7"
+      ],
+      "root_effects_graph": [
+        "network-metrics-daemon-z4xj7",
+        "packageserver-67d8b69dc5-6gntc",
+        "web-7565876947-ccncc",
+        "Latency"
+      ],
+      "RWR_first_step_neighbors": [
+        "downloads-6c764df6bf-42l9l",
+        "fluentd-5px22",
+        "mongodb-v1-64c6b69879-p4wfp",
+        "router-default-849d8946d4-w45hm",
+        "sdn-6tgg6",
+        "sdn-tk6x5",
+        "shipping-6468d694bf-hl7g7"
+      ],
+      "root_in_first_step": true,
+      "root_first_step_conditional_move_probability": 0.14285714285714285,
+      "RWR_root_neighbors": [
+        "migrator-775b59c45-dsx4b",
+        "ratings-755c5794c9-m8fxz",
+        "sdn-5bn6f",
+        "sdn-6tgg6",
+        "sdn-controller-7lxkx",
+        "sdn-fcqbl",
+        "sdn-xfv8t",
+        "shipping-6468d694bf-hl7g7",
+        "Latency"
+      ],
+      "root_latency_entries": {
+        "A_root_latency": 0,
+        "A_latency_root": 1
+      },
+      "total_counted_visits": 815.0
+    }
+  },
+  "directed_edge_set_changes": {
+    "common": 16,
+    "initial_only": 145,
+    "refined_only": 53,
+    "definition": "definite directed edges only; graph A[result,cause]=1 and reverse=0"
+  },
+  "root_constraints": {
+    "outgoing_yes": [
+      "network-metrics-daemon-z4xj7",
+      "packageserver-67d8b69dc5-6gntc",
+      "sdn-fcqbl",
+      "web-7565876947-ccncc",
+      "Latency"
+    ],
+    "incoming_yes": [
+      "migrator-775b59c45-dsx4b",
+      "ratings-755c5794c9-m8fxz",
+      "sdn-2stpp",
+      "sdn-5bn6f",
+      "sdn-6tgg6",
+      "sdn-controller-7lxkx",
+      "sdn-fcqbl",
+      "sdn-tk6x5",
+      "sdn-xfv8t",
+      "shipping-6468d694bf-hl7g7"
+    ]
+  },
+  "rank_table": {
+    "Latency": {
+      "PC": {
+        "rank_including_kpi": 1,
+        "pod_rank": null,
+        "visits": 125.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 1,
+        "pod_rank": null,
+        "visits": 132.0
+      }
+    },
+    "shipping-6468d694bf-hl7g7": {
+      "PC": {
+        "rank_including_kpi": 2,
+        "pod_rank": 1,
+        "visits": 100.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 4,
+        "pod_rank": 3,
+        "visits": 62.0
+      }
+    },
+    "web-7565876947-ccncc": {
+      "PC": {
+        "rank_including_kpi": 3,
+        "pod_rank": 2,
+        "visits": 74.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 15,
+        "pod_rank": 14,
+        "visits": 17.0
+      }
+    },
+    "sdn-xfv8t": {
+      "PC": {
+        "rank_including_kpi": 4,
+        "pod_rank": 3,
+        "visits": 62.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 19,
+        "pod_rank": 18,
+        "visits": 7.0
+      }
+    },
+    "mongodb-v1-64c6b69879-p4wfp": {
+      "PC": {
+        "rank_including_kpi": 5,
+        "pod_rank": 4,
+        "visits": 57.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 6,
+        "pod_rank": 5,
+        "visits": 48.0
+      }
+    },
+    "downloads-6c764df6bf-42l9l": {
+      "PC": {
+        "rank_including_kpi": 6,
+        "pod_rank": 5,
+        "visits": 54.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 9,
+        "pod_rank": 8,
+        "visits": 45.0
+      }
+    },
+    "router-default-849d8946d4-w45hm": {
+      "PC": {
+        "rank_including_kpi": 7,
+        "pod_rank": 6,
+        "visits": 53.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 7,
+        "pod_rank": 6,
+        "visits": 47.0
+      }
+    },
+    "fluentd-5px22": {
+      "PC": {
+        "rank_including_kpi": 8,
+        "pod_rank": 7,
+        "visits": 50.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 10,
+        "pod_rank": 9,
+        "visits": 36.0
+      }
+    },
+    "sdn-controller-7lxkx": {
+      "PC": {
+        "rank_including_kpi": 9,
+        "pod_rank": 8,
+        "visits": 46.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 3,
+        "pod_rank": 2,
+        "visits": 66.0
+      }
+    },
+    "network-metrics-daemon-z4xj7": {
+      "PC": {
+        "rank_including_kpi": 10,
+        "pod_rank": 9,
+        "visits": 40.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 31,
+        "pod_rank": 30,
+        "visits": 0.0
+      }
+    },
+    "sdn-5bn6f": {
+      "PC": {
+        "rank_including_kpi": 11,
+        "pod_rank": 10,
+        "visits": 21.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 20,
+        "pod_rank": 19,
+        "visits": 6.0
+      }
+    },
+    "ratings-755c5794c9-m8fxz": {
+      "PC": {
+        "rank_including_kpi": 12,
+        "pod_rank": 11,
+        "visits": 18.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 18,
+        "pod_rank": 17,
+        "visits": 8.0
+      }
+    },
+    "sdn-tk6x5": {
+      "PC": {
+        "rank_including_kpi": 13,
+        "pod_rank": 12,
+        "visits": 16.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 2,
+        "pod_rank": 1,
+        "visits": 77.0
+      }
+    },
+    "fluentd-nvmx9": {
+      "PC": {
+        "rank_including_kpi": 14,
+        "pod_rank": 13,
+        "visits": 12.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 25,
+        "pod_rank": 24,
+        "visits": 1.0
+      }
+    },
+    "packageserver-67d8b69dc5-6gntc": {
+      "PC": {
+        "rank_including_kpi": 15,
+        "pod_rank": 14,
+        "visits": 12.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 23,
+        "pod_rank": 22,
+        "visits": 4.0
+      }
+    },
+    "sdn-6tgg6": {
+      "PC": {
+        "rank_including_kpi": 16,
+        "pod_rank": 15,
+        "visits": 11.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 5,
+        "pod_rank": 4,
+        "visits": 58.0
+      }
+    },
+    "sdn-2stpp": {
+      "PC": {
+        "rank_including_kpi": 17,
+        "pod_rank": 16,
+        "visits": 10.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 8,
+        "pod_rank": 7,
+        "visits": 47.0
+      }
+    },
+    "sdn-fcqbl": {
+      "PC": {
+        "rank_including_kpi": 18,
+        "pod_rank": 17,
+        "visits": 10.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 14,
+        "pod_rank": 13,
+        "visits": 21.0
+      }
+    },
+    "migrator-775b59c45-dsx4b": {
+      "PC": {
+        "rank_including_kpi": 19,
+        "pod_rank": 18,
+        "visits": 9.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 22,
+        "pod_rank": 21,
+        "visits": 5.0
+      }
+    },
+    "multus-admission-controller-27rbs": {
+      "PC": {
+        "rank_including_kpi": 20,
+        "pod_rank": 19,
+        "visits": 9.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 30,
+        "pod_rank": 29,
+        "visits": 0.0
+      }
+    },
+    "fluentd-xz9t8": {
+      "PC": {
+        "rank_including_kpi": 21,
+        "pod_rank": 20,
+        "visits": 7.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 21,
+        "pod_rank": 20,
+        "visits": 5.0
+      }
+    },
+    "apiserver-574856c48c-r2586": {
+      "PC": {
+        "rank_including_kpi": 22,
+        "pod_rank": 21,
+        "visits": 6.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 16,
+        "pod_rank": 15,
+        "visits": 13.0
+      }
+    },
+    "fluentd-ggqbl": {
+      "PC": {
+        "rank_including_kpi": 23,
+        "pod_rank": 22,
+        "visits": 6.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 26,
+        "pod_rank": 25,
+        "visits": 0.0
+      }
+    },
+    "fluentd-l4vgs": {
+      "PC": {
+        "rank_including_kpi": 24,
+        "pod_rank": 23,
+        "visits": 6.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 27,
+        "pod_rank": 26,
+        "visits": 0.0
+      }
+    },
+    "kiali-operator-7949c59655-hzkfj": {
+      "PC": {
+        "rank_including_kpi": 25,
+        "pod_rank": 24,
+        "visits": 6.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 28,
+        "pod_rank": 27,
+        "visits": 0.0
+      }
+    },
+    "local-storage-operator-57dd6dd86c-v2xv7": {
+      "PC": {
+        "rank_including_kpi": 26,
+        "pod_rank": 25,
+        "visits": 6.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 29,
+        "pod_rank": 28,
+        "visits": 0.0
+      }
+    },
+    "istio-operator-74d65cfbc4-rd872": {
+      "PC": {
+        "rank_including_kpi": 27,
+        "pod_rank": 26,
+        "visits": 5.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 12,
+        "pod_rank": 11,
+        "visits": 33.0
+      }
+    },
+    "elasticsearch-cdm-ocpc483p-3-5c5b8999fd-cb2zd": {
+      "PC": {
+        "rank_including_kpi": 28,
+        "pod_rank": 27,
+        "visits": 3.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 24,
+        "pod_rank": 23,
+        "visits": 1.0
+      }
+    },
+    "elasticsearch-cdm-ocpc483p-2-75b776599c-l6bsv": {
+      "PC": {
+        "rank_including_kpi": 29,
+        "pod_rank": 28,
+        "visits": 1.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 17,
+        "pod_rank": 16,
+        "visits": 11.0
+      }
+    },
+    "amq-streams-cluster-operator-v1.7.3-5f6b9df578-kbgtc": {
+      "PC": {
+        "rank_including_kpi": 30,
+        "pod_rank": 29,
+        "visits": 0.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 13,
+        "pod_rank": 12,
+        "visits": 32.0
+      }
+    },
+    "cluster-samples-operator-5946f69576-whhb9": {
+      "PC": {
+        "rank_including_kpi": 31,
+        "pod_rank": 30,
+        "visits": 0.0
+      },
+      "MATMCD": {
+        "rank_including_kpi": 11,
+        "pod_rank": 10,
+        "visits": 33.0
+      }
+    }
+  },
+  "sources_sha256": {
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T132900237241Z\\summaries\\Product_Review_20211203\\mongodb-v1-64c6b69879-p4wfp_summary.txt": "d047c828cf5ed1a14824db39fae8f02208cbe170e4d86069b2bd11306f68c7a6",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T132900237241Z\\calls\\call_0000021.json": "84919d86740895bde96b3484a2b9045c9246391448023e39f4d985999e81f497",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T143904740470Z\\node_information.json": "c445a8dee54a7f2636065600f22b6293a204e707363da09cbd0cce1ce6bdc58f",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T143904740470Z\\graphs\\PC.npy": "c655c05286ca8a4a32a7e5adba7339693360110d5b4152dd220292009676390b",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T143904740470Z\\graphs\\MATMCD.npy": "ebc7438de02733fbe8de2720fb8d26725d7d1e0f2ec05fb5106b1863e3984dff",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T143904740470Z\\graphs\\MATMCD_constraints.npy": "c853b2ef44198df1b0d18503718e9951504266377717fcdcf48eea54d5fa7641",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T143904740470Z\\rankings\\PC.json": "9a2910aa2f1bd80d925185d50ca6afd8992e2cf6d7ea23b153676bdd1717c92c",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T143904740470Z\\rankings\\MATMCD.json": "32856365b81321ba4edd7b84e16586b2e36fac6349d7706a2822f9e477ef6e0f",
+    "runs\\matmcd_oracle30_pr20211203_v1\\20260926T132900237241Z\\rag_index\\Product_Review_20211203\\docstore.json": "b38bb5eca937773599220440fd1787e763aa1454845f959b09b36fd4a4ca1e2e"
+  },
+  "limitations": [
+    "substring checks do not prove total absence of semantically equivalent ideas",
+    "sampled response review is not a semantic accuracy rate for all 930 responses",
+    "no same-seed graph intervention, ablation, or API comparison was run",
+    "graph connectivity calculations are descriptive, not a new RCA evaluation"
+  ],
+  "candidate_scenario_named_pod_prefix_audit": {
+    "source": "scenario slides 2,3,4,7; prefix identity audit only, no service remapping",
+    "parent_candidates": [
+      {
+        "anomaly_order": 63,
+        "pod": "istio-ingressgateway-7ff6588b68-6wg8m",
+        "max_positive_fraction": 0.9952065827010034,
+        "selected": false
+      },
+      {
+        "anomaly_order": 65,
+        "pod": "details-v1-6cd7db79bc-879nj",
+        "max_positive_fraction": 0.9948960779366959,
+        "selected": false
+      },
+      {
+        "anomaly_order": 102,
+        "pod": "mongodb-6d6d6df9b8-ksf6v",
+        "max_positive_fraction": 0.9885501368161618,
+        "selected": false
+      },
+      {
+        "anomaly_order": 141,
+        "pod": "reviews-v2-5d8f8b6775-sl4vp",
+        "max_positive_fraction": 0.9125929088474452,
+        "selected": false
+      },
+      {
+        "anomaly_order": 146,
+        "pod": "reviews-v3-666b89cfdf-xsffq",
+        "max_positive_fraction": 0.9013953307846068,
+        "selected": false
+      },
+      {
+        "anomaly_order": 151,
+        "pod": "reviews-v1-58b8568645-dqxtx",
+        "max_positive_fraction": 0.8551107143550234,
+        "selected": false
+      },
+      {
+        "anomaly_order": 178,
+        "pod": "mongodb-v1-64c6b69879-p4wfp",
+        "max_positive_fraction": 0.5389780511944731,
+        "selected": true
+      },
+      {
+        "anomaly_order": 179,
+        "pod": "ratings-v2-5bddd98984-wwnhx",
+        "max_positive_fraction": 0.5223854528517922,
+        "selected": false
+      },
+      {
+        "anomaly_order": 182,
+        "pod": "ratings-v1-76b8c9cbf9-2kbn6",
+        "max_positive_fraction": 0.474684158435056,
+        "selected": false
+      },
+      {
+        "anomaly_order": 189,
+        "pod": "ratings-v2-original-6c7dc8f69f-ltbm8",
+        "max_positive_fraction": 0.2806963069339595,
+        "selected": false
+      },
+      {
+        "anomaly_order": 208,
+        "pod": "productpage-v1-5f9dbcd669-bh285",
+        "max_positive_fraction": 0.02206524481360011,
+        "selected": false
+      }
+    ],
+    "all_selected_scenario_named_application_pods": [
+      "mongodb-v1-64c6b69879-p4wfp"
+    ],
+    "namespace_mapping_for_unversioned_ratings_not_verified": true
+  },
+  "constraint_consistency": {
+    "bidirectional_yes_pairs": [
+      [
+        "mongodb-v1-64c6b69879-p4wfp",
+        "sdn-fcqbl"
+      ],
+      [
+        "packageserver-67d8b69dc5-6gntc",
+        "Latency"
+      ],
+      [
+        "router-default-849d8946d4-w45hm",
+        "sdn-xfv8t"
+      ],
+      [
+        "router-default-849d8946d4-w45hm",
+        "web-7565876947-ccncc"
+      ],
+      [
+        "sdn-xfv8t",
+        "shipping-6468d694bf-hl7g7"
+      ]
+    ],
+    "required_yes_count": 109,
+    "required_yes_present_in_final_graph": 69,
+    "required_yes_absent_in_final_graph": 40,
+    "forbidden_yes_in_final_graph": 0,
+    "interpretation": "Yes constraints are fed to released BackgroundKnowledge path, not directly copied into graph; skeleton independence tests can remove adjacency. Per-edge reason for 40 absent requires stage trace not saved.",
+    "installed_source_sha256": {
+      "E:\\연구\\MATMCD_DATA\\environments\\d2i_matmcd_py311\\lib\\python3.11\\site-packages\\causallearn\\utils\\PCUtils\\SkeletonDiscovery.py": "98556ecec0eb515c9cd3ae130e37e6bc47c00ca8bee81702500838ee1b1887d2",
+      "E:\\연구\\MATMCD_DATA\\environments\\d2i_matmcd_py311\\lib\\python3.11\\site-packages\\causallearn\\utils\\PCUtils\\BackgroundKnowledgeOrientUtils.py": "10c89ec19c553b4585cde51126e81b4cee917a05bd111af53b7e271d696a42eb"
+    }
+  }
+}

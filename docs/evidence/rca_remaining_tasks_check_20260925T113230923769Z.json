@@ -1,0 +1,94 @@
+{
+  "checked_utc": "2026-09-25T11:32:29.681865+00:00",
+  "experiments_executed": false,
+  "inference_calls": 0,
+  "checks": {
+    "syntax": {
+      "connect_rca_inputs.py": true,
+      "rca_metrics.py": true,
+      "inspect_rca_scenarios.py": true,
+      "inspect_cc_original.py": true,
+      "prepare_workspace.py": true,
+      "verify_provisional_rca.py": true
+    },
+    "official_37_match_fixed_archive": true,
+    "unchanged_configuration_hashes": {
+      "paths": true,
+      "scope": true,
+      "local_llm": true,
+      "local_embedding": true,
+      "rca_preprocessing_proposal": true
+    },
+    "runtime_links": [
+      {
+        "path": "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210517.csv",
+        "target": "processed_data/lemma_rca_provisional_v1/Product_Review/20210517/Product_Review_20210517.csv",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210524.csv",
+        "target": "processed_data/lemma_rca_provisional_v1/Product_Review/20210524/Product_Review_20210524.csv",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv",
+        "target": "processed_data/lemma_rca_provisional_v1/Product_Review/20211203/Product_Review_20211203.csv",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Product_Review/Metrics/Product_Review_20220606.csv",
+        "target": "processed_data/lemma_rca_provisional_v1/Product_Review/20220606/Product_Review_20220606.csv",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv",
+        "target": "processed_data/lemma_rca_provisional_v1/Cloud_Computing/20231207/Cloud_Computing_20231207.csv",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Product_Review/Log/20210517",
+        "target": "datasets/huggingface_lemma_rca_product_review_pod_logs/20210517",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Product_Review/Log/20210524",
+        "target": "datasets/huggingface_lemma_rca_product_review_pod_logs/20210524",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Product_Review/Log/20211203",
+        "target": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Product_Review/Log/20220606",
+        "target": "datasets/huggingface_lemma_rca_product_review_pod_logs/20220606",
+        "verified": true
+      },
+      {
+        "path": "LEMMA_RCA/Cloud_Computing/Log/20231207",
+        "target": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207",
+        "verified": true
+      }
+    ],
+    "task_states": {
+      "007": "BLOCKED",
+      "008": "TODO",
+      "009": "TODO",
+      "018": "TODO",
+      "024": "IN_PROGRESS",
+      "032": "DONE",
+      "033": "DONE",
+      "034": "DONE",
+      "035": "BLOCKED",
+      "036": "BLOCKED"
+    },
+    "markdown_local_links": {
+      "files": 20,
+      "missing": []
+    },
+    "prior_input_connection_evidence": "rca_input_connection_20260925T105701596179Z.json",
+    "prior_metric_validation_evidence": "rca_metric_adapter_20260925T105908213664Z.json"
+  },
+  "status": "PASS_PREPARATION_CHANGES_NOT_FULL_RCA_READY"
+}

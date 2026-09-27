@@ -1,0 +1,40 @@
+{
+  "status": "PASS_APPROVED_D07_LIMITED_ADOPTION_CRITERIA",
+  "checked_date": "2026-09-26",
+  "trial_evidence": "docs/evidence/rca_d07_presence_20260926T120753069803Z.json",
+  "only_request_change_verified": {
+    "presence_penalty": [
+      0.0,
+      1.5
+    ]
+  },
+  "generation_attempts": 1,
+  "finish_reason": "stop",
+  "input_tokens": 4018,
+  "output_tokens": 533,
+  "duplicate_nonempty_lines": 0,
+  "event_grounding": {
+    "1328": {
+      "count": 6,
+      "recognized": true
+    },
+    "1501": {
+      "count": 1,
+      "recognized": true
+    }
+  },
+  "false_no_logs_claim_resolved": true,
+  "requested_sections_present": [
+    "entity name",
+    "role",
+    "key events",
+    "status",
+    "relationships"
+  ],
+  "limitations": [
+    "Relationship and degraded/running descriptions remain model inferences, not verified by these seven events.",
+    "The response contains literal placeholder markers; raw response is preserved, not repaired.",
+    "A single successful diagnostic does not validate all log summaries or factual accuracy."
+  ],
+  "adoption": "uniform log-only presence1.5 for all278; old148 remain separate; RAG/agents/RE unchanged"
+}

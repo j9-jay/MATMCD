@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "original_all_ordered_pairs:False",
+      "passed": true
+    },
+    {
+      "name": "original_stage_temperatures:False",
+      "passed": true
+    },
+    {
+      "name": "original_constraint_orientation:False",
+      "passed": true
+    },
+    {
+      "name": "D03_A_reversed_prompt_preserved:False",
+      "passed": true
+    },
+    {
+      "name": "D03_A_first_pair_cache_preserved:False",
+      "passed": true
+    },
+    {
+      "name": "original_all_ordered_pairs:True",
+      "passed": true
+    },
+    {
+      "name": "original_stage_temperatures:True",
+      "passed": true
+    },
+    {
+      "name": "original_constraint_orientation:True",
+      "passed": true
+    },
+    {
+      "name": "D03_A_reversed_prompt_preserved:True",
+      "passed": true
+    },
+    {
+      "name": "D03_A_first_pair_cache_preserved:True",
+      "passed": true
+    },
+    {
+      "name": "RE_uppercase_content_and_probability_preserved",
+      "passed": true
+    },
+    {
+      "name": "earlier_lowercase_RE_policy_preserved",
+      "passed": true
+    },
+    {
+      "name": "no_silent_answer_recase",
+      "passed": true
+    },
+    {
+      "name": "original_summary_query_and_strict_parser",
+      "passed": true
+    },
+    {
+      "name": "llamaindex_default_temperature_preserved",
+      "passed": true
+    },
+    {
+      "name": "chat_messages_and_actual_model_identity",
+      "passed": true
+    },
+    {
+      "name": "default_splitter_preserved",
+      "passed": true
+    },
+    {
+      "name": "D01_fixed_missing_and_KPI_preserved",
+      "passed": true
+    },
+    {
+      "name": "real_full_CSV_request_same_as_D02",
+      "passed": true
+    },
+    {
+      "name": "real_system_prompt_captured_from_original_function",
+      "passed": true
+    },
+    {
+      "name": "CSV_worker_exited_before_generation",
+      "passed": true
+    }
+  ],
+  "actual_experiment_results": false,
+  "generation_calls": 0,
+  "logs": "logs/setup/local_rca_components_20260926T062351165468Z",
+  "preservation": {
+    "official_sources": true,
+    "python_packages": true,
+    "configs": true
+  },
+  "script_sha256": {
+    "local_rca_components.py": "302faac90f0d7250d2638fd917d0795ea523c97149c4f46ed0ffea6dc6e03737",
+    "local_re_response.py": "16e43b3aa8d21a574520e5b80dfc7e4ca03c046acb8d98e8ab31a5c3d620f4ae",
+    "local_llm_client.py": "c40640baf2b492696d52a6c8513753c1304352f4d21e0015915e4c99d42f09b0",
+    "rca_local_client.py": "18a56dfee040fe3ade63c91646c8dc39e54887e4b0c648f9edda1619760eba78",
+    "rca_log_worker.py": "fe6c46576c005bb91e009a54adf8356a9d67857cf88faa8c7e07e621181eda87"
+  }
+}

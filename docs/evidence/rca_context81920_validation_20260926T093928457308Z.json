@@ -1,0 +1,87 @@
+{
+  "checked_utc": "20260926T093928457308Z",
+  "status": "CAPACITY_AND_ONE_REAL_GENERATION_PASS",
+  "phase": "completed",
+  "change_evidence": "docs/evidence/rca_context_81920_change_20260926T093701719326Z.json",
+  "logs": "logs/setup/rca_context81920_20260926T093928457308Z",
+  "generation_attempts": 1,
+  "actual_RCA_experiment": false,
+  "automatic_retries": 0,
+  "full_pipeline_ready": false,
+  "client_timeout_seconds_unchanged": 300,
+  "capacity_evidence": "docs/evidence/rca_context_20260926T093930451097Z.json",
+  "capacity_summary": {
+    "prompt_count": 278,
+    "fits": 278,
+    "unprepared_count": 0,
+    "max_input_tokens": 65073,
+    "max_required_context": 73266
+  },
+  "all_278_prompt_contents_and_token_counts_unchanged": true,
+  "target": {
+    "case": "Product_Review/20211203",
+    "pod": "mongodb-v1-64c6b69879-p4wfp",
+    "prompt_sha256": "0191f599a6c279b6c290bb69be21d11b386e9584f601daf2dfdca22677c205af",
+    "prompt_tokens": 65073,
+    "reserved_output_tokens": 8192,
+    "context_tokens": 81920,
+    "required_with_one_token_guard": 73266,
+    "fits": true,
+    "input_alone_fits": true,
+    "maximum_output_with_guard": 16846,
+    "formatted_prompt_sha256": "01cd394f1cb24c0e3cac35603dcf88485bb84f8231d98e270215f8d3e0c70eef",
+    "generation_performed": false,
+    "prompt_truncated": false
+  },
+  "generation_seconds": 60.56716571499999,
+  "response": {
+    "characters": 2926,
+    "sha256": "588cfcda90613df5b3094441f1c6ea3b5f8938c850a0b67f19586b0fa79d4321",
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 807,
+      "prompt_tokens": 65073,
+      "total_tokens": 65880,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 65073,
+      "prompt_ms": 44334.886,
+      "prompt_per_token_ms": 0.6813100056859219,
+      "prompt_per_second": 1467.7606253459182,
+      "predicted_n": 807,
+      "predicted_ms": 12686.584,
+      "predicted_per_token_ms": 15.74017866004963,
+      "predicted_per_second": 63.53168039560531
+    },
+    "response_file": "logs/setup/rca_context81920_20260926T093928457308Z/maximum_input_response.txt"
+  },
+  "format_observation": {
+    "pod_name_present": true,
+    "role_heading_present": true,
+    "key_events_heading_present": true,
+    "status_heading_present": true,
+    "relationships_heading_present": true,
+    "note": "Observational check only; original Log_tools returns raw summary with no strict parser. Semantic accuracy is not established."
+  },
+  "generation_record": "logs/setup/rca_context81920_20260926T093928457308Z/calls/call_0000001.json",
+  "resources": {
+    "sample_count": 199,
+    "gpu_peak_used_mib": 6481,
+    "gpu_min_free_mib": 1507,
+    "wsl_min_available_kib": 6742528,
+    "swap_peak_used_kib": 0
+  },
+  "preservation": {
+    "official_source": true,
+    "python_packages": true,
+    "configs_during_verification": true
+  },
+  "server_port_closed": true,
+  "script_sha256": "3ba4cd5449f27ce416db6af8fc452d213af7ecda99950ffb39959a544e76e061"
+}

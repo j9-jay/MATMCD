@@ -1,64 +1,78 @@
-# 외부 자산과 모델 준비 상태
+# RCA 외부 자산과 모델
 
-자산 루트는 [configs/paths.json](../configs/paths.json)의 `asset_root` 한 곳에서 관리한다. 값은 설정 파일 기준 상대경로이며 이 PC에서는 `E:\연구\MATMCD_DATA`로 해석된다. Python 스크립트는 공통 `scripts/project_paths.py`를 사용한다. WSL에서는 같은 파일을 `/mnt/e/연구/MATMCD_DATA`로 읽는다.
+외부 루트는 configs/paths.json의 asset_root로 관리한다. 이 PC는 E:/연구/MATMCD_DATA, WSL은 /mnt/e/연구/MATMCD_DATA다.
 
-다운로드 URL·revision·SHA256·크기는 [downloads.json](evidence/downloads.json), 코드 출처는 [upstream.json](../configs/upstream.json)에 기록했다. ZIP 원본은 보존했으며, 누락된 전처리 입력을 만들어 넣지 않았다. 실험 데이터·환경·캐시·다운로드는 프로젝트 Git 밖에 있다.
+## 확보한 데이터
 
-사용자 PDF의 원본 사본은 `raw_downloads/user_matmcd_paper/MATMCD.pdf`, PDF에서 추출한 페이지 텍스트와 확인용 렌더는 `analysis/user_matmcd_paper`에 분리했다. `E:\연구\MATMCD.pdf` 원본도 그대로 보존했다.
-
-## 벤치마크
-
-저자가 [공식 README](https://github.com/D2I-Group/matmcd#-quick-start)에서 CSV 배포처로 지정한 [mas-takayama/LLM-and-SCD](https://github.com/mas-takayama/LLM-and-SCD)를 받았다. 커밋은 `5aaeaea89e71e2cff443289e473c06d2f79172c5`다.
-
-| 원본 위치 (`raw_downloads/github_mas_takayama_llm_and_scd/` 아래) | 원본 로더가 기대하는 파일명 | 확인 크기 |
-|---|---|---|
-| `benchmark datasets/Auto MPG data.csv` | `data/Auto_MPG_data.csv` | 392×5 |
-| `ground truth matrix/GTmatrix_Auto MPG data.csv` | `data/Auto_MPG_GTmatrix.csv` | 5×5 |
-| `benchmark datasets/DWD climate data.csv` | `data/DWD_climate_data.csv` | 349×6 |
-| `ground truth matrix/GTmatrix_DWD climate data.csv` | `data/DWD_climate_GTmatrix.csv` | 6×6 |
-| `benchmark datasets/Sachs data.csv` | `data/Sachs_data.csv` | 7,466×11 |
-| `ground truth matrix/GTmatrix_Sachs data.csv` | `data/Sachs_GTmatrix.csv` | 11×11 |
-
-CSV 내용·열 순서·수치를 바꾸지 않고 WSL 작업공간에 파일 링크로 연결했다. AutoMPG 변수 순서는 Displacement, Mpg, Horsepower, Weight, Acceleration이다. DWDClimate는 Altitude, Temperature, Precipitation, Longitude, Sunshine, Latitude, Sachs는 raf, mek, plc, pip2, pip3, erk, akt, pka, pkc, p38, jnk다. DWDClimate의 논문 350행과 공개 349행 차이를 보정하지 않았다. 출처 README의 비공개 건강검진 데이터는 MATMCD의 이 3개 공개 벤치마크 누락을 뜻하지 않는다.
-
-Asia와 Child는 [bnlearn Asia](https://www.bnlearn.com/bnrepository/discrete-small.html#asia), [bnlearn Child](https://www.bnlearn.com/bnrepository/discrete-medium.html#child)의 공식 BIF 압축본을 각각 `raw_downloads/bnlearn_asia_network`, `raw_downloads/bnlearn_child_network`에 저장했다. 내용만 gzip 해제한 BIF는 `datasets/bnlearn_asia_network/asia.bif`, `datasets/bnlearn_child_network/child.bif`에 있다. 이는 Bayesian network 정의이며 논문의 1,000개 관측 샘플이 아니다.
-
-`SampleFromBIF.py`는 seed 없이 데이터를 생성하고 `_1000_data.csv`, `_1000_GTmatrix.csv`를 출력하지만 실행 로더는 `_data.csv`, `_GTmatrix.csv`를 기대한다. 실제 표본·샘플링 seed와 이름 매핑 기준이 확보되지 않았으므로 샘플링과 파일명 변경은 수행하지 않았다.
-
-## LEMMA-RCA
-
-[공식 데이터 사이트](https://lemma-rca.github.io/) → Hugging Face 공식 조직의 **전처리 배포본**을 사용했다. 여기서 "전처리 배포본"은 LEMMA-RCA 제공자의 표현이다. MATMCD 전용 EVT 필터링까지 완료된 파일이라는 뜻이 아니다.
-
-| 배포처 | 고정 revision | 내려받은 사례 | 자산 루트 기준 위치 |
+| 출처 | revision | 날짜 | 자산 루트 아래 위치 |
 |---|---|---|---|
-| [Product Review](https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed) | `df25484004e50483de6f6756c3a4d7ab03174b83` | 20210517, 20210524, 20211203, 20220606; 각각 Log/Metric | `raw_downloads/huggingface_lemma_rca_product_review_preprocessed` |
-| [Cloud Computing](https://huggingface.co/datasets/Lemma-RCA-NEC/Cloud_Computing_Preprocessed) | `03f82a2c4b16afe09e9315def9f5d6990427000a` | 20231207 Log/Metric | `raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed` |
+| Lemma-RCA-NEC/Product_Review_Preprocessed | df25484004e50483de6f6756c3a4d7ab03174b83 | 20210517, 20210524, 20211203, 20220606 | raw_downloads/huggingface_lemma_rca_product_review_preprocessed |
+| Lemma-RCA-NEC/Cloud_Computing_Preprocessed | 03f82a2c4b16afe09e9315def9f5d6990427000a | 20231207 | raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed |
+| Lemma-RCA-NEC/Cloud_Computing_Original | 9e5ad23fa390f6b596f41be014233fe446679bcd | 20231207 | raw_downloads/huggingface_lemma_rca_cloud_computing_original |
 
-선택은 `Log_tools.py`/`Web_tools.py`/`LEMMA_experiment.py`에 공개된 사례 목록을 따른다. MATMCD가 사용했다는 근거 없는 Cloud Computing의 다른 날짜는 추가하지 않았다. 이는 실험 입력의 임의 축소가 아니라 공개된 실험 범위와의 대응이다.
+공식 사이트: https://lemma-rca.github.io/ . Log/Metric ZIP 10개와 README·metadata를 보존한다. URL·revision·크기·SHA256은 [downloads.json](evidence/downloads.json), 내부 구조는 [lemma_archives.json](evidence/lemma_archives.json)에 있다. 공개 코드의 날짜 목록과 논문 표 4의 정확한 사례 선택·집계 대응은 미확정이다.
 
-10개 ZIP 및 README, 2개 BIF 압축 파일의 총 다운로드 크기는 6,969,019,063 bytes다. 10개 ZIP의 전체 비압축 크기는 97,017,449,874 bytes다. ZIP 내부 목록을 조사했으며, `Product_Review_<day>.csv`, `Cloud_Computing_<day>.csv`는 없다. 현재 전체 ZIP을 풀어 중복 공간을 차지하게 하지 않았다. 압축본은 모두 다운로드·해시 검증되어 로컬에 있다.
+전체 비압축 크기는 약 97 GB다. metric별 NPY, KPI CSV, 장애 시나리오 자료, 구조화 로그·템플릿 등이 있으며 전체 압축 해제는 하지 않았다. 배포명 Preprocessed는 MATMCD의 EVT 필터 후 최종 입력이라는 뜻이 아니다.
 
-실제 내용에는 metric별 NPY, KPI CSV, 장애 시나리오 PPTX, pod/node별 `*_messages_templates.csv`와 `*_messages_structured.csv` 등이 있다. [lemma_archives.json](evidence/lemma_archives.json)에 요약했다. MATMCD에서 요구하는 선택 pod와 열 순서, KPI 마지막 열, metric 선택/결합 방식, 시간 구간, EVT 기준이 확인되지 않아 최종 CSV를 재구성하지 않았다.
+저자가 사용한 최종 CSV·정확 전처리는 미확보다. [TASK_020](../tasks/TASK_020_apply_provisional_rca_preprocessing.md)의 승인 프로필로 임시 metric CSV 5개를 생성·검증했다. 설정은 configs/rca_preprocessing_proposal.json이며 저자 동일성은 UNCONFIRMED다. TASK_032에서 configs/inputs.json에 provisional/UNCONFIRMED를 명시하고 CSV 5개 및 로그 디렉터리를 연결했다.
 
-LEMMA-RCA 공식 [전처리 저장소](https://github.com/lemma-rca/rca_baselines)는 `raw_downloads/github_lemma_rca_preprocessing`에 커밋 `c560d8cc39c19f04c9ae74fac2404b1e5e8c3b4d`로 보존했다. Drain3 로그 파싱, metric JSON→NPY, KPI 구축, FastPC SPOT 코드는 존재한다. 이 저장소의 default 값을 MATMCD 저자가 실제 사용했다고 볼 근거는 없으므로 이식하거나 실행하지 않았다.
+## 생성한 임시 입력
 
-배포 사이트/README/front matter에 CC BY-ND와 CC BY-NC 표기가 혼재한다. 출처 파일을 그대로 보존했고 재배포는 하지 않았다. 데이터 revision은 현재 공개 상태를 고정한 것이며 논문 당시 사용본과의 일치 여부는 미확인이다.
-
-## 모델 및 서비스
-
-| 용도 | 공식 구성 | 준비 상태 |
+| 시스템 | 날짜 | 자산 루트 아래 위치 |
 |---|---|---|
-| 기본 CC LLM | OpenAI `gpt-4o-mini` | SDK 설치. API 키 빈 값, 호출 안 함. snapshot 미공개 |
-| Search LLM | 코드상 `gpt-4` | 코드 보존. 논문 기본 모델과 차이 있음. 호출 안 함 |
-| Web summary | `gpt-4o-mini`, temperature=0.0 | 코드 보존. 호출 안 함 |
-| RAG embedding | `text-embedding-ada-002` | 원격 API 구성. 로컬 가중치/정확 snapshot 미제공. llama-index embedding 패키지 버전도 목록에서 누락 |
-| 최종 RAG summary | 공식 코드 미지정 | 설치된 LlamaIndex 기본 모델/설정과 논문값을 구분해야 함 |
-| 절제 모델 | GPT-4, Mistral API, LlamaAPI(Llama/Gemma) 별칭 | provider별 정확 모델 revision·tokenizer·serving 설정 미공개 |
-| 검색 | Serper, Tavily | 클라이언트 코드와 지정 SDK 보존. 키 설정/호출 안 함 |
-| MATMCD 체크포인트 | 별도 학습 체크포인트 없음 | 만들거나 다른 모델을 다운로드하지 않음 |
+| Product Review | 20210517, 20210524, 20211203, 20220606 | processed_data/lemma_rca_provisional_v1/Product_Review/<day> |
+| Cloud Computing | 20231207 | processed_data/lemma_rca_provisional_v1/Cloud_Computing/20231207 |
 
-공식 `config.py`와 `web_utils/config/config.yaml`에는 API 키 설정이 **따로** 존재한다. 현재 둘 다 빈 값이다. 환경변수만 넣어도 작동한다고 안내하지 않는다. 추후 자격정보 구성은 원본 snapshot과 비밀정보를 분리할 방법을 먼저 결정해야 한다. 이번 작업에서는 유료 API를 호출하지 않았고 사용자의 다른 계정/키를 탐색하지 않았다.
+각 위치에 <system>_<day>.csv, timestamps.csv, manifest.json을 보관한다. CSV 합계는 2,523,657,083바이트이며 Git 프로젝트 내부에 넣지 않았다. 원본 ZIP과 분리했다. [행·열·상수·로그 결과](PROVISIONAL_RCA_PREPROCESSING_RESULT.md), [출력 해시와 검증](evidence/rca_preprocessing_validation.json), [생성 이력](evidence/rca_preprocessing_applied.json).
 
-## 비교 방법 추가 자료
+## 연결한 원본 로그와 조사 자료
 
-Efficient-CDLMs 저자 저장소 [superkaiba/causal-llm-bfs](https://github.com/superkaiba/causal-llm-bfs)는 `raw_downloads/github_superkaiba_causal_llm_bfs`에 `80c9f5d1eb49b74335ec178798671b34c3742776`으로 확보했다. 이 원본의 기본 모델은 `gpt-4-0125-preview`, temperature=0.7, Python 3.10.13이다. MATMCD 논문의 GPT-4o mini/0.5 및 모든 비교 데이터에 적용한 수정본·실행 설정은 공개 MATMCD에 없다. 따라서 별도 논문의 기본 환경을 설치해 MATMCD 비교 실험 환경이라고 주장하지 않는다.
+| 역할 | 자산 루트 아래 위치 | 실제 준비 범위 |
+|---|---|---|
+| PR pod 로그 | datasets/huggingface_lemma_rca_product_review_pod_logs/<day> | 정확한 이름의 template/structured 523쌍 |
+| CC pod 로그 | datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207 | 정확한 이름의 template/structured 124쌍 |
+| 공식 장애 시나리오 | raw_downloads/huggingface_lemma_rca_<source>_preprocessed/scenario_documents | 원본 PPTX 5개; CC 내장 구성도는 하위 1207_media |
+| CC 추가 원자료 조사 | raw_downloads/huggingface_lemma_rca_cloud_computing_original | 원본 ZIP·다운로드 영수증/시도 이력·configuration 원문 |
+
+로그 합계 647쌍/1,294파일/44,066,393,230바이트를 원문 그대로 추출·검증했다. 남은 사례별 pod 410개에는 정확한 쌍이 없고 처리 정책은 TASK_035에서 결정한다. [출처 ZIP·멤버·파일별 해시·로더 검증](evidence/rca_input_connection_20260925T105701596179Z.json)을 보존한다. 요약·인덱스·실제 RCA는 미실행이다.
+
+CC Original은 [공식 고정 revision](https://huggingface.co/datasets/Lemma-RCA-NEC/Cloud_Computing_Original/tree/9e5ad23fa390f6b596f41be014233fe446679bcd)의 20231207.zip(1,397,313,780바이트, SHA256 4cb0d2c6ea84a256c567aa0b7ad5f2bfffdb0272caa0cba31dd5654e227a17b3)이다. 정답 근거 조사용으로 추가했으며 활성 입력 교체나 새 전처리는 하지 않았다. [조사 증거](evidence/rca_cc_original_inspection.json), [시나리오·정답 해석의 한계](RCA_SCENARIO_EVIDENCE.md)를 참고한다. 시나리오·정답 자료는 모델 검색 입력에 넣지 않는다.
+
+## 공식·비교 자료
+
+D01 원인 조사에서 Product_Review_Original revision `63aa4abe7dd7217d9b0b108894c7d893e2b29aef`의 원격 ZIP 목록만 추가 조회했다. 전체 4개 ZIP(약 53.6GB)을 다운로드/해시 검증한 것은 아니다. 20210517/20211203의 JSON 표본 8개, 185,957,531바이트는 raw_downloads/huggingface_lemma_rca_product_review_original/diagnostic_samples/<day>에 원문·CRC 검증 후 보관했다. 목록·출처·표본별 SHA256은 [원격 목록](evidence/d01_pr_original_remote_index.json), [표본 영수증](evidence/d01_pr_raw_log_samples.json)에 있다. 조사 자료이며 활성 RCA 입력에 추가하지 않았다.
+
+- raw_downloads/github_d2i_matmcd/ef2c3ec.zip: 전체 공식 출처 보관본. 작업용 소스는 승인된 제외 목록을 적용한 RCA 부분집합이다.
+- raw_downloads/github_lemma_rca_preprocessing: https://github.com/lemma-rca/rca_baselines, commit c560d8cc39c19f04c9ae74fac2404b1e5e8c3b4d. Drain3, metric→NPY, KPI, FastPC SPOT 등 참고 자료. TASK_020은 승인된 SPOT 함수·pyspot·libspot만 원본 그대로 호출한다. FastPC 전체 실험이나 Drain 전처리를 실행하지 않는다.
+- raw_downloads/github_dorado_lemzha_k_reference/a6e62ef6f29d7112a96a8db7b3c017c3e246fe08: TASK_038의 D01 외부 사례 조사용 제3자 노트북 3개·CC manifest·검증 JSON. [출처·해시](evidence/d01_external_reference_20260925.json). 공식 필수 자산이 아니며 읽기만 했다. 실행 환경·전처리에 연결하지 않는다.
+- raw_downloads/github_superkaiba_causal_llm_bfs: https://github.com/superkaiba/causal-llm-bfs, commit 80c9f5d1eb49b74335ec178798671b34c3742776. 표 4에도 등장하는 Efficient-CDLMs의 공통 비교 참고. MATMCD 적용 수정본·조건은 미공개다.
+- raw_downloads/user_matmcd_paper/MATMCD.pdf 및 analysis/user_matmcd_paper: 논문 사본·추출·렌더. 사용자 원본 PDF도 보존한다.
+
+라이선스 표기가 혼재하므로 출처를 보존하고 데이터를 재배포하지 않는다.
+
+## Graphviz 설치 자산
+
+Graphviz B안의 Ubuntu DEB 9개는 raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1에 원본 그대로 보관한다. [패키지 lock](evidence/graphviz_ubuntu_packages.lock.json)에 다운로드 URL·정확 버전·해시가 있어 Git 저장소만으로 출처와 기대 파일을 확인할 수 있다. 실행 파일은 WSL 시스템 /usr/bin/dot에 설치돼 있다. 설치 로그·시스템 목록·인공 PNG는 logs/setup/graphviz_20260924T120441708131Z에 있으며 RCA 실험 산출물과 구분한다.
+
+## 모델·서비스
+
+| 역할 | 공식 구성 | 상태 |
+|---|---|---|
+| CC LLM | gpt-4o-mini | SDK 설치, 키 미설정, exact snapshot 미공개 |
+| Search LLM | 코드 gpt-4 | 논문 기본 모델과 차이 |
+| 웹 중간 요약 | gpt-4o-mini / temperature 0.0 | 논문 기본값과 차이 |
+| embedding | text-embedding-ada-002 | 어댑터 설치, 인증·벡터 생성 미실행 |
+| 최종 RAG 요약 | 코드 LLM 미지정 | 라이브러리 기본과 논문값 구분 |
+| 검색 | Serper / Tavily | 접근 미구성 |
+
+공식 config.py와 web_utils/config/config.yaml의 키는 빈 값이다. 환경변수만으로 작동한다고 가정하지 않는다. 원본의 정확 tokenizer·서빙 정밀도·snapshot도 미공개다. 원본 외부 API 호출은 하지 않았다. 이후 승인된 로컬 생성 모델의 별도 구성은 아래에 기록한다.
+
+위 표는 원본 외부 서비스의 준비 상태다. 2026-09-24 사용자가 별도로 승인한 **임시 로컬 생성 모델**은 Qwen3.5-4B Q5_K_M이며, 2026-09-25 승인으로 thinking에서 non-thinking으로 전환했다. `models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M`에 고정 GGUF와 출처를, `raw_downloads/github_ggml_org_llama_cpp_b11146`에 서버/CUDA 원본 압축파일을, `tools/github_ggml_org_llama_cpp_b11146_cuda12.8`에 분리 실행 파일을 둔다. 모드 전환에서 자산은 재사용했고 기존 공식 모델 설정은 바꾸지 않았다. [로컬 명세](LOCAL_LLM.md), [설치 파일 해시](evidence/local_llm_install.json), [TASK_023](../tasks/TASK_023_local_qwen_thinking_setup.md), [TASK_029](../tasks/TASK_029_local_nonthinking_verification.md)를 따른다. 로컬 대체로 원본 모델·임베딩·검색 접근을 해결했다고 간주하지 않는다.
+
+2026-09-25 승인된 **임시 로컬 임베딩** BAAI/bge-m3(revision 5617a9f61b028005a4858fdac845db406aefb181)는 models/huggingface_BAAI_bge-m3에 둔다. dense/CPU/FP32/batch 1, 공식 CLS+L2 계산을 사용한다. wheel·metadata는 raw_downloads/pypi_bge_m3_loader_tf4.51.3, 별도 로더는 environments/pypi_bge_m3_loader_tf4.51.3, 인공 인덱스는 caches/retrieval_bge_m3_dense_cpu_fp32_v1, 시도별 증거는 logs/local_embedding/bge_m3_dense_cpu_fp32_v1에 있다. 기존 wheel의 cl100k_base를 동일 bytes로 복사한 분할 캐시는 caches/tiktoken이다. [명세](LOCAL_EMBEDDING.md), [설치 해시](evidence/local_embedding_install.json), [인공 검증 PASS](evidence/local_embedding_runtime.json). 원본 ada-002 접근과 실제 RCA 통합은 미완료다.
+
+공통 환경은 environments/, 설치 캐시는 caches/uv_packages, 설치·검증 로그는 logs/에 있다. 실행 작업공간은 workspaces/d2i_matmcd_original이며 공식 소스, CSV 5개, 정확한 원본 pod 로그 디렉터리와 요약 저장 경로가 연결돼 있다. 실제 요약·실험 결과·체크포인트는 없다.
+
+승인된 D01의 데이터 가용성 manifest 5개는 processed_data/lemma_rca_log_evidence_v1/<system>/<day>.json에 있다. 입력 CSV·로그를 복사/변형한 파일이 아니라 기존 후보·출처 해시·로그 부재 표시를 담는 [별도 근거 명세](RCA_LOG_POLICY.md)다. inputs.json이 경로를 참조하며 모델 요약·실험 결과와 구분한다.
+
+TASK_039 이후 inputs.json은 PR 20211203·PR 20220606·CC 20231207의 CSV·로그·D01 근거 3개만 활성 참조한다. PR 20210517/20210524의 자료와 과거 링크·근거는 보관 자산이며 현재 실행 목록에서 제외됐다. 물리적으로 파일이 존재한다는 이유로 실행 대상으로 간주하지 않는다. 전체 44.07GB 중 현재 사용할 연결 로그는 15.45GB다.

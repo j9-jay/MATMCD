@@ -1,0 +1,69 @@
+{
+  "profile_id": "qwen_bge_released_A_two_cases_d07_v3",
+  "status": "BLOCKED_PENDING_FULL_INTEGRATION",
+  "capacity_decision": {
+    "choice": "USER_APPROVED_CONTEXT_81920_VALIDATION_ONLY",
+    "selected_date": "2026-09-26",
+    "context_tokens": 81920,
+    "gpu_layers_preserved": "all",
+    "cache_types_preserved": "f16/f16",
+    "pod_reduction_applied": false,
+    "scope": "startup_all_prompt_admission_and_maximum_input_generation_validation; full_RCA_remains_gated",
+    "change_evidence": "docs/evidence/rca_context_81920_change_20260926T093701719326Z.json",
+    "validation_result": "PASS_PREPARED_278_LOG_PROMPTS_AND_ONE_MAXIMUM_INPUT_GENERATION",
+    "validation_evidence": "docs/evidence/rca_context81920_validation_20260926T093928457308Z.json",
+    "remaining": "RAG/graph request lengths and full integration not validated; this approval covered verification only"
+  },
+  "author_equivalence": "UNCONFIRMED",
+  "source_commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+  "scope_config": "configs/scope.json",
+  "scientific_protocol": "configs/rca_protocol.json",
+  "llm_config": "configs/local_llm.json",
+  "embedding_config": "configs/local_embedding.json",
+  "generation_policy": "reuse_selected_local_seed_sampling_and_output_limit; preserve_each_original_callsite_temperature",
+  "seed_sampling_source": "local_llm.smoke_test; explicit local choice, not an author setting",
+  "re_format_policy": "re_gp_boundary_v1; exact original ConstrainReasoningLLM Yes/No capitalization",
+  "causal_discovery_method": "pc",
+  "stages": [
+    "PC",
+    "CC_without_external_information",
+    "MATMCD",
+    "MATMCD_RE"
+  ],
+  "case_execution": "sequential",
+  "pod_log_reading": "original_full_csv_in_isolated_worker",
+  "prompt_storage": "processed_data/lemma_rca_original_prompts_v1",
+  "recovered_prompt_storage": "processed_data/lemma_rca_original_prompts_d06_v1",
+  "log_encoding_policy": {
+    "id": "d06_surrogateescape_valid_selected_prompt_v1",
+    "status": "USER_APPROVED",
+    "approved_date": "2026-09-26",
+    "scope": "proven_UTF8_failures_only; preserve_invalid_bytes; reject_invalid_selection_fields_or_final_prompt",
+    "author_equivalence": "UNCONFIRMED"
+  },
+  "run_storage": "runs/matmcd_local_rca",
+  "automatic_retry": false,
+  "automatic_prompt_truncation": false,
+  "automatic_model_fallback": false,
+  "environment_policy": "record_current_before_and_after; fail_on_change; no_OS_service_changes",
+  "scope_change": {
+    "task": "TASK_044",
+    "active_cases_config": "configs/scope.json",
+    "capacity_reassessment": "278 selected prompts fit at 81920/all; maximum 65073 input completed; no Pod reduction; full RCA remains gated",
+    "capacity_evidence": "docs/evidence/rca_two_case_scope_20260926T075701648365Z.json"
+  },
+  "log_summary_sampling": {
+    "profile_id": "d07_log_presence_1_5_v1",
+    "status": "USER_APPROVED_VALIDATED",
+    "approved_date": "2026-09-26",
+    "overrides": {
+      "presence_penalty": 1.5
+    },
+    "scope": "all 278 exact-pair pod log summaries; original callsite temperature preserved",
+    "other_stages": "retain local_llm.smoke_test sampling including presence_penalty=0",
+    "validation_evidence": "docs/evidence/rca_d07_presence_20260926T120753069803Z.json",
+    "semantic_review": "docs/evidence/rca_d07_presence_review_20260926.json",
+    "author_equivalence": "UNCONFIRMED",
+    "old_profile_results_reused": false
+  }
+}

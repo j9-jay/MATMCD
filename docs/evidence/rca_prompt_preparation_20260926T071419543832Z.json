@@ -1,0 +1,2970 @@
+{
+  "status": "BLOCKED_PREPARATION_ERRORS",
+  "prompts": [
+    {
+      "case": "Product_Review/20211203",
+      "pod": "alertmanager-main-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/7e668d32059ee1d0dacc5047714310770cb4ce9b23b5316237e25ac0c06baf97",
+      "characters": 7922,
+      "message_sha256": "39468d745d9cba07c3d53b4374e285c0719a952d54bb5af010f8c4427ea6cf5a"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "alertmanager-main-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c4e6fa4150a5f72263cc1d1524539184ea404d321d209141f84d252e04ae87b5",
+      "characters": 8194,
+      "message_sha256": "f2bcd68097c878f2dc739487822ffe6423e910937df4f18515f0266e749cafe7"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "alertmanager-main-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/3a2606ac5c3f7b88a84af29d70d7e127498808954d7e58b086861ff6836e7c60",
+      "characters": 9194,
+      "message_sha256": "d2b921738483054f56d61c303379c0184d1d54e2e4414480b7a83889f47530e3"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "amq-streams-cluster-operator-v1.7.3-5f6b9df578-kbgtc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/a89c1b9c35c27cc8064b366ec407fcb37d4968c7b7e24c11d72741c08c196e28",
+      "characters": 21252,
+      "message_sha256": "1a8113f055a5fd8a06ce99380ce000a3d4e2a2457c086f1136e4fa6b1089cb12"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "apiserver-574856c48c-7x862",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/6c435c5becc2ea2cf5a49a6c3d068120a48a7201057b8785266f5690a807658d",
+      "characters": 33792,
+      "message_sha256": "c0c95b469b3db36dbd54eeab122fae4cb3528c08ace8efb862bbad54d36a4850"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "apiserver-574856c48c-kj5s8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/3a15db9dc21a03970cf73f8b6612d98bd3850dd89e8dd16f0792ffb1f495225d",
+      "characters": 21978,
+      "message_sha256": "e3295fe2ba72b3a283fa9cb0270b2c7199c2f5023521aec32abe02c31330be4a"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "apiserver-574856c48c-r2586",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/8f30b8484e683610987eb6e0eda96687da5ca49b1b736ebe76755156817504a4",
+      "characters": 26665,
+      "message_sha256": "75a72b5ee688166c2d28bd4436af480e20bb66dd75843feb635f30f83e84c862"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "apiserver-7d7f588576-mg9vr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/8f7ebf72fa6d968d3d8c658f426c75c29d4d9fa768b33e314b43e786b55366ce",
+      "characters": 33694,
+      "message_sha256": "e2ab9e146f5c5b8a0e16a3972fc3589a4bce0e47a3e125951127be36eb645156"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "apiserver-7d7f588576-n6d79",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/1684e81ecf27765f9f2ef41e667c287170efddf2d980adeab1a0c7375613c685",
+      "characters": 28458,
+      "message_sha256": "d09d80d63e809c193d866331845b6bbcb0a7508a7baa0669dbd5be9f2a1d6b13"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "apiserver-7d7f588576-nshcg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/486e510abcd171c180bdd4e1d7f7dfe28404626c0bd52c8845f45edc7e83495e",
+      "characters": 27167,
+      "message_sha256": "1125c618d68979020f30a2f096a8d87005ad665e973d2ef3402f743757c64198"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "authentication-operator-7969bd6f4f-4c9kv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/36400f52aceba86fe02d41c408cc29fdcf9736472927fd387517a3f78d71dac1",
+      "characters": 16342,
+      "message_sha256": "b020db5f34d9562f66e76c131a1eb3fd3087aa3868f8f1ced84b0bfb257fd4aa"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cart-bb6688669-shhsg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/2dde81d79c48050c9d0b1651ce2ed0dad03a25a6885db2e31d4df41de564a320",
+      "characters": 24055,
+      "message_sha256": "d40de8f8f9909d61a1019347f1a2bc6f48800f90409472d689e1a99a65966d59"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "carts-98768686d-6zst8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c5a1311f1a387768e931381b97db22cb72e8f53798e2bd83172e0aa9c67f8fbe",
+      "characters": 20656,
+      "message_sha256": "e809c7de23796534973876deae42382990c76f4ef8805480774b5dc63ab51747"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "carts-db-856f769fbb-lklqm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/18328b54dad2d44fcd7b5b1c4c1cf30cdc906e466a7c7b9255a194a9a91b943b",
+      "characters": 20007,
+      "message_sha256": "e718fc5c75cc04cf60b5f90c0d0c2dbdc4282cc69ad93bdf68585e7435cf3306"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "catalog-operator-559c98c658-fqsfq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d66665d6fa154c701282a8d3667ebe453f0df6428b1e55be64a74088e98e497a",
+      "characters": 79817,
+      "message_sha256": "66a7f45eb616ed397953da067cbecf692d95dfc0ab29d3074f188db1354d64fd"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "catalogue-6c7b9b975-c8vm4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/9ee6bd53488ddb3e97caacb19391ac0c5109606436ebfe31da23b3d75f7316fa",
+      "characters": 22427,
+      "message_sha256": "5570ae3a55ecf9fe2a6cbf6112a674439d05adb2374b3486e630ae73c4ea582e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "catalogue-7586764747-mqn6f",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/eb9deb7a6b8555d07ba90eee069c2acc806733cb41602f8560b5925c22f4afb3",
+      "characters": 20009,
+      "message_sha256": "fca2955ac2600d6815da1d61143482963b1b01f62c01170008e043c031a9432b"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "catalogue-db-57d4559cbb-2kggq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/8f6d3cb702a094b4c53984149e64154c51e922f20c5ef09dff6be982cacf6963",
+      "characters": 20027,
+      "message_sha256": "db4d05774a1cc30d4d7fffca2ae7491089b11db3967365c44556a236b66488e8"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cloud-credential-operator-695cf7bbf4-fjcwz",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/3747dab73a625f1bbef4400d864f5a1415e53416103da5f94e346b815214389a",
+      "characters": 23474,
+      "message_sha256": "1d2a6cbc112d10c184dad7c739276e9290cfd51dac2e7aa3171ca4f81e22b59f"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cluster-autoscaler-operator-8456cf7554-22ldb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/48cf54d028f4b73606723a2e3f6d0f3e2d1fc234269aad2e415039e2d481cb31",
+      "characters": 11048,
+      "message_sha256": "e4f4882e8751f4aa18553163e706a26e5d6877adedab49157b23a7a1d00f1739"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cluster-image-registry-operator-96cf7b987-bkfjl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/bbe333dfc9647c6fcc1a8e0e78b2616618aa969a76c9ffe1473eae02b2c13cca",
+      "characters": 33448,
+      "message_sha256": "f130ab48b116338b7b5c9dcd7a797668f60ff4b55255abd3437187502f1b4c2e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cluster-logging-operator-cf64b98bc-mngvk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/aa4e2d27722e279891cf09658b06c407c234507cd33a632a7179c3dac1b8be9f",
+      "characters": 11646,
+      "message_sha256": "b4137b9974302fa47670d30c10c424ce84fb491f3b5de3bc0a340e34c1765984"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cluster-monitoring-operator-566889ff76-9k42d",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f1b9aeaef2f5da9060043f9dc7b653023c470399cc534385e8b3413eb61da073",
+      "characters": 24562,
+      "message_sha256": "a8e2322141f1dc72d1910c935d4438172d89ed629ce12cbd3ee2ab5dc7142ff2"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cluster-samples-operator-5946f69576-whhb9",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ae8416dff58e4fcb588da5303f217c85c135c88575a4ab10d1335362e7e69a38",
+      "characters": 9501,
+      "message_sha256": "980a624c495eb9765aeccbe66abb28b183811e79c0300573e4e0feb37b05cf5a"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cluster-storage-operator-64dd8d574c-tlbsp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c7f1048e676f7c3867420a07ce64ad456e6e2aef3086f46c3dc08dcae98a36cf",
+      "characters": 13797,
+      "message_sha256": "07e0e016992452534cc41b2c0c06e57d1f846efb40e11af996d24059331be51d"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "community-operators-lkdft",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/442d8192a8ece8967dd923cd92166ea083245191a920e2f621a5f87e0ea41f52",
+      "characters": 8140,
+      "message_sha256": "befd8896e79c6cd77f00e789ab77f7f2d9100ad765e883981060cc7a6ca584ad"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "console-7c4d8845b5-n8d5d",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c0781d95cca2f8ec24ad1fb4cbaceb2d40fdc2fa14b22e37a59bfbfa17e69e71",
+      "characters": 8939,
+      "message_sha256": "f1e0b8944c41c242edd9ff703648e3b17d5be0fbee42a5fbec6b41f0c622e53b"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "console-operator-78685dc94f-86jqc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/add9ddfae4f2fb6f87e5112d003754c522f1de98febd67b9224bc064b3d7c774",
+      "characters": 13968,
+      "message_sha256": "e420beff0b68bc1c3d7fe9898a740978dbbd97e0f50157a0bfca84bf83112967"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "controller-manager-hzh66",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ff64e14839f8473df200bd07ff47a48608f5cb6da3b69c3d728720bd03172366",
+      "characters": 9571,
+      "message_sha256": "4dac9f4e223067ef71690d914e9ae429d0d2eadccf7634989af44ee5d33c9ba6"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "controller-manager-qsxwn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/41168f84251268d0706b36740ef89985690460c37e0d093ee686e08f867c5f51",
+      "characters": 26418,
+      "message_sha256": "d3cc79759000729ae6e56ed0ad1bc373b1853a5254f4ec9e4a754194699e4fdb"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "controller-manager-zdsqp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/da02cccf9dc751ad629ee0a5b26ecc091a66489915a9c4268b35247b74fa5279",
+      "characters": 9571,
+      "message_sha256": "8adc66dc2852f2e14e5091331f7486e6053d4a136e437c36bfc396dce7bbdd28"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "csi-snapshot-controller-operator-54487bc5cd-tjftx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/560a6dfe8e69951b87482ecd1cd78b31d62703b4d3ee74becf27391d3cabecde",
+      "characters": 16809,
+      "message_sha256": "7c91da502475e42b84b741838b39339e01cfb3577d52d1c77ec9e65b77345640"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "details-v1-6cd7db79bc-879nj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/df673957584a8b234c6cd998651d975934f262d59c3de49a7df75788a356269f",
+      "characters": 22519,
+      "message_sha256": "5dc97f8deddae2f3f7f03f5d407ae467430dd59762c5e44f738c4c958fd706ee"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "diskmaker-discovery-4857b",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d44ccc7d7cba62d7fd8a29b51d12b18c0830eff50d90dfbcebe04c4e03ec9a1b",
+      "characters": 31269,
+      "message_sha256": "a7532dc97be3257a29f4ed6427b0ce57a5db96b5f8e4ee9eb907ae2ebe8ca4e1"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "diskmaker-discovery-qgv2d",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/28a88276504b3ad83a9b6854cdf4312561eaf2d918e3fc79e4a587c16cc15238",
+      "characters": 31304,
+      "message_sha256": "d5e8ebbc5c74b2b527013dde5656fa6df736e44d051202b10dcc74f7e1dff6b0"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "diskmaker-discovery-rqxwj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c1890ea29dab9f91da011350e6d856edebc00bf025019eca164a1c2fdb6df75a",
+      "characters": 31282,
+      "message_sha256": "d1c696c14371a44c0faf4f08f7105148f9fa236d1f85c79fe25c64b89c37eab6"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "dispatch-85f6f9d7bc-lwt2z",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/9cbb9d7f33475993749209fe4eb81dfe3adc85ffafbb037a81f8b02b46bd7de2",
+      "characters": 30465,
+      "message_sha256": "a5a6da34af76b3c38ba16ee09244004ea1d3a767fbab35b8ec6590f9dfcd725e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "dns-operator-6fc5db4d67-2xch8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/99b518c82df95d027f208e28f0cd1a503d4407e5fc792e36a7eb52408bf4118d",
+      "characters": 8909,
+      "message_sha256": "94ca6fc7e535e9b42b39b8784d0f867e4b553b2a9ae4cb1530356c8e01344511"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "downloads-6c764df6bf-42l9l",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d5cf6e7a4f46b3e08d23fc50d032a1caf364d91d499a85c2b4f42ee78ba40729",
+      "characters": 9069,
+      "message_sha256": "392126aae7d3a5385ed3b5176328805aeff5478096a57d1fe902fab69ba7266d"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "downloads-6c764df6bf-vcqhg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/93731bafabcd53a4871f7620b99b8dd9992d65faf185fc465e9e257ff1883e0e",
+      "characters": 9059,
+      "message_sha256": "cfa77719f6f05b3b12fc6dfc3395768b8259cbd320a9e837ac947108a38a5601"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "elasticsearch-cdm-istiosystemjaeger-1-5f74978b9c-xd8t4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/b1f77c6c0ab9d0baf85e9e95735d2f4791fe5a7f1fe3177f7c2d0129fac6a482",
+      "characters": 63956,
+      "message_sha256": "329f813962e44fc63d799dae2099c571a8eea89cc015dc578566f6407f453d61"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "elasticsearch-cdm-istiosystemjaeger-2-699cd94f68-7wjkh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/e3967c2ca0ee756594cb7d4108287ff048d0e6be08c125e9147ef46d971759ea",
+      "characters": 8128,
+      "message_sha256": "532becb20aac38d91814ab93c4210a9a12ac7012198e09d32fdbb53bd272be7e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "elasticsearch-cdm-istiosystemjaeger-3-769cc45dcf-ftxnn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/8ac5472e49b73fb0d6881d8d160a1b06ce5cfc67e964d51ccb03ad7986613760",
+      "characters": 63956,
+      "message_sha256": "3e9e001e61866cf633281efcd1a858b9287b20ebb180751e2906766fa45dd844"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "elasticsearch-operator-78fccf8bcb-m2g95",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/e1631436593f9339eb198e7eb7f2031a8744e25f3c23999de0ac9bc6d0f68fa5",
+      "characters": 17169,
+      "message_sha256": "5a2de47e12428c618e4fd122ef44ccee1d5941f5547920b9538855872b85c926"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "etcd-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/0abc4cd894b5398079aac4696218b2dfc1eec2061fedbeecc069c8fc6d9e5e30",
+      "characters": 52907,
+      "message_sha256": "fc01cbc4e65d91013bc15fec92033662fc30408c5e1983172905efc9ac4f4ed4"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "etcd-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/97a8b37e61cc3db55e62ef10e3bced38c2c5c88b3b070ad921647755e8e7c760",
+      "characters": 52039,
+      "message_sha256": "ee9bb3369319385ed9704d615b789338a2b6a34dd2f849d53076a27e315162ae"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "etcd-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/2e9ab5cc40b8e02bfc4ccfbc0fde591e183f2d6c7fbb3041e5feb279114b0d40",
+      "characters": 49857,
+      "message_sha256": "dc83c87e7738c2d232d79b15fb06f58af0c48e7dbceb89b06e5802a2229cbadf"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "etcd-operator-5949c597c9-7wtqx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/616dae1d9e5d081c1573af097e9ac3cb093cb84dd3fbbaae2d277c7e52fd80db",
+      "characters": 18992,
+      "message_sha256": "40e64761fc4da1b9b1a4f1084c8b52df7e85131f373e68a7a07226ccc972149c"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "front-end-6d7d965889-cmqnf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/5ca08b583869bc257145bab1ac31d7fc29a759ca79baf2d224e3e57cc0521df6",
+      "characters": 20006,
+      "message_sha256": "af54c7c350699a330d640c9c63e80198f7d61dd6160db01f28ea29aa9ed58474"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ingress-operator-68bc478cbc-xnrw2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/5d3f521c7dadd5c9a2c94bf2fd0b577bc8b673e3cc55b4c47cc3e30d287b3a88",
+      "characters": 16405,
+      "message_sha256": "477db71ea413e70328940acea6dd8dec30cfd19d1daf21e8818246237a6e253a"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "insights-operator-d9bc78555-4lswx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/17d481a0e9fe81e698cbf1d41a8f5654bb5a73d74a6577697177900d90f33bc5",
+      "characters": 53984,
+      "message_sha256": "99c985621caafa3c695b559443bcdde3e90fd812dae39201e6b4d716cc454a16"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "istio-egressgateway-6c4d5754cc-gmw6s",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/aec5b98a4cf21d324ac11a2fd0e56bf344efb5c3a24b45721fc6df6e6f689c63",
+      "characters": 14247,
+      "message_sha256": "9e1381a202b148ed41d4e174475492a41f19af0fed82664d5742846f9c1cb679"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "istio-ingressgateway-7ff6588b68-6wg8m",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/530303e090bc44ccae5a0474535b9a15e10faac2154d07755d6407595c48fa28",
+      "characters": 14743,
+      "message_sha256": "cc7ab7e540fd217bbbad6887d7e774f2fcee13acdd63110b35b40da04b2624a2"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "istio-operator-74d65cfbc4-rd872",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/51ce23ca7f841b540bb55a326d87c310a1ab19a36db0fd110f1ab3426ec08ce5",
+      "characters": 23390,
+      "message_sha256": "bbf85d8ac1688245dd064df1072017f2fb3341da315fb162337a58b0e8cbb2c0"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "istiod-basic-555c559486-cjz9f",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/7ebc8e6d831cc54c0956f02ed01e387c2a7fc650f3d54bc8fedb298fac985d85",
+      "characters": 36073,
+      "message_sha256": "f920225bd8ce251da719794c666e3ef028ab0a6c03b8fd9e188bad01e8e96867"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "jaeger-collector-5ddc45cbcc-92qb5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/017007b6ee80dedda49a0ba325e939dd3753c1f45a38a45dfe67d4c87390c749",
+      "characters": 18257,
+      "message_sha256": "af333bbc0381c11cb8bbac9846fd52417c39d2206abf3c8754ad84b4129bc6c6"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "jaeger-collector-5ddc45cbcc-hvfh6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f0c2053ff0fb5186188a2f74ec05c3d2e0f4f9463e5d0570a5277e24182df3e3",
+      "characters": 13529,
+      "message_sha256": "29fc0fb50c451985627d28f03d2a464d74154081659d248bb2b8c4b653f14b17"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "jaeger-operator-5cb978449f-4h2vs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/4c25a9e9adbe80d4c9b58f673602f1adaf0531354f5a49331f7e42d4a1a030e1",
+      "characters": 12144,
+      "message_sha256": "d489a3a40d241f385ee645b0ba3c2d342d1dc60df6a51747c1a2a1be25b54cbb"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kiali-f87d759cb-jtz6g",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d41ec87b4530d2c188ac2efc65addc914c796999e7d1999752489f5bdff298dd",
+      "characters": 12611,
+      "message_sha256": "09dc164c7ae80143255ae4e898686e474890fc801c3541268ee857ba6f5971b4"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-apiserver-operator-5467f595c-h46ff",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/a9dfee160813ec25c1a418a8b90004ed0f4f561a20f5e73fed7d2ba790738ad9",
+      "characters": 63240,
+      "message_sha256": "219b75a0207d2f255e0195e382ad5f79aa162126494790a2cb4f822e2e29c737"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-controller-manager-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/31b9a21a4fecaeb664a910e566e2fc9b1d667bd41bc3e612f4be0997905ae8b8",
+      "characters": 38299,
+      "message_sha256": "9e7ec04d47cea59ebb263089d57bc06990fe9e9555f0beb891ceae75fffad851"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-controller-manager-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d1c5288a26031ef9ce92e3eb4d07c7017d51a116e431ae3f60858ef6f3bf1faf",
+      "characters": 42819,
+      "message_sha256": "340dd2c999f562404473f85bfc4d368d1b1634169b1b9b0e12930f9eea9dad59"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-controller-manager-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/9cbd9eb6c2347ecafcbe3042ce9de6c7d9b2fac75b7ed81871cdd914715fe0d5",
+      "characters": 116871,
+      "message_sha256": "732a01b8f5b31b4da797c359c4e8fcfa057de79ca6bffd7bcec5d0beaaaab027"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-controller-manager-operator-64f4d7579b-vm6dp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/82bbcf48e0413c25e6956438966b6afa39ff3707dfa6e63084b72ae560bb660c",
+      "characters": 39464,
+      "message_sha256": "e5d083204305d5e9d561df9d555654c72f8f79ed8c517a2cc032c709c8485ff9"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "local-storage-operator-57dd6dd86c-v2xv7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/1f6dafbab02ba22e6d4cdf16d02ca1e7609fd7a2f310afc79aa50bc0078ea3fa",
+      "characters": 14971,
+      "message_sha256": "19cfdb488cd1d93860d4a937647ceddcbe0e1303514bb825627a3548ec5715d7"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "machine-api-operator-6f49fb456b-z4x66",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/9f29074f6b5994158bbacdb173362074770f863345cefb9f9955eb8096db36ba",
+      "characters": 10286,
+      "message_sha256": "2bf44a033971e3dfbf56035603d0062c1044e858efe9bf8582f42f18601fed9c"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "machine-approver-b467887b6-wwgqd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c29639f44febcf92ba688539a476a7913d0084f7b3e8fd60f9af8a175594a8cb",
+      "characters": 10787,
+      "message_sha256": "77f56b9e114260a3b8e13cc27369abd7e089c8e7c9502dfaccdc8759ac59dd9b"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "machine-config-operator-745bb474d7-lvfdx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c8d0562dca67614052e8657e43b77228d30ad7d2e7997140d8d8067eef88775b",
+      "characters": 10745,
+      "message_sha256": "e662641b7d3a2a5dc4d9a1e17b7492e5e86e86125de35075f21d72f500fe8a78"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "marketplace-operator-74d56ff548-bpjzz",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/69c89cd7a26bb6843169eafc200fd0a3a8bc82c9a85b62770f9f04ab597083b0",
+      "characters": 16336,
+      "message_sha256": "9d7c410a8885fd8de0c1dc18f7eef04e00a2eff9f884f9bc245c79c2d6154082"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "mongodb-6d6d6df9b8-ksf6v",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/5e391dc3f5ea970029130d3db5128b02c0d199fbe2274c1f490540140824b027",
+      "characters": 22896,
+      "message_sha256": "8aa0f57517d67f95e23cc4948b8f83a9687398ac51ec8fff34499ef486550a1d"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "mongodb-v1-64c6b69879-p4wfp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/b88b8331591cfbded0359bd21044897c6e00e400c25529afc7d3d719314c80b9",
+      "characters": 124996,
+      "message_sha256": "65d75c7a9aed087e0bcf8a19fbc86cda78bd7166c7bf5ac08674d4a47ec5f85b"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "multus-admission-controller-27rbs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/be51dd7b56935b0ca7eb6972841eb4d6b9d36090c197bcf59e8ab1ee75f03b4c",
+      "characters": 9860,
+      "message_sha256": "b992e1f3d6eb98a89790f249d6441b958fd46bf3ab4f11cb8ffece5e48e1cf8c"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "multus-admission-controller-8xj9z",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/61f20fe65963a7391a2582c1b06eb468f0ce8ddcf92e2377185b5f2e88f9dcf2",
+      "characters": 9860,
+      "message_sha256": "f9137f7cf27f0adb1ce52a3d71fb95eb6dd496fdccadcee2c31649299046419e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "multus-admission-controller-t7h49",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/1143b48a570dff1fcb96d689d45ef893b76605a2b954eebc2a87e1b6e29a4c37",
+      "characters": 9860,
+      "message_sha256": "b371b5be96bd4411776b4049447d2d7f0ae6fba81d6ddaf091d01fa8afd50f68"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "mysql-77c9b544cf-6hkxp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/7783140400cc5ce89d14814083ee4028f05461ba4c7c1383412213e766be9a38",
+      "characters": 19985,
+      "message_sha256": "4beb14d37e6e7ea41ca791860e9ba62d5de302788f5dec9c9d11c48548af5529"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "network-metrics-daemon-6qk25",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/3fa0e909401c6df9b7a2ec23624b668a5d6bb64a47ffbf7a88c9bd03aded4686",
+      "characters": 10614,
+      "message_sha256": "8fd13eb3b025032289d1d81d79a8e7640abcfdea30ec6c79195de20871902b63"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "network-metrics-daemon-8262m",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ea1bde3072d9b6db787ceb8cae702c1bb21b34e8d21aed6b837cb4b40d028bdb",
+      "characters": 10687,
+      "message_sha256": "cdcc9b8f52a9420b4a667ca74b7da53cc873393837e4ed485f88f5dd85eb8c9c"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "network-metrics-daemon-c2qcf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/9c2d4dad10fba775aeed8d72d7a6cb93bcf816a0159296b051f2ade35e639a2b",
+      "characters": 10845,
+      "message_sha256": "396ca92257760b38721b7f57873b11b02393ff3b91dc9a3dbccb5bbbfb12a022"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "network-metrics-daemon-fczdt",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/4bf2ba3cef1c21cd7bfe865fe1733560821cc63a6c8fd61506dc833bd3b453b4",
+      "characters": 10731,
+      "message_sha256": "ee724e06d073441fbeb0cc8236cdd7aa489bfa736c3b53738d52d232f4aa0a1e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "network-metrics-daemon-v984v",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/85b3fbdd0218fd96e12e1128792ca7b6be180f7efd4710535691562c0eb61615",
+      "characters": 10504,
+      "message_sha256": "0997cb2dc7f864c9f83ce409602e27eef79e226c4bb6203b15b6543d17ccd68a"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "network-metrics-daemon-z4xj7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/69e10b6dcfc69fb187e78078996a23aa7587c37fa474a5697454283e0f63a7c2",
+      "characters": 10715,
+      "message_sha256": "38960074707be7968db036f7ed77d2597fe9a9ec9c5f3b3d96c8cf54a4bfc78d"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "network-operator-7c59d666f5-27lvk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/de603212ce011d84de066f1899d9c2f78274145e91f3e110559510a06d51cb1e",
+      "characters": 43015,
+      "message_sha256": "7265c98b5777df080a196a54c40b78d9f44e9ca9282fc84863ef048ed158ef8e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-ca-448wk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/18456e8bd9a39a70b43175e3d56e289157dd9da1803c2743b12116b4027c6779",
+      "characters": 10099,
+      "message_sha256": "23bca854825d32da6ddfb99dc2b8dec5c2f6870b5c484ad5f952378096e0fc19"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-ca-m27bv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/be5e656d7b870677864c02a73112aa2a12d5b4a2490b0bd8ae6fa8aa39cb2f6c",
+      "characters": 10099,
+      "message_sha256": "a08d89fbbb3033553fb533c6c38f60a232df109c64864baf9340cee66ef3ccdb"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-ca-rkhq2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/516c59432745701505f9551fe7e1853170a8aa9d1215fae99488dc33e9399eba",
+      "characters": 10099,
+      "message_sha256": "34a350275afbb92ac011b015185a8b2ed42118754424ca523eaaadf771629aa0"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-ca-vhfxf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/e7a5405162127f5e70630b8b8d50d91635010caa2e6507e10b71245e71647a14",
+      "characters": 10101,
+      "message_sha256": "5a3b627c0de3ff503504a99f965da338ca5fcc7b9944a0a66562ebb6582f8720"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-ca-wdc8x",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/0953cbfcd18848c3eef0c4334f5d0deb8b10dc7ab83f521d40d8dcec0e6ad065",
+      "characters": 10099,
+      "message_sha256": "9b9be079b77c418d5d8ff989bf457e7f00cd233c0d861608c9d72b4bcce76d81"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-ca-xs294",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/0fbfa820237dc84642343f3b3c162adce50ec4be9b19b0b1b2e7fbb971333a2f",
+      "characters": 10099,
+      "message_sha256": "f02f50da0cf8b6eac72d19fd558d59d4f181ff3862812f7e1512cf57a0f6f6eb"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-exporter-gpfln",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/0e3e0bcff04f9bdd035ce19bcfbbd6803fe7e49f1cca40821ef6e505cf11df8e",
+      "characters": 8707,
+      "message_sha256": "b7174ef8bcf4e4c5e49b9eab47c6a29ef1d0ddc79743bb8290201f2be8ea1c80"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "node-exporter-zdkvx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d0c32b450215a890ff03df8a83117087070c8020dba41cca209511000310b55c",
+      "characters": 8311,
+      "message_sha256": "285554ad56ff4e421056403eff7d560d8c376d6deb1f5ca12bce5fbf2762fdf0"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "oauth-openshift-75db797dff-7bzxf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/a0185425c8a7d9ea97d4f8c020b2d35d3d2213632225e6c67fe19ae68c438b41",
+      "characters": 14965,
+      "message_sha256": "81b57da0d50529b4fe2e2c1659912ca1bdd05b16fffe98f1afc9750157aec328"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "oauth-openshift-75db797dff-wdfpg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f00d2bbaa7b176e0e627958512af2b0678da5054bda0cc5df981796bcd63c9e7",
+      "characters": 14959,
+      "message_sha256": "fc6c0985567710b18858c7f0ab06710233d4befc40d640ea26e3858459a4dfde"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "olm-operator-77996d498f-dspdc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/438a693366eef313d66a637636464fd460921ef7ddde3b8128604fe0080fc3f7",
+      "characters": 50865,
+      "message_sha256": "410e53e7804c3948bd2a7eb4a71f9e7cba4f20ea5cd765f6500c3da9d97df885"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "openshift-apiserver-operator-68fd44b989-6rgcq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/1da992b12ac277fcc17238777ef5309b658eedde38e568503c93fad6c5a1f2ce",
+      "characters": 16772,
+      "message_sha256": "a1bd060e626542d424ae52af645e37fec6993438aaaa5706229fa7c87a9f1993"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "openshift-config-operator-984cddcf7-cg5z5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/181e42cda787108eb75fc8564448105e9d8ba43be447799393afb19146faa686",
+      "characters": 14048,
+      "message_sha256": "ea2732a1d3fa1486cdc5dfd662ab9ea56f56541f2032e8b47a8a6936e218138f"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "openshift-controller-manager-operator-845d98b4b4-tt2lv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/44cae14627f6a855b3a2f7a53345b665c01ae4c508cea256dc8e3832e3c122d5",
+      "characters": 116290,
+      "message_sha256": "a1aa63769f9cb204a0d93c582a978bb3e646ce1fa64d09f674a9a8aeae50b042"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "openshift-kube-scheduler-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/fbfc29c1f5508056f581cdb21ab481064ff359cd1241500a2ed3b3671f36923a",
+      "characters": 21821,
+      "message_sha256": "d6f75ff8549417b1e5614cb6885cf2f22036c94893224a6c78473f3bf7e04d1e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "openshift-kube-scheduler-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/7f0a82d51f2ded24923981d75e599007489bd459003e83f5cef58d4b7e5d4891",
+      "characters": 29287,
+      "message_sha256": "253d414031483932178c7a5ae12b0d14583bcf3739e37252854d7776208c42d4"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "openshift-kube-scheduler-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/cb2c2f910d7a9a491d0753f2a6b9b407372c0d010d23a3535768339b2cebff7a",
+      "characters": 28085,
+      "message_sha256": "5ad0fef24c37e3bae2f0cb413e75b5824bae56dd91bcd0664da4c5b33076b4f0"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "openshift-kube-scheduler-operator-568db7cf45-m7qqg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/390958e20e938cb4479d1b3729c3be28417ff8602948751fb9af1f103088e972",
+      "characters": 16508,
+      "message_sha256": "ce461f5d54ee60125f47c2d20fe8aaa0782ccb47c803f2f9774f12cb2202e7ba"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "orders-79d799bf9f-cmrpp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/9355bd83fc10c862a6290df8a5b12c2ee32dfa1ee07204dc3e0aa99895fa2257",
+      "characters": 21046,
+      "message_sha256": "2c2c1c889befbc3b3cf433485b3cf3656da58c6f6786b5d49fc04cb87dab6ca5"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "orders-db-7979ddb654-mr2nb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/0e63e88a7dba357248a69736eea459f34572afee0aa8f6690a15dcb35097f050",
+      "characters": 21070,
+      "message_sha256": "d88b1ebec7bf3b7425c0178336e8f1156c23f5b05943cd69c72425c4e4ab5af2"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ovs-ch5xp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/75aa1dc88d8ad7ddf72662d02a1460c068a66c2a1b54d8fc37559d206ff7127d",
+      "characters": 24294,
+      "message_sha256": "29d80f47a6c95e387aeb4f4723fd246043df98a4fac0659c7d191ba9812632fe"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ovs-fts9c",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/eae6f0e4448ada3bb2c900ea1643e1c344a2c7f9b0838a00b32cc4c52fb9e696",
+      "characters": 20865,
+      "message_sha256": "0856271d2e04e154bb0effc74e42d6d5099f4aef2da9c62f088f36884a2b7f38"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ovs-q4wrs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ee7ad056b81753271f554a26982843223944eab04ca8b9898718fcf710e5c648",
+      "characters": 22462,
+      "message_sha256": "febc3a23c0c4e10ff2dcf3f7157ca448232afcb81e4e9e737282749584be9cdb"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ovs-s92vn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/7d892f2e3448192b20f2df0995e11055cef65e82604945e0383b697b947953a8",
+      "characters": 22429,
+      "message_sha256": "edcdd5531cc93acf1b11817dbffd530faa771e97810be6708687399eb3a56217"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ovs-sb7qm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d8e24ce5df0a11ff6ccf9b0fffc22330bedc7ffa709ef2319a38815c485cf519",
+      "characters": 21193,
+      "message_sha256": "fcac07c7bffa48ae286b2d273c4c3776fbe9b164140feaae75a1695bd467f5c7"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ovs-xwgmv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c19255074bb7d56d82599899a26b58bf91e6613c99729c1ffdc71a0d9b3127a8",
+      "characters": 20873,
+      "message_sha256": "b5e5c5321d9f1e10245896c549a718aa7c9e487c3656e52c881b5263158cd670"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "payment-878b8b49-bjxg7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/e45b8ee491f5261c7d5e4dea0daf1375ffe3d3e57914c9623e53cfc3fff5eccf",
+      "characters": 19988,
+      "message_sha256": "0e01291820280867ed99837f955fe6c4fe3a9a4f4fab469d3b918930aa7f4a8b"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "payment-d8fc7dcb-xvd27",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/3959d5d666d8b097441189ea9e1c4584c359fa03b06d5f01521e430c12058d3e",
+      "characters": 19985,
+      "message_sha256": "c0947ea5b2c26f85ed599d1d60bf0ac97ab4f6f0bdd15656f6c8ae173f8a8914"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "productpage-v1-5f9dbcd669-bh285",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ecca52fbc5c4fdaebd290900a2d898c9800f3d200ccc7bb5bbb8dd6dd43b7a0b",
+      "characters": 25111,
+      "message_sha256": "3626b6da04977b8702eb4b5223b197e6d0c44118593d9dab59f61e741eb40cdc"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "prometheus-6cc8d9b85-sztrb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/0e7e80712b18b61c0ce43f0a53cc7dfdeb8f3387a6b9f68fb01563250bfd994d",
+      "characters": 32359,
+      "message_sha256": "20a048b945c786d485eea43ca86bfa57e21f61868659038de1aab6b66b30c45c"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "prometheus-adapter-5678c7fb4f-hhlsm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/e32526a133cd891236cf5e5c3b0214f2fb6b2543cba88cefb36d849c834c3bc9",
+      "characters": 17110,
+      "message_sha256": "b3985478f9eacf5f3b697a971349d10c8cc75d103c4295a10c149eb991b865d8"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "prometheus-adapter-5678c7fb4f-tdv49",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/6f09cb181ef1d898362139e65ecf74bcd7bb678b288b28a08425b94d0c3de46e",
+      "characters": 16540,
+      "message_sha256": "6e0719ecd44666af85cd0fb1dd95b2a0f546e9b8e206f41229a55ea09242306c"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "prometheus-k8s-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/14791bb8678b4a5680ba12852abb14351b35ca685324fa8d6879ee189ba959b7",
+      "characters": 15753,
+      "message_sha256": "031c07fdb2f98f09f766c7a8b72762014de298c71d42da45098bc0e07f419b6e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "prometheus-k8s-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/8dadbf2fff06d5300701e43fa19debd243f56c44e48d86687b752b50f067f7fb",
+      "characters": 15481,
+      "message_sha256": "55d4268654034a5bbeed74f99fbf8f50e90705b409db58e0499741191539e54b"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "prometheus-operator-65d47cfd85-49p78",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/62bd36e52bd11649c1a6c6786a13e1ced756d05a86104c934f7d609e643cdb72",
+      "characters": 8801,
+      "message_sha256": "8cd98def3f5dd54e4f25599515b723d26f57454dbfa4f7fbd153d37a12a1246e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "queue-master-865c66656c-wgdmp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/2b77ceeee729cf63f4dd4482f691ae92d535161edbae34de10e89551c33d0455",
+      "characters": 20018,
+      "message_sha256": "21a12f75391818ef5224db3547516bd8e400863de2f033deda22a33b52b57140"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "rabbitmq-57587f55c6-mttgj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/bcefe0e4917a61038324f05d8025fde8f84f3eaec74675c465b54538214d0ad3",
+      "characters": 20000,
+      "message_sha256": "04cf214f348e1eea3fdad9206e59d5dc7d65c82d5f8989f849237ae02e235b25"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "rabbitmq-57b64456dc-7zp2z",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/4c7cc8edded8738427eaf48e83632cea17f4d48233358af3a39e5fcc63cbf7fc",
+      "characters": 20680,
+      "message_sha256": "68dd0c9adb0bfba7af921c1e3ed78c7681efb89cd76babcda675c968ee989acd"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ratings-755c5794c9-m8fxz",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f65d22ad47e70c74cf34a26c23ca4d4dcc9ed92246f1f9a04ddce127e93fdc6d",
+      "characters": 30883,
+      "message_sha256": "c2a2a47d805cc9bacdeb1c0f0ad61be541d73a6880650bdf5e2e6943320949ba"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ratings-v1-76b8c9cbf9-2kbn6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/5d978d12be5c962266cd9015ea7445ce533770c641c97ed71f15cb05f388248e",
+      "characters": 22385,
+      "message_sha256": "e8e632441fbf351bdb38210a0839b1443d5a7b3501d540658498c17a72160d85"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "ratings-v2-5bddd98984-wwnhx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f82bec17fe4c16d38699c5037880ba37ea9c054d1ff5670b485ebca28f91a5c6",
+      "characters": 25187,
+      "message_sha256": "5ce530fd1cfe28a202b6a3679d2153eeea3621013d64dc57bae7e1a3d948e3fd"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "redhat-operators-gn26s",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/68c98c9634e48d269784afbff6a49f51f7c01a4929e64d7a5e0f669a44c92acb",
+      "characters": 8122,
+      "message_sha256": "48f92c41ee617a080e28626c213d953d012f76ee49aef56aa7d65f90c067abf5"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "redis-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/6cf91430fb6320f0f22713a4509fae88237526ea5311e4f483749346175b04c6",
+      "characters": 21678,
+      "message_sha256": "c340efbe2480b86a254ca93614f328208b8650b6599b3797fec7e2a0116f6cad"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "reviews-v1-58b8568645-dqxtx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c0fcf76034524edb8b8294523881875b50c6466f923f677992d5e51cd907fdfb",
+      "characters": 20018,
+      "message_sha256": "1e1f5a46292fee7fe6751580e29f0a4b09f9e78f67babcb7d2c0474374d778e5"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "reviews-v2-5d8f8b6775-sl4vp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/76350b9a40f2d2290ca4347ea37f9b9fcb0433aa8470a6d1b9f87e7d73c267a7",
+      "characters": 21691,
+      "message_sha256": "87a79dd3dacdf515a5fd7385beb6e08608b5a67df0e30185a2247fc883561513"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "reviews-v3-666b89cfdf-xsffq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/bf4fd146422c542ae16a73c0b6f0a9c6704aa8777a294d40c18ba0081599171f",
+      "characters": 23729,
+      "message_sha256": "b33e3d0db0d2cafdf3832d163f41a19347af7e23436185f5d91a789855de8d04"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "router-default-849d8946d4-94l5j",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/75f45bd4c55b91c14b0f08583184fd8ef1cb8e3fdde7d0609aeb9d64aed493fd",
+      "characters": 10482,
+      "message_sha256": "22f09128d1b1db05d8fb5caab8cc29e74d1eebe4feb70c543d14860ffac629f9"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "router-default-849d8946d4-w45hm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ee01ead10a6b55f88a32e06f60eea02139e12cd31e11eb22d42a6abd2e849d8f",
+      "characters": 10482,
+      "message_sha256": "082869b58e4bbb4ee87b23e47f8b4c40b5150533cdbcc7d6de0aa0b357c6662b"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "sdn-2stpp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d62f3033351f5ad6d42396e0806b943cf4d882a66351cdba50f2cf1728b302d6",
+      "characters": 30283,
+      "message_sha256": "bbbf1c955c3ed513fe248305fd3276c0dcb037ccea92db21834b2d0db822ce44"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "sdn-5bn6f",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/43ebf75ef68b5ed4eb054a98ff8ef93af7002b0c7c346d9a345375d6391b9c08",
+      "characters": 29513,
+      "message_sha256": "fc959a560ec610dc9be5e1221a6676022bcd4beb8afe70f6c1b7a2877d7ecd59"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "sdn-6tgg6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/a793b88b78fe2a4494a3cb999ad73c2ecca3ee7444926680583a0de7b3578cc0",
+      "characters": 30156,
+      "message_sha256": "beca80d7c9a78c46b044093f569fff34117f11e0a4f5986b75ab649d6a905830"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "sdn-fcqbl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ffff2cb7437f684cfb4e0a3e1925b63e7f7955c45a6d7515dea18026e4f170a3",
+      "characters": 30052,
+      "message_sha256": "1b0e4a417833a56cfac551d8d5e19e0762a79db65675016d501daddf687fc7cb"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "sdn-tk6x5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/76cb55c96b467d52c6e975efa94541fbdca97b6a882927b6c8d50fbec17faa62",
+      "characters": 30081,
+      "message_sha256": "62885d6ea1511d3f8e9636f62b746e4ef0d9aec828ed51117d9ca28f754526e8"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "sdn-xfv8t",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/43465959e0ed29b38ab36f641a1dc48959014e2dfe20fe4161e2a3dcb8dfcbdb",
+      "characters": 30106,
+      "message_sha256": "8fd43d05ffdd1cd628ec3e96267d99fce8b9abe600bb712b14a75e5d07bdab5f"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "service-ca-666bc4f547-4vzgh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c6907f935a2a7de92eeae172d5f45209fe78e40d3aa2c43b8a9eb695e9383cb3",
+      "characters": 15672,
+      "message_sha256": "8efd69a7461b36f7989adc2c58bce0c9fde5ab29605028a1247ea109ff0a8057"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "service-ca-operator-dcfcfbc5f-jp9qd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/7c4215c4d0e40468ebe8ac0a7ffadc5f1b89df87ec250924d363a0f3801912b3",
+      "characters": 125132,
+      "message_sha256": "dddaf64f81ff940e206045d26c9433172dd93805a6894428386aced1fd76542e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "shipping-6468d694bf-hl7g7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/d43a383b8600cc1c45b83574d75474e82b7039671b65879d3b34713f24699f8b",
+      "characters": 20000,
+      "message_sha256": "138910a3545d022d2930a0f1db41f6410dba3a82ae8add004c6aa2eff09cd703"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "shipping-d8d458545-mhgcq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ad86edaf282f1a46cb6ead34e82987562fe4217c4dd1b47aa5a3093b489373d2",
+      "characters": 20000,
+      "message_sha256": "8f0a0a6ad068e6b0ec8d9a32496063a1a941f806dbf391d055969ec38b10225d"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "telemeter-client-646c8c45f6-zcz95",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/feb6e6d75f71706533d8391b13183797186d324e1fb5e28c17ed0fbd654db004",
+      "characters": 8891,
+      "message_sha256": "744e924467a2709a92028b557e1728708f089310acdf8b88747603cf937f3b0d"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "thanos-querier-577f4888f9-f9g6q",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/cc38b66f167ed76b139b3aaca2ed59f30d3dd1a040da45dab9c2bf0eb9a8348c",
+      "characters": 8956,
+      "message_sha256": "8bf399fa1ca8efb7f3e60b85fec6cfdcd9fca6737372af70b7316b08d075dd64"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "thanos-querier-577f4888f9-mbbrq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/ce6e08c94d66445340c80089d60bbf57a4f8d050caa5d179711ab761d8051cd3",
+      "characters": 9691,
+      "message_sha256": "cbec789a9b25fefc90c32baa223dc163cd37e96ac9c8bd812a5d0fc306af3b69"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "user-5d45b7f79c-5qpsl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/dcb8e32eb7b9b607ccefe326930a81d7e84c83d206e1619520c50b33b6fae5a8",
+      "characters": 24752,
+      "message_sha256": "83fce3091925f9b89547a524bcd49f4f9147c1acfa870c69f376f9d3f0c3f14e"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "user-5f754b7bb9-hhnfd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/6d4b3d1bfaba734e46517bfa62133a829061a967efbc8ac2e3c68dae971892f6",
+      "characters": 19973,
+      "message_sha256": "e5d58e18f472f778adbe8779867fcf62a0bc60bd73a8658ce6995d7cdc0924cf"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "user-db-779b586599-4882b",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/0a20f9e77cf311189ad0bd342fa517b336d0d50f6a65fb063832e6dc1b250676",
+      "characters": 21300,
+      "message_sha256": "02830e77e71dc836443d3669ca7e3da551f2e1c0f4411f7d9f21fcde8c0fcd2a"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "web-7565876947-ccncc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/5169393a10ecf8855e3b576f61cf986f5a4016038a33cbcc570c7e5aaf36e69f",
+      "characters": 21656,
+      "message_sha256": "658d978e8ae81494b704648162d502c94dee760d39cc003dff71a62276d013d3"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "alertmanager-main-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/7e668d32059ee1d0dacc5047714310770cb4ce9b23b5316237e25ac0c06baf97",
+      "characters": 8390,
+      "message_sha256": "63d24d48b793cc796568685bd6acce3a81c855596958c4b6ab6038652a12645a"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "alertmanager-main-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/c4e6fa4150a5f72263cc1d1524539184ea404d321d209141f84d252e04ae87b5",
+      "characters": 8390,
+      "message_sha256": "8ea7583bcdabe2840a848579c27a1bf83801a2a273c163538f6572f19d812acf"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "alertmanager-main-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/3a2606ac5c3f7b88a84af29d70d7e127498808954d7e58b086861ff6836e7c60",
+      "characters": 8933,
+      "message_sha256": "840b4d0baab4021ba2ab39d2084f9238792d8b82ca189ff62696ff8b0901ca42"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "amq-streams-cluster-operator-v1.7.3-5f6b9df578-gqtpr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/6fd69035e8ce142d6afdea3d914f4140a20e7802f1770818043837a89c821d2d",
+      "characters": 10020,
+      "message_sha256": "6b0156468e95eebf4f2bb1d4eeb671d6630aca5b7209bb46e831dd324be39daa"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "apiserver-574856c48c-86qrh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/1b7e20a3035d990ffc2cd1cf1b0cd761c305140607cd9bcd9d9fb0ff028a73c7",
+      "characters": 32076,
+      "message_sha256": "c39c1e20f445b209937f7c115dca9ec8d9204b276658a72ce28f93556ab0cf3d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "apiserver-574856c48c-nvs8w",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/6a6e96222cca9d0dc79323bde3f61f8b0b9f836a9eb6f43f9d62eadde779f3cd",
+      "characters": 37772,
+      "message_sha256": "c4f5d92c7b23992209a046252d386739ce5e4d4c5db84be4fbba0a99eb0b24ba"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "apiserver-574856c48c-thcp5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/bf266d30df2510d7a8272e722171b22e043f30c5f783aa0af480bc00d2ccbad8",
+      "characters": 28881,
+      "message_sha256": "e8a8fd89c8a9091d1e71c0c1b3e899dfda8161dcfdf781a385c1e1fd6349c779"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "apiserver-7d7f588576-dt2vl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/561b94bc802e7a0c603fa814888ee520cd0c57b5c6b319851a6242b1b5e77256",
+      "characters": 17835,
+      "message_sha256": "2ff66f648cfe92732ed3178c51faf3ee3e88da49c50afd54bb939205e9193ea2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "apiserver-7d7f588576-nlqsk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/935ef1c1c7871969703b49e1bd4036ffc7131845aef78576f42a8ae9f4a16fe7",
+      "characters": 22096,
+      "message_sha256": "e7afe34b871afb51d075b1ff30dee2b8690f764f8a4013cb4ca85d4c4adcd520"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "apiserver-7d7f588576-z6hpj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ae1560d8a1c69119662cf21e19e19b790171d8020d870a983dafd3436bf3b783",
+      "characters": 34324,
+      "message_sha256": "7723a75041c0d964b81d17b4c3a1f8ba45337f82a1ddc683cfb7c3baf14f77c5"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "authentication-operator-7969bd6f4f-2m6g6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/32bade624db848b1aadf768051f0f539a5e7632fca9a83261fd67f43744315ca",
+      "characters": 29324,
+      "message_sha256": "d0e988c29194c490823dfa9708ac908efe0cd7c8df68a57af0aa403d662c13db"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "cart-bb6688669-vhrtj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/f464ca91cbe9500603dc6d7328b34ea5cc01ebab1c7ca02133b038c711c56e07",
+      "characters": 24522,
+      "message_sha256": "6974d6f3ff34ffec9d4e213f5f0d4637e3f4b475021cf5f38ae6b9b5d832563e"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "carts-54fd7c6444-4l7ds",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/3b092f0ee269f3fc299d1d9f56ba98f4be131ce754b30bd36ae73706d275a825",
+      "characters": 22588,
+      "message_sha256": "bc83039ecf24fe886c29a19e63fba3534fc7018f5803093d5486043ea76e30e4"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "carts-db-856f769fbb-cth8d",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/7b208e76d10583be49ac3e1a4dec87dffaae0706f18b521003c4d4e885e7ba4f",
+      "characters": 20845,
+      "message_sha256": "f0e5058a86f3815965e754afdb4d7321cadb6ecfc8bd40334d17b83d4baf76ca"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "catalog-operator-559c98c658-qs5nl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/a42a2beb2c2877bf1f854b63c0b2d9c144f5c87416ff30b9ecf753ed25ece8bb",
+      "characters": 286066,
+      "message_sha256": "a28d80eb0224f7314cad2cfec1464c51050581e82cce2692a710e0171df8dcef"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "catalogue-6c7b9b975-tq5vz",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/2c2a7cc21ffb1e578e4b5236d353b991110183a9d2f2eb11151ea3ae6853caa8",
+      "characters": 26143,
+      "message_sha256": "e6b7dd323db9067ef393f49d76867cd7259333c0dea8e9f5e2c09ec6100feedd"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "catalogue-7586764747-cchpv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/014ae1cb04faa2c772b40d3c600fa42aca3a69e69fd09931ae56b4ea3bf507bf",
+      "characters": 20854,
+      "message_sha256": "670a1dbbc17beff2163f7102d99a1465257bd6bccf909b9ec4e428923a74ec3b"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "catalogue-db-57d4559cbb-njhqk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/94d3841489dab6383887366d7940b4e364fc336cbdb873521ef6e036fd7edb48",
+      "characters": 20872,
+      "message_sha256": "94c48eee7793393413cbd0364f76505762fc5888966e404483aa243232dd5ecd"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "chaos-controller-manager-7964899548-jfcbn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/41521f43e413c6730c4ce3c1bd87b44740c017558cde8acba1ded1e261179097",
+      "characters": 79038,
+      "message_sha256": "71b2bc8ece5c19b60f3a8ac0e9f4fdf97f57dd0ac6e95e2aa95113e703720948"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "chaos-controller-manager-7964899548-t47r9",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ef0a1c22b26516e1dbeab20a914a3f4b7d3379d78e6ecae49d5e669b856b6e32",
+      "characters": 15468,
+      "message_sha256": "5765e4662fe71b499a817ab174dfcd98d207b620e6e00fc703ba2a9d1028df3f"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "chaos-controller-manager-7964899548-vnf4b",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ae513b2e457fa28e60054e7a5715e7e015c66765aa8593b5ce085b6585e387de",
+      "characters": 69727,
+      "message_sha256": "d3dee32a719a44831dcffb13f16ccb9e63a0220ea79d71f1c17eac3bb4749dc9"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "chaos-dashboard-84ffc4bb9-ffgh5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/cc483426dc05bc9a8dc43fb29b7e7b829b9c8406d627a4e714b624350b720e0e",
+      "characters": 9019,
+      "message_sha256": "c1c18a4b2db58c78d6be5ac3bac6ea5c34a6a6a0f26b22671d5c9d31cb8b2a34"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "cloud-credential-operator-695cf7bbf4-bhjcc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/dffece9dfdba30a4fe4b81b28020308be85a8da29f7e738b8e3dbd63aea35d71",
+      "characters": 23817,
+      "message_sha256": "35825c470732bb882d0583fcdfe5e649e064f279a0b131473fb08aff6f28072d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "cluster-autoscaler-operator-8456cf7554-4dmgs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/3fe7fb6f60825c16dfbd2ee58e700e37ba1be54c9116b17ad0aaa117eb92a35e",
+      "characters": 11382,
+      "message_sha256": "d775bd801809a6c41b6a2e706646786c952b566b32307181f867a1fac4d7f952"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "cluster-image-registry-operator-96cf7b987-wnnhm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/f157ddd55f33272740b5c3846b75daa26ecc1e43837bffe7c5e1ad5e58dd7afd",
+      "characters": 33802,
+      "message_sha256": "faade24d2b5f0f6d54a2846f4ac32e6b60bd2cf4cae16ba53298fa59972f5e8a"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "cluster-monitoring-operator-566889ff76-m6xcr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ab310ad530ae884a8feb79fc0f972373693b655ff17f8a8bf73aefe25a9bd173",
+      "characters": 24550,
+      "message_sha256": "18999548bd60b49e9b19a4ecf5f4017b6d8556d481b3d05a0afb5323dc85ef9d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "cluster-samples-operator-5946f69576-qfkf5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/1dc2e9c4c15654bda5ea683a0c415ef8c41424aa276c73647629945523c03997",
+      "characters": 9805,
+      "message_sha256": "521dad67871ac5f0f6a94fcdd21df252f43d35ce25977e5843fa72dc2306b614"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "community-operators-nnlwc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/c87df6f72a5cc7f5d5c674933be9e8e1dca537be51141b81a0d24a41100daf58",
+      "characters": 8473,
+      "message_sha256": "d9d153e466ff43df32a43071522fb44e04593a2df881f3f776c6f74134ad85f2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "console-7557f6749-gpkfd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/9f6be80a81a79ebf0bedd0c08a329faf82da71cc5153f44ebf41c9cfe7e19787",
+      "characters": 9273,
+      "message_sha256": "05bb70ce727c1b059ac2f70ef7464cd554d097708da441df5b9991bc5ac5bf3f"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "console-operator-78685dc94f-rgxfs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/cd1ce5f2523a23170a49b9b89f86fb5cb01e789532bed3042c8201a34aa1728a",
+      "characters": 11234,
+      "message_sha256": "5f003f97ba49b7a12f11af4bbc217ba86bd4ea6be4b65b0ed56a8fec6c74e1e1"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "controller-manager-jqh2f",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/7a8dcce7ed5e8c6f6be5dd8b51cc037f76fedebd28b03fcc071b52fec4dd4982",
+      "characters": 12409,
+      "message_sha256": "d5d7bc7df1242b4d92d7ca5eaa53bc8693f24d7475a9d85659b4c1f0a212abd2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "controller-manager-v27wg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ac78d099c1d895bed513b7c9d83971e1b3805138f1ed083200cb0c7bfe85d668",
+      "characters": 8423,
+      "message_sha256": "0d3119352b57338806d04502e5ffd3aa9a2c82c1d3ce13f9ab09e00e0ec066e5"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "csi-snapshot-controller-operator-54487bc5cd-czqdx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/14969c774b299cb05301f428220c1a65ea5f53ef99b16488953631becc8041e5",
+      "characters": 11131,
+      "message_sha256": "a27280f11c6f3d261a22ed36e0e7a2e8eb9f36cead6f953a3eb748d3a17548d3"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "details-v1-6cd7db79bc-hrw4t",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d15f716e4c56f741cdb1016f9582b775e96cc655812274349f9828ce1af1656c",
+      "characters": 22855,
+      "message_sha256": "83f5dd4c74c367f5bb2588dffbe7f1cd1943e0b2298d01c9ab4ed7e447e37972"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "diskmaker-discovery-k4892",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/427d23907ec34253bd2183b80299b7e290fa1744a203563a3d90854870b9a519",
+      "characters": 31630,
+      "message_sha256": "b233ee9d244cc0ac7acdd5674905ede2cf05eb1f1d9c37a24b1bc10eb6f6dc3a"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "diskmaker-discovery-vkt6j",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/313d00ce67cfd9b15a8dc8f9d4b9b992f73fdff60c751d80ff1e1a1093c4d106",
+      "characters": 31688,
+      "message_sha256": "b2b95ee11928b5342a42d2cdc50d8f75de45801c62a6868deb5a3479a5a30faf"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "diskmaker-discovery-x4bvz",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ea7211f196e11a92b812f5fd21e8e38f900460b173db563eb095315b8fe170ea",
+      "characters": 31718,
+      "message_sha256": "8bf3d5bb29f3e5a4194af4a0b1034ac4feaae73ce95436e99954863484d5004d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "dispatch-85f6f9d7bc-lnpf6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/f1fadd831eb62894e8b970a26875aef110cd85e44136c5e085334b4aa4c1a9b0",
+      "characters": 33051,
+      "message_sha256": "c43a51988ff56cfbf6844da843f92049b3424eb29a402b0b12f8762b2f62278c"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "dns-operator-6fc5db4d67-k9rj4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d78c18497a9e527ae7d79420a6df3193c8990d7fd575b14b35629c8ab8d410f5",
+      "characters": 9243,
+      "message_sha256": "7883dda469498dcc87253907c96ae47e076fa841289f397f60b906d769c7ca0a"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "downloads-6c764df6bf-gbrsx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/4ea607fc2b05a7cddf49da1417ea2e0fb6c366895a3f59f8c2a53f04cb19c871",
+      "characters": 9391,
+      "message_sha256": "f355d1260d7d59b8724d0f17bd1de256ff522680c9135d75a77eed5d74750696"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "downloads-6c764df6bf-j2w99",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/f1a35a299f99f01cd842a520a592422d68ce812733d60e46a9914c27a7b96ecd",
+      "characters": 9403,
+      "message_sha256": "4c4d7368b4fb043ca0c56c00da507c9994cb97827fdd23c71d8e5edb145140e8"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "elasticsearch-cdm-istiosystemjaeger-1-546979969-xdshf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/728b8d7bfcd6549c8d5a8abcd45d06cae84803a2c55698d67e774961ad0546e3",
+      "characters": 69031,
+      "message_sha256": "e5d4789edc1452da2a347caa53d98949291f85f4b783e81cfb304bc6d5ba4cf2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "elasticsearch-cdm-istiosystemjaeger-2-699cd94f68-8gcpq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/01daa8cd2dcebc50ae2efbcee0feda7347a2f323c41b8156c5be102c43da2d2f",
+      "characters": 11915,
+      "message_sha256": "3f6e949767740bdcdb0465e0cf05385e4ca63f6124e6d1bb4c3839823609884b"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "elasticsearch-cdm-istiosystemjaeger-3-769cc45dcf-bj4hc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/73089a162fdc07a434f6527c26de356c4d71e446e3f4ed3d872c2f2a380de250",
+      "characters": 11919,
+      "message_sha256": "9ed6acc8fa7fe34d09fc50e46df5e0f458140e919390e9f7b3cfed3baf12867d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "elasticsearch-operator-7b8449b56d-c9h4h",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/4edee5df7a216970431270dff724b7b93c96c0f86b19d04cb5f7a1416a7ef3db",
+      "characters": 12065,
+      "message_sha256": "b69236b93b931731458477061bb76c8e79a664df5f5c9e2786b71050e1c1d361"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "etcd-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0abc4cd894b5398079aac4696218b2dfc1eec2061fedbeecc069c8fc6d9e5e30",
+      "characters": 60051,
+      "message_sha256": "822cf406c4b10a6acd455903d265ac2fc7ef46cef801d71b0badfd78a90d912d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "etcd-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/97a8b37e61cc3db55e62ef10e3bced38c2c5c88b3b070ad921647755e8e7c760",
+      "characters": 64194,
+      "message_sha256": "e72092afcb27456da69d6b7b8e1e5193efb571f8b5a9cd97f035acb5a3fb465c"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "etcd-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/2e9ab5cc40b8e02bfc4ccfbc0fde591e183f2d6c7fbb3041e5feb279114b0d40",
+      "characters": 68895,
+      "message_sha256": "a8be5b358e1b330fa24aa02fb5aadd2f132bd3170597af515761f81116aff09c"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "etcd-operator-5949c597c9-pf5f6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/6b11cfe798ff654d82f4a8d71af69bed848679b3f69cad9f3815567b74eaa2ff",
+      "characters": 43175,
+      "message_sha256": "5b9808b2dd7da3e21be1fc6c9c9fe135339d4292d66afa820b16cfd03e5e5a16"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "front-end-55b4b65c98-gpqd8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/1b652e4b6a60986aad46ad56840e7c063db0f55546e01731a5a939dd483d4a22",
+      "characters": 21651,
+      "message_sha256": "337ce5e0b5c21d72d97fba129d8530b61f1c733947f176c019864215e935b345"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "grafana-575c6459cf-gfzj5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0baa49e912d2687751cb4d0e152f8ea54b2fae65b953a8a15f057c27f0c6f3ff",
+      "characters": 9282,
+      "message_sha256": "5e06f42724940d886af96a6caa83775f5b728530cf8d1d6fad5b3256172e3597"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ingress-operator-68bc478cbc-5qzzt",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/aeb29f41635b0c496004eb80faa48994465d2478c18f1fe78449eee4cfbadda8",
+      "characters": 16782,
+      "message_sha256": "1acaa6ceb588791bcb55ac88894bcb2c104ec639dce22bd78e5a827daa2f328d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "insights-operator-d9bc78555-bmck5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0943207cf8fd383d219bd62e99267172987075f2eecf4735b6fb2beda8e45856",
+      "characters": 47669,
+      "message_sha256": "9ff785e8654c48b87fb14d440f45a12887b1313bcc9c884ff7f1edb12a3ec646"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "istio-egressgateway-58495d676c-whgdv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/89bafb02401c5c77a61c3649c2da3565e614443113e2c0c259912682ca2f5a25",
+      "characters": 15070,
+      "message_sha256": "1bd1be7c6eff36acb102f7afca9ae3efc5ad59b01ff2be9cd23f623fe976b8f7"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "istio-ingressgateway-c5c48c9f4-997nl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/030860d08e3089363152b2b4a9df489f10fbc4c624c37ec74d44faff33876ad5",
+      "characters": 14580,
+      "message_sha256": "a8c8713e6bdb433ccf48268686f6b01f80cba7e808c89f0347691f8d8dfe487d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "istio-operator-545cfd77b6-hbcm8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/4d326a1b245ef6b49aa55921852e4331a9dceed7341ddc77f05c68dd4bc0bee1",
+      "characters": 23739,
+      "message_sha256": "05fb84553927cbe2cd21ed91465f1c8e83c906c95ac5d3e1f6d6e1934cb221d3"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "istiod-basic-5fd99fc4f5-zsdmz",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/792371b29241dc6aff5157e806b8d0942fba90bfb664bd4fc34abbfcda3357d3",
+      "characters": 28170,
+      "message_sha256": "578e88b1cbc1f5400d5880c461aa278683877e5d6c220afb3ee43590df30efd2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "jaeger-collector-58d8d84b9f-fps2l",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/91fb9aab4b5dc7901dcb3b5ea44406cd61bed56005d26c21198a9f49ba1a1c0f",
+      "characters": 11307,
+      "message_sha256": "a18c29caf0440c1bf3b6cbf5e2a1fe8813cf0004e4f91ba0df8c13914105e1c1"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "jaeger-collector-58d8d84b9f-gsgnd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/17b3f61d2770fb41e6cd1b9f93b6c7bf6c07055febb2d61daa3c4b1094619343",
+      "characters": 16415,
+      "message_sha256": "4876cc0d90e801d94eacdf8494ab35c58b6321e2f1e772a3308e515879ba11d5"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "jaeger-collector-58d8d84b9f-hzwrl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/54134bfb81516417bb72d3191992f22a9697547287e5e97b44be72118f1a5433",
+      "characters": 16869,
+      "message_sha256": "0e9b6b59b72a4ad0a9d24eb8bf258a5c5988c9e9f59db1c86b169c8b7c1e807d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "jaeger-collector-58d8d84b9f-n6mng",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/93b4c64964860dd7758efd52b30b3822d65899ef9d25dd1b9c8177d75ebf90d4",
+      "characters": 9647,
+      "message_sha256": "9b56bb57118582825acbb327e273933809ad10d976f7a18837b23c4b7aea1884"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "jaeger-operator-7bd6f6cb8-hwf4q",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/938c620e4fd9c8fbf9eab449473b2e4411a706967d2cd00fa9eb7ef4020393d0",
+      "characters": 33291,
+      "message_sha256": "333a8f102bd1fd702049f2f511a924b6ba02377f93f6a9f4bc85687068b8b8e8"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kiali-7d585768cc-pvsrf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/24f382769f4b4f4be4520843a0c94bcfbd5781b1c17c368c41d1b45a24b1ed71",
+      "characters": 12928,
+      "message_sha256": "7ebd8a1a35a3d3c213cf4d78473a4008393556ae604a2302cb4f5bc3508480ab"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-apiserver-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/546d558b22cf368d6f61d55693c51e8eb9221111c518fcd458711e876c5883e0",
+      "characters": 63477,
+      "message_sha256": "085169fe281210ce7b0379bbcf6b0b87414b351c47122ef6c94ab421bb7ee613"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-apiserver-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/769c872757940bb45fe5644ad3072476b10fac8e7a165a81588e3e246c99392a",
+      "characters": 57996,
+      "message_sha256": "1b06cc6c4246200c33cdb254c5fa6777c283e7febc316eddbb22431676f619c0"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-apiserver-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/c5f7dc3c65004cfd4bd9c397ce60d12158a58280b9627e08235294b6ba6aabe7",
+      "characters": 84948,
+      "message_sha256": "35b7a5c5c195ee3f384b4aed66b599828b4097c1c3e0c3faed887029b35865e5"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-apiserver-operator-5467f595c-gq2h4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/81c25c44408e383f3a5fc3fa1a36d9e9b07a74d33d215e91dcfc98e410620466",
+      "characters": 60804,
+      "message_sha256": "364a129c59cd388f4868919f33f77e179b35f74d109b4fef10f0da9c932e6bb8"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-controller-manager-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/31b9a21a4fecaeb664a910e566e2fc9b1d667bd41bc3e612f4be0997905ae8b8",
+      "characters": 12837,
+      "message_sha256": "993703fa1c210a8340b40f36beda33978b4bce23d58ebe1ae761f4853ca23b64"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-controller-manager-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d1c5288a26031ef9ce92e3eb4d07c7017d51a116e431ae3f60858ef6f3bf1faf",
+      "characters": 133383,
+      "message_sha256": "a2f04c33086ac1111461c9d994af0218015ba50007fc7073f6f94f4fa54f2453"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-controller-manager-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/9cbd9eb6c2347ecafcbe3042ce9de6c7d9b2fac75b7ed81871cdd914715fe0d5",
+      "characters": 111736,
+      "message_sha256": "cb5c58df0ad0ae29b09be7e800d93c6dda1c6542c56b59a4586809b6bac6e87c"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-controller-manager-operator-64f4d7579b-hbs75",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/b971f7dcdbbe95d962d02183ccaaeab0ce2184b080a93b9421be962e7276ce74",
+      "characters": 57823,
+      "message_sha256": "4b0350a2050fc081ef509c77c5de7049e5760cc65595f3786ab9e6d64d9656b9"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "kube-storage-version-migrator-operator-599cfd75bf-rhqlr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d3fd26b63a447a344a986ffd5e3639bcd52dd2f457d11f0ea0f2c89e8e350a6b",
+      "characters": 8951,
+      "message_sha256": "e8629c5b9f2a65d5a1f9f80086fe43d88d61b012ade80737d57edbdd1bab3f56"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "local-storage-operator-df48dcdb5-zfztp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/735279f00d6e74a6b3d232070f8a41a3645c04aec8fcc26b5f2f91a8f2e497b1",
+      "characters": 15304,
+      "message_sha256": "7afa070b42bf11965e42ccd28ace26e1221fc5413bd8b6b56bc1fa5439e902eb"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "machine-api-operator-6f49fb456b-pvfwq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/17c0b73d8050d9c63f02909491ddba90e26b923324a73f3a8b7b1bea989fecd9",
+      "characters": 11279,
+      "message_sha256": "8e31468f73943f021a48d854996846cdb838c378f93bcf275611015492478fec"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "machine-approver-b467887b6-n5wlt",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/5de60f60c30a0d7d7aaac95eaddec6a9b63b1882b2d37817a1f015d2df7b9bae",
+      "characters": 19486,
+      "message_sha256": "3297ac4d1793d6714cd15aedcbd9c3dff231ee8d0b4d7b44c163b4f13a100b2d"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "machine-config-operator-745bb474d7-jc2w4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0633f0e470dd907f89894cdd90dbada727c63b6c1a594f2e324b933b14bfa4e8",
+      "characters": 11170,
+      "message_sha256": "59c4e75753576ecf651a3bcb91fe137b1f240474aecd2d34a04f72bda688bf27"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "marketplace-operator-74d56ff548-zzjs4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/5d8e018b135773127701ee512f8d9b58f976efafa9ea15ff6a3b789a770c002e",
+      "characters": 17226,
+      "message_sha256": "eefdd7fa49615a8ad5942c5836c8043f7da1b35f25c3417806bd0efbc195ef3a"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "mongodb-6d6d6df9b8-fvqps",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/644567cfa6feaf86ca4a2022bf9a487533393047e9ee7aa2959895d8eab335c7",
+      "characters": 24706,
+      "message_sha256": "1718a64d7e8a7168f1ef2fe97bac91832691f35c80643a87f91a8d6f24c6cffc"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "mongodb-v1-64c6b69879-fsr7j",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/1e169be5986afbf3ccc4b7abb17ab5f8308314b8e90380b603a8b6a4f082864d",
+      "characters": 28972,
+      "message_sha256": "03d073bcffe3168956247e196fb505bf2412445e1dc0a1b9f252652ea8948216"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "mysql-77c9b544cf-h5v4m",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/677edd2d166e858d797d2dd9f55ed5f2d72e0727063df57ce4f90359b377bebe",
+      "characters": 20833,
+      "message_sha256": "93ed3dfeef87ecb213413a5ebd4f16baa797f403d91413fd35903f1fdb2378d6"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "network-metrics-daemon-6qk25",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/3fa0e909401c6df9b7a2ec23624b668a5d6bb64a47ffbf7a88c9bd03aded4686",
+      "characters": 11167,
+      "message_sha256": "99fb567d421067478d4f6e4af834271a04c901d55c93eae2fb91f801cf742484"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "network-metrics-daemon-c2qcf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/9c2d4dad10fba775aeed8d72d7a6cb93bcf816a0159296b051f2ade35e639a2b",
+      "characters": 10952,
+      "message_sha256": "0d5218a3092bfcfb39a64513681b4ad837f28e775e2d0faa8da91a7b07c3a414"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "network-metrics-daemon-z4xj7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/69e10b6dcfc69fb187e78078996a23aa7587c37fa474a5697454283e0f63a7c2",
+      "characters": 10900,
+      "message_sha256": "84bc0f6f2e2c815c017fc3821380da178b40f3c1b88e91c42e8ad3865da267fd"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "network-operator-7c59d666f5-kh76z",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/b8bd988452947466019dad8283cda8f38a9fe45b1dfe5ded5cdd3914b995f123",
+      "characters": 45677,
+      "message_sha256": "aefe837c422486447e738db1e3c340cbb129d57ef35c1079a0686aebe9130fa1"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-ca-448wk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/18456e8bd9a39a70b43175e3d56e289157dd9da1803c2743b12116b4027c6779",
+      "characters": 10432,
+      "message_sha256": "ece0e4142f3859b95d2b90994e2f28249cdb6050cc71aa04e688058ba52788f3"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-ca-m27bv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/be5e656d7b870677864c02a73112aa2a12d5b4a2490b0bd8ae6fa8aa39cb2f6c",
+      "characters": 10432,
+      "message_sha256": "552063ffb2d64b7e59eeb85e1cb002cad7cb42f0b69da3ca6e3a507e6075775f"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-ca-rkhq2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/516c59432745701505f9551fe7e1853170a8aa9d1215fae99488dc33e9399eba",
+      "characters": 10432,
+      "message_sha256": "a0dae085a47e160e4e874a47c5dccdeafd40d1cc8cdb0468609a60b33a3390f8"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-ca-vhfxf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/e7a5405162127f5e70630b8b8d50d91635010caa2e6507e10b71245e71647a14",
+      "characters": 10432,
+      "message_sha256": "8a8497a9a4265771cebc3755c96318d989fa8109c5544e6dd010f23faa4576ca"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-ca-wdc8x",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0953cbfcd18848c3eef0c4334f5d0deb8b10dc7ab83f521d40d8dcec0e6ad065",
+      "characters": 10432,
+      "message_sha256": "8c51644826a96a3d230eefd51c1c3d703de0cff184c12d416835eedcce9954e3"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-ca-xs294",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0fbfa820237dc84642343f3b3c162adce50ec4be9b19b0b1b2e7fbb971333a2f",
+      "characters": 10432,
+      "message_sha256": "2ed36e2f89d908725e870c5e2ab3c9e976afb32028586211d9564aff5bccc36b"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-exporter-5w9gv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/f7ee46bd1387e62d06f1868097c509a18191d887fe5f02472365aec0bdb40e1e",
+      "characters": 9040,
+      "message_sha256": "bd452bfb3f44da3a9fa6b1c2aac54261d6f8744ecc1b2d25e738e9b6ef5a4cf6"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-exporter-gpfln",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0e3e0bcff04f9bdd035ce19bcfbbd6803fe7e49f1cca40821ef6e505cf11df8e",
+      "characters": 8559,
+      "message_sha256": "4a2e9ac1694749324d4224d84777b15f2f36f745a77fa52bc1cf04c8e80ddf63"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "node-exporter-zdkvx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d0c32b450215a890ff03df8a83117087070c8020dba41cca209511000310b55c",
+      "characters": 9040,
+      "message_sha256": "c1746e8d98c25d5a50d25982415068d85d0f8d63fab31c3830c08c0295e4b676"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "olm-operator-77996d498f-c5zn9",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/746f72966911fb89d7bad14cf695d7376d26f7af574dffef513e9c36d5f8eda1",
+      "characters": 32266,
+      "message_sha256": "daebcceb664b0c51a5be625032745b993bd8c3f1da21364803ce6b3b97b96fa3"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "openshift-apiserver-operator-68fd44b989-sxdzg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/bac04635364db938857ff081ccbd5cf64fe709780b6b9f4213a100ebea4886bb",
+      "characters": 33808,
+      "message_sha256": "6cf72d3dfe46001c6250e8b2ab0dfbcc1ce7b0d3f1226258758f703ae7cd4918"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "openshift-controller-manager-operator-845d98b4b4-cwhgt",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/764452e51a4286f3dce5c36e1f5686f45947bf5de548c35a17694c0ab2f08b91",
+      "characters": 16914,
+      "message_sha256": "0967348a2baad229d5e6b87dc5c449951ed39671dc84ad1973bc623ac5946af2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "openshift-kube-scheduler-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/fbfc29c1f5508056f581cdb21ab481064ff359cd1241500a2ed3b3671f36923a",
+      "characters": 11460,
+      "message_sha256": "b7732ecc60d8646da287e209fecb1342df0ccc6aea40ad7e5e98dbdc47a57967"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "openshift-kube-scheduler-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/7f0a82d51f2ded24923981d75e599007489bd459003e83f5cef58d4b7e5d4891",
+      "characters": 11460,
+      "message_sha256": "81751c667d51a40186589a7bc3e4ffba2b79a90276ba062be2ff60b721ec4d19"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "openshift-kube-scheduler-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/cb2c2f910d7a9a491d0753f2a6b9b407372c0d010d23a3535768339b2cebff7a",
+      "characters": 13236,
+      "message_sha256": "6c36fd43d04bdd4d92350095ae0163d25c31a297ff1cdb8155ad9b03ea3a1f83"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "openshift-kube-scheduler-operator-568db7cf45-28czx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d8e32297302ce5c393f11b3d83d6b6d3c24178faa15527fd54f5cd13902d8410",
+      "characters": 63274,
+      "message_sha256": "270a6c314a06e713587b24df4cc9247288a4e51904acc4a3e9b718c98796b30f"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "orders-79d799bf9f-zd6qx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/3381d76ec48fcb9cdc7f3d41c130d0fff813806d994950285dfa5502d72a6e93",
+      "characters": 23099,
+      "message_sha256": "94bc1ff22d36c2bf031bcd352cd9007e1113e3e71d20ddf7d6e09c65316d77d2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "orders-db-7979ddb654-bnxnc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/4455af614fe5d4c083745c0818bc4c9086659e048a5c1b222bf312edd938b99b",
+      "characters": 20860,
+      "message_sha256": "8bf98bb97093b70fe84788384f734b8b71477740242e1a8230e2b171ef3881b5"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ovs-ch5xp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/75aa1dc88d8ad7ddf72662d02a1460c068a66c2a1b54d8fc37559d206ff7127d",
+      "characters": 23974,
+      "message_sha256": "50be7c8dad66f40ca7c3fffe9263914835cf2f6335d3327c99d1385b527620df"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ovs-fts9c",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/eae6f0e4448ada3bb2c900ea1643e1c344a2c7f9b0838a00b32cc4c52fb9e696",
+      "characters": 15438,
+      "message_sha256": "f8bf26df613caa6af940374702c822ff72c97f9bfe4c882fb7a8bc4b0a800513"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ovs-q4wrs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ee7ad056b81753271f554a26982843223944eab04ca8b9898718fcf710e5c648",
+      "characters": 25178,
+      "message_sha256": "dad88e4df74600fa4c381629935737ade882afe75553bdae1c09d3cab78db13c"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ovs-s92vn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/7d892f2e3448192b20f2df0995e11055cef65e82604945e0383b697b947953a8",
+      "characters": 24957,
+      "message_sha256": "7d2ca1dc66aebad6b5e02b713244227bc2737da28c6174e3ddef0f44694bd21b"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ovs-sb7qm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d8e24ce5df0a11ff6ccf9b0fffc22330bedc7ffa709ef2319a38815c485cf519",
+      "characters": 15436,
+      "message_sha256": "0493792917c59ec02db52da6f7bf9ce9a613e71cc59519e63a0927d70b20cf6a"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ovs-xwgmv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/c19255074bb7d56d82599899a26b58bf91e6613c99729c1ffdc71a0d9b3127a8",
+      "characters": 15434,
+      "message_sha256": "110f28f0361e404cbf92e5702571d7177be0e8bb9c8b19f968583ffa74af29fb"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "payment-878b8b49-jvkc4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ca5fd9fb767f00bb6906496ddfa06fc6c49972de8df44fd868b733a3031d3c81",
+      "characters": 22600,
+      "message_sha256": "ac9950db9d949c91d42257cb9685977fd403f7b7eb5f26e9d8a98362bf55644f"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "payment-d8fc7dcb-445rh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/bdf5b92889a41249bddcfe436c4fc125adfba84af71252748e713c50b837fe18",
+      "characters": 20833,
+      "message_sha256": "f8bbce798d21c9394d12711a189cd2e42241262c4e7b372999361f0d953be567"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "productpage-v1-5f9dbcd669-z2prs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/3e7f0717483489c22c9b3299613096b95ab72223f7cdd590aa3ce83a4d39351a",
+      "characters": 26140,
+      "message_sha256": "76d8635e5a5c97025de0fe5b66e9ef1a02a5419b4850964a137c8ae1344ab39c"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "prometheus-7dc6f68f75-w6zzk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/2c76182708306e20e9ff1415d1f2bb1600e6c08aca81ba4a98ea688920266128",
+      "characters": 29082,
+      "message_sha256": "23f3ba19a716b01c3557dbbfb1878e5bd1f8c62e28008ba7561ac1fbdaef3cb1"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "prometheus-adapter-857776dd55-d2qbw",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/de89667f0cd0ab22dc0661074dc45e68c93cc8991e700c6ef9c7a6b99678f5d5",
+      "characters": 12920,
+      "message_sha256": "f9bd5578ccd2f3daee9fe9062963e41bfe1f1876acbd49563129badd754f8ff9"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "prometheus-adapter-857776dd55-vqzhf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/9ee897a719389a05ce0c2cedb6e48c4ef2a2388a1de67b191519014b9e7d5a0b",
+      "characters": 12922,
+      "message_sha256": "79f61abc31dfa3d1989066f137ad90dd369731cb40b086464350d328128fe4fc"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "prometheus-k8s-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/14791bb8678b4a5680ba12852abb14351b35ca685324fa8d6879ee189ba959b7",
+      "characters": 15699,
+      "message_sha256": "624e3e9cde6b2075e5c8c5e0d5ba3a14af3a61186a36f497ce3dd42573627c72"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "prometheus-k8s-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/8dadbf2fff06d5300701e43fa19debd243f56c44e48d86687b752b50f067f7fb",
+      "characters": 15494,
+      "message_sha256": "45724ee9cec37edd57a5aee62fd1996078166b2c77ed71dafecf85603c9469c2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "prometheus-operator-65d47cfd85-bfbrf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d844eb6fce2fa61745c636310b6ac2265929fc17e20c182ee3a0a285669ebdcc",
+      "characters": 9655,
+      "message_sha256": "a4d90cb754658a7353d392dbd8254554377e9ae6b2fb37680ab891762e7475eb"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "queue-master-865c66656c-4294q",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/bf5cf2ab58fc48639f4c69ed77515e0c840e3c79036c63b23023a11af6db2105",
+      "characters": 20872,
+      "message_sha256": "1bfd49ca3cd69b29873ddcd6777d8aa71d4e33c019ca67a4fd2fd3c49cbbbad8"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "rabbitmq-57587f55c6-j6rj7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/dd866b723932e4ec2cc99309fdf48ef9b0b4794e15697f8f416b78044bbdcd6c",
+      "characters": 20848,
+      "message_sha256": "46d46b1ee683ace607ce4fbd37235b66cc56feca43a800041f511dece12d3fe7"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "rabbitmq-57b64456dc-dbk54",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/faa3cf62c6026ae86fdb2d1fa22690228b765b7e3418f2cb662c74baf6672f92",
+      "characters": 23102,
+      "message_sha256": "dacdb03c2a866117eb018b5d471add94472dfd552d62ebbbd0af2ed40ee7f3e8"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ratings-755c5794c9-t6drn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/6c973ddb664d297090003725b2a12ba27742d18d13649f0280b799412450ad02",
+      "characters": 31703,
+      "message_sha256": "8159dc3613a7e9ab9739adcf5b506b85ddfddc2ad75929779a4aff7187f55045"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ratings-v1-76b8c9cbf9-6jvtj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/bc880f80f0635572ed52f4a04f84b875fb727b3df60989803adf7ecd75cdf146",
+      "characters": 21412,
+      "message_sha256": "3274979060fcc04352cb8030a42ea4df5ad05e184cf087abc1b237ad64f74d08"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "ratings-v2-5666f48b67-dh2fk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/70613171b79be34f5daf8f0a68324572d3b73baba905ea0b7a59af56f2911305",
+      "characters": 22473,
+      "message_sha256": "aaa03c87566dfad22e66b57f956cb53e90e0714d8978b2ec8c302a7c23aa5eff"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "redis-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/6cf91430fb6320f0f22713a4509fae88237526ea5311e4f483749346175b04c6",
+      "characters": 22020,
+      "message_sha256": "ddef1c6728bc944d72ec3ad4e7d9d4a3cce35eb759419c198dcc7c4f43f83e29"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "reviews-v1-58b8568645-rmhwb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/c31c78489484e1e2fbb6307586a852a74e5de589dd2acc8b71831d694b9cde0d",
+      "characters": 20342,
+      "message_sha256": "719cac573000815720fed5c0bbe8471b4621335da4fbdf0513caf51ef4650b16"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "reviews-v2-5d8f8b6775-dklkv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/76ad34bf04ae0445e8a85abb65dbb27f7878a09c9e3397e9391ddd64f2952bf3",
+      "characters": 63058,
+      "message_sha256": "a991aacd750c9eae3a053df28cde8ef8ba7373b3fab8697fc51a6108c51bf0de"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "reviews-v3-6d587c6cf7-wf7dc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/93d8313bfdebebe951f359cf43294d9cd73aec35cc9355cbfb0dc4b5296011eb",
+      "characters": 55333,
+      "message_sha256": "26c82a8988e8f863cbe01ace037f776c20a343190425eae0bdf9f83238256774"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "router-default-849d8946d4-g26kq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/078715428ece0da27ac295d3f5c6f717b823ca48a7fc1b15bd600627482f5425",
+      "characters": 10565,
+      "message_sha256": "8cffcc2fb4a002354a4b858ca44f6e073172f5f2e11279b8c2efd2969d4495c4"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "router-default-849d8946d4-j868k",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/2569db084fd1f484f769869cb6f9fa01bd791555f977547cf7f36ddc239e09d4",
+      "characters": 10565,
+      "message_sha256": "33a678d056373a9764b0f68d9dfcda8d4387a6e72fb344bf7738d5765adc2deb"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "sdn-2stpp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/d62f3033351f5ad6d42396e0806b943cf4d882a66351cdba50f2cf1728b302d6",
+      "characters": 172903,
+      "message_sha256": "e3f9168a6075445b350d2c6bff33ecde860d035e143c182bd9bd33e072f76c93"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "sdn-5bn6f",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/43ebf75ef68b5ed4eb054a98ff8ef93af7002b0c7c346d9a345375d6391b9c08",
+      "characters": 172944,
+      "message_sha256": "a0c86f1f071b5f36acb0d60cf38972d31424fd4a996d9c325fc7c4a2eb47e019"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "sdn-6tgg6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/a793b88b78fe2a4494a3cb999ad73c2ecca3ee7444926680583a0de7b3578cc0",
+      "characters": 180983,
+      "message_sha256": "1dacb41bdf7f6137d73246e207cb3179f95a4f0b507c100109a1293196e98ae6"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "sdn-fcqbl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/ffff2cb7437f684cfb4e0a3e1925b63e7f7955c45a6d7515dea18026e4f170a3",
+      "characters": 172918,
+      "message_sha256": "0b6a65d70ebd3731ae620bad875f404a5a84c35a2a780249a8ac42c23b911a75"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "sdn-tk6x5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/76cb55c96b467d52c6e975efa94541fbdca97b6a882927b6c8d50fbec17faa62",
+      "characters": 187692,
+      "message_sha256": "7e7bd3781f0b329453b212f472916fd6c2038b095d4d5048af9a09de9ed0ff03"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "sdn-xfv8t",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/43465959e0ed29b38ab36f641a1dc48959014e2dfe20fe4161e2a3dcb8dfcbdb",
+      "characters": 189993,
+      "message_sha256": "6ad641092c4791aab4398ee87f0b09a9fa9d85cea7c73d16da5c69050565092b"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "service-ca-5d5bd66f9b-5bwvh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/438c0380feb080a3ee27aebf54ef80f5ac91598e827e835dc93d732ee21a0361",
+      "characters": 9983,
+      "message_sha256": "974673ee792ce64b3a111fe1fc3919bd4ab5c1e405630dfebdf6ce65d4cfa305"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "service-ca-operator-dcfcfbc5f-9tlv8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/b4df6ce8e131c384c1fa79e1afd93efcc7d2bea85f5d8847b5ff72ff14c71f39",
+      "characters": 119351,
+      "message_sha256": "614e5f30e054864a32a79b76411a781c569ca93b670eabc9dd528cb14c14d8ef"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "shipping-6468d694bf-4sz8p",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/4c7c11a9b9fb25639cc614b1c5b128400d9ea58a234bf7453f8d85e9a467bf6f",
+      "characters": 23105,
+      "message_sha256": "b175c32f782551f190382f0235f97a22648ea8bc858ef4fc6a3e39a956c725b5"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "shipping-d8d458545-zpq6v",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/f4e833fbef96e28e0bcc153192b00e29a38d7b216a85887b398daddfe4b553d4",
+      "characters": 20848,
+      "message_sha256": "94a86eeb5679e6687782c009dad29f3ce23e9a6b28cf75f1de5fdc61f93ca6f8"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "telemeter-client-898886db9-5fxv9",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/9d83e92ddba0cc9bb9369bdf053c9ccac07f3b984101a18b90870d9209569c16",
+      "characters": 8376,
+      "message_sha256": "7ff7084f4f38523c766ac1896ab22906b820966749d215e328addc49d74819c1"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "thanos-querier-577f4888f9-khj84",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0df1c0b221b5792a932a7ebcd487a3796cbc445d08b8379abe2f2647dfbe2edb",
+      "characters": 8462,
+      "message_sha256": "92d87fe86adc7c518adf3eff96f3f871ef5cc1e25bbd904eee2853af653f3fb2"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "user-5d45b7f79c-chvkv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/0d4e902f878b2f549edf5843d6d4046a3e164559246fec37ef878e7ab6af24e4",
+      "characters": 25780,
+      "message_sha256": "382d5faeaf0dbe22a3f1930f2b9968d3ecae5b138b4f7975ede2878273c700b0"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "user-5f754b7bb9-vr8f6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/55506c045ffb87898c2e5225552c1a0368dbaca0addc66f57056544cf5a4534b",
+      "characters": 20824,
+      "message_sha256": "b137f2e74474303aa64a8c56b8dfda7e340466d682fbaf291888d14c2f2436a5"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "user-db-779b586599-l6bst",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/16ec81053adff90a1b736ce9ed1008a46aeb56046d3e8b4ce8f280fe9ac373b8",
+      "characters": 20842,
+      "message_sha256": "3b23ffbc6fac39a5a8282dc5ebf8873d311b70901a67dbd7de7479de7db773a6"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "web-7565876947-9nptf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/94dc4b0bf4c20484081ca8aca7de81f2300c98336139bbc25eefb829318afd10",
+      "characters": 22504,
+      "message_sha256": "0318e08f1139cc14d8ed22732597ba76811c9c2f35bfb7d08ddf339083b111e4"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "adservice-7df8c84f69-zgsdx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/a61c9ad5b86250b4ddfb681fbae6877fe522100a3f4c9c5137e1decf1d59c209",
+      "characters": 17869,
+      "message_sha256": "f5925330ac353fdb635c3af6aacdf2af6b004ea49e874d29f8d0e892555b152b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "aws-load-balancer-controller-69bd799c8c-489sn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/45997c0574ee7952c03672cf87e259dc99b0969b64443ce7adb0179bb1bbce7b",
+      "characters": 9922,
+      "message_sha256": "0c166ca83258e170c34fe5f15ae1d0a7f63c72a507ff793182eefaecb609b88a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "aws-load-balancer-controller-69bd799c8c-8mmpq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/e252754773833832a4a6aeaf40845c518e0557af3131a56b2826dba682266a47",
+      "characters": 28176,
+      "message_sha256": "3307fff2e6315de52ae84ff3caa69ce9e524e7e29e00529ce006071350fb5477"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cart-67fd6f756c-5rh47",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/aeada004c1dead7a4c206dc09f8b10f0d2d032fcf55a45e53b0e451c7b866bf4",
+      "characters": 9172,
+      "message_sha256": "3957d55ce0161d889dfb65d3d4c81349277e4587318acc0659b7261cabe9d11d"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-b59845878-bhpkg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/2bafb14a86904a7ad6dc55bf6546d621821e7a3fc5e13029147346deb19fb409",
+      "characters": 245330,
+      "message_sha256": "1194850d9e37fc97460bb88c87e1e4ea6697fba422dd510b56bd075313d16605"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-b59845878-k8t85",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/e3aaa52d8ebd4db1545264c27b96c94b26624045b4bc07e64a7b09817ec8cebe",
+      "characters": 244385,
+      "message_sha256": "932871d89b449998e337d8357e54719121f7c37eb13d55b008b9e9c453d67cc9"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-b59845878-x57mp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/dd02d5410bb5f030ef4b526e01a187530b39ea89c2bb28694934c50814dc9de2",
+      "characters": 245013,
+      "message_sha256": "dcab9dbccbf29865a682d1bb1156260643df5c2eaba114d24d65e3bb463e3bbe"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-b59845878-zhk8s",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/4d1d158ea17688b0eeda6bd8074ca6b4519ae0ac6f7a4638d2df04bb7edd3e75",
+      "characters": 164607,
+      "message_sha256": "86083ef14cca499313e3df82aaa807d5bcb73db37e955ea4234bbc05cecd07d6"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-b59845878-zm9pw",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/84818ca8458b79762a4bc9d797daa897234e6f963be19724fdcee02b786371e1",
+      "characters": 245097,
+      "message_sha256": "97f39581793829be8452827613b1dbc2cd38c9a79dab7971e28e5dd94b190936"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-db-644ff6b576-4qc2m",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/553c4e0fe4951320a2c58cf3b2d056e6501795e7e8527345e32117eb5c900d01",
+      "characters": 17346,
+      "message_sha256": "3ed1a5f5c3935b24b7dee1e70d0e2bd42b8a9e4d0f45aa6c7520cab73da13d50"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-db-644ff6b576-4wp5k",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/075c343fbaa6ddc9b50262eb4dd2c83a3b35cb36f61575a4720762d8a2129923",
+      "characters": 9433,
+      "message_sha256": "d81d704c8bac25374738147c3872435114cfd4aae6d381fcf9dc96cdfe19aa97"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-db-644ff6b576-hc2j2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/036953bd590a59bbf92c11f75f2417f73248eda9574247a3442aa34dc172b7b4",
+      "characters": 9433,
+      "message_sha256": "334206fa48ceae884e57962c526f35565238e8757c2cfd5612fcc75c52790bbf"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-db-644ff6b576-nk9bw",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/4244ccd5de4ee46062e0fafc7020032ace16cf3e93365691ae4c28d7398c8947",
+      "characters": 15596,
+      "message_sha256": "eaef74ce476ac403e1e91dfe46fdf0364540608d6253b166907ac80b27b96e96"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "carts-db-644ff6b576-rrrrq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/353192d8655cc8595ffa34cd954701e2b7a9ed531f0241ef2fcdbffb890a0c28",
+      "characters": 9431,
+      "message_sha256": "ff75adadcb4a44ac56f075093117d8f0ac7a98ba89006e44d20a61f5ce95a1dc"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cartservice-66bdb74f7d-sq84r",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/22268445cba1ad9ad65f9480368f3e964667af6cace92c1df96fea778adcd431",
+      "characters": 11336,
+      "message_sha256": "ec9cf681382cb5528e3c30ba586c32be36ba53b73c2977a0fbf60c6bb9ebed1c"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-685db97474-rppn8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/78ca26bf52eb8a597009a43e260eecb45858f6ad75f2be8997cf7a5622bc3ae4",
+      "characters": 9543,
+      "message_sha256": "8eb22d5403f330391d2b4c59877fe563cece2a6fc3d065c661de2295f47ddb0d"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-db-d764d45d6-4727d",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1985b11fdff106e687461731cfa980ae07eeafd2c704fd51efaa4caa47956ed4",
+      "characters": 7178,
+      "message_sha256": "3b13437d236dbab9f2d454ce96d6440cef346c1ffcbf410658980460729ff3b6"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-db-d764d45d6-96krc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/b9a53aa45b18b66958f5284a1bb0dfd2ae9a43b4e1d4f13444a1c0550e31e85c",
+      "characters": 7178,
+      "message_sha256": "af0872914a5f3108d2a2095816e3db49f4e023ce22f2920f28af4cbaa1fc4a15"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-db-d764d45d6-dbzd4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/7b43b78d9c4d0bf82f3a5a06284a064f63e07d0eeae9abb87a8b1e207b4227da",
+      "characters": 7187,
+      "message_sha256": "884bff998018e8c47fd31e77700d916bbf3c4832542ceefead21d1ddc190f73b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-db-d764d45d6-dvfnh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/2ee12163eba7d1bf7a5658f71b1f0efacf6344e2e29d8fb2af1799435a3adf23",
+      "characters": 7178,
+      "message_sha256": "017e359279b4d774781375a93294cf418ad3d5f92af8d5af04080afa4caefe6d"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-db-d764d45d6-xwg5z",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/db115c419ff87b2de3b5f001b3b5003b0bd151c3b4cc945facf16dadab210dfa",
+      "characters": 7178,
+      "message_sha256": "bd605f3e6b9d1d0c6a98c621dda997a7034dd38a7f20d1f081ce92d3c763b30b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "chaos-controller-manager-7f6d6f57b6-jm5sk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f299196491b649389487452c3f3bb77760324a48ed17dee10d411407b2253773",
+      "characters": 11341,
+      "message_sha256": "60ec5069ac72e5afb9ba3227a40caf8299b6c50cf524b55bd50593c78e85f9d6"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "chaos-controller-manager-7f6d6f57b6-wpwdm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f4052bd61da143fadd704a81438055d8ae5a61cb4ce692a1cd2c5b6698514ec4",
+      "characters": 14283,
+      "message_sha256": "434d267da733fec168b9173f49dd2cd058983e6a7a62d6c6bb5588a500dffbbc"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "chaos-daemon-6dk72",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6bc6df422b97f203e21d240d5c64bf0b896457caf08a51bd654d0cab43ccfd16",
+      "characters": 6666,
+      "message_sha256": "d4f19cf9f024484be45d24baccc738cf934bd2c4b2f17e4e938560fcf3bd8480"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "chaos-daemon-djslh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f8ffaa7796d9ec80babec037a291220d38de44eecca5ee2bafab227f0ce84d57",
+      "characters": 8121,
+      "message_sha256": "6f5a8dae99682b296fead64f476805c0c6e390ab25a9daf1972fe1d4445a37e7"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "chaos-dashboard-77f5cf9985-tvmtd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/242af1f67cbda87a51602f62bdfedcd7b8f039fdbf601aff6b88b656d7c542f9",
+      "characters": 8517,
+      "message_sha256": "e087cee17e368443b1982477e3c5d5c4610bd9215481ed0abc219419f9ff849a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "checkoutservice-5d686886bc-ct9jb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/38e81ab459b5454ac1766e6a54220ab8399074c602b84c5bacedbfbe2cb32632",
+      "characters": 21518,
+      "message_sha256": "5cc62465922fb68e01557a415af6ca0d0b019f169bfc0fd78bd5503d262f8d3b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cloudwatch-agent-4fzgp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/39a02262fdc9cde777d5d719c84909eb4ea1e2af4b4fd626670b898cb959ed1d",
+      "characters": 15771,
+      "message_sha256": "df040e5481e977541ae1cca49fb6696bbed97c5f9375ea40753c0d1013a6030a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cloudwatch-agent-7ppkh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/2d0472abaf2915d993666c0872a943111c6c41958be523c973f510220256fcc2",
+      "characters": 6822,
+      "message_sha256": "a98beeac7144828e5de99deeba54563d316a40d3c888b44fbe79f0901c1cea2d"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cloudwatch-agent-cz6m4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/7ae401c61ce3c54bed84525c3b1983e3eaf1cb7be9266914e45709edb59d5ae7",
+      "characters": 6871,
+      "message_sha256": "9345252d10901170f5c9dbd20a7e6653edcb83bc17a98844da3a0669503726e8"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cloudwatch-agent-lsl49",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f96bdab985da01c89730b7bcdd06c9df664db57723dd98a75fdba010187dd01f",
+      "characters": 6822,
+      "message_sha256": "3b5af7b2ab27eed74e1c0f15e37317af5ac099e22c1532a10f28c8b729e0de10"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cloudwatch-agent-rr4jf",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/45e89f245a42f6c9073c395b498727af7f84d8431650edad6dcf9c028cb510c1",
+      "characters": 7004,
+      "message_sha256": "d9f03c0348b6bf1b52a8c3a482161c220f23922abeb3deb68362d54e6ec10f32"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cloudwatch-agent-t76jr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/c7b25be29e3a3aff9cf56ddcd6fb651a142fe53a35fa675442ffe245768039fb",
+      "characters": 6844,
+      "message_sha256": "f02fcf2089f653832fdfdc9c81d83a791c88a2a9142e5806c4752d25c7b01600"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "cloudwatch-agent-wncqb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/06de807592f25b82cebc96afe1b4c123d3dcfc82a6f8a176bb11e7d2f21af9ff",
+      "characters": 6839,
+      "message_sha256": "7cddcd32d8370438b88e3e18b21475cb92a25692747085325853f3927e46fb35"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "coredns-76f4967988-6q9j4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/a949866e855983c6a465ef2e8539352eac4f6df91d9e3105ff518f4824d3df5c",
+      "characters": 7381,
+      "message_sha256": "b1bef0034ea3e5f779bfbbdf702455e6bb07df0154d6fb290d1b692e3e1af662"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "coredns-76f4967988-7jg7t",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3893a366479d4c58936e5c5df2d92339d150b8a5026bc1e6b3066be358dd66d3",
+      "characters": 7381,
+      "message_sha256": "fb32cee20d309b6c2c9baddf135b51a42a1d853f2119a72d605552052bac9576"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "currencyservice-696d6df76c-xdz9b",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/c374bd0316c4e658f86fe6d0286ebf5168adb92f12029cc127f5ff69fc1f7187",
+      "characters": 11541,
+      "message_sha256": "b0a304476d14960baea7c64decc2e2e39ce9e9f59c3c54226179e207e049c75b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "dashboard-metrics-scraper-856cb79ffb-2qnwg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/22d5b476313ec370c1134f21d02beccc06badd1b56c6ecda90c11239b7844348",
+      "characters": 9964,
+      "message_sha256": "360d62e7efca8b3f7b9012b497b4322227701723b7e232bd59e95c6d9c820612"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "details-v1-6f5579db66-rk9tq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/7785f68a39fac61734143b7dadc3abf37396800fed4f32346c1ae7484dd63dad",
+      "characters": 9304,
+      "message_sha256": "1f8c53d40d3a19dbb917583136030f41bf478bd9fd27e2b2d41c2d682a556fb3"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "details-v1-b8f86b9f4-v8gzb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/675a33d5dc7f5caab6e1c2df8e611aa2617392ed3f1e72cbb7c971013bf9353e",
+      "characters": 11109,
+      "message_sha256": "4e55e289f24038cf0282863365b923068ea16d729c9ffb8ffe3720dd5a561fca"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "dispatch-678859bdc8-fkrnm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/772d6188c44d590a41e938b9a8e493a252493b2f70bbce68176d8878498b7bd7",
+      "characters": 20407,
+      "message_sha256": "647fac1564e600afe19fdfde0523ca3ef0833531a4dbd1a4e1583a73c3f823f6"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "ebs-csi-controller-849d6c7c94-5j6zl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/ff9037f66a9ab64c842960a3af793f7d24d56973c14808522c93a2f71d083243",
+      "characters": 21806,
+      "message_sha256": "7d016705243d87fc54f7efb2775759c1d60686046d506359a31737995180e0c1"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "ebs-csi-controller-849d6c7c94-xknlq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/b5c73a5cad49dd088f6c736d4d0e2484e6845dc1280e31c127148b8e04699ad9",
+      "characters": 15192,
+      "message_sha256": "e6962f6df792a3842114d8a4f47510b15724137bb1d4f4feeabca7a12504ff86"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "ebs-csi-node-9mxbw",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/2ce629b717850f0dffbd03bcc206da5010dd0285586df4804a99b34141265dda",
+      "characters": 10412,
+      "message_sha256": "5051f3dddcc24fa0123544308900db32612b7984f04394c4fc3d4adc0265d785"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "emailservice-85d7bbdd5c-mjk2j",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/040bf98d9ca79d124026e9cefa68a1b96c20f92dd2ac40fdefc18aa716f9612d",
+      "characters": 9294,
+      "message_sha256": "f1823339ce95437da2f0738f4156ac4a5b6213ece966724a33b65c0300c27056"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-47f8g",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/5146f8bc0b0f684318a9f78e7f06dcab453099944c4b95b8a5704ca4642708e1",
+      "characters": 22295,
+      "message_sha256": "45bc3f1b4e383f7bce3d7e981875f42c5c7d78bcd2526d5790fb746dc73fd466"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-55qqm",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1a9aa39e2eca7133682efbed1a0eb60038d2931c73fd63fe15b18d906b71cbb2",
+      "characters": 27110,
+      "message_sha256": "c4e8b6ef8346741652d1ff799aeba01a3a39839ad0840c3e376ee7b83bdc6394"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-c8wdv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1320d8536f2c11aee1176dbc15cc2d0ff6e9a16d07c3288f18a085b43faaa617",
+      "characters": 26788,
+      "message_sha256": "9cce3334d708f381b1553c70877c3d87e9830c8c5e3e8041749b6d8ebcd03425"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-cd6xn",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/be263edb06e135c56998093ebdfbae4c8e801f03d9d7dd1f57baddf144ae4242",
+      "characters": 23283,
+      "message_sha256": "333044da75af3cceefdd98f56c384159c9b9d9c43e0b88e5fcd9da05728ff24a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-gcpkj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/b80680944ad7cc2f8f2a019fa6a00a80e5cdafedbb0588c53b672c5129806e8f",
+      "characters": 24536,
+      "message_sha256": "0a10784d264d79185463321ed3c94b4507b150d7db3336cdda8964627bdaa813"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-h49hj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/77b035e850835f0c208a19a7e1b80379b0aa2437e73f40bbddfbddf76501d7c7",
+      "characters": 32085,
+      "message_sha256": "f34bdf202b83c616ec5589c8bc37b9580b0451a4ae8226a830f915600415bf4b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-mjbhx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/587a3860f94b7951bccf288f3e85cc11da35333b7b2a91f77c514eb78aff4d05",
+      "characters": 30617,
+      "message_sha256": "3ade26aefd6cdb23889fdefffd0f8a16e99c237424913675ddfc746c9e19809c"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-x2cfr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/42dccfa093f270ab15d4810d93bd7708adf170eaae60b96ef852885bae5fe33e",
+      "characters": 27609,
+      "message_sha256": "e7b53dc17fcfd954744006e69b5230782d1a5d14a718487a39f764bac89a29db"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "fluent-bit-xsxrd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/fd2797b331b09bad808d9ead26e854055473b2d43bac5098381a5406e3647dd6",
+      "characters": 22636,
+      "message_sha256": "e054b2e94efcd082a4aaeac87c81ba25dc924bc09d4445b2175d82115ecb16da"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "front-end-77fcf54d79-6w7k4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/08e751e8bb332c50017493b15c900eb2bf1fa572aaaaf7226684c69de3940e4b",
+      "characters": 8857,
+      "message_sha256": "57d9ca2994782b74f82c85df3113226e68ad0116208477f2a3050e77b517963c"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "front-end-77fcf54d79-bssvd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3cf6a8fddf30b097d721c4aea9c08c158d24f15a2ec78fd6b1a4bdd23c7b5607",
+      "characters": 8897,
+      "message_sha256": "ee64a117dd26cb457142073707c2c7fd3dde9303ccdf5ae0ed693d443bc86915"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "front-end-77fcf54d79-f42qp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/e6ae6efa232fcb86fa8a8bcd9f8c2f512282f55b8db8be707d7640761dc3e27e",
+      "characters": 8656,
+      "message_sha256": "6fb10c2a1c0a9f20a6be079736b52be6da8ff188bb6970f1add4f90982f4b9ad"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "front-end-77fcf54d79-pt69w",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/97d741fafb75edb9e03dbe9f6888f5d07dfbaeed23f82dd0dd803cc8f7e28e0e",
+      "characters": 8858,
+      "message_sha256": "1fd4eb4fefb43296901625cd85e45ceb06615845ebff99e7ef9e5a57ec700151"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "front-end-77fcf54d79-sq7r6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/d6ac627777f7ad62acebc7dd3e55a7141bc12cea17ca0c096b9a73c170f9abd3",
+      "characters": 7926,
+      "message_sha256": "3b0ca0a17e1533b69d660de36afcb15de6a98dc00684dc36c6542cd42ab80268"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "grafana-78d8cfccff-w2zdt",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/c6df1c2d6e6cfea2ae130ec88d57d2d141bc726561c15bad59db44a465999d79",
+      "characters": 37538,
+      "message_sha256": "a7e4feeab0cb093675f609e47e988da37c65cefda0e1acc14bebe32f6362a0ed"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "kube-state-metrics-5fcb7d6fcb-lw9xx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/5f2fc4f578727b460f5e6eaa0ea29c3d068a89f1f32a202b431edcc37cc8268c",
+      "characters": 12893,
+      "message_sha256": "bf30cf9d40b4689395578d7d7ace2ff9ed4ebcab855497e2b49aff6325ba3135"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "loadgenerator-69dd98c958-xr4zl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/02aad59c341a4ffff0badece8c19dc6e35c73f7bb4afe22c86ef670e52706ca7",
+      "characters": 40666,
+      "message_sha256": "9fe17fe0638d71a83b35108f65aa0bdcb8203cc1d9c67752ce2850ed9f051f6a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "metrics-server-dbf765b9b-wjxh4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f190883360092d3ec167d2ce64234ddeb9c9976c7d467a71cf0deb5e925dcfae",
+      "characters": 15238,
+      "message_sha256": "54f3f497430f75ffcb5d5f5b94eb6d98eefb27d6e7ec21b61c8edace6c08d08a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "mongodb-86774bcfb5-d5mlx",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/da17dfa36ea0e0a1779b0007d8efd324b6e39e89baf1eebccbaa28fc8f6e43fe",
+      "characters": 15772,
+      "message_sha256": "837c32f1df5f612201cc8e1a82e96b2d55c36d96e6aed987711d82ffc1bcb22e"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "node-exporter-d5ftk",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3fb2df42c409ec67471ffcbe89e80f83348f55a5a23943d7e1b6bc5bb9009ee9",
+      "characters": 7728,
+      "message_sha256": "b7b57725e2d67f81c522a41cb23d130d31c5629819721e2cc29f34731e7eef8e"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-69b9ff9b58-dczgj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/173e2c5a14a7b2c6ab033f36fccc072c89c43db2b7f5882af98addbfc9b8dd51",
+      "characters": 252779,
+      "message_sha256": "0d228e63692eb5e6274176303ac48ed01142c8cb677ea1cc2e1a4379883aba88"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-69b9ff9b58-gb958",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/bada2489ed823a7ce2ecea7fc819413e1d9c21e100b0f1c4f7e545fc51e2f194",
+      "characters": 252954,
+      "message_sha256": "c6a5a692003aad533c870392afdf0d035ebe43efcf464fc4a532d1945c9a4fc4"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-69b9ff9b58-n999q",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3dd2cfa48aaf76e6498b50398c76321fad9940ead8bd6458e2b0605fce2a01b7",
+      "characters": 252734,
+      "message_sha256": "d077dadb0eea5c840e24e05903c241fccf0fa463a6bc94da7e254d5376415792"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-69b9ff9b58-tvm8w",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/43a7da9c82783347027a81ee54d8a1f11a99542e9d3053cd84cd973c6f298912",
+      "characters": 253117,
+      "message_sha256": "79f4d7f85385526dbfbafa353599873ac113bc6c7e0269c96035ca32e39349f2"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-6d894b9664-jrdpl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/40ef67707a352863dbc005ef556e1c412f61247d496e3ad1b732d6add3cd8536",
+      "characters": 203540,
+      "message_sha256": "9f1ab196ccd18ca97721555b7d5bda082ae67a85ff8474691b0e48e314a5e5de"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-db-5bddcf9bdb-9wl6q",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/e838c6136796c555d76176de387bb38cbd46fdf5cfc5839d40a5c528f3cbd3ce",
+      "characters": 9432,
+      "message_sha256": "8448fc4ec55b33c0f6f504f95bdb4e8a358b32d59a6ca916d83c4c69e012aa8b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-db-5bddcf9bdb-crkmb",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6350544101001e64d37081df782b557041a53d5a58d5f819a7eef27fd744acf8",
+      "characters": 15354,
+      "message_sha256": "9bfd3da3a8aea7a879d06ec242a666ce71109fcc3f3dbda0930944dcc09ebed2"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-db-5bddcf9bdb-p9t9m",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f2bf3ee89b4b0da9078f9f33c9c0c80f3d9c8b7b99d2d1aa7efab5c142f81770",
+      "characters": 11939,
+      "message_sha256": "eb51604d4b72142224898b974c21d61aebb676c0c414566c163aa58033ffa98e"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-db-5bddcf9bdb-r9nms",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/5b79f17946900c10436d197695f467c4cb1e7a9b2333b0a1294d4e411b00b7e4",
+      "characters": 15336,
+      "message_sha256": "36ba33bebc1f2c9ae268ee622938903482dc76fbb58717447d666531224a09bb"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "orders-db-5bddcf9bdb-t9rrw",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/07c129cf2e8eaf40d59422bf1e59bd8446417143edb00782e2d66cc47201535a",
+      "characters": 9425,
+      "message_sha256": "3cc254111e994de6a10f1ee720395d6acbc36c00d87bf7be2448e8c12ab4beac"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "paymentservice-7b6fdd5657-qsw9s",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/5d79edf1f7b4e2bc2404bf0470f7b3ba4c071317711b5dfb5a2ff3c7a7d4620b",
+      "characters": 14662,
+      "message_sha256": "2ef15820b8e543f1c19d6c4ceb2af1d6bacc0f939a52f547a47cc37b5c6008ba"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "productpage-v1-94d68db49-j7t55",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/48323b6d1d57064afed8621381fbd88f8bf2f1eef2215da9ec162ec7817aba7e",
+      "characters": 29835,
+      "message_sha256": "85db762f37ac521a949bd6925eb038b09a1478294dfb0fe26d5b2de7b6a9d79c"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "productpage-v1-94d68db49-vc8ct",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1bb47ec6610d1cd314714223b54cdbeb915b4f551a6c63c9f0c92b36aaa9d649",
+      "characters": 24575,
+      "message_sha256": "7b30224669dd486b10c5ad42a0835bd7b31f8403520d3fd1b8178fe766ee1cfb"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "prometheus-adapter-7dc46dd46d-mq9lc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f021ba71aed02dc85ead84784c529cc4a9b326271f3b7ad0a9d913d9c4a4daf1",
+      "characters": 10431,
+      "message_sha256": "f1c51dcabae7d4aa5c3b9477016c30b0f7a9cf86309a43392f0fb5cf49e8c6f2"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "prometheus-k8s-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/14791bb8678b4a5680ba12852abb14351b35ca685324fa8d6879ee189ba959b7",
+      "characters": 25811,
+      "message_sha256": "869f86639fc21d4b0fac6199bc168f9aede47848892e3f003fe784f1d5d62809"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "prometheus-k8s-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/8dadbf2fff06d5300701e43fa19debd243f56c44e48d86687b752b50f067f7fb",
+      "characters": 27501,
+      "message_sha256": "8b8ecd92228576ffc7d9d032cfb690d8bc68972fd62315fcdd7cd165375fd7db"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "queue-master-5fc849db9f-7hgr5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/446c7dc24368ffdcbfb04150a6c6a74777bbca1de0779f613059d786dbc61cb3",
+      "characters": 17956,
+      "message_sha256": "f257c88590d118529ef69e2d1e768f815fc8c8c6beac3e222b295beb2ceba561"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "queue-master-5fc849db9f-7s925",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/5378437883f699c4564a226b3f00f6d7bc853eba1039b54d7fcf186661cfae52",
+      "characters": 50034,
+      "message_sha256": "793a1e42b80102046c9bf481f1e2e6a30fccbfe7fbd98de097b3ed2e1a43065a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "queue-master-5fc849db9f-l9n5l",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/d808b252fdccabae1433d388aba85f1a163cf78f5610fa6d36a3c301894f0578",
+      "characters": 25846,
+      "message_sha256": "8e9f2cc5f511461b5ea88d1e6da1504ef976274315310c1401929f8f0973c60b"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "rabbitmq-5c6f77d9dd-hdgcd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/12835a63c2de498e548d164807362d167c92d67b8324fcdc34b43127d0852cf7",
+      "characters": 8492,
+      "message_sha256": "f65035f1eed5deedb78bfd218cdfa5b1e3265bfc9f874e08e3156d392035d958"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "rabbitmq-5c6f77d9dd-nvf7k",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3825c03ff1e4e1b846de416c422b5366aaa3f10088a750c5a332f3124d9a1948",
+      "characters": 22942,
+      "message_sha256": "a67d03d6b70b0a47294f76ff4b6353637fad2a75968d21c772dfc37b1bc282c6"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "rabbitmq-5c6f77d9dd-r45ph",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/fc964eca3213c562199b2ea72a3f698a66c22a50b1b8e0efb4f1489a52219d65",
+      "characters": 22768,
+      "message_sha256": "55d556976c30af3cff42e04fae7a35bb439088329f27bef4aed0e84f877de65c"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "ratings-66f7d56c66-5xtnw",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/54bd0cba535e086b2dff3ad2fe00f2a30e16d6d7eee7f145efe8059dec20f78f",
+      "characters": 16257,
+      "message_sha256": "b4d8c204c6db27d9f8c36c17c66f60eb3d5c501a899964cd7f140001e2f255cc"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "ratings-v1-5bf485ffc8-jr578",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/512621b2c7c41ef563376739751e2cfe097e92c568655c02c0444ac79e6e8e87",
+      "characters": 9678,
+      "message_sha256": "1eef49d4b6366e7563584105dc3b6299ee74b44c44183ee10bf56dc0c792353a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "ratings-v1-67f7c9fb54-g559w",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/ca83508888f1a110bfb36749a8c1d7cfa9346515dc1deac701338e1088a5584a",
+      "characters": 7855,
+      "message_sha256": "e8cfbb3c97df43e0bdf3762f7f02690025345ff61689134c6d6a1bb84e06841f"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "recommendationservice-86d75979df-s22zp",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/cda7bbafa9949f2e24cc16844366e16ee63f7a6572f66e82475ce4fd2cc88acd",
+      "characters": 31113,
+      "message_sha256": "814dd7827a1d1515b982e47ff524f0a40e90b95761f0a664277e0ac9ddecdc8d"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "redis-0",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6cf91430fb6320f0f22713a4509fae88237526ea5311e4f483749346175b04c6",
+      "characters": 8314,
+      "message_sha256": "45c772845af17ab4c906fad0f1a9fcd085d9fb7ae63d517f868f8a2234d7dd12"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "redis-cart-bf5c68f69-l9zdd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/8285a48c137aec2f9c1948f92cca1a44a66f22ad69c71e4a122c5cd8ec7367ac",
+      "characters": 12195,
+      "message_sha256": "23c4983f98d368be3835e578f3ce398ed391328a32206ffe97611ed36dc41c4e"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "reviews-v1-777d9b6bd4-lsnlj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/cdc83e240a8cf157fe533209edb7ff604a08d43a4d83998346657fa5277ef105",
+      "characters": 10042,
+      "message_sha256": "0c66f8d44a7d5c9b020674d0ec24b874912b058141f3b2dabe989974b0e9f89e"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "reviews-v1-c898599bb-9ptf7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/f86e27bf9aefdba8e82620d243f5d56e364a46adb06062b3c8f3076f3fc0ddb0",
+      "characters": 8094,
+      "message_sha256": "803c68791b79dc469eaf688c8b6a43602529d809d1900f8beff56eff98efec0f"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "reviews-v2-599d4d8c78-v6hv8",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/25d034fc263037bdcfa6dbdec73a2c7118d3d7efd3dd65dcea1558a504a766d6",
+      "characters": 10009,
+      "message_sha256": "47576cf9f33c0f74a836fa5ba2059c51d35ba7eb8ee5f0f392f20436be4d7882"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "reviews-v2-75f445766-5rvpr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6a058b82af29b8ffd9c92e799e67a941c80265b94307d766856afb5bc8f8c590",
+      "characters": 8832,
+      "message_sha256": "0c374b8994ac63795da86a5e7248c6eb43ffa404ec1d15c6c596da8f8a903d8c"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "reviews-v3-75846597d6-w22hj",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/8dd82bb1b234c49a852fa7adcff64809d2d6857787e11ca3b5a3467fa694b9d8",
+      "characters": 8100,
+      "message_sha256": "91a7d07910e8bbcd86e80ba9cfe8975fb83d9c33fa0759d1284c2cf235f6d9a6"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "session-db-76d658cbf8-4cdps",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/77c8921eb2780ac68fa1487289dc00207fd3af949f2e24092729e308ca01b385",
+      "characters": 11040,
+      "message_sha256": "0239dfdfed0f57a8994268f8eaf39726fcb03861ccd3560ecdf282e34bf4480e"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "session-db-76d658cbf8-dd2w9",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/097b7099716db05d9447b8ec5bdb3fcc4887ed5cdaef49836da649eed780e408",
+      "characters": 9622,
+      "message_sha256": "acded6a5ccdb7819fa3d5c3c5e16b95ceebdb792a03e8c5965ded0ff9a0a8a97"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "session-db-76d658cbf8-f6pjc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1abc5bf4c6f417374e87e7fe08abd8e72c600b271e0bb9407201bc21af7a0894",
+      "characters": 9622,
+      "message_sha256": "f23708fc48c1d407818713ef633602fd16d9dae3862d99d70862efba1a579ff6"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "session-db-76d658cbf8-fxhq2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/c1b060d67f377966a1b4480e178143f1c3dc7c070d89134f808a7b04d76bfff1",
+      "characters": 11064,
+      "message_sha256": "d6237f314341ec7b07e1cf7e8911e706a311a8528b314196663241507cdd1302"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "session-db-76d658cbf8-ps2ww",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/48bd496e5cac3ee2f98d9d301542a4acdb4571f24b6ffec2f6604ec1175c08c4",
+      "characters": 11040,
+      "message_sha256": "cf1d7685cdc11c4d888b82b7906082d356701ca80105f50367d419d264dcc4af"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "shipping-694887bf46-fl5dd",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/8254ef22dd34eecc924eb217d9363463b3cecdd0556740395fcf06f3a8f91429",
+      "characters": 60673,
+      "message_sha256": "51e5dc1fd7b4b72bdbe9e357abc0cb4270224e178e5803deb52f65df49cc3823"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "shippingservice-7b7cdf9445-kztzg",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/ffbb62ae123069e424729dfde1770e088ac35ceda46bd701a815a9ba63c9fe6e",
+      "characters": 9714,
+      "message_sha256": "eb3370a9752fc62cc73cee2199978fd020a564611e0bc6bfa12028c99c31d241"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-7c6d5d46d4-9mvjs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/31655fd75dc6f3884ca8d5157cf0ff32408bb86eb55020f6fd2521f6b40db54c",
+      "characters": 8105,
+      "message_sha256": "a68b71c500e21e78499b4b0029bae935038f180b8d48a282459d1c584fa3ce9a"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-7c6d5d46d4-ssgv4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/ead15758a862981145b4424e09676e62b699a2836ed6bbaadabc8cd6a868d3ec",
+      "characters": 8105,
+      "message_sha256": "058be616688184110a81c9e6c4f98953a407802d2630260f74ca95a897933668"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-85b86f7b7d-j89w4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3fbbd8646c126e0a52771b82878019c097cb85a49675ada61ba2c29fd175b378",
+      "characters": 9509,
+      "message_sha256": "af0b607aab493a5706770202eb6f849bd6108a4b6bbe92dfa34032cf74419670"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-db-5bfb568f5b-mmhd9",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/b479706de74d2de3c5499a5cd10653beabadc60c5e098d264882c0519aff0396",
+      "characters": 13743,
+      "message_sha256": "0ae9c58693e6125241d10a5220cd942577c4e6a49e50330922eb8fa93a979437"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-db-5bfb568f5b-rxqvr",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/49186860072bb50dee9d2a574e74d1d08e99d70e2f2866395542e1f1a2fab1cb",
+      "characters": 21651,
+      "message_sha256": "3d0793bb89a8054ead74601ccc960e9580731e25c3241105a7fff60ca60b52cf"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "web-6ccf696db8-x9qnh",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1ff14f67f0547ee850f4ff30180ad9af40255ad1afb4feb8287d37854722cd09",
+      "characters": 13619,
+      "message_sha256": "d9535b34beb827831ea7329edfa2dec5e98dd062509daa72322b422947158892"
+    }
+  ],
+  "failures": [
+    {
+      "case": "Product_Review/20211203",
+      "pod": "cluster-version-operator-7767956c46-p4p9c",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f5667c75f2ad6deea80ff6cba60f8cb5b6a56c205f757780d1cd7f64726ab251",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 73, in prepare_prompts\n    message = verified_prompt(plan, node)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 56, in verified_prompt\n    raise RuntimeError(f\"Incomplete/changed capture: {directory}; preserve failure and review\")\nRuntimeError: Incomplete/changed capture: /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f5667c75f2ad6deea80ff6cba60f8cb5b6a56c205f757780d1cd7f64726ab251; preserve failure and review\n"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "jaeger-query-7cd589bcf7-tjll6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c9ca4f8107582a225623b283ff34d55ebcea397c14b44e420f214db0db19e0b7",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    prepare_one(plan, node, LOG_THEMES[plan[\"system\"]], directory)\n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    raise RuntimeError(f\"CSV worker failed; inspect {directory}\")\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c9ca4f8107582a225623b283ff34d55ebcea397c14b44e420f214db0db19e0b7\n"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-apiserver-ocp4-control-plane-1",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/546d558b22cf368d6f61d55693c51e8eb9221111c518fcd458711e876c5883e0",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    prepare_one(plan, node, LOG_THEMES[plan[\"system\"]], directory)\n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    raise RuntimeError(f\"CSV worker failed; inspect {directory}\")\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/546d558b22cf368d6f61d55693c51e8eb9221111c518fcd458711e876c5883e0\n"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-apiserver-ocp4-control-plane-2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/769c872757940bb45fe5644ad3072476b10fac8e7a165a81588e3e246c99392a",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    prepare_one(plan, node, LOG_THEMES[plan[\"system\"]], directory)\n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    raise RuntimeError(f\"CSV worker failed; inspect {directory}\")\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/769c872757940bb45fe5644ad3072476b10fac8e7a165a81588e3e246c99392a\n"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "kube-apiserver-ocp4-control-plane-3",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c5f7dc3c65004cfd4bd9c397ce60d12158a58280b9627e08235294b6ba6aabe7",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    prepare_one(plan, node, LOG_THEMES[plan[\"system\"]], directory)\n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    raise RuntimeError(f\"CSV worker failed; inspect {directory}\")\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/c5f7dc3c65004cfd4bd9c397ce60d12158a58280b9627e08235294b6ba6aabe7\n"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "packageserver-67d8b69dc5-6gntc",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/eae576190be5d455c68f40cd07cac00e870be71027a23bc66bfe45d2cfce1bde",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    prepare_one(plan, node, LOG_THEMES[plan[\"system\"]], directory)\n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    raise RuntimeError(f\"CSV worker failed; inspect {directory}\")\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/eae576190be5d455c68f40cd07cac00e870be71027a23bc66bfe45d2cfce1bde\n"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "pod": "packageserver-67d8b69dc5-6rtj9",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f8bcc18a272f6d345f381e33abbe2b85128b6dc1a3d76a4535d7b34104eeddfa",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    prepare_one(plan, node, LOG_THEMES[plan[\"system\"]], directory)\n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    raise RuntimeError(f\"CSV worker failed; inspect {directory}\")\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20211203/f8bcc18a272f6d345f381e33abbe2b85128b6dc1a3d76a4535d7b34104eeddfa\n"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "cluster-version-operator-7767956c46-gj4qq",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/9a88ece0a326809bd80cca18760d0e03900699477ff28d3c1c7f62dfbabeeea2",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/9a88ece0a326809bd80cca18760d0e03900699477ff28d3c1c7f62dfbabeeea2\n"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "packageserver-67d8b69dc5-2vqr7",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/534109b843cf32a1e519a61a15922508f46531f8a96d76e3bb442c398dbf4c93",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/534109b843cf32a1e519a61a15922508f46531f8a96d76e3bb442c398dbf4c93\n"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "packageserver-67d8b69dc5-k42fs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/b4fe34ff4c85aa70fcfb699d6ce36645822b2dd700a2fe5df2a2e6d444911d05",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Product_Review/20220606/b4fe34ff4c85aa70fcfb699d6ce36645822b2dd700a2fe5df2a2e6d444911d05\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-76688dc8c7-24zcl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3b71cec2dc59ce250903e0d77fb171d3b7a7563f049c9fbe1ddc84eea27b24e1",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/3b71cec2dc59ce250903e0d77fb171d3b7a7563f049c9fbe1ddc84eea27b24e1\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-76688dc8c7-2tcgs",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6fe4e6100ab3c4350ac23eba864c00dd155287fc7b1b582104b7da3bc8ddf49c",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6fe4e6100ab3c4350ac23eba864c00dd155287fc7b1b582104b7da3bc8ddf49c\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-76688dc8c7-gkmc6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1110f7dfc115724892900b2fef9f92c8d6f131084acb83fd1992ca9c3a453312",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/1110f7dfc115724892900b2fef9f92c8d6f131084acb83fd1992ca9c3a453312\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-76688dc8c7-lx4bv",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/21385f247ef7bea2a03f4607d6664a95c144cc6b151683e6bebb33e77c16182f",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/21385f247ef7bea2a03f4607d6664a95c144cc6b151683e6bebb33e77c16182f\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "catalogue-76688dc8c7-xbgb4",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6a6f7f468955ca943819ee9ffc7c572e68c1103597557047d01bc41aa23948e5",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/6a6f7f468955ca943819ee9ffc7c572e68c1103597557047d01bc41aa23948e5\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "payment-67f94cc7b8-fmmdl",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/7165f890378b48a8ff593d0e4147f4a28403998243c05911fffe2f7156599892",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/7165f890378b48a8ff593d0e4147f4a28403998243c05911fffe2f7156599892\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "payment-67f94cc7b8-hm2r6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/915eabdef6f6a0779328564edb2e135b60a96101a9006c9bd2557a9892a08231",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/915eabdef6f6a0779328564edb2e135b60a96101a9006c9bd2557a9892a08231\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "payment-67f94cc7b8-jmp64",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/50edf38766a51ea03d4b53cb87e8d937976a5a0498ba1f26fb492e3053f883f1",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/50edf38766a51ea03d4b53cb87e8d937976a5a0498ba1f26fb492e3053f883f1\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "payment-67f94cc7b8-p2bzt",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/a86a9b0e550c6fdedc5424638d82101c87ef852723ccf32eaee081bb7f9e15ff",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/a86a9b0e550c6fdedc5424638d82101c87ef852723ccf32eaee081bb7f9e15ff\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "payment-67f94cc7b8-pklf2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/205766206c9aa3ea473fd08e8c17220276724f934aa37058b8067d9f2f345007",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    path.write_text(json.dumps(request, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/205766206c9aa3ea473fd08e8c17220276724f934aa37058b8067d9f2f345007\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-7c6d5d46d4-jklt5",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/21d72822d74faf199bdc7ee71bd8878ee485c839f4522618a483d2c8b5118537",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    def prepare_one(plan, node, theme, directory, *, strict_failure_directory=None):\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/21d72822d74faf199bdc7ee71bd8878ee485c839f4522618a483d2c8b5118537\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-7c6d5d46d4-nw2q6",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/4bba73e00e88fd3f93b183bbdb59a75670dc71810008db6200575d8c5a94adc2",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    def prepare_one(plan, node, theme, directory, *, strict_failure_directory=None):\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/4bba73e00e88fd3f93b183bbdb59a75670dc71810008db6200575d8c5a94adc2\n"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "user-7c6d5d46d4-p4ww2",
+      "directory": "processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/b04ea7cbcd3eca1cdd7ef211f5ded5ed046f71cbe0ae7e80ddf9b882b59340e2",
+      "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/run_local_rca.py\", line 72, in prepare_prompts\n    return message\n                   \n  File \"/mnt/e/연구/MATMCD/scripts/rca_log_worker.py\", line 97, in prepare_one\n    def prepare_one(plan, node, theme, directory, *, strict_failure_directory=None):\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: CSV worker failed; inspect /mnt/e/연구/MATMCD_DATA/processed_data/lemma_rca_original_prompts_v1/Cloud_Computing/20231207/b04ea7cbcd3eca1cdd7ef211f5ded5ed046f71cbe0ae7e80ddf9b882b59340e2\n"
+    }
+  ],
+  "generation_calls": 0,
+  "actual_experiment_results": false,
+  "excluded_from_experiment": [],
+  "all_required_pairs": 426
+}

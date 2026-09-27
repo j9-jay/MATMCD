@@ -1,0 +1,61 @@
+{
+  "checked_utc": "2026-09-23T09:41:50.370195+00:00",
+  "all_pass": true,
+  "checks": {
+    "inspection_completed": true,
+    "proposal_not_active": true,
+    "no_experiment_or_preprocessing": true,
+    "no_output_created": true,
+    "draft_cases_match_evidence": true,
+    "official_37_files_unchanged": true,
+    "inspector_syntax": true,
+    "local_document_links": true,
+    "later_experiments_remain_todo": true
+  },
+  "cases": [
+    {
+      "system": "Product_Review",
+      "day": "20210517",
+      "matches": true,
+      "aligned_rows": 166325,
+      "pod_union_before_evt": 208
+    },
+    {
+      "system": "Product_Review",
+      "day": "20210524",
+      "matches": true,
+      "aligned_rows": 176692,
+      "pod_union_before_evt": 207
+    },
+    {
+      "system": "Product_Review",
+      "day": "20211203",
+      "matches": true,
+      "aligned_rows": 51529,
+      "pod_union_before_evt": 218
+    },
+    {
+      "system": "Product_Review",
+      "day": "20220606",
+      "matches": true,
+      "aligned_rows": 107789,
+      "pod_union_before_evt": 228
+    },
+    {
+      "system": "Cloud_Computing",
+      "day": "20231207",
+      "matches": true,
+      "aligned_rows": 79252,
+      "pod_union_before_evt": 196
+    }
+  ],
+  "local_links_checked": 65,
+  "errors": [],
+  "proposal_sha256": "f38c98340d4e2eba40306dfdc6412a97b690adf727ebce7da44939fae882a9fb",
+  "inventory_sha256": "7c8f74b7f6d51b602c9880e16075c8e11b5238811afbc98d7da9a17817410cba",
+  "native_SPOT_executed": false,
+  "input_CSV_generated": false,
+  "experiments_executed": false,
+  "API_called": false,
+  "limits": "Static plan consistency and original source hashes; no validation of scientific equivalence or native SPOT runtime"
+}

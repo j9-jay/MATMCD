@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "valid_response_returned",
+      "passed": true
+    },
+    {
+      "name": "all_chat_roles_order_and_content_preserved",
+      "passed": true
+    },
+    {
+      "name": "actual_Qwen_identity",
+      "passed": true
+    },
+    {
+      "name": "output_seed_temperature_preserved",
+      "passed": true
+    },
+    {
+      "name": "sampling_preserved",
+      "passed": true
+    },
+    {
+      "name": "nonthinking_and_no_prompt_cache",
+      "passed": true
+    },
+    {
+      "name": "SDK_automatic_retries_disabled",
+      "passed": true
+    },
+    {
+      "name": "original_two_message_API_unchanged",
+      "passed": true
+    },
+    {
+      "name": "incomplete_response_preserved_without_retry",
+      "passed": true
+    },
+    {
+      "name": "unexpected_thinking_rejected",
+      "passed": true
+    },
+    {
+      "name": "overcapacity_blocks_before_SDK",
+      "passed": true
+    },
+    {
+      "name": "overcapacity_record_preserved",
+      "passed": true
+    },
+    {
+      "name": "complete_record_has_request_raw_response_and_timestamp",
+      "passed": true
+    },
+    {
+      "name": "exact_context_guard_boundary_fits",
+      "passed": true
+    },
+    {
+      "name": "one_token_over_boundary_blocks",
+      "passed": true
+    },
+    {
+      "name": "capacity_meter_preserves_messages_and_special_tokens",
+      "passed": true
+    },
+    {
+      "name": "pending_execution_profile_blocks_before_real_run",
+      "passed": true
+    }
+  ],
+  "network_requests": 0,
+  "generation_calls": 0,
+  "actual_experiment_results": false,
+  "logs": "logs/setup/rca_local_transport_20260926T064526426028Z",
+  "preservation": {
+    "source": true,
+    "python": true,
+    "configs": true
+  },
+  "script_sha256": {
+    "check_rca_local_transport.py": "4ebac1a5683fcd8a5f0e1a22fabcf97eacea7a68a9224c57a77c7eade7be234b",
+    "local_llm_client.py": "c40640baf2b492696d52a6c8513753c1304352f4d21e0015915e4c99d42f09b0",
+    "rca_local_client.py": "e89663fff0f7be75436247266c935b54d3df9accd276a9fe13d4072c89838f1c",
+    "local_prompt_capacity.py": "a8574c440a18d7d8cd43b301018533e8fb3197a1e70fc28e62adbfed21f35dea"
+  }
+}

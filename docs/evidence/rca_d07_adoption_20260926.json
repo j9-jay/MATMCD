@@ -1,0 +1,18 @@
+{
+  "decision": "D07_A_USER_APPROVED",
+  "date": "2026-09-26",
+  "status": "ADOPTED_LOG_ONLY; FULL_RAG_IN_PROGRESS; PC_BLOCKED_D08",
+  "profile_id": "d07_log_presence_1_5_v1",
+  "new_run_evidence": "docs/evidence/rca_real_rag_20260926T121159492235Z.json",
+  "files_sha256": {
+    "configs/local_rca_execution.json": "1c7617fbadd729c1fc395f0bcf9824ff295cfe11ed85dfd2d3ccee2b246301a0",
+    "scripts/rca_local_client.py": "cde27ab964702bc1fcb701549b0384e75295f549d3bb082d21958e419c4c5057",
+    "scripts/check_rca_real_rag.py": "f7cf7f96680d3e976938badb39b126738b25e5038af0cc62088f5da53cd84ea9",
+    "scripts/run_local_rca.py": "4e5427a67169b15283d7cfb92b80983e68e287943fb2a4552232e1ddcfff5252"
+  },
+  "official_sources_modified": false,
+  "global_llm_config_modified": false,
+  "validation": "docs/evidence/rca_d07_profile_isolation_20260926.json",
+  "previous_executed_rag_script": "logs/setup/rca_real_rag_20260926T100603005620Z/executed_script_preserved.py",
+  "previous_script_sha256": "1cc898a17bee3c9fa32b2fb8f13d09eebb46a0ed6d332d2307fb55f4f7287216"
+}

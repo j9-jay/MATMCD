@@ -1,6 +1,5 @@
 """네트워크/API/실험 실행 없이 원본 파일, 입력, 패키지 준비 상태를 조사한다."""
 import ast
-import csv
 import hashlib
 import importlib.metadata
 import json
@@ -13,6 +12,7 @@ import zipfile
 from datetime import datetime, timezone
 
 from project_paths import ASSETS, PROJECT, SOURCE, asset_path
+from rca_case_scope import validate_input_scope
 
 
 def digest(path):
@@ -45,17 +45,31 @@ def main():
               "python_executable": sys.executable, "experiments_executed": False,
               "api_calls": False}
     archive = ASSETS / "raw_downloads/github_d2i_matmcd/ef2c3ec.zip"
-    source_files = []
+    scope = json.loads((PROJECT / "configs/scope.json").read_text(encoding="utf-8"))
+    excluded = set(scope["excluded_official_files"])
+    source_files, excluded_files = [], []
     with zipfile.ZipFile(archive) as original:
+        archive_names = {entry.filename for entry in original.infolist() if not entry.is_dir()}
+        if not excluded <= archive_names:
+            raise RuntimeError("승인된 제외 목록이 원본 ZIP과 일치하지 않습니다.")
         for entry in original.infolist():
             if not entry.is_dir():
                 local = SOURCE / entry.filename
+                if entry.filename in excluded:
+                    excluded_files.append({"path": entry.filename, "absent": not local.exists()})
+                    continue
                 expected = hashlib.sha256(original.read(entry)).hexdigest()
                 source_files.append({"path": entry.filename, "sha256": expected,
                                      "matches": local.is_file() and digest(local) == expected})
+    actual_names = {p.relative_to(SOURCE).as_posix() for p in SOURCE.rglob("*") if p.is_file()}
+    unexpected = sorted(actual_names - (archive_names - excluded))
     report["official_source"] = {"commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
-                                  "all_match": all(x["matches"] for x in source_files),
-                                  "files": source_files}
+                                  "scope": scope["active_experiments"],
+                                  "all_match": (all(x["matches"] for x in source_files)
+                                                and all(x["absent"] for x in excluded_files)
+                                                and not unexpected),
+                                  "files": source_files, "approved_exclusions": excluded_files,
+                                  "unexpected_files": unexpected}
     syntax = []
     for path in sorted(SOURCE.rglob("*.py")):
         try:
@@ -65,23 +79,10 @@ def main():
             syntax.append({"path": str(path.relative_to(SOURCE)), "ok": False, "error": str(error)})
     report["source_syntax"] = syntax
     inputs = json.loads((PROJECT / "configs/inputs.json").read_text(encoding="utf-8"))
-    csvs = []
-    for name, location in inputs["benchmark_files"].items():
-        path = ASSETS / location
-        if not path.exists():
-            csvs.append({"name": name, "exists": False})
-            continue
-        rows = list(csv.reader(path.open(encoding="utf-8-sig", newline="")))
-        has_header = name.endswith("_data.csv")
-        values = rows[1:] if has_header else rows
-        csvs.append({"name": name, "source": location, "exists": True, "sha256": digest(path),
-                     "rows": len(values), "columns": len(rows[0]),
-                     "labels": rows[0] if has_header else None,
-                     "numeric": all(all(float(value) == float(value) for value in row) for row in values),
-                     "rectangular": all(len(row) == len(rows[0]) for row in values)})
-    report["benchmark_csvs"] = csvs
+    report["active_rca_cases"] = validate_input_scope(inputs)
+    report["experiment_scope"] = inputs["experiment_scope"]
     workspace = asset_path("runtime_workspace")
-    report["missing_inputs"] = [name for name in inputs["missing_benchmark_inputs"] + inputs["missing_rca_inputs"]
+    report["missing_inputs"] = [name for name in inputs["missing_rca_inputs"]
                                 if not (workspace / "data" / name).is_file()]
     requirements = {}
     for line in (SOURCE / "requirements.txt").read_text().splitlines():
@@ -103,7 +104,7 @@ def main():
          if dist.metadata["Name"].lower().replace("_", "-") not in normalized], key=lambda x: x["name"])
     checks = {
         "core_imports": "import numpy,pandas,sklearn,scipy,torch,pgmpy,openai; print('core imports OK')",
-        "causal_imports": "from Utils.CausalDiscovery import causal_discovery; from Utils.metrics import Metrics; from Utils.data import load_data_from_csv; print('causal imports OK; no fit executed')",
+        "rca_imports": "from Utils.CausalDiscovery import causal_discovery; from Utils.RCA import random_walk_with_restart; from Utils.data import load_Lemma_data; print('RCA imports OK; no fit or random walk executed')",
         "agent_imports": "from ConstrainAgent.ConstrainAgent import ConstrainNormalAgent; from Web_tools import collect_web_content; print('agent module imports OK; no client constructed')",
         "chromadb": "import chromadb; print(chromadb.__version__)",
         "lxml_parser": "from bs4 import BeautifulSoup; print(BeautifulSoup('<p>environment probe</p>', 'lxml').get_text())",
@@ -113,10 +114,10 @@ def main():
     }
     previous = {}
     if "--retry-timeouts" in sys.argv:
-        previous = json.loads((evidence / "setup_audit.json").read_text(encoding="utf-8"))["import_checks"]
+        previous = json.loads((evidence / "rca_setup_audit.json").read_text(encoding="utf-8"))["import_checks"]
     report["import_checks"] = {}
     for name, code in checks.items():
-        if previous and "시간 초과" not in previous[name].get("error", ""):
+        if name in previous and "시간 초과" not in previous[name].get("error", ""):
             report["import_checks"][name] = previous[name]
             continue
         report["import_checks"][name] = probe(code, timeout=180 if previous else 45)
@@ -124,7 +125,7 @@ def main():
     report["graphviz_dot"] = shutil.which("dot")
     report["ready_for_original_experiments"] = False
     report["readiness_note"] = "누락 입력·API 접근·논문/공개코드 차이 해소 전 실행 준비 완료로 판정하지 않는다."
-    (evidence / "setup_audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (evidence / "rca_setup_audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"source_matches": report["official_source"]["all_match"],
                       "pinned_packages": len(pinned), "all_pins_match": report["all_pins_match"],
                       "missing_inputs": len(report["missing_inputs"]), "ready": False}, ensure_ascii=False))

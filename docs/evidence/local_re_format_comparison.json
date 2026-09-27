@@ -1,0 +1,72 @@
+{
+  "timestamp_utc": "2026-09-25T05:55:40.375782+00:00",
+  "status": "PASS",
+  "policy": "re_gp_boundary_v1",
+  "previous_status": "FAILED",
+  "current_status": "PASS",
+  "previous_log_directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T044215843311Z_verification",
+  "current_log_directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T055213980648Z_verification",
+  "request_comparisons": [
+    {
+      "index": 1,
+      "request_payload_identical": true,
+      "raw_response_message_identical": true,
+      "completion_tokens": 4,
+      "finish_reason": "stop",
+      "thinking_characters": 0
+    },
+    {
+      "index": 2,
+      "request_payload_identical": true,
+      "raw_response_message_identical": true,
+      "completion_tokens": 5,
+      "finish_reason": "stop",
+      "thinking_characters": 0
+    },
+    {
+      "index": 3,
+      "request_payload_identical": true,
+      "raw_response_message_identical": true,
+      "completion_tokens": 5,
+      "finish_reason": "stop",
+      "thinking_characters": 0
+    },
+    {
+      "index": 4,
+      "request_payload_identical": true,
+      "raw_response_message_identical": true,
+      "completion_tokens": 216,
+      "finish_reason": "stop",
+      "thinking_characters": 0,
+      "format_status": "UNCHANGED",
+      "format_record": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T055213980648Z_verification/response_04_re_format.json"
+    },
+    {
+      "index": 5,
+      "request_payload_identical": true,
+      "raw_response_message_identical": true,
+      "completion_tokens": 291,
+      "finish_reason": "stop",
+      "thinking_characters": 0,
+      "format_status": "NORMALIZED",
+      "format_record": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T055213980648Z_verification/response_05_re_format.json"
+    }
+  ],
+  "inference_configuration_unchanged": true,
+  "server_launch_and_environment_identical": true,
+  "installer_launcher_and_LLM_client_unchanged": true,
+  "original_source_preserved": true,
+  "python_environment_preserved": true,
+  "system_packages_preserved_within_run": true,
+  "server_stopped": true,
+  "normalization_status_counts": {
+    "UNCHANGED": 1,
+    "NORMALIZED": 1,
+    "REJECTED": 0
+  },
+  "extra_LLM_calls_for_correction": 0,
+  "synthetic_verification_generation_calls": 5,
+  "experiments_executed": false,
+  "previous_failure_preserved": true,
+  "scope": "Two synthetic variables using the unchanged OnlyLLMAgent method; not full RCA integration."
+}

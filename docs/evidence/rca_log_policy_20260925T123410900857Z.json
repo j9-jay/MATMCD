@@ -1,0 +1,270 @@
+{
+  "checked_utc": "20260925T123410900857Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "official_file_set_preserved",
+      "passed": true
+    },
+    {
+      "name": "official_source_byte_identical",
+      "passed": true
+    },
+    {
+      "name": "verified_actual_coverage",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "callbacks_only_for_exact_pairs:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "all_candidates_and_order_preserved:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "absence_and_kpi_text_immutable:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "reject_generated_missing_pod:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "reject_unknown_service_alias:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "reject_incomplete_present_summaries:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "known_pair_disappearance_is_error_not_absence",
+      "passed": true
+    },
+    {
+      "name": "partial_pair_is_error",
+      "passed": true
+    },
+    {
+      "name": "new_file_for_missing_pod_requires_review",
+      "passed": true
+    },
+    {
+      "name": "changed_file_size_is_error",
+      "passed": true
+    },
+    {
+      "name": "empty_summary_is_error_not_absence",
+      "passed": true
+    },
+    {
+      "name": "reader_failure_propagates",
+      "passed": true
+    },
+    {
+      "name": "official_source_unchanged_after_checks",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:rca_files",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:rca_log_directories",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:input_profile",
+      "passed": true
+    },
+    {
+      "name": "input_mapping_unchanged:connection_evidence",
+      "passed": true
+    }
+  ],
+  "inference_calls": 0,
+  "experiments_executed": false,
+  "real_log_csvs_parsed": false,
+  "D02_implemented": false,
+  "author_equivalence": "UNCONFIRMED",
+  "full_rca_ready": false,
+  "cases": [
+    {
+      "case": "Product_Review/20210517",
+      "counts": {
+        "pods": 208,
+        "available": 109,
+        "missing": 99,
+        "kpi": 1
+      },
+      "csv_sha256": "d2005332d51fd6bcd77abbab7897a6d586ecd765ca678e95f2672616b3f461e6",
+      "input_manifest_sha256": "1c1bd679e344fa01593d2a316dfbc667d0d2eeef3ecc6348428218f0ac7c27c5"
+    },
+    {
+      "case": "Product_Review/20210524",
+      "counts": {
+        "pods": 207,
+        "available": 112,
+        "missing": 95,
+        "kpi": 1
+      },
+      "csv_sha256": "e3bdafa61718e9d6b6851707e765ab6f24dabc1692e723125208fb0b4514aa5a",
+      "input_manifest_sha256": "1b0b776d1be4e26a82721841a38910f83cfd5b21ae388c2707298d94e1161c78"
+    },
+    {
+      "case": "Product_Review/20211203",
+      "counts": {
+        "pods": 218,
+        "available": 154,
+        "missing": 64,
+        "kpi": 1
+      },
+      "csv_sha256": "5ba4c4ba9e23d37d7dac38a7e68fabe037b81fe3443d0eb488091e89efdf79b5",
+      "input_manifest_sha256": "305bab6454854de47c3615f7faa3d4d4956d4da7b00f6d5913203d35abb58925"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "counts": {
+        "pods": 228,
+        "available": 148,
+        "missing": 80,
+        "kpi": 1
+      },
+      "csv_sha256": "d5de896e19dfb053f74ee9b47f5195b0a38b72c0cdca95f57b537293d6cd7a8b",
+      "input_manifest_sha256": "c41073bc06f2ec34b59c1de9dfb8577f793332492a6dcaf9999ed895fc71d956"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "counts": {
+        "pods": 196,
+        "available": 124,
+        "missing": 72,
+        "kpi": 1
+      },
+      "csv_sha256": "0752a85906b4811be9be089e69810133ebd79c3042358680a3a1582b350d55a4",
+      "input_manifest_sha256": "b192dc67f5924dfe2175b9feda393564d5d58d08ba6d745e6b7a6e42b69e2105"
+    }
+  ],
+  "totals": {
+    "pods": 1057,
+    "available": 647,
+    "missing": 410,
+    "kpi": 5
+  },
+  "prepared_manifests": {
+    "Product_Review/20210517": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20210517.json",
+    "Product_Review/20210524": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20210524.json",
+    "Product_Review/20211203": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20211203.json",
+    "Product_Review/20220606": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20220606.json",
+    "Cloud_Computing/20231207": "processed_data/lemma_rca_log_evidence_v1/Cloud_Computing/20231207.json"
+  },
+  "prepared_plan_verification": {
+    "status": "PASS",
+    "cases": 5,
+    "available_pods": 647,
+    "missing_pods": 410,
+    "full_rca_ready": false
+  },
+  "official_files_preserved": 37,
+  "scripts_sha256": {
+    "rca_log_evidence": "ed0b457b79a6511ae80f26d9083b337d377faba320b92bde1160d15c91bbd6bd",
+    "check_rca_log_evidence": "16f0f8525d1e81553c482043af101b5924246201a45b8817958104cd2f71d37f"
+  }
+}

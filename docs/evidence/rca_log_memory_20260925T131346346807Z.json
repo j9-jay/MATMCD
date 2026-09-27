@@ -1,0 +1,794 @@
+{
+  "started_utc": "20260925T131346346807Z",
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "Product_Review/20211203",
+      "pod": "olm-operator-77996d498f-dspdc",
+      "status": "PASS",
+      "phases": [
+        {
+          "stage": "import_pandas",
+          "elapsed_seconds": 0.00027958799999794337,
+          "peak_rss_bytes": 46411776,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7596462080,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-0.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 13959168,
+            "memory.current": 13692928,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "verify_input_hashes_before",
+          "elapsed_seconds": 4.592757136000003,
+          "peak_rss_bytes": 94478336,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7544987648,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-0.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91262976,
+            "memory.current": 74416128,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "read_templates",
+          "elapsed_seconds": 14.22855392800001,
+          "peak_rss_bytes": 94478336,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7573426176,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-0.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91262976,
+            "memory.current": 76972032,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "read_structured_full",
+          "elapsed_seconds": 14.286899847,
+          "peak_rss_bytes": 94478336,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7572905984,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-0.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91262976,
+            "memory.current": 78016512,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "generate_official_prompt",
+          "elapsed_seconds": 30.367853446000012,
+          "peak_rss_bytes": 2266836992,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 6300442624,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-0.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 2267201536,
+            "memory.current": 1300525056,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "prompt_complete",
+          "elapsed_seconds": 31.00446480800001,
+          "peak_rss_bytes": 2266836992,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 6285152256,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-0.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 2267201536,
+            "memory.current": 1324691456,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        }
+      ],
+      "stage": "prompt_complete",
+      "python": "3.11.13 (main, Sep  2 2025, 14:20:25) [Clang 20.1.4 ]",
+      "pandas": "2.2.3",
+      "source_sha256": "be8fe013eb6dfc382045739c015b4c28fe5605c7ad5e4228589d6619cc8ec7be",
+      "template_read_seconds": 0.05316737200000432,
+      "structured_read_seconds": 16.075916524999997,
+      "rows": {
+        "templates": 33,
+        "structured": 7537367
+      },
+      "structured_dtypes": {
+        "LineId": "int64",
+        "Time": "object",
+        "Content": "object",
+        "EventId": "int64",
+        "EventTemplate": "object",
+        "ParameterList": "object"
+      },
+      "prompt_generation_seconds": 0.6311468219999767,
+      "read_and_prompt_seconds": 16.760230718999978,
+      "prompt": {
+        "path": "logs/setup/rca_log_memory_20260925T131346346807Z/Product_Review_20211203/prompt.txt",
+        "bytes": 50865,
+        "characters": 50865,
+        "sha256": "59ab0afa41b57ec1eb289b101c5f931a5c81dd211c3cf2c59a359c7a497b5695",
+        "tokens": "NOT_MEASURED; model not loaded"
+      },
+      "peak_rss_bytes": 2266836992,
+      "cgroup_at_completion": {
+        "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-0.scope",
+        "memory.max": 4294967296,
+        "memory.peak": 2267201536,
+        "memory.current": 1324691456,
+        "memory.swap.max": 0,
+        "memory.swap.current": 0,
+        "memory.events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "input_integrity": "Both files full SHA256 before read; size/mtime unchanged after prompt",
+      "total_worker_seconds": 31.020617012000017,
+      "exit_code": 0,
+      "guard_stop": null,
+      "before_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7619383296,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "after_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7575339008,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "wall_seconds": 32.53270881200001,
+      "minimum_wsl_available_bytes": 5638737920,
+      "maximum_wsl_swap_used_bytes": 0,
+      "details_directory": "logs/setup/rca_log_memory_20260925T131346346807Z/Product_Review_20211203"
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "currencyservice-696d6df76c-xdz9b",
+      "status": "PASS",
+      "phases": [
+        {
+          "stage": "import_pandas",
+          "elapsed_seconds": 0.00038629099998388483,
+          "peak_rss_bytes": 46411776,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7583612928,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-1.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 14245888,
+            "memory.current": 14245888,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "verify_input_hashes_before",
+          "elapsed_seconds": 4.195263869999991,
+          "peak_rss_bytes": 94769152,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7547379712,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-1.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91283456,
+            "memory.current": 74711040,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "read_templates",
+          "elapsed_seconds": 14.675167783999996,
+          "peak_rss_bytes": 94769152,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7571603456,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-1.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91283456,
+            "memory.current": 77328384,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "read_structured_full",
+          "elapsed_seconds": 14.735996933999985,
+          "peak_rss_bytes": 94769152,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7572340736,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-1.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91283456,
+            "memory.current": 78372864,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "generate_official_prompt",
+          "elapsed_seconds": 32.54197146999999,
+          "peak_rss_bytes": 2125029376,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 5856788480,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-1.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 2125664256,
+            "memory.current": 1742471168,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "prompt_complete",
+          "elapsed_seconds": 32.80030375499999,
+          "peak_rss_bytes": 2125029376,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 5862043648,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-1.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 2125664256,
+            "memory.current": 1734213632,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        }
+      ],
+      "stage": "prompt_complete",
+      "python": "3.11.13 (main, Sep  2 2025, 14:20:25) [Clang 20.1.4 ]",
+      "pandas": "2.2.3",
+      "source_sha256": "be8fe013eb6dfc382045739c015b4c28fe5605c7ad5e4228589d6619cc8ec7be",
+      "template_read_seconds": 0.05352809700002581,
+      "structured_read_seconds": 17.800286276999998,
+      "rows": {
+        "templates": 2,
+        "structured": 2988250
+      },
+      "structured_dtypes": {
+        "LineId": "int64",
+        "Time": "object",
+        "Content": "object",
+        "EventId": "int64",
+        "EventTemplate": "object",
+        "ParameterList": "object"
+      },
+      "prompt_generation_seconds": 0.2524561310000024,
+      "read_and_prompt_seconds": 18.106270505000026,
+      "prompt": {
+        "path": "logs/setup/rca_log_memory_20260925T131346346807Z/Cloud_Computing_20231207/prompt.txt",
+        "bytes": 11541,
+        "characters": 11541,
+        "sha256": "6fdec00fff7eec24d3ed7fb327adf377eb608f196c45296238fa00e479bcaedb",
+        "tokens": "NOT_MEASURED; model not loaded"
+      },
+      "peak_rss_bytes": 2125029376,
+      "cgroup_at_completion": {
+        "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-1.scope",
+        "memory.max": 4294967296,
+        "memory.peak": 2125664256,
+        "memory.current": 1734213632,
+        "memory.swap.max": 0,
+        "memory.swap.current": 0,
+        "memory.events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "input_integrity": "Both files full SHA256 before read; size/mtime unchanged after prompt",
+      "total_worker_seconds": 32.81697045999999,
+      "exit_code": 0,
+      "guard_stop": null,
+      "before_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7575339008,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "after_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7576875008,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "wall_seconds": 34.53430709700001,
+      "minimum_wsl_available_bytes": 5557055488,
+      "maximum_wsl_swap_used_bytes": 0,
+      "details_directory": "logs/setup/rca_log_memory_20260925T131346346807Z/Cloud_Computing_20231207"
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "productpage-v1-5f9dbcd669-z2prs",
+      "status": "PASS",
+      "phases": [
+        {
+          "stage": "import_pandas",
+          "elapsed_seconds": 0.0002843670000061138,
+          "peak_rss_bytes": 46411776,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7569039360,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-2.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 14499840,
+            "memory.current": 14495744,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "verify_input_hashes_before",
+          "elapsed_seconds": 4.25346921900001,
+          "peak_rss_bytes": 94609408,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7519563776,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-2.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91013120,
+            "memory.current": 74702848,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "read_templates",
+          "elapsed_seconds": 17.252274712000002,
+          "peak_rss_bytes": 94609408,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7575867392,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-2.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91013120,
+            "memory.current": 76787712,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "read_structured_full",
+          "elapsed_seconds": 17.298750557000005,
+          "peak_rss_bytes": 94609408,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7576952832,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-2.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 91013120,
+            "memory.current": 78094336,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "generate_official_prompt",
+          "elapsed_seconds": 33.744291067000006,
+          "peak_rss_bytes": 1369493504,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7175991296,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-2.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 1368567808,
+            "memory.current": 453541888,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        },
+        {
+          "stage": "prompt_complete",
+          "elapsed_seconds": 34.059649253,
+          "peak_rss_bytes": 1369493504,
+          "wsl_memory": {
+            "MemTotal_bytes": 8274997248,
+            "MemAvailable_bytes": 7137435648,
+            "SwapTotal_bytes": 2147483648,
+            "SwapFree_bytes": 2147483648
+          },
+          "cgroup": {
+            "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-2.scope",
+            "memory.max": 4294967296,
+            "memory.peak": 1368567808,
+            "memory.current": 492421120,
+            "memory.swap.max": 0,
+            "memory.swap.current": 0,
+            "memory.events": {
+              "low": 0,
+              "high": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_kill": 0,
+              "oom_group_kill": 0
+            }
+          }
+        }
+      ],
+      "stage": "prompt_complete",
+      "python": "3.11.13 (main, Sep  2 2025, 14:20:25) [Clang 20.1.4 ]",
+      "pandas": "2.2.3",
+      "source_sha256": "be8fe013eb6dfc382045739c015b4c28fe5605c7ad5e4228589d6619cc8ec7be",
+      "template_read_seconds": 0.04087217200000737,
+      "structured_read_seconds": 16.440012454999987,
+      "rows": {
+        "templates": 12,
+        "structured": 7135827
+      },
+      "structured_dtypes": {
+        "LineId": "int64",
+        "Time": "object",
+        "Content": "object",
+        "EventId": "int64",
+        "EventTemplate": "object",
+        "ParameterList": "object"
+      },
+      "prompt_generation_seconds": 0.31001918699999464,
+      "read_and_prompt_seconds": 16.79090381399999,
+      "prompt": {
+        "path": "logs/setup/rca_log_memory_20260925T131346346807Z/Product_Review_20220606/prompt.txt",
+        "bytes": 26140,
+        "characters": 26140,
+        "sha256": "1f829d5faaaddce6d4312039bf22513e2139b7604a1864283debc6ed561a4474",
+        "tokens": "NOT_MEASURED; model not loaded"
+      },
+      "peak_rss_bytes": 1369493504,
+      "cgroup_at_completion": {
+        "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/matmcd-log-20260925t131346346807z-2.scope",
+        "memory.max": 4294967296,
+        "memory.peak": 1368567808,
+        "memory.current": 492421120,
+        "memory.swap.max": 0,
+        "memory.swap.current": 0,
+        "memory.events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "input_integrity": "Both files full SHA256 before read; size/mtime unchanged after prompt",
+      "total_worker_seconds": 34.07540471600001,
+      "exit_code": 0,
+      "guard_stop": null,
+      "before_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7576875008,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "after_memory": {
+        "MemTotal_bytes": 8274997248,
+        "MemAvailable_bytes": 7632855040,
+        "SwapTotal_bytes": 2147483648,
+        "SwapFree_bytes": 2147483648
+      },
+      "wall_seconds": 35.530489028999995,
+      "minimum_wsl_available_bytes": 6800564224,
+      "maximum_wsl_swap_used_bytes": 0,
+      "details_directory": "logs/setup/rca_log_memory_20260925T131346346807Z/Product_Review_20220606"
+    }
+  ],
+  "inference_calls": 0,
+  "experiments_executed": false,
+  "full_rca_ready": false,
+  "scope": "Largest exact structured log per active case, in ascending file-size order",
+  "guard": {
+    "memory_max_bytes": 4294967296,
+    "memory_swap_max_bytes": 0,
+    "minimum_wsl_available_bytes": 1073741824,
+    "timeout_seconds_per_case": 1800,
+    "paper_parameter": false
+  },
+  "script_sha256": "cb125051e955451ada549159bec8340681170b9736b080fb3de831c45043ccdc",
+  "logs": "logs/setup/rca_log_memory_20260925T131346346807Z",
+  "prepared_input_verification": {
+    "status": "PASS",
+    "cases": 3,
+    "available_pods": 426,
+    "missing_pods": 216,
+    "full_rca_ready": false
+  },
+  "selected": [
+    {
+      "case": "Product_Review/20211203",
+      "pod": "olm-operator-77996d498f-dspdc",
+      "sources": {
+        "templates": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203/olm-operator-77996d498f-dspdc_messages_templates.csv",
+          "member": "log_data/pod_removed/olm-operator-77996d498f-dspdc_messages_templates.csv",
+          "bytes": 3755,
+          "sha256": "7a194eef0cd07ec71767c4ec2261460698159a2d8c5e6edabb5919a1e1768b34"
+        },
+        "structured": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203/olm-operator-77996d498f-dspdc_messages_structured.csv",
+          "member": "log_data/pod_removed/olm-operator-77996d498f-dspdc_messages_structured.csv",
+          "bytes": 1162726915,
+          "sha256": "01345a20dba8f9d21a8b77f15fb4c0f72a5ece98073a725b89a95493f19fe338"
+        }
+      }
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "pod": "currencyservice-696d6df76c-xdz9b",
+      "sources": {
+        "templates": {
+          "path": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207/currencyservice-696d6df76c-xdz9b_messages_templates.csv",
+          "member": "log_data/pod_removed/currencyservice-696d6df76c-xdz9b_messages_templates.csv",
+          "bytes": 106,
+          "sha256": "efcf7d844654a5648666e3bceb3febf9cfd863f3d6f73df42e13b5a4c6bdfce2"
+        },
+        "structured": {
+          "path": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207/currencyservice-696d6df76c-xdz9b_messages_structured.csv",
+          "member": "log_data/pod_removed/currencyservice-696d6df76c-xdz9b_messages_structured.csv",
+          "bytes": 1238134721,
+          "sha256": "bc956aa572363a103644a45d81599abe087c9ac06334cfb43524c85c47333b80"
+        }
+      }
+    },
+    {
+      "case": "Product_Review/20220606",
+      "pod": "productpage-v1-5f9dbcd669-z2prs",
+      "sources": {
+        "templates": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20220606/productpage-v1-5f9dbcd669-z2prs_messages_templates.csv",
+          "member": "log_data/pod_removed/productpage-v1-5f9dbcd669-z2prs_messages_templates.csv",
+          "bytes": 947,
+          "sha256": "bcca59d00d3f91b07039c80812b49c3aba2719c15569b97ee096d0cacf9cc109"
+        },
+        "structured": {
+          "path": "datasets/huggingface_lemma_rca_product_review_pod_logs/20220606/productpage-v1-5f9dbcd669-z2prs_messages_structured.csv",
+          "member": "log_data/pod_removed/productpage-v1-5f9dbcd669-z2prs_messages_structured.csv",
+          "bytes": 1576968813,
+          "sha256": "38dc22a6302cf71885a4ab880878bc9ea43666976407b40ed8fbebbf5ffad49f"
+        }
+      }
+    }
+  ],
+  "preservation": {
+    "official_source_unchanged": true,
+    "python_packages_unchanged": true,
+    "configs_unchanged": true,
+    "official_file_count": 37
+  },
+  "completed_utc": "2026-09-25T13:15:52.622580+00:00",
+  "limits": [
+    "Three representative files only; other files may have different memory expansion",
+    "No models loaded or inference called; concurrent model memory not validated",
+    "Prompt token count/context fit and full RCA integration remain unvalidated",
+    "Disk reads may benefit from cache; no cache flushing or performance extrapolation"
+  ]
+}

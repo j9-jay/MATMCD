@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-09-25T12:09:27.1264916Z",
+  "external_repo": "dorado-daniel/lemzha-k",
+  "external_commit": "a6e62ef6f29d7112a96a8db7b3c017c3e246fe08",
+  "case": "Cloud_Computing/20231207",
+  "external_metric_pods": 196,
+  "local_metric_pods": 196,
+  "exact_case_sensitive_pod_sets_equal": true,
+  "local_missing_log_pods": 72,
+  "local_missing_pods_in_external_manifest": 72,
+  "external_notebook_recorded_structured_files": 195,
+  "local_archive_unique_pairs": 195,
+  "local_pairs_matching_metric_pods": 124,
+  "local_log_only_pods": 71,
+  "external_service_groups": 48,
+  "external_window_timesteps": 91,
+  "external_window_start": "2023-12-07 07:38:00+00:00",
+  "external_window_end": "2023-12-07 08:23:00+00:00",
+  "limitation": "External source archive revision/hashes and full log filename list were not published in the inspected files; exact equality of external log pod sets is not established. Notebook output was read, not rerun.",
+  "external_code_executed": false,
+  "active_inputs_changed": false
+}

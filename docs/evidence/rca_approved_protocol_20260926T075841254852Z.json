@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "checked_utc": "20260926T075841254852Z",
+  "checks": [
+    {
+      "name": "official_37_files_match_archive",
+      "passed": true
+    },
+    {
+      "name": "D03_A_graph:PC",
+      "passed": true
+    },
+    {
+      "name": "no_seed_override:PC",
+      "passed": true
+    },
+    {
+      "name": "D03_A_graph:CC_without_external_information",
+      "passed": true
+    },
+    {
+      "name": "no_seed_override:CC_without_external_information",
+      "passed": true
+    },
+    {
+      "name": "D03_A_graph:MATMCD",
+      "passed": true
+    },
+    {
+      "name": "no_seed_override:MATMCD",
+      "passed": true
+    },
+    {
+      "name": "D03_A_graph:MATMCD_RE",
+      "passed": true
+    },
+    {
+      "name": "no_seed_override:MATMCD_RE",
+      "passed": true
+    },
+    {
+      "name": "unknown_stage_rejected",
+      "passed": true
+    },
+    {
+      "name": "no_missing_refined_graph_fallback",
+      "passed": true
+    },
+    {
+      "name": "active_PR_provisional_scores",
+      "passed": true
+    },
+    {
+      "name": "CC_both_ranks_no_single_score",
+      "passed": true
+    },
+    {
+      "name": "no_active_case_or_partial_aggregate",
+      "passed": true
+    },
+    {
+      "name": "KPI_kept_and_stable_ties_accepted",
+      "passed": true
+    },
+    {
+      "name": "tie_reordering_rejected",
+      "passed": true
+    },
+    {
+      "name": "KPI_removal_rejected",
+      "passed": true
+    },
+    {
+      "name": "protocol_mixing_rejected",
+      "passed": true
+    },
+    {
+      "name": "nonfinite_count_rejected",
+      "passed": true
+    },
+    {
+      "name": "excluded_case_rejected",
+      "passed": true
+    },
+    {
+      "name": "newly_excluded_PR20220606_rejected",
+      "passed": true
+    },
+    {
+      "name": "excluded_case_cannot_enter_aggregate",
+      "passed": true
+    },
+    {
+      "name": "partial_aggregate_request_rejected",
+      "passed": true
+    },
+    {
+      "name": "different_stage_aggregate_rejected",
+      "passed": true
+    },
+    {
+      "name": "CC_rank1_candidate_still_not_selected",
+      "passed": true
+    }
+  ],
+  "actual_experiment_results": false,
+  "inference_calls": 0,
+  "synthetic_counts_only": true,
+  "full_RCA_integration": false,
+  "preservation": {
+    "official_source": true,
+    "python_packages": true,
+    "configs": true,
+    "global_numpy_rng": true
+  },
+  "script_sha256": {
+    "rca_ranking.py": "dd0aff20cd4b836f797de174018e038e9d69151c09fa6f7890683dfd87d02b9f",
+    "rca_evaluation.py": "91c3b4e3acf034718158247f6ff4a2427132d51c742043f43948b9b87d8efc64",
+    "check_rca_approved_protocol.py": "a231a492133b6ade75606a2d5b348f26d303e67d472f278b5cb10c916e88dc99"
+  },
+  "protocol_sha256": "98a2ca203451f6660368e1d141f2d5b723657f1acd7aab445a7d5ec22e000da3"
+}

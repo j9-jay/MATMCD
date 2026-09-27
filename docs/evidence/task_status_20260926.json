@@ -1,0 +1,430 @@
+{
+  "observed_kst": "2026-09-26T21:35:09+09:00",
+  "task_count": 47,
+  "counts": {
+    "DONE": 35,
+    "BLOCKED": 7,
+    "TODO": 5
+  },
+  "removed_task": {
+    "id": 16,
+    "reason": "experiment1-only; removed by user scope instruction; not renumbered"
+  },
+  "actual_running_processes_confirmed": 0,
+  "current_log_generation": {
+    "complete": 44,
+    "target": 278,
+    "pending_without_response": 1,
+    "not_attempted": 233,
+    "PR_complete": 44,
+    "PR_target": 154,
+    "CC_complete": 0,
+    "CC_target": 124,
+    "termination_cause": "UNKNOWN"
+  },
+  "whole_rca_completed_cases": 0,
+  "planned_cases": 2,
+  "method_case_results_completed": 0,
+  "planned_method_case_results": 8,
+  "rows": [
+    {
+      "id": 1,
+      "file": "TASK_001_paper_analysis.md",
+      "title": "논문 및 부록 분석",
+      "status": "DONE",
+      "done": "논문·부록과 공식 프롬프트를 조사해 재현 명세와 미확정 조건을 기록했다.",
+      "remaining": "조사 완료. 저자가 공개하지 않은 정보 확보는018이다."
+    },
+    {
+      "id": 2,
+      "file": "TASK_002_official_code_setup.md",
+      "title": "공식 코드 보존 및 정적 감사",
+      "status": "DONE",
+      "done": "공식 commit ef2c3ec의 소스와 해시를 보존했다. 현재 RCA 공식 파일37개를 유지한다.",
+      "remaining": "확보 완료. 공식 코드를 임의 수정하지 않았다."
+    },
+    {
+      "id": 3,
+      "file": "TASK_003_dataset_download.md",
+      "title": "RCA 공식 입력 준비",
+      "status": "BLOCKED",
+      "done": "공개 RCA ZIP10개를 확보하고 구조를 조사했다.",
+      "remaining": "저자가 실제 쓴 최종CSV·정확 전처리·사례 집계는 미확인. 임시CSV는020 완료이므로 로컬 실행의 재승인 사유가 아니다."
+    },
+    {
+      "id": 4,
+      "file": "TASK_004_environment_setup.md",
+      "title": "RCA 공통 의존성 환경 구성",
+      "status": "DONE",
+      "done": "WSL/Python3.11.13, 공식140개 pin과 승인 호환 패키지를 설치했다. 공통 Python201개 기준과 Graphviz를 준비했다.",
+      "remaining": "설치 완료. 저자 OS/패치 동일성은 미확인이다."
+    },
+    {
+      "id": 5,
+      "file": "TASK_005_model_setup.md",
+      "title": "RCA 모델 및 외부 서비스",
+      "status": "BLOCKED",
+      "done": "원본 GPT·embedding·검색 서비스와 미공개 snapshot을 조사하고 호출 없이 어댑터를 검사했다.",
+      "remaining": "원본 API 인증·snapshot 검증은 미수행. 현재 Qwen/BGE 대체는 별도 승인·설치됐다."
+    },
+    {
+      "id": 6,
+      "file": "TASK_006_paths_and_preflight.md",
+      "title": "외부 자산 연결 및 실행 전 점검",
+      "status": "DONE",
+      "done": "configs/paths.json에 외부 자산 경로를 모으고 실행 작업공간과 점검기를 구성했다.",
+      "remaining": "경로 연결 완료. 전체 실행 성공을 뜻하지 않는다."
+    },
+    {
+      "id": 7,
+      "file": "TASK_007_run_original_experiments.md",
+      "title": "원본 RCA 실험 실행",
+      "status": "BLOCKED",
+      "done": "두 사례·네 방법의 실행기, 입력검사, 원문·그래프·순위·평가 저장 경로를 구성했다.",
+      "remaining": "완주0/2사례, 방법별 결과0/8. 전체 실행 명령은 기술적 차단 상태다."
+    },
+    {
+      "id": 8,
+      "file": "TASK_008_evaluate_results.md",
+      "title": "RCA 결과 평가",
+      "status": "TODO",
+      "done": "공개 평가 함수와 잠정정답/CC 점수보류 정책을 준비했다.",
+      "remaining": "실제 순위가 없어 MAP@5/10·MRR·RK 계산 미수행. CC 정확한 주입Pod도 미확인이다."
+    },
+    {
+      "id": 9,
+      "file": "TASK_009_compare_with_paper.md",
+      "title": "RCA 논문 결과 비교",
+      "status": "TODO",
+      "done": "논문 표4와 대조할 지표·조건 차이의 보고 기준을 정했다.",
+      "remaining": "실제 결과 비교·차이 분석 미수행. 두 사례의 로컬 대체 실험은 표4 전체와 동일하지 않다."
+    },
+    {
+      "id": 10,
+      "file": "TASK_010_supplementary_artifacts.md",
+      "title": "추가 발견된 전처리 및 비교 방법 자료 조사",
+      "status": "DONE",
+      "done": "LEMMA 전처리·EVT와 추가 공식 저장소/부록/배포자료를 조사했다.",
+      "remaining": "조사 완료. MATMCD 저자의 누락 전처리 설정을 확보한 것은 아니다."
+    },
+    {
+      "id": 11,
+      "file": "TASK_011_summary_output_directory.md",
+      "title": "CODE-03 요약 저장 경로 준비",
+      "status": "DONE",
+      "done": "원본이 요구하는 요약 저장 경로를 만들고 쓰기 권한을 확인했다.",
+      "remaining": "경로 문제 해결 완료. 요약 생성 자체의 완료는 아니다."
+    },
+    {
+      "id": 12,
+      "file": "TASK_012_chromadb_compatibility.md",
+      "title": "DEP-01 ChromaDB 호환 버전 검증",
+      "status": "DONE",
+      "done": "Chroma 호환 조합을 조사하고 기존 패키지를 바꾸지 않는 lock을 정했다.",
+      "remaining": "검토 완료. 설치는013에서 완료했다."
+    },
+    {
+      "id": 13,
+      "file": "TASK_013_install_chromadb.md",
+      "title": "승인된 Chroma 호환 환경 설치와 로컬 점검",
+      "status": "DONE",
+      "done": "Chroma1.0.11 등58개를 추가하고 저장·검색을 작은 입력으로 검증했다.",
+      "remaining": "설치 완료. 저자 버전 동일성은 문제 발생 시 재확인 대상으로 보존한다."
+    },
+    {
+      "id": 14,
+      "file": "TASK_014_install_lxml.md",
+      "title": "DEP-02 lxml 설치와 공식 HTML 추출 점검",
+      "status": "DONE",
+      "done": "lxml5.4.0을 설치하고 공식 HTML 추출을4개 입력으로 검증했다.",
+      "remaining": "완료. 현재 로그 RAG에서 웹 수집을 새로 수행할 필요는 없다."
+    },
+    {
+      "id": 15,
+      "file": "TASK_015_install_openai_embeddings.md",
+      "title": "DEP-03 OpenAI embedding 어댑터 설치와 로컬 점검",
+      "status": "DONE",
+      "done": "OpenAI embedding 어댑터0.3.1을 설치하고 API 없이 객체 구성을 확인했다.",
+      "remaining": "완료. 실제 원본 embedding 호출은025 후속이며 현재 로컬 모델은BGE다."
+    },
+    {
+      "id": 17,
+      "file": "TASK_017_scope_rca_only.md",
+      "title": "RCA 범위 전환 및 전용 자산 정리",
+      "status": "DONE",
+      "done": "일반 인과발견 실험 전용 코드·데이터·TODO와016을 제거했다. RCA와 공통 출처 자료를 보존했다.",
+      "remaining": "완료. 현재 Child/Sachs 등 1번 실험의 실행 TODO는 없다."
+    },
+    {
+      "id": 18,
+      "file": "TASK_018_author_clarifications.md",
+      "title": "RCA 재현 조건 일괄 저자 확인",
+      "status": "TODO",
+      "done": "미확정 전처리·모델·평가·D03 문제 등을 묶어 저자 질문과 메일 초안을 준비했다.",
+      "remaining": "발송·답변 수신·원조건 확인 미수행. 현재 두 사례와 최신변경을 발송 전 최종 대조해야 한다."
+    },
+    {
+      "id": 19,
+      "file": "TASK_019_provisional_rca_preprocessing_plan.md",
+      "title": "근거를 명시한 임시 RCA 전처리안",
+      "status": "DONE",
+      "done": "원자료 스키마·시간축·Pod·KPI를 조사하고 임시 전처리의 구체적 선택과 영향을 문서화했다.",
+      "remaining": "설계 완료. 승인 후020에서 적용했다."
+    },
+    {
+      "id": 20,
+      "file": "TASK_020_apply_provisional_rca_preprocessing.md",
+      "title": "승인된 임시 RCA 전처리 구현·입력 준비",
+      "status": "DONE",
+      "done": "승인된 SPOT·시간정렬·Pod/metric 결합 방식으로5개 임시CSV를 생성·검증했다.",
+      "remaining": "입력 생성 완료. 현재2개만 활성 사용하며 저자 최종입력과 동일성은 미확인이다."
+    },
+    {
+      "id": 21,
+      "file": "TASK_021_install_system_graphviz.md",
+      "title": "DEP-04 Graphviz B안 설치·검증",
+      "status": "DONE",
+      "done": "Graphviz 시스템9개 패키지를 설치하고 공식 함수의 인공PNG 출력을 확인했다.",
+      "remaining": "실행 의존성 완료. 저자 버전 확인은022이다."
+    },
+    {
+      "id": 22,
+      "file": "TASK_022_graphviz_author_version.md",
+      "title": "Graphviz A안: 저자 버전 확인·전환 검토",
+      "status": "TODO",
+      "done": "현재 Graphviz 버전과 저자 확인 질문을 기록했다.",
+      "remaining": "저자 버전 미확인. 현재 로컬 실행의 선행 차단은 아니다."
+    },
+    {
+      "id": 23,
+      "file": "TASK_023_local_qwen_thinking_setup.md",
+      "title": "승인된 Qwen 로컬 환경 (thinking 이력·현재 non-thinking)",
+      "status": "DONE",
+      "done": "Qwen3.5-4B Q5_K_M 약3.14GB와 고정 llama.cpp/CUDA 실행파일을 설치·해시 검증했다.",
+      "remaining": "설치 완료. 초기thinking 실패는026/029/028로 이어졌고 현재non-thinking이다."
+    },
+    {
+      "id": 24,
+      "file": "TASK_024_local_rca_integration.md",
+      "title": "로컬 LLM과 RCA 파이프라인 연결",
+      "status": "BLOCKED",
+      "done": "원본 로그/RAG/에이전트/PC/RWR 함수와 로컬 모델 연결기를 구현하고 인공검사를 통과했다.",
+      "remaining": "전체 실제 입력 연결 미완료.046이 실제 검증이고047/048이 현재 세부 문제다."
+    },
+    {
+      "id": 25,
+      "file": "TASK_025_original_api_validation.md",
+      "title": "로컬 성과 확인 후 원본 API 조건 검증",
+      "status": "TODO",
+      "done": "로컬 결과 이후 원본 API로 재검증할 별도 작업을 정리했다.",
+      "remaining": "원본 서비스 접근·비용/호출 범위 확정·실제API검증 미수행. 지금 로컬 실험의 필수 선행은 아니다."
+    },
+    {
+      "id": 26,
+      "file": "TASK_026_local_thinking_output_budget.md",
+      "title": "LOCAL-01 thinking 생성 한도와 원본 응답 형식",
+      "status": "DONE",
+      "done": "thinking 출력 한도를2048→8192로 늘려 실제 검증하고 반복/파싱 실패를 기록했다.",
+      "remaining": "검증 작업 완료이며 thinking 성공을 뜻하지 않는다.029 non-thinking 선택으로 해당 경로는 종료됐다."
+    },
+    {
+      "id": 27,
+      "file": "TASK_027_wsl_system_drift.md",
+      "title": "WSL 자동 업데이트와 시스템 버전 차이",
+      "status": "DONE",
+      "done": "WSL 시스템/패키지 변화를 조사하고 실행 전후 snapshot·차이 표시를 구성했다.",
+      "remaining": "기록 방침 완료. OS 롤백/자동업데이트 중지는 하지 않았다."
+    },
+    {
+      "id": 28,
+      "file": "TASK_028_local_re_response_format.md",
+      "title": "LOCAL-02 로컬 RE 최종 응답과 원본 파서의 형식 호환",
+      "status": "DONE",
+      "done": "RE 응답의 명확한 G/P 경계를 한 번 보정하고 원문·보정본을 보존하도록 구현했다.22개 검사와 인공생성 통과.",
+      "remaining": "형식 처리 준비 완료. 실제 두 사례 전체 RE 성공은 아직 아니다."
+    },
+    {
+      "id": 29,
+      "file": "TASK_029_local_nonthinking_verification.md",
+      "title": "Qwen non-thinking 전환 및 원본 응답 형식 재검증",
+      "status": "DONE",
+      "done": "동일 Qwen을 non-thinking으로 전환·검증하고 남은 파싱 실패를028에 연결했다.",
+      "remaining": "현재 non-thinking. thinking으로 돌아가는 작업은 없다."
+    },
+    {
+      "id": 30,
+      "file": "TASK_030_local_bge_m3_embedding.md",
+      "title": "승인된 BGE-M3 로컬 임베딩 구성",
+      "status": "DONE",
+      "done": "고정 BGE-M3 dense를 CPU/FP32/batch1로 설치하고 검색·저장·재로드를 인공 입력으로 검증했다.",
+      "remaining": "모델 준비 완료. 현재 실제 Pod 요약 전체의 RAG는 아직 미도달이다."
+    },
+    {
+      "id": 31,
+      "file": "TASK_031_rca_readiness_audit.md",
+      "title": "RCA 실행 준비 점검",
+      "status": "DONE",
+      "done": "실제 준비물을 조사해 당시 NOT_READY 판정을 내리고 누락을 나눴다.",
+      "remaining": "점검 작업 완료. 준비 완료 판정이 아니다."
+    },
+    {
+      "id": 32,
+      "file": "TASK_032_connect_provisional_rca_inputs.md",
+      "title": "승인된 RCA 입력·정확한 로그 연결",
+      "status": "DONE",
+      "done": "5개 임시CSV와647쌍 로그를 외부 작업공간에 연결하고 공식 로더로 확인했다.",
+      "remaining": "연결 완료. 현재 활성 범위는044의2CSV/278쌍이다."
+    },
+    {
+      "id": 33,
+      "file": "TASK_033_rca_metric_adapter.md",
+      "title": "공개 RCA 지표 함수 분리·검증",
+      "status": "DONE",
+      "done": "공개 PRK/MAPK/MRR 함수를 변경 없이 분리하고 경계 등을11개 검사로 확인했다.",
+      "remaining": "평가 코드 준비 완료. 실제 성능 계산은008이다."
+    },
+    {
+      "id": 34,
+      "file": "TASK_034_official_scenario_evidence.md",
+      "title": "공식 장애 시나리오 확인",
+      "status": "DONE",
+      "done": "공식 장애 시나리오와 CC 추가 원자료를 확보·조사했다.",
+      "remaining": "조사 완료. CC 정확한 정답Pod는 확정하지 못했다."
+    },
+    {
+      "id": 35,
+      "file": "TASK_035_missing_log_policy.md",
+      "title": "누락 pod 로그의 처리 정책",
+      "status": "DONE",
+      "done": "로그 없는Pod도 후보로 유지하고 로그 근거 부재를 표시하는 D01 정책·코드를 구성했다.",
+      "remaining": "해결 완료. 부재136Pod를 삭제하거나 정상으로 판정하지 않는다."
+    },
+    {
+      "id": 36,
+      "file": "TASK_036_large_log_reading.md",
+      "title": "대용량 로그 읽기 구현 결정",
+      "status": "DONE",
+      "done": "로그를 사례/Pod별로 순차 전체 읽기하고 원본 프롬프트를 만드는 방식을 검증했다.대표 최대RSS2.111GiB.",
+      "remaining": "읽기 방식 해결. 모델 추론·PC 메모리 한계를 검증한 작업은 아니다."
+    },
+    {
+      "id": 37,
+      "file": "TASK_037_d01_log_coverage_investigation.md",
+      "title": "D01 로그 쌍 미확인의 원인 재검증",
+      "status": "DONE",
+      "done": "로그 누락이 이름/경로 파싱 오류인지 재검사하고 배포 metric/log 범위 차이를 확인했다.",
+      "remaining": "조사 완료. 누락 원인을 Pod 재시작으로 확정한 것은 아니다."
+    },
+    {
+      "id": 38,
+      "file": "TASK_038_d01_public_case_research.md",
+      "title": "D01 공개 유사 사례 조사",
+      "status": "DONE",
+      "done": "공개 이슈·유사 재현 사례를 조사했다.",
+      "remaining": "조사 완료. 서비스 집계 사례를 우리 Pod 정책으로 자동 도입하지 않았다."
+    },
+    {
+      "id": 39,
+      "file": "TASK_039_select_three_rca_cases.md",
+      "title": "RCA 실행 범위를 세 사례로 변경",
+      "status": "DONE",
+      "done": "5개 중3개 사례만 활성화하고 제외자료를 보존했다.",
+      "remaining": "과거 범위 변경 완료. 현재는044의2개 선택으로 대체됐다."
+    },
+    {
+      "id": 40,
+      "file": "TASK_040_d03_original_graph_protocol.md",
+      "title": "D03 원본 그래프·RWR 동작 근거 확인",
+      "status": "DONE",
+      "done": "D03 그래프 설명·첫쌍 문장 재사용·단계별 RWR 차이를 대조하고 승인A로 공개 동작을 보존했다.",
+      "remaining": "방침/코드 준비 완료. 문제는018 저자 문의용으로 남겼다."
+    },
+    {
+      "id": 41,
+      "file": "TASK_041_d04_original_evaluation_protocol.md",
+      "title": "D04 원본 정답·순위·평가 규칙 확인",
+      "status": "DONE",
+      "done": "D04 PR 잠정정답·CC 두후보 순위/점수보류·원본 RWR/동점/난수 기록 규칙을 구성했다.",
+      "remaining": "평가 방침 완료. 실제 정답 확인/점수 산출 완료는 아니다."
+    },
+    {
+      "id": 42,
+      "file": "TASK_042_real_prompt_capacity.md",
+      "title": "실제 RCA 프롬프트의 로컬 문맥 용량 검증",
+      "status": "DONE",
+      "done": "실제 GGUF tokenizer로 준비 로그 전체 길이를 측정했다. 현재278개 모두81920문맥에 들어간다.",
+      "remaining": "준비 입력 길이 문제 해결. 이후 생성될 RAG/그래프 요청은 별도 확인 대상이다."
+    },
+    {
+      "id": 43,
+      "file": "TASK_043_log_encoding_diagnosis.md",
+      "title": "원본 로그 UTF-8 실패 진단과 승인된 읽기 적용",
+      "status": "DONE",
+      "done": "UTF-8 실패 파일만 승인된 surrogateescape로 보존 읽기하고 선택 필드/프롬프트를 검증했다.",
+      "remaining": "과거426쌍 준비 완료. 현재278쌍 중258개 기본읽기+20개 승인읽기이며 최종 프롬프트 오류0이다."
+    },
+    {
+      "id": 44,
+      "file": "TASK_044_select_two_rca_cases.md",
+      "title": "RCA 실행·평가를 두 사례로 변경",
+      "status": "DONE",
+      "done": "PR20211203·CC20231207만 실행/평가에 연결하고 두 사례 전체Pod를 유지했다.",
+      "remaining": "최종 범위 확정. PR20220606은 제외했고 Pod 축소는 적용하지 않았다."
+    },
+    {
+      "id": 45,
+      "file": "TASK_045_validate_context_81920.md",
+      "title": "문맥 81,920 확대 및 실제 최대 입력 검증",
+      "status": "DONE",
+      "done": "문맥만81920으로 확대해278개 수용 및 최대입력65073토큰의 실제 생성807토큰을 확인했다.",
+      "remaining": "용량 검증 완료. 전체 생성/RCA 성공을 뜻하지 않는다."
+    },
+    {
+      "id": 46,
+      "file": "TASK_046_real_rca_integration.md",
+      "title": "실제 RCA 통합 검증 및 전체 실행 연결",
+      "status": "BLOCKED",
+      "done": "전체 실제 입력 PC와 로그/RAG 검증을 시작했다. PR PC OOM과 로그 실패/후속중단 기록이 있다.",
+      "remaining": "완주 미완료. PC 그래프/RWR, 전체 요약/RAG/에이전트 연결 확인이 남았다."
+    },
+    {
+      "id": 47,
+      "file": "TASK_047_resolve_generation_repetition.md",
+      "title": "D07 로그 요약 반복 생성 해결",
+      "status": "BLOCKED",
+      "done": "D07 반복 출력 원인을 분석하고 승인된 로그 전용presence1.5로 동일요청533토큰 정상응답을 확인했다.",
+      "remaining": "새 전체 실행 PR44개 후 중단,45번째 응답 미저장. 원인 확인·재개 준비와 나머지234개/RAG가 남았다."
+    },
+    {
+      "id": 48,
+      "file": "TASK_048_resolve_pc_memory.md",
+      "title": "D08 원본 PC 메모리 부족 처리",
+      "status": "BLOCKED",
+      "done": "PC 계산 종료·커널OOM·RAM/swap을 확인하고 자원 변경안을 정리했다.",
+      "remaining": "자원 방안 결정/적용·전체PC재검증 미수행. RAM8GB/swap16GB안은 미적용이다."
+    }
+  ],
+  "sources": [
+    "docs/evidence/rca_real_rag_20260926T121159492235Z.json",
+    "docs/evidence/rca_real_integration_20260926T100156831887Z.json",
+    "configs/local_rca_execution.json",
+    "configs/scope.json",
+    "tasks/TASK_*.md"
+  ],
+  "current_followup_ids": [
+    7,
+    8,
+    9,
+    24,
+    46,
+    47,
+    48
+  ],
+  "deferred_author_equivalence_ids": [
+    3,
+    5,
+    18,
+    22,
+    25
+  ]
+}

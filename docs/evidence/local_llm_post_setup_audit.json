@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-09-24T13:11:47.748875+00:00",
+  "audit_status": "PASS_WITH_HISTORICAL_OS_DRIFT",
+  "runtime_readiness": "INSTALLED_BASIC_THINKING_WORKS_MATMCD_FORMAT_BLOCKED",
+  "model_calls": 0,
+  "official_37_files_preserved": true,
+  "python_201_packages_preserved": true,
+  "system_packages_match_post_update_snapshot": true,
+  "system_packages_match_graphviz_snapshot": false,
+  "historical_os_package_differences": 175,
+  "system_drift_evidence": "docs/evidence/local_llm_system_drift.json",
+  "runtime_files_verified": 56,
+  "server_stopped": true,
+  "config_sha256": "3c833fed391b8f33f27d0143314dc904b46403b1b78293670afe757467b2748e",
+  "script_hashes": {
+    "setup_local_llm.py": "c596936c74d136ec0811b9cca3ded43baca2490697cd3e0e6fdb49aaf34787c5",
+    "local_llm_runtime.py": "f8fb0e2eff8c1fe117048f3bdb4ef8406e5b084fc86fc19863e031e152edd5ac",
+    "local_llm_client.py": "ecfe24dbf5f63ae07e3291edacd5bc96cc08d3e054ba117a2237de5dc3c9a1b1",
+    "check_local_llm_runtime.py": "ad2bcf1834dedf0067c2fefea2ac8b7108c9e8cad910ea8a3e5e9878bb7fcfbd"
+  },
+  "version_output": "0.00.000.785 I srv  llama_server: initializing ...\nversion: 0.5.0-dev (build 11146, commit 7fe450e19)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+  "cuda_cache_path": "/mnt/e/연구/MATMCD_DATA/caches/nvidia_cuda_llama_cpp_b11146",
+  "inference_evidence": "docs/evidence/local_llm_runtime.json",
+  "post_inference_changes": "Future CUDA cache location and environment logging; installation metadata clarified re OS changes; no further inference or numerical parameter change"
+}

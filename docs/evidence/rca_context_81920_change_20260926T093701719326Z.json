@@ -1,0 +1,817 @@
+{
+  "changed_utc": "20260926T093701719326Z",
+  "authorization": "사용자: Pod 줄이기는 보류하고 문맥만 81,920토큰으로 확대하여 재검증",
+  "only_inference_change": {
+    "path": "server.context_tokens",
+    "before": 16384,
+    "after": 81920
+  },
+  "before_configs": {
+    "graphviz_packages.json": {
+      "sha256": "52b2474db4920ef3bd7cb0c234cbb4a2869fda9d88a34175b08b66aa0e53b4f5",
+      "value": {
+        "approval_date_kst": "2026-09-24",
+        "choice": "B",
+        "author_equivalence": "UNCONFIRMED",
+        "distribution": "Ubuntu 24.04 noble",
+        "architecture": "amd64",
+        "packages": {
+          "graphviz": "2.42.2-9ubuntu0.1",
+          "libann0": "1.1.2+doc-9build1",
+          "libcdt5": "2.42.2-9ubuntu0.1",
+          "libcgraph6": "2.42.2-9ubuntu0.1",
+          "libgts-0.7-5t64": "0.7.6+darcs121130-5.2build1",
+          "libgvc6": "2.42.2-9ubuntu0.1",
+          "libgvpr2": "2.42.2-9ubuntu0.1",
+          "liblab-gamut1": "2.42.2-9ubuntu0.1",
+          "libpathplan4": "2.42.2-9ubuntu0.1"
+        },
+        "raw_downloads_relative_to_asset_root": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1",
+        "allow_existing_package_changes": false,
+        "install_recommends": false,
+        "author_version_followup_task": "tasks/TASK_022_graphviz_author_version.md"
+      }
+    },
+    "inputs.json": {
+      "sha256": "9c8b267549099c247150a29e5e1df9f9fecd05567e9d34623d8da60ca6befc1b",
+      "value": {
+        "experiment_scope": "rca",
+        "rca_files": {
+          "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv": "processed_data/lemma_rca_provisional_v1/Product_Review/20211203/Product_Review_20211203.csv",
+          "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv": "processed_data/lemma_rca_provisional_v1/Cloud_Computing/20231207/Cloud_Computing_20231207.csv"
+        },
+        "missing_rca_inputs": [],
+        "notes": [
+          "RCA §4.3/Table 4 only. These are approved provisional inputs, not verified author CSVs.",
+          "User authorized clear remaining preparation work; CSV values and candidate pods are unchanged.",
+          "Only exact pod-name log pairs were extracted byte-for-byte; approved D01 retains missing pods with explicit absence, cause UNKNOWN.",
+          "Connected files alone do not establish RCA readiness or authorize scientific condition changes."
+        ],
+        "input_profile": "lemma_rca_provisional_v1",
+        "author_equivalence": "UNCONFIRMED",
+        "rca_log_directories": {
+          "LEMMA_RCA/Product_Review/Log/20211203": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203",
+          "LEMMA_RCA/Cloud_Computing/Log/20231207": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207"
+        },
+        "expected_rca_inputs": [
+          "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv",
+          "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv"
+        ],
+        "connection_evidence": "docs/evidence/rca_input_connection_20260925T105701596179Z.json",
+        "rca_log_policy": "configs/rca_log_policy.json",
+        "rca_log_evidence_manifests": {
+          "Product_Review/20211203": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20211203.json",
+          "Cloud_Computing/20231207": "processed_data/lemma_rca_log_evidence_v1/Cloud_Computing/20231207.json"
+        }
+      }
+    },
+    "local_embedding.json": {
+      "sha256": "92822e6dab68b55c6c33e1279962a5b4f100792e6e273f868ef68b358550bfa4",
+      "value": {
+        "profile": "bge_m3_dense_cpu_fp32_v1",
+        "approved_on": "2026-09-25",
+        "paper_equivalence": false,
+        "model": {
+          "repository": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+          "directory": "models/huggingface_BAAI_bge-m3",
+          "files": [
+            "config.json",
+            "pytorch_model.bin",
+            "tokenizer.json",
+            "tokenizer_config.json",
+            "special_tokens_map.json",
+            "sentencepiece.bpe.model",
+            "sentence_bert_config.json",
+            "config_sentence_transformers.json",
+            "modules.json",
+            "1_Pooling/config.json",
+            "README.md"
+          ],
+          "weights_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+          "weights_size_bytes": 2271145830,
+          "tokenizer_sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08"
+        },
+        "encoding": {
+          "device": "cpu",
+          "dtype": "float32",
+          "batch_size": 1,
+          "max_tokens_including_special": 8192,
+          "truncation": false,
+          "pooling": "cls",
+          "normalize_l2": true,
+          "dimensions": 1024,
+          "query_instruction": "",
+          "document_instruction": "",
+          "attention_implementation": "sdpa",
+          "torch_threads": 8,
+          "sparse": false,
+          "colbert": false
+        },
+        "runtime": {
+          "overlay_directory": "environments/pypi_bge_m3_loader_tf4.51.3",
+          "download_directory": "raw_downloads/pypi_bge_m3_loader_tf4.51.3",
+          "cache_directory": "caches/huggingface_BAAI_bge-m3",
+          "splitter_cache_directory": "caches/tiktoken",
+          "splitter_tokenizer": {
+            "encoding": "cl100k_base",
+            "url": "https://openaipublic.blob.core.windows.net/encodings/cl100k_base.tiktoken",
+            "sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7"
+          },
+          "packages": [
+            {
+              "name": "transformers",
+              "version": "4.51.3",
+              "filename": "transformers-4.51.3-py3-none-any.whl",
+              "sha256": "fd3279633ceb2b777013234bbf0b4f5c2d23c4626b05497691f00cfda55e8a83"
+            },
+            {
+              "name": "safetensors",
+              "version": "0.5.3",
+              "filename": "safetensors-0.5.3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+              "sha256": "cead1fa41fc54b1e61089fa57452e8834f798cb1dc7a09ba3524f1eb08e0317a"
+            }
+          ]
+        },
+        "storage": {
+          "log_directory": "logs/local_embedding/bge_m3_dense_cpu_fp32_v1",
+          "index_directory": "caches/retrieval_bge_m3_dense_cpu_fp32_v1"
+        },
+        "retrieval_policy": "Keep each caller's original splitting, tokenizer, metric and top-k; isolate indexes by model/profile; no automatic fallback.",
+        "validation_scope": "Synthetic embedding/retrieval only; no web search, paid API, generation or RCA experiments."
+      }
+    },
+    "local_llm.json": {
+      "sha256": "1e6cc3e658adefcf636a9eb746d6b13bb325a55deb6b3c232c5df88d1a2ebb43",
+      "value": {
+        "profile": "qwen35_4b_q5km_nonthinking_provisional_v1",
+        "status": "USER_APPROVED_LOCAL_SUBSTITUTE",
+        "approved_on": "2026-09-25",
+        "paper_equivalence": false,
+        "model": {
+          "base_repository": "Qwen/Qwen3.5-4B",
+          "base_revision_observed": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+          "repository": "unsloth/Qwen3.5-4B-GGUF",
+          "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+          "filename": "Qwen3.5-4B-Q5_K_M.gguf",
+          "quantization": "Q5_K_M",
+          "size_bytes": 3143656608,
+          "sha256": "8814232b85594dcd46c50e5b8b29324a7efe9e746edbe8a3d1df3d3fce7aad39",
+          "directory": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M",
+          "server_alias": "qwen35-4b-q5km-nonthinking"
+        },
+        "runtime": {
+          "repository": "ggml-org/llama.cpp",
+          "release": "v0.5.0",
+          "binary_tag": "b11146",
+          "commit": "7fe450e19305b828c199d602c23a8337aaa1f03b",
+          "platform": "WSL2_Ubuntu_x86_64",
+          "cuda_runtime": "12.8",
+          "download_directory": "raw_downloads/github_ggml_org_llama_cpp_b11146",
+          "install_directory": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8",
+          "cuda_cache_directory": "caches/nvidia_cuda_llama_cpp_b11146",
+          "archives": [
+            {
+              "filename": "llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+              "size_bytes": 168920581,
+              "sha256": "c2ab9e19838513ff69d1af8d999ad717dd3c7ee4714ac04c7ed5ab9077c50e4e",
+              "subdirectory": "server"
+            },
+            {
+              "filename": "cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+              "size_bytes": 594373356,
+              "sha256": "1466daea60aad1144819e151b2bae19d54556cf1da6c129c4f55a5ded2637c25",
+              "subdirectory": "cuda"
+            }
+          ]
+        },
+        "server": {
+          "host": "127.0.0.1",
+          "port": 18080,
+          "context_tokens": 16384,
+          "parallel_slots": 1,
+          "gpu_layers": "all",
+          "batch_tokens": 512,
+          "microbatch_tokens": 128,
+          "cache_type_k": "f16",
+          "cache_type_v": "f16",
+          "context_shift": false,
+          "thinking": false,
+          "reasoning_format": "deepseek",
+          "log_verbosity": 4,
+          "note": "Local setup capacity only, not a paper hyperparameter. No prompt truncation or automatic CPU/model fallback. Real RCA context requirements have not been established."
+        },
+        "smoke_test": {
+          "seed": 42,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "max_tokens": 8192,
+          "note": "Explicit synthetic setup test settings, not author settings and not approved RCA inference parameters."
+        },
+        "logging": {
+          "directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1"
+        }
+      }
+    },
+    "local_rca_execution.json": {
+      "sha256": "06d496e22f78880193199fa22cc85d57e4b76d42e7c317e051ce6874902dbbad",
+      "value": {
+        "profile_id": "qwen_bge_released_A_two_cases_v2",
+        "status": "BLOCKED_CAPACITY_USER_HOLD",
+        "capacity_decision": {
+          "choice": "D05_B_KEEP_CURRENT_SETTINGS_HOLD_EXECUTION",
+          "selected_date": "2026-09-26",
+          "context_tokens_preserved": 16384,
+          "gpu_layers_preserved": "all",
+          "proposed_147456_gpu24_applied": false
+        },
+        "author_equivalence": "UNCONFIRMED",
+        "source_commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+        "scope_config": "configs/scope.json",
+        "scientific_protocol": "configs/rca_protocol.json",
+        "llm_config": "configs/local_llm.json",
+        "embedding_config": "configs/local_embedding.json",
+        "generation_policy": "reuse_selected_local_seed_sampling_and_output_limit; preserve_each_original_callsite_temperature",
+        "seed_sampling_source": "local_llm.smoke_test; explicit local choice, not an author setting",
+        "re_format_policy": "re_gp_boundary_v1; exact original ConstrainReasoningLLM Yes/No capitalization",
+        "causal_discovery_method": "pc",
+        "stages": [
+          "PC",
+          "CC_without_external_information",
+          "MATMCD",
+          "MATMCD_RE"
+        ],
+        "case_execution": "sequential",
+        "pod_log_reading": "original_full_csv_in_isolated_worker",
+        "prompt_storage": "processed_data/lemma_rca_original_prompts_v1",
+        "recovered_prompt_storage": "processed_data/lemma_rca_original_prompts_d06_v1",
+        "log_encoding_policy": {
+          "id": "d06_surrogateescape_valid_selected_prompt_v1",
+          "status": "USER_APPROVED",
+          "approved_date": "2026-09-26",
+          "scope": "proven_UTF8_failures_only; preserve_invalid_bytes; reject_invalid_selection_fields_or_final_prompt",
+          "author_equivalence": "UNCONFIRMED"
+        },
+        "run_storage": "runs/matmcd_local_rca",
+        "automatic_retry": false,
+        "automatic_prompt_truncation": false,
+        "automatic_model_fallback": false,
+        "environment_policy": "record_current_before_and_after; fail_on_change; no_OS_service_changes",
+        "scope_change": {
+          "task": "TASK_044",
+          "active_cases_config": "configs/scope.json",
+          "capacity_reassessment": "278 selected prompts verified; max required context 73266; proposed 81920/all not applied; execution hold remains",
+          "capacity_evidence": "docs/evidence/rca_two_case_scope_20260926T075701648365Z.json"
+        }
+      }
+    },
+    "paths.json": {
+      "sha256": "56c634c0b7503dcecf0bf58509a2151aba20b6bd0dfa0c488036e4453cb8fd62",
+      "value": {
+        "asset_root": "../../MATMCD_DATA",
+        "official_source": "official/matmcd",
+        "runtime_workspace": "workspaces/d2i_matmcd_original",
+        "environment": "environments/d2i_matmcd_py311",
+        "setup_logs": "logs/setup"
+      }
+    },
+    "rca_log_policy.json": {
+      "sha256": "23515529939ba2547979b2728c108db62ded94eea313d68b8b81803f076b87e1",
+      "value": {
+        "profile_id": "exact_pod_logs_allow_absence_v1",
+        "status": "APPROVED",
+        "approval": {
+          "date_kst": "2026-09-25",
+          "user_instruction": "오케이 그럼 Log 쌍은 안맞은체로 가자.",
+          "scope": "Keep all existing pod candidates; use exact available pairs and explicitly mark absent evidence. No service/replica substitution."
+        },
+        "author_equivalence": "UNCONFIRMED",
+        "candidate_policy": "retain_all_in_original_order",
+        "matching": "exact_pod_name_only",
+        "missing_policy": "fixed_absence_notice",
+        "partial_or_changed_pair": "fail",
+        "missing_reason": "exact_log_pair_unavailable",
+        "underlying_cause": "UNKNOWN",
+        "service_or_replica_mapping": false,
+        "infer_normality_or_causality_from_absence": false,
+        "missing_notice": "No matching log evidence is available for this pod in this case.\nThis does not imply normal operation or absence of causal influence.",
+        "kpi_column": "Latency",
+        "kpi_notice": "This is an input KPI column, not a pod. No pod event log is assigned to this column. Its column label alone does not establish its physical meaning.",
+        "output_directory": "processed_data/lemma_rca_log_evidence_v1"
+      }
+    },
+    "rca_preprocessing_proposal.json": {
+      "sha256": "40dc8554f3e2c544f960b15f4a2ff4f8ee2f74c20f65a8eea1b61018003d7b09",
+      "value": {
+        "profile_id": "lemma_rca_provisional_v1",
+        "status": "APPROVED_FOR_PREPROCESSING",
+        "implementation_approved": true,
+        "approval": {
+          "date_kst": "2026-09-23",
+          "scope": "User approved the proposed recipe, implementation and CSV generation; no scientific experiments or APIs",
+          "prior_proposal_sha256": "f38c98340d4e2eba40306dfdc6412a97b690adf727ebce7da44939fae882a9fb"
+        },
+        "author_equivalence": "UNCONFIRMED",
+        "paths_config": "configs/paths.json",
+        "input_manifest": "docs/evidence/downloads.json",
+        "inspection_evidence": "docs/evidence/rca_input_inventory.json",
+        "output_relative_to_asset_root": "processed_data/lemma_rca_provisional_v1",
+        "create_output_directories_now": true,
+        "sources": {
+          "matmcd_commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+          "lemma_reference_commit": "c560d8cc39c19f04c9ae74fac2404b1e5e8c3b4d",
+          "product_review_revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+          "cloud_computing_revision": "03f82a2c4b16afe09e9315def9f5d6990427000a"
+        },
+        "metric_sets": {
+          "Product_Review": [
+            "cpu_usage",
+            "memory_usage",
+            "rate_received_packets",
+            "rate_transmitted_packets",
+            "received_bandwidth",
+            "transmit_bandwidth"
+          ],
+          "Cloud_Computing": [
+            "cpu_usage",
+            "memory_usage",
+            "rate_received_packets",
+            "rate_transmitted_packets",
+            "received_bandwidth",
+            "transmit_bandwidth",
+            "rate_storage_iops"
+          ]
+        },
+        "cases": [
+          {
+            "system": "Product_Review",
+            "day": "20210517",
+            "kpi_key": "Book_Info_product",
+            "expected_aligned_rows": 166325,
+            "expected_candidate_pod_union": 208,
+            "selection_basis": "LEMMA reference JMeter_KPI label; MATMCD default date"
+          },
+          {
+            "system": "Product_Review",
+            "day": "20210524",
+            "kpi_key": "Book_Info_product",
+            "expected_aligned_rows": 176692,
+            "expected_candidate_pod_union": 207,
+            "selection_basis": "LEMMA FastPC explicit case mapping"
+          },
+          {
+            "system": "Product_Review",
+            "day": "20211203",
+            "kpi_key": "ratings.book-info.svc.cluster.local:9080/*",
+            "expected_aligned_rows": 51529,
+            "expected_candidate_pod_union": 218,
+            "selection_basis": "LEMMA FastPC explicit case mapping"
+          },
+          {
+            "system": "Product_Review",
+            "day": "20220606",
+            "kpi_key": "reviews-v3",
+            "expected_aligned_rows": 107789,
+            "expected_candidate_pod_union": 228,
+            "selection_basis": "LEMMA FastPC explicit case mapping; KPI semantic meaning requires author confirmation"
+          },
+          {
+            "system": "Cloud_Computing",
+            "day": "20231207",
+            "kpi_key": "book_info",
+            "expected_aligned_rows": 79252,
+            "expected_candidate_pod_union": 196,
+            "selection_basis": "only KPI key in selected distributed metric NPYs; MATMCD commented case"
+          }
+        ],
+        "alignment": {
+          "time_key": "time",
+          "timestamp_policy": "sorted_exact_intersection_across_selected_metrics_for_same_kpi_key",
+          "time_window": "all_shared_published_timestamps",
+          "resample": false,
+          "downsample": false,
+          "temporal_aggregation": "none",
+          "duplicate_timestamp_policy": "fail",
+          "nonfinite_policy": "fail",
+          "interpolation": "none",
+          "kpi_policy": "require_identical_feature_names_and_exact_values_on_shared_timestamps",
+          "provenance_class": "LOCAL_ASSUMPTION"
+        },
+        "pod_candidates": {
+          "policy": "union_across_selected_metrics",
+          "preserve_full_pod_names": true,
+          "missing_metric_policy": "absent_channel_not_zero_fill",
+          "constant_channel_policy": "exclude_from_detection_and_fusion_when_std_is_exactly_zero_on_aligned_rows",
+          "all_constant_pod_policy": "record_exclusion",
+          "sort_order": "unicode_codepoint_ascending",
+          "use_ground_truth_for_selection": false,
+          "provenance_class": "LOCAL_ASSUMPTION"
+        },
+        "evt": {
+          "implementation": "LEMMA FastPC rca.py spot_detection semantics with pyspot.DSpot/libspot.so",
+          "input": "unscaled_aligned_nonconstant_channel",
+          "d": 10,
+          "q": 0.0001,
+          "n_init": 100,
+          "level": 0.95,
+          "up": true,
+          "down": true,
+          "alert": true,
+          "bounded": true,
+          "max_excess": 200,
+          "calibration": "first_100_aligned_samples_not_verified_normal",
+          "retention_rule": "any_strictly_positive_official_anomaly_score_after_initialization_in_any_available_nonconstant_metric",
+          "threshold_score": 0.0,
+          "candidate_cap": null,
+          "zero_candidate_policy": "fail_without_fallback_or_ground_truth_rescue",
+          "native_error_policy": "fail_without_changing_algorithm_or_parameters",
+          "parameter_provenance_class": "LEMMA_REFERENCE_NOT_MATMCD_CONFIRMED",
+          "retention_and_input_resolution_provenance_class": "LOCAL_ASSUMPTION"
+        },
+        "metric_fusion": {
+          "method": "equal_mean_of_per_channel_zscores",
+          "fit_rows": "all_aligned_rows_offline",
+          "ddof": 0,
+          "metric_weight": "1/number_of_available_nonconstant_channels_for_each_pod",
+          "include_all_available_nonconstant_metrics": true,
+          "single_channel_policy": "use_its_zscore",
+          "fused_zero_variance_policy": "fail_without_metric_substitution",
+          "minimum_retained_pods": 2,
+          "provenance_class": "LOCAL_ASSUMPTION_HIGH_IMPACT"
+        },
+        "kpi": {
+          "column_name": "Latency",
+          "position": "last",
+          "scale": "none",
+          "value_source": "shared_and_verified_NPY_KPI_column",
+          "constant_kpi_policy": "fail",
+          "semantic_caveat": "PR 20220606 source CSV filename says Success_Rate but its header and NPY feature say Latency; preserve published values/header and flag meaning unconfirmed"
+        },
+        "logs": {
+          "match": "exact_full_pod_name_and_unique_template_structured_pair",
+          "expected_source_directory": "log_data/pod_removed",
+          "ambiguous_or_missing": "record_and_mark_log_input_not_ready",
+          "drop_pods_due_to_missing_logs": false,
+          "fabricate_empty_logs": false,
+          "fuzzy_name_matching": false,
+          "regenerate_drain_templates": false,
+          "summary_generation": "separate_task_and_API_approval",
+          "method_integration": "DIFF-09_unresolved"
+        },
+        "output_contract": {
+          "csv": "<system>/<day>/<system>_<day>.csv",
+          "csv_index": false,
+          "csv_encoding": "utf-8",
+          "float_format": "%.17g",
+          "timestamp_sidecar": "<system>/<day>/timestamps.csv",
+          "decision_manifest": "<system>/<day>/manifest.json",
+          "overwrite": false,
+          "default_runtime_input_update": false,
+          "record": [
+            "source_revision_and_hash",
+            "recipe_hash",
+            "runtime_versions",
+            "channel_coverage_and_constants",
+            "dropped_timestamps",
+            "per_pod_EVT_decision",
+            "normalization_statistics",
+            "column_mapping",
+            "log_coverage",
+            "output_hashes",
+            "author_equivalence_status"
+          ]
+        },
+        "execution_limits": {
+          "proposal_only": false,
+          "fit_causal_graph": false,
+          "run_random_walk": false,
+          "call_LLM_or_embedding": false,
+          "evaluate_paper_metrics": false,
+          "send_author_email": false
+        }
+      }
+    },
+    "rca_protocol.json": {
+      "sha256": "98a2ca203451f6660368e1d141f2d5b723657f1acd7aab445a7d5ec22e000da3",
+      "value": {
+        "profile_id": "rca_released_A_provisional_evaluation_two_cases_v2",
+        "status": "APPROVED",
+        "approved_date_kst": "2026-09-26",
+        "authorization": "D03 A안 확정 및 문제점 일괄 저자 문의 준비. D04는 제시한 권장 방침으로 진행하며 같은 결정을 재요청하지 않음.",
+        "author_run_equivalence": "UNCONFIRMED",
+        "d03": {
+          "choice": "A",
+          "graph_prompt": "unchanged_released_DomainKnowledgeLLM",
+          "first_pair_graph_prompt_cache": "preserve",
+          "scientific_corrections_applied": false,
+          "rwr_graph_by_stage": {
+            "PC": "initial",
+            "CC_without_external_information": "initial",
+            "MATMCD": "refined",
+            "MATMCD_RE": "refined"
+          },
+          "author_question_file": "docs/AUTHOR_QUESTIONS_D03_D04.md"
+        },
+        "d04": {
+          "runs_per_case_per_stage": 1,
+          "repetition_policy": "released_single_call_structure_no_best_of_n",
+          "rwr_parameters": {
+            "steps": 1000,
+            "rp": 0.05,
+            "max_self": 10
+          },
+          "rwr_seed": null,
+          "rng_policy": "record_numpy_state_before_and_after_no_new_seed",
+          "start_node": "last_input_column",
+          "retain_kpi_in_ranking": true,
+          "tie_policy": "stable_original_column_order",
+          "metric_policy": "unchanged_public_LEMMA_Metrics_functions",
+          "rank_base": 1,
+          "top_k_boundary": "strict_rank_less_than_k",
+          "aggregate_policy": "all_active_cases_required_equal_case_weight_local_protocol",
+          "partial_aggregate": "not_generated",
+          "unknown_ground_truth": "retain_all_candidate_ranks_no_single_score",
+          "ground_truth_input_to_llm_or_rag": false,
+          "cases": [
+            {
+              "system": "Product_Review",
+              "day": "20211203",
+              "official_helper_label": "mongodb-v1",
+              "status": "PROVISIONAL_RELEASED_HELPER_LABEL",
+              "candidate_pods": [
+                "mongodb-v1-64c6b69879-p4wfp"
+              ],
+              "evaluation_pod": "mongodb-v1-64c6b69879-p4wfp",
+              "limitation": "Evaluation node from released helper; scenario describes an external NFS disk-full failure, not proven author final pod ground truth."
+            },
+            {
+              "system": "Cloud_Computing",
+              "day": "20231207",
+              "official_helper_label": "productpage-v1",
+              "status": "UNRESOLVED_EXACT_POD",
+              "candidate_pods": [
+                "productpage-v1-94d68db49-j7t55",
+                "productpage-v1-94d68db49-vc8ct"
+              ],
+              "evaluation_pod": null,
+              "limitation": "Exact injected replica unconfirmed. Preserve both ranks; no best-candidate selection, service aggregation, or assumption-specific score."
+            }
+          ]
+        },
+        "evidence": "docs/evidence/rca_original_protocol_20260925T133730423769Z.json",
+        "integration_status": "helpers_ready_full_RCA_integration_pending_TASK_024",
+        "scope_change": {
+          "date_kst": "2026-09-26",
+          "task": "TASK_044",
+          "change": "Only active case selection changes; D03/D04 scientific rules unchanged; CC and whole-set/partial scores remain withheld"
+        }
+      }
+    },
+    "scope.json": {
+      "sha256": "90a4b2f12feecb190da0ba5a8081404af7d7fe1c9c36e7093bf0ad68cea76206",
+      "value": {
+        "active_experiments": [
+          "rca"
+        ],
+        "paper_targets": [
+          "section_4.3",
+          "table_4"
+        ],
+        "changed_date": "2026-09-23",
+        "authorization": "사용자 요청: 1번 실험 관련 파일을 삭제하고 TODO에서 제외",
+        "excluded_official_files": [
+          "GTdatasets_experiment.py",
+          "Utils/metrics.py",
+          "data/SampleFromBIF.py",
+          "image/table1.png",
+          "image/table2.png",
+          "docs/assets/fig4.png"
+        ],
+        "source_policy": "위 전용 파일만 제외한 RCA 작업용 부분집합. 남은 공식 파일은 원본 ZIP과 바이트 동일해야 한다.",
+        "reference_policy": "공통 코드, 원본 ZIP, 논문, 저자 소개 자료, 과거 공통 감사 기록은 출처 및 이력으로 보존한다.",
+        "rca_case_selection": {
+          "profile_id": "rca_two_cases_v2",
+          "approved_date_kst": "2026-09-26",
+          "authorization": "사용자가 PR 20211203과 CC 20231207 두 사례만 실행·평가하도록 지정",
+          "active_cases": [
+            {
+              "system": "Product_Review",
+              "day": "20211203"
+            },
+            {
+              "system": "Cloud_Computing",
+              "day": "20231207"
+            }
+          ],
+          "excluded_cases": [
+            {
+              "system": "Product_Review",
+              "day": "20210517"
+            },
+            {
+              "system": "Product_Review",
+              "day": "20210524"
+            },
+            {
+              "system": "Product_Review",
+              "day": "20220606"
+            }
+          ],
+          "excluded_asset_policy": "preserve_assets_and_historical_evidence; exclude_from_current_run_and_evaluation",
+          "within_case_data_changed": false,
+          "D02_reader_change_approved": false,
+          "paper_table4_aggregate_equivalence": "UNCONFIRMED"
+        }
+      }
+    },
+    "upstream.json": {
+      "sha256": "7060541331948a6e25c133a335ab2221e9011164b96adcdaed945104992e2d53",
+      "value": {
+        "checked_utc": "2026-09-21T16:01:48.298661+00:00",
+        "paper": {
+          "provided_path": "../MATMCD.pdf",
+          "arxiv": "2412.13667v2",
+          "sha256": "4d8bdb33a382ddceb73dfba2ee752075225b13b01231a033d99235a825baf2f5",
+          "pages": 25,
+          "asset_copy": "raw_downloads/user_matmcd_paper/MATMCD.pdf",
+          "analysis": "analysis/user_matmcd_paper"
+        },
+        "sources": [
+          {
+            "id": "matmcd",
+            "url": "https://github.com/D2I-Group/matmcd",
+            "commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+            "path": "official/matmcd",
+            "path_base": "project"
+          },
+          {
+            "id": "lemma_preprocessing",
+            "url": "https://github.com/lemma-rca/rca_baselines",
+            "commit": "c560d8cc39c19f04c9ae74fac2404b1e5e8c3b4d",
+            "path": "raw_downloads/github_lemma_rca_preprocessing",
+            "path_base": "asset_root"
+          },
+          {
+            "id": "efficient_cdlms",
+            "url": "https://github.com/superkaiba/causal-llm-bfs",
+            "commit": "80c9f5d1eb49b74335ec178798671b34c3742776",
+            "path": "raw_downloads/github_superkaiba_causal_llm_bfs",
+            "path_base": "asset_root"
+          }
+        ],
+        "source_archive_sha256": "3cf8a201c477d857e3e32715656e7f7329469dffa086aaabd97c621a48be2647",
+        "requirements_sha256": "77f447f5b87343e32e5554e7ab22072e0fdbafab16db7dafaa21c37b481f798a",
+        "working_scope": "configs/scope.json"
+      }
+    }
+  },
+  "llm_before": {
+    "profile": "qwen35_4b_q5km_nonthinking_provisional_v1",
+    "status": "USER_APPROVED_LOCAL_SUBSTITUTE",
+    "approved_on": "2026-09-25",
+    "paper_equivalence": false,
+    "model": {
+      "base_repository": "Qwen/Qwen3.5-4B",
+      "base_revision_observed": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "repository": "unsloth/Qwen3.5-4B-GGUF",
+      "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+      "filename": "Qwen3.5-4B-Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 3143656608,
+      "sha256": "8814232b85594dcd46c50e5b8b29324a7efe9e746edbe8a3d1df3d3fce7aad39",
+      "directory": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M",
+      "server_alias": "qwen35-4b-q5km-nonthinking"
+    },
+    "runtime": {
+      "repository": "ggml-org/llama.cpp",
+      "release": "v0.5.0",
+      "binary_tag": "b11146",
+      "commit": "7fe450e19305b828c199d602c23a8337aaa1f03b",
+      "platform": "WSL2_Ubuntu_x86_64",
+      "cuda_runtime": "12.8",
+      "download_directory": "raw_downloads/github_ggml_org_llama_cpp_b11146",
+      "install_directory": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8",
+      "cuda_cache_directory": "caches/nvidia_cuda_llama_cpp_b11146",
+      "archives": [
+        {
+          "filename": "llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "size_bytes": 168920581,
+          "sha256": "c2ab9e19838513ff69d1af8d999ad717dd3c7ee4714ac04c7ed5ab9077c50e4e",
+          "subdirectory": "server"
+        },
+        {
+          "filename": "cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "size_bytes": 594373356,
+          "sha256": "1466daea60aad1144819e151b2bae19d54556cf1da6c129c4f55a5ded2637c25",
+          "subdirectory": "cuda"
+        }
+      ]
+    },
+    "server": {
+      "host": "127.0.0.1",
+      "port": 18080,
+      "context_tokens": 16384,
+      "parallel_slots": 1,
+      "gpu_layers": "all",
+      "batch_tokens": 512,
+      "microbatch_tokens": 128,
+      "cache_type_k": "f16",
+      "cache_type_v": "f16",
+      "context_shift": false,
+      "thinking": false,
+      "reasoning_format": "deepseek",
+      "log_verbosity": 4,
+      "note": "Local setup capacity only, not a paper hyperparameter. No prompt truncation or automatic CPU/model fallback. Real RCA context requirements have not been established."
+    },
+    "smoke_test": {
+      "seed": 42,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "max_tokens": 8192,
+      "note": "Explicit synthetic setup test settings, not author settings and not approved RCA inference parameters."
+    },
+    "logging": {
+      "directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1"
+    }
+  },
+  "llm_after": {
+    "profile": "qwen35_4b_q5km_nonthinking_provisional_v1",
+    "status": "USER_APPROVED_LOCAL_SUBSTITUTE",
+    "approved_on": "2026-09-25",
+    "paper_equivalence": false,
+    "model": {
+      "base_repository": "Qwen/Qwen3.5-4B",
+      "base_revision_observed": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "repository": "unsloth/Qwen3.5-4B-GGUF",
+      "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+      "filename": "Qwen3.5-4B-Q5_K_M.gguf",
+      "quantization": "Q5_K_M",
+      "size_bytes": 3143656608,
+      "sha256": "8814232b85594dcd46c50e5b8b29324a7efe9e746edbe8a3d1df3d3fce7aad39",
+      "directory": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M",
+      "server_alias": "qwen35-4b-q5km-nonthinking"
+    },
+    "runtime": {
+      "repository": "ggml-org/llama.cpp",
+      "release": "v0.5.0",
+      "binary_tag": "b11146",
+      "commit": "7fe450e19305b828c199d602c23a8337aaa1f03b",
+      "platform": "WSL2_Ubuntu_x86_64",
+      "cuda_runtime": "12.8",
+      "download_directory": "raw_downloads/github_ggml_org_llama_cpp_b11146",
+      "install_directory": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8",
+      "cuda_cache_directory": "caches/nvidia_cuda_llama_cpp_b11146",
+      "archives": [
+        {
+          "filename": "llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "size_bytes": 168920581,
+          "sha256": "c2ab9e19838513ff69d1af8d999ad717dd3c7ee4714ac04c7ed5ab9077c50e4e",
+          "subdirectory": "server"
+        },
+        {
+          "filename": "cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "size_bytes": 594373356,
+          "sha256": "1466daea60aad1144819e151b2bae19d54556cf1da6c129c4f55a5ded2637c25",
+          "subdirectory": "cuda"
+        }
+      ]
+    },
+    "server": {
+      "host": "127.0.0.1",
+      "port": 18080,
+      "context_tokens": 81920,
+      "parallel_slots": 1,
+      "gpu_layers": "all",
+      "batch_tokens": 512,
+      "microbatch_tokens": 128,
+      "cache_type_k": "f16",
+      "cache_type_v": "f16",
+      "context_shift": false,
+      "thinking": false,
+      "reasoning_format": "deepseek",
+      "log_verbosity": 4,
+      "note": "Local setup capacity only, not a paper hyperparameter. No prompt truncation or automatic CPU/model fallback. Real RCA context requirements have not been established."
+    },
+    "smoke_test": {
+      "seed": 42,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "max_tokens": 8192,
+      "note": "Explicit synthetic setup test settings, not author settings and not approved RCA inference parameters."
+    },
+    "logging": {
+      "directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1"
+    }
+  },
+  "experiments_authorized_by_this_change": false,
+  "verification_scope": "server startup, all 278 prompt admissions, one maximum-input real generation; no graph fitting/RCA/evaluation; keep existing transport timeout and no retries"
+}

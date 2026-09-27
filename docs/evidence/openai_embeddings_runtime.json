@@ -1,0 +1,55 @@
+{
+  "checked_utc": "20260922T160259Z",
+  "experiments_executed": false,
+  "model_api_calls": false,
+  "embeddings_generated": false,
+  "network_connections_denied": [],
+  "log_directory": "logs/openai_embeddings_runtime/20260922T160259Z",
+  "checks": {
+    "import": true,
+    "missing_key_is_separate_access_blocker": true,
+    "core_default_resolver_and_settings": true,
+    "model_not_overridden": true,
+    "sync_async_sdk_construction_and_reuse": true
+  },
+  "versions": {
+    "llama-index-embeddings-openai": "0.3.1",
+    "llama-index-core": "0.12.37",
+    "openai": "1.82.0",
+    "httpx": "0.28.1",
+    "pydantic": "2.10.6"
+  },
+  "adapter_source_sha256": {
+    "base.py": "b6e4a4ae4fb3039d450c2929cda61a882db705dcd3700e58d4726c5e97a08ccb",
+    "utils.py": "155a25c9b0503c53d8607ff38a77bd8e07fa793d109bc6c2195688657c4acdf8"
+  },
+  "missing_key_error": "\n******\nCould not load OpenAI embedding model. If you intended to use OpenAI, please check your OPENAI_API_KEY.\nOriginal error:\nNo API key found for OpenAI.\nPlease set either the OPENAI_API_KEY environment variable or openai.api_key prior to initialization.\nAPI keys can be found or created at https://platform.openai.com/account/api-keys\n\nConsider using embed_model='local'.\nVisit our documentation for more embedding options: https://docs.llamaindex.ai/en/stable/module_guides/models/embeddings.html#modules\n******",
+  "probe_credentials": "dummy string in this process only; no authentication request",
+  "observed_local_defaults": {
+    "model_name": "text-embedding-ada-002",
+    "embed_batch_size": 100,
+    "dimensions": null,
+    "max_retries": 10,
+    "timeout": 60.0,
+    "reuse_client": true,
+    "num_workers": null,
+    "additional_kwargs": {},
+    "api_base": "https://api.openai.com/v1",
+    "api_version": "",
+    "constructor_mode": "text_search",
+    "query_engine": "text-embedding-ada-002",
+    "text_engine": "text-embedding-ada-002"
+  },
+  "sdk_classes": [
+    "openai.OpenAI",
+    "openai.AsyncOpenAI"
+  ],
+  "success": true,
+  "official_source_unchanged": true,
+  "official_file_count": 43,
+  "limitations": [
+    "Object construction only; no embedding, HTTP request, authentication or real API response tested",
+    "Author adapter version, server model snapshot, tokenizer and numerical output remain unverified",
+    "Missing API credentials/access remain ACCESS-01; default model was observed, not selected or overridden"
+  ]
+}

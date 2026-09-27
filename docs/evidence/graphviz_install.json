@@ -1,0 +1,411 @@
+{
+  "started_utc": "20260924T120441708131Z",
+  "status": "PASS",
+  "choice": "B",
+  "author_equivalence": "UNCONFIRMED",
+  "recipe_sha256": "52b2474db4920ef3bd7cb0c234cbb4a2869fda9d88a34175b08b66aa0e53b4f5",
+  "implementation_sha256": "138a1fa8f7e655832b4554a1c6d3427b28cd6b3e12965224e6fc9776aad32d97",
+  "log_directory": "logs/setup/graphviz_20260924T120441708131Z",
+  "approved_packages": {
+    "graphviz": "2.42.2-9ubuntu0.1",
+    "libann0": "1.1.2+doc-9build1",
+    "libcdt5": "2.42.2-9ubuntu0.1",
+    "libcgraph6": "2.42.2-9ubuntu0.1",
+    "libgts-0.7-5t64": "0.7.6+darcs121130-5.2build1",
+    "libgvc6": "2.42.2-9ubuntu0.1",
+    "libgvpr2": "2.42.2-9ubuntu0.1",
+    "liblab-gamut1": "2.42.2-9ubuntu0.1",
+    "libpathplan4": "2.42.2-9ubuntu0.1"
+  },
+  "experiments_executed": false,
+  "model_api_calls": false,
+  "commands": [
+    {
+      "name": "apt_policy",
+      "argv": [
+        "apt-cache",
+        "policy",
+        "graphviz",
+        "libann0",
+        "libcdt5",
+        "libcgraph6",
+        "libgts-0.7-5t64",
+        "libgvc6",
+        "libgvpr2",
+        "liblab-gamut1",
+        "libpathplan4"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "simulate",
+      "argv": [
+        "apt-get",
+        "-s",
+        "--no-install-recommends",
+        "--no-remove",
+        "--no-upgrade",
+        "install",
+        "graphviz=2.42.2-9ubuntu0.1",
+        "libann0=1.1.2+doc-9build1",
+        "libcdt5=2.42.2-9ubuntu0.1",
+        "libcgraph6=2.42.2-9ubuntu0.1",
+        "libgts-0.7-5t64=0.7.6+darcs121130-5.2build1",
+        "libgvc6=2.42.2-9ubuntu0.1",
+        "libgvpr2=2.42.2-9ubuntu0.1",
+        "liblab-gamut1=2.42.2-9ubuntu0.1",
+        "libpathplan4=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_graphviz",
+      "argv": [
+        "apt-cache",
+        "show",
+        "graphviz=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_libann0",
+      "argv": [
+        "apt-cache",
+        "show",
+        "libann0=1.1.2+doc-9build1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_libcdt5",
+      "argv": [
+        "apt-cache",
+        "show",
+        "libcdt5=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_libcgraph6",
+      "argv": [
+        "apt-cache",
+        "show",
+        "libcgraph6=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_libgts-0.7-5t64",
+      "argv": [
+        "apt-cache",
+        "show",
+        "libgts-0.7-5t64=0.7.6+darcs121130-5.2build1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_libgvc6",
+      "argv": [
+        "apt-cache",
+        "show",
+        "libgvc6=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_libgvpr2",
+      "argv": [
+        "apt-cache",
+        "show",
+        "libgvpr2=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_liblab-gamut1",
+      "argv": [
+        "apt-cache",
+        "show",
+        "liblab-gamut1=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metadata_libpathplan4",
+      "argv": [
+        "apt-cache",
+        "show",
+        "libpathplan4=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "download_uris",
+      "argv": [
+        "apt-get",
+        "--print-uris",
+        "download",
+        "graphviz=2.42.2-9ubuntu0.1",
+        "libann0=1.1.2+doc-9build1",
+        "libcdt5=2.42.2-9ubuntu0.1",
+        "libcgraph6=2.42.2-9ubuntu0.1",
+        "libgts-0.7-5t64=0.7.6+darcs121130-5.2build1",
+        "libgvc6=2.42.2-9ubuntu0.1",
+        "libgvpr2=2.42.2-9ubuntu0.1",
+        "liblab-gamut1=2.42.2-9ubuntu0.1",
+        "libpathplan4=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "download",
+      "argv": [
+        "apt-get",
+        "download",
+        "graphviz=2.42.2-9ubuntu0.1",
+        "libann0=1.1.2+doc-9build1",
+        "libcdt5=2.42.2-9ubuntu0.1",
+        "libcgraph6=2.42.2-9ubuntu0.1",
+        "libgts-0.7-5t64=0.7.6+darcs121130-5.2build1",
+        "libgvc6=2.42.2-9ubuntu0.1",
+        "libgvpr2=2.42.2-9ubuntu0.1",
+        "liblab-gamut1=2.42.2-9ubuntu0.1",
+        "libpathplan4=2.42.2-9ubuntu0.1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "simulate_local",
+      "argv": [
+        "apt-get",
+        "-s",
+        "--no-install-recommends",
+        "--no-remove",
+        "--no-upgrade",
+        "install",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/graphviz_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libann0_1.1.2+doc-9build1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcdt5_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcgraph6_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgts-0.7-5t64_0.7.6+darcs121130-5.2build1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvc6_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvpr2_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/liblab-gamut1_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libpathplan4_2.42.2-9ubuntu0.1_amd64.deb"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "install",
+      "argv": [
+        "apt-get",
+        "-y",
+        "--no-install-recommends",
+        "--no-remove",
+        "--no-upgrade",
+        "install",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/graphviz_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libann0_1.1.2+doc-9build1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcdt5_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcgraph6_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgts-0.7-5t64_0.7.6+darcs121130-5.2build1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvc6_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvpr2_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/liblab-gamut1_2.42.2-9ubuntu0.1_amd64.deb",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libpathplan4_2.42.2-9ubuntu0.1_amd64.deb"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "dpkg_audit",
+      "argv": [
+        "dpkg",
+        "--audit"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "dot_version",
+      "argv": [
+        "/usr/bin/dot",
+        "-V"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "stage": "complete",
+  "package_metadata": {
+    "graphviz": {
+      "Package": "graphviz",
+      "Version": "2.42.2-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/graphviz/graphviz_2.42.2-9ubuntu0.1_amd64.deb",
+      "Size": "642420",
+      "SHA256": "be4e5b1b036babfb1663c095bc645c2fbab79dd57b213fc3b1ab0d48e810dd85"
+    },
+    "libann0": {
+      "Package": "libann0",
+      "Version": "1.1.2+doc-9build1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/a/ann/libann0_1.1.2+doc-9build1_amd64.deb",
+      "Size": "25480",
+      "SHA256": "88347025b6292517dc591fd6a51c28b6a91a46c999505e3e54677c99038074e1"
+    },
+    "libcdt5": {
+      "Package": "libcdt5",
+      "Version": "2.42.2-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/graphviz/libcdt5_2.42.2-9ubuntu0.1_amd64.deb",
+      "Size": "21614",
+      "SHA256": "3c49c2624e6a895d729bff5be16c96beeb1347e3282bc40f3d210c715fba07ef"
+    },
+    "libcgraph6": {
+      "Package": "libcgraph6",
+      "Version": "2.42.2-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/graphviz/libcgraph6_2.42.2-9ubuntu0.1_amd64.deb",
+      "Size": "44644",
+      "SHA256": "4555e20d8cd068de6343484c5bf825d03830c5048ccf56a9baec9638ca5815b2"
+    },
+    "libgts-0.7-5t64": {
+      "Package": "libgts-0.7-5t64",
+      "Version": "0.7.6+darcs121130-5.2build1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/gts/libgts-0.7-5t64_0.7.6+darcs121130-5.2build1_amd64.deb",
+      "Size": "160592",
+      "SHA256": "a6741ed94f3e786eaed0a9fcb69f641327cfe288af4f043e7036b5257e87fc48"
+    },
+    "libgvc6": {
+      "Package": "libgvc6",
+      "Version": "2.42.2-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/graphviz/libgvc6_2.42.2-9ubuntu0.1_amd64.deb",
+      "Size": "716230",
+      "SHA256": "dc674afb98d9b64699f63be3a4e92d4f3b563435ebfc70cbaec0c91b8f41fb48"
+    },
+    "libgvpr2": {
+      "Package": "libgvpr2",
+      "Version": "2.42.2-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/graphviz/libgvpr2_2.42.2-9ubuntu0.1_amd64.deb",
+      "Size": "186968",
+      "SHA256": "1a560080462b80ab56e0fe09af2abd52974a256e25b4f384b9be5872c1073c82"
+    },
+    "liblab-gamut1": {
+      "Package": "liblab-gamut1",
+      "Version": "2.42.2-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/graphviz/liblab-gamut1_2.42.2-9ubuntu0.1_amd64.deb",
+      "Size": "1886394",
+      "SHA256": "b9fa73d671d96b07360dd3b7a4d35814c8b892b5bf4b1e0945d3bc7937c9ee3d"
+    },
+    "libpathplan4": {
+      "Package": "libpathplan4",
+      "Version": "2.42.2-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/universe/g/graphviz/libpathplan4_2.42.2-9ubuntu0.1_amd64.deb",
+      "Size": "23992",
+      "SHA256": "8cff70c607271662df4719d2e2848731d8f23ab9108e79404066a6f93af9fd23"
+    }
+  },
+  "downloaded_packages": {
+    "graphviz": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/graphviz_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "be4e5b1b036babfb1663c095bc645c2fbab79dd57b213fc3b1ab0d48e810dd85",
+      "bytes": 642420
+    },
+    "libann0": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libann0_1.1.2+doc-9build1_amd64.deb",
+      "sha256": "88347025b6292517dc591fd6a51c28b6a91a46c999505e3e54677c99038074e1",
+      "bytes": 25480
+    },
+    "libcdt5": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcdt5_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "3c49c2624e6a895d729bff5be16c96beeb1347e3282bc40f3d210c715fba07ef",
+      "bytes": 21614
+    },
+    "libcgraph6": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcgraph6_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "4555e20d8cd068de6343484c5bf825d03830c5048ccf56a9baec9638ca5815b2",
+      "bytes": 44644
+    },
+    "libgts-0.7-5t64": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgts-0.7-5t64_0.7.6+darcs121130-5.2build1_amd64.deb",
+      "sha256": "a6741ed94f3e786eaed0a9fcb69f641327cfe288af4f043e7036b5257e87fc48",
+      "bytes": 160592
+    },
+    "libgvc6": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvc6_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "dc674afb98d9b64699f63be3a4e92d4f3b563435ebfc70cbaec0c91b8f41fb48",
+      "bytes": 716230
+    },
+    "libgvpr2": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvpr2_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "1a560080462b80ab56e0fe09af2abd52974a256e25b4f384b9be5872c1073c82",
+      "bytes": 186968
+    },
+    "liblab-gamut1": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/liblab-gamut1_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "b9fa73d671d96b07360dd3b7a4d35814c8b892b5bf4b1e0945d3bc7937c9ee3d",
+      "bytes": 1886394
+    },
+    "libpathplan4": {
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libpathplan4_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "8cff70c607271662df4719d2e2848731d8f23ab9108e79404066a6f93af9fd23",
+      "bytes": 23992
+    }
+  },
+  "added_system_packages": {
+    "graphviz": "2.42.2-9ubuntu0.1",
+    "libann0": "1.1.2+doc-9build1",
+    "libcdt5:amd64": "2.42.2-9ubuntu0.1",
+    "libcgraph6:amd64": "2.42.2-9ubuntu0.1",
+    "libgts-0.7-5t64:amd64": "0.7.6+darcs121130-5.2build1",
+    "libgvc6": "2.42.2-9ubuntu0.1",
+    "libgvpr2:amd64": "2.42.2-9ubuntu0.1",
+    "liblab-gamut1:amd64": "2.42.2-9ubuntu0.1",
+    "libpathplan4:amd64": "2.42.2-9ubuntu0.1"
+  },
+  "changed_or_removed_system_packages": {},
+  "python_package_count": 201,
+  "python_201_packages_preserved": true,
+  "official_37_files_preserved": true,
+  "recipe_preserved": true,
+  "dot": {
+    "path": "/usr/bin/dot",
+    "sha256": "da690d0c28520a98e311cdb3577c22953b5ccfbd9f9e4219a0d031a1f15961d6",
+    "reported_version": "dot - graphviz version 2.43.0 (0)"
+  },
+  "rendering": {
+    "official_function": "Utils/visualize.py:visualize_graph",
+    "input": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "png": "logs/setup/graphviz_20260924T120441708131Z/synthetic_graph.png",
+    "sha256": "3922c77e30224c993bab79ded6c428c9f09a30896c1a8b5b7fad0b9b822c380f",
+    "bytes": 16485,
+    "width": 405,
+    "height": 131,
+    "input_matrix_preserved": true,
+    "synthetic_only": true,
+    "python_wrappers": {
+      "pydot": "4.0.0",
+      "graphviz": "0.20.3"
+    }
+  },
+  "completed_utc": "2026-09-24T12:05:01.644578+00:00"
+}

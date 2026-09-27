@@ -1,20 +1,23 @@
-# TASK_003 - 공식 데이터 출처 및 자산 확보
+# TASK_003 - RCA 공식 입력 준비
 
 ## 목적
-저자가 안내한 원본 자료를 MATMCD_DATA에 출처별로 보관하고 입력 완전성을 확인한다.
+LEMMA-RCA를 공식 MATMCD 입력과 연결한다.
 
 ## 작업 항목
-- [x] 연속형 3개 벤치마크 CSV 및 정답 그래프 확보
-- [x] Asia/Child BIF 및 실제 샘플 공개 여부 확인
-- [x] LEMMA-RCA 원본 및 MATMCD 전처리 입력 확인
-- [x] 버전·URL·해시·예상 경로 기록
-- [ ] 저자 실제 Asia/Child CSV 및 MATMCD RCA 최종 입력 확보
+- [x] ZIP 10개·revision·URL·해시 확보
+- [x] 내부 구조와 최종 CSV 부재 조사
+- [x] 공식 전처리 자료 조사
+- [ ] 최종 CSV와 EVT·pod·metric·기간·열 순서 확보
 
 ## 확인 사항
-논문 실험 샘플과 원본 자료를 구분하며 누락 CSV를 임의 생성하지 않는다.
+배포명 Preprocessed와 MATMCD 최종 입력은 다르다. 기본값으로 재구성하지 않는다.
+
+저자에게 최종 입력·전처리 설정을 확인하는 일은 [TASK_018](TASK_018_author_clarifications.md)에 모았다. [TASK_019](TASK_019_provisional_rca_preprocessing_plan.md)의 구체안을 사용자가 승인하여 [TASK_020](TASK_020_apply_provisional_rca_preprocessing.md)에서 임시 입력을 준비한다. 실제 생성 결과는 해당 Task에 기록하며, 이 Task의 저자 원본 확보·동일성 확인과 구분한다.
 
 ## 결과
-CSV/GT 6개, Asia/Child BIF, LEMMA 공식 코드에 등장하는 5개 사례의 로그/메트릭 ZIP 10개 확보. 공개 LFS SHA256 검증 완료. `docs/ASSETS.md`, `docs/evidence/downloads.json` 참고. DWDClimate는 349행으로 논문 350행과 다르다. BIF 표본 seed와 RCA EVT→CSV 절차가 없어 원본 실행 입력 준비는 BLOCKED다. 샘플링·전처리를 임의로 수행하지 않았다.
+공개 코드의 5개 날짜에 해당하는 배포 원본 ZIP은 확보했으나 저자의 최종 CSV와 정확 전처리는 미확보다. 표 4 사례 선택·집계 대응도 확인해야 한다.
+
+2026-09-24: 별도 TASK_020의 승인 프로필로 임시 metric CSV 5개 생성·검증을 마쳤다. [실제 결과](../docs/PROVISIONAL_RCA_PREPROCESSING_RESULT.md)에 크기·pod 유지·로그 누락을 기록했다. 이 Task는 저자 원본 확보를 다루므로 BLOCKED를 유지하며, 임시 준비 완료와 구분한다. 원본 실행 입력에 자동 연결하지 않았다.
 
 ## 상태
 BLOCKED

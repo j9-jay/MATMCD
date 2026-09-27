@@ -1,0 +1,42 @@
+{
+  "checked_utc": "20260926T121159492235Z",
+  "status": "INTERRUPTED_WITHOUT_FINAL_RESPONSE",
+  "phase": "pod_log_summary",
+  "logs": "logs/setup/rca_real_rag_20260926T121159492235Z",
+  "cases": {
+    "Product_Review/20211203": {
+      "status": "INTERRUPTED",
+      "node_count": 219,
+      "required_generated_summaries": 154,
+      "completed_summaries": 44,
+      "fixed_notices": 12,
+      "current_node": "elasticsearch-operator-78fccf8bcb-m2g95",
+      "last_call_seconds": 28.108499849000054
+    }
+  },
+  "generation_attempts": 44,
+  "full_pipeline_ready": false,
+  "automatic_retries": 0,
+  "scientific_changes": [
+    "D07 user-approved log-only presence_penalty 0 to 1.5"
+  ],
+  "log_sampling_profile": "d07_log_presence_1_5_v1",
+  "result_scope": "full_case_real_RAG_integration_diagnostic",
+  "case": "Product_Review/20211203",
+  "external_observation": {
+    "observed_kst": "2026-09-26T21:32:23+09:00",
+    "completed_summaries": 44,
+    "request_records": 45,
+    "pending_request": 45,
+    "pending_started_utc": "2026-09-26T12:23:23.802705+00:00",
+    "last_resource_sample_utc": "2026-09-26T12:23:26.958235+00:00",
+    "process_check": "no check_rca_real_rag.py or llama-server process; exec session33980 unknown",
+    "termination_cause": "UNKNOWN",
+    "oom_for_this_run": "NOT_ESTABLISHED",
+    "rag_reached": false,
+    "CC_started": false,
+    "model_failure_not_inferred": true,
+    "automatic_restart": false,
+    "final_preservation_check": "not executed; runner did not finalize"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "checked_utc": "2026-09-23T15:34:07.153188+00:00",
+  "preparation_summary_sha256": "32cd76aceabcc3840503eb2075f8d509c1dbb06d2d3294c03899e0d116af48de",
+  "checks": {
+    "official_37_files_match_pinned_archive": true,
+    "LEMMA_source_preserved": true,
+    "recipe_and_implementation_match_run": true,
+    "default_input_mapping_empty": true,
+    "experiments_and_author_email_remain_TODO": true,
+    "runtime_preserved_201_packages": true
+  },
+  "cases": [
+    {
+      "system": "Product_Review",
+      "day": "20210517",
+      "preparation_status": "PREPARED_PROVISIONAL",
+      "input_ready": true,
+      "rows": 166325,
+      "retained_pods": 208,
+      "exact_raw_KPI": true,
+      "sorted_unique_times": true,
+      "output_hashes_valid": true,
+      "EVT_decisions_consistent": true,
+      "log_pair_matches": 109,
+      "missing_log_pairs": 99,
+      "log_input_ready": false,
+      "original_reader_check": {
+        "pandas_version": "2.2.3",
+        "options": {
+          "header": 0
+        },
+        "shape_and_columns_match": true,
+        "finite": true,
+        "exact_equal_to_roundtrip_reader": false,
+        "different_values": 22145236,
+        "maximum_absolute_difference": 3.637978807091713e-12,
+        "KPI_maximum_absolute_difference": 3.637978807091713e-12,
+        "source": "official/matmcd/Utils/data.py:load_Lemma_data pd.read_csv call; original path not changed"
+      },
+      "output_directory": "processed_data/lemma_rca_provisional_v1/Product_Review/20210517",
+      "outputs": {
+        "Product_Review_20210517.csv": {
+          "sha256": "d2005332d51fd6bcd77abbab7897a6d586ecd765ca678e95f2672616b3f461e6",
+          "bytes": 712904909
+        },
+        "timestamps.csv": {
+          "sha256": "714f4ee3449465991714baa1f41c5219641bb661bcb3eae0f8b539961227f856",
+          "bytes": 1829585
+        }
+      },
+      "manifest_sha256": "1c1bd679e344fa01593d2a316dfbc667d0d2eeef3ecc6348428218f0ac7c27c5"
+    },
+    {
+      "system": "Product_Review",
+      "day": "20210524",
+      "preparation_status": "PREPARED_PROVISIONAL",
+      "input_ready": true,
+      "rows": 176692,
+      "retained_pods": 207,
+      "exact_raw_KPI": true,
+      "sorted_unique_times": true,
+      "output_hashes_valid": true,
+      "EVT_decisions_consistent": true,
+      "log_pair_matches": 112,
+      "missing_log_pairs": 95,
+      "log_input_ready": false,
+      "original_reader_check": {
+        "pandas_version": "2.2.3",
+        "options": {
+          "header": 0
+        },
+        "shape_and_columns_match": true,
+        "finite": true,
+        "exact_equal_to_roundtrip_reader": false,
+        "different_values": 24130206,
+        "maximum_absolute_difference": 3.637978807091713e-12,
+        "KPI_maximum_absolute_difference": 3.637978807091713e-12,
+        "source": "official/matmcd/Utils/data.py:load_Lemma_data pd.read_csv call; original path not changed"
+      },
+      "output_directory": "processed_data/lemma_rca_provisional_v1/Product_Review/20210524",
+      "outputs": {
+        "Product_Review_20210524.csv": {
+          "sha256": "e3bdafa61718e9d6b6851707e765ab6f24dabc1692e723125208fb0b4514aa5a",
+          "bytes": 755065717
+        },
+        "timestamps.csv": {
+          "sha256": "109f1196949fd4f9c77a428be968ed0140f1fbb6be2290e0675518ff55859bb9",
+          "bytes": 1943622
+        }
+      },
+      "manifest_sha256": "1b0b776d1be4e26a82721841a38910f83cfd5b21ae388c2707298d94e1161c78"
+    },
+    {
+      "system": "Product_Review",
+      "day": "20211203",
+      "preparation_status": "PREPARED_PROVISIONAL",
+      "input_ready": true,
+      "rows": 51529,
+      "retained_pods": 218,
+      "exact_raw_KPI": true,
+      "sorted_unique_times": true,
+      "output_hashes_valid": true,
+      "EVT_decisions_consistent": true,
+      "log_pair_matches": 154,
+      "missing_log_pairs": 64,
+      "log_input_ready": false,
+      "original_reader_check": {
+        "pandas_version": "2.2.3",
+        "options": {
+          "header": 0
+        },
+        "shape_and_columns_match": true,
+        "finite": true,
+        "exact_equal_to_roundtrip_reader": false,
+        "different_values": 7416863,
+        "maximum_absolute_difference": 1.7763568394002505e-15,
+        "KPI_maximum_absolute_difference": 0.0,
+        "source": "official/matmcd/Utils/data.py:load_Lemma_data pd.read_csv call; original path not changed"
+      },
+      "output_directory": "processed_data/lemma_rca_provisional_v1/Product_Review/20211203",
+      "outputs": {
+        "Product_Review_20211203.csv": {
+          "sha256": "5ba4c4ba9e23d37d7dac38a7e68fabe037b81fe3443d0eb488091e89efdf79b5",
+          "bytes": 231493131
+        },
+        "timestamps.csv": {
+          "sha256": "d8186463cbe66093685be646fd0f79385ffc1091e696a7b7878cfa1fb4f3ad25",
+          "bytes": 566829
+        }
+      },
+      "manifest_sha256": "305bab6454854de47c3615f7faa3d4d4956d4da7b00f6d5913203d35abb58925"
+    },
+    {
+      "system": "Product_Review",
+      "day": "20220606",
+      "preparation_status": "PREPARED_PROVISIONAL",
+      "input_ready": true,
+      "rows": 107789,
+      "retained_pods": 228,
+      "exact_raw_KPI": true,
+      "sorted_unique_times": true,
+      "output_hashes_valid": true,
+      "EVT_decisions_consistent": true,
+      "log_pair_matches": 148,
+      "missing_log_pairs": 80,
+      "log_input_ready": false,
+      "original_reader_check": {
+        "pandas_version": "2.2.3",
+        "options": {
+          "header": 0
+        },
+        "shape_and_columns_match": true,
+        "finite": true,
+        "exact_equal_to_roundtrip_reader": false,
+        "different_values": 15800169,
+        "maximum_absolute_difference": 3.552713678800501e-15,
+        "KPI_maximum_absolute_difference": 1.1102230246251565e-16,
+        "source": "official/matmcd/Utils/data.py:load_Lemma_data pd.read_csv call; original path not changed"
+      },
+      "output_directory": "processed_data/lemma_rca_provisional_v1/Product_Review/20220606",
+      "outputs": {
+        "Product_Review_20220606.csv": {
+          "sha256": "d5de896e19dfb053f74ee9b47f5195b0a38b72c0cdca95f57b537293d6cd7a8b",
+          "bytes": 506395807
+        },
+        "timestamps.csv": {
+          "sha256": "af3ebe8cbf00c960e0681f725ae0141d5ac0bd37277e3fe5bfd5c28b904e54c8",
+          "bytes": 1185689
+        }
+      },
+      "manifest_sha256": "c41073bc06f2ec34b59c1de9dfb8577f793332492a6dcaf9999ed895fc71d956"
+    },
+    {
+      "system": "Cloud_Computing",
+      "day": "20231207",
+      "preparation_status": "PREPARED_PROVISIONAL",
+      "input_ready": true,
+      "rows": 79252,
+      "retained_pods": 196,
+      "exact_raw_KPI": true,
+      "sorted_unique_times": true,
+      "output_hashes_valid": true,
+      "EVT_decisions_consistent": true,
+      "log_pair_matches": 124,
+      "missing_log_pairs": 72,
+      "log_input_ready": false,
+      "original_reader_check": {
+        "pandas_version": "2.2.3",
+        "options": {
+          "header": 0
+        },
+        "shape_and_columns_match": true,
+        "finite": true,
+        "exact_equal_to_roundtrip_reader": false,
+        "different_values": 9702902,
+        "maximum_absolute_difference": 2.842170943040401e-14,
+        "KPI_maximum_absolute_difference": 2.842170943040401e-14,
+        "source": "official/matmcd/Utils/data.py:load_Lemma_data pd.read_csv call; original path not changed"
+      },
+      "output_directory": "processed_data/lemma_rca_provisional_v1/Cloud_Computing/20231207",
+      "outputs": {
+        "Cloud_Computing_20231207.csv": {
+          "sha256": "0752a85906b4811be9be089e69810133ebd79c3042358680a3a1582b350d55a4",
+          "bytes": 317797519
+        },
+        "timestamps.csv": {
+          "sha256": "63c3512c31e372cc147361d0f3b95405ee877455af8383d9e24d3baec0742606",
+          "bytes": 871782
+        }
+      },
+      "manifest_sha256": "b192dc67f5924dfe2175b9feda393564d5d58d08ba6d745e6b7a6e42b69e2105"
+    }
+  ],
+  "author_equivalence": "UNCONFIRMED",
+  "experiments_executed": false,
+  "API_called": false,
+  "checked_source_sha256": {
+    "scripts/prepare_provisional_rca.py": "9c9a8717425166f270642b05ad5a224976b4c0c22b7fe8f2e8098b96dde5eeb0",
+    "scripts/verify_provisional_rca.py": "35fb47856ab51ebdeeccb53550b82459d5c68e77ff6db0acdd69a5f76cca1871",
+    "scripts/inspect_rca_inputs.py": "1792870e3a6aabe836d43865e2ee9f58f40b4bd01bf59a8aba8d8c9ddeef98d2",
+    "scripts/project_paths.py": "e50f289fba38253fbe71c7e5c67824d35d93a73c766a05bc3506670e90899291",
+    "configs/paths.json": "56c634c0b7503dcecf0bf58509a2151aba20b6bd0dfa0c488036e4453cb8fd62",
+    "configs/upstream.json": "7060541331948a6e25c133a335ab2221e9011164b96adcdaed945104992e2d53",
+    "docs/evidence/downloads.json": "ca85752111dcca5fbf4b9f22cf9720acf1a12ea36b181c54aed59e8151a97728"
+  },
+  "all_checks_pass": true,
+  "prepared_case_count": 5,
+  "all_five_metric_inputs_ready": true
+}

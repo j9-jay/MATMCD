@@ -1,0 +1,14 @@
+{
+  "captured_utc": "20260926T061459160665Z",
+  "status": "SNAPSHOT_RECORDED",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.11.13",
+  "changes_applied": false,
+  "update_policy_changed": false,
+  "path": "/mnt/e/연구/MATMCD_DATA/logs/setup/rca_environment_20260926T061459160665Z/baseline.json",
+  "sha256": "ca534b472dcc971d69b6b6a49e95c4a5ea9b15854ff0b94ed14de50ce594afa6",
+  "system_package_count": 805,
+  "python_package_count": 201,
+  "official_file_count": 37,
+  "baseline_policy": "record_before_and_after_runs; update_control_unselected"
+}

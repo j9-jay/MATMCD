@@ -1,0 +1,54 @@
+{
+  "status": "APPLIED_AND_RUNNING_NOT_COMPLETED",
+  "checked_utc": "2026-09-26T14:41:18.185941+00:00",
+  "run_directory": "runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z",
+  "profile": {
+    "profile_id": "pr20211203_oracle30_domain_presence1_5_v1",
+    "authorization": "USER_APPROVED_DIAGNOSTICS_THEN_UNIFORM_DOMAIN_RESTART",
+    "user_instruction": "presence_penalty=1.5 값은 적절한 값이야? 맞으면 바로 적용해서 처음부터 다시 진행해줘. 옵션 변경 내용은 또 따로 기록해놔.",
+    "base_profile": "pr20211203_oracle30_matmcd_v1",
+    "phase": "MATMCD_domain",
+    "overrides": {
+      "presence_penalty": 1.5
+    },
+    "base_presence_penalty": 0.0,
+    "constraints_presence_penalty": 0.0,
+    "diagnostic_call_numbers": [
+      41,
+      1,
+      15
+    ],
+    "failed_run": "runs/matmcd_oracle30_pr20211203_v1/20260926T135543690567Z",
+    "completed_stages_parent": "runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z",
+    "review_receipt": "docs/evidence/rca_domain_presence_review_20260926.json",
+    "restart_all_domain_pairs": 930,
+    "reuse_old_domain_responses": false,
+    "reuse_diagnostic_responses": false,
+    "automatic_retries": 0,
+    "paper_equivalence": false
+  },
+  "first_two_actual_requests": [
+    {
+      "call": 1,
+      "request_equal_except_presence_penalty": true,
+      "new_call_sha256": "9a388ef73df4a9db6806cc830be8429e14894b05a80a488b863ab29d17b52eee",
+      "output_tokens": 1573,
+      "seconds": 24.864437901000002
+    },
+    {
+      "call": 2,
+      "request_equal_except_presence_penalty": true,
+      "new_call_sha256": "14ded0bdb211ed98c0fa00c219e82180f3e760fc0ca2a4609d4bb7037b806196",
+      "output_tokens": 1414,
+      "seconds": 19.655963439999994
+    }
+  ],
+  "completed_at_check": 4,
+  "pending_at_check": 1,
+  "failed_at_check": 0,
+  "result_exists": false,
+  "scripts_and_configs_unchanged_since_launch": true,
+  "lineage_sha256": "321d4089fe2316c63b1bc03b1a10a5cdafec5cc621b5ad9063ea75408d2e2f57",
+  "automatic_monitor": "matmcd-30-pod ACTIVE; 10 minutes; notify only completion/actionable failure",
+  "final_matmcd_rank_available": false
+}

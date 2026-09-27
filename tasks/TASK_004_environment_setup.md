@@ -1,20 +1,19 @@
-# TASK_004 - 원본 의존성 환경 구성
+# TASK_004 - RCA 공통 의존성 환경 구성
 
 ## 목적
-공식 Python 3.11 및 requirements.txt의 버전을 유지하여 설치 가능성을 확인한다.
+공식 Python·requirements를 유지한 RCA 실행 환경을 준비한다.
 
 ## 작업 항목
-- [x] Windows·GPU·메모리·WSL 확인
-- [x] WSL Python 3.11 준비
-- [x] requirements.txt 무변경 설치
-- [x] 패키지 일관성 및 API 호출 없는 import 검사
-- [ ] 누락 패키지의 저자 사용 버전 및 Graphviz binary 확보
+- [x] WSL·GPU 확인 및 Python 3.11.13 구성
+- [x] 공식 140개 pin 설치
+- [x] 승인된 Chroma·lxml·embedding 어댑터 추가·점검
+- [x] system Graphviz 설치안 승인·설치·검증
 
 ## 확인 사항
-저자의 Python 패치 버전, 운영체제 상세 버전 및 하드웨어는 미공개다. 설치를 위해 의존성을 바꾸지 않는다.
+저자 OS·Python 패치·Graphviz 버전은 미공개다. RISK-001~003은 현재 설치 Blocker로 재분류하지 않는다. Graphviz B안 설치는 TASK_021, A안의 저자 버전 확인·전환 검토는 TASK_022로 분리한다.
 
 ## 결과
-Python 3.11.13 격리 환경에 원본 140개 pin 일치, 총 141개 패키지 설치 및 uv pip check 통과. 핵심/causal/agent import와 CUDA 12.6 GPU 인식 통과. chromadb, lxml, llama-index-embeddings-openai 및 Graphviz dot이 없어 전체 실행 환경은 BLOCKED다. 알려지지 않은 버전을 임의 추가하지 않았다. 로그와 freeze, `docs/evidence/setup_audit.json`에 실제 증거를 보존했다.
+2026-09-24: Python 패키지 201개를 유지하면서 [TASK_021](TASK_021_install_system_graphviz.md)의 Graphviz B안 설치·PNG 검증을 완료했다. 시스템 패키지 9개 추가, 기존 시스템 패키지 변경·삭제 0개, 공식 소스 37개 보존을 확인했다. 이 Task의 의존성 구성은 DONE이며 저자 환경 동일성은 [TASK_022](TASK_022_graphviz_author_version.md)와 TASK_018에서 계속 확인한다. 전체 RCA 실행 준비 완료를 의미하지 않는다.
 
 ## 상태
-BLOCKED
+DONE

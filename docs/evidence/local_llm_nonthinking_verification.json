@@ -1,0 +1,188 @@
+{
+  "timestamp_utc": "2026-09-25T04:45:57.171245+00:00",
+  "authorization": "2026-09-25 user requested non-thinking mode and verification",
+  "status": "NONTHINKING_APPLIED_RE_FORMAT_BLOCKED",
+  "runtime_result_status": "FAILED",
+  "previous_log_directory": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260925T042550544006Z_verification",
+  "current_log_directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T044215843311Z_verification",
+  "before_change_snapshot_directory": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260925T0439333771312Z_before_nonthinking",
+  "config_changes": [
+    {
+      "path": "approved_on",
+      "old": "2026-09-24",
+      "new": "2026-09-25"
+    },
+    {
+      "path": "logging.directory",
+      "old": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1",
+      "new": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1"
+    },
+    {
+      "path": "model.server_alias",
+      "old": "qwen35-4b-q5km-thinking",
+      "new": "qwen35-4b-q5km-nonthinking"
+    },
+    {
+      "path": "profile",
+      "old": "qwen35_4b_q5km_thinking_provisional_v1",
+      "new": "qwen35_4b_q5km_nonthinking_provisional_v1"
+    },
+    {
+      "path": "server.thinking",
+      "old": true,
+      "new": false
+    }
+  ],
+  "request_comparisons": [
+    {
+      "old_request_index": 1,
+      "new_request_index": 1,
+      "messages_and_sampling_and_seed_and_max_tokens_equal": true,
+      "request_differences_only": [
+        "model alias",
+        "extra_body.chat_template_kwargs.enable_thinking"
+      ],
+      "previous_completion_tokens": 350,
+      "current_completion_tokens": 4,
+      "previous_prompt_tokens": 41,
+      "current_prompt_tokens": 43
+    },
+    {
+      "old_request_index": 2,
+      "new_request_index": 2,
+      "messages_and_sampling_and_seed_and_max_tokens_equal": true,
+      "request_differences_only": [
+        "model alias",
+        "extra_body.chat_template_kwargs.enable_thinking"
+      ],
+      "previous_completion_tokens": 8192,
+      "current_completion_tokens": 5,
+      "previous_prompt_tokens": 222,
+      "current_prompt_tokens": 224
+    },
+    {
+      "old_request_index": 3,
+      "new_request_index": 4,
+      "messages_and_sampling_and_seed_and_max_tokens_equal": true,
+      "request_differences_only": [
+        "model alias",
+        "extra_body.chat_template_kwargs.enable_thinking"
+      ],
+      "previous_completion_tokens": 3719,
+      "current_completion_tokens": 216,
+      "previous_prompt_tokens": 376,
+      "current_prompt_tokens": 378
+    }
+  ],
+  "same_messages_note": "Rendered prompts are 2 tokens longer in non-thinking mode due to the model template; user and system message strings are unchanged.",
+  "environment_overrides_preserved": true,
+  "server_reasoning": "off",
+  "enable_thinking": false,
+  "reasoning_budget_4096_proposal_applied": false,
+  "responses": [
+    {
+      "case": "arithmetic",
+      "response_index": 1,
+      "finish_reason": "stop",
+      "thinking_characters": 0,
+      "final_content_characters": 3,
+      "prompt_tokens": 43,
+      "completion_tokens": 4,
+      "generation_seconds": 0.041615,
+      "separator_count": null,
+      "double_newline_chunks_per_part": null
+    },
+    {
+      "case": "yes_no_x_to_y",
+      "response_index": 2,
+      "finish_reason": "stop",
+      "thinking_characters": 0,
+      "final_content_characters": 5,
+      "prompt_tokens": 224,
+      "completion_tokens": 5,
+      "generation_seconds": 0.072407,
+      "separator_count": null,
+      "double_newline_chunks_per_part": null
+    },
+    {
+      "case": "yes_no_y_to_x",
+      "response_index": 3,
+      "finish_reason": "stop",
+      "thinking_characters": 0,
+      "final_content_characters": 4,
+      "prompt_tokens": 224,
+      "completion_tokens": 5,
+      "generation_seconds": 0.050048999999999996,
+      "separator_count": null,
+      "double_newline_chunks_per_part": null
+    },
+    {
+      "case": "RE_x_to_y",
+      "response_index": 4,
+      "finish_reason": "stop",
+      "thinking_characters": 0,
+      "final_content_characters": 918,
+      "prompt_tokens": 378,
+      "completion_tokens": 216,
+      "generation_seconds": 2.338203,
+      "separator_count": 1,
+      "double_newline_chunks_per_part": [
+        2,
+        2
+      ]
+    },
+    {
+      "case": "RE_y_to_x",
+      "response_index": 5,
+      "finish_reason": "stop",
+      "thinking_characters": 0,
+      "final_content_characters": 1266,
+      "prompt_tokens": 378,
+      "completion_tokens": 291,
+      "generation_seconds": 3.1082710000000002,
+      "separator_count": 0,
+      "double_newline_chunks_per_part": [
+        2
+      ]
+    }
+  ],
+  "yes_no_original_parser_matrix": [
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      -1
+    ]
+  ],
+  "RE_first_direction_parsed": true,
+  "RE_second_direction_error": "IndexError: list index out of range at original ConstrainAgent.py:891",
+  "RE_second_direction_cause": "No --- separator; G/P are separated by single newlines. Double-newline chunks start with G1 and G2, so the original parser collects no G/P pairs.",
+  "normalization_or_original_parser_modification": false,
+  "scripts": {
+    "local_llm_runtime.py": {
+      "before_sha256": "f8fb0e2eff8c1fe117048f3bdb4ef8406e5b084fc86fc19863e031e152edd5ac",
+      "after_sha256": "a6bbbcecbf5ee091d3f417af2f9f4cad817a0d597ba066432865d8d126bcaa9d"
+    },
+    "local_llm_client.py": {
+      "before_sha256": "ecfe24dbf5f63ae07e3291edacd5bc96cc08d3e054ba117a2237de5dc3c9a1b1",
+      "after_sha256": "1ce86e08b2d5fcb057d724802f93aae7ca9bb1865baf52a805fb07dcd616a7a2"
+    },
+    "check_local_llm_runtime.py": {
+      "before_sha256": "ad2bcf1834dedf0067c2fefea2ac8b7108c9e8cad910ea8a3e5e9878bb7fcfbd",
+      "after_sha256": "af208ccb7072ce9b5eb3dd7eb7b96e64d9b5e502efc2c6e396e23215e2809a40"
+    }
+  },
+  "prior_failure_archived": true,
+  "os_changes_since_previous_audit": {},
+  "gpu_peak_total_used_mib": 4985,
+  "official_37_files_preserved": true,
+  "python_201_packages_preserved": true,
+  "system_packages_preserved_within_run": true,
+  "server_stopped": true,
+  "synthetic_local_generation_calls": 5,
+  "experiments_executed": false,
+  "extra_inference_after_verification": false,
+  "scope_note": "Synthetic format compatibility, not full RCA integration or an RCA accuracy evaluation."
+}

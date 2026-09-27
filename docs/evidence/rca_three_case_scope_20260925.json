@@ -1,0 +1,217 @@
+{
+  "checked_utc": "2026-09-25T12:57:04.077032+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "exact_user_selected_cases_and_order",
+      "passed": true
+    },
+    {
+      "name": "selected_only_from_shuffled_metadata",
+      "passed": true
+    },
+    {
+      "name": "missing_active_case_fails",
+      "passed": true
+    },
+    {
+      "name": "duplicate_metadata_fails",
+      "passed": true
+    },
+    {
+      "name": "stale_excluded_csv_mapping_fails",
+      "passed": true
+    },
+    {
+      "name": "stale_excluded_evidence_mapping_fails",
+      "passed": true
+    },
+    {
+      "name": "historical_manifest_preserved:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:Product_Review_20210517.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:timestamps.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_D01_plan_preserved:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "D01_policy_unchanged:Product_Review/20210517",
+      "passed": true
+    },
+    {
+      "name": "historical_manifest_preserved:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:Product_Review_20210524.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:timestamps.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_D01_plan_preserved:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "D01_policy_unchanged:Product_Review/20210524",
+      "passed": true
+    },
+    {
+      "name": "historical_manifest_preserved:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:Product_Review_20211203.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:timestamps.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_D01_plan_preserved:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "D01_policy_unchanged:Product_Review/20211203",
+      "passed": true
+    },
+    {
+      "name": "historical_manifest_preserved:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:Product_Review_20220606.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:timestamps.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_D01_plan_preserved:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "D01_policy_unchanged:Product_Review/20220606",
+      "passed": true
+    },
+    {
+      "name": "historical_manifest_preserved:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:Cloud_Computing_20231207.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_asset_present_same_size:timestamps.csv",
+      "passed": true
+    },
+    {
+      "name": "historical_D01_plan_preserved:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "D01_policy_unchanged:Cloud_Computing/20231207",
+      "passed": true
+    },
+    {
+      "name": "original_preprocessing_recipe_preserved",
+      "passed": true
+    },
+    {
+      "name": "original_preprocessing_implementation_preserved",
+      "passed": true
+    },
+    {
+      "name": "changed_script_syntax",
+      "passed": true
+    },
+    {
+      "name": "D01_checks_pass_for_selected_cases",
+      "passed": true
+    },
+    {
+      "name": "selected_candidate_counts",
+      "passed": true
+    },
+    {
+      "name": "D01_report_matches_current_scope",
+      "passed": true
+    },
+    {
+      "name": "D01_checked_script_current:rca_log_evidence",
+      "passed": true
+    },
+    {
+      "name": "D01_checked_script_current:check_rca_log_evidence",
+      "passed": true
+    }
+  ],
+  "active_cases": [
+    "Product_Review/20211203",
+    "Product_Review/20220606",
+    "Cloud_Computing/20231207"
+  ],
+  "excluded_cases": [
+    "Product_Review/20210517",
+    "Product_Review/20210524"
+  ],
+  "case_stats": [
+    {
+      "case": "Product_Review/20211203",
+      "log_bytes": 4189235721,
+      "largest_file_bytes": 1162726915,
+      "exact_pairs": 154,
+      "missing_pods": 64
+    },
+    {
+      "case": "Product_Review/20220606",
+      "log_bytes": 6633886191,
+      "largest_file_bytes": 1576968813,
+      "exact_pairs": 148,
+      "missing_pods": 80
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "log_bytes": 4625021635,
+      "largest_file_bytes": 1238134721,
+      "exact_pairs": 124,
+      "missing_pods": 72
+    }
+  ],
+  "total_log_bytes": 15448143547,
+  "largest_file_bytes": 1576968813,
+  "D01_validation": "docs/evidence/rca_log_policy_20260925T125049357248Z.json",
+  "D02_reader_change_approved": false,
+  "experiments_executed": false,
+  "inference_calls": 0,
+  "assets_deleted": false,
+  "excluded_asset_check": "Existing metadata hashes and file presence/sizes only; excluded CSV/log bodies not reread.",
+  "config_sha256": {
+    "scope.json": "32162d44645947aa81e99b5b2a58d21af98732f5e32d79e0fb196af6c9980eaf",
+    "inputs.json": "de78811f93f869897c92a1c1e7092c9d75b22feb1e28af22dee024bb3d3859e2",
+    "rca_log_policy.json": "23515529939ba2547979b2728c108db62ded94eea313d68b8b81803f076b87e1"
+  },
+  "scripts_sha256": {
+    "rca_case_scope.py": "7edebb5a91b55c7a7041f45d767349bf485689c291f9c9486634dd1a7860a6c7",
+    "rca_log_evidence.py": "09b3c355eeec4bdd159a4b69cadfbcaef8911a9853b300ce14347d33fb189b00",
+    "check_rca_log_evidence.py": "b5bcc8e8c1c2e8541f9bd74fa012e3a84254934209623886e7de48d14040bc07",
+    "connect_rca_inputs.py": "1524df14670aedf63ca6959709e6fed29bf07f2d2696a5a7e06f152809b431e1",
+    "prepare_workspace.py": "b3ff5bc89d2d580706538c66f39ad2a04ed6068bb96ad1b87386c89a4be2a2d5",
+    "audit_setup.py": "c3cf1ca59750704061cf40fc03a2d786c6cfc6243c6afeef23a6ddf4c96fe72a",
+    "audit_rca_readiness.py": "709c86b9166747f938fd56b12e31c081da57233b8b05dcb29c6fc9b10e023b4b",
+    "verify_provisional_rca.py": "df342fc766ee52837a14ce605dc0f9084402356983926f2751be653439830d45"
+  }
+}

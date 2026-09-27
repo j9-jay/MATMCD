@@ -1,0 +1,294 @@
+{
+  "timestamp_utc": "2026-09-24T12:51:26.416821+00:00",
+  "status": "INSTALLED_NOT_YET_RUNTIME_VERIFIED",
+  "profile": "qwen35_4b_q5km_thinking_provisional_v1",
+  "files": [
+    {
+      "path": "raw_downloads/github_ggml_org_llama_cpp_b11146/llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11146/llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "size_bytes": 168920581,
+      "sha256": "c2ab9e19838513ff69d1af8d999ad717dd3c7ee4714ac04c7ed5ab9077c50e4e"
+    },
+    {
+      "path": "raw_downloads/github_ggml_org_llama_cpp_b11146/cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11146/cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "size_bytes": 594373356,
+      "sha256": "1466daea60aad1144819e151b2bae19d54556cf1da6c129c4f55a5ded2637c25"
+    },
+    {
+      "path": "raw_downloads/github_ggml_org_llama_cpp_b11146/server_README.md",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/7fe450e19305b828c199d602c23a8337aaa1f03b/tools/server/README.md",
+      "size_bytes": 106415,
+      "sha256": "b45beb0842fcc98709b7df26d22da93db5f73f88386f0a6a9d6c18eac522b024"
+    },
+    {
+      "path": "raw_downloads/github_ggml_org_llama_cpp_b11146/LICENSE",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/7fe450e19305b828c199d602c23a8337aaa1f03b/LICENSE",
+      "size_bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M/Qwen3.5-4B-Q5_K_M.gguf",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/e87f176479d0855a907a41277aca2f8ee7a09523/Qwen3.5-4B-Q5_K_M.gguf",
+      "size_bytes": 3143656608,
+      "sha256": "8814232b85594dcd46c50e5b8b29324a7efe9e746edbe8a3d1df3d3fce7aad39"
+    },
+    {
+      "path": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M/QUANTIZATION_README.md",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/e87f176479d0855a907a41277aca2f8ee7a09523/README.md",
+      "size_bytes": 78906,
+      "sha256": "28546f5fc4f22ee1b3f17b908957f17fcfa66174032136265bdb27f404bc1e6c"
+    },
+    {
+      "path": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M/BASE_MODEL_README.md",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/README.md",
+      "size_bytes": 77661,
+      "sha256": "1406be1b6b8fd8a6545870da516912804756593628a1d0fb0a7965211e82a7bb"
+    },
+    {
+      "path": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M/BASE_MODEL_CONFIG.json",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/config.json",
+      "size_bytes": 3161,
+      "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+    }
+  ],
+  "executable": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-server",
+  "executable_sha256": "376626f953efd7bbf16dee112747196d2b1de26717bcd1d37e203340dc5c043c",
+  "library_directories": [
+    "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/cuda/cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64",
+    "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146"
+  ],
+  "installed_files": [
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/cuda/.extracted_sha256",
+      "sha256": "c5e7e516ea72138407242f076ea994ab171661212c53579f6ca4eac73c5b1979"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/cuda/cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64/libcublas.so.12",
+      "sha256": "18a5df540d156e9aff0363776fefab7884b614f122847b51c3eb1da772048e5c"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/cuda/cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64/libcublasLt.so.12",
+      "sha256": "974927b9af78cadc0412ea3ab296da791af02c2dd0de5a35b5f0fbb8dc5d0a4d"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/cuda/cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64/libcudart.so.12",
+      "sha256": "c3a75b33af334a3486d197dbd1584a2985183ba4688d237a2be5f2f679329920"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/.extracted_sha256",
+      "sha256": "e3f2bcbab294ad71dfdfcc4c9f77094a57fba405ed73cb1585721209995c0c13"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/LICENSE",
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/ggml-rpc-server",
+      "sha256": "a8b96f245354a1558e6c893113f865034effbe18a9c4a1ef18d80d586cbae3e7"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-base.so.0.25.1",
+      "sha256": "506f072c822b29c043ab46b80fa1afeb0fa5863137edce760c8516f30a742b5e"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-alderlake.so",
+      "sha256": "616d0e985c0e7217f8b551f5c9e8b5fef1dc109472ccd5038590806c0528466f"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-cannonlake.so",
+      "sha256": "9fed6048507ef18488c51587bbe56a9b1a33bec2a334524cb7a4990ab908a59d"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-cascadelake.so",
+      "sha256": "168e9d6df777387eed3ba15c6d7c72ad3c1501adc660e495e7d44a9d05d3b849"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-cooperlake.so",
+      "sha256": "6413f91571ed6ecda2061310ed27df5e7578f605e777bd9a6d7ea591dd92e3be"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-haswell.so",
+      "sha256": "0234169a7da61b7a7092727d554d1baf7d409e9013b9df037168a64ec7aa1883"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-icelake.so",
+      "sha256": "508fd313d97809f1e9d0f5c60608276f9010e0b3235890f453295e380783799c"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-ivybridge.so",
+      "sha256": "191a0f95a3b6cecdb95b6f06a68563da8af15fa8ed6012626e52fe74f3327d2d"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-piledriver.so",
+      "sha256": "362cd93cc185fa62b17fe77cc0e1b6cda0ad41ea0693c7739f2f0a2e18cc44dd"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-sandybridge.so",
+      "sha256": "783eee5a08afa49712226f1dd241149166f9d4e432e434a5720c98e368c46544"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-sapphirerapids.so",
+      "sha256": "cc772c7ff9804dff70f642c3d44bf134eeefe04278053d80f845252e37ec95f5"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-skylakex.so",
+      "sha256": "47bd99c6355365b8500c6b3fc59b7ee17691779e38b02bc1068a8b1cb6b3e330"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-sse42.so",
+      "sha256": "a0254292acee05ebfde14fd54a5a73e4ff1a195a8b01811698b28d6d74e09ac0"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-x64.so",
+      "sha256": "207643da8cc5ed46a0e0218deced5207236a1f2bafb0497b2f6be7346de6b67d"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cpu-zen4.so",
+      "sha256": "b4ebb2deb0b3d9f0af03484df73a58064d0c3f24c36f23455d9271675b7f35b0"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-cuda.so",
+      "sha256": "be441d96c4f86cf8cf5c86b3f8d341c45cdc48a9a6b9d32f4c75fdef12baf8d7"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml-rpc.so",
+      "sha256": "4934f29d4304399997668f571d37ae91c49a255d17793da9efa729f17d869d6e"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libggml.so.0.25.1",
+      "sha256": "c267dbbf8bf1a49254c780ab3ed6f5918eb1f0ce2b59d008c866815174765162"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-batched-bench-impl.so",
+      "sha256": "c27d1038e73add8d44a6b7e2b462aeb77665b1f02157c368f890671ed0b03460"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-bench-impl.so",
+      "sha256": "f4465d15c4d1fb9fdfcd98447a0028d62fcbd31cd31095c7910bb80ebf9d342f"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-cli-impl.so",
+      "sha256": "a5563df8b9a0d6897a92e00e4f68d0b10b311bf510c3739b02d175c45b15193a"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-common.so.0.5.0",
+      "sha256": "6d7e24f7ff243f3355d611a9b49f7094913de32f85dd7ac2468dcd7955c5e341"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-completion-impl.so",
+      "sha256": "9a19e989d805851f3dee3b3541ae80c629a5b20b87f07349912e3d26b9038143"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-fit-params-impl.so",
+      "sha256": "144b5ff358b4bb9e98f60b13dcb972edb0f0fc146efe071d85fee3ab88b6fdb2"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-perplexity-impl.so",
+      "sha256": "8e2e592542c5bdbd45e948e8001778024ea9a7bb9ee7d354ee02dd224ef33d17"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-quantize-impl.so",
+      "sha256": "d410a2ca89fd4cc69727afe5e50a49e7bcb708bc530f5041bb2efaa430e264c6"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama-server-impl.so",
+      "sha256": "03665970e031d28b81ccc8492a42db2d2149155fa3e82b75fb51da0e8eaeb2a7"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libllama.so.0.5.0",
+      "sha256": "32f17bd151363e8eba07ad30deb77bcbfe415372bbf1b719dd428f3c217cdedc"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/libmtmd.so.0.5.0",
+      "sha256": "ddb590d3364f3d0a57fbd6b72aaf872d64408b10c94ed4b296aff5a111f2a4e3"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama",
+      "sha256": "b71a4570aeee01f66005ecce9ec4a72432a3aa16780d6e9111b27c28558b0bba"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-batched-bench",
+      "sha256": "7859f175883f9c37443f6e5f1e07425f4b5885031d90ebacb4c1e97e60d8788c"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-bench",
+      "sha256": "0ba2143ede18625779b851a93e9b9c36f4f83e5c0321b08e7e3c0ee9c11852f5"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-cli",
+      "sha256": "2c20bab28be3e6f1c1c3d01afd5ebe98c7995aeacdb56376a1223e4174b014b8"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-completion",
+      "sha256": "15472995c69d23fd6350f84b1fb73156698bab77b20438b617bcd8e1e9a9a11f"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-fit-params",
+      "sha256": "140a1326c0556d44fb96fad5fed3d1910e28525911c57676f5ff0fd11923265e"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-gemma3-cli",
+      "sha256": "b97e6722bf5d263b68e0f25dd6480d44f2e12ec752fc80204600a82e2d773372"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-gguf-split",
+      "sha256": "d2a649c9622343682b22bbc55c3cd6007304a518031e1970a2ff95b4b9fdaf09"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-imatrix",
+      "sha256": "9a33346ae54f0c208fb5daec20243f5e5afa5707a2adbbb56c4fa4157596e978"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-llava-cli",
+      "sha256": "b97e6722bf5d263b68e0f25dd6480d44f2e12ec752fc80204600a82e2d773372"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-minicpmv-cli",
+      "sha256": "b97e6722bf5d263b68e0f25dd6480d44f2e12ec752fc80204600a82e2d773372"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-mtmd-cli",
+      "sha256": "b0bf329937401af750d090d688aff2744560d35bf9634bc9a3d4097706cbf38f"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-mtmd-debug",
+      "sha256": "a11cb59d47693906aa14000a414ff9f8c6d8a5088812248cc825f8ef44a4cb16"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-perplexity",
+      "sha256": "92594986686a4bbe23a2834695792ce32f8b18b9d57bf3c50e0ac87aba715fdd"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-quantize",
+      "sha256": "36378edfc401e9be214a7d29db9980d7958e52d7396d5461d04787293eee2616"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-qwen2vl-cli",
+      "sha256": "b97e6722bf5d263b68e0f25dd6480d44f2e12ec752fc80204600a82e2d773372"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-results",
+      "sha256": "0c3d8856e030c5b6483242bf20f8393005433d258109d78e1d409c79a6d1c28b"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-server",
+      "sha256": "376626f953efd7bbf16dee112747196d2b1de26717bcd1d37e203340dc5c043c"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-tokenize",
+      "sha256": "cc24363b8949439abda3075cec81161624c0145f069a98c9b307260db1551dc7"
+    },
+    {
+      "path": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8/server/llama-b11146/llama-tts",
+      "sha256": "92e1716995a0647529ed53e1a6664827c2c669a8eda16101d8e8cdf485450fe0"
+    }
+  ],
+  "model_calls": 0,
+  "paid_api_calls": 0,
+  "experiments_executed": false,
+  "installer_calls_python_package_manager": false,
+  "installer_calls_system_package_manager": false,
+  "system_package_stability_during_download": "NOT_MEASURED; background unattended-upgrade observed later, see local_llm_system_drift.json",
+  "metadata_correction": "The original flags described installer actions, not a before/after OS measurement. Original manifest preserved in external logs/installation_manifest_before_system_drift_correction.json. Model, runtime, URLs and file hashes are unchanged."
+}

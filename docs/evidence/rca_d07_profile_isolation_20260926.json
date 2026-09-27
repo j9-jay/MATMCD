@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "tests": [
+    "log-only override",
+    "normal exit restores same original sampling object",
+    "exception restores original sampling",
+    "four changed scripts parse"
+  ],
+  "model_calls": 0,
+  "base_sampling": {
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0
+  }
+}

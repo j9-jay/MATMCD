@@ -1,0 +1,31 @@
+{
+  "checked_utc": "20260926T100603005620Z",
+  "status": "BLOCKED_REAL_RAG",
+  "phase": "pod_log_summary",
+  "logs": "logs/setup/rca_real_rag_20260926T100603005620Z",
+  "cases": {
+    "Product_Review/20211203": {
+      "status": "FAILED",
+      "node_count": 219,
+      "required_generated_summaries": 154,
+      "completed_summaries": 148,
+      "fixed_notices": 58,
+      "current_node": "thanos-querier-577f4888f9-f9g6q",
+      "last_call_seconds": 7.782436708000205
+    }
+  },
+  "generation_attempts": 149,
+  "full_pipeline_ready": false,
+  "automatic_retries": 0,
+  "scientific_changes": [],
+  "result_scope": "full_case_real_RAG_integration_diagnostic",
+  "case": "Product_Review/20211203",
+  "failed_phase": "pod_log_summary",
+  "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_rca_real_rag.py\", line 95, in main\n    text = client.inquire_LLMs(message[\"prompt\"], message[\"system_prompt\"], message[\"temperature\"])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/local_llm_client.py\", line 28, in inquire_LLMs\n    return self.inquire_messages(\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/rca_local_client.py\", line 37, in inquire_messages\n    content = super().inquire_messages(messages, temperature=temperature)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/local_llm_client.py\", line 48, in inquire_messages\n    raise RuntimeError(f\"Incomplete local response: finish_reason={choice.finish_reason}; no retry or truncation workaround\")\nRuntimeError: Incomplete local response: finish_reason=length; no retry or truncation workaround\n",
+  "preservation": {
+    "official_sources": true,
+    "python_packages": true,
+    "configs": true
+  },
+  "script_sha256": "1cc898a17bee3c9fa32b2fb8f13d09eebb46a0ed6d332d2307fb55f4f7287216"
+}

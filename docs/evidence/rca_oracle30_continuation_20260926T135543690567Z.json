@@ -1,0 +1,12 @@
+{
+  "status": "FAILED",
+  "started_utc": "2026-09-26T13:55:45.651612+00:00",
+  "profile": "pr20211203_oracle30_matmcd_v1",
+  "parent_run": "runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z",
+  "paper_equivalence": false,
+  "error": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/continue_rca_oracle30.py\", line 176, in run\n    agent.generate_domain_knowledge(use_cache=False, cache_path=str(directory / \"domain_cache/MATMCD\"))\n  File \"/mnt/e/연구/MATMCD/official/matmcd/ConstrainAgent/ConstrainAgent.py\", line 172, in generate_domain_knowledge\n    self.domain_knowledge_LLM.inquiry(temperature=0.5)\n  File \"/mnt/e/연구/MATMCD/official/matmcd/ConstrainAgent/LLMs.py\", line 43, in inquiry\n    self.LLM_answer = self.client.inquire_LLMs(\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/local_llm_client.py\", line 28, in inquire_LLMs\n    return self.inquire_messages(\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/rca_local_client.py\", line 53, in inquire_messages\n    content = super().inquire_messages(messages, temperature=temperature)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/local_llm_client.py\", line 48, in inquire_messages\n    raise RuntimeError(f\"Incomplete local response: finish_reason={choice.finish_reason}; no retry or truncation workaround\")\nRuntimeError: Incomplete local response: finish_reason=length; no retry or truncation workaround\n",
+  "finished_utc": "2026-09-26T14:10:53.741384+00:00",
+  "seconds": 908.089723106,
+  "environment_unchanged": true,
+  "run_directory": "runs/matmcd_oracle30_pr20211203_v1/20260926T135543690567Z"
+}

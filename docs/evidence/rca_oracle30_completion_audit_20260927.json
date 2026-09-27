@@ -1,0 +1,269 @@
+{
+  "status": "PASS_COMPLETED_ORACLE30_ARTIFACT_AUDIT",
+  "verified_utc": "2026-09-26T20:06:09.471502+00:00",
+  "run_directory": "runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z",
+  "result": {
+    "status": "COMPLETED_ORACLE30_LOCAL_DEVELOPMENT_RUN",
+    "started_utc": "2026-09-26T14:39:06.906753+00:00",
+    "profile": "pr20211203_oracle30_domain_presence1_5_v1",
+    "parent_run": "runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z",
+    "paper_equivalence": false,
+    "finished_utc": "2026-09-26T19:43:06.350118+00:00",
+    "seconds": 18239.443321775,
+    "environment_unchanged": true
+  },
+  "scope": "single_provisional_root_included_30_pod_development_case_not_paper_replication",
+  "generation_calls": 1860,
+  "stages": {
+    "MATMCD_domain": {
+      "calls": 930,
+      "status": "ALL_COMPLETE",
+      "finish_reason": "ALL_STOP",
+      "attempts_each": 1,
+      "presence_penalty": 1.5,
+      "temperature": 0.5,
+      "output_tokens": {
+        "min": 845,
+        "max": 3908,
+        "mean": 1315.4193548387098,
+        "sum": 1223340
+      },
+      "prompt_tokens": {
+        "min": 6505,
+        "max": 6745,
+        "sum": 6106530
+      },
+      "call_seconds_sum": 17360.260736305,
+      "call_seconds_mean": 18.666947028284948,
+      "exact_response_counts": null
+    },
+    "MATMCD_constraints": {
+      "calls": 930,
+      "status": "ALL_COMPLETE",
+      "finish_reason": "ALL_STOP",
+      "attempts_each": 1,
+      "presence_penalty": 0.0,
+      "temperature": 0.8,
+      "output_tokens": {
+        "min": 4,
+        "max": 4,
+        "mean": 4.0,
+        "sum": 3720
+      },
+      "prompt_tokens": {
+        "min": 1036,
+        "max": 4096,
+        "sum": 1386789
+      },
+      "call_seconds_sum": 808.1406792810994,
+      "call_seconds_mean": 0.8689684723452682,
+      "exact_response_counts": {
+        "<No>": 821,
+        "<Yes>": 109
+      }
+    }
+  },
+  "zero_failed_or_pending_calls": true,
+  "all_requests_match_approved_conditions": true,
+  "domain_cache_matches_all_new_requests_and_responses": true,
+  "constraint_matrix_matches_all_responses": true,
+  "constraints": {
+    "yes": 109,
+    "no": 821,
+    "diagonal_unconstrained": 31
+  },
+  "environment_before_equals_after": true,
+  "current_source_config_script_hash_counts_verified": {
+    "official_sources": 37,
+    "configs": 13,
+    "scripts": 61
+  },
+  "parent_lineage": {
+    "parent_run": "runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z",
+    "inherited_pc_files_verified": 4,
+    "parent_calls_verified": 21,
+    "prior_failure_calls_preserved_verified": 41,
+    "raw_rag_identical": true,
+    "node_information_identical_to_validated_continuation": true,
+    "previous_domain_responses_reused": 0,
+    "diagnostic_responses_reused": 0,
+    "legacy_no_generation_repeated_field_scope": "parent_PC_and_log_RAG_only; all_domain_pairs_regenerated"
+  },
+  "prepared_metrics_and_20_prompts_hashes_verified": true,
+  "shape": [
+    51529,
+    31
+  ],
+  "graphs": {
+    "PC": {
+      "shape": [
+        31,
+        31
+      ],
+      "value_counts": {
+        "-1": 6,
+        "0": 794,
+        "1": 161
+      },
+      "sha256_file": "c655c05286ca8a4a32a7e5adba7339693360110d5b4152dd220292009676390b",
+      "png_verified": true
+    },
+    "MATMCD": {
+      "shape": [
+        31,
+        31
+      ],
+      "value_counts": {
+        "0": 892,
+        "1": 69
+      },
+      "sha256_file": "ebc7438de02733fbe8de2720fb8d26725d7d1e0f2ec05fb5106b1863e3984dff",
+      "png_verified": true
+    }
+  },
+  "pngs": {
+    "PC": {
+      "size": [
+        8330,
+        3358
+      ],
+      "format": "PNG"
+    },
+    "MATMCD": {
+      "size": [
+        6954,
+        1262
+      ],
+      "format": "PNG"
+    }
+  },
+  "graph_changed_matrix_entries": 203,
+  "evaluations": {
+    "PC": {
+      "evaluation_scope": "oracle30_provisional_single_case_development",
+      "paper_equivalence": false,
+      "candidate_recall_not_measured": true,
+      "truth": {
+        "system": "Product_Review",
+        "day": "20211203",
+        "official_helper_label": "mongodb-v1",
+        "status": "PROVISIONAL_RELEASED_HELPER_LABEL",
+        "candidate_pods": [
+          "mongodb-v1-64c6b69879-p4wfp"
+        ],
+        "evaluation_pod": "mongodb-v1-64c6b69879-p4wfp",
+        "limitation": "Evaluation node from released helper; scenario describes an external NFS disk-full failure, not proven author final pod ground truth."
+      },
+      "root_rank_including_kpi": 5,
+      "root_rank_pods_only": 4,
+      "pod_only_metrics": {
+        "Hit@1": 0,
+        "Hit@3": 0,
+        "Hit@5": 1,
+        "reciprocal_rank": 0.25
+      },
+      "pod_count_tied_with_root": 1,
+      "tie_rule": "original_stable_input_column_order",
+      "original_public_metrics_including_kpi": {
+        "metrics": {
+          "MAP@5": 0.0,
+          "MAP@10": 0.5,
+          "MRR": 0.2
+        },
+        "count": 1,
+        "ranks": [
+          5
+        ],
+        "definition": "unchanged_public_LEMMA_Metrics_functions",
+        "source_sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+        "rank_base": 1,
+        "top_k_boundary": "strict rank < k, including internal k in MAPK",
+        "not_standard_average_precision": true
+      }
+    },
+    "MATMCD": {
+      "evaluation_scope": "oracle30_provisional_single_case_development",
+      "paper_equivalence": false,
+      "candidate_recall_not_measured": true,
+      "truth": {
+        "system": "Product_Review",
+        "day": "20211203",
+        "official_helper_label": "mongodb-v1",
+        "status": "PROVISIONAL_RELEASED_HELPER_LABEL",
+        "candidate_pods": [
+          "mongodb-v1-64c6b69879-p4wfp"
+        ],
+        "evaluation_pod": "mongodb-v1-64c6b69879-p4wfp",
+        "limitation": "Evaluation node from released helper; scenario describes an external NFS disk-full failure, not proven author final pod ground truth."
+      },
+      "root_rank_including_kpi": 6,
+      "root_rank_pods_only": 5,
+      "pod_only_metrics": {
+        "Hit@1": 0,
+        "Hit@3": 0,
+        "Hit@5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "pod_count_tied_with_root": 1,
+      "tie_rule": "original_stable_input_column_order",
+      "original_public_metrics_including_kpi": {
+        "metrics": {
+          "MAP@5": 0.0,
+          "MAP@10": 0.4,
+          "MRR": 0.16666666666666666
+        },
+        "count": 1,
+        "ranks": [
+          6
+        ],
+        "definition": "unchanged_public_LEMMA_Metrics_functions",
+        "source_sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+        "rank_base": 1,
+        "top_k_boundary": "strict rank < k, including internal k in MAPK",
+        "not_standard_average_precision": true
+      }
+    }
+  },
+  "rng_continuation": {
+    "MATMCD_rng_before_equals_PC_rng_after": true,
+    "new_seed_assigned": false,
+    "uninterrupted_original_trajectory_claimed": false
+  },
+  "stage_seconds": {
+    "domain": 17364.260242,
+    "constraints": 811.628692,
+    "refined_PC_plot_RWR_evaluation": 21.864137
+  },
+  "call_manifest_sha256": "6650a7f1b01905e46ed5d029daad3082488596ca39ecc4dfb840d722837392c7",
+  "artifact_sha256": {
+    "result.json": "0433180ed7d3a906035837acf1f083cb9afecf00177257d704d8dbcf9ccb1e77",
+    "progress.json": "e0b7803a3aef7f7218ae88ee7011ebad7bca3a396b8d2a6d4ef373e6cea22d14",
+    "lineage.json": "321d4089fe2316c63b1bc03b1a10a5cdafec5cc621b5ad9063ea75408d2e2f57",
+    "selection.json": "fe8bdc84b38162f114a86e89f3d789e7c5ca65c88e0f41289a7b23537055d960",
+    "input_plan.json": "9a994c2555a5857d089e83c19cf18dfe2b841999db6091df8e6c844424c14de9",
+    "configs.json": "747daf374a2f5c62cb80dbdbe8160a3ac02e2fe70971f5127d6dc0c0e2060e6d",
+    "environment_before.json": "f50418e1d7d842e19add7cf17eb97927d8fea37123256902271ba246328e0848",
+    "environment_after.json": "f50418e1d7d842e19add7cf17eb97927d8fea37123256902271ba246328e0848",
+    "parent_environment_review.json": "70cd5326c2a474b84e697314dfbaac0a9a8705f8f8f341b9e588651b686e69a1",
+    "domain_sampling_profile.json": "c39533bb7ef1f7e6670a48a8261e06340ff772873bc0b313129f384e62897ce9",
+    "domain_diagnostic_review.json": "f670c95b4807b09ab0146ec0d0485487247c8674b0bf3482e41665c22ca90684",
+    "rag_original.txt": "96f6d91a65a4a50fc9f9ad9cc59c2d9d567cf4571761b1ba6a8827616abe6875",
+    "rag_canonical.txt": "6eff61ebe9ea36235d4abe3a5c587f4d4b8fe53f0a1e803d300cee85d632bd42",
+    "rag_format_audit.json": "428156e57fb6a399f2b7cabe7e883aa1c675449d58dd01e8fd8afb6c85f00055",
+    "node_information.json": "c445a8dee54a7f2636065600f22b6293a204e707363da09cbd0cce1ce6bdc58f",
+    "graphs/PC.npy": "c655c05286ca8a4a32a7e5adba7339693360110d5b4152dd220292009676390b",
+    "graphs/PC.png": "9025393b916a469b4c0b81d787f3cd392af16fe3217ecea4c754486f9169e530",
+    "graphs/MATMCD.npy": "ebc7438de02733fbe8de2720fb8d26725d7d1e0f2ec05fb5106b1863e3984dff",
+    "graphs/MATMCD.png": "8f87b7d403e594b85a544d5b23af27ef17add9bb86e7f3aa72f723c0f220297d",
+    "graphs/MATMCD_constraints.npy": "c853b2ef44198df1b0d18503718e9951504266377717fcdcf48eea54d5fa7641",
+    "rankings/PC.json": "9a2910aa2f1bd80d925185d50ca6afd8992e2cf6d7ea23b153676bdd1717c92c",
+    "rankings/MATMCD.json": "32856365b81321ba4edd7b84e16586b2e36fac6349d7706a2822f9e477ef6e0f",
+    "evaluation/PC.json": "3f23109fcb86636977d717729b5850d45dc47cb2b1d5a59cb0c6eea57ee9150f",
+    "evaluation/MATMCD.json": "e5ba21ed182aeb5d169d59c08a4b34db58987faa04a2ae8e6a09af08cf0a8121",
+    "domain_cache/MATMCD/domain_knowledge_dict_with_info.npy": "1654973c8a3e6c581fceb891d9c0b70015197569a6d337ccd3eba53e5ad34c79",
+    "domain_cache/MATMCD/prompt_dict_with_info.npy": "7852add2644ce66e82d813b06304e46acc6227bf5d24ba2a3b9b035dac798174"
+  },
+  "semantic_accuracy_of_all_930_explanations_verified": false,
+  "statistical_significance_claimed": false,
+  "candidate_recall_measured": false
+}

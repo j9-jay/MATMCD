@@ -1,0 +1,121 @@
+{
+  "checked_utc": "20260922T160116Z",
+  "accepted_risk": "RISK-003",
+  "metadata_url": "https://pypi.org/pypi/llama-index-embeddings-openai/0.3.1/json",
+  "metadata_sha256": "55c40f5fbf758ace8bb3d76cf98fe06743ca88fea37264d065bad76ca9f1d859",
+  "wheel": {
+    "comment_text": "",
+    "core-metadata": {
+      "sha256": "323aac7d8abf08b2439701355920dbfb8077d2f863f28bdfa0b4796e0dd591cb"
+    },
+    "digests": {
+      "blake2b_256": "bb45ca55b91c4ac1b6251d4099fa44121a6c012129822906cadcc27b8cfb33a4",
+      "md5": "aeb7a85f5b8ba337660598c6954f18d1",
+      "sha256": "f15a3d13da9b6b21b8bd51d337197879a453d1605e625a1c6d45e741756c0290"
+    },
+    "downloads": -1,
+    "filename": "llama_index_embeddings_openai-0.3.1-py3-none-any.whl",
+    "has_sig": false,
+    "md5_digest": "aeb7a85f5b8ba337660598c6954f18d1",
+    "packagetype": "bdist_wheel",
+    "python_version": "py3",
+    "requires_python": "<4.0,>=3.9",
+    "size": 6177,
+    "upload_time": "2024-11-27T16:04:15",
+    "upload_time_iso_8601": "2024-11-27T16:04:15.981234Z",
+    "url": "https://files.pythonhosted.org/packages/bb/45/ca55b91c4ac1b6251d4099fa44121a6c012129822906cadcc27b8cfb33a4/llama_index_embeddings_openai-0.3.1-py3-none-any.whl",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "requirements_satisfied_by_existing_packages": [
+    {
+      "requirement": "openai>=1.1.0",
+      "installed": "1.82.0"
+    },
+    {
+      "requirement": "llama-index-core<0.13.0,>=0.12.0",
+      "installed": "0.12.37"
+    }
+  ],
+  "dependency_locks": {
+    "docs/evidence/chromadb_1.0.11.proposed.lock.txt": "b3bd3f4e3cae5eb5f56840612366f0cebf5ee57234315384859f382110ce8f31",
+    "docs/evidence/lxml_5.4.0.lock.txt": "0fe03b0640bd6899711892c1a4922a834271628d266022d24553bfc5cac61a03"
+  },
+  "lock_sha256": "3c452809c0442966e2e66a21a47c9906f6f78d664ba1cdb23cbf87f90de97b2e",
+  "log_directory": "logs/openai_embeddings_install/20260922T160116Z",
+  "experiments_executed": false,
+  "model_api_calls": false,
+  "commands": [
+    {
+      "name": "dry_run",
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python",
+        "--require-hashes",
+        "--only-binary",
+        ":all:",
+        "--no-index",
+        "--find-links",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/pypi_llama_index_embeddings_openai_0.3.1",
+        "--constraint",
+        "/mnt/e/연구/MATMCD_DATA/logs/openai_embeddings_install/20260922T160116Z/before.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/llama_index_embeddings_openai_0.3.1.lock.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/chromadb_1.0.11.proposed.lock.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/lxml_5.4.0.lock.txt",
+        "--dry-run"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "install",
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python",
+        "--require-hashes",
+        "--only-binary",
+        ":all:",
+        "--no-index",
+        "--find-links",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/pypi_llama_index_embeddings_openai_0.3.1",
+        "--constraint",
+        "/mnt/e/연구/MATMCD_DATA/logs/openai_embeddings_install/20260922T160116Z/before.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/llama_index_embeddings_openai_0.3.1.lock.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/chromadb_1.0.11.proposed.lock.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/lxml_5.4.0.lock.txt"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "pip_check",
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "check",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "installed_count": 201,
+  "added": {
+    "llama-index-embeddings-openai": "0.3.1"
+  },
+  "changed_baseline": {},
+  "exact_expected_packages": true,
+  "official_file_count": 43,
+  "official_source_unchanged": true,
+  "success": true
+}

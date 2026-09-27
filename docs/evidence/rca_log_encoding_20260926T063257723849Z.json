@@ -1,0 +1,68 @@
+{
+  "status": "DIAGNOSED",
+  "case": "Product_Review/20211203",
+  "pod": "cluster-version-operator-7767956c46-p4p9c",
+  "diagnostic_only": true,
+  "data_modified": false,
+  "replacement_policy_applied_to_experiment": false,
+  "source_sha256_matches": true,
+  "encoding": {
+    "invalid_utf8_bytes": 12944,
+    "first_positions": [
+      {
+        "byte_offset": 8057,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 12250,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 16710,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 20903,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 48707,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 308279,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 739372,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 743700,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 748427,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 752622,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 756572,
+        "byte_hex": "c3"
+      },
+      {
+        "byte_offset": 769865,
+        "byte_hex": "c3"
+      }
+    ],
+    "bytes": 629181681
+  },
+  "rows": 1949527,
+  "selected_prompt_invalid_byte_count": 0,
+  "selected_invalid_byte_hex": [],
+  "prompt_characters": 72660,
+  "diagnostic_reader": "utf8+surrogateescape; not an approved experiment reader"
+}

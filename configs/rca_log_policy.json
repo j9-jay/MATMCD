@@ -1,0 +1,22 @@
+{
+  "profile_id": "exact_pod_logs_allow_absence_v1",
+  "status": "APPROVED",
+  "approval": {
+    "date_kst": "2026-09-25",
+    "user_instruction": "오케이 그럼 Log 쌍은 안맞은체로 가자.",
+    "scope": "Keep all existing pod candidates; use exact available pairs and explicitly mark absent evidence. No service/replica substitution."
+  },
+  "author_equivalence": "UNCONFIRMED",
+  "candidate_policy": "retain_all_in_original_order",
+  "matching": "exact_pod_name_only",
+  "missing_policy": "fixed_absence_notice",
+  "partial_or_changed_pair": "fail",
+  "missing_reason": "exact_log_pair_unavailable",
+  "underlying_cause": "UNKNOWN",
+  "service_or_replica_mapping": false,
+  "infer_normality_or_causality_from_absence": false,
+  "missing_notice": "No matching log evidence is available for this pod in this case.\nThis does not imply normal operation or absence of causal influence.",
+  "kpi_column": "Latency",
+  "kpi_notice": "This is an input KPI column, not a pod. No pod event log is assigned to this column. Its column label alone does not establish its physical meaning.",
+  "output_directory": "processed_data/lemma_rca_log_evidence_v1"
+}

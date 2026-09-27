@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-09-24T12:06:52.002522+00:00",
+  "uid": 1000,
+  "status": "PASS",
+  "author_equivalence": "UNCONFIRMED",
+  "experiments_executed": false,
+  "model_api_calls": false,
+  "implementation_sha256": "71a63882f65f3e48f2d63745f1dad16a859d71cee7fdbcaac46a149a5499a60f",
+  "installation_sha256": "aafc98ed2bef9bcb71c1dd63c580ded8f64cab3ab66a92e8a06514a4be9a6dbc",
+  "dot": "dot - graphviz version 2.43.0 (0)",
+  "png": "logs/setup/graphviz_20260924T120441708131Z/synthetic_graph_normal_user.png",
+  "png_sha256": "3922c77e30224c993bab79ded6c428c9f09a30896c1a8b5b7fad0b9b822c380f",
+  "width": 405,
+  "height": 131,
+  "input_matrix_preserved": true,
+  "matches_installation_test_png": true,
+  "python_201_packages_preserved": true,
+  "system_packages_preserved": true,
+  "official_37_files_preserved": true
+}

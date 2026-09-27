@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETED_ORACLE30_LOCAL_DEVELOPMENT_RUN",
+  "started_utc": "2026-09-26T14:39:06.906753+00:00",
+  "profile": "pr20211203_oracle30_domain_presence1_5_v1",
+  "parent_run": "runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z",
+  "paper_equivalence": false,
+  "finished_utc": "2026-09-26T19:43:06.350118+00:00",
+  "seconds": 18239.443321775,
+  "environment_unchanged": true,
+  "run_directory": "runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z"
+}

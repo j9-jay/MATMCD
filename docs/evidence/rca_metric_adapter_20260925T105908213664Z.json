@@ -1,0 +1,128 @@
+{
+  "checked_utc": "2026-09-25T10:59:08.213651+00:00",
+  "source_sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "public_MATMCD_example_not_new_experiment",
+      "ok": true,
+      "metrics": {
+        "MAP@5": 0.3,
+        "MAP@10": 0.55,
+        "MRR": 0.3214285714285714
+      },
+      "count": 2,
+      "ranks": [
+        2,
+        7
+      ],
+      "definition": "unchanged_public_LEMMA_Metrics_functions",
+      "source_sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+      "rank_base": 1,
+      "top_k_boundary": "strict rank < k, including internal k in MAPK",
+      "not_standard_average_precision": true
+    },
+    {
+      "name": "public_MATMCD_RE_example_not_new_experiment",
+      "ok": true,
+      "metrics": {
+        "MAP@5": 0.2,
+        "MAP@10": 0.55,
+        "MRR": 0.25
+      },
+      "count": 2,
+      "ranks": [
+        3,
+        6
+      ],
+      "definition": "unchanged_public_LEMMA_Metrics_functions",
+      "source_sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+      "rank_base": 1,
+      "top_k_boundary": "strict rank < k, including internal k in MAPK",
+      "not_standard_average_precision": true
+    },
+    {
+      "name": "best_rank_boundary",
+      "ok": true,
+      "metrics": {
+        "MAP@5": 0.8,
+        "MAP@10": 0.9,
+        "MRR": 1.0
+      },
+      "count": 1,
+      "ranks": [
+        1
+      ],
+      "definition": "unchanged_public_LEMMA_Metrics_functions",
+      "source_sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+      "rank_base": 1,
+      "top_k_boundary": "strict rank < k, including internal k in MAPK",
+      "not_standard_average_precision": true
+    },
+    {
+      "name": "exact_K_boundary",
+      "ok": true,
+      "metrics": {
+        "MAP@5": 0.0,
+        "MAP@10": 0.5,
+        "MRR": 0.2
+      },
+      "count": 1,
+      "ranks": [
+        5
+      ],
+      "definition": "unchanged_public_LEMMA_Metrics_functions",
+      "source_sha256": "18cc1ead371cbb96cb5cdcca8572722e435851a2a296caab664ca393d55cb088",
+      "rank_base": 1,
+      "top_k_boundary": "strict rank < k, including internal k in MAPK",
+      "not_standard_average_precision": true
+    },
+    {
+      "name": "strict_rank_boundary_preserved",
+      "ok": true
+    },
+    {
+      "name": "reject_unresolved_or_invalid_rank",
+      "input": [],
+      "ok": true
+    },
+    {
+      "name": "reject_unresolved_or_invalid_rank",
+      "input": [
+        0
+      ],
+      "ok": true
+    },
+    {
+      "name": "reject_unresolved_or_invalid_rank",
+      "input": [
+        -1
+      ],
+      "ok": true
+    },
+    {
+      "name": "reject_unresolved_or_invalid_rank",
+      "input": [
+        2.0
+      ],
+      "ok": true
+    },
+    {
+      "name": "reject_unresolved_or_invalid_rank",
+      "input": [
+        true
+      ],
+      "ok": true
+    },
+    {
+      "name": "reject_unresolved_or_invalid_rank",
+      "input": [
+        null
+      ],
+      "ok": true
+    }
+  ],
+  "scope": "public-function adapter and boundary checks only; no RCA prediction/evaluation run",
+  "actual_experiment_results": false,
+  "source_functions_modified": false
+}

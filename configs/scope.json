@@ -1,0 +1,54 @@
+{
+  "active_experiments": [
+    "rca"
+  ],
+  "paper_targets": [
+    "section_4.3",
+    "table_4"
+  ],
+  "changed_date": "2026-09-23",
+  "authorization": "사용자 요청: 1번 실험 관련 파일을 삭제하고 TODO에서 제외",
+  "excluded_official_files": [
+    "GTdatasets_experiment.py",
+    "Utils/metrics.py",
+    "data/SampleFromBIF.py",
+    "image/table1.png",
+    "image/table2.png",
+    "docs/assets/fig4.png"
+  ],
+  "source_policy": "위 전용 파일만 제외한 RCA 작업용 부분집합. 남은 공식 파일은 원본 ZIP과 바이트 동일해야 한다.",
+  "reference_policy": "공통 코드, 원본 ZIP, 논문, 저자 소개 자료, 과거 공통 감사 기록은 출처 및 이력으로 보존한다.",
+  "rca_case_selection": {
+    "profile_id": "rca_two_cases_v2",
+    "approved_date_kst": "2026-09-26",
+    "authorization": "사용자가 PR 20211203과 CC 20231207 두 사례만 실행·평가하도록 지정",
+    "active_cases": [
+      {
+        "system": "Product_Review",
+        "day": "20211203"
+      },
+      {
+        "system": "Cloud_Computing",
+        "day": "20231207"
+      }
+    ],
+    "excluded_cases": [
+      {
+        "system": "Product_Review",
+        "day": "20210517"
+      },
+      {
+        "system": "Product_Review",
+        "day": "20210524"
+      },
+      {
+        "system": "Product_Review",
+        "day": "20220606"
+      }
+    ],
+    "excluded_asset_policy": "preserve_assets_and_historical_evidence; exclude_from_current_run_and_evaluation",
+    "within_case_data_changed": false,
+    "D02_reader_change_approved": false,
+    "paper_table4_aggregate_equivalence": "UNCONFIRMED"
+  }
+}

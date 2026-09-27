@@ -1,0 +1,319 @@
+{
+  "changed_utc": "20260926T075701648365Z",
+  "status": "PASS",
+  "authorization": "PR 20211203 CC 20231207 두 개 실험으로만 진행",
+  "before_configs": {
+    "configs/scope.json": {
+      "active_experiments": [
+        "rca"
+      ],
+      "paper_targets": [
+        "section_4.3",
+        "table_4"
+      ],
+      "changed_date": "2026-09-23",
+      "authorization": "사용자 요청: 1번 실험 관련 파일을 삭제하고 TODO에서 제외",
+      "excluded_official_files": [
+        "GTdatasets_experiment.py",
+        "Utils/metrics.py",
+        "data/SampleFromBIF.py",
+        "image/table1.png",
+        "image/table2.png",
+        "docs/assets/fig4.png"
+      ],
+      "source_policy": "위 전용 파일만 제외한 RCA 작업용 부분집합. 남은 공식 파일은 원본 ZIP과 바이트 동일해야 한다.",
+      "reference_policy": "공통 코드, 원본 ZIP, 논문, 저자 소개 자료, 과거 공통 감사 기록은 출처 및 이력으로 보존한다.",
+      "rca_case_selection": {
+        "profile_id": "rca_three_cases_v1",
+        "approved_date_kst": "2026-09-25",
+        "authorization": "사용자가 PC 사양을 고려하여 PR 20211203, PR 20220606, CC 20231207의 세 사례만 실행하도록 지정",
+        "active_cases": [
+          {
+            "system": "Product_Review",
+            "day": "20211203"
+          },
+          {
+            "system": "Product_Review",
+            "day": "20220606"
+          },
+          {
+            "system": "Cloud_Computing",
+            "day": "20231207"
+          }
+        ],
+        "excluded_cases": [
+          {
+            "system": "Product_Review",
+            "day": "20210517"
+          },
+          {
+            "system": "Product_Review",
+            "day": "20210524"
+          }
+        ],
+        "excluded_asset_policy": "preserve_assets_and_historical_evidence; exclude_from_current_run_and_evaluation",
+        "within_case_data_changed": false,
+        "D02_reader_change_approved": false,
+        "paper_table4_aggregate_equivalence": "UNCONFIRMED"
+      }
+    },
+    "configs/inputs.json": {
+      "experiment_scope": "rca",
+      "rca_files": {
+        "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv": "processed_data/lemma_rca_provisional_v1/Product_Review/20211203/Product_Review_20211203.csv",
+        "LEMMA_RCA/Product_Review/Metrics/Product_Review_20220606.csv": "processed_data/lemma_rca_provisional_v1/Product_Review/20220606/Product_Review_20220606.csv",
+        "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv": "processed_data/lemma_rca_provisional_v1/Cloud_Computing/20231207/Cloud_Computing_20231207.csv"
+      },
+      "missing_rca_inputs": [],
+      "notes": [
+        "RCA §4.3/Table 4 only. These are approved provisional inputs, not verified author CSVs.",
+        "User authorized clear remaining preparation work; CSV values and candidate pods are unchanged.",
+        "Only exact pod-name log pairs were extracted byte-for-byte; approved D01 retains missing pods with explicit absence, cause UNKNOWN.",
+        "Connected files alone do not establish RCA readiness or authorize scientific condition changes."
+      ],
+      "input_profile": "lemma_rca_provisional_v1",
+      "author_equivalence": "UNCONFIRMED",
+      "rca_log_directories": {
+        "LEMMA_RCA/Product_Review/Log/20211203": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203",
+        "LEMMA_RCA/Product_Review/Log/20220606": "datasets/huggingface_lemma_rca_product_review_pod_logs/20220606",
+        "LEMMA_RCA/Cloud_Computing/Log/20231207": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207"
+      },
+      "expected_rca_inputs": [
+        "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv",
+        "LEMMA_RCA/Product_Review/Metrics/Product_Review_20220606.csv",
+        "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv"
+      ],
+      "connection_evidence": "docs/evidence/rca_input_connection_20260925T105701596179Z.json",
+      "rca_log_policy": "configs/rca_log_policy.json",
+      "rca_log_evidence_manifests": {
+        "Product_Review/20211203": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20211203.json",
+        "Product_Review/20220606": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20220606.json",
+        "Cloud_Computing/20231207": "processed_data/lemma_rca_log_evidence_v1/Cloud_Computing/20231207.json"
+      }
+    },
+    "configs/rca_protocol.json": {
+      "profile_id": "rca_released_A_provisional_evaluation_v1",
+      "status": "APPROVED",
+      "approved_date_kst": "2026-09-26",
+      "authorization": "D03 A안 확정 및 문제점 일괄 저자 문의 준비. D04는 제시한 권장 방침으로 진행하며 같은 결정을 재요청하지 않음.",
+      "author_run_equivalence": "UNCONFIRMED",
+      "d03": {
+        "choice": "A",
+        "graph_prompt": "unchanged_released_DomainKnowledgeLLM",
+        "first_pair_graph_prompt_cache": "preserve",
+        "scientific_corrections_applied": false,
+        "rwr_graph_by_stage": {
+          "PC": "initial",
+          "CC_without_external_information": "initial",
+          "MATMCD": "refined",
+          "MATMCD_RE": "refined"
+        },
+        "author_question_file": "docs/AUTHOR_QUESTIONS_D03_D04.md"
+      },
+      "d04": {
+        "runs_per_case_per_stage": 1,
+        "repetition_policy": "released_single_call_structure_no_best_of_n",
+        "rwr_parameters": {
+          "steps": 1000,
+          "rp": 0.05,
+          "max_self": 10
+        },
+        "rwr_seed": null,
+        "rng_policy": "record_numpy_state_before_and_after_no_new_seed",
+        "start_node": "last_input_column",
+        "retain_kpi_in_ranking": true,
+        "tie_policy": "stable_original_column_order",
+        "metric_policy": "unchanged_public_LEMMA_Metrics_functions",
+        "rank_base": 1,
+        "top_k_boundary": "strict_rank_less_than_k",
+        "aggregate_policy": "all_three_cases_required_equal_case_weight_local_protocol",
+        "partial_aggregate": "not_generated",
+        "unknown_ground_truth": "retain_all_candidate_ranks_no_single_score",
+        "ground_truth_input_to_llm_or_rag": false,
+        "cases": [
+          {
+            "system": "Product_Review",
+            "day": "20211203",
+            "official_helper_label": "mongodb-v1",
+            "status": "PROVISIONAL_RELEASED_HELPER_LABEL",
+            "candidate_pods": [
+              "mongodb-v1-64c6b69879-p4wfp"
+            ],
+            "evaluation_pod": "mongodb-v1-64c6b69879-p4wfp",
+            "limitation": "Evaluation node from released helper; scenario describes an external NFS disk-full failure, not proven author final pod ground truth."
+          },
+          {
+            "system": "Product_Review",
+            "day": "20220606",
+            "official_helper_label": "istio-ingressgateway",
+            "status": "PROVISIONAL_RELEASED_HELPER_LABEL",
+            "candidate_pods": [
+              "istio-ingressgateway-c5c48c9f4-997nl"
+            ],
+            "evaluation_pod": "istio-ingressgateway-c5c48c9f4-997nl",
+            "limitation": "Evaluation node from released helper; external traffic load and reviews OOM in scenario do not independently confirm this evaluation definition."
+          },
+          {
+            "system": "Cloud_Computing",
+            "day": "20231207",
+            "official_helper_label": "productpage-v1",
+            "status": "UNRESOLVED_EXACT_POD",
+            "candidate_pods": [
+              "productpage-v1-94d68db49-j7t55",
+              "productpage-v1-94d68db49-vc8ct"
+            ],
+            "evaluation_pod": null,
+            "limitation": "Exact injected replica unconfirmed. Preserve both ranks; no best-candidate selection, service aggregation, or assumption-specific score."
+          }
+        ]
+      },
+      "evidence": "docs/evidence/rca_original_protocol_20260925T133730423769Z.json",
+      "integration_status": "helpers_ready_full_RCA_integration_pending_TASK_024"
+    },
+    "configs/local_rca_execution.json": {
+      "profile_id": "qwen_bge_released_A_three_cases_v1",
+      "status": "BLOCKED_CAPACITY_USER_HOLD",
+      "capacity_decision": {
+        "choice": "D05_B_KEEP_CURRENT_SETTINGS_HOLD_EXECUTION",
+        "selected_date": "2026-09-26",
+        "context_tokens_preserved": 16384,
+        "gpu_layers_preserved": "all",
+        "proposed_147456_gpu24_applied": false
+      },
+      "author_equivalence": "UNCONFIRMED",
+      "source_commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+      "scope_config": "configs/scope.json",
+      "scientific_protocol": "configs/rca_protocol.json",
+      "llm_config": "configs/local_llm.json",
+      "embedding_config": "configs/local_embedding.json",
+      "generation_policy": "reuse_selected_local_seed_sampling_and_output_limit; preserve_each_original_callsite_temperature",
+      "seed_sampling_source": "local_llm.smoke_test; explicit local choice, not an author setting",
+      "re_format_policy": "re_gp_boundary_v1; exact original ConstrainReasoningLLM Yes/No capitalization",
+      "causal_discovery_method": "pc",
+      "stages": [
+        "PC",
+        "CC_without_external_information",
+        "MATMCD",
+        "MATMCD_RE"
+      ],
+      "case_execution": "sequential",
+      "pod_log_reading": "original_full_csv_in_isolated_worker",
+      "prompt_storage": "processed_data/lemma_rca_original_prompts_v1",
+      "recovered_prompt_storage": "processed_data/lemma_rca_original_prompts_d06_v1",
+      "log_encoding_policy": {
+        "id": "d06_surrogateescape_valid_selected_prompt_v1",
+        "status": "USER_APPROVED",
+        "approved_date": "2026-09-26",
+        "scope": "proven_UTF8_failures_only; preserve_invalid_bytes; reject_invalid_selection_fields_or_final_prompt",
+        "author_equivalence": "UNCONFIRMED"
+      },
+      "run_storage": "runs/matmcd_local_rca",
+      "automatic_retry": false,
+      "automatic_prompt_truncation": false,
+      "automatic_model_fallback": false,
+      "environment_policy": "record_current_before_and_after; fail_on_change; no_OS_service_changes"
+    }
+  },
+  "before_all_config_hashes": {
+    "graphviz_packages.json": "52b2474db4920ef3bd7cb0c234cbb4a2869fda9d88a34175b08b66aa0e53b4f5",
+    "inputs.json": "de78811f93f869897c92a1c1e7092c9d75b22feb1e28af22dee024bb3d3859e2",
+    "local_embedding.json": "92822e6dab68b55c6c33e1279962a5b4f100792e6e273f868ef68b358550bfa4",
+    "local_llm.json": "1e6cc3e658adefcf636a9eb746d6b13bb325a55deb6b3c232c5df88d1a2ebb43",
+    "local_rca_execution.json": "33fd78704449e0823e8d9d5a9d7b2da5892d91b8b661d7e30d3b85f41f4bc2c7",
+    "paths.json": "56c634c0b7503dcecf0bf58509a2151aba20b6bd0dfa0c488036e4453cb8fd62",
+    "rca_log_policy.json": "23515529939ba2547979b2728c108db62ded94eea313d68b8b81803f076b87e1",
+    "rca_preprocessing_proposal.json": "40dc8554f3e2c544f960b15f4a2ff4f8ee2f74c20f65a8eea1b61018003d7b09",
+    "rca_protocol.json": "8662bdaaa3ab0b532961c3f8e35d29932a4b91ce64d407862d417253fed9219c",
+    "scope.json": "32162d44645947aa81e99b5b2a58d21af98732f5e32d79e0fb196af6c9980eaf",
+    "upstream.json": "7060541331948a6e25c133a335ab2221e9011164b96adcdaed945104992e2d53"
+  },
+  "preserve_excluded_assets": true,
+  "actual_experiments": false,
+  "cases": [
+    {
+      "case": "Product_Review/20211203",
+      "counts": {
+        "pods": 218,
+        "available": 154,
+        "missing": 64,
+        "kpi": 1
+      },
+      "preparation": {
+        "strict": 147,
+        "approved_recovery": 7
+      },
+      "log_bytes": 4189235721,
+      "largest_log_bytes": 1162726915,
+      "prompt_count": 154,
+      "fits": 66,
+      "over_capacity": 88,
+      "max_input_tokens": 65073,
+      "max_required_context": 73266,
+      "three_stage_direction_pair_llm_calls": 286452
+    },
+    {
+      "case": "Cloud_Computing/20231207",
+      "counts": {
+        "pods": 196,
+        "available": 124,
+        "missing": 72,
+        "kpi": 1
+      },
+      "preparation": {
+        "strict": 111,
+        "approved_recovery": 13
+      },
+      "log_bytes": 4625021635,
+      "largest_log_bytes": 1238134721,
+      "prompt_count": 124,
+      "fits": 88,
+      "over_capacity": 36,
+      "max_input_tokens": 63304,
+      "max_required_context": 71497,
+      "three_stage_direction_pair_llm_calls": 231672
+    }
+  ],
+  "active_keys": [
+    "Product_Review/20211203",
+    "Cloud_Computing/20231207"
+  ],
+  "prepared_inputs": {
+    "status": "PASS",
+    "cases": 2,
+    "available_pods": 278,
+    "missing_pods": 136,
+    "full_rca_ready": false
+  },
+  "capacity_evidence": "docs/evidence/rca_context_20260926T074401590811Z.json",
+  "capacity_method": "Select active-case measurements from unchanged prompts/model/settings; prompt and stored request/provenance hashes verified; no retokenization or generation",
+  "source_files_preserved": 37,
+  "excluded_case_assets_retained": true,
+  "unchanged_other_config_hashes": true,
+  "selected_case_D04_rules_unchanged": true,
+  "old_three_case_input_mappings_rejected": true,
+  "inference_calls": 0,
+  "actual_rca_experiments": 0,
+  "after_config_hashes": {
+    "graphviz_packages.json": "52b2474db4920ef3bd7cb0c234cbb4a2869fda9d88a34175b08b66aa0e53b4f5",
+    "inputs.json": "9c8b267549099c247150a29e5e1df9f9fecd05567e9d34623d8da60ca6befc1b",
+    "local_embedding.json": "92822e6dab68b55c6c33e1279962a5b4f100792e6e273f868ef68b358550bfa4",
+    "local_llm.json": "1e6cc3e658adefcf636a9eb746d6b13bb325a55deb6b3c232c5df88d1a2ebb43",
+    "local_rca_execution.json": "06d496e22f78880193199fa22cc85d57e4b76d42e7c317e051ce6874902dbbad",
+    "paths.json": "56c634c0b7503dcecf0bf58509a2151aba20b6bd0dfa0c488036e4453cb8fd62",
+    "rca_log_policy.json": "23515529939ba2547979b2728c108db62ded94eea313d68b8b81803f076b87e1",
+    "rca_preprocessing_proposal.json": "40dc8554f3e2c544f960b15f4a2ff4f8ee2f74c20f65a8eea1b61018003d7b09",
+    "rca_protocol.json": "98a2ca203451f6660368e1d141f2d5b723657f1acd7aab445a7d5ec22e000da3",
+    "scope.json": "90a4b2f12feecb190da0ba5a8081404af7d7fe1c9c36e7093bf0ad68cea76206",
+    "upstream.json": "7060541331948a6e25c133a335ab2221e9011164b96adcdaed945104992e2d53"
+  },
+  "validation_reports": [
+    "docs/evidence/rca_log_policy_20260926T075840888460Z.json",
+    "docs/evidence/rca_approved_protocol_20260926T075841254852Z.json"
+  ],
+  "static_validation": {
+    "python_files": 54,
+    "config_json_files": 11,
+    "local_document_links": 497
+  },
+  "new_capacity_proposal_applied": false
+}

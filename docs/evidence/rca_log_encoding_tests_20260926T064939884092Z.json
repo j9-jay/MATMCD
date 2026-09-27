@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "valid_original_prompt_identical",
+      "passed": true
+    },
+    {
+      "name": "valid_files_use_strict_defaults_only",
+      "passed": true
+    },
+    {
+      "name": "unselected_bad_byte_does_not_change_original_prompt",
+      "passed": true
+    },
+    {
+      "name": "all_rows_and_invalid_byte_recorded",
+      "passed": true
+    },
+    {
+      "name": "selection_fields_validated",
+      "passed": true
+    },
+    {
+      "name": "surrogateescape_byte_roundtrip",
+      "passed": true
+    },
+    {
+      "name": "source_files_unchanged",
+      "passed": true
+    },
+    {
+      "name": "reject_selected_content_without_replacement_or_model_call",
+      "passed": true
+    },
+    {
+      "name": "reject_selection_key_without_replacement_or_model_call",
+      "passed": true
+    },
+    {
+      "name": "reject_unapproved_reader_options",
+      "passed": true
+    }
+  ],
+  "generation_calls": 0,
+  "actual_experiment_results": false,
+  "logs": "logs/setup/rca_encoding_tests_20260926T064939884092Z",
+  "preservation": {
+    "source": true,
+    "python": true
+  },
+  "scripts": {
+    "rca_log_encoding.py": "d6dd0e69d189f41ff9e94ceccd5d1ef243b6fe338288c4551cc41cbb9bea0b77",
+    "check_rca_log_encoding.py": "844265949684cb1560944ffa0c57adf97a09681dc86793d87dafc32e5dc50c00",
+    "rca_log_worker.py": "c7fb9697d9c6f5f1bc28537b3f5b45c0b11bcb26bc33bdce63fd8d1116b79b7f"
+  }
+}

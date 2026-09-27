@@ -1,0 +1,78 @@
+{
+  "checked_utc": "20260922T154120Z",
+  "experiments_executed": false,
+  "model_api_calls": false,
+  "live_web_fetches": false,
+  "network_connections_denied": [],
+  "log_directory": "logs/lxml_runtime/20260922T154120Z",
+  "cases": [
+    {
+      "name": "normal_rule0",
+      "rule": 0,
+      "parser": "lxml",
+      "input_sha256": "c0847bbed1fc343cc1dc63e4201cf04b198d7d8d06b4165ab53eed80e5f898f4",
+      "expected": "Heading one two three four five six seven eight nine ten eleven\nThis local paragraph contains more than ten words & preserves the expected text.",
+      "actual": "Heading one two three four five six seven eight nine ten eleven\nThis local paragraph contains more than ten words & preserves the expected text.",
+      "ok": true
+    },
+    {
+      "name": "normal_rule1",
+      "rule": 1,
+      "parser": "lxml",
+      "input_sha256": "043991cbf41096094179c188a0e4282b31776bede67c7342cff9b378bc6dc78a",
+      "expected": "This div contains enough words to pass the original eleven word threshold.",
+      "actual": "This div contains enough words to pass the original eleven word threshold.",
+      "ok": true
+    },
+    {
+      "name": "utf8",
+      "rule": 0,
+      "parser": "lxml",
+      "input_sha256": "0aed29de2ecd610cbb12a3bad438760147e7dfa0ac911182b87ce2741842e0ec",
+      "expected": "이 문장은 외부 웹 요청 없이 한글 본문 추출 동작을 확인하기 위한 시험 문장입니다.",
+      "actual": "이 문장은 외부 웹 요청 없이 한글 본문 추출 동작을 확인하기 위한 시험 문장입니다.",
+      "ok": true
+    },
+    {
+      "name": "unclosed_paragraphs",
+      "rule": 0,
+      "parser": "lxml",
+      "input_sha256": "78fe076a39dbaabdb9aad320de78b390ef0c9ff378b68e2d56aaf77cd32a9846",
+      "expected": "The first unfinished paragraph contains enough words for the original extraction rule.\nThe second unfinished paragraph also contains enough words for the original extraction rule.",
+      "actual": "The first unfinished paragraph contains enough words for the original extraction rule.\nThe second unfinished paragraph also contains enough words for the original extraction rule.",
+      "ok": true
+    }
+  ],
+  "versions": {
+    "lxml": "5.4.0",
+    "beautifulsoup4": "4.13.4",
+    "requests": "2.32.3"
+  },
+  "native_versions": {
+    "LIBXML_VERSION": [
+      2,
+      13,
+      8
+    ],
+    "LIBXML_COMPILED_VERSION": [
+      2,
+      13,
+      8
+    ],
+    "LIBXSLT_VERSION": [
+      1,
+      1,
+      43
+    ],
+    "LIBXSLT_COMPILED_VERSION": [
+      1,
+      1,
+      43
+    ]
+  },
+  "success": true,
+  "limitations": [
+    "Local fixtures only; no live page or full RAG experiment",
+    "Author lxml/libxml2/libxslt versions remain unknown; malformed HTML equivalence is not established"
+  ]
+}

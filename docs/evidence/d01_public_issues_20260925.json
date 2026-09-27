@@ -1,0 +1,1789 @@
+{
+  "checked_utc": "2026-09-25T12:02:54.1646618Z",
+  "read_only": true,
+  "github": [
+    {
+      "response": [
+        {
+          "url": "https://api.github.com/repos/D2I-Group/matmcd/issues/1",
+          "repository_url": "https://api.github.com/repos/D2I-Group/matmcd",
+          "labels_url": "https://api.github.com/repos/D2I-Group/matmcd/issues/1/labels{/name}",
+          "comments_url": "https://api.github.com/repos/D2I-Group/matmcd/issues/1/comments",
+          "events_url": "https://api.github.com/repos/D2I-Group/matmcd/issues/1/events",
+          "html_url": "https://github.com/D2I-Group/matmcd/issues/1",
+          "id": 3250735564,
+          "node_id": "I_kwDOOrzgFs7BwknM",
+          "number": 1,
+          "title": "Request for Causal DAG Datasets",
+          "user": {
+            "login": "ElongHu",
+            "id": 167832779,
+            "node_id": "U_kgDOCgDsyw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/167832779?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ElongHu",
+            "html_url": "https://github.com/ElongHu",
+            "followers_url": "https://api.github.com/users/ElongHu/followers",
+            "following_url": "https://api.github.com/users/ElongHu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ElongHu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ElongHu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ElongHu/subscriptions",
+            "organizations_url": "https://api.github.com/users/ElongHu/orgs",
+            "repos_url": "https://api.github.com/users/ElongHu/repos",
+            "events_url": "https://api.github.com/users/ElongHu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ElongHu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2025-07-22T02:27:26Z",
+          "updated_at": "2025-07-22T02:44:09Z",
+          "closed_at": "2025-07-22T02:44:09Z",
+          "assignee": null,
+          "author_association": "NONE",
+          "issue_field_values": [],
+          "type": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "I would like to request a dataset, specifically a real-world Causal DAG. I've been following your work recently, but I haven't been able to find a real-world Causal DAG dataset. Thank you very much!",
+          "closed_by": {
+            "login": "ElongHu",
+            "id": 167832779,
+            "node_id": "U_kgDOCgDsyw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/167832779?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ElongHu",
+            "html_url": "https://github.com/ElongHu",
+            "followers_url": "https://api.github.com/users/ElongHu/followers",
+            "following_url": "https://api.github.com/users/ElongHu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ElongHu/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ElongHu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ElongHu/subscriptions",
+            "organizations_url": "https://api.github.com/users/ElongHu/orgs",
+            "repos_url": "https://api.github.com/users/ElongHu/repos",
+            "events_url": "https://api.github.com/users/ElongHu/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ElongHu/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/D2I-Group/matmcd/issues/1/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/D2I-Group/matmcd/issues/1/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      ],
+      "url": "https://api.github.com/repos/D2I-Group/matmcd/issues?state=all&per_page=100"
+    },
+    {
+      "response": [
+        {
+          "url": "https://api.github.com/repos/lemma-rca/rca_baselines/issues/1",
+          "repository_url": "https://api.github.com/repos/lemma-rca/rca_baselines",
+          "labels_url": "https://api.github.com/repos/lemma-rca/rca_baselines/issues/1/labels{/name}",
+          "comments_url": "https://api.github.com/repos/lemma-rca/rca_baselines/issues/1/comments",
+          "events_url": "https://api.github.com/repos/lemma-rca/rca_baselines/issues/1/events",
+          "html_url": "https://github.com/lemma-rca/rca_baselines/pull/1",
+          "id": 3072071776,
+          "node_id": "PR_kwDOOrycnc6Woba-",
+          "number": 1,
+          "title": "first commit swat wadi",
+          "user": {
+            "login": "lemma-rca",
+            "id": 171759786,
+            "node_id": "U_kgDOCjzYqg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/171759786?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/lemma-rca",
+            "html_url": "https://github.com/lemma-rca",
+            "followers_url": "https://api.github.com/users/lemma-rca/followers",
+            "following_url": "https://api.github.com/users/lemma-rca/following{/other_user}",
+            "gists_url": "https://api.github.com/users/lemma-rca/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/lemma-rca/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/lemma-rca/subscriptions",
+            "organizations_url": "https://api.github.com/users/lemma-rca/orgs",
+            "repos_url": "https://api.github.com/users/lemma-rca/repos",
+            "events_url": "https://api.github.com/users/lemma-rca/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/lemma-rca/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2025-05-18T21:28:32Z",
+          "updated_at": "2025-05-18T21:28:55Z",
+          "closed_at": "2025-05-18T21:28:55Z",
+          "assignee": null,
+          "author_association": "OWNER",
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/lemma-rca/rca_baselines/pulls/1",
+            "html_url": "https://github.com/lemma-rca/rca_baselines/pull/1",
+            "diff_url": "https://github.com/lemma-rca/rca_baselines/pull/1.diff",
+            "patch_url": "https://github.com/lemma-rca/rca_baselines/pull/1.patch",
+            "merged_at": "2025-05-18T21:28:55Z"
+          },
+          "body": null,
+          "closed_by": {
+            "login": "lemma-rca",
+            "id": 171759786,
+            "node_id": "U_kgDOCjzYqg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/171759786?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/lemma-rca",
+            "html_url": "https://github.com/lemma-rca",
+            "followers_url": "https://api.github.com/users/lemma-rca/followers",
+            "following_url": "https://api.github.com/users/lemma-rca/following{/other_user}",
+            "gists_url": "https://api.github.com/users/lemma-rca/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/lemma-rca/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/lemma-rca/subscriptions",
+            "organizations_url": "https://api.github.com/users/lemma-rca/orgs",
+            "repos_url": "https://api.github.com/users/lemma-rca/repos",
+            "events_url": "https://api.github.com/users/lemma-rca/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/lemma-rca/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/lemma-rca/rca_baselines/issues/1/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/lemma-rca/rca_baselines/issues/1/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        }
+      ],
+      "url": "https://api.github.com/repos/lemma-rca/rca_baselines/issues?state=all&per_page=100"
+    },
+    {
+      "response": [
+        {
+          "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/7",
+          "repository_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines",
+          "labels_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/7/labels{/name}",
+          "comments_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/7/comments",
+          "events_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/7/events",
+          "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/issues/7",
+          "id": 3071146188,
+          "node_id": "I_kwDOL-o0xM63DfjM",
+          "number": 7,
+          "title": "Using SWaT for RCA",
+          "user": {
+            "login": "americast",
+            "id": 23132358,
+            "node_id": "MDQ6VXNlcjIzMTMyMzU4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/23132358?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/americast",
+            "html_url": "https://github.com/americast",
+            "followers_url": "https://api.github.com/users/americast/followers",
+            "following_url": "https://api.github.com/users/americast/following{/other_user}",
+            "gists_url": "https://api.github.com/users/americast/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/americast/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/americast/subscriptions",
+            "organizations_url": "https://api.github.com/users/americast/orgs",
+            "repos_url": "https://api.github.com/users/americast/repos",
+            "events_url": "https://api.github.com/users/americast/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/americast/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2025-05-17T23:25:30Z",
+          "updated_at": "2025-05-26T14:20:09Z",
+          "closed_at": "2025-05-26T14:20:09Z",
+          "assignee": null,
+          "author_association": "NONE",
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "Hi, thanks a lot for this repository. I have processed the SWaT and WaDI datasets as per the instructions given, and obtained a bunch of pickle files. However I am not sure how to use them for performing RCA. Could you help with an example code to perform RCA using the processed or raw form of the SWaT dataset?\n\nRegards.",
+          "closed_by": {
+            "login": "KnowledgeDiscovery",
+            "id": 41760154,
+            "node_id": "MDQ6VXNlcjQxNzYwMTU0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41760154?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/KnowledgeDiscovery",
+            "html_url": "https://github.com/KnowledgeDiscovery",
+            "followers_url": "https://api.github.com/users/KnowledgeDiscovery/followers",
+            "following_url": "https://api.github.com/users/KnowledgeDiscovery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/KnowledgeDiscovery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/KnowledgeDiscovery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/KnowledgeDiscovery/subscriptions",
+            "organizations_url": "https://api.github.com/users/KnowledgeDiscovery/orgs",
+            "repos_url": "https://api.github.com/users/KnowledgeDiscovery/repos",
+            "events_url": "https://api.github.com/users/KnowledgeDiscovery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/KnowledgeDiscovery/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/7/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/7/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        },
+        {
+          "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/6",
+          "repository_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines",
+          "labels_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/6/labels{/name}",
+          "comments_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/6/comments",
+          "events_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/6/events",
+          "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/6",
+          "id": 2764719490,
+          "node_id": "PR_kwDOL-o0xM6Gg0vn",
+          "number": 6,
+          "title": "Update requirements.txt",
+          "user": {
+            "login": "zhengzhangchen",
+            "id": 125778570,
+            "node_id": "U_kgDOB386ig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/125778570?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zhengzhangchen",
+            "html_url": "https://github.com/zhengzhangchen",
+            "followers_url": "https://api.github.com/users/zhengzhangchen/followers",
+            "following_url": "https://api.github.com/users/zhengzhangchen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zhengzhangchen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zhengzhangchen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zhengzhangchen/subscriptions",
+            "organizations_url": "https://api.github.com/users/zhengzhangchen/orgs",
+            "repos_url": "https://api.github.com/users/zhengzhangchen/repos",
+            "events_url": "https://api.github.com/users/zhengzhangchen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zhengzhangchen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2024-12-31T23:13:08Z",
+          "updated_at": "2025-01-24T21:40:10Z",
+          "closed_at": "2025-01-24T21:40:10Z",
+          "assignee": null,
+          "author_association": "CONTRIBUTOR",
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/pulls/6",
+            "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/6",
+            "diff_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/6.diff",
+            "patch_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/6.patch",
+            "merged_at": "2025-01-24T21:40:10Z"
+          },
+          "body": null,
+          "closed_by": {
+            "login": "KnowledgeDiscovery",
+            "id": 41760154,
+            "node_id": "MDQ6VXNlcjQxNzYwMTU0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41760154?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/KnowledgeDiscovery",
+            "html_url": "https://github.com/KnowledgeDiscovery",
+            "followers_url": "https://api.github.com/users/KnowledgeDiscovery/followers",
+            "following_url": "https://api.github.com/users/KnowledgeDiscovery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/KnowledgeDiscovery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/KnowledgeDiscovery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/KnowledgeDiscovery/subscriptions",
+            "organizations_url": "https://api.github.com/users/KnowledgeDiscovery/orgs",
+            "repos_url": "https://api.github.com/users/KnowledgeDiscovery/repos",
+            "events_url": "https://api.github.com/users/KnowledgeDiscovery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/KnowledgeDiscovery/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/6/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/6/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        {
+          "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/5",
+          "repository_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines",
+          "labels_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/5/labels{/name}",
+          "comments_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/5/comments",
+          "events_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/5/events",
+          "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/5",
+          "id": 2764718680,
+          "node_id": "PR_kwDOL-o0xM6Gg0lB",
+          "number": 5,
+          "title": "Update requirements.txt",
+          "user": {
+            "login": "zhengzhangchen",
+            "id": 125778570,
+            "node_id": "U_kgDOB386ig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/125778570?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zhengzhangchen",
+            "html_url": "https://github.com/zhengzhangchen",
+            "followers_url": "https://api.github.com/users/zhengzhangchen/followers",
+            "following_url": "https://api.github.com/users/zhengzhangchen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zhengzhangchen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zhengzhangchen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zhengzhangchen/subscriptions",
+            "organizations_url": "https://api.github.com/users/zhengzhangchen/orgs",
+            "repos_url": "https://api.github.com/users/zhengzhangchen/repos",
+            "events_url": "https://api.github.com/users/zhengzhangchen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zhengzhangchen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2024-12-31T23:10:30Z",
+          "updated_at": "2024-12-31T23:10:43Z",
+          "closed_at": "2024-12-31T23:10:34Z",
+          "assignee": null,
+          "author_association": "CONTRIBUTOR",
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/pulls/5",
+            "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/5",
+            "diff_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/5.diff",
+            "patch_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/5.patch",
+            "merged_at": null
+          },
+          "body": null,
+          "closed_by": {
+            "login": "zhengzhangchen",
+            "id": 125778570,
+            "node_id": "U_kgDOB386ig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/125778570?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zhengzhangchen",
+            "html_url": "https://github.com/zhengzhangchen",
+            "followers_url": "https://api.github.com/users/zhengzhangchen/followers",
+            "following_url": "https://api.github.com/users/zhengzhangchen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zhengzhangchen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zhengzhangchen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zhengzhangchen/subscriptions",
+            "organizations_url": "https://api.github.com/users/zhengzhangchen/orgs",
+            "repos_url": "https://api.github.com/users/zhengzhangchen/repos",
+            "events_url": "https://api.github.com/users/zhengzhangchen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zhengzhangchen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/5/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/5/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        {
+          "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/4",
+          "repository_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines",
+          "labels_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/4/labels{/name}",
+          "comments_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/4/comments",
+          "events_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/4/events",
+          "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/4",
+          "id": 2764710045,
+          "node_id": "PR_kwDOL-o0xM6Ggy0X",
+          "number": 4,
+          "title": "Update requirements.txt",
+          "user": {
+            "login": "zhengzhangchen",
+            "id": 125778570,
+            "node_id": "U_kgDOB386ig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/125778570?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zhengzhangchen",
+            "html_url": "https://github.com/zhengzhangchen",
+            "followers_url": "https://api.github.com/users/zhengzhangchen/followers",
+            "following_url": "https://api.github.com/users/zhengzhangchen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zhengzhangchen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zhengzhangchen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zhengzhangchen/subscriptions",
+            "organizations_url": "https://api.github.com/users/zhengzhangchen/orgs",
+            "repos_url": "https://api.github.com/users/zhengzhangchen/repos",
+            "events_url": "https://api.github.com/users/zhengzhangchen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zhengzhangchen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2024-12-31T22:42:41Z",
+          "updated_at": "2024-12-31T23:09:21Z",
+          "closed_at": "2024-12-31T23:09:21Z",
+          "assignee": null,
+          "author_association": "CONTRIBUTOR",
+          "active_lock_reason": null,
+          "draft": false,
+          "pull_request": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/pulls/4",
+            "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/4",
+            "diff_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/4.diff",
+            "patch_url": "https://github.com/KnowledgeDiscovery/rca_baselines/pull/4.patch",
+            "merged_at": null
+          },
+          "body": null,
+          "closed_by": {
+            "login": "zhengzhangchen",
+            "id": 125778570,
+            "node_id": "U_kgDOB386ig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/125778570?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zhengzhangchen",
+            "html_url": "https://github.com/zhengzhangchen",
+            "followers_url": "https://api.github.com/users/zhengzhangchen/followers",
+            "following_url": "https://api.github.com/users/zhengzhangchen/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zhengzhangchen/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zhengzhangchen/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zhengzhangchen/subscriptions",
+            "organizations_url": "https://api.github.com/users/zhengzhangchen/orgs",
+            "repos_url": "https://api.github.com/users/zhengzhangchen/repos",
+            "events_url": "https://api.github.com/users/zhengzhangchen/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zhengzhangchen/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/4/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/4/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null
+        },
+        {
+          "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/3",
+          "repository_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines",
+          "labels_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/3/labels{/name}",
+          "comments_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/3/comments",
+          "events_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/3/events",
+          "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/issues/3",
+          "id": 2501761694,
+          "node_id": "I_kwDOL-o0xM6VHdqe",
+          "number": 3,
+          "title": "What does the Product Review dataset mean when you have achieved 100% perfect performance?",
+          "user": {
+            "login": "FeiGSSS",
+            "id": 29545851,
+            "node_id": "MDQ6VXNlcjI5NTQ1ODUx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/29545851?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/FeiGSSS",
+            "html_url": "https://github.com/FeiGSSS",
+            "followers_url": "https://api.github.com/users/FeiGSSS/followers",
+            "following_url": "https://api.github.com/users/FeiGSSS/following{/other_user}",
+            "gists_url": "https://api.github.com/users/FeiGSSS/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/FeiGSSS/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/FeiGSSS/subscriptions",
+            "organizations_url": "https://api.github.com/users/FeiGSSS/orgs",
+            "repos_url": "https://api.github.com/users/FeiGSSS/repos",
+            "events_url": "https://api.github.com/users/FeiGSSS/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/FeiGSSS/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 1,
+          "created_at": "2024-09-03T01:28:10Z",
+          "updated_at": "2024-09-03T03:40:11Z",
+          "closed_at": "2024-09-03T03:40:11Z",
+          "assignee": null,
+          "author_association": "NONE",
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "Hello authors,\r\n\r\n Thanks for your posts! I'm new to this area and looking for a robust dataset to start my research. \r\n I noticed that your paper reported that the `MULAN` method achieved 100% scores for every metric in the Product Review dataset, I'm wondering then what is the point of proposing this dataset as it seems to be solved now?",
+          "closed_by": {
+            "login": "KnowledgeDiscovery",
+            "id": 41760154,
+            "node_id": "MDQ6VXNlcjQxNzYwMTU0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41760154?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/KnowledgeDiscovery",
+            "html_url": "https://github.com/KnowledgeDiscovery",
+            "followers_url": "https://api.github.com/users/KnowledgeDiscovery/followers",
+            "following_url": "https://api.github.com/users/KnowledgeDiscovery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/KnowledgeDiscovery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/KnowledgeDiscovery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/KnowledgeDiscovery/subscriptions",
+            "organizations_url": "https://api.github.com/users/KnowledgeDiscovery/orgs",
+            "repos_url": "https://api.github.com/users/KnowledgeDiscovery/repos",
+            "events_url": "https://api.github.com/users/KnowledgeDiscovery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/KnowledgeDiscovery/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/3/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/3/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        },
+        {
+          "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/2",
+          "repository_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines",
+          "labels_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/2/labels{/name}",
+          "comments_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/2/comments",
+          "events_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/2/events",
+          "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/issues/2",
+          "id": 2446375146,
+          "node_id": "I_kwDOL-o0xM6R0Ljq",
+          "number": 2,
+          "title": "Nezha's version has expired",
+          "user": {
+            "login": "zasitonbyl",
+            "id": 130150706,
+            "node_id": "U_kgDOB8HxMg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/130150706?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/zasitonbyl",
+            "html_url": "https://github.com/zasitonbyl",
+            "followers_url": "https://api.github.com/users/zasitonbyl/followers",
+            "following_url": "https://api.github.com/users/zasitonbyl/following{/other_user}",
+            "gists_url": "https://api.github.com/users/zasitonbyl/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/zasitonbyl/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/zasitonbyl/subscriptions",
+            "organizations_url": "https://api.github.com/users/zasitonbyl/orgs",
+            "repos_url": "https://api.github.com/users/zasitonbyl/repos",
+            "events_url": "https://api.github.com/users/zasitonbyl/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/zasitonbyl/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 3,
+          "created_at": "2024-08-03T14:24:30Z",
+          "updated_at": "2024-09-26T18:12:52Z",
+          "closed_at": "2024-09-26T18:12:51Z",
+          "assignee": null,
+          "author_association": "NONE",
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "https://github.com/IntelligentDDS/Nezha/commit/461b5b2b150552903ba1fc3416f16e7d52e33f94\r\nI tried to install Nezha but it failed. I noticed that the official code has been updated and the use of Orange3 has been removed. Your project is doing well, and I noticed that you have published multiple new papers. Will you continue to update this project?",
+          "closed_by": {
+            "login": "KnowledgeDiscovery",
+            "id": 41760154,
+            "node_id": "MDQ6VXNlcjQxNzYwMTU0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41760154?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/KnowledgeDiscovery",
+            "html_url": "https://github.com/KnowledgeDiscovery",
+            "followers_url": "https://api.github.com/users/KnowledgeDiscovery/followers",
+            "following_url": "https://api.github.com/users/KnowledgeDiscovery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/KnowledgeDiscovery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/KnowledgeDiscovery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/KnowledgeDiscovery/subscriptions",
+            "organizations_url": "https://api.github.com/users/KnowledgeDiscovery/orgs",
+            "repos_url": "https://api.github.com/users/KnowledgeDiscovery/repos",
+            "events_url": "https://api.github.com/users/KnowledgeDiscovery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/KnowledgeDiscovery/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/2/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/2/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        },
+        {
+          "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/1",
+          "repository_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines",
+          "labels_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/1/labels{/name}",
+          "comments_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/1/comments",
+          "events_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/1/events",
+          "html_url": "https://github.com/KnowledgeDiscovery/rca_baselines/issues/1",
+          "id": 2356984988,
+          "node_id": "I_kwDOL-o0xM6MfLyc",
+          "number": 1,
+          "title": "Requesting README",
+          "user": {
+            "login": "nlokeshiisc",
+            "id": 72972018,
+            "node_id": "MDQ6VXNlcjcyOTcyMDE4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/72972018?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nlokeshiisc",
+            "html_url": "https://github.com/nlokeshiisc",
+            "followers_url": "https://api.github.com/users/nlokeshiisc/followers",
+            "following_url": "https://api.github.com/users/nlokeshiisc/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nlokeshiisc/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nlokeshiisc/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nlokeshiisc/subscriptions",
+            "organizations_url": "https://api.github.com/users/nlokeshiisc/orgs",
+            "repos_url": "https://api.github.com/users/nlokeshiisc/repos",
+            "events_url": "https://api.github.com/users/nlokeshiisc/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nlokeshiisc/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [
+            {
+              "login": "wangdongjie100",
+              "id": 13485370,
+              "node_id": "MDQ6VXNlcjEzNDg1Mzcw",
+              "avatar_url": "https://avatars.githubusercontent.com/u/13485370?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/wangdongjie100",
+              "html_url": "https://github.com/wangdongjie100",
+              "followers_url": "https://api.github.com/users/wangdongjie100/followers",
+              "following_url": "https://api.github.com/users/wangdongjie100/following{/other_user}",
+              "gists_url": "https://api.github.com/users/wangdongjie100/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/wangdongjie100/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/wangdongjie100/subscriptions",
+              "organizations_url": "https://api.github.com/users/wangdongjie100/orgs",
+              "repos_url": "https://api.github.com/users/wangdongjie100/repos",
+              "events_url": "https://api.github.com/users/wangdongjie100/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/wangdongjie100/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            {
+              "login": "zhenglecheng",
+              "id": 33203374,
+              "node_id": "MDQ6VXNlcjMzMjAzMzc0",
+              "avatar_url": "https://avatars.githubusercontent.com/u/33203374?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/zhenglecheng",
+              "html_url": "https://github.com/zhenglecheng",
+              "followers_url": "https://api.github.com/users/zhenglecheng/followers",
+              "following_url": "https://api.github.com/users/zhenglecheng/following{/other_user}",
+              "gists_url": "https://api.github.com/users/zhenglecheng/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/zhenglecheng/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/zhenglecheng/subscriptions",
+              "organizations_url": "https://api.github.com/users/zhenglecheng/orgs",
+              "repos_url": "https://api.github.com/users/zhenglecheng/repos",
+              "events_url": "https://api.github.com/users/zhenglecheng/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/zhenglecheng/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 3,
+          "created_at": "2024-06-17T10:26:36Z",
+          "updated_at": "2024-06-21T16:57:00Z",
+          "closed_at": "2024-06-18T18:55:41Z",
+          "assignee": {
+            "login": "wangdongjie100",
+            "id": 13485370,
+            "node_id": "MDQ6VXNlcjEzNDg1Mzcw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13485370?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/wangdongjie100",
+            "html_url": "https://github.com/wangdongjie100",
+            "followers_url": "https://api.github.com/users/wangdongjie100/followers",
+            "following_url": "https://api.github.com/users/wangdongjie100/following{/other_user}",
+            "gists_url": "https://api.github.com/users/wangdongjie100/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/wangdongjie100/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/wangdongjie100/subscriptions",
+            "organizations_url": "https://api.github.com/users/wangdongjie100/orgs",
+            "repos_url": "https://api.github.com/users/wangdongjie100/repos",
+            "events_url": "https://api.github.com/users/wangdongjie100/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/wangdongjie100/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "author_association": "NONE",
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "Hi,\r\nThanks very much for releasing this useful dataset. I am facing issues on reproducing the numbers in the paper https://arxiv.org/pdf/2406.05375.\r\n\r\nIt would be really helpful if the authors could release a README with instructions on the following:\r\n1. which version of HuggingFace dataset to download?\r\n2. The semantics/interpretation of preprocessed datasets\r\n3. Folder structure in which to host the downloaded dataset.\r\n4. For (say) `Metric-only` baselines in Table 4, how to run the `REASON` method\r\n5. Instructions on how the results are saved also would be very helpful.\r\n\r\nWaiting eagerly for a response :-)\r\n\r\nThanks again!",
+          "closed_by": {
+            "login": "KnowledgeDiscovery",
+            "id": 41760154,
+            "node_id": "MDQ6VXNlcjQxNzYwMTU0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/41760154?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/KnowledgeDiscovery",
+            "html_url": "https://github.com/KnowledgeDiscovery",
+            "followers_url": "https://api.github.com/users/KnowledgeDiscovery/followers",
+            "following_url": "https://api.github.com/users/KnowledgeDiscovery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/KnowledgeDiscovery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/KnowledgeDiscovery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/KnowledgeDiscovery/subscriptions",
+            "organizations_url": "https://api.github.com/users/KnowledgeDiscovery/orgs",
+            "repos_url": "https://api.github.com/users/KnowledgeDiscovery/repos",
+            "events_url": "https://api.github.com/users/KnowledgeDiscovery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/KnowledgeDiscovery/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "reactions": {
+            "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/1/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues/1/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      ],
+      "url": "https://api.github.com/repos/KnowledgeDiscovery/rca_baselines/issues?state=all&per_page=100"
+    }
+  ],
+  "huggingface": [
+    {
+      "details": [
+        {
+          "_id": "6a8ee12ebf9eb82ca446f3d4",
+          "author": {
+            "_id": "5f1158120c833276f61f1a84",
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+            "fullname": "Niels Rogge",
+            "name": "nielsr",
+            "type": "user",
+            "isPro": false,
+            "isHf": true,
+            "isHfAdmin": false,
+            "isMod": false,
+            "followerCount": 1314,
+            "isUserFollowing": false
+          },
+          "org": {
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/noauth/8SJZmiBR6i0TafMaq_uQR.png",
+            "fullname": "Lemma RCA",
+            "name": "Lemma-RCA-NEC",
+            "type": "org",
+            "isHf": false,
+            "details": "Root Cause Analysis; Multi-modal Learning; Causal Discovery; Log Analysis; Time Series Analysis; Large Language Model"
+          },
+          "num": 1,
+          "repo": {
+            "name": "Lemma-RCA-NEC/Product_Review_Preprocessed",
+            "type": "dataset"
+          },
+          "title": "Add paper, project page, and code links; fix license",
+          "status": "open",
+          "createdAt": "2026-08-26T12:50:54Z",
+          "events": [
+            {
+              "id": "6a8ee12ebf9eb82ca446f3d4",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:50:54Z",
+              "type": "comment",
+              "data": {
+                "edited": false,
+                "hidden": false,
+                "latest": {
+                  "raw": "This PR adds links to the paper (https://huggingface.co/papers/2406.05375), the project page (https://www.lemmarca.info), and the GitHub repository (https://github.com/lemma-rca/rca_baselines). It also corrects the license in the YAML metadata from `cc-by-nc-4.0` to `cc-by-nd-4.0` to match the dataset’s stated license.",
+                  "html": "<p>This PR adds links to the paper (<a href=\"https://huggingface.co/papers/2406.05375\">https://huggingface.co/papers/2406.05375</a>), the project page (<a href=\"https://www.lemmarca.info\" rel=\"nofollow\">https://www.lemmarca.info</a>), and the GitHub repository (<a href=\"https://github.com/lemma-rca/rca_baselines\" rel=\"nofollow\">https://github.com/lemma-rca/rca_baselines</a>). It also corrects the license in the YAML metadata from <code>cc-by-nc-4.0</code> to <code>cc-by-nd-4.0</code> to match the dataset’s stated license.</p>\n",
+                  "updatedAt": "2026-08-26T12:50:54.679Z",
+                  "author": {
+                    "_id": "5f1158120c833276f61f1a84",
+                    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                    "fullname": "Niels Rogge",
+                    "name": "nielsr",
+                    "type": "user",
+                    "isPro": false,
+                    "isHf": true,
+                    "isHfAdmin": false,
+                    "isMod": false,
+                    "followerCount": 1314,
+                    "isUserFollowing": false
+                  }
+                },
+                "numEdits": 0,
+                "identifiedLanguage": {
+                  "language": "en",
+                  "probability": 0.6799160838127136
+                },
+                "editors": [
+                  "nielsr"
+                ],
+                "editorAvatarUrls": [
+                  "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg"
+                ],
+                "reactions": [],
+                "isReport": false
+              }
+            },
+            {
+              "id": "6a8ee12f068599a4a5ecb4f0",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:50:55Z",
+              "type": "commit",
+              "data": {
+                "subject": "Add paper, project page, and code links; fix license",
+                "oid": "068599a4a5ecb4f045509b858090d75a8043c1f9",
+                "parents": [
+                  "df25484004e50483de6f6756c3a4d7ab03174b83"
+                ]
+              }
+            }
+          ],
+          "pinned": false,
+          "locked": false,
+          "collection": "discussions",
+          "isPullRequest": true,
+          "changes": {
+            "base": "refs/heads/main"
+          },
+          "filesWithConflicts": [],
+          "diffUrl": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/discussions/1/files.diff"
+        }
+      ],
+      "url": "https://huggingface.co/api/datasets/Lemma-RCA-NEC/Product_Review_Preprocessed/discussions",
+      "response": {
+        "discussions": [
+          {
+            "num": 1,
+            "author": {
+              "_id": "5f1158120c833276f61f1a84",
+              "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+              "fullname": "Niels Rogge",
+              "name": "nielsr",
+              "type": "user",
+              "isPro": false,
+              "isHf": true,
+              "isHfAdmin": false,
+              "isMod": false,
+              "followerCount": 1314,
+              "isUserFollowing": false
+            },
+            "repo": {
+              "name": "Lemma-RCA-NEC/Product_Review_Preprocessed",
+              "type": "dataset"
+            },
+            "title": "Add paper, project page, and code links; fix license",
+            "status": "open",
+            "createdAt": "2026-08-26T12:50:54Z",
+            "isPullRequest": true,
+            "numComments": 1,
+            "topReactions": [],
+            "numReactionUsers": 0,
+            "pinned": false,
+            "repoOwner": {
+              "name": "Lemma-RCA-NEC",
+              "isParticipating": false,
+              "type": "org",
+              "isDiscussionAuthor": false
+            }
+          }
+        ],
+        "count": 1,
+        "start": 0,
+        "numClosedDiscussions": 0
+      }
+    },
+    {
+      "details": [
+        {
+          "_id": "6a8ee11fd1b8a5cd93ec5c59",
+          "author": {
+            "_id": "5f1158120c833276f61f1a84",
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+            "fullname": "Niels Rogge",
+            "name": "nielsr",
+            "type": "user",
+            "isPro": false,
+            "isHf": true,
+            "isHfAdmin": false,
+            "isMod": false,
+            "followerCount": 1314,
+            "isUserFollowing": false
+          },
+          "org": {
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/noauth/8SJZmiBR6i0TafMaq_uQR.png",
+            "fullname": "Lemma RCA",
+            "name": "Lemma-RCA-NEC",
+            "type": "org",
+            "isHf": false,
+            "details": "Root Cause Analysis; Multi-modal Learning; Causal Discovery; Log Analysis; Time Series Analysis; Large Language Model"
+          },
+          "num": 2,
+          "repo": {
+            "name": "Lemma-RCA-NEC/Cloud_Computing_Preprocessed",
+            "type": "dataset"
+          },
+          "title": "Add paper, project, and code links; fix license and task category",
+          "status": "open",
+          "createdAt": "2026-08-26T12:50:39Z",
+          "events": [
+            {
+              "id": "6a8ee11fd1b8a5cd93ec5c59",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:50:39Z",
+              "type": "comment",
+              "data": {
+                "edited": false,
+                "hidden": false,
+                "latest": {
+                  "raw": "This PR updates the dataset card to:\n\n- Add links to the paper, project page, and GitHub repository.\n- Correct the license text to `cc-by-nc-4.0`.\n- Change the task category to `other` for better discoverability of this root cause analysis dataset.",
+                  "html": "<p>This PR updates the dataset card to:</p>\n<ul>\n<li>Add links to the paper, project page, and GitHub repository.</li>\n<li>Correct the license text to <code>cc-by-nc-4.0</code>.</li>\n<li>Change the task category to <code>other</code> for better discoverability of this root cause analysis dataset.</li>\n</ul>\n",
+                  "updatedAt": "2026-08-26T12:50:39.894Z",
+                  "author": {
+                    "_id": "5f1158120c833276f61f1a84",
+                    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                    "fullname": "Niels Rogge",
+                    "name": "nielsr",
+                    "type": "user",
+                    "isPro": false,
+                    "isHf": true,
+                    "isHfAdmin": false,
+                    "isMod": false,
+                    "followerCount": 1314,
+                    "isUserFollowing": false
+                  }
+                },
+                "numEdits": 0,
+                "identifiedLanguage": {
+                  "language": "en",
+                  "probability": 0.7633519172668457
+                },
+                "editors": [
+                  "nielsr"
+                ],
+                "editorAvatarUrls": [
+                  "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg"
+                ],
+                "reactions": [],
+                "isReport": false
+              }
+            },
+            {
+              "id": "6a8ee1204f75c9e2ea6c936e",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:50:40Z",
+              "type": "commit",
+              "data": {
+                "subject": "Add paper, project, and code links; fix license and task category",
+                "oid": "4f75c9e2ea6c936eb9feb1d94a5fd1a4f8f9b434",
+                "parents": [
+                  "03f82a2c4b16afe09e9315def9f5d6990427000a"
+                ]
+              }
+            }
+          ],
+          "pinned": false,
+          "locked": false,
+          "collection": "discussions",
+          "isPullRequest": true,
+          "changes": {
+            "base": "refs/heads/main"
+          },
+          "filesWithConflicts": [],
+          "diffUrl": "https://huggingface.co/datasets/Lemma-RCA-NEC/Cloud_Computing_Preprocessed/discussions/2/files.diff"
+        },
+        {
+          "_id": "69360e6aa7c12a423fad459c",
+          "author": {
+            "_id": "69360cf4b956a4949c7508ae",
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/69360cf4b956a4949c7508ae/aw4srGfhVrKgj8-e1cgHs.png",
+            "fullname": "DanielDorado",
+            "name": "ddt1992",
+            "type": "user",
+            "isPro": false,
+            "isHf": false,
+            "isHfAdmin": false,
+            "isMod": false,
+            "isUserFollowing": false
+          },
+          "org": {
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/noauth/8SJZmiBR6i0TafMaq_uQR.png",
+            "fullname": "Lemma RCA",
+            "name": "Lemma-RCA-NEC",
+            "type": "org",
+            "isHf": false,
+            "details": "Root Cause Analysis; Multi-modal Learning; Causal Discovery; Log Analysis; Time Series Analysis; Large Language Model"
+          },
+          "num": 1,
+          "repo": {
+            "name": "Lemma-RCA-NEC/Cloud_Computing_Preprocessed",
+            "type": "dataset"
+          },
+          "title": "Posible Timezone Discrepancy in Ground Truth Fault Timestamps [PPTX]",
+          "status": "open",
+          "createdAt": "2025-12-07T23:31:54Z",
+          "events": [
+            {
+              "id": "69360e6aa7c12a423fad459c",
+              "author": {
+                "_id": "69360cf4b956a4949c7508ae",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/69360cf4b956a4949c7508ae/aw4srGfhVrKgj8-e1cgHs.png",
+                "fullname": "DanielDorado",
+                "name": "ddt1992",
+                "type": "user",
+                "isPro": false,
+                "isHf": false,
+                "isHfAdmin": false,
+                "isMod": false,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2025-12-07T23:31:54Z",
+              "type": "comment",
+              "data": {
+                "edited": true,
+                "hidden": false,
+                "latest": {
+                  "raw": "Hey! First of all, thanks for publishing this dataset , it's being super useful for my multimodal RCA model.\n\nI wanted to flag something I ran into while working with the data: there's a timezone offset between the fault timestamps in some of the PPTX slides (where the groundtruth is if Im not wrong) and the actual metrics and log data.\n\n\n**The PPTX documentation uses JST (Japan Standard Time)**\n\n**The metric and log files use UTC (Can I assume it?)**\n\n**If Im not wrong, this creates a 9-hour offset**\n\n\nExample from scenario 20231221:\n\nThe PPTX slide explicitly states:\n\"Measurement period: 2023/12/19 12:02 (JST) ~ 2023/12/20 18:00 (JST)\"\n\"Failure time: 2023/12/20 11:30 (JST)\"\n\n\nBut if you use 11:30 JST directly as the fault timestamp, you won't find the anomaly in the data - because the metrics are in UTC. \nI think the correct fault time in the data is actually 02:30 UTC (11:30 JST - 9 hours).\nI spent a while debugging why my ground truth wasn't aligning with visible anomalies in the metrics until I figured this out 😅\n\nJust wanted to share it, to double check with you guys and in case others run into the same issue. \n\nCheers and thanks again!",
+                  "html": "<p>Hey! First of all, thanks for publishing this dataset , it's being super useful for my multimodal RCA model.</p>\n<p>I wanted to flag something I ran into while working with the data: there's a timezone offset between the fault timestamps in some of the PPTX slides (where the groundtruth is if Im not wrong) and the actual metrics and log data.</p>\n<p><strong>The PPTX documentation uses JST (Japan Standard Time)</strong></p>\n<p><strong>The metric and log files use UTC (Can I assume it?)</strong></p>\n<p><strong>If Im not wrong, this creates a 9-hour offset</strong></p>\n<p>Example from scenario 20231221:</p>\n<p>The PPTX slide explicitly states:<br>\"Measurement period: 2023/12/19 12:02 (JST) ~ 2023/12/20 18:00 (JST)\"<br>\"Failure time: 2023/12/20 11:30 (JST)\"</p>\n<p>But if you use 11:30 JST directly as the fault timestamp, you won't find the anomaly in the data - because the metrics are in UTC.<br>I think the correct fault time in the data is actually 02:30 UTC (11:30 JST - 9 hours).<br>I spent a while debugging why my ground truth wasn't aligning with visible anomalies in the metrics until I figured this out 😅</p>\n<p>Just wanted to share it, to double check with you guys and in case others run into the same issue. </p>\n<p>Cheers and thanks again!</p>\n",
+                  "updatedAt": "2025-12-08T00:51:19.467Z",
+                  "author": {
+                    "_id": "69360cf4b956a4949c7508ae",
+                    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/69360cf4b956a4949c7508ae/aw4srGfhVrKgj8-e1cgHs.png",
+                    "fullname": "DanielDorado",
+                    "name": "ddt1992",
+                    "type": "user",
+                    "isPro": false,
+                    "isHf": false,
+                    "isHfAdmin": false,
+                    "isMod": false,
+                    "isUserFollowing": false
+                  }
+                },
+                "numEdits": 6,
+                "identifiedLanguage": {
+                  "language": "en",
+                  "probability": 0.7610843777656555
+                },
+                "editors": [
+                  "ddt1992"
+                ],
+                "editorAvatarUrls": [
+                  "https://cdn-avatars.huggingface.co/v1/production/uploads/69360cf4b956a4949c7508ae/aw4srGfhVrKgj8-e1cgHs.png"
+                ],
+                "reactions": [],
+                "isReport": false
+              }
+            },
+            {
+              "id": "693c8b97b5f1efebb9f5256f",
+              "author": {
+                "_id": "665d06a32b4ea4231cccd023",
+                "avatarUrl": "/avatars/3ce9239c0f5fd60c16d05893ba095f77.svg",
+                "fullname": "Zhengzhang Chen",
+                "name": "KnowledgeDiscovery",
+                "type": "user",
+                "isPro": false,
+                "isHf": false,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": true
+              },
+              "createdAt": "2025-12-12T21:39:35Z",
+              "type": "comment",
+              "data": {
+                "edited": false,
+                "hidden": false,
+                "latest": {
+                  "raw": "Hi! Thanks a lot for the detailed note — really appreciate you taking the time to dig into this and share the finding.\n\nYou’re absolutely right. The timestamps in the PPT slides are in JST, since the real testbed is located in Japan and the failure time was recorded locally. Meanwhile, all metric and log data are collected and stored in UTC. So the 9-hour offset you identified is expected, and your conversion (e.g., 11:30 JST → 02:30 UTC) is correct.\n\nWe’ll update the README to make this clearer for everyone.\n\nThanks again for pointing this out — this will definitely help others avoid confusion. Glad to hear the dataset has been useful for your multimodal RCA model!\n\nCheers!",
+                  "html": "<p>Hi! Thanks a lot for the detailed note — really appreciate you taking the time to dig into this and share the finding.</p>\n<p>You’re absolutely right. The timestamps in the PPT slides are in JST, since the real testbed is located in Japan and the failure time was recorded locally. Meanwhile, all metric and log data are collected and stored in UTC. So the 9-hour offset you identified is expected, and your conversion (e.g., 11:30 JST → 02:30 UTC) is correct.</p>\n<p>We’ll update the README to make this clearer for everyone.</p>\n<p>Thanks again for pointing this out — this will definitely help others avoid confusion. Glad to hear the dataset has been useful for your multimodal RCA model!</p>\n<p>Cheers!</p>\n",
+                  "updatedAt": "2025-12-12T21:39:35.855Z",
+                  "author": {
+                    "_id": "665d06a32b4ea4231cccd023",
+                    "avatarUrl": "/avatars/3ce9239c0f5fd60c16d05893ba095f77.svg",
+                    "fullname": "Zhengzhang Chen",
+                    "name": "KnowledgeDiscovery",
+                    "type": "user",
+                    "isPro": false,
+                    "isHf": false,
+                    "isHfAdmin": false,
+                    "isMod": false,
+                    "followerCount": 1,
+                    "isUserFollowing": false
+                  }
+                },
+                "numEdits": 0,
+                "identifiedLanguage": {
+                  "language": "en",
+                  "probability": 0.9587759971618652
+                },
+                "editors": [
+                  "KnowledgeDiscovery"
+                ],
+                "editorAvatarUrls": [
+                  "/avatars/3ce9239c0f5fd60c16d05893ba095f77.svg"
+                ],
+                "reactions": [
+                  {
+                    "reaction": "🚀",
+                    "users": [
+                      "ddt1992"
+                    ],
+                    "count": 1
+                  }
+                ],
+                "isReport": false
+              }
+            }
+          ],
+          "pinned": false,
+          "locked": false,
+          "collection": "discussions",
+          "isPullRequest": false,
+          "isReport": false
+        }
+      ],
+      "url": "https://huggingface.co/api/datasets/Lemma-RCA-NEC/Cloud_Computing_Preprocessed/discussions",
+      "response": {
+        "discussions": [
+          {
+            "num": 2,
+            "author": {
+              "_id": "5f1158120c833276f61f1a84",
+              "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+              "fullname": "Niels Rogge",
+              "name": "nielsr",
+              "type": "user",
+              "isPro": false,
+              "isHf": true,
+              "isHfAdmin": false,
+              "isMod": false,
+              "followerCount": 1314,
+              "isUserFollowing": false
+            },
+            "repo": {
+              "name": "Lemma-RCA-NEC/Cloud_Computing_Preprocessed",
+              "type": "dataset"
+            },
+            "title": "Add paper, project, and code links; fix license and task category",
+            "status": "open",
+            "createdAt": "2026-08-26T12:50:39Z",
+            "isPullRequest": true,
+            "numComments": 1,
+            "topReactions": [],
+            "numReactionUsers": 0,
+            "pinned": false,
+            "repoOwner": {
+              "name": "Lemma-RCA-NEC",
+              "isParticipating": false,
+              "type": "org",
+              "isDiscussionAuthor": false
+            }
+          },
+          {
+            "num": 1,
+            "author": {
+              "_id": "69360cf4b956a4949c7508ae",
+              "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/69360cf4b956a4949c7508ae/aw4srGfhVrKgj8-e1cgHs.png",
+              "fullname": "DanielDorado",
+              "name": "ddt1992",
+              "type": "user",
+              "isPro": false,
+              "isHf": false,
+              "isHfAdmin": false,
+              "isMod": false,
+              "isUserFollowing": false
+            },
+            "repo": {
+              "name": "Lemma-RCA-NEC/Cloud_Computing_Preprocessed",
+              "type": "dataset"
+            },
+            "title": "Posible Timezone Discrepancy in Ground Truth Fault Timestamps [PPTX]",
+            "status": "open",
+            "createdAt": "2025-12-07T23:31:54Z",
+            "isPullRequest": false,
+            "numComments": 2,
+            "topReactions": [],
+            "numReactionUsers": 0,
+            "pinned": false,
+            "repoOwner": {
+              "name": "Lemma-RCA-NEC",
+              "isParticipating": true,
+              "type": "org",
+              "isDiscussionAuthor": false
+            }
+          }
+        ],
+        "count": 2,
+        "start": 0,
+        "numClosedDiscussions": 0
+      }
+    },
+    {
+      "details": [
+        {
+          "_id": "6a8ee128c0a54ff049d73b0e",
+          "author": {
+            "_id": "5f1158120c833276f61f1a84",
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+            "fullname": "Niels Rogge",
+            "name": "nielsr",
+            "type": "user",
+            "isPro": false,
+            "isHf": true,
+            "isHfAdmin": false,
+            "isMod": false,
+            "followerCount": 1314,
+            "isUserFollowing": false
+          },
+          "org": {
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/noauth/8SJZmiBR6i0TafMaq_uQR.png",
+            "fullname": "Lemma RCA",
+            "name": "Lemma-RCA-NEC",
+            "type": "org",
+            "isHf": false,
+            "details": "Root Cause Analysis; Multi-modal Learning; Causal Discovery; Log Analysis; Time Series Analysis; Large Language Model"
+          },
+          "num": 1,
+          "repo": {
+            "name": "Lemma-RCA-NEC/Product_Review_Original",
+            "type": "dataset"
+          },
+          "title": "Add paper, project, and code links; fix license",
+          "status": "open",
+          "createdAt": "2026-08-26T12:50:48Z",
+          "events": [
+            {
+              "id": "6a8ee128c0a54ff049d73b0e",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:50:48Z",
+              "type": "comment",
+              "data": {
+                "edited": false,
+                "hidden": false,
+                "latest": {
+                  "raw": "This PR corrects the license in the content section to match the YAML metadata (CC BY-NC 4.0) and adds direct links to the paper, project page, and GitHub repository for easier access.",
+                  "html": "<p>This PR corrects the license in the content section to match the YAML metadata (CC BY-NC 4.0) and adds direct links to the paper, project page, and GitHub repository for easier access.</p>\n",
+                  "updatedAt": "2026-08-26T12:50:48.557Z",
+                  "author": {
+                    "_id": "5f1158120c833276f61f1a84",
+                    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                    "fullname": "Niels Rogge",
+                    "name": "nielsr",
+                    "type": "user",
+                    "isPro": false,
+                    "isHf": true,
+                    "isHfAdmin": false,
+                    "isMod": false,
+                    "followerCount": 1314,
+                    "isUserFollowing": false
+                  }
+                },
+                "numEdits": 0,
+                "identifiedLanguage": {
+                  "language": "en",
+                  "probability": 0.641290009021759
+                },
+                "editors": [
+                  "nielsr"
+                ],
+                "editorAvatarUrls": [
+                  "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg"
+                ],
+                "reactions": [],
+                "isReport": false
+              }
+            },
+            {
+              "id": "6a8ee129a4a508ba7d062ee7",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:50:49Z",
+              "type": "commit",
+              "data": {
+                "subject": "Add paper, project, and code links; fix license",
+                "oid": "a4a508ba7d062ee78868d7a90f36b0c43457d8d3",
+                "parents": [
+                  "63aa4abe7dd7217d9b0b108894c7d893e2b29aef"
+                ]
+              }
+            }
+          ],
+          "pinned": false,
+          "locked": false,
+          "collection": "discussions",
+          "isPullRequest": true,
+          "changes": {
+            "base": "refs/heads/main"
+          },
+          "filesWithConflicts": [],
+          "diffUrl": "https://huggingface.co/datasets/Lemma-RCA-NEC/Product_Review_Original/discussions/1/files.diff"
+        }
+      ],
+      "url": "https://huggingface.co/api/datasets/Lemma-RCA-NEC/Product_Review_Original/discussions",
+      "response": {
+        "discussions": [
+          {
+            "num": 1,
+            "author": {
+              "_id": "5f1158120c833276f61f1a84",
+              "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+              "fullname": "Niels Rogge",
+              "name": "nielsr",
+              "type": "user",
+              "isPro": false,
+              "isHf": true,
+              "isHfAdmin": false,
+              "isMod": false,
+              "followerCount": 1314,
+              "isUserFollowing": false
+            },
+            "repo": {
+              "name": "Lemma-RCA-NEC/Product_Review_Original",
+              "type": "dataset"
+            },
+            "title": "Add paper, project, and code links; fix license",
+            "status": "open",
+            "createdAt": "2026-08-26T12:50:48Z",
+            "isPullRequest": true,
+            "numComments": 1,
+            "topReactions": [],
+            "numReactionUsers": 0,
+            "pinned": false,
+            "repoOwner": {
+              "name": "Lemma-RCA-NEC",
+              "isParticipating": false,
+              "type": "org",
+              "isDiscussionAuthor": false
+            }
+          }
+        ],
+        "count": 1,
+        "start": 0,
+        "numClosedDiscussions": 0
+      }
+    },
+    {
+      "details": [
+        {
+          "_id": "6a8ee136fd5d53097b416930",
+          "author": {
+            "_id": "5f1158120c833276f61f1a84",
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+            "fullname": "Niels Rogge",
+            "name": "nielsr",
+            "type": "user",
+            "isPro": false,
+            "isHf": true,
+            "isHfAdmin": false,
+            "isMod": false,
+            "followerCount": 1314,
+            "isUserFollowing": false
+          },
+          "org": {
+            "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/noauth/8SJZmiBR6i0TafMaq_uQR.png",
+            "fullname": "Lemma RCA",
+            "name": "Lemma-RCA-NEC",
+            "type": "org",
+            "isHf": false,
+            "details": "Root Cause Analysis; Multi-modal Learning; Causal Discovery; Log Analysis; Time Series Analysis; Large Language Model"
+          },
+          "num": 1,
+          "repo": {
+            "name": "Lemma-RCA-NEC/Cloud_Computing_Original",
+            "type": "dataset"
+          },
+          "title": "Add links to paper, project page, and code; fix license inconsistency",
+          "status": "open",
+          "createdAt": "2026-08-26T12:51:02Z",
+          "events": [
+            {
+              "id": "6a8ee136fd5d53097b416930",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:51:02Z",
+              "type": "comment",
+              "data": {
+                "edited": false,
+                "hidden": false,
+                "latest": {
+                  "raw": "This PR adds links to the Hugging Face paper page, the project website, and the GitHub code repository to the dataset card. It also corrects the license description in the content to match the `cc-by-nc-4.0` license already specified in the YAML metadata.",
+                  "html": "<p>This PR adds links to the Hugging Face paper page, the project website, and the GitHub code repository to the dataset card. It also corrects the license description in the content to match the <code>cc-by-nc-4.0</code> license already specified in the YAML metadata.</p>\n",
+                  "updatedAt": "2026-08-26T12:51:02.002Z",
+                  "author": {
+                    "_id": "5f1158120c833276f61f1a84",
+                    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                    "fullname": "Niels Rogge",
+                    "name": "nielsr",
+                    "type": "user",
+                    "isPro": false,
+                    "isHf": true,
+                    "isHfAdmin": false,
+                    "isMod": false,
+                    "followerCount": 1314,
+                    "isUserFollowing": false
+                  }
+                },
+                "numEdits": 0,
+                "identifiedLanguage": {
+                  "language": "en",
+                  "probability": 0.6515185236930847
+                },
+                "editors": [
+                  "nielsr"
+                ],
+                "editorAvatarUrls": [
+                  "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg"
+                ],
+                "reactions": [],
+                "isReport": false
+              }
+            },
+            {
+              "id": "6a8ee136f3c89ae8c477c46f",
+              "author": {
+                "_id": "5f1158120c833276f61f1a84",
+                "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+                "fullname": "Niels Rogge",
+                "name": "nielsr",
+                "type": "user",
+                "isPro": false,
+                "isHf": true,
+                "isHfAdmin": false,
+                "isMod": false,
+                "followerCount": 1314,
+                "isUserFollowing": false,
+                "isOwner": false,
+                "isOrgMember": false
+              },
+              "createdAt": "2026-08-26T12:51:02Z",
+              "type": "commit",
+              "data": {
+                "subject": "Add links to paper, project page, and code; fix license inconsistency",
+                "oid": "f3c89ae8c477c46f2771f9473b4b3befb5293519",
+                "parents": [
+                  "9e5ad23fa390f6b596f41be014233fe446679bcd"
+                ]
+              }
+            }
+          ],
+          "pinned": false,
+          "locked": false,
+          "collection": "discussions",
+          "isPullRequest": true,
+          "changes": {
+            "base": "refs/heads/main"
+          },
+          "filesWithConflicts": [],
+          "diffUrl": "https://huggingface.co/datasets/Lemma-RCA-NEC/Cloud_Computing_Original/discussions/1/files.diff"
+        }
+      ],
+      "url": "https://huggingface.co/api/datasets/Lemma-RCA-NEC/Cloud_Computing_Original/discussions",
+      "response": {
+        "discussions": [
+          {
+            "num": 1,
+            "author": {
+              "_id": "5f1158120c833276f61f1a84",
+              "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/1608042047613-5f1158120c833276f61f1a84.jpeg",
+              "fullname": "Niels Rogge",
+              "name": "nielsr",
+              "type": "user",
+              "isPro": false,
+              "isHf": true,
+              "isHfAdmin": false,
+              "isMod": false,
+              "followerCount": 1314,
+              "isUserFollowing": false
+            },
+            "repo": {
+              "name": "Lemma-RCA-NEC/Cloud_Computing_Original",
+              "type": "dataset"
+            },
+            "title": "Add links to paper, project page, and code; fix license inconsistency",
+            "status": "open",
+            "createdAt": "2026-08-26T12:51:02Z",
+            "isPullRequest": true,
+            "numComments": 1,
+            "topReactions": [],
+            "numReactionUsers": 0,
+            "pinned": false,
+            "repoOwner": {
+              "name": "Lemma-RCA-NEC",
+              "isParticipating": false,
+              "type": "org",
+              "isDiscussionAuthor": false
+            }
+          }
+        ],
+        "count": 1,
+        "start": 0,
+        "numClosedDiscussions": 0
+      }
+    }
+  ]
+}

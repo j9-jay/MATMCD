@@ -1,0 +1,249 @@
+{
+  "timestamp_utc": "20260925T055213980648Z",
+  "status": "PASS",
+  "profile": "qwen35_4b_q5km_nonthinking_provisional_v1",
+  "thinking_enabled": false,
+  "re_format_policy": "re_gp_boundary_v1",
+  "log_directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T055213980648Z_verification",
+  "experiments_executed": false,
+  "paid_api_calls": 0,
+  "embedding_calls": 0,
+  "web_search_calls": 0,
+  "synthetic_local_generation_calls": 5,
+  "paper_equivalence": false,
+  "checks": {
+    "server_healthy": true,
+    "gpu_layers_fully_offloaded": [
+      [
+        "33",
+        "33"
+      ]
+    ],
+    "arithmetic_final_and_mode": {
+      "passed": true,
+      "thinking_enabled": false,
+      "elapsed_seconds": 3.645492555000004
+    },
+    "original_yes_no_parser": {
+      "passed": true,
+      "matrix": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "source_sha256": "755241696847d358bc68f645e82ea438836190f8741af01674029c499b41c9e1",
+      "source_method_unmodified": true,
+      "note": "Synthetic format compatibility only; not an RCA benchmark or full agent integration"
+    },
+    "original_RE_parser": {
+      "passed": true,
+      "matrix": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "source_sha256": "755241696847d358bc68f645e82ea438836190f8741af01674029c499b41c9e1",
+      "source_method_unmodified": true,
+      "note": "Synthetic format compatibility only; not an RCA benchmark or full agent integration"
+    },
+    "oversized_input_rejected_without_truncation": true
+  },
+  "config_sha256": "1e6cc3e658adefcf636a9eb746d6b13bb325a55deb6b3c232c5df88d1a2ebb43",
+  "gpu_before": {
+    "time": 1790315544.787259,
+    "index": 0,
+    "name": "NVIDIA GeForce RTX 2080 SUPER",
+    "total_mib": 8192,
+    "used_mib": 1260,
+    "utilization_percent": 0
+  },
+  "version_output": "0.00.000.816 I srv  llama_server: initializing ...\nversion: 0.5.0-dev (build 11146, commit 7fe450e19)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+  "startup_seconds": 25.058010073000005,
+  "gpu_loaded": {
+    "time": 1790315592.6074507,
+    "index": 0,
+    "name": "NVIDIA GeForce RTX 2080 SUPER",
+    "total_mib": 8192,
+    "used_mib": 4974,
+    "utilization_percent": 4
+  },
+  "responses": [
+    {
+      "index": 1,
+      "finish_reason": "stop",
+      "final_answer": "323",
+      "thinking_characters": 0,
+      "usage": {
+        "completion_tokens": 4,
+        "prompt_tokens": 43,
+        "total_tokens": 47,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 43,
+        "prompt_ms": 554.485,
+        "prompt_per_token_ms": 12.895,
+        "prompt_per_second": 77.54943776657619,
+        "predicted_n": 4,
+        "predicted_ms": 45.703,
+        "predicted_per_token_ms": 15.234333333333334,
+        "predicted_per_second": 65.64120517252697
+      }
+    },
+    {
+      "index": 2,
+      "finish_reason": "stop",
+      "final_answer": "⟨yes⟩",
+      "thinking_characters": 0,
+      "usage": {
+        "completion_tokens": 5,
+        "prompt_tokens": 224,
+        "total_tokens": 229,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 224,
+        "prompt_ms": 213.279,
+        "prompt_per_token_ms": 0.9521383928571429,
+        "prompt_per_second": 1050.2674900013596,
+        "predicted_n": 5,
+        "predicted_ms": 50.69,
+        "predicted_per_token_ms": 12.6725,
+        "predicted_per_second": 78.9110278161373
+      }
+    },
+    {
+      "index": 3,
+      "finish_reason": "stop",
+      "final_answer": "⟨no⟩",
+      "thinking_characters": 0,
+      "usage": {
+        "completion_tokens": 5,
+        "prompt_tokens": 224,
+        "total_tokens": 229,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 224,
+        "prompt_ms": 190.776,
+        "prompt_per_token_ms": 0.8516785714285715,
+        "prompt_per_second": 1174.1518849331153,
+        "predicted_n": 5,
+        "predicted_ms": 47.968,
+        "predicted_per_token_ms": 11.992,
+        "predicted_per_second": 83.38892595063375
+      }
+    },
+    {
+      "index": 4,
+      "finish_reason": "stop",
+      "final_answer": "G1: <In a deterministic system where y is exactly twice x (y = 2x), changing x mathematically necessitates a change in y. In causal terms, x is a direct cause of y because y's value is entirely determined by x. Therefore, x is the reason for y.\n<yes>>\n\nP1: 1.0\n\n---G2: <The prompt states no statistical fitting was performed and only an empty graph was used for a format test. However, the question asks for a theoretical inference based on the provided system description (\"y is always exactly twice x\"). Statistically, without data fitting, we cannot confirm the edge, but logically based on the deterministic rule, the causality holds. If the question implies \"based on the statistical discovery results\", the answer is no. If it implies \"based on the system definition\", the answer is yes. Given the phrasing \"Do you think that...\", logical deduction from the system definition is the primary path.\n<yes>>\n\nP2: 1.0",
+      "thinking_characters": 0,
+      "usage": {
+        "completion_tokens": 216,
+        "prompt_tokens": 378,
+        "total_tokens": 594,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 378,
+        "prompt_ms": 254.166,
+        "prompt_per_token_ms": 0.6723968253968254,
+        "prompt_per_second": 1487.2170156511886,
+        "predicted_n": 216,
+        "predicted_ms": 2256.986,
+        "predicted_per_token_ms": 10.49760930232558,
+        "predicted_per_second": 95.25978450907537
+      }
+    },
+    {
+      "index": 5,
+      "finish_reason": "stop",
+      "final_answer": "G1: <In a deterministic system where y = 2x and x is externally set, x is the cause of y. Causal discovery algorithms typically identify edges from causes to effects based on statistical dependence. Since y depends on x, the algorithm would likely suggest a directed edge from synthetic_input_x to synthetic_output_y. The question asks if a change in y leads to a change in x (y -> x). Since the system is deterministic with x fixed externally, changing y is impossible without changing x, and there is no causal mechanism for y to influence x. Therefore, the inferred direction (x -> y) contradicts the hypothesized direction (y -> x).>\n<no>\nP1: 0.95\n\nG2: <The prompt states that no statistical fitting was performed on the suggested edges, implying the provided graph might be an empty graph or incorrect for the actual data. However, even if a wrong graph were suggested, the question asks for the causal relationship based on the system description: \"x is externally set\" and \"y is always exactly twice x\". In this physical description, x causes y. The query asks if y causes x. Regardless of whether the discovery algorithm succeeded or failed, the ground truth causal direction is x -> y, not y -> x. Thus, the answer to whether y causes x is no.>\n<no>\nP2: 1.0",
+      "thinking_characters": 0,
+      "usage": {
+        "completion_tokens": 291,
+        "prompt_tokens": 378,
+        "total_tokens": 669,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 378,
+        "prompt_ms": 277.684,
+        "prompt_per_token_ms": 0.7346137566137567,
+        "prompt_per_second": 1361.2595612278703,
+        "predicted_n": 291,
+        "predicted_ms": 3039.113,
+        "predicted_per_token_ms": 10.4797,
+        "predicted_per_second": 95.4225788906171
+      }
+    }
+  ],
+  "re_format_events": [
+    {
+      "response_index": 4,
+      "status": "UNCHANGED",
+      "normalization_passes": 1
+    },
+    {
+      "response_index": 5,
+      "status": "NORMALIZED",
+      "normalization_passes": 1
+    }
+  ],
+  "gpu_peak_total_used_mib": 4980,
+  "gpu_after": {
+    "time": 1790315604.307293,
+    "index": 0,
+    "name": "NVIDIA GeForce RTX 2080 SUPER",
+    "total_mib": 8192,
+    "used_mib": 1261,
+    "utilization_percent": 13
+  },
+  "server_stopped": true,
+  "official_37_files_preserved": true,
+  "python_201_packages_preserved": true,
+  "system_packages_preserved": true,
+  "script_hashes": {
+    "setup_local_llm.py": "c596936c74d136ec0811b9cca3ded43baca2490697cd3e0e6fdb49aaf34787c5",
+    "local_llm_runtime.py": "a6bbbcecbf5ee091d3f417af2f9f4cad817a0d597ba066432865d8d126bcaa9d",
+    "local_llm_client.py": "1ce86e08b2d5fcb057d724802f93aae7ca9bb1865baf52a805fb07dcd616a7a2",
+    "local_re_response.py": "eacad7822013f612ed148c77a4f42c552bfb7aefbe9d41c522285819342f3a38",
+    "check_local_llm_runtime.py": "c7642e1f2b1411da9d6c5f1c9291dbfc1a7a7e01e0bc4c3ee60eea3746d992b4"
+  }
+}

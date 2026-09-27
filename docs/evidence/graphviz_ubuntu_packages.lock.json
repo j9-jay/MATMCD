@@ -1,0 +1,98 @@
+{
+  "date_kst": "2026-09-24",
+  "choice": "B",
+  "author_equivalence": "UNCONFIRMED",
+  "source": "Ubuntu noble/noble-updates universe via configured APT repository",
+  "packages": [
+    {
+      "package": "graphviz",
+      "version": "2.42.2-9ubuntu0.1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/graphviz_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "be4e5b1b036babfb1663c095bc645c2fbab79dd57b213fc3b1ab0d48e810dd85",
+      "bytes": 642420,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/graphviz/graphviz_2.42.2-9ubuntu0.1_amd64.deb",
+      "apt_uri_digest": "SHA512:7f9c68360cf862b0877011e7a1b405cc69db04610570b4f37e3643a58b8897ccef228fbc0f36f118c522b182083fd42e7c3c0c06a131132dcd6f84a9b2183908"
+    },
+    {
+      "package": "libann0",
+      "version": "1.1.2+doc-9build1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libann0_1.1.2+doc-9build1_amd64.deb",
+      "sha256": "88347025b6292517dc591fd6a51c28b6a91a46c999505e3e54677c99038074e1",
+      "bytes": 25480,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/a/ann/libann0_1.1.2%2bdoc-9build1_amd64.deb",
+      "apt_uri_digest": "SHA512:1421c88a17ae02e256ff53cd4af9746238736436ce005e50a6d81afeb567c3f579201fa7caa9cc81d6c79fc551ab61cf01ff3500c85120cec47b1bd9c1cd9e38"
+    },
+    {
+      "package": "libcdt5",
+      "version": "2.42.2-9ubuntu0.1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcdt5_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "3c49c2624e6a895d729bff5be16c96beeb1347e3282bc40f3d210c715fba07ef",
+      "bytes": 21614,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/graphviz/libcdt5_2.42.2-9ubuntu0.1_amd64.deb",
+      "apt_uri_digest": "SHA512:dde207f01bfeea225e3b45727d2f55ab0de34f1af4328d77b80cf7e1de923b76f0f6ea66590caa7439ca8b801701b5349476bc49a6ed149c65e9fac70e15c16f"
+    },
+    {
+      "package": "libcgraph6",
+      "version": "2.42.2-9ubuntu0.1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libcgraph6_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "4555e20d8cd068de6343484c5bf825d03830c5048ccf56a9baec9638ca5815b2",
+      "bytes": 44644,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/graphviz/libcgraph6_2.42.2-9ubuntu0.1_amd64.deb",
+      "apt_uri_digest": "SHA512:546c3729dc0679a873716389e540d7398a2a208a7646d39c370b7725c924cc3aefa4e5c3fecde0255efd2dede32aa27093edc135aeae0d6ef5accc547d1dbb79"
+    },
+    {
+      "package": "libgts-0.7-5t64",
+      "version": "0.7.6+darcs121130-5.2build1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgts-0.7-5t64_0.7.6+darcs121130-5.2build1_amd64.deb",
+      "sha256": "a6741ed94f3e786eaed0a9fcb69f641327cfe288af4f043e7036b5257e87fc48",
+      "bytes": 160592,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/gts/libgts-0.7-5t64_0.7.6%2bdarcs121130-5.2build1_amd64.deb",
+      "apt_uri_digest": "SHA512:7026fae018b09c7e7f6c71b2e72b9c6a78bb4e5a89d6877455ff190b7581c624120fa82234dcb0bfa6368d21e8dcec9dd150f2d345a3a223118d624c14298f7d"
+    },
+    {
+      "package": "libgvc6",
+      "version": "2.42.2-9ubuntu0.1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvc6_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "dc674afb98d9b64699f63be3a4e92d4f3b563435ebfc70cbaec0c91b8f41fb48",
+      "bytes": 716230,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/graphviz/libgvc6_2.42.2-9ubuntu0.1_amd64.deb",
+      "apt_uri_digest": "SHA512:3e409a85ba33610f13d8635312a94eff34358955c24d8780cea69322312a4f525d69257cbe6deb2cf0aa9d89c2d6a157c26f81b4d2d6001b1967ba5b7cd495dd"
+    },
+    {
+      "package": "libgvpr2",
+      "version": "2.42.2-9ubuntu0.1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libgvpr2_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "1a560080462b80ab56e0fe09af2abd52974a256e25b4f384b9be5872c1073c82",
+      "bytes": 186968,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/graphviz/libgvpr2_2.42.2-9ubuntu0.1_amd64.deb",
+      "apt_uri_digest": "SHA512:f8bf9818ecf9978756c63d06a072078edede6d1df762b155ca163e04aabe52401ecbe8cbca1da94d0a730406fad87075e42de698d0e3b01d685c396df49e6153"
+    },
+    {
+      "package": "liblab-gamut1",
+      "version": "2.42.2-9ubuntu0.1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/liblab-gamut1_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "b9fa73d671d96b07360dd3b7a4d35814c8b892b5bf4b1e0945d3bc7937c9ee3d",
+      "bytes": 1886394,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/graphviz/liblab-gamut1_2.42.2-9ubuntu0.1_amd64.deb",
+      "apt_uri_digest": "SHA512:54538074947642cab12a653d641cff5a622ff46a49795100edbef843d3aec77521f382d1e34b7a88ba6514e4f05eab613e0450cfa38d1b5fc766a0c697b23199"
+    },
+    {
+      "package": "libpathplan4",
+      "version": "2.42.2-9ubuntu0.1",
+      "architecture": "amd64",
+      "path": "raw_downloads/ubuntu_noble_graphviz_2.42.2-9ubuntu0.1/libpathplan4_2.42.2-9ubuntu0.1_amd64.deb",
+      "sha256": "8cff70c607271662df4719d2e2848731d8f23ab9108e79404066a6f93af9fd23",
+      "bytes": 23992,
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/g/graphviz/libpathplan4_2.42.2-9ubuntu0.1_amd64.deb",
+      "apt_uri_digest": "SHA512:2cec79167336f739be93ae2bdf102a8df168f91217e2af41e1c4f8e53d806dcdff96ba05ff4520a1e7c8dc6fde0447d13efd1c7f47aea317157c148bca7c49ec"
+    }
+  ]
+}

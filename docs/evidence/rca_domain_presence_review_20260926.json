@@ -1,0 +1,36 @@
+{
+  "status": "PASS_SCOPED_DIAGNOSTICS",
+  "profile_sha256": "ab685337198dc00bff76a772b29a0e41a3c6dd38889a28a4dcf2746619bbaf54",
+  "diagnostic_evidence": "docs/evidence/rca_domain_presence_20260926T143502872419Z.json",
+  "diagnostic_evidence_sha256": "6e3830977a1ef66f8d57ad7e3e9f7ac1b862e2ca7ea8864f4e546c5babb63698",
+  "approved_to_start_uniform_domain_run": true,
+  "authorization": "Latest explicit user instruction; TASK_052 proposed diagnostics then adoption/restart",
+  "reviewed_original_call_numbers": [41, 1, 15],
+  "all_three_finish_reason_stop": true,
+  "actual_request_diff_only_presence_penalty": true,
+  "all_three_address_requested_pair": true,
+  "repetition_collapse_observed": false,
+  "language_switch_observed": false,
+  "output_tokens": [
+    {"original_call": 41, "before": 8192, "after": 1533, "before_finish_reason": "length", "after_finish_reason": "stop"},
+    {"original_call": 1, "before": 1454, "after": 1573, "before_finish_reason": "stop", "after_finish_reason": "stop"},
+    {"original_call": 15, "before": 1374, "after": 1337, "before_finish_reason": "stop", "after_finish_reason": "stop"}
+  ],
+  "pair_review": [
+    {"original_call": 41, "pair": ["apiserver-574856c48c-r2586", "istio-operator-74d65cfbc4-rd872"], "observation": "Coherent, finite discussion of control-plane dependency and indirect/bidirectional influence; former non-parametric loop absent."},
+    {"original_call": 1, "pair": ["amq-streams-cluster-operator", "apiserver"], "observation": "Discusses operator/API request interaction, asynchronous reconciliation and possible common causes; coherent conclusion, no repeated-line collapse."},
+    {"original_call": 15, "pair": ["amq-streams-cluster-operator", "mongodb-v1-64c6b69879-p4wfp"], "observation": "Discusses direct versus mediated operator/database influence and missing evidence; finite English response, no repetition collapse."}
+  ],
+  "quality_limitations": [
+    "This review checks output completion, repetition and pair relevance, not causal correctness or a 930-call success guarantee.",
+    "Call15 asserts a Kafka Streams-to-MongoDB pathway without establishing it from verified observations; calls make speculative network/confounding claims.",
+    "Call15 calls PC non-parametric although this run uses Fisher-Z; model factual errors remain uncorrected as experimental output.",
+    "Call41 explicitly notices the first-pair graph statement in the prompt. The original D03 cached graph-description behavior remains per prior approval.",
+    "Normal response1 grew by119 tokens; this setting does not guarantee shorter responses or a fixed total-token reduction.",
+    "Internal prompt-cache state differs across prior, diagnostic and new server processes; not a controlled multi-seed quality comparison."
+  ],
+  "old_responses_modified": false,
+  "diagnostic_responses_reused_in_experiment": false,
+  "constraint_presence_penalty": 0.0,
+  "paper_equivalence": false
+}

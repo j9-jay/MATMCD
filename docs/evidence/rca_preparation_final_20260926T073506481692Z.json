@@ -1,0 +1,61 @@
+{
+  "checked_utc": "20260926T073506481692Z",
+  "preparation_integrity": "PASS",
+  "execution_readiness": "BLOCKED_CAPACITY_USER_HOLD",
+  "decision": "D05_B_KEEP_CURRENT_SETTINGS_HOLD_EXECUTION",
+  "checks_performed": "Read-only input-manifest/prompt/provenance/official-source/config/syntax/link checks; no CSV reread, server launch, generation, graph fitting, RWR or evaluation",
+  "official_files_unchanged": 37,
+  "prepared_inputs": {
+    "status": "PASS",
+    "cases": 3,
+    "available_pods": 426,
+    "missing_pods": 216,
+    "full_rca_ready": false
+  },
+  "prompt_counts": {
+    "Product_Review/20211203": {
+      "strict": 147,
+      "approved_recovery": 7,
+      "missing_pods": 64,
+      "kpi": 1
+    },
+    "Product_Review/20220606": {
+      "strict": 145,
+      "approved_recovery": 3,
+      "missing_pods": 80,
+      "kpi": 1
+    },
+    "Cloud_Computing/20231207": {
+      "strict": 111,
+      "approved_recovery": 13,
+      "missing_pods": 72,
+      "kpi": 1
+    }
+  },
+  "current_settings": {
+    "context_tokens": 16384,
+    "gpu_layers": "all",
+    "thinking": false,
+    "reserved_output_tokens": 8192
+  },
+  "new_context_or_gpu_configuration_applied": false,
+  "local_llm_config_sha256": "1e6cc3e658adefcf636a9eb746d6b13bb325a55deb6b3c232c5df88d1a2ebb43",
+  "local_execution_config_sha256": "33fd78704449e0823e8d9d5a9d7b2da5892d91b8b661d7e30d3b85f41f4bc2c7",
+  "capacity_evidence": "docs/evidence/rca_context_20260926T071920576774Z.json",
+  "capacity_summary": {
+    "prompt_count": 426,
+    "fits": 219,
+    "unprepared_count": 0,
+    "max_input_tokens": 131003,
+    "max_required_context": 139196
+  },
+  "recovery_evidence": "docs/evidence/rca_log_recovery_20260926T071852891429Z.json",
+  "python_syntax_files": 54,
+  "json_files": 80,
+  "local_markdown_links": 478,
+  "server_port_closed": true,
+  "run_directories": [],
+  "inference_calls_in_this_final_check": 0,
+  "actual_rca_run_performed": false,
+  "author_equivalence": "UNCONFIRMED"
+}

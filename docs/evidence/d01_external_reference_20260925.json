@@ -1,0 +1,33 @@
+{
+  "repo": "dorado-daniel/lemzha-k",
+  "commit": "a6e62ef6f29d7112a96a8db7b3c017c3e246fe08",
+  "commit_date": "2026-02-15T09:43:07Z",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/dorado-daniel/lemzha-k/a6e62ef6f29d7112a96a8db7b3c017c3e246fe08/notebooks/01-Convert-Scenarios/Convert-LemmaRCA-Scenarios.ipynb",
+      "sha256": "606db65c2af300536b46390182b92f648c1b186fa5799c416e4da2c111b56a1f",
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_dorado_lemzha_k_reference\\a6e62ef6f29d7112a96a8db7b3c017c3e246fe08\\notebooks\\01-Convert-Scenarios\\Convert-LemmaRCA-Scenarios.ipynb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dorado-daniel/lemzha-k/a6e62ef6f29d7112a96a8db7b3c017c3e246fe08/notebooks/02-Transform-Data/Transform-Data-Lemma.ipynb",
+      "sha256": "e53f985dd41dfca965b638bc7ef5e58a3ce61b9d9c3b9435cdeaddf1ce5cd905",
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_dorado_lemzha_k_reference\\a6e62ef6f29d7112a96a8db7b3c017c3e246fe08\\notebooks\\02-Transform-Data\\Transform-Data-Lemma.ipynb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dorado-daniel/lemzha-k/a6e62ef6f29d7112a96a8db7b3c017c3e246fe08/notebooks/03-Data-Validation/unified_rca_data_validation.ipynb",
+      "sha256": "00416d332ca4c3265c297daaddc914ec26940a60509ab7c7f976090658b8b3d5",
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_dorado_lemzha_k_reference\\a6e62ef6f29d7112a96a8db7b3c017c3e246fe08\\notebooks\\03-Data-Validation\\unified_rca_data_validation.ipynb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dorado-daniel/lemzha-k/a6e62ef6f29d7112a96a8db7b3c017c3e246fe08/core_multimodal_tmp/20231207/alignment_validation.json",
+      "sha256": "d727f3a65818e786555e88bfd53f779f3672855c5fc401523f66d16dbd4bf114",
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_dorado_lemzha_k_reference\\a6e62ef6f29d7112a96a8db7b3c017c3e246fe08\\core_multimodal_tmp\\20231207\\alignment_validation.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dorado-daniel/lemzha-k/a6e62ef6f29d7112a96a8db7b3c017c3e246fe08/core_multimodal_tmp/20231207/manifest.json",
+      "sha256": "7300c8c2836e0a9c0291174dd4f967df84ddafdc833300f34e93fdf78c4c66c8",
+      "path": "E:\\연구\\MATMCD_DATA\\raw_downloads\\github_dorado_lemzha_k_reference\\a6e62ef6f29d7112a96a8db7b3c017c3e246fe08\\core_multimodal_tmp\\20231207\\manifest.json"
+    }
+  ],
+  "executed": false
+}

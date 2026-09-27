@@ -1,0 +1,42 @@
+{
+  "checked_utc": "20260926T100156831887Z",
+  "status": "INTERRUPTED_PC_PROCESS_EXIT_WITH_WSL_OOM",
+  "phase": "full_input_PC_RWR",
+  "logs": "logs/setup/rca_real_integration_20260926T100156831887Z",
+  "cases": {
+    "Product_Review/20211203": {
+      "status": "INTERRUPTED",
+      "phase": "original_PC",
+      "node_count": 219,
+      "shape": [
+        51529,
+        219
+      ],
+      "csv_sha256": "5ba4c4ba9e23d37d7dac38a7e68fabe037b81fe3443d0eb488091e89efdf79b5",
+      "nonfinite_values": 0,
+      "constant_columns": []
+    }
+  },
+  "full_pipeline_ready": false,
+  "LLM_calls": 0,
+  "scientific_changes": [],
+  "automatic_retries": 0,
+  "result_scope": "diagnostic_PC_baseline_only",
+  "external_observation": {
+    "observed_date": "2026-09-26",
+    "exec_session_exit_code": 1,
+    "last_progress": "Depth=2, node204/219; graph not produced; not overall percent",
+    "kernel_oom_time_local": "2026-09-26 21:06:49 Asia/Seoul",
+    "kernel_victim_pid": 714,
+    "prior_distribution_pid": 435,
+    "pid_evidence": "OOM process table contains Relay(435) immediately before sole large Python PID714; consistent with WSL PID namespaces",
+    "victim_anonymous_rss_kib": 7614332,
+    "victim_swap_pages": 510944,
+    "system_free_swap_kib": 0,
+    "kernel_log": "logs/setup/rca_real_integration_20260926T100156831887Z/kernel_after_interruption.txt",
+    "cause": "confirmed WSL global OOM; same-session PC attribution supported by process table and terminated session, no Python traceback",
+    "CC_attempted": false,
+    "final_preservation_checks": "not run because process terminated",
+    "automatic_restart": false
+  }
+}

@@ -1,6 +1,5 @@
 """공식 배포 원본을 다운로드하고 해시를 기록한다. 전처리/샘플링은 하지 않는다."""
 import concurrent.futures
-import gzip
 import hashlib
 import json
 import time
@@ -66,10 +65,6 @@ def fetch(item):
 
 def main():
     items = []
-    for name in ("asia", "child"):
-        items.append({"url": f"https://www.bnlearn.com/bnrepository/{name}/{name}.bif.gz",
-                      "path": f"raw_downloads/bnlearn_{name}_network/{name}.bif.gz",
-                      "role": "Bayesian network; 논문 실제 샘플 아님"})
     selections = {"Product_Review_Preprocessed": ["20210517", "20210524", "20211203", "20220606"],
                   "Cloud_Computing_Preprocessed": ["20231207"]}
     for name, dates in selections.items():
@@ -96,15 +91,6 @@ def main():
             output.write_text(json.dumps({"checked_utc": datetime.now(timezone.utc).isoformat(),
                                          "files": sorted(results, key=lambda x: x["path"])},
                                         ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    for name in ("asia", "child"):
-        archive = ASSETS / f"raw_downloads/bnlearn_{name}_network/{name}.bif.gz"
-        if archive.exists():
-            target = ASSETS / f"datasets/bnlearn_{name}_network/{name}.bif"
-            target.parent.mkdir(parents=True, exist_ok=True)
-            data = gzip.decompress(archive.read_bytes())
-            if target.exists() and target.read_bytes() != data:
-                raise RuntimeError("기존 BIF 불일치")
-            target.write_bytes(data)
     return int(any(x["status"] == "failed" for x in results))
 
 

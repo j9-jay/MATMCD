@@ -1,0 +1,104 @@
+{
+  "checked_utc": "20260922T152547Z",
+  "experiments_executed": false,
+  "model_api_calls": false,
+  "test_vectors_only": true,
+  "network_connections_denied": [],
+  "log_directory": "logs/chromadb_runtime/20260922T152547Z",
+  "checks": {
+    "imports": true,
+    "native_store_query": true,
+    "langchain_store_retrieve": true,
+    "no_python_socket_connections": true
+  },
+  "versions": {
+    "chromadb": "1.0.11",
+    "langchain": "0.3.25",
+    "langchain-community": "0.3.24",
+    "protobuf": "6.31.1",
+    "posthog": "4.2.0",
+    "opentelemetry-proto": "1.35.0"
+  },
+  "native_result": {
+    "ids": [
+      [
+        "probe-a",
+        "probe-b"
+      ]
+    ],
+    "embeddings": null,
+    "documents": [
+      [
+        "local-probe-a",
+        "local-probe-b"
+      ]
+    ],
+    "uris": null,
+    "included": [
+      "documents",
+      "metadatas",
+      "distances"
+    ],
+    "data": null,
+    "metadatas": [
+      [
+        {
+          "url": "https://example.invalid/probe-a"
+        },
+        {
+          "url": "https://example.invalid/probe-b"
+        }
+      ]
+    ],
+    "distances": [
+      [
+        0.0,
+        0.020000005140900612
+      ]
+    ]
+  },
+  "native_collection_configuration": {
+    "hnsw": {
+      "space": "l2",
+      "ef_construction": 100,
+      "ef_search": 100,
+      "max_neighbors": 16,
+      "resize_factor": 1.2,
+      "sync_threshold": 1000
+    },
+    "spann": null,
+    "embedding_function": null
+  },
+  "langchain_result": [
+    {
+      "text": "local-probe-a",
+      "metadata": {
+        "url": "https://example.invalid/probe-a"
+      }
+    },
+    {
+      "text": "local-probe-b",
+      "metadata": {
+        "url": "https://example.invalid/probe-b"
+      }
+    }
+  ],
+  "langchain_collection_configuration": {
+    "hnsw": {
+      "space": "l2",
+      "ef_construction": 100,
+      "ef_search": 100,
+      "max_neighbors": 16,
+      "resize_factor": 1.2,
+      "sync_threshold": 1000
+    },
+    "spann": null,
+    "embedding_function": null
+  },
+  "success": true,
+  "limitations": [
+    "Tiny component fixture, not the paper experiment",
+    "No live OpenAI embeddings, web retrieval, full pipeline or author-version comparison",
+    "Socket guard covers Python sockets; test uses local in-memory APIs and telemetry is disabled"
+  ]
+}

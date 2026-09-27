@@ -1,26 +1,30 @@
 {
-  "benchmark_source_commit": "5aaeaea89e71e2cff443289e473c06d2f79172c5",
-  "benchmark_files": {
-    "Auto_MPG_data.csv": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/Auto MPG data.csv",
-    "Auto_MPG_GTmatrix.csv": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_Auto MPG data.csv",
-    "DWD_climate_data.csv": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/DWD climate data.csv",
-    "DWD_climate_GTmatrix.csv": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_DWD climate data.csv",
-    "Sachs_data.csv": "raw_downloads/github_mas_takayama_llm_and_scd/benchmark datasets/Sachs data.csv",
-    "Sachs_GTmatrix.csv": "raw_downloads/github_mas_takayama_llm_and_scd/ground truth matrix/GTmatrix_Sachs data.csv"
+  "experiment_scope": "rca",
+  "rca_files": {
+    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv": "processed_data/lemma_rca_provisional_v1/Product_Review/20211203/Product_Review_20211203.csv",
+    "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv": "processed_data/lemma_rca_provisional_v1/Cloud_Computing/20231207/Cloud_Computing_20231207.csv"
   },
-  "missing_benchmark_inputs": [
-    "asia_data.csv", "asia_GTmatrix.csv", "child_data.csv", "child_GTmatrix.csv"
+  "missing_rca_inputs": [],
+  "notes": [
+    "RCA §4.3/Table 4 only. These are approved provisional inputs, not verified author CSVs.",
+    "User authorized clear remaining preparation work; CSV values and candidate pods are unchanged.",
+    "Only exact pod-name log pairs were extracted byte-for-byte; approved D01 retains missing pods with explicit absence, cause UNKNOWN.",
+    "Connected files alone do not establish RCA readiness or authorize scientific condition changes."
   ],
-  "missing_rca_inputs": [
-    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210517.csv",
-    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20210524.csv",
+  "input_profile": "lemma_rca_provisional_v1",
+  "author_equivalence": "UNCONFIRMED",
+  "rca_log_directories": {
+    "LEMMA_RCA/Product_Review/Log/20211203": "datasets/huggingface_lemma_rca_product_review_pod_logs/20211203",
+    "LEMMA_RCA/Cloud_Computing/Log/20231207": "datasets/huggingface_lemma_rca_cloud_computing_pod_logs/20231207"
+  },
+  "expected_rca_inputs": [
     "LEMMA_RCA/Product_Review/Metrics/Product_Review_20211203.csv",
-    "LEMMA_RCA/Product_Review/Metrics/Product_Review_20220606.csv",
     "LEMMA_RCA/Cloud_Computing/Metrics/Cloud_Computing_20231207.csv"
   ],
-  "notes": [
-    "누락 목록은 저자가 실제 사용한 입력이 확보되기 전까지 생성하지 않는다.",
-    "Asia/Child BIF가 있어도 동일한 1000개 샘플이라는 뜻은 아니다.",
-    "LEMMA 공식 배포 NPY/로그는 MATMCD의 EVT 필터 이후 CSV와 구분한다."
-  ]
+  "connection_evidence": "docs/evidence/rca_input_connection_20260925T105701596179Z.json",
+  "rca_log_policy": "configs/rca_log_policy.json",
+  "rca_log_evidence_manifests": {
+    "Product_Review/20211203": "processed_data/lemma_rca_log_evidence_v1/Product_Review/20211203.json",
+    "Cloud_Computing/20231207": "processed_data/lemma_rca_log_evidence_v1/Cloud_Computing/20231207.json"
+  }
 }

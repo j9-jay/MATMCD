@@ -1,0 +1,599 @@
+[
+  {
+    "timestamp_utc": "20260924T125326303923Z",
+    "status": "FAILED",
+    "profile": "qwen35_4b_q5km_thinking_provisional_v1",
+    "log_directory": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260924T125326303923Z_verification",
+    "experiments_executed": false,
+    "paid_api_calls": 0,
+    "embedding_calls": 0,
+    "web_search_calls": 0,
+    "synthetic_local_generation_calls": 0,
+    "paper_equivalence": false,
+    "checks": {
+      "server_healthy": true
+    },
+    "config_sha256": "173814a7ace7719427a6d9c5b3828e66a4c251f63f15ec511ca5881f6945930b",
+    "gpu_before": {
+      "time": 1790254414.5112782,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1204,
+      "utilization_percent": 1
+    },
+    "version_output": "0.00.000.829 I srv  llama_server: initializing ...\nversion: 0.5.0-dev (build 11146, commit 7fe450e19)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "startup_seconds": 66.108186366,
+    "error": {
+      "type": "RuntimeError",
+      "message": "Full GPU layer offload not confirmed",
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 122, in main\n    require(offloads and all(int(a) == int(b) and int(a) >= 32 for a, b in offloads), \"Full GPU layer offload not confirmed\")\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 27, in require\n    raise RuntimeError(message)\nRuntimeError: Full GPU layer offload not confirmed\n"
+    },
+    "gpu_peak_total_used_mib": 4949,
+    "gpu_after": {
+      "time": 1790254510.5644033,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1212,
+      "utilization_percent": 4
+    },
+    "server_stopped": true,
+    "official_37_files_preserved": true,
+    "python_201_packages_preserved": true,
+    "system_packages_preserved": true
+  },
+  {
+    "timestamp_utc": "20260924T125750145164Z",
+    "status": "FAILED",
+    "profile": "qwen35_4b_q5km_thinking_provisional_v1",
+    "log_directory": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260924T125750145164Z_verification",
+    "experiments_executed": false,
+    "paid_api_calls": 0,
+    "embedding_calls": 0,
+    "web_search_calls": 0,
+    "synthetic_local_generation_calls": 3,
+    "paper_equivalence": false,
+    "checks": {
+      "server_healthy": true,
+      "gpu_layers_fully_offloaded": [
+        [
+          "33",
+          "33"
+        ]
+      ],
+      "arithmetic_thinking_and_final": {
+        "passed": true,
+        "elapsed_seconds": 45.357298017000005
+      },
+      "original_yes_no_parser": {
+        "passed": false,
+        "error": "Incomplete local response: finish_reason=length; no retry or truncation workaround",
+        "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 162, in main\n    matrix = namespace[\"generate_constrain_matrix\"](obj)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/official/matmcd/ConstrainAgent/ConstrainAgent.py\", line 865, in generate_constrain_matrix\n    response = self.client.inquire_LLMs(prompt, system_prompt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/local_llm_client.py\", line 40, in inquire_LLMs\n    raise RuntimeError(f\"Incomplete local response: finish_reason={choice.finish_reason}; no retry or truncation workaround\")\nRuntimeError: Incomplete local response: finish_reason=length; no retry or truncation workaround\n"
+      },
+      "original_RE_parser": {
+        "passed": false,
+        "error": "Incomplete local response: finish_reason=length; no retry or truncation workaround",
+        "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 162, in main\n    matrix = namespace[\"generate_constrain_matrix\"](obj)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/official/matmcd/ConstrainAgent/ConstrainAgent.py\", line 865, in generate_constrain_matrix\n    response = self.client.inquire_LLMs(prompt, system_prompt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/local_llm_client.py\", line 40, in inquire_LLMs\n    raise RuntimeError(f\"Incomplete local response: finish_reason={choice.finish_reason}; no retry or truncation workaround\")\nRuntimeError: Incomplete local response: finish_reason=length; no retry or truncation workaround\n"
+      },
+      "oversized_input_rejected_without_truncation": true
+    },
+    "config_sha256": "4f822965f930940caabe4c300067a0fb5c9da2689345889158c46fe76aa8cb3a",
+    "gpu_before": {
+      "time": 1790254681.3749552,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1264,
+      "utilization_percent": 2
+    },
+    "version_output": "0.00.000.812 I srv  llama_server: initializing ...\nversion: 0.5.0-dev (build 11146, commit 7fe450e19)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "startup_seconds": 31.066770982999998,
+    "gpu_loaded": {
+      "time": 1790254740.68989,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 4937,
+      "utilization_percent": 7
+    },
+    "responses": [
+      {
+        "index": 1,
+        "finish_reason": "stop",
+        "final_answer": "323",
+        "thinking_characters": 877,
+        "usage": {
+          "completion_tokens": 350,
+          "prompt_tokens": 41,
+          "total_tokens": 391,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 41,
+          "prompt_ms": 38147.15,
+          "prompt_per_token_ms": 930.4182926829269,
+          "prompt_per_second": 1.074785403365651,
+          "predicted_n": 350,
+          "predicted_ms": 3826.814,
+          "predicted_per_token_ms": 10.965083094555874,
+          "predicted_per_second": 91.19857928814936
+        }
+      },
+      {
+        "index": 2,
+        "finish_reason": "length",
+        "final_answer": "",
+        "thinking_characters": 8297,
+        "usage": {
+          "completion_tokens": 2048,
+          "prompt_tokens": 222,
+          "total_tokens": 2270,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 222,
+          "prompt_ms": 223.375,
+          "prompt_per_token_ms": 1.0061936936936937,
+          "prompt_per_second": 993.8444320089535,
+          "predicted_n": 2048,
+          "predicted_ms": 22265.523,
+          "predicted_per_token_ms": 10.877148510014656,
+          "predicted_per_second": 91.93585975950351
+        }
+      },
+      {
+        "index": 3,
+        "finish_reason": "length",
+        "final_answer": "",
+        "thinking_characters": 8171,
+        "usage": {
+          "completion_tokens": 2048,
+          "prompt_tokens": 376,
+          "total_tokens": 2424,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 376,
+          "prompt_ms": 261.717,
+          "prompt_per_token_ms": 0.6960558510638297,
+          "prompt_per_second": 1436.6663227837703,
+          "predicted_n": 2048,
+          "predicted_ms": 24048.58,
+          "predicted_per_token_ms": 11.748207132388863,
+          "predicted_per_second": 85.11937087345697
+        }
+      }
+    ],
+    "error": {
+      "type": "RuntimeError",
+      "message": "One or more output format tests failed; original parser and outputs preserved",
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 178, in main\n    require(all(v.get(\"passed\", True) for v in report[\"checks\"].values() if isinstance(v, dict)), \"One or more output format tests failed; original parser and outputs preserved\")\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 27, in require\n    raise RuntimeError(message)\nRuntimeError: One or more output format tests failed; original parser and outputs preserved\n"
+    },
+    "gpu_peak_total_used_mib": 5023,
+    "gpu_after": {
+      "time": 1790254834.6865103,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1284,
+      "utilization_percent": 6
+    },
+    "server_stopped": true,
+    "official_37_files_preserved": true,
+    "python_201_packages_preserved": true,
+    "system_packages_preserved": true,
+    "script_hashes": {
+      "setup_local_llm.py": "e8d327c5fffbc0130fd5cfc803fbd19d64e7c49974e8b1396cfb0beadc0848ed",
+      "local_llm_runtime.py": "d026f2b560a6f5790b0901209117215446122799a90b76ba40875d7c7d9ba4d5",
+      "local_llm_client.py": "ecfe24dbf5f63ae07e3291edacd5bc96cc08d3e054ba117a2237de5dc3c9a1b1",
+      "check_local_llm_runtime.py": "cf640ca95a210bdef1f1e4c64212c589fcf22a500754e3f152ed7c355ed02758"
+    }
+  },
+  {
+    "timestamp_utc": "20260925T042550544006Z",
+    "status": "FAILED",
+    "profile": "qwen35_4b_q5km_thinking_provisional_v1",
+    "log_directory": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260925T042550544006Z_verification",
+    "experiments_executed": false,
+    "paid_api_calls": 0,
+    "embedding_calls": 0,
+    "web_search_calls": 0,
+    "synthetic_local_generation_calls": 3,
+    "paper_equivalence": false,
+    "checks": {
+      "server_healthy": true,
+      "gpu_layers_fully_offloaded": [
+        [
+          "33",
+          "33"
+        ]
+      ],
+      "arithmetic_thinking_and_final": {
+        "passed": true,
+        "elapsed_seconds": 43.931603639
+      },
+      "original_yes_no_parser": {
+        "passed": false,
+        "error": "Incomplete local response: finish_reason=length; no retry or truncation workaround",
+        "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 163, in main\n    matrix = namespace[\"generate_constrain_matrix\"](obj)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/official/matmcd/ConstrainAgent/ConstrainAgent.py\", line 865, in generate_constrain_matrix\n    response = self.client.inquire_LLMs(prompt, system_prompt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/scripts/local_llm_client.py\", line 40, in inquire_LLMs\n    raise RuntimeError(f\"Incomplete local response: finish_reason={choice.finish_reason}; no retry or truncation workaround\")\nRuntimeError: Incomplete local response: finish_reason=length; no retry or truncation workaround\n"
+      },
+      "original_RE_parser": {
+        "passed": false,
+        "error": "list index out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 163, in main\n    matrix = namespace[\"generate_constrain_matrix\"](obj)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/official/matmcd/ConstrainAgent/ConstrainAgent.py\", line 891, in generate_constrain_matrix\n    answer = guess_prob_pairs[0][1]\n             ~~~~~~~~~~~~~~~~^^^\nIndexError: list index out of range\n"
+      },
+      "oversized_input_rejected_without_truncation": true
+    },
+    "config_sha256": "cd9cb02b4a8360397d0991a956429f37256c5e48982f53498e11262268fd5932",
+    "gpu_before": {
+      "time": 1790310362.562198,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1280,
+      "utilization_percent": 1
+    },
+    "version_output": "0.00.000.877 I srv  llama_server: initializing ...\nversion: 0.5.0-dev (build 11146, commit 7fe450e19)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "startup_seconds": 63.11369257600002,
+    "gpu_loaded": {
+      "time": 1790310453.7106745,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 4981,
+      "utilization_percent": 5
+    },
+    "responses": [
+      {
+        "index": 1,
+        "finish_reason": "stop",
+        "final_answer": "323",
+        "thinking_characters": 877,
+        "usage": {
+          "completion_tokens": 350,
+          "prompt_tokens": 41,
+          "total_tokens": 391,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 41,
+          "prompt_ms": 36729.68,
+          "prompt_per_token_ms": 895.8458536585366,
+          "prompt_per_second": 1.1162634686716575,
+          "predicted_n": 350,
+          "predicted_ms": 3834.301,
+          "predicted_per_token_ms": 10.986535816618911,
+          "predicted_per_second": 91.02050152035535
+        }
+      },
+      {
+        "index": 2,
+        "finish_reason": "length",
+        "final_answer": "",
+        "thinking_characters": 28603,
+        "usage": {
+          "completion_tokens": 8192,
+          "prompt_tokens": 222,
+          "total_tokens": 8414,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 222,
+          "prompt_ms": 311.01,
+          "prompt_per_token_ms": 1.400945945945946,
+          "prompt_per_second": 713.8034146811999,
+          "predicted_n": 8192,
+          "predicted_ms": 90937.098,
+          "predicted_per_token_ms": 11.102075204492735,
+          "predicted_per_second": 90.07325041315922
+        }
+      },
+      {
+        "index": 3,
+        "finish_reason": "stop",
+        "final_answer": "G1: Since y is defined as exactly twice x and x is externally set, changing x mathematically necessitates a change in y, establishing synthetic_input_x as the cause. <yes>\nP1: 0.95\n---G2: The statistical causal discovery returned an empty graph with no edges or coefficients, suggesting no causal link was identified by the algorithm. <no>\nP2: 0.05",
+        "thinking_characters": 13993,
+        "usage": {
+          "completion_tokens": 3719,
+          "prompt_tokens": 376,
+          "total_tokens": 4095,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 376,
+          "prompt_ms": 392.891,
+          "prompt_per_token_ms": 1.0449228723404256,
+          "prompt_per_second": 957.0084323641925,
+          "predicted_n": 3719,
+          "predicted_ms": 40576.28,
+          "predicted_per_token_ms": 10.913469607315761,
+          "predicted_per_second": 91.62988820069263
+        }
+      }
+    ],
+    "error": {
+      "type": "RuntimeError",
+      "message": "One or more output format tests failed; original parser and outputs preserved",
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 179, in main\n    require(all(v.get(\"passed\", True) for v in report[\"checks\"].values() if isinstance(v, dict)), \"One or more output format tests failed; original parser and outputs preserved\")\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 27, in require\n    raise RuntimeError(message)\nRuntimeError: One or more output format tests failed; original parser and outputs preserved\n"
+    },
+    "gpu_peak_total_used_mib": 5072,
+    "gpu_after": {
+      "time": 1790310631.6695552,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1284,
+      "utilization_percent": 1
+    },
+    "server_stopped": true,
+    "official_37_files_preserved": true,
+    "python_201_packages_preserved": true,
+    "system_packages_preserved": true,
+    "script_hashes": {
+      "setup_local_llm.py": "c596936c74d136ec0811b9cca3ded43baca2490697cd3e0e6fdb49aaf34787c5",
+      "local_llm_runtime.py": "f8fb0e2eff8c1fe117048f3bdb4ef8406e5b084fc86fc19863e031e152edd5ac",
+      "local_llm_client.py": "ecfe24dbf5f63ae07e3291edacd5bc96cc08d3e054ba117a2237de5dc3c9a1b1",
+      "check_local_llm_runtime.py": "ad2bcf1834dedf0067c2fefea2ac8b7108c9e8cad910ea8a3e5e9878bb7fcfbd"
+    }
+  },
+  {
+    "timestamp_utc": "20260925T044215843311Z",
+    "status": "FAILED",
+    "profile": "qwen35_4b_q5km_nonthinking_provisional_v1",
+    "thinking_enabled": false,
+    "log_directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1/20260925T044215843311Z_verification",
+    "experiments_executed": false,
+    "paid_api_calls": 0,
+    "embedding_calls": 0,
+    "web_search_calls": 0,
+    "synthetic_local_generation_calls": 5,
+    "paper_equivalence": false,
+    "checks": {
+      "server_healthy": true,
+      "gpu_layers_fully_offloaded": [
+        [
+          "33",
+          "33"
+        ]
+      ],
+      "arithmetic_final_and_mode": {
+        "passed": true,
+        "thinking_enabled": false,
+        "elapsed_seconds": 3.7074135710000036
+      },
+      "original_yes_no_parser": {
+        "passed": true,
+        "matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "source_sha256": "755241696847d358bc68f645e82ea438836190f8741af01674029c499b41c9e1",
+        "source_method_unmodified": true,
+        "note": "Synthetic format compatibility only; not an RCA benchmark or full agent integration"
+      },
+      "original_RE_parser": {
+        "passed": false,
+        "error": "list index out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 165, in main\n    matrix = namespace[\"generate_constrain_matrix\"](obj)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/e/연구/MATMCD/official/matmcd/ConstrainAgent/ConstrainAgent.py\", line 891, in generate_constrain_matrix\n    answer = guess_prob_pairs[0][1]\n             ~~~~~~~~~~~~~~~~^^^\nIndexError: list index out of range\n"
+      },
+      "oversized_input_rejected_without_truncation": true
+    },
+    "config_sha256": "1e6cc3e658adefcf636a9eb746d6b13bb325a55deb6b3c232c5df88d1a2ebb43",
+    "gpu_before": {
+      "time": 1790311346.9055178,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1242,
+      "utilization_percent": 7
+    },
+    "version_output": "0.00.000.822 I srv  llama_server: initializing ...\nversion: 0.5.0-dev (build 11146, commit 7fe450e19)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "startup_seconds": 26.05943087899999,
+    "gpu_loaded": {
+      "time": 1790311399.202206,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 4980,
+      "utilization_percent": 19
+    },
+    "responses": [
+      {
+        "index": 1,
+        "finish_reason": "stop",
+        "final_answer": "323",
+        "thinking_characters": 0,
+        "usage": {
+          "completion_tokens": 4,
+          "prompt_tokens": 43,
+          "total_tokens": 47,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 43,
+          "prompt_ms": 553.88,
+          "prompt_per_token_ms": 12.88093023255814,
+          "prompt_per_second": 77.63414458005344,
+          "predicted_n": 4,
+          "predicted_ms": 41.615,
+          "predicted_per_token_ms": 13.871666666666668,
+          "predicted_per_second": 72.08939084464735
+        }
+      },
+      {
+        "index": 2,
+        "finish_reason": "stop",
+        "final_answer": "⟨yes⟩",
+        "thinking_characters": 0,
+        "usage": {
+          "completion_tokens": 5,
+          "prompt_tokens": 224,
+          "total_tokens": 229,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 224,
+          "prompt_ms": 243.735,
+          "prompt_per_token_ms": 1.0881026785714287,
+          "prompt_per_second": 919.0309147229572,
+          "predicted_n": 5,
+          "predicted_ms": 72.407,
+          "predicted_per_token_ms": 18.10175,
+          "predicted_per_second": 55.243277583659044
+        }
+      },
+      {
+        "index": 3,
+        "finish_reason": "stop",
+        "final_answer": "⟨no⟩",
+        "thinking_characters": 0,
+        "usage": {
+          "completion_tokens": 5,
+          "prompt_tokens": 224,
+          "total_tokens": 229,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 224,
+          "prompt_ms": 223.914,
+          "prompt_per_token_ms": 0.9996160714285713,
+          "prompt_per_second": 1000.3840760291898,
+          "predicted_n": 5,
+          "predicted_ms": 50.049,
+          "predicted_per_token_ms": 12.51225,
+          "predicted_per_second": 79.92167675677835
+        }
+      },
+      {
+        "index": 4,
+        "finish_reason": "stop",
+        "final_answer": "G1: <In a deterministic system where y is exactly twice x (y = 2x), changing x mathematically necessitates a change in y. In causal terms, x is a direct cause of y because y's value is entirely determined by x. Therefore, x is the reason for y.\n<yes>>\n\nP1: 1.0\n\n---G2: <The prompt states no statistical fitting was performed and only an empty graph was used for a format test. However, the question asks for a theoretical inference based on the provided system description (\"y is always exactly twice x\"). Statistically, without data fitting, we cannot confirm the edge, but logically based on the deterministic rule, the causality holds. If the question implies \"based on the statistical discovery results\", the answer is no. If it implies \"based on the system definition\", the answer is yes. Given the phrasing \"Do you think that...\", logical deduction from the system definition is the primary path.\n<yes>>\n\nP2: 1.0",
+        "thinking_characters": 0,
+        "usage": {
+          "completion_tokens": 216,
+          "prompt_tokens": 378,
+          "total_tokens": 594,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 378,
+          "prompt_ms": 275.739,
+          "prompt_per_token_ms": 0.7294682539682539,
+          "prompt_per_second": 1370.8615756204238,
+          "predicted_n": 216,
+          "predicted_ms": 2338.203,
+          "predicted_per_token_ms": 10.875362790697674,
+          "predicted_per_second": 91.95095549873129
+        }
+      },
+      {
+        "index": 5,
+        "finish_reason": "stop",
+        "final_answer": "G1: <In a deterministic system where y = 2x and x is externally set, x is the cause of y. Causal discovery algorithms typically identify edges from causes to effects based on statistical dependence. Since y depends on x, the algorithm would likely suggest a directed edge from synthetic_input_x to synthetic_output_y. The question asks if a change in y leads to a change in x (y -> x). Since the system is deterministic with x fixed externally, changing y is impossible without changing x, and there is no causal mechanism for y to influence x. Therefore, the inferred direction (x -> y) contradicts the hypothesized direction (y -> x).>\n<no>\nP1: 0.95\n\nG2: <The prompt states that no statistical fitting was performed on the suggested edges, implying the provided graph might be an empty graph or incorrect for the actual data. However, even if a wrong graph were suggested, the question asks for the causal relationship based on the system description: \"x is externally set\" and \"y is always exactly twice x\". In this physical description, x causes y. The query asks if y causes x. Regardless of whether the discovery algorithm succeeded or failed, the ground truth causal direction is x -> y, not y -> x. Thus, the answer to whether y causes x is no.>\n<no>\nP2: 1.0",
+        "thinking_characters": 0,
+        "usage": {
+          "completion_tokens": 291,
+          "prompt_tokens": 378,
+          "total_tokens": 669,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 378,
+          "prompt_ms": 347.649,
+          "prompt_per_token_ms": 0.9197063492063492,
+          "prompt_per_second": 1087.3035734318235,
+          "predicted_n": 291,
+          "predicted_ms": 3108.271,
+          "predicted_per_token_ms": 10.718175862068966,
+          "predicted_per_second": 93.29945812318167
+        }
+      }
+    ],
+    "error": {
+      "type": "RuntimeError",
+      "message": "One or more output format tests failed; original parser and outputs preserved",
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 181, in main\n    require(all(v.get(\"passed\", True) for v in report[\"checks\"].values() if isinstance(v, dict)), \"One or more output format tests failed; original parser and outputs preserved\")\n  File \"/mnt/e/연구/MATMCD/scripts/check_local_llm_runtime.py\", line 27, in require\n    raise RuntimeError(message)\nRuntimeError: One or more output format tests failed; original parser and outputs preserved\n"
+    },
+    "gpu_peak_total_used_mib": 4985,
+    "gpu_after": {
+      "time": 1790311411.2830062,
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 2080 SUPER",
+      "total_mib": 8192,
+      "used_mib": 1260,
+      "utilization_percent": 0
+    },
+    "server_stopped": true,
+    "official_37_files_preserved": true,
+    "python_201_packages_preserved": true,
+    "system_packages_preserved": true,
+    "script_hashes": {
+      "setup_local_llm.py": "c596936c74d136ec0811b9cca3ded43baca2490697cd3e0e6fdb49aaf34787c5",
+      "local_llm_runtime.py": "a6bbbcecbf5ee091d3f417af2f9f4cad817a0d597ba066432865d8d126bcaa9d",
+      "local_llm_client.py": "1ce86e08b2d5fcb057d724802f93aae7ca9bb1865baf52a805fb07dcd616a7a2",
+      "check_local_llm_runtime.py": "af208ccb7072ce9b5eb3dd7eb7b96e64d9b5e502efc2c6e396e23215e2809a40"
+    }
+  }
+]

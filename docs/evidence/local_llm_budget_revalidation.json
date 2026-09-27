@@ -1,0 +1,102 @@
+{
+  "timestamp_utc": "2026-09-25T04:32:15.467712+00:00",
+  "authorization_date": "2026-09-25",
+  "outcome": "FAILED_WITH_TWO_DISTINCT_CAUSES",
+  "previous_log_directory": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260924T125750145164Z_verification",
+  "current_log_directory": "logs/local_llm/qwen35_4b_q5km_thinking_provisional_v1/20260925T042550544006Z_verification",
+  "generation_calls": 3,
+  "comparisons": [
+    {
+      "case": "arithmetic",
+      "payload_equal_except_max_tokens": true,
+      "old_max_tokens": 2048,
+      "new_max_tokens": 8192,
+      "prompt_tokens": 41,
+      "prompt_plus_new_cap": 8233,
+      "within_context_16384": true,
+      "finish_reason": "stop",
+      "completion_tokens": 350,
+      "final_content_characters": 3,
+      "thinking_characters": 877,
+      "previous_thinking_is_exact_prefix": true,
+      "generation_seconds": 3.834301
+    },
+    {
+      "case": "yes_no_x_to_y",
+      "payload_equal_except_max_tokens": true,
+      "old_max_tokens": 2048,
+      "new_max_tokens": 8192,
+      "prompt_tokens": 222,
+      "prompt_plus_new_cap": 8414,
+      "within_context_16384": true,
+      "finish_reason": "length",
+      "completion_tokens": 8192,
+      "final_content_characters": 0,
+      "thinking_characters": 28603,
+      "previous_thinking_is_exact_prefix": true,
+      "generation_seconds": 90.93709799999999
+    },
+    {
+      "case": "RE_x_to_y",
+      "payload_equal_except_max_tokens": true,
+      "old_max_tokens": 2048,
+      "new_max_tokens": 8192,
+      "prompt_tokens": 376,
+      "prompt_plus_new_cap": 8568,
+      "within_context_16384": true,
+      "finish_reason": "stop",
+      "completion_tokens": 3719,
+      "final_content_characters": 348,
+      "thinking_characters": 13993,
+      "previous_thinking_is_exact_prefix": true,
+      "generation_seconds": 40.57628
+    }
+  ],
+  "config_changes_since_prior_inference": [
+    {
+      "path": "runtime.cuda_cache_directory",
+      "old": null,
+      "new": "caches/nvidia_cuda_llama_cpp_b11146"
+    },
+    {
+      "path": "smoke_test.max_tokens",
+      "old": 2048,
+      "new": 8192
+    }
+  ],
+  "cuda_cache_path_note": "Set before this turn during previous post-setup audit. Timing is not a same-cache benchmark.",
+  "os_changes_since_previous_audit": {},
+  "scripts_equal_to_post_setup_audit": true,
+  "previous_failure_archived": true,
+  "yes_no_diagnosis": {
+    "error": "finish_reason=length; final content empty",
+    "observed_repetition": "Repeated lines about response brackets and stopping, still within thinking",
+    "most_repeated_nonempty_line_count": 100,
+    "root_cause_of_repetition": "Not established; do not attribute uniquely to quantization, model size, prompt, or sampler from one run."
+  },
+  "RE_diagnosis": {
+    "error": "IndexError: list index out of range at ConstrainAgent.py:891",
+    "final_content_present": true,
+    "finish_reason": "stop",
+    "has_double_newline": false,
+    "blocks": [
+      {
+        "double_newline_chunks": 1,
+        "single_newline_lines": 2
+      },
+      {
+        "double_newline_chunks": 1,
+        "single_newline_lines": 2
+      }
+    ],
+    "original_parser": "Splits each --- part on double newlines; pairs G/P only across adjacent chunks. Both parts have only one chunk, so zero guesses are collected.",
+    "responses_or_parser_modified": false
+  },
+  "gpu_peak_total_used_mib": 5072,
+  "official_37_files_preserved": true,
+  "python_201_packages_preserved": true,
+  "system_packages_preserved_within_run": true,
+  "server_stopped": true,
+  "experiments_executed": false,
+  "additional_inference_after_failed_verification": false
+}

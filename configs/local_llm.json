@@ -1,0 +1,62 @@
+{
+  "profile": "qwen35_4b_q5km_nonthinking_provisional_v1",
+  "status": "USER_APPROVED_LOCAL_SUBSTITUTE",
+  "approved_on": "2026-09-25",
+  "paper_equivalence": false,
+  "model": {
+    "base_repository": "Qwen/Qwen3.5-4B",
+    "base_revision_observed": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "repository": "unsloth/Qwen3.5-4B-GGUF",
+    "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+    "filename": "Qwen3.5-4B-Q5_K_M.gguf",
+    "quantization": "Q5_K_M",
+    "size_bytes": 3143656608,
+    "sha256": "8814232b85594dcd46c50e5b8b29324a7efe9e746edbe8a3d1df3d3fce7aad39",
+    "directory": "models/huggingface_unsloth_Qwen3.5-4B_Q5_K_M",
+    "server_alias": "qwen35-4b-q5km-nonthinking"
+  },
+  "runtime": {
+    "repository": "ggml-org/llama.cpp",
+    "release": "v0.5.0",
+    "binary_tag": "b11146",
+    "commit": "7fe450e19305b828c199d602c23a8337aaa1f03b",
+    "platform": "WSL2_Ubuntu_x86_64",
+    "cuda_runtime": "12.8",
+    "download_directory": "raw_downloads/github_ggml_org_llama_cpp_b11146",
+    "install_directory": "tools/github_ggml_org_llama_cpp_b11146_cuda12.8",
+    "cuda_cache_directory": "caches/nvidia_cuda_llama_cpp_b11146",
+    "archives": [
+      {"filename": "llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz", "size_bytes": 168920581, "sha256": "c2ab9e19838513ff69d1af8d999ad717dd3c7ee4714ac04c7ed5ab9077c50e4e", "subdirectory": "server"},
+      {"filename": "cudart-llama-b11146-bin-ubuntu-cuda-12.8-x64.tar.gz", "size_bytes": 594373356, "sha256": "1466daea60aad1144819e151b2bae19d54556cf1da6c129c4f55a5ded2637c25", "subdirectory": "cuda"}
+    ]
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 18080,
+    "context_tokens": 81920,
+    "parallel_slots": 1,
+    "prompt_cache": true,
+    "cache_ram_mib": 0,
+    "gpu_layers": "all",
+    "batch_tokens": 512,
+    "microbatch_tokens": 128,
+    "cache_type_k": "f16",
+    "cache_type_v": "f16",
+    "context_shift": false,
+    "thinking": false,
+    "reasoning_format": "deepseek",
+    "log_verbosity": 4,
+    "note": "Local setup capacity only, not a paper hyperparameter. No prompt truncation or automatic CPU/model fallback. Real RCA context requirements have not been established."
+  },
+  "smoke_test": {
+    "seed": 42,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "max_tokens": 8192,
+    "note": "Explicit synthetic setup test settings, not author settings and not approved RCA inference parameters."
+  },
+  "logging": {"directory": "logs/local_llm/qwen35_4b_q5km_nonthinking_provisional_v1"}
+}

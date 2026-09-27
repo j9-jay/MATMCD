@@ -26,6 +26,10 @@
 
 CODE-03은 RESOLVED다. [검증 기록](../docs/evidence/code03_directory_check.json)에 결과를 보존했다. 실험/API/요약 생성은 실행하지 않았고, 다른 blocker와 TASK_007~009의 TODO 상태는 유지한다.
 
+## 현재 범위
+
+위 파일 수와 점검은 당시 전체 범위의 이력이다. 현재 RCA 부분집합과 삭제 내역은 [TASK_017](TASK_017_scope_rca_only.md)을 따른다.
+
 ## 상태
 
 DONE

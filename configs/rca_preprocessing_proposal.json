@@ -1,0 +1,133 @@
+{
+  "profile_id": "lemma_rca_provisional_v1",
+  "status": "APPROVED_FOR_PREPROCESSING",
+  "implementation_approved": true,
+  "approval": {
+    "date_kst": "2026-09-23",
+    "scope": "User approved the proposed recipe, implementation and CSV generation; no scientific experiments or APIs",
+    "prior_proposal_sha256": "f38c98340d4e2eba40306dfdc6412a97b690adf727ebce7da44939fae882a9fb"
+  },
+  "author_equivalence": "UNCONFIRMED",
+  "paths_config": "configs/paths.json",
+  "input_manifest": "docs/evidence/downloads.json",
+  "inspection_evidence": "docs/evidence/rca_input_inventory.json",
+  "output_relative_to_asset_root": "processed_data/lemma_rca_provisional_v1",
+  "create_output_directories_now": true,
+  "sources": {
+    "matmcd_commit": "ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190",
+    "lemma_reference_commit": "c560d8cc39c19f04c9ae74fac2404b1e5e8c3b4d",
+    "product_review_revision": "df25484004e50483de6f6756c3a4d7ab03174b83",
+    "cloud_computing_revision": "03f82a2c4b16afe09e9315def9f5d6990427000a"
+  },
+  "metric_sets": {
+    "Product_Review": [
+      "cpu_usage", "memory_usage", "rate_received_packets",
+      "rate_transmitted_packets", "received_bandwidth", "transmit_bandwidth"
+    ],
+    "Cloud_Computing": [
+      "cpu_usage", "memory_usage", "rate_received_packets",
+      "rate_transmitted_packets", "received_bandwidth", "transmit_bandwidth",
+      "rate_storage_iops"
+    ]
+  },
+  "cases": [
+    {"system": "Product_Review", "day": "20210517", "kpi_key": "Book_Info_product", "expected_aligned_rows": 166325, "expected_candidate_pod_union": 208, "selection_basis": "LEMMA reference JMeter_KPI label; MATMCD default date"},
+    {"system": "Product_Review", "day": "20210524", "kpi_key": "Book_Info_product", "expected_aligned_rows": 176692, "expected_candidate_pod_union": 207, "selection_basis": "LEMMA FastPC explicit case mapping"},
+    {"system": "Product_Review", "day": "20211203", "kpi_key": "ratings.book-info.svc.cluster.local:9080/*", "expected_aligned_rows": 51529, "expected_candidate_pod_union": 218, "selection_basis": "LEMMA FastPC explicit case mapping"},
+    {"system": "Product_Review", "day": "20220606", "kpi_key": "reviews-v3", "expected_aligned_rows": 107789, "expected_candidate_pod_union": 228, "selection_basis": "LEMMA FastPC explicit case mapping; KPI semantic meaning requires author confirmation"},
+    {"system": "Cloud_Computing", "day": "20231207", "kpi_key": "book_info", "expected_aligned_rows": 79252, "expected_candidate_pod_union": 196, "selection_basis": "only KPI key in selected distributed metric NPYs; MATMCD commented case"}
+  ],
+  "alignment": {
+    "time_key": "time",
+    "timestamp_policy": "sorted_exact_intersection_across_selected_metrics_for_same_kpi_key",
+    "time_window": "all_shared_published_timestamps",
+    "resample": false,
+    "downsample": false,
+    "temporal_aggregation": "none",
+    "duplicate_timestamp_policy": "fail",
+    "nonfinite_policy": "fail",
+    "interpolation": "none",
+    "kpi_policy": "require_identical_feature_names_and_exact_values_on_shared_timestamps",
+    "provenance_class": "LOCAL_ASSUMPTION"
+  },
+  "pod_candidates": {
+    "policy": "union_across_selected_metrics",
+    "preserve_full_pod_names": true,
+    "missing_metric_policy": "absent_channel_not_zero_fill",
+    "constant_channel_policy": "exclude_from_detection_and_fusion_when_std_is_exactly_zero_on_aligned_rows",
+    "all_constant_pod_policy": "record_exclusion",
+    "sort_order": "unicode_codepoint_ascending",
+    "use_ground_truth_for_selection": false,
+    "provenance_class": "LOCAL_ASSUMPTION"
+  },
+  "evt": {
+    "implementation": "LEMMA FastPC rca.py spot_detection semantics with pyspot.DSpot/libspot.so",
+    "input": "unscaled_aligned_nonconstant_channel",
+    "d": 10,
+    "q": 0.0001,
+    "n_init": 100,
+    "level": 0.95,
+    "up": true,
+    "down": true,
+    "alert": true,
+    "bounded": true,
+    "max_excess": 200,
+    "calibration": "first_100_aligned_samples_not_verified_normal",
+    "retention_rule": "any_strictly_positive_official_anomaly_score_after_initialization_in_any_available_nonconstant_metric",
+    "threshold_score": 0.0,
+    "candidate_cap": null,
+    "zero_candidate_policy": "fail_without_fallback_or_ground_truth_rescue",
+    "native_error_policy": "fail_without_changing_algorithm_or_parameters",
+    "parameter_provenance_class": "LEMMA_REFERENCE_NOT_MATMCD_CONFIRMED",
+    "retention_and_input_resolution_provenance_class": "LOCAL_ASSUMPTION"
+  },
+  "metric_fusion": {
+    "method": "equal_mean_of_per_channel_zscores",
+    "fit_rows": "all_aligned_rows_offline",
+    "ddof": 0,
+    "metric_weight": "1/number_of_available_nonconstant_channels_for_each_pod",
+    "include_all_available_nonconstant_metrics": true,
+    "single_channel_policy": "use_its_zscore",
+    "fused_zero_variance_policy": "fail_without_metric_substitution",
+    "minimum_retained_pods": 2,
+    "provenance_class": "LOCAL_ASSUMPTION_HIGH_IMPACT"
+  },
+  "kpi": {
+    "column_name": "Latency",
+    "position": "last",
+    "scale": "none",
+    "value_source": "shared_and_verified_NPY_KPI_column",
+    "constant_kpi_policy": "fail",
+    "semantic_caveat": "PR 20220606 source CSV filename says Success_Rate but its header and NPY feature say Latency; preserve published values/header and flag meaning unconfirmed"
+  },
+  "logs": {
+    "match": "exact_full_pod_name_and_unique_template_structured_pair",
+    "expected_source_directory": "log_data/pod_removed",
+    "ambiguous_or_missing": "record_and_mark_log_input_not_ready",
+    "drop_pods_due_to_missing_logs": false,
+    "fabricate_empty_logs": false,
+    "fuzzy_name_matching": false,
+    "regenerate_drain_templates": false,
+    "summary_generation": "separate_task_and_API_approval",
+    "method_integration": "DIFF-09_unresolved"
+  },
+  "output_contract": {
+    "csv": "<system>/<day>/<system>_<day>.csv",
+    "csv_index": false,
+    "csv_encoding": "utf-8",
+    "float_format": "%.17g",
+    "timestamp_sidecar": "<system>/<day>/timestamps.csv",
+    "decision_manifest": "<system>/<day>/manifest.json",
+    "overwrite": false,
+    "default_runtime_input_update": false,
+    "record": ["source_revision_and_hash", "recipe_hash", "runtime_versions", "channel_coverage_and_constants", "dropped_timestamps", "per_pod_EVT_decision", "normalization_statistics", "column_mapping", "log_coverage", "output_hashes", "author_equivalence_status"]
+  },
+  "execution_limits": {
+    "proposal_only": false,
+    "fit_causal_graph": false,
+    "run_random_walk": false,
+    "call_LLM_or_embedding": false,
+    "evaluate_paper_metrics": false,
+    "send_author_email": false
+  }
+}

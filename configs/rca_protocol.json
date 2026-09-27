@@ -1,0 +1,73 @@
+{
+  "profile_id": "rca_released_A_provisional_evaluation_two_cases_v2",
+  "status": "APPROVED",
+  "approved_date_kst": "2026-09-26",
+  "authorization": "D03 A안 확정 및 문제점 일괄 저자 문의 준비. D04는 제시한 권장 방침으로 진행하며 같은 결정을 재요청하지 않음.",
+  "author_run_equivalence": "UNCONFIRMED",
+  "d03": {
+    "choice": "A",
+    "graph_prompt": "unchanged_released_DomainKnowledgeLLM",
+    "first_pair_graph_prompt_cache": "preserve",
+    "scientific_corrections_applied": false,
+    "rwr_graph_by_stage": {
+      "PC": "initial",
+      "CC_without_external_information": "initial",
+      "MATMCD": "refined",
+      "MATMCD_RE": "refined"
+    },
+    "author_question_file": "docs/AUTHOR_QUESTIONS_D03_D04.md"
+  },
+  "d04": {
+    "runs_per_case_per_stage": 1,
+    "repetition_policy": "released_single_call_structure_no_best_of_n",
+    "rwr_parameters": {
+      "steps": 1000,
+      "rp": 0.05,
+      "max_self": 10
+    },
+    "rwr_seed": null,
+    "rng_policy": "record_numpy_state_before_and_after_no_new_seed",
+    "start_node": "last_input_column",
+    "retain_kpi_in_ranking": true,
+    "tie_policy": "stable_original_column_order",
+    "metric_policy": "unchanged_public_LEMMA_Metrics_functions",
+    "rank_base": 1,
+    "top_k_boundary": "strict_rank_less_than_k",
+    "aggregate_policy": "all_active_cases_required_equal_case_weight_local_protocol",
+    "partial_aggregate": "not_generated",
+    "unknown_ground_truth": "retain_all_candidate_ranks_no_single_score",
+    "ground_truth_input_to_llm_or_rag": false,
+    "cases": [
+      {
+        "system": "Product_Review",
+        "day": "20211203",
+        "official_helper_label": "mongodb-v1",
+        "status": "PROVISIONAL_RELEASED_HELPER_LABEL",
+        "candidate_pods": [
+          "mongodb-v1-64c6b69879-p4wfp"
+        ],
+        "evaluation_pod": "mongodb-v1-64c6b69879-p4wfp",
+        "limitation": "Evaluation node from released helper; scenario describes an external NFS disk-full failure, not proven author final pod ground truth."
+      },
+      {
+        "system": "Cloud_Computing",
+        "day": "20231207",
+        "official_helper_label": "productpage-v1",
+        "status": "UNRESOLVED_EXACT_POD",
+        "candidate_pods": [
+          "productpage-v1-94d68db49-j7t55",
+          "productpage-v1-94d68db49-vc8ct"
+        ],
+        "evaluation_pod": null,
+        "limitation": "Exact injected replica unconfirmed. Preserve both ranks; no best-candidate selection, service aggregation, or assumption-specific score."
+      }
+    ]
+  },
+  "evidence": "docs/evidence/rca_original_protocol_20260925T133730423769Z.json",
+  "integration_status": "helpers_ready_full_RCA_integration_pending_TASK_024",
+  "scope_change": {
+    "date_kst": "2026-09-26",
+    "task": "TASK_044",
+    "change": "Only active case selection changes; D03/D04 scientific rules unchanged; CC and whole-set/partial scores remain withheld"
+  }
+}

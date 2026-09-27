@@ -1,0 +1,18 @@
+{
+  "date_kst": "2026-09-24",
+  "attempts": [
+    {
+      "command": "WSL pinned Python -B scripts/verify_provisional_rca.py",
+      "exit_code": 1,
+      "verifier_sha256": "496754e6c5299983b564ef16ff657e860bf9c31298196e334df34f7841dd5730",
+      "stage": "official_source_archive_comparison",
+      "error_type": "FileNotFoundError",
+      "error": "/mnt/e/연구/MATMCD/official/matmcd/LlamaClient.py",
+      "confirmed_cause": "The local verifier stripped the first path component despite the pinned ZIP already having source-relative paths. The actual archive and local source both have Client/LlamaClient.py.",
+      "correction": "Use exact archive member filenames and validate the approved excluded-file inventory, matching the existing audit_setup.py. Only the local verifier changed.",
+      "CSV_generation": "All five already PREPARED_PROVISIONAL; not rerun",
+      "scientific_source_parameters_and_outputs_changed": false
+    }
+  ],
+  "subsequent_validation": "rca_preprocessing_validation.json"
+}

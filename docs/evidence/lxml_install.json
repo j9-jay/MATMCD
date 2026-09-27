@@ -1,0 +1,98 @@
+{
+  "checked_utc": "20260922T153936Z",
+  "accepted_risk": "RISK-002",
+  "metadata_url": "https://pypi.org/pypi/lxml/5.4.0/json",
+  "metadata_sha256": "40e770744a296359190b2c14b421eb2d3d3753d4f4e0e2651ff8bf6eadf37a05",
+  "wheel": {
+    "comment_text": null,
+    "core-metadata": {
+      "sha256": "997488da71a99af7983682408ede4e00313912db9b58590ebf50ce9f8bd74799"
+    },
+    "digests": {
+      "blake2b_256": "078c61763abd242af84f355ca4ef1ee096d3c1b7514819564cce70fd18c22e9a",
+      "md5": "aa77c3b72fe4010df1ae1ca1a2a63ba6",
+      "sha256": "d2ed1b3cb9ff1c10e6e8b00941bb2e5bb568b307bfc6b17dffbbe8be5eecba86"
+    },
+    "downloads": -1,
+    "filename": "lxml-5.4.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+    "has_sig": false,
+    "md5_digest": "aa77c3b72fe4010df1ae1ca1a2a63ba6",
+    "packagetype": "bdist_wheel",
+    "python_version": "cp311",
+    "requires_python": ">=3.6",
+    "size": 4944418,
+    "upload_time": "2025-04-23T01:45:46",
+    "upload_time_iso_8601": "2025-04-23T01:45:46.051891Z",
+    "url": "https://files.pythonhosted.org/packages/07/8c/61763abd242af84f355ca4ef1ee096d3c1b7514819564cce70fd18c22e9a/lxml-5.4.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "lock_sha256": "0fe03b0640bd6899711892c1a4922a834271628d266022d24553bfc5cac61a03",
+  "log_directory": "logs/lxml_install/20260922T153936Z",
+  "experiments_executed": false,
+  "model_api_calls": false,
+  "commands": [
+    {
+      "name": "dry_run",
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python",
+        "--require-hashes",
+        "--only-binary",
+        ":all:",
+        "--no-index",
+        "--find-links",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/pypi_lxml_5.4.0",
+        "--constraint",
+        "/mnt/e/연구/MATMCD_DATA/logs/lxml_install/20260922T153936Z/before.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/lxml_5.4.0.lock.txt",
+        "--dry-run"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "install",
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python",
+        "--require-hashes",
+        "--only-binary",
+        ":all:",
+        "--no-index",
+        "--find-links",
+        "/mnt/e/연구/MATMCD_DATA/raw_downloads/pypi_lxml_5.4.0",
+        "--constraint",
+        "/mnt/e/연구/MATMCD_DATA/logs/lxml_install/20260922T153936Z/before.txt",
+        "-r",
+        "/mnt/e/연구/MATMCD/docs/evidence/lxml_5.4.0.lock.txt"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "pip_check",
+      "argv": [
+        "/home/goo8412/.local/bin/uv",
+        "pip",
+        "check",
+        "--python",
+        "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/bin/python"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "installed_count": 200,
+  "added": {
+    "lxml": "5.4.0"
+  },
+  "changed_baseline": {},
+  "exact_expected_packages": true,
+  "official_source_unchanged": true,
+  "success": true
+}

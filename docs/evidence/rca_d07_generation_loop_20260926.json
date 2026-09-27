@@ -1,0 +1,114 @@
+{
+  "checked_utc": "2026-09-26T10:51:19.929686+00:00",
+  "decision": "D07_PENDING_APPROVAL",
+  "failed_stage": "pod_log_summary_before_RAG",
+  "case": "Product_Review/20211203",
+  "pod": "thanos-querier-577f4888f9-f9g6q",
+  "call": "logs/setup/rca_real_rag_20260926T100603005620Z/calls/call_0000149.json",
+  "call_sha256": "e0b50a022ea18efe400a3d5cddf83681ee8c5e049bf68ba85be345047667a545",
+  "response": "logs/setup/rca_real_rag_20260926T100603005620Z/failed_thanos_response.txt",
+  "response_sha256": "0a219489f240567657eebdd7f5faded6431a4e399f51a911d3e5685015cb74d6",
+  "usage": {
+    "completion_tokens": 8192,
+    "prompt_tokens": 4018,
+    "total_tokens": 12210,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    }
+  },
+  "capacity": {
+    "prompt_tokens": 4018,
+    "reserved_output_tokens": 8192,
+    "context_tokens": 81920,
+    "required_with_one_token_guard": 12211,
+    "fits": true,
+    "input_alone_fits": true,
+    "maximum_output_with_guard": 77901,
+    "formatted_prompt_sha256": "e3f8a275e807d49d6a78f2d442a6266aa01c5d66e731c3926d1518b46ae4b233",
+    "generation_performed": false,
+    "prompt_truncated": false
+  },
+  "seconds": 93.29014071999973,
+  "finish_reason": "length",
+  "repetition_observation": {
+    "nonempty_lines": 372,
+    "unique_lines": 80,
+    "duplicate_line_occurrences_after_first": 292,
+    "most_repeated_lines": [
+      {
+        "text": "- redis-0: Redis instance.",
+        "count": 12
+      },
+      {
+        "text": "- queue-master-865c66656c-wgdmp: Queue master.",
+        "count": 12
+      },
+      {
+        "text": "- cart-bb6688669-shhsg: Cart service.",
+        "count": 12
+      },
+      {
+        "text": "- orders-79d799bf9f-cmrpp: Orders service.",
+        "count": 12
+      },
+      {
+        "text": "- productpage-v1-5f9dbcd669-bh285: Product page service.",
+        "count": 12
+      },
+      {
+        "text": "- ratings-v1-58b8568645-dqxtx: Ratings service.",
+        "count": 12
+      },
+      {
+        "text": "- reviews-v1-58b8568645-dqxtx: Reviews service.",
+        "count": 12
+      },
+      {
+        "text": "- diskmaker-discovery-4857b: Diskmaker discovery.",
+        "count": 12
+      },
+      {
+        "text": "- tuned-5nqqd: Tuned service.",
+        "count": 12
+      },
+      {
+        "text": "- node-exporter-5s52d: Node exporter.",
+        "count": 12
+      }
+    ]
+  },
+  "input_evidence": {
+    "event_templates": 2,
+    "total_occurrences": 7,
+    "examples": 7,
+    "error_examples": [
+      "reverseproxy.go:472: http: proxy error: context canceled",
+      "oauthproxy.go:793: requestauth: 10.128.0.41:40790 context canceled"
+    ]
+  },
+  "semantic_observation": "Response incorrectly says no specific logs were supplied; repetition penalty cannot guarantee factual correction. Do not salvage prefix as a valid summary.",
+  "completed_log_generations": 148,
+  "successful_output_max_tokens": 3428,
+  "successful_generation_seconds_sum": 2276.3264919140006,
+  "successful_generation_median_seconds": 13.206779403999917,
+  "resource_samples": 480,
+  "gpu_peak_used_mib": 6613,
+  "gpu_min_free_mib": 1375,
+  "wsl_min_available_kib": 3143052,
+  "system_swap_peak_used_kib": 600,
+  "proposed_change": {
+    "scope": "log_summary_only_separate_profile",
+    "presence_penalty_before": 0.0,
+    "presence_penalty_after": 1.5,
+    "trial": "one failed request, same input/system/temperature0.5/top_p0.95/top_k20/min_p0/seed42/output8192/context81920/GPUall/f16/nonthinking",
+    "adoption": "only after user approval and a successful separate trial; use a uniform new log profile, retain old 148 outputs as old profile diagnostics, do not mix conditions",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-4B#best-practices",
+    "not_complete_qwen_recommended_bundle": true,
+    "official_source_changed": false,
+    "applied": false
+  },
+  "PC_status": "still running independently; no RNG/PC settings changed",
+  "full_RCA_completed": false
+}

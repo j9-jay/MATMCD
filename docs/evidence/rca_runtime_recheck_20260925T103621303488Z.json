@@ -1,0 +1,19 @@
+{
+  "checked_utc": "20260925T103621303488Z",
+  "previous_report": "rca_readiness_20260925T103130694226Z.json",
+  "previous_sha256": "5eeef2a093555c616a7c35b57db848a8266d356ccab33030360b594751cdc87a",
+  "previous_probe": {
+    "ok": false,
+    "error": "60초 import 점검 시간 초과; 실험 미실행"
+  },
+  "script_sha256": "9815bdc4b4584fa9ecb3be5eedaead186bedee6d33d8fb4c6ddee99626616fe0",
+  "runtime_probe": {
+    "ok": true,
+    "exit_code": 0,
+    "stdout": "numpy/pandas imported\ntorch imported\nRCA functions imported without execution\nagent imported\nlog/web modules imported without calls\n{'numpy': '2.2.6', 'pandas': '2.2.3', 'torch': '2.7.0+cu126', 'cuda_available': True, 'gpu': 'NVIDIA GeForce RTX 2080 SUPER'}\n",
+    "stderr": "/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/lib/python3.11/site-packages/langchain/chat_models/__init__.py:33: LangChainDeprecationWarning: Importing chat models from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:\n\n`from langchain_community.chat_models import ChatOpenAI`.\n\nTo install langchain-community run `pip install -U langchain-community`.\n  warnings.warn(\n/mnt/e/연구/MATMCD_DATA/environments/d2i_matmcd_py311/lib/python3.11/site-packages/langchain/chat_models/__init__.py:33: LangChainDeprecationWarning: Importing chat models from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:\n\n`from langchain_community.chat_models import ChatOpenAI`.\n\nTo install langchain-community run `pip install -U langchain-community`.\n  warnings.warn(\n/mnt/e/연구/MATMCD/official/matmcd/web_utils/retrieval.py:4: LangChainDeprecationWarning: Importing OpenAIEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:\n\n>> from langchain.embeddings import OpenAIEmbeddings\n\nwith new imports of:\n\n>> from langchain_community.embeddings import OpenAIEmbeddings\nYou can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>\n  from langchain.embeddings import OpenAIEmbeddings\n/mnt/e/연구/MATMCD/official/matmcd/web_utils/retrieval.py:6: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:\n\n>> from langchain.vectorstores import Chroma\n\nwith new imports of:\n\n>> from langchain_community.vectorstores import Chroma\nYou can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>\n  from langchain.vectorstores import Chroma\n"
+  },
+  "diagnostic_timeout_changed": "60 to 180 seconds; no experiment or inference parameter changed",
+  "experiments_executed": false,
+  "packages_changed": false
+}
