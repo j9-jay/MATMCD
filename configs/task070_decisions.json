@@ -49,7 +49,9 @@
     },
     "D-5_judgment_prompt": {
       "choice": "single_stage_yes_no_with_evidence_citation",
-      "text_status": "P1에서 문안 작성 후 재승인"
+      "status": "DECIDED_2026-10-18",
+      "implementation": "scripts/task070_judge.py (PROMPT_VERSION task070_judge_v1)",
+      "note": "사용자 지시(2026-10-18)로 문안은 재승인 없이 확정. 모든 방법 공유"
     },
     "D-6_split": {
       "category_1": {
@@ -59,10 +61,10 @@
       "category_2": "분할 없음. 설계 동결 후 1회 평가"
     },
     "D-7_matmcd_log_adapter": {
-      "choice": "use_RE2-OB_log_template_column",
-      "status": "DECIDED_2026-10-18",
-      "data_audit": "OB logs.csv에는 cluster_id·log_template 열이 있음. SS는 템플릿 열 없음(백로그)",
-      "note": "원본 LEMMA 템플릿·구조화 CSV 형식과 다른 조건으로 기록"
+      "choice": "uniform_label_free_masking_templates",
+      "status": "REVISED_2026-10-18",
+      "reason": "RCAEval 제공 log_template 열은 RE2-OB 90사례 중 24사례(개발 24/30, 평가 0/60)에만 있음. 모든 사례에 동일한 규칙 기반 템플릿(scripts/task070_corpus.py log_template)을 쓰고 제공 열은 쓰지 않는다",
+      "note": "원본 LEMMA 템플릿 형식과 다른 조건"
     },
     "D-8_web_fallback": {
       "choice": "wikipedia_api"
@@ -73,10 +75,13 @@
     },
     "D-10_sampling": {
       "seed": 42,
-      "judgment_temperature": "P1에서 정하고 모든 방법 공유"
+      "judgment_temperature": 0.0,
+      "presence_penalty": 0.0,
+      "max_tokens": 1024,
+      "status": "DECIDED_2026-10-18"
     },
     "D-11_repetition": {
-      "rwr": "그래프 고정 후 반복(횟수는 실행 전 고정)",
+      "rwr": "그래프 고정 후 seed 0..19로 20회 반복(scripts/task070_output_head.py)",
       "llm": "G1 실측 후 결정"
     }
   },
@@ -99,5 +104,12 @@
     "G1 기준선 파일럿 후 평가 사례 수 고정",
     "G2 제안 방법 동결",
     "G3 실행 완결성 검사"
-  ]
+  ],
+  "corpus": {
+    "implementation": "scripts/task070_corpus.py",
+    "baseline_window_seconds": 300,
+    "z_threshold": 3.0,
+    "top_trace_operations": 40,
+    "note": "이상 표시는 각 사례 처음 5분 대비(정답 미사용). 전체 구간 z는 절반 구간 수준 변화를 |z|≈1로 가려 쓰지 않음"
+  }
 }

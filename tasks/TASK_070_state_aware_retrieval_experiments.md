@@ -96,8 +96,11 @@
   - 확인: AutoMPG 392행(논문 392), Sachs 7,466행(논문 7,466), **DWD 349행(논문 350)**. 차이는 기록만 하고 고치지 않는다. Asia 노드 8·간선 8, Child 노드 20·간선 25. seed 42 표본은 두 번 생성해 동일함을 확인했다.
   - 37개 고정 검사를 쓰는 과거 감사 스크립트 4개는 재실행 시 실패한다(`configs/scope.json` 기록).
 - [ ] T3 웹 스냅샷 수집과 누출 검사 (무료 할당량 내)
-- [ ] T4 corpus 구성기 (근거 단위, 역할·상태 태그)
-- [ ] T5 공통 출력부와 지표 연결 (제약 PC, RWR, AC@k·MAP·MRR, 그래프 지표)
+- [x] T4 corpus 구성기 (카테고리 1) — `scripts/task070_corpus.py`. 사례마다 근거 단위 125~170개: 메트릭·KPI 요약(처음 5분 대비 |z|≥3 분), 로그 템플릿별 분당 개수, trace 연산별 분당 건수·p90, trace 호출 그래프(구조). 사례 경로 등 정답 정보 미사용, 경로 누출 검사 포함. 카테고리 2 corpus는 P3(웹 스냅샷)에서 만든다.
+  - **D-7 수정:** RCAEval 제공 `log_template` 열은 RE2-OB 90사례 중 24사례(개발 24/30, 평가 0/60)에만 있다. 처음 감사가 첫 사례만 확인해 생긴 오판이다. 모든 사례에 같은 규칙 기반 템플릿(가변 값 마스킹)을 쓰고 제공 열은 쓰지 않는다. 규칙은 개발 사례 로그만 보고 정했다.
+  - trace 서비스명 `frontendservice`는 메트릭 서비스명 `frontend`로 맞춘다. 일부 사례에 중복 spanID가 있어 첫 항목만 부모 조회에 쓴다.
+- [x] T5 공통 출력부와 지표 — `task070_output_head.py`(공식 PC·RWR, 원본 ZIP 바이트 확인 후 사용, RWR seed 0~19 20회), `task070_metrics.py`(RCAEval식 AC@k·Avg@5, RR, 공개 LEMMA MAP·MRR, 공식 그래프 지표), `task070_rcaeval.py`(서비스 노드 12개 + KPI, D-1), `task070_judge.py`(공유 판단 프롬프트 `task070_judge_v1`, temperature 0, D-5·D-10).
+  - **P1 점검(`task070_p1_check.py`, LLM 미사용):** 인과 발견 PC 결과가 AutoMPG·DWD는 논문 표 1 PC 행과 동일, Sachs는 소수점 처리 차이 수준(FPR 0.155 vs 0.15, NHD 0.198 vs 0.19). Asia·Child는 표본이 달라 차이. DWD 349행 데이터로 논문 수치가 그대로 나와 논문도 같은 파일을 쓴 것으로 보인다. RCAEval 개발 30사례 PC만 기준선: Avg@5 0.31(무작위 기대 0.25), AC@1 0.07, AC@5 0.57. 결과: `MATMCD_DATA/task070/p1_check/20261018T141853Z/report.json`.
 - [ ] T6 기준선: PC만, 검색 없는 LLM, flat RAG
 - [ ] T7 MATMCD 참고 기준선 (두 카테고리)
 - [ ] T8 사용자 방법과 ablation (상태 유무, 역할 태그 유무, 고정 vs 동적 상태)
