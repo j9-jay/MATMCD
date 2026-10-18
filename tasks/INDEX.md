@@ -1,165 +1,100 @@
-# RCA 작업 현황
+# 작업 현황
 
-**2026-10-02 미팅 자료 최종 스타일 반영:** [TASK_068](TASK_068_experiment_meeting_brief.md) DONE. 첨부 스타일의 [HTML](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.html)·[Markdown](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md)을 12절 항목·표·실제 파일 발췌 중심으로 정리했다. 결과4위→5위, 확인된 문제와 미확정 영향, 사용자 제공 저자 메일 확인 중 상태를 반영했다. 중단 이력은 자원·LLM 한계4건만 유지하며 아래 F01~F07 기록은 이전 버전이다. 내용·구조·링크 검증 완료; 브라우저 화면 검증은 로컬 파일 URL 정책으로 불가. 스타일 선호는 전역 AGENTS.md에 저장했다.
+2026-10-18 재계획. 이전 상태 기록은 Git 커밋 `2f0d66a`(재계획 전 스냅샷)에 보존했다.
 
-**2026-10-02 실험 중단 이력 추가:** [TASK_068](TASK_068_experiment_meeting_brief.md) 후속 완료. [미팅 요약본](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md)에 단계별 기준·Pass/Fail 표와 중단 기록 F01~F07을 추가했다. 전체 후보 실패/30 Pod 성공, 사전 차단/실행 중 오류, 원인 미확인을 구분했다.
+## 현재 목표
 
-**2026-10-02 실험 간략 설명 자료:** [TASK_068](TASK_068_experiment_meeting_brief.md) DONE. [환경·진행 단계 요약본](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md)을 비전공자용으로 별도 작성했다. 환경표·7단계 설명·흐름 도식·실측 결과와 한계를 포함하고 수치·출처 링크를 검증했다. 기존 미팅 원고와 실험 결과는 보존했다.
+**현재 PC 환경에서 정답 정보를 사용하지 않는 MATMCD 기준선을 만든다.** 작업 상세는 [TASK_069](TASK_069_blind_baseline.md)를 따른다.
 
-**2026-10-02 내용 검토 원고 v4:** [TASK_067](TASK_067_content_review_v4.md) DONE. [새 Markdown](../../MATMCD_RESEARCH_MEETING_CONTENT_v4.md)을 연속 문서 형식으로 작성했다. 기술 용어를 유지하고 설명·구조를 재정리했으며, 후속 요청에 따라 교수님께 설명드리는 존댓말로 전체 문체를 수정했다. HTML/슬라이드 작업은 진행하지 않았으며, 사용자 내용 검토 후 원페이지 문서로 구성할 예정이다.
+- 주 실험에서 정답 포함(oracle) 후보는 사용하지 않는다. 기존 30 Pod 결과는 "정답이 후보에 있을 때의 조건부 분석"으로만 쓴다.
+- 원 논문 표 4 수치 일치는 목표가 아니다. 공식 구현에 충실하게 실행하고 원 논문과 다른 조건을 모두 명시한다.
+- 연구의 최종 방향은 NLP/RAG(ACL·EMNLP·NAACL·EACL·COLING)다. RCA는 검증 과제로 사용하며 엔지니어링 확장은 하지 않는다. 장기 계획은 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)에 있다.
 
-**2026-10-02 발표자료 v3 리디자인:** [TASK_066](TASK_066_presentation_v3_redesign.md) DONE. [새 HTML 발표자료](../../MATMCD_RESEARCH_MEETING_DRAFT_v3.html)를 28장·16:9로 구성했다. 새 디자인 토큰·레이아웃·도식·슬라이드 탐색 적용, 짧은 구절 중심으로 재작성, 실측 수치와 기존 버전 보존. 전체 장 렌더링·넘침·탐색 검증 완료.
+## 활성 TODO — TASK_069
 
-**2026-10-02 미팅 자료 v2:** [TASK_065](TASK_065_meeting_v2_research_framing.md) DONE. [새 HTML](../../MATMCD_RESEARCH_MEETING_DRAFT_v2.html)을 추론 상태에 따른 이질적 근거 선택 중심으로 작성했다. 조건화 수식·Evidence Need Prediction·LLM-assisted retrieval·MATMCD 두 agent 설명 반영. 기존 버전 및 로컬 결과 보존, 출처·화면 검증 완료.
-
-**2026-09-28 미팅 시각 자료 삽입:** [TASK_064](TASK_064_meeting_visuals.md) DONE. [HTML](../../MATMCD_RESEARCH_MEETING_DRAFT.html)에 근거 선택·RCA 개념·MATMCD 흐름·순위 변화·시간 비중 5개 자료를 추가했다. 본문·표 보존, 개념/실측 구분, PC·모바일 화면 검증 완료.
-
-**2026-09-28 Wiki HTML 작성:** [TASK_063](TASK_063_wiki_meeting_html.md) DONE. 최신 [Markdown 원고](../../MATMCD_RESEARCH_MEETING_WIKI.md)의 내용과 순서를 유지해 [스크롤형 Wiki 페이지](../../MATMCD_RESEARCH_MEETING_DRAFT.html)를 갱신했다. 고정 목차·현재 절 표시·반응형·인쇄 스타일 적용, 본문 일치 및 브라우저 검증 완료.
-
-**2026-09-28 미팅 원고 범위 조정:** [TASK_062](TASK_062_revise_meeting_wiki_scope.md) DONE. [Markdown 원고](../../MATMCD_RESEARCH_MEETING_WIKI.md)를 사용자 지정 삭제·축약 기준에 맞춰 10개 절로 정리했다. RCA 기초 설명 보강, 저자 문의 다섯 문제만 유지, 결과는 기존 9.4·9.6·9.8만 유지, 분석 두 문단·향후 계획 축약. HTML 무변경. 아래 TASK_061의 분량은 수정 전 이력이다.
-
-**2026-09-27 상세 위키형 원고 작성:** [TASK_061](TASK_061_detailed_meeting_wiki.md) DONE. 사용자 요청에 따라 디자인 없이 [Markdown 원고](../../MATMCD_RESEARCH_MEETING_WIKI.md)를 작성했다. 본문 12항목·세부 절 75개, 용어·실행 계보·전체 순위·근거 부록 포함. HTML은 그대로 유지했다.
-
-**2026-09-27 미팅 자료 서술형 개편:** [TASK_060](TASK_060_narrative_meeting_html.md) DONE. 12개 항목 순서를 유지한 [HTML](../../MATMCD_RESEARCH_MEETING_DRAFT.html)을 자연스러운 서술형·연속 스크롤로 수정하고, 최신 첨부 Geist 참고 테마를 적용했다. 화면·목차·인쇄·링크 검증 완료.
-
-**2026-09-27 미팅 HTML v3 초안 작성:** [TASK_059](TASK_059_meeting_html_from_v3_plan.md) DONE. [기획서](../../PROFESSOR_RESEARCH_PROGRESS_REPORT_PLAN.md)의 1~12번 구조와 사용자 첨부 디자인 지침으로 [HTML](../../MATMCD_RESEARCH_MEETING_DRAFT.html)을 작성했다. 데스크톱·모바일·목차·인쇄·출처 링크 검증 완료. 사용자 검토 전 초안이다.
-
-**2026-09-27 보고서 기획서 v3 작성:** [TASK_058](TASK_058_restore_user_report_structure.md) DONE. 사용자가 지정한 1~12번 순서를 유지해 [기획서](../../PROFESSOR_RESEARCH_PROGRESS_REPORT_PLAN.md)만 다시 작성했다. TASK_057의 7화면 구조는 사용자 요청으로 대체했다. HTML은 변경하지 않았으며 새 기획서를 반영한 상태가 아니다.
-
-**2026-09-27 저자 문의 최종 문안 작성 완료:** [TASK_056](TASK_056_author_question_inventory.md) DONE. 사용자 지정 순서1→6→4→3→2의5개 질문만 남긴 [국문·영문 최종 메일](../docs/AUTHOR_INQUIRY_RCA_SHORT.md)을 작성했다. 각 문항에 논문·코드의 해당 단계를 떠올릴 수 있는 배경을 추가하고, 배경·확인 사항·임시 적용·질문 구조와 학생 소개·존중·감사의 문체를 유지했다.23개 [통합 기록](../docs/AUTHOR_QUESTIONS_RCA.md)은 보존하며 실제 발송·답변 처리는 TASK_018의 TODO다.
-
-**2026-09-27 GitHub 업데이트 완료:** [TASK_054](TASK_054_github_setup_update.md) DONE. 현재 설정·구현·문서·검증 기록을 구성 커밋 `3fe751c`로 `origin/main`에 push하고 원격 일치를 확인했다. 실험 자산은 MATMCD_DATA에 유지한다.
-
-**2026-09-27 결과 분석 보고서 작성 완료:** [TASK_053](TASK_053_oracle30_result_report.md) DONE. [상세 보고서](../docs/RCA_ORACLE30_RESULT_REPORT_20260927.md)에 목적·실제 조건·논문 차이·전체 순위·원인별 증거/가설을 정리했다. MongoDB 장애 근거의 RAG 미전달, 공개 프롬프트의 첫 쌍/방향 문제, 후보 축소로 제외된 시나리오 경로를 확인했다. 추가 실험·코드/조건 교정은 하지 않았다.
-
-**최종 개발 실행 상태(2026-09-27 05:06 KST 검증): TASK_050·051·052 DONE.** PR 20211203의 잠정 정답 포함 30 Pod + Latency MATMCD가 04:43:06 KST에 완주했다. 설명930/930·제약930/930·보정 PC/RWR·평가 완료, 실패0·환경 변경0. Pod 기준 정답 순위 PC4위/MATMCD5위, Hit@5는 모두1. 실행 `20260926T143904740470Z`, 소요 약5시간4분(재사용 부모 단계 제외). [최종 결과](../docs/RCA_ORACLE30_DEVELOPMENT.md), [전수 검증](../docs/evidence/rca_oracle30_completion_audit_20260927.json), [옵션 기록](../docs/RCA_DOMAIN_SAMPLING.md).
-
-**현재 승인된 30 Pod 한 사례의 완주 작업에는 남은 차단 항목이 없다.** 원래 전체 후보 두 사례의 TASK_007~009·046~048과 저자 문의/API 비교 등은 별도 범위로 상태를 유지한다. CC·RE·새 사례·반복 실험은 이번 완료에 포함하지 않는다. 이 결과는 잠정 정답을 미리 포함한 단일 개발 평가이며 논문 결과 재현/전체 후보 선별 성능/통계적 유의성의 근거가 아니다. 아래 과거 시점의 실행 중·승인 대기·예상 시간은 이력이다.
-
-완료 검증 후 `matmcd-30-pod` 자동 확인을 앱 도구로 **PAUSED** 처리했다. 실행 프로세스와 llama-server도 정상 종료를 확인했다. 추가 실행은 시작하지 않았다.
-
-**최신 상태(2026-09-26 23:41 KST): TASK_052 적용·실제 재실행 중.**3건 진단 모두stop, 실패 요청8192→1533토큰. 새 실행`20260926T143904740470Z`에서 설명1/930부터presence1.5로 재생성 중이며4개 완료·1개 진행·실패0을 확인했다. 첫2개 실제 요청은 이전과presence_penalty만 다르다. 기존 PC·로그/RAG 유지, 제약 판단은presence0이다.10분 heartbeat ACTIVE. [변경 기록](../docs/RCA_DOMAIN_SAMPLING.md). 아래 승인 대기 및 이전 실행 중 표시는 과거 스냅샷이다.
-
-**최신 자동 확인(2026-09-26 23:16 KST): 실행 중단·승인 대기.** MATMCD 설명40개 완료 후41번째가 `non-parametric`을1845회 반복하며8192 출력 한도에 도달했다. 입력 문맥은 수용됐으며 환경 변경·OOM이 관측된 실패가 아니다. 현재 관련 실행 프로세스는 없다. [TASK_052](TASK_052_domain_generation_repetition.md)에 설명 단계 presence_penalty0→1.5의 제한된 검증·통일 적용안을 기록했다. 새 설정은 미적용이다. 아래 실행 중/예상 시간은 실패 전 스냅샷이다.
-
-**현재 진행(TASK_050):** PR 20211203·30 Pod + Latency·51,529행의 원본 PC/RWR가 691.12초에 완료됐다. 잠정 정답 Pod 순위4위(KPI 포함5위)。 로그20/20·RAG 생성 완료, [TASK_051](TASK_051_rag_format_continuation.md)의 응답 경계 보정 후 MATMCD 930쌍 설명을 실제 생성 중이다. 첫10개 모두 정상 종료·평균21.09초. 현재 실행 ID는 `20260926T135543690567Z`이며 최종 MATMCD 순위는 아직 없다. [작업 기록](TASK_050_oracle30_matmcd_run.md). 아래 전체 후보 실행의 차단·캐시 전용 작업은 보존된 이전 범위의 기록이며 30개 개발 실험과 구분한다.
-
-**최신 범위:** 유료 API/외부 서버 제외. 사용자는 TASK_049 진행 승인 뒤 **스크립트 로직 변경 제외·캐시 설정만 적용**하도록 좁혔다. [TASK_049](TASK_049_local_resource_optimization.md)는 서버/요청 prompt cache 활성화와 SDK 17개 검사까지 DONE이다. 별도 RAM cache=0·단일 슬롯을 유지하며 PC 자료구조·재개·실행 순서 변경은 미적용이다. 아래 47개 Task 감사는 새 Task 작성 전 스냅샷이며, 전체 RCA 준비 완료나 재개로 표시하지 않는다.
-
-2026-09-26 KST 기준. 현재 대상은 논문 §4.3·표 4의 마이크로서비스 RCA다. 일반 인과관계 발견 실험은 사용자 지시로 작업 범위와 TODO에서 제외했다.
-
-**현재 실행·평가 대상: PR 20211203, CC 20231207.** TASK_044로 PR 20220606도 추가 제외했다. 데이터·기존 5개/3개 준비 이력은 보존하며 현재 활성 입력은 2개 CSV·278쌍 로그(약 8.81GB)다. 개별 사례 내부 조건은 유지한다.
-
-DONE은 해당 조사·설치·정리 작업의 완료이며 RCA 전체 완료율을 뜻하지 않는다. **이전 전체 후보 실행 이력:** 새 로그44개 후 중단, 전체 후보 PC는OOM으로 종료했고 완주한 전체 후보 RCA 결과는 없다. 현재 30개 실행의 상태와 실제 순위는 이 문서 상단 및 TASK_050을 따른다. [47개 Task 상세 대조(이전 스냅샷)](../docs/TASK_STATUS_20260926.md).
-
-사용자가 준비 완료 확인 후 RCA 실행을 요청했다. 실행 승인은 확인했으며 반복 요청하지 않는다. TASK_044로 두 사례를 선택했고, 후속 사용자 지시에 따라 TASK_045에서 문맥만 81,920으로 확대해 검증을 완료했다. 준비 로그의 D05 용량 문제는 해결됐으며 전체 통합 검증은 남아 있다. 전체 실행의 기존 조건부 승인은 유지한다. 현재 차단은 새 실행 승인 부족이 아니라 PC 실패와 로그/RAG 통합 미완료다. [최신 준비 점검](../docs/RCA_READINESS.md)을 참고한다.
-
-| Task | 목적 | 상태 |
+| ID | 작업 | 상태 |
 |---|---|---|
-| [001](TASK_001_paper_analysis.md) | 논문·부록 분석 이력 | DONE |
-| [002](TASK_002_official_code_setup.md) | 공식 소스 확보·출처 보존 | DONE — 현재 부분집합 정책은 TASK_017 |
-| [003](TASK_003_dataset_download.md) | RCA 저자 원본 입력 확보 | BLOCKED — 원본 CSV·정확 전처리 동일성 미확인, 임시 준비는 TASK_020 완료 |
-| [004](TASK_004_environment_setup.md) | 공통 실행 환경 구성 | DONE — Graphviz B안 포함 로컬 의존성 검증, 저자 동일성은 별도 관리 |
-| [005](TASK_005_model_setup.md) | RCA 모델·서비스 접근 준비 | BLOCKED — API 접근·모델 snapshot 조건 |
+| B0 | 기준선 명세서와 원 논문 대비 차이 표 작성 | TODO |
+| B1 | 정답을 사용하지 않는 후보 선정 규칙 결정·고정 | **사용자 결정 필요** |
+| B2 | 사례 범위 결정 (PR 20211203, CC 20231207 순위 기록·점수 보류) | **사용자 결정 필요** |
+| B3 | D03 처리 방식(공개 코드 그대로 / 교정판 / 둘 다)과 MATMCD-RE 포함 여부 결정 | **사용자 결정 필요** |
+| B4 | RWR 반복 횟수·seed 규칙 사전 고정 | TODO |
+| B5 | 새 프로필로 PC → 로그 요약/RAG → MATMCD → RWR 실행 | TODO (B1~B4 이후) |
+| B6 | 평가: end-to-end, 후보 recall, 기존 30 Pod 조건부 분석 | TODO |
+| B7 | 기준선 결과 보고서 | TODO |
+
+## 보류 — 현재 목표 범위 밖
+
+| 항목 | 이유 | 관련 |
+|---|---|---|
+| 전체 후보(218/196 Pod) 실행 | PC 메모리 부족(D08)과 LLM 호출 규모. 엔지니어링 확장은 하지 않음 | [TASK_046](TASK_046_real_rca_integration.md), [TASK_048](TASK_048_resolve_pc_memory.md), [D08](../docs/RCA_PC_MEMORY.md) |
+| 전체 후보 로그 요약 중단 원인 | 원인 UNKNOWN. 전체 후보를 재개할 때만 조사 | [TASK_047](TASK_047_resolve_generation_repetition.md) |
+| 웹 검색 경로 | 외부 API·정답 누출 위험. 사용자 결정 전까지 미사용 | [TASK_024](TASK_024_local_rca_integration.md) |
+| 원본 API 검증 | 유료 API 미사용 방침. `gpt-4`·`gpt-3.5-turbo`는 2026-10-23, `gpt-4o-mini-2024-07-18`은 2027-01-14 종료 예정(OpenAI deprecations 페이지, 2026-10-17 확인) | [TASK_025](TASK_025_original_api_validation.md) |
+| Graphviz 저자 버전 | 순위 입력이 아님 | [TASK_022](TASK_022_graphviz_author_version.md) |
+
+## 계속 진행
+
+| 항목 | 상태 | 관련 |
+|---|---|---|
+| 저자 문의 | **발송 여부 사용자 확인 필요.** 최종 문안 5문항, 23개 내부 목록 보존 | [TASK_018](TASK_018_author_clarifications.md) |
+
+## 백로그 — NLP/RAG 연구 (현재 미착수)
+
+상세는 [연구 로드맵](../docs/RESEARCH_ROADMAP.md).
+
+| ID | 작업 |
+|---|---|
+| R1 | 연구 질문(RQ1~RQ4)과 주장 확정, 지도교수 합의 |
+| R2 | 벤치마크 조사·재선정 (LEMMA-RCA, RCAEval, OpenRCA 등) |
+| R3 | 역할 태그·근거 자료(corpus) 설계 |
+| R4 | 평가 설계: 근거 recall/사슬 완결성, 최종 과제 지표, 비용, 통계 검정 |
+| R5 | 정답 근거 주석(gold/silver evidence) 방식 결정 |
+| R6 | NLP 기준선 구현: 검색 없는 LLM, flat RAG, 반복 검색, 질의 분해, 그래프 RAG, 역할 태그만 쓰는 RAG |
+| R7 | 제안 방법 구현(추론 상태 5단계)과 ablation |
+| R8 | 여러 LLM 실험과 오염(contamination) 분석 |
+| R9 | 오류 분석·정성 사례 (flat RAG의 MongoDB 근거 누락 사례 포함) |
+| R10 | ARR 형식 논문 작성 (Limitations, Responsible NLP 체크리스트) |
+
+## 완료·이력 Task
+
+| Task | 내용 | 상태 |
+|---|---|---|
+| [001](TASK_001_paper_analysis.md) | 논문·부록 분석 | DONE |
+| [002](TASK_002_official_code_setup.md) | 공식 소스 확보 (커밋 `ef2c3ec`) | DONE |
+| [003](TASK_003_dataset_download.md) | RCA 저자 원본 입력 확보 | 미해결 — 원본 CSV·전처리 동일성 미확인, 임시 전처리로 대체 |
+| [004](TASK_004_environment_setup.md) | 공통 실행 환경 | DONE |
+| [005](TASK_005_model_setup.md) | 원본 API 모델 접근 | 보류 — 유료 API 미사용 |
 | [006](TASK_006_paths_and_preflight.md) | 외부 경로 연결·사전 점검 | DONE |
-| [007](TASK_007_run_original_experiments.md) | Product Review / Cloud Computing RCA 실행 | BLOCKED — 두 사례 278쌍과 문맥 검증 완료. 전체 RAG/그래프 통합 검증 후 실행 |
-| [008](TASK_008_evaluate_results.md) | RCA 실제 순위·MAP@5/10·MRR 평가 | TODO |
-| [009](TASK_009_compare_with_paper.md) | 논문 표 4와 비교 | TODO |
+| [007](TASK_007_run_original_experiments.md) | 전체 후보 2사례 실행 | 대체 — 현재 목표는 TASK_069 |
+| [008](TASK_008_evaluate_results.md) | 실제 순위 평가 | TODO — TASK_069 B6에서 수행 |
+| [009](TASK_009_compare_with_paper.md) | 논문 표 4 비교 | TODO — TASK_069 B7에서 차이 중심으로 수행 |
 | [010](TASK_010_supplementary_artifacts.md) | 공식 전처리·비교 자료 조사 | DONE |
-| [011](TASK_011_summary_output_directory.md) | CODE-03 요약 저장 경로 준비 | DONE |
-| [012](TASK_012_chromadb_compatibility.md) | DEP-01 호환 조합 검증 | DONE |
-| [013](TASK_013_install_chromadb.md) | DEP-01 Chroma 설치·로컬 점검 | DONE |
-| [014](TASK_014_install_lxml.md) | DEP-02 lxml 설치·로컬 점검 | DONE |
-| [015](TASK_015_install_openai_embeddings.md) | DEP-03 embedding 어댑터 설치·로컬 점검 | DONE |
-| [017](TASK_017_scope_rca_only.md) | RCA 범위 전환·전용 파일 정리 | DONE — 삭제·원본/환경 보존·참조 검증 통과 |
-| [018](TASK_018_author_clarifications.md) | RCA 미확정 조건·로컬 선택 일괄 저자 확인 | TODO — 목록·메일 초안 준비, 미발송 |
-| [019](TASK_019_provisional_rca_preprocessing_plan.md) | 실제 입력 점검·임시 전처리 구체안 | DONE — 명세·설정·실물 근거·원본 보존 검증 완료 |
-| [020](TASK_020_apply_provisional_rca_preprocessing.md) | 승인된 임시 전처리 구현·입력 생성 | DONE — CSV 5개 생성·별도 검증 통과, 저자 동일성 UNCONFIRMED |
-| [021](TASK_021_install_system_graphviz.md) | DEP-04 Graphviz B안 설치·PNG 검증 | DONE — 시스템 9개 추가, 기존 시스템·Python·공식 소스 보존 |
-| [022](TASK_022_graphviz_author_version.md) | Graphviz A안: 저자 버전 확인·전환 검토 | TODO — B안과 분리, 실제 전환은 자료 확인·변경 승인 후 |
-| [023](TASK_023_local_qwen_thinking_setup.md) | Qwen3.5-4B Q5_K_M 로컬 환경 | DONE — non-thinking·GPU·인공 응답 형식 검증 완료, 실제 통합은 024 |
-| [024](TASK_024_local_rca_integration.md) | 로컬 모델·로그의 RCA 연결 | BLOCKED — D07 단일 검증 PASS, 새 로그44개 후 실행 중단; PC는 D08 OOM 차단 |
-| [025](TASK_025_original_api_validation.md) | 로컬 성과 이후 원본 API 조건 검증 | TODO — 호출 범위·비용 승인 후 |
-| [026](TASK_026_local_thinking_output_budget.md) | LOCAL-01 thinking 생성 한도·원본 형식 검증 | DONE — 8192 실패 분석 보존. 사용자는 4096안 대신 029 non-thinking 선택 |
-| [027](TASK_027_wsl_system_drift.md) | WSL 자동 업데이트·OS baseline 검토 | DONE — 현재 805개 baseline 기록, OS 설정 유지·실행 전후 변화 검사. 과거 175개 차이 이력 보존 |
-| [028](TASK_028_local_re_response_format.md) | LOCAL-02 RE 응답과 원본 파서 호환 | DONE — 승인된 단회 경계 보정·원문 보존·오프라인 22개/인공 추론 PASS |
-| [029](TASK_029_local_nonthinking_verification.md) | Qwen non-thinking 전환·원본 형식 검증 | DONE — 보정 전 FAILED 이력 보존, 후속 028에서 형식 보정 검증 완료 |
-| [030](TASK_030_local_bge_m3_embedding.md) | BGE-M3 dense CPU 임베딩·두 검색 연결 검증 | DONE — FP32/batch 1, 기본 분할/top-k/저장·재로드 PASS, 실제 RCA 제외 |
-| [031](TASK_031_rca_readiness_audit.md) | RCA 실행 준비 실물 점검·조건부 실행 요청 반영 | DONE — 판정 NOT_READY, 실행은 007 BLOCKED |
-| [032](TASK_032_connect_provisional_rca_inputs.md) | 임시 CSV·정확한 원본 로그 연결 | DONE — CSV 5개 공식 로더 PASS, 로그 647쌍/44.1GB, 입력·공식 소스 보존 |
-| [033](TASK_033_rca_metric_adapter.md) | 공개 RCA 지표 함수 분리·검증 | DONE — 원본 공식 유지, 11개 검사 PASS; 실제 평가는 008 |
-| [034](TASK_034_official_scenario_evidence.md) | 공식 장애 시나리오·추가 CC 원자료 조사 | DONE — PPTX 5개와 원자료 설정 확인; 정확한 CC 정답은 미확정 |
-| [035](TASK_035_missing_log_policy.md) | 누락 pod 로그의 처리 정책 | DONE — 후보 유지·부재 명시 승인, 근거 manifest 5개·오프라인 44개 검사 PASS; 실제 통합은 024 |
-| [036](TASK_036_large_log_reading.md) | 대용량 로그 읽기 방식 | DONE — 원본 전체 읽기/프롬프트 생성 3개 PASS, 최대 RSS 2.111GiB·스왑 0; 실제 통합 024 |
-| [037](TASK_037_d01_log_coverage_investigation.md) | D01 파싱 오류 가능성·원시 로그 범위 재검증 | DONE — 로컬 매칭 오류 미발견; 공개 metric/log 범위 불일치 확인, D01 정책은 미적용 |
-| [038](TASK_038_d01_public_case_research.md) | D01 공개 이슈·외부 재현 사례 조사 | DONE — 직접 해결 이슈 미발견; 같은 CC 날짜의 서비스 집계 사례 확인, D01 정책 미적용 |
-| [039](TASK_039_select_three_rca_cases.md) | 실행·평가를 사용자 지정 세 사례로 제한 | DONE — 활성 매핑·공통 선택 적용, 범위 39개/D01 33개 검사 PASS; 원본 자료 보존 |
-| [040](TASK_040_d03_original_graph_protocol.md) | D03 원본 그래프·RWR 동작 대조 | DONE — A안 확정, 공개 동작·단계별 그래프 보존 및 별도 저자 문의 준비 |
-| [041](TASK_041_d04_original_evaluation_protocol.md) | D04 원본 정답·순위·평가 규칙 | DONE — PR 잠정/CC 점수 보류·단일 호출/RNG·집계 방침과 평가 준비 코드 검증; 정확한 CC 정답은 018/008 |
-| [042](TASK_042_real_prompt_capacity.md) | D05 실제 GGUF 프롬프트 길이 | DONE — 현재 81,920/all에서 278개 모두 수용, 최대 필요량 73,266. 실제 최대 입력 생성은 045 PASS |
-| [043](TASK_043_log_encoding_diagnosis.md) | D06 원본 UTF-8 실패 진단·승인 어댑터 | DONE — A안 실물 23쌍 PASS, 기본 읽기 403과 합쳐 426쌍 준비; 선택 프롬프트 오류 0 |
-| [044](TASK_044_select_two_rca_cases.md) | 실행·평가를 PR 20211203/CC 20231207로 제한 | DONE — 278개 준비본 검증·D01 27개/평가 25개 PASS. 후속 문맥 검증은 045 완료 |
-| [045](TASK_045_validate_context_81920.md) | 문맥만 81,920으로 확대·최대 입력 실제 생성 검증 | DONE — GPU all/FP16·전체 Pod 유지. 278/278 수용, 최대 입력 65,073·출력 807토큰/60.57초 |
-| [046](TASK_046_real_rca_integration.md) | 전체 입력 PC/RWR·실제 로그/RAG 통합 검증 후 전체 실행 연결 | BLOCKED — 새 로그44개 후 중단·RAG 미도달; PC는 D08 OOM으로 종료 |
-| [047](TASK_047_resolve_generation_repetition.md) | D07 실제 로그 요약의 반복 생성 해결 | BLOCKED — A안 단일 검증 PASS. 새 로그44개 후 프로세스 종료, 45번째 응답 미저장·원인 미확인 |
-| [048](TASK_048_resolve_pc_memory.md) | D08 원본 PC 메모리 부족 | BLOCKED — WSL OOM; swap 확대안 별도 결정 대기 |
-| [049](TASK_049_local_resource_optimization.md) | 로직 변경 없이 LLM 캐시 설정 | DONE — 서버/요청 활성화·SDK 17개 PASS. PC/재개 로직 미변경, 실제 가속률 미측정 |
-| [050](TASK_050_oracle30_matmcd_run.md) | 정답 포함 30 Pod 한 사례 PC→MATMCD→RWR 개발 실험 | DONE — 설명930·제약930·그래프/평가 완료. Pod 순위 PC4위/MATMCD5위 |
-| [051](TASK_051_rag_format_continuation.md) | RAG 응답 경계 보정·완료 단계 연결 | DONE — 본문 보존·부모 해시 검증, 후속 MATMCD 완주 |
-| [052](TASK_052_domain_generation_repetition.md) | 설명 반복 실패 진단·승인된 presence1.5 적용 | DONE — 진단3개 및 새 설명930개 정상 종료, 제약presence0 유지 |
-| [053](TASK_053_oracle30_result_report.md) | 완료 결과와 논문 차이 상세 분석 보고서 | DONE — 근거 전달·후보 경로·프롬프트·그래프/순위 분석, 원인 가설과 사실 구분 |
-| [054](TASK_054_professor_report_plan.md) | 교수님 연구 현황 보고서 구조 기획 | DONE — E:/연구에 기획서 작성·출처 검증. 12개 장·조건 관리·시험 상세·환경 이전·후속 연구 설계 |
-| [055](TASK_055_professor_meeting_html.md) | 교수님 연구 현황 미팅 HTML 초안 | DONE — E:/연구에 단일 HTML 작성. 12개 장·탐색·모바일·인쇄·출처 링크 검증 완료 |
-| [054](TASK_054_github_setup_update.md) | 현재 로컬 RCA 구성과 결과 기록 GitHub 업데이트 | DONE — 구성 커밋3fe751c push 및 원격 일치 확인, 대용량 자산 제외 |
-| [056](TASK_056_author_question_inventory.md) | RCA 미확정 조건·공개 코드 의문점 저자 문의 목록 | DONE —23개 질문·현재 선택·우선순위·자료 요청 및 근거 검증, 발송은018 TODO |
-| [057](TASK_057_professor_meeting_restructure.md) | 전문가 관점 리뷰 기반 미팅 자료 전면 재기획 | DONE — 전문가 관점 독립/재리뷰 반영. 기획서·7화면 HTML·부록 4개 전면 개편 및 화면·인쇄 검증 |
-| [058](TASK_058_restore_user_report_structure.md) | 사용자 지정 12개 항목 순서로 기획서 재작성 | DONE — 기획서 v3 작성·출처 검증. HTML 무변경, 사용자 검토 전 |
-| [059](TASK_059_meeting_html_from_v3_plan.md) | v3 기획서·첨부 디자인 지침 기반 HTML 초안 | DONE — 12개 장 유지, 실제 문안·도식·표 및 화면/인쇄 검증 |
-| [060](TASK_060_narrative_meeting_html.md) | 서술형 스크롤 미팅 자료·Geist 참고 테마 | DONE — 문단 중심 집필, 밝은 테마·연속 인쇄·화면 검증 |
-| [061](TASK_061_detailed_meeting_wiki.md) | 연구 현황 상세 위키형 Markdown 원고 | DONE — 설명·조건·결과·원인 분석 상세 집필, 근거 검증. HTML 무변경 |
-| [062](TASK_062_revise_meeting_wiki_scope.md) | 미팅 원고 범위·설명 수준 조정 | DONE — 사용자 지정 삭제·축약, RCA 기초 설명 보강, 수치·링크 검증 |
-| [063](TASK_063_wiki_meeting_html.md) | 최신 원고 기반 스크롤형 Wiki HTML | DONE — 원고 보존, 목차·반응형·본문 일치·화면 검증 |
-| [064](TASK_064_meeting_visuals.md) | 미팅 설명 도식·실측 결과 그래프 | DONE — 5개 자료 삽입, 본문·표 보존 및 화면 검증 |
-| [065](TASK_065_meeting_v2_research_framing.md) | 연구 질문·상태 조건화 중심 미팅 v2 | DONE — 신규 버전, 논문 대조·수식·도식·화면 검증 |
-| [066](TASK_066_presentation_v3_redesign.md) | HTML 발표자료 v3 전면 리디자인 | DONE — 28장·16:9, 디자인 리셋·내용 축약·수치 보존·전체 화면 검증 |
-| [067](TASK_067_content_review_v4.md) | 기술 용어 유지·Wiki 내용 원고 v4 | DONE — Markdown 작성, 사용자 내용 검토 대기. HTML 미진행 |
+| [011](TASK_011_summary_output_directory.md)~[015](TASK_015_install_openai_embeddings.md) | 요약 경로, Chroma·lxml·embedding 어댑터 설치 | DONE |
+| [017](TASK_017_scope_rca_only.md) | RCA 범위 전환 | DONE |
+| [018](TASK_018_author_clarifications.md) | 저자 문의 | 진행 — 발송 여부 확인 필요 |
+| [019](TASK_019_provisional_rca_preprocessing_plan.md)·[020](TASK_020_apply_provisional_rca_preprocessing.md) | 임시 전처리 설계·적용 (저자 동일성 UNCONFIRMED) | DONE |
+| [021](TASK_021_install_system_graphviz.md) | Graphviz B안 설치 | DONE |
+| [022](TASK_022_graphviz_author_version.md) | Graphviz 저자 버전 | 보류 |
+| [023](TASK_023_local_qwen_thinking_setup.md) | Qwen3.5-4B Q5_K_M 로컬 환경 | DONE |
+| [024](TASK_024_local_rca_integration.md) | 전체 후보 로컬 RCA 연결 | 보류 — 연결 코드는 30 Pod 실행에서 사용 |
+| [025](TASK_025_original_api_validation.md) | 원본 API 검증 | 보류 |
+| [026](TASK_026_local_thinking_output_budget.md)·[029](TASK_029_local_nonthinking_verification.md) | thinking 실패 분석, non-thinking 전환 | DONE |
+| [027](TASK_027_wsl_system_drift.md) | WSL 시스템 변화 기록 | DONE |
+| [028](TASK_028_local_re_response_format.md) | RE 응답 형식 보정 | DONE |
+| [030](TASK_030_local_bge_m3_embedding.md) | BGE-M3 로컬 임베딩 | DONE |
+| [031](TASK_031_rca_readiness_audit.md) | 실행 준비 점검 (당시 NOT_READY) | DONE — 이력 |
+| [032](TASK_032_connect_provisional_rca_inputs.md)~[034](TASK_034_official_scenario_evidence.md) | 입력 연결, 지표 함수, 공식 시나리오 조사 | DONE |
+| [035](TASK_035_missing_log_policy.md)~[038](TASK_038_d01_public_case_research.md) | D01 로그 부재 정책, D02 대용량 로그 읽기 | DONE |
+| [039](TASK_039_select_three_rca_cases.md) | 세 사례 선택 | 대체 — TASK_044 |
+| [040](TASK_040_d03_original_graph_protocol.md)·[041](TASK_041_d04_original_evaluation_protocol.md) | D03 그래프 규약, D04 평가 규약 | DONE — D03은 TASK_069 B3에서 재결정 |
+| [042](TASK_042_real_prompt_capacity.md)·[045](TASK_045_validate_context_81920.md) | D05 문맥 용량 → 81,920 | DONE |
+| [043](TASK_043_log_encoding_diagnosis.md) | D06 로그 UTF-8 처리 | DONE |
+| [044](TASK_044_select_two_rca_cases.md) | 두 사례 선택 (PR 20211203, CC 20231207) | DONE |
+| [046](TASK_046_real_rca_integration.md)~[048](TASK_048_resolve_pc_memory.md) | 전체 후보 통합, D07 반복 생성, D08 메모리 | 보류 |
+| [049](TASK_049_local_resource_optimization.md) | LLM prompt cache 설정 | DONE |
+| [050](TASK_050_oracle30_matmcd_run.md)~[052](TASK_052_domain_generation_repetition.md) | 정답 포함 30 Pod 실행 | DONE — **조건부 분석 전용, 주 실험 제외** |
+| [053](TASK_053_oracle30_result_report.md) | 30 Pod 결과 분석 보고서 | DONE |
+| [054](TASK_054_github_setup_update.md) | GitHub 업데이트 (`3fe751c`) | DONE |
 
-작업 번호는 이력 식별자로 유지한다. 30 Pod 한 사례 개발 실행·평가는 TASK_050에서 완료했다. 아래 전체 후보 실행·평가·논문 비교는 별도 미완료 범위다.
-
-## 원래 전체 후보 범위의 남은 차단 항목
-
-| ID | 남은 일 | 관련 Task |
-|---|---|---|
-| INPUT-02 | 원본 CSV·전처리 동일성은 저자 후속 확인. 활성 CSV 2개·정확한 로그 278쌍 경로 준비. 실제 전체 로그 읽기의 D06은 승인 방침으로 해결 | 003/018 후속, 043 DONE |
-| ACCESS-01 | 원본 API는 후속 025. 로컬 Qwen/BGE 연결 코드는 구성했고 실제 생성 포함 통합 검증이 남음 | 005/025 후속, 024 현재 준비 |
-| D05 — 준비 로그 해결 | 문맥 81,920/all/FP16에서 278/278 수용, 최대 입력 65,073토큰의 실제 생성 PASS. 후속 RAG/그래프 입력은 024에서 확인하며 호출 직전 용량 검사를 유지 | 042/045 DONE; [구체안](../docs/RCA_CONTEXT_CAPACITY.md) |
-| D06 — 해결 | 엄격한 UTF-8 읽기 실패 23쌍에 승인 A안 적용 완료. 전체 426쌍 준비, 원본·실패/저자 조건 차이 보존 | 043 DONE; [결과·영향](../docs/RCA_LOG_ENCODING.md) |
-| D07 | A안 승인·동일 요청 단일 검증 PASS. 새 로그44개 후 프로세스 종료. RAG 미도달·종료 원인 미확인 | 046/047; [원인·검증](../docs/RCA_GENERATION_REPETITION.md) |
-| D08 | PR 전체 PC 계산 중 WSL RAM/swap 소진·OOM. 전역 swap 확대/재시작 미승인 | 046/048; [자원 대안](../docs/RCA_PC_MEMORY.md) |
-| 실제 통합 검증 | 원본 worker → 로그 요약 → RAG → Agent → PC/RWR/평가 연결 코드 구성. 최대 로그 요약 1건 생성은 완료했지만 RAG·그래프·전체 실행은 미검증. CC 점수는 계속 보류 | 024/007/008; [실행기·호출 규모](../docs/LOCAL_RCA_RUNTIME.md) |
-| CODE-01 (조건부) | 웹 수집 경로를 선택할 때만 검색 응답 키 불일치를 처리. RCA 공통 필수 Blocker가 아님 | 024; 저자 확인 018 |
-
-기존 승인된 전처리·모델·보정·설치 선택과 실행 요청은 반복 승인받지 않는다. 새 과학적 조건 변경이 실제로 필요할 때만 근거·영향을 설명하여 결정받는다. 누락 입력이나 코드 차이를 문서 분류 변경만으로 해결 처리하지 않는다.
-
-2026-09-26 D03은 사용자 선택 A안, D04는 제안한 방침으로 구성했다. [승인 프로필](../configs/rca_protocol.json), [23개 인공 검사](../docs/evidence/rca_approved_protocol_20260926T055338403913Z.json), [저자 일괄 문의 준비](../docs/AUTHOR_QUESTIONS_D03_D04.md). 같은 선택을 다시 묻지 않는다. TASK_024 연결 코드와 당시 426쌍의 입력 준비를 완료했다. TASK_044의 현재 두 사례는 그중 278쌍을 사용한다. D06과 준비 로그의 D05 용량 문제는 해결했다. TASK_045에서 최대 입력 생성 1건을 완료했으며 실제 RAG/그래프를 포함한 전체 통합 검증과 RCA 실행은 남아 있다. CC 정답 미확정은 CC 점수/전체 집계 보류로 처리하며 예측 실행 자체의 승인 대기로 두지 않는다.
-
-## 원래 전체 후보 범위의 준비 및 미완료 이력
-
-- 공식 RCA 소스 37파일, Python 201개와 승인 호환 조합, Graphviz B안, Qwen non-thinking, BGE-M3 CPU FP32/batch 1 준비를 유지한다.
-- 승인된 임시 CSV 2개, 정확한 로그 278쌍, Pod 후보 414개·부재 표시 136개·KPI 2개를 대상으로 한다. 과거 5개/647쌍 및 3개/426쌍 준비는 각 Task의 이력이며 현재 실행 범위가 아니다.
-- D01 후보 유지/부재 명시, D02 순차 전체 읽기, D03 공개 동작 A, D04 잠정 평가/CC 점수 보류는 확정됐다. 같은 선택을 다시 승인받지 않는다.
-- 로컬 실행기·요청/원문 기록·D03/D04 연결 코드를 구성했다. 연결 21개, 호출 보호 17개, 기존 RE 22개 인공/오프라인 검사는 실제 성능 결과가 아니다. [현재 구현과 검증](../docs/LOCAL_RCA_RUNTIME.md).
-- D06 손실 없는 읽기 A안의 이전 실물 23쌍 검증을 포함해 현재 278쌍이 준비됐다. D05는 사용자 승인으로 문맥만 81,920으로 확대했고 입력 수용 및 최대 입력 실제 생성에 성공했다. 새 로그44개 후 실행 중단 원인·재개 준비와 실제 RAG/그래프의 통합 검증이 남았다. 준비 완료 전 TASK_007 실제 실행을 시작하지 않는다.
-- 실제 결과가 생기면 TASK_008/009를 진행한다. CC 정답 미확정은 두 후보 순위 보존과 점수/전체 집계 보류로 처리한다.
-
-저자 문의 TASK_018, 원본 API TASK_025, 저자 Graphviz A안 TASK_022는 별도 후속이다. 원본 CSV/전처리·API·정확 CC 정답을 확보하지 못했다는 사실은 계속 명시하되, 이미 승인된 임시 경로를 다시 승인받는 이유로 사용하지 않는다. 메일은 미발송이다.
-
-최초 조사·실패·설치 수치와 시점별 변경 내용은 각 Task와 근거 문서에 보존한다. 이 INDEX는 현재 상태를 나타내며 이전의 '미연결/미승인' 문구를 현재 상태로 반복하지 않는다. RISK-001~003은 [기록된 조건](../docs/FOLLOW_UP_RISKS.md)이 실제 발생할 때만 재검토한다.
-
-## 이전 검사 이력
-
-아래는 TASK_045 이전 설정·범위에서의 기록이며 현재 상태는 위 표를 따른다.
-
-2026-09-26 [최종 준비 무결성 확인](../docs/evidence/rca_preparation_final_20260926T073506481692Z.json): 공식 37파일·426개 프롬프트/승인 이력·스크립트 54개 구문·JSON 80개·문서 링크 478개 PASS. 현재 16,384/all과 실행 보류 유지, 서버 종료·실제 실행 폴더 없음 확인. 준비 자료의 무결성 검사이며 전체 실험 준비 완료 판정은 아니다.
-
-2026-09-26 재부팅 후 [D05 재검증·대안 비교](../docs/RCA_REBOOT_RETEST.md) 완료: 현재 서버 정상 구동, 426개 토큰/판정 동일·207개 초과. 설정 변경·RCA 실행 없이 4개 후속 후보를 정리했다. TASK_042의 차단 상태는 유지한다.
+삭제(2026-10-18, `2f0d66a`에 보존): 미팅·발표 자료 Task 054(교수님 보고 기획)·055·057~068, 저자 문의 목록 작업 056(TASK_018에 통합), 10월 2일 브리핑, 시점 스냅샷 문서 4개(`TASK_STATUS_20260926`, `RCA_READINESS`, `RCA_REBOOT_RETEST`, `LOCAL_COMPLETION_PROPOSAL`). 016은 이전 범위 정리에서 삭제했으며 번호를 재사용하지 않는다.

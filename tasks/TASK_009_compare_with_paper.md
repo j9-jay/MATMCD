@@ -18,4 +18,4 @@
 비교 미실행. docs/REPRODUCTION_SPEC.md의 수치는 논문 비교 대상이며 로컬 결과가 아니다.
 
 ## 상태
-TODO
+TODO — [TASK_069](TASK_069_blind_baseline.md) B7에서 원 논문 보고값과 로컬 재현값을 구분해 차이 중심으로 비교한다.

@@ -1,6 +1,6 @@
 # 로컬 RCA 실행기 연결 현황
 
-**현재 실물 상태(2026-09-26 21:30 KST 확인):** D07 A안 단일 검증은 PASS. 새 로그 프로필에서 PR 요약44개 완료 후 프로세스 종료를 확인했다. 45번째 요청은 응답 미저장, 종료 원인 UNKNOWN이며 현재 실행 중이 아니다. 기존148개와 별도 보존한다. PC는 D08 OOM으로 중단돼 그래프/순위가 없고 전체 RCA는 미완료다. [전체 Task 대조](TASK_STATUS_20260926.md).
+**2026-10-18 재계획:** 전체 후보 실행은 보류다([작업 현황](../tasks/INDEX.md)). 마지막 상태(2026-09-26): 새 로그 프로필 PR 요약 44개 완료 후 프로세스 종료(원인 UNKNOWN), PC는 D08 OOM으로 중단. 이 실행기의 연결 코드는 30 Pod 실행에 사용했다.
 
 2026-09-26. 실행기 [run_local_rca.py](../scripts/run_local_rca.py)와 [프로필](../configs/local_rca_execution.json)을 구성했다. **현재 상태는 BLOCKED_PENDING_FULL_INTEGRATION이며 실제 실행은 차단된다.** 연결 코드 구성·인공 검사와 실제 end-to-end 실행 성공을 구분한다.
 
