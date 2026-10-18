@@ -1,6 +1,6 @@
 # TASK_007 - 원본 RCA 실험 실행
 
-**2026-10-18 상태: 대체.** 현재 목표는 [TASK_069](TASK_069_blind_baseline.md)의 정답 미사용 기준선이다. 전체 후보 2사례 실행은 보류다. 마지막 상태(2026-09-26): 새 로그 프로필 PR 요약 44개 완료 후 프로세스 종료(원인 UNKNOWN), PC는 D08 OOM으로 중단.
+**2026-10-18 상태: 대체.** 현재 목표는 [TASK_070](TASK_070_state_aware_retrieval_experiments.md)이다. LEMMA 정답 미사용 기준선(TASK_069)은 종료했다. 전체 후보 2사례 실행은 보류다. 마지막 상태(2026-09-26): 새 로그 프로필 PR 요약 44개 완료 후 프로세스 종료(원인 UNKNOWN), PC는 D08 OOM으로 중단.
 
 **현재 실행안:** 고정 WSL Python에서 `python -B scripts/run_local_rca.py --run`. 현재 BLOCKED_PENDING_FULL_INTEGRATION이므로 실행하지 않는다. 입력은 두 사례의 기존 CSV/278쌍 로그와 Qwen/BGE이며 출력은 MATMCD_DATA/runs/matmcd_local_rca/<실행시각>/<사례>다. 최대 필요 문맥 73,266을 현재 81,920/all에서 수용했고 최대 입력 실제 생성도 성공했다.
 

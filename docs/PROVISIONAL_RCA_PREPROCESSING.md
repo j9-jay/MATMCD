@@ -2,7 +2,7 @@
 
 이 문서는 저자 답변 전 로컬 준비를 진행하기 위한 구체안이다. 저자의 실제 전처리 복원본이라는 주장이 아니다. TASK_019에서는 미적용 제안서를 작성했고, 2026-09-23 사용자가 후속 TASK_020의 구현·CSV 생성을 승인했다. 공식 코드 변경·RCA 실험·API·메일 발송은 승인 범위에 포함하지 않는다.
 
-선택값은 [승인 설정](../configs/rca_preprocessing_proposal.json)에 모았다. 기존 파일명 proposal은 이력 때문에 유지하며 상태는 APPROVED_FOR_PREPROCESSING이다. 활성 입력 설정 inputs.json은 비어 있는 기존 상태를 유지한다. 원본 동일성 확인은 [TASK_018](../tasks/TASK_018_author_clarifications.md), 구현·입력 생성 결과는 [TASK_020](../tasks/TASK_020_apply_provisional_rca_preprocessing.md)에서 관리한다. 아래의 후보·제안 표현은 승인 당시 근거와 로컬 가정의 구분을 보존한 것이다.
+선택값은 [승인 설정](../configs/rca_preprocessing_proposal.json)에 모았다. 기존 파일명 proposal은 이력 때문에 유지하며 상태는 APPROVED_FOR_PREPROCESSING이다. 활성 입력 설정 inputs.json은 비어 있는 기존 상태를 유지한다. 원본 동일성 확인은 TASK_018, 구현·입력 생성 결과는 [TASK_020](../tasks/TASK_020_apply_provisional_rca_preprocessing.md)에서 관리한다. 아래의 후보·제안 표현은 승인 당시 근거와 로컬 가정의 구분을 보존한 것이다.
 
 2026-09-24: 다섯 CSV 생성·검증을 완료했다. 실제 유지 pod·상수 채널·로그 누락·시간 정렬 손실과 확인한 수치 차이는 [적용 결과](PROVISIONAL_RCA_PREPROCESSING_RESULT.md)에 있다. 아래 TASK_019 당시 사전 관찰과 구분한다.
 

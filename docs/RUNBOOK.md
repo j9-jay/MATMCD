@@ -1,6 +1,6 @@
 # RCA 준비와 후속 실행
 
-**2026-10-18 재계획:** 현재 목표는 정답 정보를 사용하지 않는 MATMCD 기준선([TASK_069](../tasks/TASK_069_blind_baseline.md))이다. 전체 후보 실행은 보류다. 아래 전체 후보 관련 절차와 상태는 이력이다. 전체 후보 마지막 상태(2026-09-26): 새 로그 프로필 PR 요약 44개 완료 후 프로세스 종료(원인 UNKNOWN), PC는 D08 OOM으로 중단.
+**2026-10-18 재계획:** 현재 목표는 [TASK_070](../tasks/TASK_070_state_aware_retrieval_experiments.md)이다. 이 문서는 LEMMA-RCA 로컬 실행 절차의 이력이며 전체 후보 실행은 보류다. 전체 후보 마지막 상태(2026-09-26): 새 로그 프로필 PR 요약 44개 완료 후 프로세스 종료(원인 UNKNOWN), PC는 D08 OOM으로 중단.
 
 **TASK_045 최신 상태:** 문맥만 81,920으로 확대한 검증 완료. GPU all/FP16·전체 Pod 유지, 278개 입력 수용 및 최대 입력 실제 생성 1건 PASS. 전체 실행은 미수행이며 현재 BLOCKED_PENDING_FULL_INTEGRATION이다. 이전 16,384 보류·3사례 검증 결과는 각 Task의 이력으로 보존한다. [검증 상세](../tasks/TASK_045_validate_context_81920.md).
 

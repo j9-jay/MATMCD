@@ -74,4 +74,4 @@ manifest는 출처 revision·원본 ZIP 해시, 적용 설정, 런타임, 정렬
 
 RCA 전체 실행 준비는 아직 미완료다. 원본 실행 입력 설정 configs/inputs.json은 자동 변경하지 않았으며, 저자 원본 입력·API·검색 파서·로그 통합·실제 순위의 평가 연결 등은 [남은 항목](ORIGINAL_LOCAL_ISSUES.md)에서 관리한다. Graphviz 설치는 후속 TASK_021 B안에서 완료했고 저자 버전 확인은 TASK_022 A안 TODO로 분리했다. 실제 RCA·평가·표 4 비교 TASK_007/008/009와 저자 문의 TASK_018은 TODO로 유지한다.
 
-관련 문서: [승인 명세](PROVISIONAL_RCA_PREPROCESSING.md), [적용 설정](../configs/rca_preprocessing_proposal.json), [TASK_020](../tasks/TASK_020_apply_provisional_rca_preprocessing.md), [저자 문의 초안](../tasks/TASK_018_author_clarifications.md).
+관련 문서: [승인 명세](PROVISIONAL_RCA_PREPROCESSING.md), [적용 설정](../configs/rca_preprocessing_proposal.json), [TASK_020](../tasks/TASK_020_apply_provisional_rca_preprocessing.md), 저자 문의 초안.

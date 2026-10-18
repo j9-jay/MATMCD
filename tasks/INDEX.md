@@ -4,57 +4,45 @@
 
 ## 현재 목표
 
-**현재 PC 환경에서 정답 정보를 사용하지 않는 MATMCD 기준선을 만든다.** 작업 상세는 [TASK_069](TASK_069_blind_baseline.md)를 따른다.
+**추론 상태 기반 근거 검색(사용자 방법)을 NLP 기여 실험으로 검증한다.** 작업 상세는 [TASK_070](TASK_070_state_aware_retrieval_experiments.md), 방향은 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)을 따른다.
 
-- 주 실험에서 정답 포함(oracle) 후보는 사용하지 않는다. 기존 30 Pod 결과는 "정답이 후보에 있을 때의 조건부 분석"으로만 쓴다.
-- 원 논문 표 4 수치 일치는 목표가 아니다. 공식 구현에 충실하게 실행하고 원 논문과 다른 조건을 모두 명시한다.
-- 연구의 최종 방향은 NLP/RAG(ACL·EMNLP·NAACL·EACL·COLING)다. RCA는 검증 과제로 사용하며 엔지니어링 확장은 하지 않는다. 장기 계획은 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)에 있다.
+- 목표 학회는 ACL·EMNLP·NAACL·EACL·COLING이다. 과제는 근거 검색·귀속이며, RCA·인과 그래프 정확도는 하류 지표다. 엔지니어링 확장은 하지 않는다.
+- 카테고리 1: 장애 분석 — RCAEval RE2-OB(주), RE2-SS(보조). 카테고리 2: 인과 발견 — MATMCD 벤치마크 5종.
+- 모든 방법은 공통 출력부(쌍별 Yes/No → 제약 PC → 그래프 → RWR)를 공유하고 근거 수집만 다르다. 핵심 비교 대상은 같은 corpus의 flat RAG이며 MATMCD는 외부 참고 기준선이다.
+- LEMMA-RCA 기준선(TASK_069)은 종료했다. 기존 정답 포함 30 Pod 결과는 조건부 분석과 동기 사례로만 쓴다.
 
-## 활성 TODO — TASK_069
+## 활성 TODO — TASK_070
 
 | ID | 작업 | 상태 |
 |---|---|---|
-| B0 | 기준선 명세서와 원 논문 대비 차이 표 작성 | TODO |
-| B1 | 정답을 사용하지 않는 후보 선정 규칙 결정·고정 | **사용자 결정 필요** |
-| B2 | 사례 범위 결정 (PR 20211203, CC 20231207 순위 기록·점수 보류) | **사용자 결정 필요** |
-| B3 | D03 처리 방식(공개 코드 그대로 / 교정판 / 둘 다)과 MATMCD-RE 포함 여부 결정 | **사용자 결정 필요** |
-| B4 | RWR 반복 횟수·seed 규칙 사전 고정 | TODO |
-| B5 | 새 프로필로 PC → 로그 요약/RAG → MATMCD → RWR 실행 | TODO (B1~B4 이후) |
-| B6 | 평가: end-to-end, 후보 recall, 기존 30 Pod 조건부 분석 | TODO |
-| B7 | 기준선 결과 보고서 | TODO |
+| D-1~D-9 | 메트릭 묶기, SS KPI, 장애 구간, 동적 상태, 판단 프롬프트, 사례 분할, MATMCD 로그 변환, 웹 대체 경로, 양방향 Yes 처리 | **사용자 결정 필요** |
+| T1 | RCAEval RE2-OB/SS 다운로드·데이터 감사 | TODO (다운로드는 실행 시 허락) |
+| T2 | 카테고리 2 공식 파일 복원·데이터 확인 | TODO (실행 전 대상 안내) |
+| T3 | 웹 스냅샷 수집·누출 검사 (무료 할당량 내) | TODO |
+| T4 | corpus 구성기 | TODO |
+| T5 | 공통 출력부·지표 연결 | TODO |
+| T6 | 기준선: PC만, 검색 없는 LLM, flat RAG | TODO |
+| T7 | MATMCD 참고 기준선 | TODO |
+| T8 | 사용자 방법·ablation | TODO |
+| T9 | 평가·통계 검정 | TODO |
+| T10 | 결과 보고서 | TODO |
 
 ## 보류 — 현재 목표 범위 밖
 
 | 항목 | 이유 | 관련 |
 |---|---|---|
-| 전체 후보(218/196 Pod) 실행 | PC 메모리 부족(D08)과 LLM 호출 규모. 엔지니어링 확장은 하지 않음 | [TASK_046](TASK_046_real_rca_integration.md), [TASK_048](TASK_048_resolve_pc_memory.md), [D08](../docs/RCA_PC_MEMORY.md) |
-| 전체 후보 로그 요약 중단 원인 | 원인 UNKNOWN. 전체 후보를 재개할 때만 조사 | [TASK_047](TASK_047_resolve_generation_repetition.md) |
-| 웹 검색 경로 | 외부 API·정답 누출 위험. 사용자 결정 전까지 미사용 | [TASK_024](TASK_024_local_rca_integration.md) |
-| 원본 API 검증 | 유료 API 미사용 방침. `gpt-4`·`gpt-3.5-turbo`는 2026-10-23, `gpt-4o-mini-2024-07-18`은 2027-01-14 종료 예정(OpenAI deprecations 페이지, 2026-10-17 확인) | [TASK_025](TASK_025_original_api_validation.md) |
+| LEMMA-RCA 전체 후보(218/196 Pod) 실행 | PC 메모리 부족(D08)과 LLM 호출 규모 | [TASK_046](TASK_046_real_rca_integration.md), [TASK_048](TASK_048_resolve_pc_memory.md), [D08](../docs/RCA_PC_MEMORY.md) |
+| LEMMA 전체 후보 로그 요약 중단 원인 | 원인 UNKNOWN | [TASK_047](TASK_047_resolve_generation_repetition.md) |
+| MATMCD 원본 API 검증 | 유료 API 미사용. `gpt-4`·`gpt-3.5-turbo`는 2026-10-23, `gpt-4o-mini-2024-07-18`은 2027-01-14 종료 예정(OpenAI deprecations 페이지, 2026-10-17 확인) | [TASK_025](TASK_025_original_api_validation.md) |
 | Graphviz 저자 버전 | 순위 입력이 아님 | [TASK_022](TASK_022_graphviz_author_version.md) |
 
-## 계속 진행
+## 저자 문의 — 종료
 
-| 항목 | 상태 | 관련 |
-|---|---|---|
-| 저자 문의 | **발송 여부 사용자 확인 필요.** 최종 문안 5문항, 23개 내부 목록 보존 | [TASK_018](TASK_018_author_clarifications.md) |
+메일은 발송했으나 2026-10-18 기준 답신이 없어 사용자 결정으로 Task를 종료·삭제했다(TASK_018). 답신을 기대하지 않고 진행한다. 미확정 조건 목록은 기준선 차이 표의 근거로 보존한다: [23개 문의 목록](../docs/AUTHOR_QUESTIONS_RCA.md), [최종 메일 본문](../docs/AUTHOR_INQUIRY_RCA_SHORT.md), [D03/D04 문의 자료](../docs/AUTHOR_QUESTIONS_D03_D04.md).
 
-## 백로그 — NLP/RAG 연구 (현재 미착수)
+## 백로그
 
-상세는 [연구 로드맵](../docs/RESEARCH_ROADMAP.md).
-
-| ID | 작업 |
-|---|---|
-| R1 | 연구 질문(RQ1~RQ4)과 주장 확정, 지도교수 합의 |
-| R2 | 벤치마크 조사·재선정 (LEMMA-RCA, RCAEval, OpenRCA 등) |
-| R3 | 역할 태그·근거 자료(corpus) 설계 |
-| R4 | 평가 설계: 근거 recall/사슬 완결성, 최종 과제 지표, 비용, 통계 검정 |
-| R5 | 정답 근거 주석(gold/silver evidence) 방식 결정 |
-| R6 | NLP 기준선 구현: 검색 없는 LLM, flat RAG, 반복 검색, 질의 분해, 그래프 RAG, 역할 태그만 쓰는 RAG |
-| R7 | 제안 방법 구현(추론 상태 5단계)과 ablation |
-| R8 | 여러 LLM 실험과 오염(contamination) 분석 |
-| R9 | 오류 분석·정성 사례 (flat RAG의 MongoDB 근거 누락 사례 포함) |
-| R10 | ARR 형식 논문 작성 (Limitations, Responsible NLP 체크리스트) |
+상세는 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)의 R1~R13. 주요 항목: 연구 질문 확정과 지도교수 합의(R1), 정답 근거 label(R5), 여러 LLM·오염 분석(R8), 일반 QA 실험(R11, MuSiQue·HotpotQA), OpenRCA(R12).
 
 ## 완료·이력 Task
 
@@ -66,13 +54,12 @@
 | [004](TASK_004_environment_setup.md) | 공통 실행 환경 | DONE |
 | [005](TASK_005_model_setup.md) | 원본 API 모델 접근 | 보류 — 유료 API 미사용 |
 | [006](TASK_006_paths_and_preflight.md) | 외부 경로 연결·사전 점검 | DONE |
-| [007](TASK_007_run_original_experiments.md) | 전체 후보 2사례 실행 | 대체 — 현재 목표는 TASK_069 |
-| [008](TASK_008_evaluate_results.md) | 실제 순위 평가 | TODO — TASK_069 B6에서 수행 |
-| [009](TASK_009_compare_with_paper.md) | 논문 표 4 비교 | TODO — TASK_069 B7에서 차이 중심으로 수행 |
+| [007](TASK_007_run_original_experiments.md) | 전체 후보 2사례 실행 | 대체 — 현재 목표는 TASK_070 |
+| [008](TASK_008_evaluate_results.md) | 실제 순위 평가 | 이력 — LEMMA 평가는 TASK_069 종료로 미수행. 새 평가는 TASK_070 T9 |
+| [009](TASK_009_compare_with_paper.md) | 논문 표 4 비교 | 이력 — 표 4 비교는 수행하지 않음(TASK_069 종료). MATMCD는 TASK_070에서 참고 기준선 |
 | [010](TASK_010_supplementary_artifacts.md) | 공식 전처리·비교 자료 조사 | DONE |
 | [011](TASK_011_summary_output_directory.md)~[015](TASK_015_install_openai_embeddings.md) | 요약 경로, Chroma·lxml·embedding 어댑터 설치 | DONE |
 | [017](TASK_017_scope_rca_only.md) | RCA 범위 전환 | DONE |
-| [018](TASK_018_author_clarifications.md) | 저자 문의 | 진행 — 발송 여부 확인 필요 |
 | [019](TASK_019_provisional_rca_preprocessing_plan.md)·[020](TASK_020_apply_provisional_rca_preprocessing.md) | 임시 전처리 설계·적용 (저자 동일성 UNCONFIRMED) | DONE |
 | [021](TASK_021_install_system_graphviz.md) | Graphviz B안 설치 | DONE |
 | [022](TASK_022_graphviz_author_version.md) | Graphviz 저자 버전 | 보류 |
@@ -87,7 +74,7 @@
 | [032](TASK_032_connect_provisional_rca_inputs.md)~[034](TASK_034_official_scenario_evidence.md) | 입력 연결, 지표 함수, 공식 시나리오 조사 | DONE |
 | [035](TASK_035_missing_log_policy.md)~[038](TASK_038_d01_public_case_research.md) | D01 로그 부재 정책, D02 대용량 로그 읽기 | DONE |
 | [039](TASK_039_select_three_rca_cases.md) | 세 사례 선택 | 대체 — TASK_044 |
-| [040](TASK_040_d03_original_graph_protocol.md)·[041](TASK_041_d04_original_evaluation_protocol.md) | D03 그래프 규약, D04 평가 규약 | DONE — D03은 TASK_069 B3에서 재결정 |
+| [040](TASK_040_d03_original_graph_protocol.md)·[041](TASK_041_d04_original_evaluation_protocol.md) | D03 그래프 규약, D04 평가 규약 | DONE — 30 Pod 실행에 적용. TASK_070에서는 공통 출력부를 쓰므로 해당 없음 |
 | [042](TASK_042_real_prompt_capacity.md)·[045](TASK_045_validate_context_81920.md) | D05 문맥 용량 → 81,920 | DONE |
 | [043](TASK_043_log_encoding_diagnosis.md) | D06 로그 UTF-8 처리 | DONE |
 | [044](TASK_044_select_two_rca_cases.md) | 두 사례 선택 (PR 20211203, CC 20231207) | DONE |
@@ -96,5 +83,6 @@
 | [050](TASK_050_oracle30_matmcd_run.md)~[052](TASK_052_domain_generation_repetition.md) | 정답 포함 30 Pod 실행 | DONE — **조건부 분석 전용, 주 실험 제외** |
 | [053](TASK_053_oracle30_result_report.md) | 30 Pod 결과 분석 보고서 | DONE |
 | [054](TASK_054_github_setup_update.md) | GitHub 업데이트 (`3fe751c`) | DONE |
+| [069](TASK_069_blind_baseline.md) | LEMMA-RCA 정답 미사용 기준선 | 종료 — 후보 recall 0/5, 점수 포화 확인. TASK_070으로 대체 |
 
-삭제(2026-10-18, `2f0d66a`에 보존): 미팅·발표 자료 Task 054(교수님 보고 기획)·055·057~068, 저자 문의 목록 작업 056(TASK_018에 통합), 10월 2일 브리핑, 시점 스냅샷 문서 4개(`TASK_STATUS_20260926`, `RCA_READINESS`, `RCA_REBOOT_RETEST`, `LOCAL_COMPLETION_PROPOSAL`). 016은 이전 범위 정리에서 삭제했으며 번호를 재사용하지 않는다.
+삭제(2026-10-18, `2f0d66a`에 보존): 미팅·발표 자료 Task 054(교수님 보고 기획)·055·057~068, 저자 문의 목록 작업 056, 저자 문의 018(메일 발송 후 답신 없음, 2026-10-18 종료), 10월 2일 브리핑, 시점 스냅샷 문서 4개(`TASK_STATUS_20260926`, `RCA_READINESS`, `RCA_REBOOT_RETEST`, `LOCAL_COMPLETION_PROPOSAL`). 016은 이전 범위 정리에서 삭제했으며 번호를 재사용하지 않는다.
