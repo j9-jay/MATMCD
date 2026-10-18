@@ -16,8 +16,8 @@
 | ID | 작업 | 상태 |
 |---|---|---|
 | D-1~D-11 | 메트릭 묶기, SS KPI, 장애 구간, 동적 상태, 판단 프롬프트, 사례 분할, MATMCD 로그 변환, 웹 대체 경로, 양방향 Yes 처리, 샘플링, 반복 규칙. 권장안은 [실행 계획](../docs/EXPERIMENT_PLAN_TASK070.md) | **사용자 결정 필요** |
-| T1 | RCAEval RE2-OB/SS 다운로드·데이터 감사 | TODO (다운로드는 실행 시 허락) |
-| T2 | 카테고리 2 공식 파일 복원·데이터 확인 | TODO (실행 전 대상 안내) |
+| T1 | RCAEval RE2-OB/SS 다운로드·데이터 감사 | DONE — md5 일치, 각 90사례, KPI 확정(D-2) |
+| T2 | 카테고리 2 공식 파일 복원·데이터 준비 | DONE — 코드 3개 복원, 데이터 5종 준비(Takayama CSV, Asia·Child seed 42) |
 | T3 | 웹 스냅샷 수집·누출 검사 (무료 할당량 내) | TODO |
 | T4 | corpus 구성기 | TODO |
 | T5 | 공통 출력부·지표 연결 | TODO |

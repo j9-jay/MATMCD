@@ -79,8 +79,20 @@
 
 ## 작업 항목
 
-- [ ] T1 RCAEval RE2-OB/SS 다운로드와 데이터 감사. 다운로드(OB 1.2GB, SS 약 250MB)는 실행 시점에 허락받음
-- [ ] T2 카테고리 2 공식 파일 복원(`GTdatasets_experiment.py`, `Utils/metrics.py`, `data/SampleFromBIF.py`, 원본 ZIP)과 데이터 존재 확인. `configs/scope.json` 변경 포함, 실행 전 대상 안내
+- [x] T1 RCAEval RE2-OB/SS 다운로드와 데이터 감사 — 2026-10-18 Zenodo record 14590730(CC BY 4.0)에서 `RE2-OB.zip`(1,191,025,569 B, md5 `b9e23f88…de4`)과 `RE2-SS.zip`(245,629,018 B, md5 `bd747a8f…225`)을 받아 `MATMCD_DATA/raw_downloads/zenodo_rcaeval_14590730/`에 두었다. 둘 다 Zenodo md5와 일치. 압축은 풀지 않고 zip 안에서 읽기 전용으로 감사했다.
+  - 사례: 각 90개(`{서비스}_{장애}/{반복}`). 사례 파일은 `simple_metrics.csv`, `metrics.csv`, `logs.csv`, `logts.csv`, `inject_time.txt`, `cluster_info.json`, `pod-node-*.csv`. OB는 `traces.csv`, `tracets_lat.csv`, `tracets_err.csv`가 더 있다.
+  - OB zip에는 사례가 아닌 `RE2-OB/checkoutservice_cpu/multi-source-data`(중첩 zip 포함)와 `.DS_Store`가 있다. 평가 사례에서 제외한다.
+  - 길이: SS는 모두 1,441행. OB는 88사례 1,441행, 1사례 1,186행, 1사례 1,262행.
+  - 컨테이너: OB는 서비스 11개 + redis, 그리고 workload·error만 있는 `frontend-external`. SS는 15개(DB, rabbitmq 포함).
+  - KPI: OB `frontend_latency-90`, SS `front-end_latency-90`이 90/90 사례에 존재. D-2 확정.
+  - 로그: OB `logs.csv`에는 `cluster_id`, `log_template` 열이 있다. SS에는 템플릿 열이 없고 템플릿별 개수 시계열 `logts.csv`만 있다. D-7은 이 차이를 반영해 결정한다.
+  - **RCAEval 공식 평가 코드(`main.py`)는 원인 서비스(정답)의 latency가 있으면 그것을 SLI로 고르고, `inject_time` 기준으로 정상·이상 구간을 자른다.** 우리는 정답 미사용 원칙에 따라 진입 서비스 지연을 KPI로, 사례 전체 구간을 쓴다(D-2, D-3). 따라서 RCAEval 논문의 기존 기준선 수치와 직접 비교할 수 없다.
+- [x] T2 카테고리 2 공식 파일 복원 — 2026-10-18 원본 ZIP(sha256 `3cf8a201…2647`)에서 3개를 바이트 동일하게 복원하고 `configs/scope.json`을 갱신했다(공식 파일 40개).
+  - **데이터는 공식 저장소에 없다.** `Utils/data.py`는 `./data/{name}_data.csv`와 `{name}_GTmatrix.csv`를 읽지만 ZIP에 해당 파일이 없다. Asia·Child는 `SampleFromBIF.py`가 BIF에서 seed 없이 1,000개를 생성하는 구조이며 BIF 파일도 없다.
+  - 후보 출처(미다운로드): AutoMPG·DWDClimate·Sachs는 MATMCD가 따랐다고 밝힌 Takayama et al.의 저장소 `mas-takayama/LLM-and-SCD`(`benchmark datasets/`, `ground truth matrix/`, 라이선스 표기 없음). Asia·Child BIF는 로컬 Efficient-CDLMs 저장소(`raw_downloads/github_superkaiba_causal_llm_bfs/data/`)에 있다.
+  - **해결(2026-10-18 사용자 승인):** Takayama 저장소(커밋 `5aaeaea89e71e2cff443289e473c06d2f79172c5`)의 CSV를 출처 명시 조건으로 받았다. Asia·Child는 로컬 BIF에서 공식 생성 절차에 seed 42를 넣어 1,000개를 만들었고 모든 방법이 같은 표본을 쓴다. [준비 스크립트](../scripts/prepare_causal_benchmarks.py), 출력 `MATMCD_DATA/datasets/causal_benchmarks_task070_v1`(manifest에 출처·해시·pgmpy 1.0.0 기록).
+  - 확인: AutoMPG 392행(논문 392), Sachs 7,466행(논문 7,466), **DWD 349행(논문 350)**. 차이는 기록만 하고 고치지 않는다. Asia 노드 8·간선 8, Child 노드 20·간선 25. seed 42 표본은 두 번 생성해 동일함을 확인했다.
+  - 37개 고정 검사를 쓰는 과거 감사 스크립트 4개는 재실행 시 실패한다(`configs/scope.json` 기록).
 - [ ] T3 웹 스냅샷 수집과 누출 검사 (무료 할당량 내)
 - [ ] T4 corpus 구성기 (근거 단위, 역할·상태 태그)
 - [ ] T5 공통 출력부와 지표 연결 (제약 PC, RWR, AC@k·MAP·MRR, 그래프 지표)
