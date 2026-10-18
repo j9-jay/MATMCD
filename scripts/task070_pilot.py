@@ -102,7 +102,7 @@ def main():
     out.mkdir(parents=True)
     cases = rc.cases("dev")[args.start: args.start + args.cases]
     retriever = None
-    if "flat" in args.methods or any(m in STATE_VARIANTS for m in args.methods):
+    if "flat" in args.methods or "matmcd" in args.methods or any(m in STATE_VARIANTS for m in args.methods):
         from local_embedding import DenseBGE
         retriever = FlatRetriever(DenseBGE())
     proc, log = start_server(out / "server.log")
@@ -128,6 +128,21 @@ def main():
             for case in cases:
                 _, units = write_case_corpus(case)
                 values, labels, _ = rc.node_table(case["path"])
+                if method == "matmcd":
+                    import task070_matmcd as tmm
+                    mcase = mdir / case["id"]
+                    mcase.mkdir()
+                    rec = tmm.run_case(case, mcase, retriever.encoder, oh.rwr_rankings)
+                    answer = rc.evaluation_label(case["path"])["root_cause_service"]
+                    row = {"case": case["id"], "status": rec["status"], "seconds": rec["seconds"],
+                           "generation_calls": rec["generation_calls"], "error": rec.get("error")}
+                    if rec["status"] == "COMPLETE":
+                        per_rep = [tm.rca_case_metrics_tie_aware(labels, r["counts"], answer, labels[-1])
+                                   for r in rec["ranking"]["runs"]]
+                        row.update({k: float(np.mean([p[k] for p in per_rep])) for k in ("AC@1", "AC@3", "AC@5", "Avg@5", "RR")})
+                    results.append(row)
+                    print(method, row, flush=True)
+                    continue
                 if method == "pc_only":
                     answers, records, judge_seconds = None, [], 0.0
                     constraints, counts = None, {}
