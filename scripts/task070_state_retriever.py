@@ -30,7 +30,13 @@ STATES = {
     "SYMPTOM": "the user-facing symptom (frontend latency KPI)",
     "INDIRECT_PATH": "services that connect the two variables through calls",
 }
-DEFAULT_ORDER = ["STRUCTURE", "CAUSE_BEHAVIOR", "EFFECT_BEHAVIOR", "TEMPORAL_ORDER", "SYMPTOM"]
+RETRIEVER_VERSION = "state_v2"
+# v1 (dev 10 cases): default STRUCTURE, CAUSE_BEHAVIOR, EFFECT_BEHAVIOR, TEMPORAL_ORDER; the planner
+# chose nearly the same four states for every pair, and half of the budget went to "is it abnormal"
+# evidence that shows co-occurrence but not direction. v2 puts direction evidence first.
+DEFAULT_ORDER = ["STRUCTURE", "TEMPORAL_ORDER", "CAUSE_BEHAVIOR"]
+STATE_BUDGET = {"STRUCTURE": 2, "TEMPORAL_ORDER": 2, "CAUSE_BEHAVIOR": 2, "EFFECT_BEHAVIOR": 1,
+                "SYMPTOM": 1, "INDIRECT_PATH": 2}
 FALLBACK = {"STRUCTURE": "INDIRECT_PATH"}
 KPI_LABEL = "KPI_frontend_latency_p90"
 
@@ -50,16 +56,30 @@ def _service(label):
     return "frontend" if label == KPI_LABEL else label
 
 
+def _first_deviation(units, label):
+    svc = _service(label)
+    kinds = ("kpi",) if label == KPI_LABEL else ("metric",)
+    minutes = [min(u["minutes"]) for u in units if svc in u["services"] and u["kind"] in kinds and u["minutes"]]
+    return min(minutes) if minutes else None
+
+
+def _calls(units, caller, callee):
+    for u in units:
+        if u["kind"] == "call_graph" and u["text"].startswith(f"Observed calls from {caller} "):
+            return f" {callee} via" in " " + u["text"].split(": ", 1)[-1].replace("; ", "  ")
+    return False
+
+
 def overview(units, cause, effect):
+    """Label-free signals the planner can use to choose question-specific states."""
+    c, e = _service(cause), _service(effect)
     lines = []
     for label in (cause, effect):
-        svc = _service(label)
-        own = [u for u in units if svc in u["services"] and u["role"] == "observation"]
-        flagged = [u for u in own if u["minutes"] and u["kind"] in ("metric", "kpi")]
-        lines.append(f"- {label}: {len(own)} observation units, {len(flagged)} metric series with deviations")
-    calls = [u for u in units if u["kind"] == "call_graph"
-             and _service(cause) in u["services"] and _service(effect) in u["services"]]
-    lines.append(f"- call-graph units mentioning both: {len(calls)}")
+        first = _first_deviation(units, label)
+        lines.append(f"- {label}: first metric deviation at minute {first}" if first is not None
+                     else f"- {label}: no metric deviation flagged")
+    lines.append(f"- {e} calls {c}: {'yes' if _calls(units, e, c) else 'no'}; "
+                 f"{c} calls {e}: {'yes' if _calls(units, c, e) else 'no'}")
     return "\n".join(lines)
 
 
@@ -100,9 +120,13 @@ class StateAwareRetriever:
         if state == "EFFECT_BEHAVIOR":
             return [u for u in obs if e in u["services"] and u["minutes"]] or [u for u in obs if e in u["services"]]
         if state == "TEMPORAL_ORDER":
-            flagged = [u for u in obs if u["kind"] in ("metric", "kpi") and u["minutes"]
-                       and (c in u["services"] or e in u["services"])]
-            return sorted(flagged, key=lambda u: min(u["minutes"]))
+            # earliest deviating series of the cause, then of the effect, so onsets can be compared
+            out = []
+            for svc in (c, e):
+                flagged = sorted([u for u in obs if u["kind"] in ("metric", "kpi") and u["minutes"]
+                                  and svc in u["services"] and u not in out], key=lambda u: min(u["minutes"]))
+                out += flagged[:1]
+            return out
         if state == "SYMPTOM":
             return [u for u in obs if u["kind"] == "kpi"]
         raise ValueError(state)
@@ -127,9 +151,10 @@ class StateAwareRetriever:
             return self._rank(case_id, units, pool, flat_query(cause, effect), k), {"states": []}
         states, plan_record = self.plan(units, cause, effect)
         chosen, trace = [], []
-        budget = {s: 0 for s in states}
-        for i in range(k):  # round-robin budget over states in priority order
-            budget[states[i % len(states)]] += 1
+        budget, left = {}, k
+        for s in states:  # fixed per-state budget in priority order, capped by K
+            budget[s] = min(STATE_BUDGET.get(s, 1), left)
+            left -= budget[s]
         for state in states:
             pool = [u for u in self._pool(state, units, cause, effect) if u not in chosen]
             used = state
