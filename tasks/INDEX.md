@@ -1,5 +1,33 @@
 # RCA 작업 현황
 
+**2026-10-02 미팅 자료 최종 스타일 반영:** [TASK_068](TASK_068_experiment_meeting_brief.md) DONE. 첨부 스타일의 [HTML](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.html)·[Markdown](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md)을 12절 항목·표·실제 파일 발췌 중심으로 정리했다. 결과4위→5위, 확인된 문제와 미확정 영향, 사용자 제공 저자 메일 확인 중 상태를 반영했다. 중단 이력은 자원·LLM 한계4건만 유지하며 아래 F01~F07 기록은 이전 버전이다. 내용·구조·링크 검증 완료; 브라우저 화면 검증은 로컬 파일 URL 정책으로 불가. 스타일 선호는 전역 AGENTS.md에 저장했다.
+
+**2026-10-02 실험 중단 이력 추가:** [TASK_068](TASK_068_experiment_meeting_brief.md) 후속 완료. [미팅 요약본](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md)에 단계별 기준·Pass/Fail 표와 중단 기록 F01~F07을 추가했다. 전체 후보 실패/30 Pod 성공, 사전 차단/실행 중 오류, 원인 미확인을 구분했다.
+
+**2026-10-02 실험 간략 설명 자료:** [TASK_068](TASK_068_experiment_meeting_brief.md) DONE. [환경·진행 단계 요약본](../docs/MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md)을 비전공자용으로 별도 작성했다. 환경표·7단계 설명·흐름 도식·실측 결과와 한계를 포함하고 수치·출처 링크를 검증했다. 기존 미팅 원고와 실험 결과는 보존했다.
+
+**2026-10-02 내용 검토 원고 v4:** [TASK_067](TASK_067_content_review_v4.md) DONE. [새 Markdown](../../MATMCD_RESEARCH_MEETING_CONTENT_v4.md)을 연속 문서 형식으로 작성했다. 기술 용어를 유지하고 설명·구조를 재정리했으며, 후속 요청에 따라 교수님께 설명드리는 존댓말로 전체 문체를 수정했다. HTML/슬라이드 작업은 진행하지 않았으며, 사용자 내용 검토 후 원페이지 문서로 구성할 예정이다.
+
+**2026-10-02 발표자료 v3 리디자인:** [TASK_066](TASK_066_presentation_v3_redesign.md) DONE. [새 HTML 발표자료](../../MATMCD_RESEARCH_MEETING_DRAFT_v3.html)를 28장·16:9로 구성했다. 새 디자인 토큰·레이아웃·도식·슬라이드 탐색 적용, 짧은 구절 중심으로 재작성, 실측 수치와 기존 버전 보존. 전체 장 렌더링·넘침·탐색 검증 완료.
+
+**2026-10-02 미팅 자료 v2:** [TASK_065](TASK_065_meeting_v2_research_framing.md) DONE. [새 HTML](../../MATMCD_RESEARCH_MEETING_DRAFT_v2.html)을 추론 상태에 따른 이질적 근거 선택 중심으로 작성했다. 조건화 수식·Evidence Need Prediction·LLM-assisted retrieval·MATMCD 두 agent 설명 반영. 기존 버전 및 로컬 결과 보존, 출처·화면 검증 완료.
+
+**2026-09-28 미팅 시각 자료 삽입:** [TASK_064](TASK_064_meeting_visuals.md) DONE. [HTML](../../MATMCD_RESEARCH_MEETING_DRAFT.html)에 근거 선택·RCA 개념·MATMCD 흐름·순위 변화·시간 비중 5개 자료를 추가했다. 본문·표 보존, 개념/실측 구분, PC·모바일 화면 검증 완료.
+
+**2026-09-28 Wiki HTML 작성:** [TASK_063](TASK_063_wiki_meeting_html.md) DONE. 최신 [Markdown 원고](../../MATMCD_RESEARCH_MEETING_WIKI.md)의 내용과 순서를 유지해 [스크롤형 Wiki 페이지](../../MATMCD_RESEARCH_MEETING_DRAFT.html)를 갱신했다. 고정 목차·현재 절 표시·반응형·인쇄 스타일 적용, 본문 일치 및 브라우저 검증 완료.
+
+**2026-09-28 미팅 원고 범위 조정:** [TASK_062](TASK_062_revise_meeting_wiki_scope.md) DONE. [Markdown 원고](../../MATMCD_RESEARCH_MEETING_WIKI.md)를 사용자 지정 삭제·축약 기준에 맞춰 10개 절로 정리했다. RCA 기초 설명 보강, 저자 문의 다섯 문제만 유지, 결과는 기존 9.4·9.6·9.8만 유지, 분석 두 문단·향후 계획 축약. HTML 무변경. 아래 TASK_061의 분량은 수정 전 이력이다.
+
+**2026-09-27 상세 위키형 원고 작성:** [TASK_061](TASK_061_detailed_meeting_wiki.md) DONE. 사용자 요청에 따라 디자인 없이 [Markdown 원고](../../MATMCD_RESEARCH_MEETING_WIKI.md)를 작성했다. 본문 12항목·세부 절 75개, 용어·실행 계보·전체 순위·근거 부록 포함. HTML은 그대로 유지했다.
+
+**2026-09-27 미팅 자료 서술형 개편:** [TASK_060](TASK_060_narrative_meeting_html.md) DONE. 12개 항목 순서를 유지한 [HTML](../../MATMCD_RESEARCH_MEETING_DRAFT.html)을 자연스러운 서술형·연속 스크롤로 수정하고, 최신 첨부 Geist 참고 테마를 적용했다. 화면·목차·인쇄·링크 검증 완료.
+
+**2026-09-27 미팅 HTML v3 초안 작성:** [TASK_059](TASK_059_meeting_html_from_v3_plan.md) DONE. [기획서](../../PROFESSOR_RESEARCH_PROGRESS_REPORT_PLAN.md)의 1~12번 구조와 사용자 첨부 디자인 지침으로 [HTML](../../MATMCD_RESEARCH_MEETING_DRAFT.html)을 작성했다. 데스크톱·모바일·목차·인쇄·출처 링크 검증 완료. 사용자 검토 전 초안이다.
+
+**2026-09-27 보고서 기획서 v3 작성:** [TASK_058](TASK_058_restore_user_report_structure.md) DONE. 사용자가 지정한 1~12번 순서를 유지해 [기획서](../../PROFESSOR_RESEARCH_PROGRESS_REPORT_PLAN.md)만 다시 작성했다. TASK_057의 7화면 구조는 사용자 요청으로 대체했다. HTML은 변경하지 않았으며 새 기획서를 반영한 상태가 아니다.
+
+**2026-09-27 저자 문의 최종 문안 작성 완료:** [TASK_056](TASK_056_author_question_inventory.md) DONE. 사용자 지정 순서1→6→4→3→2의5개 질문만 남긴 [국문·영문 최종 메일](../docs/AUTHOR_INQUIRY_RCA_SHORT.md)을 작성했다. 각 문항에 논문·코드의 해당 단계를 떠올릴 수 있는 배경을 추가하고, 배경·확인 사항·임시 적용·질문 구조와 학생 소개·존중·감사의 문체를 유지했다.23개 [통합 기록](../docs/AUTHOR_QUESTIONS_RCA.md)은 보존하며 실제 발송·답변 처리는 TASK_018의 TODO다.
+
 **2026-09-27 GitHub 업데이트 완료:** [TASK_054](TASK_054_github_setup_update.md) DONE. 현재 설정·구현·문서·검증 기록을 구성 커밋 `3fe751c`로 `origin/main`에 push하고 원격 일치를 확인했다. 실험 자산은 MATMCD_DATA에 유지한다.
 
 **2026-09-27 결과 분석 보고서 작성 완료:** [TASK_053](TASK_053_oracle30_result_report.md) DONE. [상세 보고서](../docs/RCA_ORACLE30_RESULT_REPORT_20260927.md)에 목적·실제 조건·논문 차이·전체 순위·원인별 증거/가설을 정리했다. MongoDB 장애 근거의 RAG 미전달, 공개 프롬프트의 첫 쌍/방향 문제, 후보 축소로 제외된 시나리오 경로를 확인했다. 추가 실험·코드/조건 교정은 하지 않았다.
@@ -80,7 +108,21 @@ DONE은 해당 조사·설치·정리 작업의 완료이며 RCA 전체 완료�
 | [051](TASK_051_rag_format_continuation.md) | RAG 응답 경계 보정·완료 단계 연결 | DONE — 본문 보존·부모 해시 검증, 후속 MATMCD 완주 |
 | [052](TASK_052_domain_generation_repetition.md) | 설명 반복 실패 진단·승인된 presence1.5 적용 | DONE — 진단3개 및 새 설명930개 정상 종료, 제약presence0 유지 |
 | [053](TASK_053_oracle30_result_report.md) | 완료 결과와 논문 차이 상세 분석 보고서 | DONE — 근거 전달·후보 경로·프롬프트·그래프/순위 분석, 원인 가설과 사실 구분 |
+| [054](TASK_054_professor_report_plan.md) | 교수님 연구 현황 보고서 구조 기획 | DONE — E:/연구에 기획서 작성·출처 검증. 12개 장·조건 관리·시험 상세·환경 이전·후속 연구 설계 |
+| [055](TASK_055_professor_meeting_html.md) | 교수님 연구 현황 미팅 HTML 초안 | DONE — E:/연구에 단일 HTML 작성. 12개 장·탐색·모바일·인쇄·출처 링크 검증 완료 |
 | [054](TASK_054_github_setup_update.md) | 현재 로컬 RCA 구성과 결과 기록 GitHub 업데이트 | DONE — 구성 커밋3fe751c push 및 원격 일치 확인, 대용량 자산 제외 |
+| [056](TASK_056_author_question_inventory.md) | RCA 미확정 조건·공개 코드 의문점 저자 문의 목록 | DONE —23개 질문·현재 선택·우선순위·자료 요청 및 근거 검증, 발송은018 TODO |
+| [057](TASK_057_professor_meeting_restructure.md) | 전문가 관점 리뷰 기반 미팅 자료 전면 재기획 | DONE — 전문가 관점 독립/재리뷰 반영. 기획서·7화면 HTML·부록 4개 전면 개편 및 화면·인쇄 검증 |
+| [058](TASK_058_restore_user_report_structure.md) | 사용자 지정 12개 항목 순서로 기획서 재작성 | DONE — 기획서 v3 작성·출처 검증. HTML 무변경, 사용자 검토 전 |
+| [059](TASK_059_meeting_html_from_v3_plan.md) | v3 기획서·첨부 디자인 지침 기반 HTML 초안 | DONE — 12개 장 유지, 실제 문안·도식·표 및 화면/인쇄 검증 |
+| [060](TASK_060_narrative_meeting_html.md) | 서술형 스크롤 미팅 자료·Geist 참고 테마 | DONE — 문단 중심 집필, 밝은 테마·연속 인쇄·화면 검증 |
+| [061](TASK_061_detailed_meeting_wiki.md) | 연구 현황 상세 위키형 Markdown 원고 | DONE — 설명·조건·결과·원인 분석 상세 집필, 근거 검증. HTML 무변경 |
+| [062](TASK_062_revise_meeting_wiki_scope.md) | 미팅 원고 범위·설명 수준 조정 | DONE — 사용자 지정 삭제·축약, RCA 기초 설명 보강, 수치·링크 검증 |
+| [063](TASK_063_wiki_meeting_html.md) | 최신 원고 기반 스크롤형 Wiki HTML | DONE — 원고 보존, 목차·반응형·본문 일치·화면 검증 |
+| [064](TASK_064_meeting_visuals.md) | 미팅 설명 도식·실측 결과 그래프 | DONE — 5개 자료 삽입, 본문·표 보존 및 화면 검증 |
+| [065](TASK_065_meeting_v2_research_framing.md) | 연구 질문·상태 조건화 중심 미팅 v2 | DONE — 신규 버전, 논문 대조·수식·도식·화면 검증 |
+| [066](TASK_066_presentation_v3_redesign.md) | HTML 발표자료 v3 전면 리디자인 | DONE — 28장·16:9, 디자인 리셋·내용 축약·수치 보존·전체 화면 검증 |
+| [067](TASK_067_content_review_v4.md) | 기술 용어 유지·Wiki 내용 원고 v4 | DONE — Markdown 작성, 사용자 내용 검토 대기. HTML 미진행 |
 
 작업 번호는 이력 식별자로 유지한다. 30 Pod 한 사례 개발 실행·평가는 TASK_050에서 완료했다. 아래 전체 후보 실행·평가·논문 비교는 별도 미완료 범위다.
 

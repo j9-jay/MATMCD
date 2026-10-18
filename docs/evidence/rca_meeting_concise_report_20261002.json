@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-10-02T03:59:53.648854+00:00",
+  "status": "CONTENT_AND_HTML_STRUCTURE_VERIFIED_VISUAL_REVIEW_BLOCKED",
+  "report": "E:\\연구\\MATMCD\\docs\\MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md",
+  "html": "E:\\연구\\MATMCD\\docs\\MATMCD_RCA_EXPERIMENT_BRIEF_20261002.html",
+  "reference_style": "C:/Users/goo84/Downloads/MATMCD_summary_1_to_12.html",
+  "source_sha256": {
+    "E:/연구/MATMCD_DATA/processed_data/lemma_rca_oracle30_pr20211203_v1/metrics.npy": "eb7730a1f298bb956895c5d49fb807d6a0a2a9b1e6e86cef66d3e7d4c8e68d0f",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/input_plan.json": "9a994c2555a5857d089e83c19cf18dfe2b841999db6091df8e6c844424c14de9",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/selection.json": "fe8bdc84b38162f114a86e89f3d789e7c5ca65c88e0f41289a7b23537055d960",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/configs.json": "747daf374a2f5c62cb80dbdbe8160a3ac02e2fe70971f5127d6dc0c0e2060e6d",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/graphs/PC.npy": "c655c05286ca8a4a32a7e5adba7339693360110d5b4152dd220292009676390b",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/graphs/MATMCD.npy": "ebc7438de02733fbe8de2720fb8d26725d7d1e0f2ec05fb5106b1863e3984dff",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/graphs/MATMCD_constraints.npy": "c853b2ef44198df1b0d18503718e9951504266377717fcdcf48eea54d5fa7641",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/summaries/Product_Review_20211203/mongodb-v1-64c6b69879-p4wfp_summary.txt": "d047c828cf5ed1a14824db39fae8f02208cbe170e4d86069b2bd11306f68c7a6",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/node_information.json": "c445a8dee54a7f2636065600f22b6293a204e707363da09cbd0cce1ce6bdc58f",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000021.json": "84919d86740895bde96b3484a2b9045c9246391448023e39f4d985999e81f497",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/calls/call_0000469.json": "179e4e4850d089f41512e8cbad82cd0b43f4551474c0ccd61be2d0ddac8be572",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/calls/call_0000480.json": "dcb74ee60170665382dcb809a4bb3ebfa7e82fe33b3f557e481912da66beaf6b",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/calls/call_0001410.json": "f47170325d8f96a97ca95970448ef44f68dae127913f439df1ce2a886e4eaca0",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/evaluation/PC.json": "3f23109fcb86636977d717729b5850d45dc47cb2b1d5a59cb0c6eea57ee9150f",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T143904740470Z/evaluation/MATMCD.json": "e5ba21ed182aeb5d169d59c08a4b34db58987faa04a2ae8e6a09af08cf0a8121",
+    "E:/연구/MATMCD/scripts/continue_rca_oracle30.py": "aeeb42421eb9f38ef37088c8a5c32e669c61a9682f7425f6866a1ac74e34201c",
+    "E:/연구/MATMCD/docs/evidence/rca_oracle30_completion_audit_20260927.json": "67a6064de70c28401e1df11546b04a13882b883a9bc750492a500778c73b4a8f",
+    "E:/연구/MATMCD/docs/evidence/rca_oracle30_result_analysis_20260927.json": "b9bde4e12d49fb55de2c3221e49c0f913cc940afab1eb1e735741ab112a5bc1c",
+    "E:/연구/MATMCD_DATA/processed_data/lemma_rca_provisional_v1/Product_Review/20211203/timestamps.csv": "d8186463cbe66093685be646fd0f79385ffc1091e696a7b7878cfa1fb4f3ad25",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000007.json": "641a2fa32699b08c257cfab2a421bced91862b87b8ff0133915830a3677fb339",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000011.json": "015e90fa5fdaa795ab94c1a4ba07e88dd1ff45c24064f2ad86e8dd124b3fa592",
+    "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000001.json": "3f48adf1dbeb8e44cb92ad2c670ef0aafbf19ddccd570228f2c408814dacddcd"
+  },
+  "snippets": "actual JSON selected fields, verbatim sentences, NPY slices; metrics rounded to 6 decimals",
+  "new_model_calls": 0,
+  "new_experiments": 0,
+  "email_status": {
+    "status": "sent_to_lead_author_and_confirmation_in_progress",
+    "source": "user statement 2026-10-02",
+    "sent_by_this_agent": false,
+    "new_email_sent": false
+  },
+  "interruption_scope": [
+    "context capacity",
+    "full candidate PC OOM",
+    "log generation repetition",
+    "domain generation repetition"
+  ],
+  "unknown_termination_or_encoding_not_classified_as_resource_failure": true,
+  "validation": {
+    "sections": 12,
+    "links_checked": 41,
+    "missing_local_links": [],
+    "source_hashes_unchanged": 22,
+    "balanced_html": true,
+    "consistent_table_columns": true,
+    "executed_code_excerpt_verified": true,
+    "visual_review": "Not performed: browser security policy rejected local file URL; no workaround attempted.",
+    "input_log_examples_verified": true
+  },
+  "output_sha256": {
+    "E:\\연구\\MATMCD\\docs\\MATMCD_RCA_EXPERIMENT_BRIEF_20261002.md": "dd4a33380eb73ee431ee0ea59dad0340334171f2f63de9efed3d8e6a52f617d8",
+    "E:\\연구\\MATMCD\\docs\\MATMCD_RCA_EXPERIMENT_BRIEF_20261002.html": "80a97cc8fca22fc28fcf799f951bcd7046a1a24226b50014aaf41694780c19fa"
+  },
+  "input_log_examples": {
+    "sections": [
+      3,
+      6
+    ],
+    "metric_row_indices": [
+      0,
+      25764,
+      51528
+    ],
+    "logs": [
+      {
+        "source": "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000007.json",
+        "timestamp": "2021-12-03T09:35:04.962504+00:00",
+        "content": "E STORAGE  [WTCheckpointThread] WiredTiger error (28) [1638524104:952400][1:0x7f3165064700], file:WiredTiger.wt, WT_SESSION.checkpoint: __posix_open_file, 672: /data/db/WiredTiger.turtle.set: handle-open: open: No space left on device Raw: [1638524104:952400][1:0x7f3165064700], file:WiredTiger.wt, WT_SESSION.checkpoint: __posix_open_file, 672: /data/db/WiredTiger.turtle.set: handle-open: open: No space left on device",
+        "event_id": "1698",
+        "occurrences": "4"
+      },
+      {
+        "source": "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000011.json",
+        "timestamp": "2021-12-02T08:30:02.170374+00:00",
+        "content": "app.INFO: Health-Check {\"pdo_connectivity\":true} []",
+        "event_id": "1691",
+        "occurrences": "35400"
+      },
+      {
+        "source": "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000011.json",
+        "timestamp": "2021-12-02T08:30:02.151402+00:00",
+        "content": "php.INFO: User Deprecated: Since symfony/http-kernel 5.3: \"Symfony\\Component\\HttpKernel\\Event\\KernelEvent::isMasterRequest()\" is deprecated, use \"isMainRequest()\" instead. {\"exception\":\"[object] (ErrorException(code: 0): User Deprecated: Since symfony/http-kernel 5.3: \\\"Symfony\\\\Component\\\\HttpKernel\\\\Event\\\\KernelEvent::isMasterRequest()\\\" is deprecated, use \\\"isMainRequest()\\\" instead. at /var/www/html/vendor/symfony/http-kernel/Event/KernelEvent.php:88)\"} []",
+        "event_id": "1689",
+        "occurrences": "35400"
+      },
+      {
+        "source": "E:/연구/MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1/20260926T132900237241Z/calls/call_0000001.json",
+        "timestamp": "2021-12-02T08:30:51.113184+00:00",
+        "content": "INFO  ClusterOperator:125 - Triggering periodic reconciliation for namespace quarkus...",
+        "event_id": "1891",
+        "occurrences": "1475"
+      }
+    ],
+    "source_kind": "log examples preserved in actual LLM input messages; not generated summaries"
+  }
+}

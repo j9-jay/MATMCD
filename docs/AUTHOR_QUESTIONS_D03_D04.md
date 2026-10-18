@@ -1,5 +1,7 @@
 # RCA D03/D04 저자 일괄 문의 준비
 
+**2026-09-27 갱신 안내:** 현재 범위와 전체 문의는 [AUTHOR_QUESTIONS_RCA.md](AUTHOR_QUESTIONS_RCA.md)를 따른다. 아래 세 사례·미실행 설명은2026-09-26 당시 이력이다. 지금은 PR 20211203의 정답 포함30 Pod 개발 실험을 완료했고, PR 20220606은 활성 범위에서 제외됐다. D03/D04의 기술 질문은 유지하며 실제 문의는 미발송이다.
+
 2026-09-26 KST. **문의 준비 자료이며 미발송**. 기존 환경·전처리·모델·로그 질문과 함께 [TASK_018](../tasks/TASK_018_author_clarifications.md)의 메일에 포함한다. 현재 활성 실험은 PR 20211203, PR 20220606, CC 20231207뿐이다.
 
 기준 공식 커밋: `ef2c3ecad0f5ddb9c3d20a8523c2c1043d213190`. [공식 저장소](https://github.com/D2I-Group/matmcd), [인공 검증 근거 40개](evidence/rca_original_protocol_20260925T133730423769Z.json). 공개 소스 관찰과 논문 수치를 만든 실제 실행에 대한 확인을 구분한다.
