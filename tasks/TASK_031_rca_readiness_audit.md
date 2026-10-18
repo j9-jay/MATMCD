@@ -29,7 +29,7 @@
 
 무결성 및 환경 재점검은 통과했지만 실행 CSV 5개가 미연결이고, 로그 쌍 미확인 수는 PR 99/95/64/80개 및 CC 72개다. 실제 로그·요약과 로컬 모델의 RCA 연결이 없으며 과학적 코드·평가 준비도 남아 있다. 원본 로더에서는 FileNotFoundError를 확인했다.
 
-상세 근거와 검사 범위는 [RCA_READINESS.md](../docs/RCA_READINESS.md), [실물 점검](../docs/evidence/rca_readiness_20260925T103130694226Z.json), [환경 재점검](../docs/evidence/rca_runtime_recheck_20260925T103621303488Z.json)에 보존한다.
+상세 근거와 검사 범위는 RCA_READINESS.md(2026-10-18 삭제, 커밋 `2f0d66a`에 보존), [실물 점검](../docs/evidence/rca_readiness_20260925T103130694226Z.json), [환경 재점검](../docs/evidence/rca_runtime_recheck_20260925T103621303488Z.json)에 보존한다.
 
 TASK_007은 기술적 선행 조건으로 BLOCKED, TASK_024는 IN_PROGRESS다. 평가·비교 TASK_008/009는 실제 결과가 없어 TODO다. 준비 완료 후 동일 실행 승인 요청을 반복하지 않는다.
 

@@ -24,4 +24,4 @@ LEMMA_Metrics.py의 고정 rank를 새 실험 결과로 사용하지 않는다. 
 평가 미실행. 그래프 복원 벤치마크 평가는 현재 대상에서 제외했다.
 
 ## 상태
-TODO
+이력 — LEMMA-RCA 평가는 TASK_069 종료로 수행하지 않았다. 새 평가는 [TASK_070](TASK_070_state_aware_retrieval_experiments.md) T9.

@@ -23,4 +23,4 @@
 전체 입력의 PC/RWR부터 시작한다. 검증 도구는 `scripts/check_rca_real_integration.py`이며 결과는 MATMCD_DATA의 logs/setup/rca_real_integration_<UTC>와 프로젝트 docs/evidence의 시각별 JSON에 저장한다. 서로 독립인 두 사례를 각각 점검하며 실패 사례를 제외한 결과를 전체 성공으로 집계하지 않는다.
 
 ## 상태
-BLOCKED — PC는 D08 자원 결정 대기. 로그/RAG도 PR44개 후 프로세스 종료를 확인했다. RAG 미도달·종료 원인 UNKNOWN.
+보류(2026-10-18) — 전체 후보 실행은 현재 목표 범위 밖이다([TASK_070](TASK_070_state_aware_retrieval_experiments.md)). 마지막 상태: PC는 D08 OOM, 로그/RAG는 PR 44개 후 프로세스 종료(원인 UNKNOWN).
