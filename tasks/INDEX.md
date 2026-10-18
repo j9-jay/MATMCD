@@ -19,8 +19,8 @@
 | T1 | RCAEval RE2-OB/SS 다운로드·데이터 감사 | DONE — md5 일치, 각 90사례, KPI 확정(D-2) |
 | T2 | 카테고리 2 공식 파일 복원·데이터 준비 | DONE — 코드 3개 복원, 데이터 5종 준비(Takayama CSV, Asia·Child seed 42) |
 | T3 | 웹 스냅샷 수집·누출 검사 (무료 할당량 내) | TODO |
-| T4 | corpus 구성기 | TODO |
-| T5 | 공통 출력부·지표 연결 | TODO |
+| T4 | corpus 구성기 | DONE(카테고리 1) — 사례당 근거 125~170개, 템플릿은 전 사례 동일 규칙(D-7 수정) |
+| T5 | 공통 출력부·지표 연결 | DONE — 인과 발견 PC가 논문 표 1과 일치(AutoMPG·DWD), RCAEval 개발 PC만 Avg@5 0.31 |
 | T6 | 기준선: PC만, 검색 없는 LLM, flat RAG | TODO |
 | T7 | MATMCD 참고 기준선 | TODO |
 | T8 | 사용자 방법·ablation | TODO |
