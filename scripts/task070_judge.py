@@ -10,7 +10,10 @@ presence_penalty 0, max_tokens 1024.
 """
 import re
 
-PROMPT_VERSION = "task070_judge_v1"
+PROMPT_VERSION = "task070_judge_v2"
+# v1 (2026-10-18 pilot, dev cases only) asked for a strictly direct effect not
+# mediated by other variables; the model answered No for 152-156 of 156 pairs,
+# leaving an empty constraint graph. v2 states the influence mechanisms instead.
 SAMPLING = {"temperature": 0.0, "seed": 42, "max_tokens": 1024, "presence_penalty": 0.0}
 
 SYSTEM = ("You are an expert analyst. Decide whether one variable directly causes another, "
@@ -20,7 +23,7 @@ TEMPLATE = """Context: {context}
 
 Variables: {variables}
 
-Question: Does a change in "{cause}" directly cause a change in "{effect}"? Consider only a direct effect of "{cause}" on "{effect}", not the reverse direction and not an effect that passes only through other listed variables.
+Question: Can a change in "{cause}" cause a change in "{effect}" in this system? Answer Yes if "{cause}" can influence "{effect}" without first going through "{effect}" itself, for example because "{effect}" depends on "{cause}" (it calls or waits for it, so failures or slowness propagate), because "{cause}" sends requests or load to "{effect}", or because they share a resource. Answer No if they are unrelated or the influence can only go from "{effect}" to "{cause}". Use the evidence when it shows related changes at overlapping times.
 
 Evidence:
 {evidence}

@@ -32,6 +32,24 @@ def rca_case_metrics(ranking, answer, kpi_label):
             "chance_Avg@5": sum(min(k, n) / n for k in KS) / len(KS) if n else 0.0}
 
 
+def rca_case_metrics_tie_aware(labels, counts, answer, kpi_label):
+    """Expected AC@k / RR under uniformly random ordering of services with equal
+    RWR counts. Column-order tie-breaking (the released stable sort) can credit a
+    method for an empty graph when the answer happens to sit in an early column."""
+    pairs = [(name, c) for name, c in zip(labels, counts) if name != kpi_label]
+    n = len(pairs)
+    target = dict(pairs).get(answer)
+    if target is None:
+        return {"rank_lo": None, "rank_hi": None, "n_candidates": n, **{f"AC@{k}": 0.0 for k in KS},
+                "Avg@5": 0.0, "RR": 0.0}
+    lo = 1 + sum(1 for _, c in pairs if c > target)
+    hi = lo + sum(1 for _, c in pairs if c == target) - 1
+    size = hi - lo + 1
+    ac = {f"AC@{k}": max(0, min(k, hi) - lo + 1) / size for k in KS}
+    return {"rank_lo": lo, "rank_hi": hi, "n_candidates": n, **ac, "Avg@5": sum(ac.values()) / len(KS),
+            "RR": sum(1.0 / p for p in range(lo, hi + 1)) / size}
+
+
 def rca_aggregate(case_results):
     keys = [f"AC@{k}" for k in KS] + ["Avg@5", "RR", "chance_AC@1", "chance_Avg@5"]
     out = {k: float(np.mean([c[k] for c in case_results])) for k in keys}
