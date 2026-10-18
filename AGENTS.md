@@ -24,6 +24,7 @@
 ## 보존
 
 - 사용자 저장소 `.git`, origin `j9-jay/MATMCD`와 기존 커밋을 보존한다.
+- 작업으로 코드·설정·문서가 바뀌면 작업 단위 브랜치에 커밋하고 origin에 GitHub PR을 만들어 설명과 diff를 기록으로 남긴다. PR은 만든 직후 병합해도 된다(2026-10-18 사용자 지시). `upstream`(D2I-Group/matmcd)에는 push하지 않는다.
 - `official/matmcd`는 고정 원본의 RCA 작업용 부분집합이다. 승인으로 제외한 파일은 `configs/scope.json`에 있다. 남은 공식 소스·프롬프트·requirements는 수정하지 않는다.
 - 자산은 `configs/paths.json`의 MATMCD_DATA에서 관리한다. 기존 실행 결과, 실패 원문, 진단 응답을 덮어쓰거나 서로 다른 조건의 결과와 섞지 않는다. 새 조건은 새 프로필·새 실행 폴더로 만든다.
 - RCA CSV, EVT 조건, Pod·metric·기간·열 순서, 로그 연결, 모델 snapshot을 추측하지 않는다.

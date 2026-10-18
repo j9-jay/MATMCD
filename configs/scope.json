@@ -1,22 +1,26 @@
 {
   "active_experiments": [
-    "rca"
+    "rca",
+    "causal_discovery_benchmarks"
   ],
   "paper_targets": [
     "section_4.3",
-    "table_4"
+    "table_4",
+    "tables_1_2_benchmarks_as_task070_category2"
   ],
-  "changed_date": "2026-09-23",
-  "authorization": "사용자 요청: 1번 실험 관련 파일을 삭제하고 TODO에서 제외",
-  "excluded_official_files": [
+  "changed_date": "2026-10-18",
+  "authorization": "2026-09-23 사용자 요청으로 1번 실험 파일을 제외했고, 2026-10-18 TASK_070 카테고리 2 채택(E-2 승인)으로 전용 코드 3개를 원본 ZIP에서 바이트 동일하게 복원했다. 그림 3개는 실험에 필요 없어 계속 제외한다.",
+  "restored_official_files": [
     "GTdatasets_experiment.py",
     "Utils/metrics.py",
-    "data/SampleFromBIF.py",
+    "data/SampleFromBIF.py"
+  ],
+  "excluded_official_files": [
     "image/table1.png",
     "image/table2.png",
     "docs/assets/fig4.png"
   ],
-  "source_policy": "위 전용 파일만 제외한 RCA 작업용 부분집합. 남은 공식 파일은 원본 ZIP과 바이트 동일해야 한다.",
+  "source_policy": "위 제외 파일만 뺀 부분집합(40개). 남은 공식 파일은 원본 ZIP과 바이트 동일해야 한다. 37개 고정 검사를 쓰는 과거 감사 스크립트(audit_rca_original_protocol.py, check_rca_approved_protocol.py, setup_graphviz.py, verify_provisional_rca.py)는 재실행 시 개수 불일치로 실패하며, 재실행이 필요하면 수정 승인을 받는다.",
   "reference_policy": "공통 코드, 원본 ZIP, 논문, 저자 소개 자료, 과거 공통 감사 기록은 출처 및 이력으로 보존한다.",
   "rca_case_selection": {
     "profile_id": "rca_two_cases_v2",
