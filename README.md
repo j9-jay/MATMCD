@@ -1,6 +1,6 @@
 # MATMCD RCA 로컬 기준선
 
-**현재 목표(2026-10-18):** 추론 상태 기반 근거 검색을 NLP 기여 실험으로 검증한다. 카테고리 1은 장애 분석(RCAEval RE2-OB/SS), 카테고리 2는 인과 발견(MATMCD 벤치마크 5종)이다. 작업은 [TASK_070](tasks/TASK_070_state_aware_retrieval_experiments.md), 방향은 [연구 로드맵](docs/RESEARCH_ROADMAP.md), 전체 현황은 [작업 현황](tasks/INDEX.md)을 따른다.
+**현재 목표(2026-10-18):** 추론 상태 기반 근거 검색을 NLP 기여 실험으로 검증한다. 카테고리 1은 장애 분석(RCAEval RE2-OB), 카테고리 2는 인과 발견(MATMCD 벤치마크 5종)이다. 작업은 [TASK_070](tasks/TASK_070_state_aware_retrieval_experiments.md), 방향은 [연구 로드맵](docs/RESEARCH_ROADMAP.md), 전체 현황은 [작업 현황](tasks/INDEX.md)을 따른다.
 
 이 저장소는 MATMCD(ACL Findings 2025) 논문 §4.3·표 4의 마이크로서비스 RCA를 로컬에서 재구현한 기록과, 이를 참고 기준선으로 쓰는 후속 연구를 담는다. 원 논문 수치 일치는 목표가 아니며, 원 논문과 다른 조건을 모두 명시한다. LEMMA-RCA 기준선(TASK_069)은 후보 선정 문제로 종료했다.
 

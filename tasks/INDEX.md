@@ -7,7 +7,7 @@
 **추론 상태 기반 근거 검색(사용자 방법)을 NLP 기여 실험으로 검증한다.** 작업 상세는 [TASK_070](TASK_070_state_aware_retrieval_experiments.md), 방향은 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)을 따른다.
 
 - 목표 학회는 ACL·EMNLP·NAACL·EACL·COLING이다. 과제는 근거 검색·귀속이며, RCA·인과 그래프 정확도는 하류 지표다. 엔지니어링 확장은 하지 않는다.
-- 카테고리 1: 장애 분석 — RCAEval RE2-OB(주), RE2-SS(보조). 카테고리 2: 인과 발견 — MATMCD 벤치마크 5종.
+- 카테고리 1: 장애 분석 — RCAEval RE2-OB. RE2-SS는 로그 템플릿 열이 없어 백로그로 이동(2026-10-18). 카테고리 2: 인과 발견 — MATMCD 벤치마크 5종.
 - 모든 방법은 공통 출력부(쌍별 Yes/No → 제약 PC → 그래프 → RWR)를 공유하고 근거 수집만 다르다. 핵심 비교 대상은 같은 corpus의 flat RAG이며 MATMCD는 외부 참고 기준선이다.
 - LEMMA-RCA 기준선(TASK_069)은 종료했다. 기존 정답 포함 30 Pod 결과는 조건부 분석과 동기 사례로만 쓴다.
 
@@ -42,7 +42,7 @@
 
 ## 백로그
 
-상세는 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)의 R1~R13. 주요 항목: 연구 질문 확정과 지도교수 합의(R1), 정답 근거 label(R5), 여러 LLM·오염 분석(R8), 일반 QA 실험(R11, MuSiQue·HotpotQA), OpenRCA(R12).
+상세는 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)의 R1~R13. 주요 항목: 연구 질문 확정과 지도교수 합의(R1), 정답 근거 label(R5), 여러 LLM·오염 분석(R8), 일반 QA 실험(R11, MuSiQue·HotpotQA), OpenRCA(R12), RCAEval RE2-SS(R14).
 
 ## 완료·이력 Task
 

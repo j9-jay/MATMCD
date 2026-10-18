@@ -3,29 +3,101 @@
   "approved_date_kst": "2026-10-18",
   "authorization": "사용자가 docs/EXPERIMENT_PLAN_TASK070.md의 D-1~D-11 권장안과 E-1~E-3을 전부 승인",
   "categories": {
-    "1_incident_analysis": {"dataset": "RCAEval", "suites": ["RE2-OB", "RE2-SS"], "primary": "RE2-OB", "source": "zenodo:10.5281/zenodo.14590730"},
-    "2_causal_discovery": {"datasets": ["Auto_MPG", "DWD_climate", "Sachs", "asia", "child"], "status": "PREPARED", "inputs": "MATMCD_DATA/datasets/causal_benchmarks_task070_v1 (manifest.json)", "sources": "Auto_MPG/DWD_climate/Sachs: mas-takayama/LLM-and-SCD commit 5aaeaea89e71e2cff443289e473c06d2f79172c5 (license not stated, attribution required); asia/child: local BIF, seed 42, n=1000 (user approval 2026-10-18)"}
+    "1_incident_analysis": {
+      "dataset": "RCAEval",
+      "suites": [
+        "RE2-OB"
+      ],
+      "primary": "RE2-OB",
+      "source": "zenodo:10.5281/zenodo.14590730",
+      "backlog_suites": [
+        "RE2-SS"
+      ],
+      "scope_change": "2026-10-18 사용자 결정: RE2-OB만 진행, RE2-SS는 백로그(로그 템플릿 열 없음)"
+    },
+    "2_causal_discovery": {
+      "datasets": [
+        "Auto_MPG",
+        "DWD_climate",
+        "Sachs",
+        "asia",
+        "child"
+      ],
+      "status": "PREPARED",
+      "inputs": "MATMCD_DATA/datasets/causal_benchmarks_task070_v1 (manifest.json)",
+      "sources": "Auto_MPG/DWD_climate/Sachs: mas-takayama/LLM-and-SCD commit 5aaeaea89e71e2cff443289e473c06d2f79172c5 (license not stated, attribution required); asia/child: local BIF, seed 42, n=1000 (user approval 2026-10-18)"
+    }
   },
   "output_head": "shared single-stage pairwise Yes/No -> constrained PC (causal-learn BackgroundKnowledge) -> graph -> RWR from KPI (category 1)",
   "decisions": {
-    "D-1_metric_fusion": {"choice": "per_service_zscore_mean", "note": "서비스별 메트릭 z-score 동일 가중 평균. 방향이 다른 메트릭의 상쇄 가능성을 기록"},
-    "D-2_ss_kpi": {"choice": "front-end_latency-90", "status": "RESOLVED_BY_DATA_AUDIT_2026-10-18", "note": "RE2-SS simple_metrics.csv 90/90 사례에 존재. RCAEval main.py는 원인 서비스(정답)의 latency를 SLI로 우선 선택하므로 따르지 않고, 정답과 무관한 진입 서비스 지연을 KPI로 쓴다"},
-    "D-3_fault_window": {"choice": "full_case_window", "note": "inject_time은 평가에서만 사용. 근거에는 시각 메타데이터만 부여"},
-    "D-4_dynamic_state": {"choice": "type_classification_plus_evidence_gap", "note": "상태 = (유형, 빠진 근거). 유형 목록은 카테고리별로 개발 사례로 확정"},
-    "D-5_judgment_prompt": {"choice": "single_stage_yes_no_with_evidence_citation", "text_status": "P1에서 문안 작성 후 재승인"},
-    "D-6_split": {"category_1": {"dev": "repetition 1", "test": "repetitions 2-3"}, "category_2": "분할 없음. 설계 동결 후 1회 평가"},
-    "D-7_matmcd_log_adapter": {"choice": "PENDING_USER_DECISION", "data_audit": "OB logs.csv에는 cluster_id·log_template 열이 있음. SS logs.csv에는 템플릿 열이 없고 logts.csv(템플릿별 개수 시계열)만 있음", "note": "어느 방식이든 원본과 다른 조건으로 기록"},
-    "D-8_web_fallback": {"choice": "wikipedia_api"},
-    "D-9_bidirectional_yes": {"choice": "pass_through_to_constrained_pc", "record": "발생 수"},
-    "D-10_sampling": {"seed": 42, "judgment_temperature": "P1에서 정하고 모든 방법 공유"},
-    "D-11_repetition": {"rwr": "그래프 고정 후 반복(횟수는 실행 전 고정)", "llm": "G1 실측 후 결정"}
+    "D-1_metric_fusion": {
+      "choice": "per_service_zscore_mean",
+      "note": "서비스별 메트릭 z-score 동일 가중 평균. 방향이 다른 메트릭의 상쇄 가능성을 기록"
+    },
+    "D-2_ss_kpi": {
+      "choice": "front-end_latency-90",
+      "status": "RESOLVED_BY_DATA_AUDIT_2026-10-18",
+      "note": "RE2-SS simple_metrics.csv 90/90 사례에 존재. RCAEval main.py는 원인 서비스(정답)의 latency를 SLI로 우선 선택하므로 따르지 않고, 정답과 무관한 진입 서비스 지연을 KPI로 쓴다"
+    },
+    "D-3_fault_window": {
+      "choice": "full_case_window",
+      "note": "inject_time은 평가에서만 사용. 근거에는 시각 메타데이터만 부여"
+    },
+    "D-4_dynamic_state": {
+      "choice": "type_classification_plus_evidence_gap",
+      "note": "상태 = (유형, 빠진 근거). 유형 목록은 카테고리별로 개발 사례로 확정"
+    },
+    "D-5_judgment_prompt": {
+      "choice": "single_stage_yes_no_with_evidence_citation",
+      "text_status": "P1에서 문안 작성 후 재승인"
+    },
+    "D-6_split": {
+      "category_1": {
+        "dev": "repetition 1",
+        "test": "repetitions 2-3"
+      },
+      "category_2": "분할 없음. 설계 동결 후 1회 평가"
+    },
+    "D-7_matmcd_log_adapter": {
+      "choice": "use_RE2-OB_log_template_column",
+      "status": "DECIDED_2026-10-18",
+      "data_audit": "OB logs.csv에는 cluster_id·log_template 열이 있음. SS는 템플릿 열 없음(백로그)",
+      "note": "원본 LEMMA 템플릿·구조화 CSV 형식과 다른 조건으로 기록"
+    },
+    "D-8_web_fallback": {
+      "choice": "wikipedia_api"
+    },
+    "D-9_bidirectional_yes": {
+      "choice": "pass_through_to_constrained_pc",
+      "record": "발생 수"
+    },
+    "D-10_sampling": {
+      "seed": 42,
+      "judgment_temperature": "P1에서 정하고 모든 방법 공유"
+    },
+    "D-11_repetition": {
+      "rwr": "그래프 고정 후 반복(횟수는 실행 전 고정)",
+      "llm": "G1 실측 후 결정"
+    }
   },
   "web_search": {
-    "allowed_backends": ["serper", "tavily"],
+    "allowed_backends": [
+      "serper",
+      "tavily"
+    ],
     "condition": "무료 할당량 이내에서만. 크게 넘을 것으로 예상되면 웹 검색을 생략하고 D-8 대체 경로로 진행",
     "usage_logging": true,
     "browser_automation": false
   },
-  "ground_truth_fields_evaluation_only": ["root_cause_service", "fault", "fault_description", "inject_time"],
-  "gates": ["G1 기준선 파일럿 후 평가 사례 수 고정", "G2 제안 방법 동결", "G3 실행 완결성 검사"]
+  "ground_truth_fields_evaluation_only": [
+    "root_cause_service",
+    "fault",
+    "fault_description",
+    "inject_time"
+  ],
+  "gates": [
+    "G1 기준선 파일럿 후 평가 사례 수 고정",
+    "G2 제안 방법 동결",
+    "G3 실행 완결성 검사"
+  ]
 }
