@@ -49,7 +49,7 @@ MATMCD의 고유 아이디어(DA-AGENT의 반복 검색·요약, CC-AGENT의 2�
 | ID | 작업 | 상태 |
 |---|---|---|
 | R1 | 연구 질문 확정 (RQ1 근거 검색 / RQ2 하류 정확도 / RQ3 효율 / RQ4 여러 LLM), 지도교수 합의 | TODO |
-| R2 | 데이터셋 선정 | **완료** — 카테고리 1 RCAEval RE2-OB/SS, 카테고리 2 MATMCD 인과 발견 5종 |
+| R2 | 데이터셋 선정 | **완료** — 카테고리 1 RCAEval RE2-OB, 카테고리 2 MATMCD 인과 발견 5종 |
 | R3 | corpus 설계 | TASK_070 T4 |
 | R4 | 평가 설계 (지표 4층, 통계) | TASK_070에 반영, 세부 TODO |
 | R5 | 정답 근거 label: RCAEval silver 규칙, 인과 발견 LLM 판정 + 사람 검토 | TODO |
@@ -61,6 +61,7 @@ MATMCD의 고유 아이디어(DA-AGENT의 반복 검색·요약, CC-AGENT의 2�
 | R11 | 일반 QA 실험: MuSiQue(질문당 약 20문단), HotpotQA distractor(10문단). 라이선스 미확인 | 백로그 |
 | R12 | OpenRCA: LLM 질의형 RCA 벤치마크. 권장 RAM 32GB, 데이터 라이선스 미표기 | 백로그 |
 | R13 | 추가 기여 후보: 근거 주석 데이터(resource), 근거 손실 분석(analysis) | 백로그 |
+| R14 | RCAEval RE2-SS 추가 실험. 로그 템플릿 열이 없어 MATMCD용 템플릿 처리 결정 필요. 자료는 다운로드·감사 완료(KPI `front-end_latency-90`) | 백로그 |
 
 ## 연구계획서 PDF에서 보완할 점
 
