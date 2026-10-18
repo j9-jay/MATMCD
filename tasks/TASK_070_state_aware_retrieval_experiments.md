@@ -95,7 +95,7 @@
   - **해결(2026-10-18 사용자 승인):** Takayama 저장소(커밋 `5aaeaea89e71e2cff443289e473c06d2f79172c5`)의 CSV를 출처 명시 조건으로 받았다. Asia·Child는 로컬 BIF에서 공식 생성 절차에 seed 42를 넣어 1,000개를 만들었고 모든 방법이 같은 표본을 쓴다. [준비 스크립트](../scripts/prepare_causal_benchmarks.py), 출력 `MATMCD_DATA/datasets/causal_benchmarks_task070_v1`(manifest에 출처·해시·pgmpy 1.0.0 기록).
   - 확인: AutoMPG 392행(논문 392), Sachs 7,466행(논문 7,466), **DWD 349행(논문 350)**. 차이는 기록만 하고 고치지 않는다. Asia 노드 8·간선 8, Child 노드 20·간선 25. seed 42 표본은 두 번 생성해 동일함을 확인했다.
   - 37개 고정 검사를 쓰는 과거 감사 스크립트 4개는 재실행 시 실패한다(`configs/scope.json` 기록).
-- [ ] T3 웹 스냅샷 수집과 누출 검사 (무료 할당량 내)
+- [x] T3 웹 스냅샷 수집과 누출 검사 — 2026-10-19 Serper 348회(무료 2,500회 중, 상한 900), 질의는 변수별 50 + 변수쌍 298. 페이지 1,044건 중 620건 본문 확보(422건은 빈 본문·PDF 등), 사전 규칙 차단 2건(bnlearn 1, openreview 1). 사후 검사(Asia·Child·Sachs 정답 네트워크 설명, 데이터셋 이름)에서 남은 본문 0건. "DAG" 일치 14건은 생화학 diacylglycerol(Wikipedia)로 누출 아님. 카테고리 2 corpus: AutoMPG 42 / DWD 147 / Sachs 230 / Asia 183 / Child 659 구간(`MATMCD_DATA/task070/corpus/causal/`, 역할 definition/relation). 처음 넣은 키는 SerpApi 키여서 403(크레딧 미사용) 후 Serper 키로 교체.
 - [x] T4 corpus 구성기 (카테고리 1) — `scripts/task070_corpus.py`. 사례마다 근거 단위 125~170개: 메트릭·KPI 요약(처음 5분 대비 |z|≥3 분), 로그 템플릿별 분당 개수, trace 연산별 분당 건수·p90, trace 호출 그래프(구조). 사례 경로 등 정답 정보 미사용, 경로 누출 검사 포함. 카테고리 2 corpus는 P3(웹 스냅샷)에서 만든다.
   - **D-7 수정:** RCAEval 제공 `log_template` 열은 RE2-OB 90사례 중 24사례(개발 24/30, 평가 0/60)에만 있다. 처음 감사가 첫 사례만 확인해 생긴 오판이다. 모든 사례에 같은 규칙 기반 템플릿(가변 값 마스킹)을 쓰고 제공 열은 쓰지 않는다. 규칙은 개발 사례 로그만 보고 정했다.
   - trace 서비스명 `frontendservice`는 메트릭 서비스명 `frontend`로 맞춘다. 일부 사례에 중복 spanID가 있어 첫 항목만 부모 조회에 쓴다.

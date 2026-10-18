@@ -132,10 +132,57 @@ def collect():
                                       "serper_queries": usage["serper_queries"], "planned": len(queries)})
 
 
+POST_AUDIT_PATTERNS = {  # applied after collection to confirm no ground-truth network page is kept
+    "asia_network": r"asia (network|model|bayesian)|chest clinic|lauritzen|spiegelhalter",
+    "child_network": r"child (network|bayesian)",
+    "sachs_network": r"sachs et al|consensus network|sachs (data|dataset)",
+    "dataset_names": r"auto ?mpg dataset|uci machine learning|DWD climate",
+}
+
+
+def build_corpus():
+    """Kept passages -> per-dataset evidence units. Role tags: 'definition' units come
+    from single-variable queries, 'relation' units from variable-pair queries; the
+    variables field lists dataset variables named in the passage text (shared content,
+    metadata used only by the proposed method)."""
+    rows = [json.loads(l) for l in (OUT / "pages.jsonl").read_text(encoding="utf-8").splitlines()]
+    audit = {k: [] for k in POST_AUDIT_PATTERNS}
+    units = {name: [] for name in THEMES}
+    seen = {name: set() for name in THEMES}
+    for row in rows:
+        if not row["passages"]:
+            continue
+        joined = " ".join(row["passages"])
+        for key, pattern in POST_AUDIT_PATTERNS.items():
+            if re.search(pattern, joined, re.IGNORECASE):
+                audit[key].append(row["url"])
+        labels = variables(row["dataset"])
+        for passage in row["passages"]:
+            if passage in seen[row["dataset"]]:
+                continue
+            seen[row["dataset"]].add(passage)
+            mentioned = [v for v in labels if re.search(rf"\b{re.escape(v)}\b", passage, re.IGNORECASE)]
+            units[row["dataset"]].append({
+                "id": f"w{len(units[row['dataset']]):05d}", "role": "definition" if row["kind"] == "variable" else "relation",
+                "kind": "web_passage", "services": mentioned, "query_variables": row["variables"],
+                "minutes": [], "url": row["url"], "text": passage})
+    if any(audit.values()):
+        raise SystemExit(f"Post-collection audit found ground-truth network pages: { {k: v for k, v in audit.items() if v} }")
+    for name, items in units.items():
+        path = WORK / "corpus/causal" / f"{name}.jsonl"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("".join(json.dumps(u, ensure_ascii=False) + "\n" for u in items), encoding="utf-8")
+    write_json(OUT / "corpus_summary.json", {"units_per_dataset": {k: len(v) for k, v in units.items()},
+                                             "post_audit": {k: len(v) for k, v in audit.items()},
+                                             "pre_collection_exclusions": [r["excluded"] for r in rows if r["excluded"]]})
+    return {k: len(v) for k, v in units.items()}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--plan", action="store_true")
     parser.add_argument("--collect", action="store_true")
+    parser.add_argument("--build-corpus", action="store_true")
     args = parser.parse_args()
     if args.plan:
         queries = planned_queries()
@@ -148,6 +195,8 @@ def main():
                           "key_file_present": KEY_PATH.exists()}, indent=2))
     elif args.collect:
         collect()
+    elif args.build_corpus:
+        print(build_corpus())
 
 
 if __name__ == "__main__":
