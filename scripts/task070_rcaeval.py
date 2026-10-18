@@ -38,9 +38,29 @@ def case_id(path):
 
 
 def split(path):
-    """D-6: repetition 1 is development, repetitions 2-3 are test."""
+    """D-6 with the B plan (2026-10-19): repetition 1 is development, repetition 2
+    is the fixed evaluation set (configs/task070_testset.json), repetition 3 is
+    not used."""
     rep = path.rsplit("/", 1)[1]
-    return {"1": "dev", "2": "test", "3": "test"}[rep]
+    return {"1": "dev", "2": "test", "3": "unused"}[rep]
+
+
+def verify_testset():
+    """The evaluation cases must match the fixed list, including file CRCs."""
+    import json
+    from project_paths import PROJECT
+    fixed = json.loads((PROJECT / "configs/task070_testset.json").read_text(encoding="utf-8"))
+    with _zip() as zf:
+        infos = {i.filename: i for i in zf.infolist()}
+    current = {c["id"]: c["path"] for c in cases("test")}
+    if set(current) != {c["id"] for c in fixed["cases"]}:
+        raise RuntimeError("Evaluation cases differ from configs/task070_testset.json")
+    for case in fixed["cases"]:
+        for name, meta in case["files"].items():
+            info = infos[f"{case['path']}/{name}"]
+            if f"{info.CRC:08x}" != meta["crc32"] or info.file_size != meta["size"]:
+                raise RuntimeError(f"Evaluation file changed: {case['id']}/{name}")
+    return fixed["profile_id"]
 
 
 def cases(which=None):
