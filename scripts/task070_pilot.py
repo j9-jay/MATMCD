@@ -95,11 +95,12 @@ def run_case(method, case, units, labels, client, retriever, out_dir, state_retr
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--cases", type=int, default=2)
+    parser.add_argument("--start", type=int, default=0, help="offset into the development cases")
     parser.add_argument("--methods", nargs="+", default=["none", "flat"])
     args = parser.parse_args()
     out = WORK / "p2_pilot" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     out.mkdir(parents=True)
-    cases = rc.cases("dev")[: args.cases]
+    cases = rc.cases("dev")[args.start: args.start + args.cases]
     retriever = None
     if "flat" in args.methods or any(m in STATE_VARIANTS for m in args.methods):
         from local_embedding import DenseBGE

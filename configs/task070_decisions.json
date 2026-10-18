@@ -55,10 +55,13 @@
     },
     "D-6_split": {
       "category_1": {
-        "dev": "repetition 1",
-        "test": "repetitions 2-3"
+        "dev": "repetition 1 (30)",
+        "test": "repetition 2 (30), fixed in configs/task070_testset.json",
+        "unused": "repetition 3 (30)"
       },
-      "category_2": "분할 없음. 설계 동결 후 1회 평가"
+      "category_2": "분할 없음. 설계 동결 후 1회 평가",
+      "status": "REVISED_2026-10-19_B_PLAN",
+      "note": "사용자 결정: 모든 방법이 같은 30사례. 결과를 본 뒤 평가 사례를 늘리거나 바꾸지 않는다"
     },
     "D-7_matmcd_log_adapter": {
       "choice": "uniform_label_free_masking_templates",

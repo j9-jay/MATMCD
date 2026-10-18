@@ -1,0 +1,1650 @@
+{
+  "profile_id": "task070_testset_rep2_v1",
+  "decided_kst": "2026-10-19",
+  "authorization": "사용자 결정: B안 - 평가는 반복 2의 30사례, 모든 방법 동일, 반복 3 미사용",
+  "rule": "RE2-OB 각 (장애 대상 서비스 x 장애 유형) 조합의 반복 2 사례 1개",
+  "services": [
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "productcatalogservice",
+    "recommendationservice"
+  ],
+  "faults": [
+    "cpu",
+    "delay",
+    "disk",
+    "loss",
+    "mem",
+    "socket"
+  ],
+  "not_used": "반복 3의 30사례. 결과를 본 뒤 평가 사례를 늘리거나 바꾸지 않는다",
+  "development_split": "반복 1의 30사례",
+  "source_zip": {
+    "path": "/mnt/e/연구/MATMCD_DATA/raw_downloads/zenodo_rcaeval_14590730/RE2-OB.zip",
+    "sha256": "0605a36cdcad8a6ae0107f2357c9c91ecee2c4ab5d72579bffea0372d9747513"
+  },
+  "note": "path에는 정답(서비스_장애)이 들어 있다. 방법 코드는 id만 쓰고 path→정답은 평가 단계에서만 읽는다",
+  "cases": [
+    {
+      "id": "ob-06a2cff32f",
+      "path": "RE2-OB/emailservice_delay/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "1deb5005",
+          "size": 29047
+        },
+        "inject_time.txt": {
+          "crc32": "5fc39c55",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "bfc5e819",
+          "size": 5007
+        },
+        "metrics.csv": {
+          "crc32": "e7b0957d",
+          "size": 6677814
+        },
+        "simple_metrics.csv": {
+          "crc32": "e0fc49b7",
+          "size": 1200056
+        },
+        "cluster_info.json": {
+          "crc32": "4834d357",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "e519810d",
+          "size": 9928
+        },
+        "logs.csv": {
+          "crc32": "14f9545e",
+          "size": 16004463
+        },
+        "tracets_err.csv": {
+          "crc32": "3284142a",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "0abe92b8",
+          "size": 74175433
+        }
+      }
+    },
+    {
+      "id": "ob-190186d810",
+      "path": "RE2-OB/productcatalogservice_socket/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "050936f0",
+          "size": 26064
+        },
+        "inject_time.txt": {
+          "crc32": "2194f049",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "04ced7ec",
+          "size": 5057
+        },
+        "metrics.csv": {
+          "crc32": "05edc17a",
+          "size": 6836337
+        },
+        "simple_metrics.csv": {
+          "crc32": "b15ba74d",
+          "size": 1178924
+        },
+        "cluster_info.json": {
+          "crc32": "9b3a7378",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "4b64c1f6",
+          "size": 9904
+        },
+        "logs.csv": {
+          "crc32": "e5ad8e1d",
+          "size": 15858798
+        },
+        "tracets_err.csv": {
+          "crc32": "140014a6",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "5ec6d572",
+          "size": 73531982
+        }
+      }
+    },
+    {
+      "id": "ob-285db90047",
+      "path": "RE2-OB/emailservice_socket/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "3701bf60",
+          "size": 26359
+        },
+        "inject_time.txt": {
+          "crc32": "3d59f02e",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "ae13dc2a",
+          "size": 5001
+        },
+        "metrics.csv": {
+          "crc32": "39c7f457",
+          "size": 6691275
+        },
+        "simple_metrics.csv": {
+          "crc32": "1a580394",
+          "size": 1201473
+        },
+        "cluster_info.json": {
+          "crc32": "baa85a2b",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "11ddbe9a",
+          "size": 9955
+        },
+        "logs.csv": {
+          "crc32": "b97fbf08",
+          "size": 16177718
+        },
+        "tracets_err.csv": {
+          "crc32": "20024c3c",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "d9c592ea",
+          "size": 75032955
+        }
+      }
+    },
+    {
+      "id": "ob-2861d098df",
+      "path": "RE2-OB/recommendationservice_delay/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "dc348a03",
+          "size": 26293
+        },
+        "inject_time.txt": {
+          "crc32": "205ded70",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "2f56f49a",
+          "size": 4946
+        },
+        "metrics.csv": {
+          "crc32": "5c8ec283",
+          "size": 6817771
+        },
+        "simple_metrics.csv": {
+          "crc32": "b11bd314",
+          "size": 1187345
+        },
+        "cluster_info.json": {
+          "crc32": "6e34fd34",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "2ef60c0a",
+          "size": 9827
+        },
+        "logs.csv": {
+          "crc32": "5c9be502",
+          "size": 15578867
+        },
+        "tracets_err.csv": {
+          "crc32": "cd475eaa",
+          "size": 8034
+        },
+        "traces.csv": {
+          "crc32": "f206b8ae",
+          "size": 72418457
+        }
+      }
+    },
+    {
+      "id": "ob-290fb58e4a",
+      "path": "RE2-OB/checkoutservice_delay/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "802c0cf5",
+          "size": 26693
+        },
+        "inject_time.txt": {
+          "crc32": "0fb4066f",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "e9f0d26e",
+          "size": 4981
+        },
+        "metrics.csv": {
+          "crc32": "c1cd711c",
+          "size": 6819562
+        },
+        "simple_metrics.csv": {
+          "crc32": "67c6c1fd",
+          "size": 1186203
+        },
+        "cluster_info.json": {
+          "crc32": "ae61b01d",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "5ff6084e",
+          "size": 9865
+        },
+        "logs.csv": {
+          "crc32": "ef1713c4",
+          "size": 15713333
+        },
+        "tracets_err.csv": {
+          "crc32": "d105278d",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "50b933f6",
+          "size": 73535767
+        }
+      }
+    },
+    {
+      "id": "ob-2a153bada2",
+      "path": "RE2-OB/currencyservice_cpu/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "6731fb86",
+          "size": 27574
+        },
+        "inject_time.txt": {
+          "crc32": "fbf24952",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "d8703752",
+          "size": 4865
+        },
+        "metrics.csv": {
+          "crc32": "967a67fc",
+          "size": 6832794
+        },
+        "simple_metrics.csv": {
+          "crc32": "6b85b8af",
+          "size": 1181432
+        },
+        "cluster_info.json": {
+          "crc32": "becaa42d",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "3894bd72",
+          "size": 9901
+        },
+        "logs.csv": {
+          "crc32": "feca25ba",
+          "size": 15707051
+        },
+        "tracets_err.csv": {
+          "crc32": "835b0fc0",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "b810b3b2",
+          "size": 73264458
+        }
+      }
+    },
+    {
+      "id": "ob-2c1520edbf",
+      "path": "RE2-OB/currencyservice_socket/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "38bfbe0f",
+          "size": 24992
+        },
+        "inject_time.txt": {
+          "crc32": "8f88c98f",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "eb367fb7",
+          "size": 4908
+        },
+        "metrics.csv": {
+          "crc32": "ee49a9ee",
+          "size": 6862767
+        },
+        "simple_metrics.csv": {
+          "crc32": "22690277",
+          "size": 1197046
+        },
+        "cluster_info.json": {
+          "crc32": "c32db93d",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "23b7f27c",
+          "size": 9860
+        },
+        "logs.csv": {
+          "crc32": "b0baa273",
+          "size": 15640016
+        },
+        "tracets_err.csv": {
+          "crc32": "53d2263d",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "d28c6d68",
+          "size": 73087672
+        }
+      }
+    },
+    {
+      "id": "ob-329cc18e7e",
+      "path": "RE2-OB/productcatalogservice_delay/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "bd22722e",
+          "size": 26294
+        },
+        "inject_time.txt": {
+          "crc32": "049ec852",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "9ac7faa8",
+          "size": 4939
+        },
+        "metrics.csv": {
+          "crc32": "8b27238e",
+          "size": 6799139
+        },
+        "simple_metrics.csv": {
+          "crc32": "216df81d",
+          "size": 1170313
+        },
+        "cluster_info.json": {
+          "crc32": "deb6a457",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "4cf94ea2",
+          "size": 9833
+        },
+        "logs.csv": {
+          "crc32": "b2b8e5c4",
+          "size": 14267452
+        },
+        "tracets_err.csv": {
+          "crc32": "060f2951",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "318ea378",
+          "size": 66668551
+        }
+      }
+    },
+    {
+      "id": "ob-33f96dafc3",
+      "path": "RE2-OB/checkoutservice_socket/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "31f74ca3",
+          "size": 25903
+        },
+        "inject_time.txt": {
+          "crc32": "8fbbf988",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "e820c0ff",
+          "size": 4993
+        },
+        "metrics.csv": {
+          "crc32": "3e373f13",
+          "size": 6867658
+        },
+        "simple_metrics.csv": {
+          "crc32": "8550ee81",
+          "size": 1191262
+        },
+        "cluster_info.json": {
+          "crc32": "3c7db71a",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "1cc9a725",
+          "size": 9985
+        },
+        "logs.csv": {
+          "crc32": "902c4dfb",
+          "size": 15888474
+        },
+        "tracets_err.csv": {
+          "crc32": "73905438",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "21796c88",
+          "size": 73946903
+        }
+      }
+    },
+    {
+      "id": "ob-3863cd97f5",
+      "path": "RE2-OB/currencyservice_mem/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "af9a75bb",
+          "size": 25871
+        },
+        "inject_time.txt": {
+          "crc32": "f362eb40",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "7ce52dd5",
+          "size": 4976
+        },
+        "metrics.csv": {
+          "crc32": "1b34b349",
+          "size": 6672810
+        },
+        "simple_metrics.csv": {
+          "crc32": "ade2ec19",
+          "size": 1201335
+        },
+        "cluster_info.json": {
+          "crc32": "9fe18bf5",
+          "size": 4964
+        },
+        "logts.csv": {
+          "crc32": "2752a694",
+          "size": 10265
+        },
+        "logs.csv": {
+          "crc32": "96fb2d79",
+          "size": 15175391
+        },
+        "tracets_err.csv": {
+          "crc32": "3c36636b",
+          "size": 8119
+        },
+        "traces.csv": {
+          "crc32": "9bb5d232",
+          "size": 70752566
+        }
+      }
+    },
+    {
+      "id": "ob-3b28d5934f",
+      "path": "RE2-OB/currencyservice_loss/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "9d044723",
+          "size": 27133
+        },
+        "inject_time.txt": {
+          "crc32": "371dbe18",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "293e64ea",
+          "size": 4943
+        },
+        "metrics.csv": {
+          "crc32": "ceed818d",
+          "size": 6884296
+        },
+        "simple_metrics.csv": {
+          "crc32": "86ecbdb1",
+          "size": 1204924
+        },
+        "cluster_info.json": {
+          "crc32": "57663fb0",
+          "size": 5357
+        },
+        "logts.csv": {
+          "crc32": "426da2c1",
+          "size": 10615
+        },
+        "logs.csv": {
+          "crc32": "12b9c3ae",
+          "size": 11516793
+        },
+        "tracets_err.csv": {
+          "crc32": "e88e447b",
+          "size": 8116
+        },
+        "traces.csv": {
+          "crc32": "825b01cd",
+          "size": 66728349
+        }
+      }
+    },
+    {
+      "id": "ob-3f002cfcac",
+      "path": "RE2-OB/recommendationservice_loss/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "85b726ee",
+          "size": 27363
+        },
+        "inject_time.txt": {
+          "crc32": "a853c007",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "7435c8a6",
+          "size": 5998
+        },
+        "metrics.csv": {
+          "crc32": "aaf80bcc",
+          "size": 6842240
+        },
+        "simple_metrics.csv": {
+          "crc32": "b97ab644",
+          "size": 1193652
+        },
+        "cluster_info.json": {
+          "crc32": "3c1fff45",
+          "size": 6013
+        },
+        "logts.csv": {
+          "crc32": "ec527d2f",
+          "size": 11310
+        },
+        "logs.csv": {
+          "crc32": "25bda050",
+          "size": 15061491
+        },
+        "tracets_err.csv": {
+          "crc32": "7be606ac",
+          "size": 8132
+        },
+        "traces.csv": {
+          "crc32": "fc0f0b38",
+          "size": 67681893
+        }
+      }
+    },
+    {
+      "id": "ob-4d88df34f8",
+      "path": "RE2-OB/recommendationservice_mem/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "adc468fb",
+          "size": 24907
+        },
+        "inject_time.txt": {
+          "crc32": "f5d51c12",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "463c3c15",
+          "size": 5080
+        },
+        "metrics.csv": {
+          "crc32": "b6e860d5",
+          "size": 6840261
+        },
+        "simple_metrics.csv": {
+          "crc32": "f94ee601",
+          "size": 1202326
+        },
+        "cluster_info.json": {
+          "crc32": "48d49bab",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "4dcd7ad4",
+          "size": 9857
+        },
+        "logs.csv": {
+          "crc32": "71181296",
+          "size": 15499641
+        },
+        "tracets_err.csv": {
+          "crc32": "47867b0f",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "489ed86b",
+          "size": 72162308
+        }
+      }
+    },
+    {
+      "id": "ob-58ac96acc3",
+      "path": "RE2-OB/checkoutservice_cpu/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "ae7f90f4",
+          "size": 52884
+        },
+        "inject_time.txt": {
+          "crc32": "855a771b",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d389db03",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d389db03",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "4186f85f",
+          "size": 2839
+        },
+        "metrics.csv": {
+          "crc32": "cbb5deb1",
+          "size": 4515490
+        },
+        "simple_metrics.csv": {
+          "crc32": "408561c8",
+          "size": 814487
+        },
+        "cluster_info.json": {
+          "crc32": "2e7a7b96",
+          "size": 6037
+        },
+        "logts.csv": {
+          "crc32": "df99ed73",
+          "size": 7290
+        },
+        "logs.csv": {
+          "crc32": "a5f48701",
+          "size": 9923146
+        },
+        "tracets_err.csv": {
+          "crc32": "0625b751",
+          "size": 4479
+        },
+        "traces.csv": {
+          "crc32": "718da65e",
+          "size": 36547839
+        }
+      }
+    },
+    {
+      "id": "ob-6477742644",
+      "path": "RE2-OB/checkoutservice_loss/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "8909c11c",
+          "size": 28154
+        },
+        "inject_time.txt": {
+          "crc32": "122e116a",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "d9465b97",
+          "size": 5848
+        },
+        "metrics.csv": {
+          "crc32": "e2560628",
+          "size": 6814208
+        },
+        "simple_metrics.csv": {
+          "crc32": "b3e26725",
+          "size": 1192186
+        },
+        "cluster_info.json": {
+          "crc32": "1f6980ca",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "79142496",
+          "size": 9854
+        },
+        "logs.csv": {
+          "crc32": "0e4510a2",
+          "size": 15877888
+        },
+        "tracets_err.csv": {
+          "crc32": "c1a08f8d",
+          "size": 8098
+        },
+        "traces.csv": {
+          "crc32": "d168c2c7",
+          "size": 74202523
+        }
+      }
+    },
+    {
+      "id": "ob-6ab0a02bb3",
+      "path": "RE2-OB/recommendationservice_cpu/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "23dbe505",
+          "size": 27187
+        },
+        "inject_time.txt": {
+          "crc32": "0f1a0010",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "eda3738b",
+          "size": 5049
+        },
+        "metrics.csv": {
+          "crc32": "889c76c3",
+          "size": 6832051
+        },
+        "simple_metrics.csv": {
+          "crc32": "ebf64ff5",
+          "size": 1198204
+        },
+        "cluster_info.json": {
+          "crc32": "860a07df",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "fa7a64ad",
+          "size": 9921
+        },
+        "logs.csv": {
+          "crc32": "66616600",
+          "size": 15949246
+        },
+        "tracets_err.csv": {
+          "crc32": "18d2fd3a",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "37aa2230",
+          "size": 74221872
+        }
+      }
+    },
+    {
+      "id": "ob-6c36ef5b14",
+      "path": "RE2-OB/currencyservice_delay/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "2709237a",
+          "size": 25959
+        },
+        "inject_time.txt": {
+          "crc32": "b4bddcae",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "6122b421",
+          "size": 4893
+        },
+        "metrics.csv": {
+          "crc32": "6974cc17",
+          "size": 6830998
+        },
+        "simple_metrics.csv": {
+          "crc32": "97cd2807",
+          "size": 1186247
+        },
+        "cluster_info.json": {
+          "crc32": "f33f6855",
+          "size": 4232
+        },
+        "logts.csv": {
+          "crc32": "7962b548",
+          "size": 9100
+        },
+        "logs.csv": {
+          "crc32": "18c2a12b",
+          "size": 10842741
+        },
+        "tracets_err.csv": {
+          "crc32": "7b416958",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "cbc4e9d7",
+          "size": 70520200
+        }
+      }
+    },
+    {
+      "id": "ob-784ff664cc",
+      "path": "RE2-OB/productcatalogservice_cpu/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "31170829",
+          "size": 25607
+        },
+        "inject_time.txt": {
+          "crc32": "33d71b23",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "ce3241eb",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "ce3241eb",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "f42c4b24",
+          "size": 5058
+        },
+        "metrics.csv": {
+          "crc32": "4240157c",
+          "size": 6789988
+        },
+        "simple_metrics.csv": {
+          "crc32": "9878866f",
+          "size": 1180172
+        },
+        "cluster_info.json": {
+          "crc32": "66f48cae",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "2e773d16",
+          "size": 9854
+        },
+        "logs.csv": {
+          "crc32": "1410e846",
+          "size": 15678366
+        },
+        "tracets_err.csv": {
+          "crc32": "92989c4a",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "b1375afe",
+          "size": 73149430
+        }
+      }
+    },
+    {
+      "id": "ob-8051da52b9",
+      "path": "RE2-OB/productcatalogservice_mem/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "1ea6118b",
+          "size": 25549
+        },
+        "inject_time.txt": {
+          "crc32": "f939aec5",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "ce3241eb",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "ce3241eb",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "0b3f6086",
+          "size": 5007
+        },
+        "metrics.csv": {
+          "crc32": "ff6d53a2",
+          "size": 6822445
+        },
+        "simple_metrics.csv": {
+          "crc32": "1536bb04",
+          "size": 1184578
+        },
+        "cluster_info.json": {
+          "crc32": "2024fdd1",
+          "size": 4964
+        },
+        "logts.csv": {
+          "crc32": "9529f2fd",
+          "size": 10239
+        },
+        "logs.csv": {
+          "crc32": "0fc1161b",
+          "size": 14480339
+        },
+        "tracets_err.csv": {
+          "crc32": "6861b6a5",
+          "size": 8119
+        },
+        "traces.csv": {
+          "crc32": "6f478a51",
+          "size": 58620448
+        }
+      }
+    },
+    {
+      "id": "ob-84ff73a522",
+      "path": "RE2-OB/productcatalogservice_loss/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "5e9fe7bb",
+          "size": 25581
+        },
+        "inject_time.txt": {
+          "crc32": "d6e83940",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "fcc0e429",
+          "size": 6561
+        },
+        "metrics.csv": {
+          "crc32": "e99ecfea",
+          "size": 6704757
+        },
+        "simple_metrics.csv": {
+          "crc32": "0bb756f8",
+          "size": 1149954
+        },
+        "cluster_info.json": {
+          "crc32": "997bd94a",
+          "size": 14241
+        },
+        "logts.csv": {
+          "crc32": "45d09786",
+          "size": 18584
+        },
+        "logs.csv": {
+          "crc32": "bb4815dd",
+          "size": 10859725
+        },
+        "tracets_err.csv": {
+          "crc32": "3ab4f09a",
+          "size": 8026
+        },
+        "traces.csv": {
+          "crc32": "dd75daf5",
+          "size": 47490813
+        }
+      }
+    },
+    {
+      "id": "ob-95945b4006",
+      "path": "RE2-OB/currencyservice_disk/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "508474f2",
+          "size": 26300
+        },
+        "inject_time.txt": {
+          "crc32": "83f02747",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "d88c9442",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "a7eee10b",
+          "size": 5131
+        },
+        "metrics.csv": {
+          "crc32": "1640dc16",
+          "size": 6947350
+        },
+        "simple_metrics.csv": {
+          "crc32": "f4abc5af",
+          "size": 1211609
+        },
+        "cluster_info.json": {
+          "crc32": "0dc832c1",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "2e64c819",
+          "size": 9909
+        },
+        "logs.csv": {
+          "crc32": "fb5bbf3f",
+          "size": 15544167
+        },
+        "tracets_err.csv": {
+          "crc32": "9a35f0a9",
+          "size": 8110
+        },
+        "traces.csv": {
+          "crc32": "4a441a43",
+          "size": 72400661
+        }
+      }
+    },
+    {
+      "id": "ob-b2eb3b29eb",
+      "path": "RE2-OB/recommendationservice_disk/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "35d2ac7c",
+          "size": 28512
+        },
+        "inject_time.txt": {
+          "crc32": "df1e753b",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "2c9e4daa",
+          "size": 6015
+        },
+        "metrics.csv": {
+          "crc32": "4368b0eb",
+          "size": 6923218
+        },
+        "simple_metrics.csv": {
+          "crc32": "69cdfa9c",
+          "size": 1205678
+        },
+        "cluster_info.json": {
+          "crc32": "ae30fca8",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "48b7f431",
+          "size": 9931
+        },
+        "logs.csv": {
+          "crc32": "128411a6",
+          "size": 15907595
+        },
+        "tracets_err.csv": {
+          "crc32": "2935788c",
+          "size": 8098
+        },
+        "traces.csv": {
+          "crc32": "cdf91f19",
+          "size": 73835072
+        }
+      }
+    },
+    {
+      "id": "ob-b7ed26ee7c",
+      "path": "RE2-OB/emailservice_loss/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "630876b2",
+          "size": 27055
+        },
+        "inject_time.txt": {
+          "crc32": "28039a5a",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "ee38393f",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "776842c6",
+          "size": 5007
+        },
+        "metrics.csv": {
+          "crc32": "24ae6761",
+          "size": 6693749
+        },
+        "simple_metrics.csv": {
+          "crc32": "15cd93ab",
+          "size": 1207105
+        },
+        "cluster_info.json": {
+          "crc32": "aab05927",
+          "size": 5586
+        },
+        "logts.csv": {
+          "crc32": "666c3822",
+          "size": 10962
+        },
+        "logs.csv": {
+          "crc32": "945ab9d4",
+          "size": 16054244
+        },
+        "tracets_err.csv": {
+          "crc32": "a54811af",
+          "size": 8122
+        },
+        "traces.csv": {
+          "crc32": "958c296f",
+          "size": 74940766
+        }
+      }
+    },
+    {
+      "id": "ob-bfa3b805bf",
+      "path": "RE2-OB/productcatalogservice_disk/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "d3a5d0a9",
+          "size": 26835
+        },
+        "inject_time.txt": {
+          "crc32": "05cd45fd",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "ce3241eb",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "ce3241eb",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "c743bb3b",
+          "size": 6026
+        },
+        "metrics.csv": {
+          "crc32": "1e57ccea",
+          "size": 6901688
+        },
+        "simple_metrics.csv": {
+          "crc32": "efa5e995",
+          "size": 1199836
+        },
+        "cluster_info.json": {
+          "crc32": "090d3a5a",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "8bf21428",
+          "size": 9899
+        },
+        "logs.csv": {
+          "crc32": "87585d03",
+          "size": 15792501
+        },
+        "tracets_err.csv": {
+          "crc32": "d271b5e6",
+          "size": 8098
+        },
+        "traces.csv": {
+          "crc32": "71a0bf35",
+          "size": 73595661
+        }
+      }
+    },
+    {
+      "id": "ob-c87f926217",
+      "path": "RE2-OB/emailservice_cpu/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "5e2434ac",
+          "size": 26313
+        },
+        "inject_time.txt": {
+          "crc32": "fee5621b",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "25c95a99",
+          "size": 6158
+        },
+        "metrics.csv": {
+          "crc32": "4c531051",
+          "size": 6865812
+        },
+        "simple_metrics.csv": {
+          "crc32": "55025648",
+          "size": 1200685
+        },
+        "cluster_info.json": {
+          "crc32": "4c3d3c4d",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "b5f18a19",
+          "size": 9950
+        },
+        "logs.csv": {
+          "crc32": "dc9f4fb5",
+          "size": 16132746
+        },
+        "tracets_err.csv": {
+          "crc32": "4317a18c",
+          "size": 8095
+        },
+        "traces.csv": {
+          "crc32": "df391e08",
+          "size": 74931944
+        }
+      }
+    },
+    {
+      "id": "ob-d316fc5409",
+      "path": "RE2-OB/checkoutservice_mem/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "fd01547e",
+          "size": 61692
+        },
+        "inject_time.txt": {
+          "crc32": "812ebd63",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "f1f9a758",
+          "size": 4061
+        },
+        "metrics.csv": {
+          "crc32": "ad209100",
+          "size": 5048726
+        },
+        "simple_metrics.csv": {
+          "crc32": "4f1abbc0",
+          "size": 886053
+        },
+        "cluster_info.json": {
+          "crc32": "7cfd0bfc",
+          "size": 5843
+        },
+        "logts.csv": {
+          "crc32": "ef57d827",
+          "size": 7715
+        },
+        "logs.csv": {
+          "crc32": "f8c93a42",
+          "size": 11022943
+        },
+        "tracets_err.csv": {
+          "crc32": "47e190fe",
+          "size": 6534
+        },
+        "traces.csv": {
+          "crc32": "7aa5d372",
+          "size": 59766022
+        }
+      }
+    },
+    {
+      "id": "ob-dfbbbcb002",
+      "path": "RE2-OB/emailservice_disk/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "c313212e",
+          "size": 25399
+        },
+        "inject_time.txt": {
+          "crc32": "fb4f2220",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "17038b90",
+          "size": 5198
+        },
+        "metrics.csv": {
+          "crc32": "c16e66a8",
+          "size": 7015502
+        },
+        "simple_metrics.csv": {
+          "crc32": "bd65f240",
+          "size": 1213638
+        },
+        "cluster_info.json": {
+          "crc32": "e522f848",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "c66b0504",
+          "size": 9904
+        },
+        "logs.csv": {
+          "crc32": "c1cadf38",
+          "size": 16124336
+        },
+        "tracets_err.csv": {
+          "crc32": "52bf8f95",
+          "size": 8110
+        },
+        "traces.csv": {
+          "crc32": "7f2d36ed",
+          "size": 74813646
+        }
+      }
+    },
+    {
+      "id": "ob-e6f87bc51c",
+      "path": "RE2-OB/emailservice_mem/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "919db432",
+          "size": 27215
+        },
+        "inject_time.txt": {
+          "crc32": "ae91dfd5",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "pod-node-1.csv": {
+          "crc32": "dd268760",
+          "size": 908
+        },
+        "tracets_lat.csv": {
+          "crc32": "e31af4d3",
+          "size": 5026
+        },
+        "metrics.csv": {
+          "crc32": "b1a778de",
+          "size": 6884382
+        },
+        "simple_metrics.csv": {
+          "crc32": "41bef18f",
+          "size": 1198133
+        },
+        "cluster_info.json": {
+          "crc32": "501a501a",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "e09b3cdd",
+          "size": 9921
+        },
+        "logs.csv": {
+          "crc32": "3c136daa",
+          "size": 15976065
+        },
+        "tracets_err.csv": {
+          "crc32": "58ea2d87",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "d1531a8d",
+          "size": 74178959
+        }
+      }
+    },
+    {
+      "id": "ob-e8b2f9ff67",
+      "path": "RE2-OB/checkoutservice_disk/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "60dcf2d1",
+          "size": 25700
+        },
+        "inject_time.txt": {
+          "crc32": "46444cd7",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "d7f4979c",
+          "size": 909
+        },
+        "pod-node-1.csv": {
+          "crc32": "d7f4979c",
+          "size": 909
+        },
+        "tracets_lat.csv": {
+          "crc32": "6a7d491a",
+          "size": 4984
+        },
+        "metrics.csv": {
+          "crc32": "cb592e4e",
+          "size": 6745956
+        },
+        "simple_metrics.csv": {
+          "crc32": "3ba30d60",
+          "size": 1191044
+        },
+        "cluster_info.json": {
+          "crc32": "ae30fca8",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "f29ffc7e",
+          "size": 10000
+        },
+        "logs.csv": {
+          "crc32": "8034976f",
+          "size": 16103057
+        },
+        "tracets_err.csv": {
+          "crc32": "2d46baef",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "2dd46db8",
+          "size": 74451729
+        }
+      }
+    },
+    {
+      "id": "ob-fede62b0c3",
+      "path": "RE2-OB/recommendationservice_socket/2",
+      "files": {
+        "metrics_postprocess.log": {
+          "crc32": "f63037c6",
+          "size": 28499
+        },
+        "inject_time.txt": {
+          "crc32": "4653c6f0",
+          "size": 10
+        },
+        "pod-node-2.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "pod-node-1.csv": {
+          "crc32": "a39a8df1",
+          "size": 907
+        },
+        "tracets_lat.csv": {
+          "crc32": "8ab96374",
+          "size": 5033
+        },
+        "metrics.csv": {
+          "crc32": "26c25bea",
+          "size": 6826576
+        },
+        "simple_metrics.csv": {
+          "crc32": "49505acc",
+          "size": 1192337
+        },
+        "cluster_info.json": {
+          "crc32": "092e638d",
+          "size": 4536
+        },
+        "logts.csv": {
+          "crc32": "e14c1078",
+          "size": 9891
+        },
+        "logs.csv": {
+          "crc32": "e8fb0b7a",
+          "size": 16003048
+        },
+        "tracets_err.csv": {
+          "crc32": "d3efe662",
+          "size": 8113
+        },
+        "traces.csv": {
+          "crc32": "53647cf3",
+          "size": 74474848
+        }
+      }
+    }
+  ]
+}
