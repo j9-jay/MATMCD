@@ -1,0 +1,12 @@
+{
+  "amendments": [
+    {
+      "file": "scripts/task070_web_snapshot.py",
+      "old_sha256": "41282dab5787a4f26e8b4d573ec0353f271e5be21dfc6f8d6ed3100946144def",
+      "new_sha256": "52c44c7b69ae291e0e697cd531e729e83b465bd8390fa17a80a045ada8f39574",
+      "date_kst": "2026-10-19",
+      "reason": "카테고리 2 공유 corpus에서 .pdf가 아닌 주소로 받은 PDF 바이너리 구간 26개 제외(readable 필터). 카테고리 2 실행 전, 카테고리 2 동결(task070_frozen_cat2.json)에 포함",
+      "affects_category_1": false
+    }
+  ]
+}
