@@ -140,6 +140,17 @@ POST_AUDIT_PATTERNS = {  # applied after collection to confirm no ground-truth n
 }
 
 
+_BINARY = re.compile(r"\bendobj\b|\bendstream\b|%PDF-|/Filter\s*/|\bobj\s*<")
+
+
+def readable(passage):
+    """Reject binary/PDF-structure text; require mostly letters and spaces."""
+    if _BINARY.search(passage):
+        return False
+    letters = sum(c.isalpha() or c.isspace() for c in passage)
+    return letters / max(1, len(passage)) >= 0.8
+
+
 def build_corpus():
     """Kept passages -> per-dataset evidence units. Role tags: 'definition' units come
     from single-variable queries, 'relation' units from variable-pair queries; the
@@ -148,6 +159,7 @@ def build_corpus():
     rows = [json.loads(l) for l in (OUT / "pages.jsonl").read_text(encoding="utf-8").splitlines()]
     audit = {k: [] for k in POST_AUDIT_PATTERNS}
     units = {name: [] for name in THEMES}
+    dropped = {"unreadable": 0}
     seen = {name: set() for name in THEMES}
     for row in rows:
         if not row["passages"]:
@@ -159,6 +171,9 @@ def build_corpus():
         labels = variables(row["dataset"])
         for passage in row["passages"]:
             if passage in seen[row["dataset"]]:
+                continue
+            if not readable(passage):  # binary PDF bodies served without a .pdf URL
+                dropped["unreadable"] += 1
                 continue
             seen[row["dataset"]].add(passage)
             mentioned = [v for v in labels if re.search(rf"\b{re.escape(v)}\b", passage, re.IGNORECASE)]
@@ -174,6 +189,7 @@ def build_corpus():
         path.write_text("".join(json.dumps(u, ensure_ascii=False) + "\n" for u in items), encoding="utf-8")
     write_json(OUT / "corpus_summary.json", {"units_per_dataset": {k: len(v) for k, v in units.items()},
                                              "post_audit": {k: len(v) for k, v in audit.items()},
+                                             "dropped_passages": dropped,
                                              "pre_collection_exclusions": [r["excluded"] for r in rows if r["excluded"]]})
     return {k: len(v) for k, v in units.items()}
 

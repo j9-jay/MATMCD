@@ -1,0 +1,17 @@
+{
+  "profile_id": "task070_cat2_v1",
+  "frozen_utc": "2026-10-19T12:27:03.890531+00:00",
+  "note": "No dev split in category 2; design fixed before the single run (head A, web snapshot corpus).",
+  "failure_rule": "A pair whose judgment fails is recorded and counted as No; failed pair counts are reported.",
+  "sha256": {
+    "scripts/task070_causal.py": "3499a2196cbb71b175b500aeb471da15183b9f0709e23dfe360361dc115f35f9",
+    "scripts/task070_causal_run.py": "d7c7c96d38678db00d6bb323f681985f09727e51f18c4f52ec085ed3d7ab9d47",
+    "scripts/task070_judge.py": "0998c40a98a31234fe17ed25b30d6f9b1ef99cd760b2552a4e01c99dc5d528ac",
+    "scripts/task070_output_head.py": "ee8ffbc642c4e731e606b559d5fbca7d563e5105b9deabe2fcdec75f6c2374c0",
+    "scripts/task070_metrics.py": "60816f55d87f7486ce3f0907cb68cd0f9bbcc1ac5b974f5fe49ef846ea191ead",
+    "scripts/task070_retrieval.py": "88a6cf988f3e8decd64181c0f5b3b02334bba25451fa247ae5a572803508f453",
+    "scripts/task070_state_retriever.py": "2002761c9ce2db780e3e16ea3b9414fcad587542cec50ae390949dbbe049f493",
+    "scripts/task070_web_snapshot.py": "52c44c7b69ae291e0e697cd531e729e83b465bd8390fa17a80a045ada8f39574",
+    "scripts/task070_common.py": "48cccf89c29177338e24f2c2070d7ec109b0924a09a46c67c6857e660f03241e"
+  }
+}
