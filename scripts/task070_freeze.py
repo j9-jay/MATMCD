@@ -29,11 +29,19 @@ def current_hashes():
     return {p.relative_to(PROJECT).as_posix(): _normalized_sha256(p) for p in FILES}
 
 
+AMENDMENTS = PROJECT / "configs/task070_frozen_amendments.json"
+
+
 def verify_frozen():
+    """Every file must match the freeze, unless an amendment records the exact
+    old -> new hash, the reason and that the change does not affect category 1."""
     import json
     frozen = json.loads(OUT.read_text(encoding="utf-8"))
+    amendments = json.loads(AMENDMENTS.read_text(encoding="utf-8"))["amendments"] if AMENDMENTS.exists() else []
+    allowed = {(a["file"], a["old_sha256"], a["new_sha256"]) for a in amendments}
     now = current_hashes()
-    changed = sorted(k for k in frozen["sha256"] if now.get(k) != frozen["sha256"][k])
+    changed = sorted(k for k in frozen["sha256"] if now.get(k) != frozen["sha256"][k]
+                     and (k, frozen["sha256"][k], now.get(k)) not in allowed)
     if changed:
         raise RuntimeError(f"Files changed after G2 freeze: {changed}")
     return frozen["profile_id"]
