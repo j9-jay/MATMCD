@@ -33,11 +33,11 @@
 
 | 순서 | 실행 | 출력 위치 | 상태 |
 |---|---|---|---|
-| 1 | 출력부 B 평가: `task070_direct_run.py --split test --cases 30` | `MATMCD_DATA/task070/head_b/test_*` | 진행 중 → 끝나면 결과 분석·보고 |
-| 2 | 카테고리 2: `task070_causal_run.py` | `MATMCD_DATA/task070/causal_run/*`, 로그 `MATMCD_DATA/task070/queue_cat2.log` | 대기열(1 종료 후 자동 시작) |
-| 3 | 출력부 A 평가: `task070_pilot.py --split test --cases 30 --methods pc_only none flat role_only state_fixed state_dynamic matmcd` | `MATMCD_DATA/task070/head_a_test/*`, 로그 `MATMCD_DATA/task070/queue_head_a.log` | 대기열(2 종료 후, 약 37시간) |
+| 1 | 출력부 B 평가: `task070_direct_run.py --split test --cases 30` | `MATMCD_DATA/task070/head_b/test_20261019T121820Z` | **완료·분석 완료**(TASK_070 기록). 상태 동적 vs flat 유의차 없음 |
+| 2 | 카테고리 2: `task070_causal_run.py` | `MATMCD_DATA/task070/causal_run/*`, 로그 `MATMCD_DATA/task070/queue_cat2.log` | **미시작**(아래 참고) |
+| 3 | 출력부 A 평가: `task070_pilot.py --split test --cases 30 --methods pc_only none flat role_only state_fixed state_dynamic matmcd` | `MATMCD_DATA/task070/head_a_test/*`, 로그 `MATMCD_DATA/task070/queue_head_a.log` | **미시작**(2 다음, 약 37시간) |
 
-- 대기열은 WSL 백그라운드 셸(`pgrep -f task070_direct_run.py` 대기 후 순차 실행). 진행 확인: 위 로그 파일, 각 출력 폴더의 `summary.json`.
+- 첫 대기열은 `pgrep -f task070_direct_run.py`가 대기열 셸 자신의 명령줄과 일치해 끝없이 대기했다. 대기열을 중지했고, 2·3은 대기 조건 없이 순서대로 다시 실행해야 한다(명령은 위 표 그대로).
 - 실행 중인지 확인: `wsl.exe -e bash -lc "pgrep -af 'task070_|llama-server'"`.
 - llama-server는 단일 slot(포트 18080). 다른 LLM 작업과 동시에 돌리지 않는다.
 
