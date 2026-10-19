@@ -1,6 +1,6 @@
 {
   "profile_id": "task070_g2_v1",
-  "frozen_utc": "2026-10-19T12:16:22.654346+00:00",
+  "frozen_utc": "2026-10-19T12:17:18.255569+00:00",
   "basis": "development split only (RE2-OB repetition 1, 10 cases); evaluation cases not used",
   "primary_head_B": {
     "prompt_version": "task070_direct_v3",
@@ -46,25 +46,26 @@
   },
   "failure_scoring": "A failed case-method run (no complete ranking) is scored as all candidates tied (expected value under random order) and the failure count is reported.",
   "dev_results_head_B": "MATMCD_DATA/task070/head_b/dev_20261019T115801Z",
+  "sha256_line_ending_normalized": true,
   "sha256": {
     "scripts/task070_causal.py": "3499a2196cbb71b175b500aeb471da15183b9f0709e23dfe360361dc115f35f9",
     "scripts/task070_common.py": "48cccf89c29177338e24f2c2070d7ec109b0924a09a46c67c6857e660f03241e",
     "scripts/task070_corpus.py": "101b508881363763a8f2feb76db458fa12c5a3fdf2a3178f7541b9332c3bf107",
-    "scripts/task070_direct.py": "f4dd28085263b086a8246f20bd903a5379826ecc1155fcd5a9afe54401898bd5",
-    "scripts/task070_direct_run.py": "015670545360da47f750c9b987fea6c1b731598dcfac92a0f46b58cee93a5f70",
+    "scripts/task070_direct.py": "d7af2bfce3c740aba81eda4d72e82c17d8dd16c592b68fa3b3d5908d4260d1a6",
+    "scripts/task070_direct_run.py": "5079bf7a641e9e5bb3f1de328fcf9549a593af3080a30585f4a28fef7a3ba6d1",
     "scripts/task070_fix_testset.py": "b253aae6767f6a0e556fb27e33d63aa72b54b82734027c79f81a976c36c97c74",
     "scripts/task070_judge.py": "0998c40a98a31234fe17ed25b30d6f9b1ef99cd760b2552a4e01c99dc5d528ac",
-    "scripts/task070_matmcd.py": "c272b08e74cb455a5b781a0374f4d6d155cd8f84370677226534f34e77c57430",
+    "scripts/task070_matmcd.py": "6ae06a2d6b1b616481e575b5cb7f2129f1a5ec7f5666d56c38231ffa2b5c068e",
     "scripts/task070_metrics.py": "60816f55d87f7486ce3f0907cb68cd0f9bbcc1ac5b974f5fe49ef846ea191ead",
     "scripts/task070_output_head.py": "ee8ffbc642c4e731e606b559d5fbca7d563e5105b9deabe2fcdec75f6c2374c0",
     "scripts/task070_p1_check.py": "1507dcc37048b6b3f807d5bd52a1db1288f71084e3178a194ea8598966193089",
-    "scripts/task070_pilot.py": "ccab22c9119bafad6bda59f53835f40497a13ae0f92e62dd30ef48d3fd658ca7",
+    "scripts/task070_pilot.py": "a1fec2a7c86611038142ff012ffe358d759ff05a93cac8ee33e2c3e62ec000cc",
     "scripts/task070_rcaeval.py": "c5f875b84eb965a02729d1b078c8a83b83736cbb8aa7803d9592c60adef61bf8",
     "scripts/task070_retrieval.py": "88a6cf988f3e8decd64181c0f5b3b02334bba25451fa247ae5a572803508f453",
     "scripts/task070_retrieval_eval.py": "8fb8036ffaa3f53b280bfce689827531b011d73ba02d14f1cd93b112e3edb781",
     "scripts/task070_state_retriever.py": "2002761c9ce2db780e3e16ea3b9414fcad587542cec50ae390949dbbe049f493",
     "scripts/task070_web_snapshot.py": "41282dab5787a4f26e8b4d573ec0353f271e5be21dfc6f8d6ed3100946144def",
-    "configs/task070_decisions.json": "3833f5e84c260d799b72ab3b0e7a0b791bfd8c4dc097b16b6e32a240c6dd674c",
+    "configs/task070_decisions.json": "d4821f9c6732801056b06a9700c3ab91f7187f8b86c61e12a2ae7068992d3585",
     "configs/task070_testset.json": "f7201b10e29c7d1bf02b7284aa089b3e86378c841b1c50570a1b49d95f673621"
   }
 }

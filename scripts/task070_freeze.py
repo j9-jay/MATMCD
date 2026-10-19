@@ -11,15 +11,22 @@ import task070_judge as tj
 import task070_retrieval as tr
 import task070_state_retriever as ts
 from project_paths import PROJECT
-from task070_common import sha256_file, write_json
+from task070_common import write_json
 
 OUT = PROJECT / "configs/task070_frozen.json"
 FILES = sorted([p for p in (PROJECT / "scripts").glob("task070_*.py") if p.name != "task070_freeze.py"]) + [
     PROJECT / "configs/task070_decisions.json", PROJECT / "configs/task070_testset.json"]
 
 
+def _normalized_sha256(path):
+    """Hash with CRLF -> LF so a Git checkout that rewrites line endings does not
+    look like a content change."""
+    import hashlib
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+
+
 def current_hashes():
-    return {p.relative_to(PROJECT).as_posix(): sha256_file(p) for p in FILES}
+    return {p.relative_to(PROJECT).as_posix(): _normalized_sha256(p) for p in FILES}
 
 
 def verify_frozen():
@@ -49,6 +56,7 @@ def main():
         "failure_scoring": ("A failed case-method run (no complete ranking) is scored as all candidates tied "
                             "(expected value under random order) and the failure count is reported."),
         "dev_results_head_B": "MATMCD_DATA/task070/head_b/dev_20261019T115801Z",
+        "sha256_line_ending_normalized": True,
         "sha256": current_hashes(),
     })
     print(OUT)
