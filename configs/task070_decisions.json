@@ -86,6 +86,11 @@
     "D-11_repetition": {
       "rwr": "그래프 고정 후 seed 0..19로 20회 반복(scripts/task070_output_head.py)",
       "llm": "G1 실측 후 결정"
+    },
+    "MATMCD_rag_heading": {
+      "choice": "accept_heading_variant",
+      "detail": "'Relationships between the nodes:' 등 대소문자·the 변형을 TASK_051 제목 보정과 같은 방식으로 인식. 본문 무변경",
+      "status": "DECIDED_2026-10-19"
     }
   },
   "web_search": {
@@ -114,5 +119,13 @@
     "z_threshold": 3.0,
     "top_trace_operations": 40,
     "note": "이상 표시는 각 사례 처음 5분 대비(정답 미사용). 전체 구간 z는 절반 구간 수준 변화를 |z|≈1로 가려 쓰지 않음"
+  },
+  "output_heads": {
+    "decided_kst": "2026-10-19",
+    "authorization": "사용자 결정: 주 출력부 B, A는 보조 분석, MATMCD RAG 제목 변형 허용",
+    "primary_B": "사례 단위 근거 검색 → LLM이 후보 서비스 전체 순위를 직접 출력(근거 인용). 모든 검색 방법이 같은 출력부 B를 쓰고 검색만 다르다",
+    "auxiliary_A": "쌍별 Yes/No → 제약 PC → 그래프 → RWR (기존 공통 출력부). 보조 분석으로 함께 보고",
+    "core_comparison": "제안 방법(상태 기반 동적) vs flat RAG, ablation: 역할 필터만·상태 고정. PC만·MATMCD·검색 없는 LLM은 참고 기준선",
+    "category_2": "인과 그래프를 내야 하므로 출력부 A 사용"
   }
 }

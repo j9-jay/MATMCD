@@ -13,6 +13,7 @@ released graph-prompt behaviour (D03 A). Services without logs get the approved
 D01 absence notice. No retries, truncation or fallbacks; failures are recorded.
 """
 import json
+import re
 import time
 
 import numpy as np
@@ -30,6 +31,16 @@ OFFICIAL = ["ConstrainAgent/LLMs.py", "ConstrainAgent/ConstrainAgent.py", "confi
 POLICY = json.loads((PROJECT / "configs/rca_log_policy.json").read_text(encoding="utf-8"))
 KPI_NOTICE = ("This is an input KPI column (p90 request latency of the frontend), not a service. "
               "No service event log is assigned to this column.")
+
+
+_REL_HEADING = re.compile(r"(?mi)^\s*relationships between (?:the )?nodes\s*:\s*$")
+
+
+def _accept_relationship_heading(raw):
+    """User decision 2026-10-19: accept heading variants such as 'Relationships between
+    the nodes:' as the TASK_051 global-relationship heading. Only the heading line is
+    rewritten; no body text changes."""
+    return _REL_HEADING.sub("Relationships between Nodes:", raw)
 
 
 def _check_sources():
@@ -106,7 +117,9 @@ def run_case(case, directory, encoder, rwr):
         raw = web["generate_dataset_summary"](case["id"], labels, database_path=str(directory / "summaries"),
                                               output_dir=None)
         (directory / "rag_original.txt").write_text(raw, encoding="utf-8")
-        canonical, _, _, audit = normalize_rag_response(raw, labels)
+        heading_fixed = _accept_relationship_heading(raw)
+        canonical, _, _, audit = normalize_rag_response(heading_fixed, labels)
+        audit["relationship_heading_variant_accepted"] = heading_fixed != raw
         data_info, parsed = web["split_summary_into_sub_questions"](canonical)
         missing = [s for s in tables if s not in parsed]
         if missing:
