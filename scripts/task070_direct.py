@@ -24,10 +24,14 @@ import numpy as np
 
 from task070_state_retriever import KPI_LABEL, _calls, _first_deviation
 
-PROMPT_VERSION = "task070_direct_v1"
+PROMPT_VERSION = "task070_direct_v3"
+# v2 (dev): 14 of 50 case-method runs still hit 4096 tokens at temperature 0; v3 adds
+# presence_penalty 1.5, the setting approved for long LEMMA explanations (TASK_052).
+# v1 (dev): max_tokens 1536 was exhausted on the first flat case (finish_reason=length);
+# v2 raises the budget and caps the justification length.
 K_DIRECT = 24
 ORDER_REPEATS = 3
-SAMPLING = {"temperature": 0.0, "seed": 42, "max_tokens": 1536}
+SAMPLING = {"temperature": 0.0, "seed": 42, "max_tokens": 4096, "presence_penalty": 1.5}
 STATE_BUDGET = {"SYMPTOM": 4, "STRUCTURE": 4, "CANDIDATES": 8, "VERIFY": 8}
 FLAT_QUERY = ("Which service caused the incident that increased frontend latency? Errors, failures, "
               "abnormal resource usage, slow or failing calls.")
@@ -40,7 +44,7 @@ Candidate root-cause services: {candidates}
 Evidence:
 {evidence}
 
-Task: Rank ALL candidate services from most to least likely root cause of the incident. Briefly justify the top three, citing evidence ids such as [E1]. On the last line write the full ranking exactly as:
+Task: Rank ALL candidate services from most to least likely root cause of the incident. Justify the top three in at most five short sentences in total, citing evidence ids such as [E1]. On the last line write the full ranking exactly as:
 RANKING: service > service > ... (every candidate exactly once)"""
 
 PLANNER_SYSTEM = "You plan evidence retrieval for diagnosing a microservice incident. Reply with JSON only."

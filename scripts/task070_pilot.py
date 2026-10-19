@@ -2,7 +2,8 @@
 
 Starts the pinned local llama-server, runs the shared judgment for every ordered
 pair with each method, applies the shared output head, and stops the server.
-Development split only. All requests/responses are written to disk.
+Development split by default; --split test runs only after the G2 freeze and testset checks.
+All requests/responses are written to disk.
 
 Usage (pinned WSL env): python -B task070_pilot.py --cases 2 --methods none flat
 """
@@ -95,12 +96,17 @@ def run_case(method, case, units, labels, client, retriever, out_dir, state_retr
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--cases", type=int, default=2)
-    parser.add_argument("--start", type=int, default=0, help="offset into the development cases")
+    parser.add_argument("--start", type=int, default=0, help="offset into the cases of the split")
+    parser.add_argument("--split", choices=["dev", "test"], default="dev")
     parser.add_argument("--methods", nargs="+", default=["none", "flat"])
     args = parser.parse_args()
-    out = WORK / "p2_pilot" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    out = WORK / ("p2_pilot" if args.split == "dev" else "head_a_test") / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     out.mkdir(parents=True)
-    cases = rc.cases("dev")[args.start: args.start + args.cases]
+    if args.split == "test":
+        rc.verify_testset()
+        from task070_freeze import verify_frozen
+        verify_frozen()
+    cases = rc.cases(args.split)[args.start: args.start + args.cases]
     retriever = None
     if "flat" in args.methods or "matmcd" in args.methods or any(m in STATE_VARIANTS for m in args.methods):
         from local_embedding import DenseBGE

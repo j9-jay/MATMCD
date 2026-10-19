@@ -32,13 +32,15 @@ def main():
     args = parser.parse_args()
     if args.split == "test":
         rc.verify_testset()
+        from task070_freeze import verify_frozen
+        verify_frozen()
     cases = rc.cases(args.split)[args.start: args.start + args.cases]
     out = WORK / "head_b" / f"{args.split}_{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}"
     out.mkdir(parents=True)
     from local_embedding import DenseBGE
     flat = FlatRetriever(DenseBGE())
     proc, log = start_server(out / "server.log")
-    client = LocalLLMClient(max_tokens=td.SAMPLING["max_tokens"], seed=td.SAMPLING["seed"], sampling={"presence_penalty": 0.0})
+    client = LocalLLMClient(max_tokens=td.SAMPLING["max_tokens"], seed=td.SAMPLING["seed"], sampling={"presence_penalty": td.SAMPLING["presence_penalty"]})
     selector = td.DirectSelector(flat, client)
     summary = {"prompt_version": td.PROMPT_VERSION, "k": td.K_DIRECT, "order_repeats": td.ORDER_REPEATS,
                "split": args.split, "cases": [c["id"] for c in cases], "methods": {m: [] for m in args.methods}}
@@ -49,15 +51,26 @@ def main():
             services = labels[:-1]
             for method in args.methods:
                 started = time.monotonic()
-                evidence, info = selector.select(method, case["id"], units, services)
-                mean_pos, runs = td.judge(client, CONTEXT, services, evidence, case["id"])
+                try:
+                    evidence, info = selector.select(method, case["id"], units, services)
+                    mean_pos, runs = td.judge(client, CONTEXT, services, evidence, case["id"])
+                except Exception as error:  # recorded as a failed case; no retry
+                    row = {"case": case["id"], "status": "FAILED", "error": f"{type(error).__name__}: {error}"}
+                    last = (client.last_response or {}).get("choices", [{}])[0].get("message", {}).get("content")
+                    fdir = out / method / "failed"
+                    fdir.mkdir(parents=True, exist_ok=True)
+                    (fdir / f"{case['id']}.txt").write_text(last or "", encoding="utf-8")
+                    summary["methods"][method].append(row)
+                    write_json(out / "summary.json", summary)
+                    print(method, row, flush=True)
+                    continue
                 seconds = time.monotonic() - started
                 answer = rc.evaluation_label(case["path"])["root_cause_service"]
                 metrics = tm.rca_case_metrics_tie_aware(services, [-mean_pos[s] for s in services], answer, "__none__")
                 gold = silver(units, answer)
                 ev_ids = [u["id"] for u in evidence]
                 cited = [c for r in runs for c in r["cited_unit_ids"]]
-                row = {"case": case["id"], "seconds": seconds, **{k: metrics[k] for k in ("AC@1", "AC@3", "AC@5", "Avg@5", "RR")},
+                row = {"case": case["id"], "status": "COMPLETE", "seconds": seconds, **{k: metrics[k] for k in ("AC@1", "AC@3", "AC@5", "Avg@5", "RR")},
                        "silver_precision": float(np.mean([e in gold for e in ev_ids])) if ev_ids else None,
                        "silver_recall": float(len(gold & set(ev_ids)) / len(gold)) if gold and ev_ids else None,
                        "attribution_precision": float(np.mean([c in gold for c in cited])) if cited else None,
