@@ -36,8 +36,8 @@
 | 1 | 출력부 B 평가: `task070_direct_run.py --split test --cases 30` | `MATMCD_DATA/task070/head_b/test_20261019T121820Z` | **완료·분석 완료**(TASK_070 기록). 상태 동적 vs flat 유의차 없음 |
 | 2 | 카테고리 2 1차: `task070_causal_run.py` | `causal_run/20261019T153123Z`, 로그 `queue_cat2.log` | **무효**: AutoMPG flat 도중 llama-server `CUDA error: unknown error`(ggml_backend_cuda_synchronize)로 종료. 이후 쌍은 연결 오류로 No 처리, state_dynamic 계획 호출에서 중단. 원인 UNKNOWN. 폴더는 보존 |
 | 3 | 출력부 A 1차: `task070_pilot.py --split test --cases 30 --methods pc_only none flat role_only state_fixed state_dynamic matmcd` | `head_a_test/20261019T153640Z`, 로그 `queue_head_a.log` | pc_only·none·flat·role_only 30사례 완료, state_fixed 13사례 완료 후 14번째(인덱스 13) `ob-06a2cff32f`에서 `finish_reason=length`로 중단 |
-| 4 | 카테고리 2 재실행(2026-10-21 사용자 승인, 새 폴더) | `causal_run/<새 시각>`, 로그 `queue_cat2_rerun.log` | 진행 중 |
-| 5 | 출력부 A state_fixed 이어 실행: `--start 14 --cases 16 --methods state_fixed` | `head_a_test/<새 시각>`, 로그 `queue_head_a_state_fixed_from14.log` | 대기(4 다음) |
+| 4 | 카테고리 2 재실행(2026-10-21 사용자 승인, 새 폴더) | `causal_run/20261020T153400Z`, 로그 `queue_cat2_rerun.log` | **완료**(실패 쌍 0, 결과는 TASK_070) |
+| 5 | 출력부 A state_fixed 이어 실행: `--start 14 --cases 16 --methods state_fixed` | `head_a_test/<새 시각>`, 로그 `queue_head_a_state_fixed_from14.log` | 진행 중 |
 | 6 | 출력부 A state_dynamic·matmcd: `--start 0 --cases 30 --methods state_dynamic matmcd` | `head_a_test/<새 시각>`, 로그 `queue_head_a_dynamic_matmcd.log` | 대기(5 다음) |
 
 - 첫 대기열은 `pgrep -f task070_direct_run.py`가 대기열 셸 자신의 명령줄과 일치해 끝없이 대기했다. 이후 대기 조건 없이 순차 실행한다.
