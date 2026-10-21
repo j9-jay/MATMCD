@@ -37,8 +37,10 @@
 | 2 | 카테고리 2 1차: `task070_causal_run.py` | `causal_run/20261019T153123Z`, 로그 `queue_cat2.log` | **무효**: AutoMPG flat 도중 llama-server `CUDA error: unknown error`(ggml_backend_cuda_synchronize)로 종료. 이후 쌍은 연결 오류로 No 처리, state_dynamic 계획 호출에서 중단. 원인 UNKNOWN. 폴더는 보존 |
 | 3 | 출력부 A 1차: `task070_pilot.py --split test --cases 30 --methods pc_only none flat role_only state_fixed state_dynamic matmcd` | `head_a_test/20261019T153640Z`, 로그 `queue_head_a.log` | pc_only·none·flat·role_only 30사례 완료, state_fixed 13사례 완료 후 14번째(인덱스 13) `ob-06a2cff32f`에서 `finish_reason=length`로 중단 |
 | 4 | 카테고리 2 재실행(2026-10-21 사용자 승인, 새 폴더) | `causal_run/20261020T153400Z`, 로그 `queue_cat2_rerun.log` | **완료**(실패 쌍 0, 결과는 TASK_070) |
-| 5 | 출력부 A state_fixed 이어 실행: `--start 14 --cases 16 --methods state_fixed` | `head_a_test/<새 시각>`, 로그 `queue_head_a_state_fixed_from14.log` | 진행 중 |
-| 6 | 출력부 A state_dynamic·matmcd: `--start 0 --cases 30 --methods state_dynamic matmcd` | `head_a_test/<새 시각>`, 로그 `queue_head_a_dynamic_matmcd.log` | 대기(5 다음) |
+| 5 | 출력부 A state_fixed 이어 실행: `--start 14 --cases 16 --methods state_fixed` | `head_a_test/20261020T172020Z`, 로그 `queue_head_a_state_fixed_from14.log` | **완료**(16사례) |
+| 6 | 출력부 A state_dynamic·matmcd: `--start 0 --cases 30 --methods state_dynamic matmcd` | `head_a_test/20261020T190645Z`, 로그 `queue_head_a_dynamic_matmcd.log` | **완료**(MATMCD 실패 4) |
+
+- **모든 평가 실행 완료(2026-10-22).** 출력부 A 합산 분석: `head_a_test/analysis_merged.json`(TASK_070 기록). 남은 일은 5절의 보고서 작성과 해석 검토.
 
 - 첫 대기열은 `pgrep -f task070_direct_run.py`가 대기열 셸 자신의 명령줄과 일치해 끝없이 대기했다. 이후 대기 조건 없이 순차 실행한다.
 - 출력부 A 실행기는 사례 실패 시 멈춘다(실패 처리 없음). 동결 실패 규칙(2026-10-21 사용자 확인)대로 state_fixed `ob-06a2cff32f`는 후보 전체 동점으로 채점하고, 15번째 사례부터 이어 실행해 결과를 합친다. 같은 방식으로 다른 사례가 실패하면 다시 멈추므로 그때마다 보고한다.
@@ -47,9 +49,9 @@
 
 ## 5. 남은 작업
 
-1. 출력부 B 평가 결과 분석: 방법별 AC@k·Avg@5·RR, 근거 정밀도·재현율·인용 정밀도, 실패 수(실패 = 모든 후보 동점으로 채점), **사례 단위 paired bootstrap/permutation 검정**(state_dynamic vs flat 중심).
-2. 카테고리 2 결과 분석(그래프 지표 Prc·F1·FPR·SHD·NHD, MATMCD 표 1·2와 참고 비교).
-3. 출력부 A 평가 결과 분석(보조), MATMCD 참고값.
+1. ~~출력부 B 분석~~ 완료(#13). ~~카테고리 2 분석~~ 완료(#15). ~~출력부 A 분석~~ 완료(#16).
+2. **결과 해석 검토(사용자와):** 세 평가 모두 제안 방법(state_dynamic)이 flat RAG보다 유의하게 낫지 않음. 근거 정밀도·재현율 이득(출력부 B)만 유지. 논문 주장을 어떻게 세울지 결정 필요.
+3. MATMCD 카테고리 2 참고 기준선(T7, DA-AGENT 이식) — 미실행.
 4. 결과 보고서(T10) 작성 후 PR. 연구계획서 보완점은 [로드맵](RESEARCH_ROADMAP.md) 끝에 있음.
 5. 백로그: R11 일반 QA(MuSiQue/HotpotQA), R12 OpenRCA, R14 RE2-SS.
 
