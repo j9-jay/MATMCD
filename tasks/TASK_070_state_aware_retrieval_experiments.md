@@ -165,6 +165,21 @@
   - 상태 방법은 Yes 판단이 flat보다 많고(61.7~63.9 vs 55.1) 간선도 많다. 개발 단계 가설(Yes 증가가 제약 그래프로 증폭)과 일치하는 관찰.
   - MATMCD 참고 기준선은 PC만보다 Avg@5가 높다(0.407 vs 0.369, 검정은 하지 않음). 실패 4건: 노드 제목 인식 실패 3건(`currencyservice`, `checkoutservice`, `relationships between the nodes`), RAG 요약에 로그 있는 서비스 누락 1건(`adservice`). 응답 원문은 실행 폴더에 보존.
   - state_fixed `ob-06a2cff32f`는 판단 출력 한도 초과로 동점 채점.
+- [~] **카테고리 2 MATMCD 참고 기준선 (T7 일부, 2026-10-22~24)** — [task070_matmcd_causal.py](../scripts/task070_matmcd_causal.py). 공식 `GTdatasets_experiment.py` 순서(PC → 정보 없는 CC-agent → DA-agent 웹 수집(Serper, loop 5) → 요약 → MATMCD → MATMCD-R)를 공식 함수 그대로 실행하고, 승인된 대체(로컬 Qwen, BGE-M3 CPU)만 주입. 카테고리 2 결과를 본 뒤 추가한 실행이다(참고 기준선이며 제안 방법 조건은 바꾸지 않음).
+  - 사용자 결정(2026-10-22): **웹 검색은 논문대로 실시간 Serper.** A안 — (1) 공식 질의 프롬프트는 `Search Query:` 형식을 요구하는데 공식 파서는 `Search Question`을 찾아 검색이 0회가 되므로 해당 줄 머리만 바꿔 인식(원문·보정본 기록), (2) MATMCD·MATMCD-R 설명은 공식 스크립트가 없는 캐시를 읽으므로 새로 생성. (3) 공식 검색기는 검색마다 새 벡터 저장소를 전제(`link_list.index`)하는데 설치된 chromadb 1.0.11(공식 requirements 미고정)은 프로세스 안에서 저장소를 공유해 2회차 검색이 실패했다(실행 `matmcd_causal/20261022T093804Z`, 보존). 검색마다 새 저장소를 쓰도록 보정(사용자 승인).
+  - 실행 `matmcd_causal/20261022T125248Z` 결과 (F1 / SHD):
+
+    | 데이터셋 | PC만 | CC-agent(정보 없음) | MATMCD | MATMCD-R |
+    |---|---|---|---|---|
+    | AutoMPG | 0.143 / 8 | 0.667 / 3 | 0.667 / 3 | 실패 |
+    | DWD | 0.154 / 9 | 0.600 / 4 | 0.222 / 7 | 실패 |
+    | Sachs | 0.444 / 24 | 0.167 / 24 | 미완료 | 미완료 |
+    | Asia·Child | 미실행 | 미실행 | 미실행 | 미실행 |
+
+  - MATMCD-R은 두 데이터셋 모두 추론 응답이 `<yes>`/`<no>`로 끝나지 않아 승인된 형식 보정(re_gp_boundary_v1)으로도 경계를 정하지 못해 실패(`REFormatError`). 재시도 없음.
+  - **Sachs에서 중단(2026-10-24 사용자 결정).** DA-agent 검색 단계는 AutoMPG·DWD에서 검색당 1~2분이었으나 Sachs는 검색 1에서 약 2시간, 검색 5의 웹페이지 임베딩(BGE-M3, CPU FP32 batch 1)에서 25시간 넘게 진행되지 않았고 메모리(7.9GB 중 7.0GB)가 거의 찼다. 검색 결과에 긴 문서(논문 PDF·학위논문 저장소 등)가 섞여 조각 수가 크게 늘어난 것으로 보이나 조각 수는 확인하지 못했다(추정). Sachs는 CC-agent 단계까지 완료, Asia·Child는 미실행. Serper 사용 15회(AutoMPG 5, DWD 5, Sachs 5) + 실패 실행 2회.
+  - 공식 MATMCD 검색에는 누출 검사가 없다. Sachs 검색 결과에 정답 네트워크를 설명하는 bnlearn Sachs 페이지가 포함됐다(우리 방법들의 웹 스냅샷은 이런 페이지를 차단). 비교 시 이 차이를 밝힌다.
+  - 해석 한계: 두 데이터셋뿐이며 MATMCD는 AutoMPG에서 CC-agent와 같고 DWD에서는 더 나쁘다. 논문 표 1의 MATMCD 우위는 이 환경에서 확인되지 않았다(모델·임베딩 대체 포함).
 - [ ] T6 기준선: PC만, 검색 없는 LLM, flat RAG (평가 실행은 G2 이후)
 - [ ] T7 MATMCD 참고 기준선 (두 카테고리)
 - [ ] T8 사용자 방법과 ablation (상태 유무, 역할 태그 유무, 고정 vs 동적 상태)
