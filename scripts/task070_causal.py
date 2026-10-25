@@ -45,8 +45,11 @@ def load(name):
         os.chdir(cwd)
 
 
+CORPUS_DIR = "causal_v2"  # 2026-10-25: whole-page web snapshot v2 (v1 "causal" kept 22% of crawled text)
+
+
 def corpus(name):
-    path = WORK / "corpus/causal" / f"{name}.jsonl"
+    path = WORK / "corpus" / CORPUS_DIR / f"{name}.jsonl"
     return [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines()]
 
 

@@ -71,7 +71,8 @@ def screen(url, text):
     return None
 
 
-def passages(text):
+def passages(text, limit=MAX_PASSAGES_PER_PAGE):
+    """limit=None keeps the whole page (snapshot v2)."""
     words, out, current = text.split(), [], ""
     for word in words:
         if len(current) + len(word) + 1 > PASSAGE_CHARS:
@@ -81,7 +82,44 @@ def passages(text):
             current = f"{current} {word}".strip()
     if current:
         out.append(current)
-    return out[:MAX_PASSAGES_PER_PAGE]
+    return out if limit is None else out[:limit]
+
+
+OUT_V2 = WORK / "web_snapshot_v2"
+
+
+def recrawl_full():
+    """Snapshot v2 (2026-10-25 data audit): v1 kept only the first MAX_PASSAGES_PER_PAGE
+    passages of each page (22% of the crawled text). Re-crawl the same top CRAWL_PER_QUERY
+    links of the v1 Serper results (no new searches) and keep every passage. Same crawler
+    and pre-collection screen."""
+    crawler = import_official("matmcd_web_crawler", "web_utils/web_crawler.py").WebScraper()
+    OUT_V2.mkdir(parents=True, exist_ok=True)
+    out_path = OUT_V2 / "pages.jsonl"
+    done = {json.loads(l)["q"] for l in out_path.read_text(encoding="utf-8").splitlines()} if out_path.exists() else set()
+    searches = [json.loads(l) for l in (OUT / "search.jsonl").read_text(encoding="utf-8").splitlines()]
+    with out_path.open("a", encoding="utf-8") as page_log:
+        for query in searches:
+            if query["q"] in done:
+                continue
+            organic = query.pop("organic")
+            query.pop("credits", None)
+            for hit in organic[:CRAWL_PER_QUERY]:
+                url = hit.get("link", "")
+                try:
+                    text = crawler.scrape_url(url, 0)
+                except Exception as exc:  # recorded, not retried
+                    text, error = "", f"{type(exc).__name__}"
+                else:
+                    error = None
+                reason = screen(url, f"{hit.get('title', '')} {hit.get('snippet', '')} {text}")
+                page_log.write(json.dumps({**query, "url": url, "title": hit.get("title"), "error": error,
+                                           "excluded": reason, "chars": len(text),
+                                           "passages": [] if reason or not text else passages(text, None)},
+                                          ensure_ascii=False) + "\n")
+    write_json(OUT_V2 / "summary.json", {"finished_utc": datetime.now(timezone.utc).isoformat(),
+                                         "source": "v1 search.jsonl (no new Serper queries)",
+                                         "crawl_per_query": CRAWL_PER_QUERY, "passage_limit": None})
 
 
 def collect():
@@ -151,13 +189,17 @@ def readable(passage):
     return letters / max(1, len(passage)) >= 0.8
 
 
-def build_corpus():
+def build_corpus(snapshot=OUT, corpus_dir="causal", exclude_audited=False):
     """Kept passages -> per-dataset evidence units. Role tags: 'definition' units come
     from single-variable queries, 'relation' units from variable-pair queries; the
     variables field lists dataset variables named in the passage text (shared content,
-    metadata used only by the proposed method)."""
-    rows = [json.loads(l) for l in (OUT / "pages.jsonl").read_text(encoding="utf-8").splitlines()]
+    metadata used only by the proposed method).
+
+    v2 (exclude_audited=True): full pages are much longer, so a page matching a
+    post-collection audit pattern is excluded and listed instead of aborting the build."""
+    rows = [json.loads(l) for l in (snapshot / "pages.jsonl").read_text(encoding="utf-8").splitlines()]
     audit = {k: [] for k in POST_AUDIT_PATTERNS}
+    excluded_audited = []
     units = {name: [] for name in THEMES}
     dropped = {"unreadable": 0}
     seen = {name: set() for name in THEMES}
@@ -165,9 +207,12 @@ def build_corpus():
         if not row["passages"]:
             continue
         joined = " ".join(row["passages"])
-        for key, pattern in POST_AUDIT_PATTERNS.items():
-            if re.search(pattern, joined, re.IGNORECASE):
-                audit[key].append(row["url"])
+        hits = [key for key, pattern in POST_AUDIT_PATTERNS.items() if re.search(pattern, joined, re.IGNORECASE)]
+        if hits and exclude_audited:
+            excluded_audited.append({"url": row["url"], "dataset": row["dataset"], "patterns": hits})
+            continue
+        for key in hits:
+            audit[key].append(row["url"])
         labels = variables(row["dataset"])
         for passage in row["passages"]:
             if passage in seen[row["dataset"]]:
@@ -184,11 +229,12 @@ def build_corpus():
     if any(audit.values()):
         raise SystemExit(f"Post-collection audit found ground-truth network pages: { {k: v for k, v in audit.items() if v} }")
     for name, items in units.items():
-        path = WORK / "corpus/causal" / f"{name}.jsonl"
+        path = WORK / "corpus" / corpus_dir / f"{name}.jsonl"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("".join(json.dumps(u, ensure_ascii=False) + "\n" for u in items), encoding="utf-8")
-    write_json(OUT / "corpus_summary.json", {"units_per_dataset": {k: len(v) for k, v in units.items()},
+    write_json(snapshot / "corpus_summary.json", {"units_per_dataset": {k: len(v) for k, v in units.items()},
                                              "post_audit": {k: len(v) for k, v in audit.items()},
+                                             "excluded_by_post_audit": excluded_audited,
                                              "dropped_passages": dropped,
                                              "pre_collection_exclusions": [r["excluded"] for r in rows if r["excluded"]]})
     return {k: len(v) for k, v in units.items()}
@@ -199,7 +245,15 @@ def main():
     parser.add_argument("--plan", action="store_true")
     parser.add_argument("--collect", action="store_true")
     parser.add_argument("--build-corpus", action="store_true")
+    parser.add_argument("--recrawl-full", action="store_true", help="snapshot v2: same links, whole pages")
+    parser.add_argument("--build-corpus-v2", action="store_true")
     args = parser.parse_args()
+    if args.recrawl_full:
+        recrawl_full()
+        return
+    if args.build_corpus_v2:
+        print(build_corpus(OUT_V2, "causal_v2", exclude_audited=True))
+        return
     if args.plan:
         queries = planned_queries()
         by = {}
