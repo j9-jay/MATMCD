@@ -17,7 +17,8 @@ from pathlib import Path
 import numpy as np
 
 RANK_KEYS = ["AC@1", "AC@3", "AC@5", "Avg@5", "RR"]
-EVIDENCE_KEYS = ["silver_precision", "silver_recall", "attribution_precision"]
+EVIDENCE_KEYS = ["silver_precision", "silver_recall", "attribution_precision",
+                 "strict_precision", "strict_recall", "strict_attribution_precision"]
 PROPOSED = "state_dynamic"
 SEED = 0
 
@@ -66,7 +67,7 @@ def main():
         entry["failed"] = len(cases) - len(done)
         entry["failed_cases"] = [c for c in cases if rows[c]["status"] != "COMPLETE"]
         for k in EVIDENCE_KEYS:
-            vals = [r[k] for r in done if r[k] is not None]
+            vals = [r[k] for r in done if r.get(k) is not None]
             entry[k] = float(np.mean(vals)) if vals else None
             entry[f"{k}_n"] = len(vals)
         entry["missing_names"] = int(sum(r["missing_names"] for r in done))

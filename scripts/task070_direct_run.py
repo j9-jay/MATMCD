@@ -23,6 +23,14 @@ def silver(units, root):
     return {u["id"] for u in units if u["role"] == "observation" and root in u["services"] and u["minutes"]}
 
 
+def silver_strict(units, root):
+    """Stricter variant (added 2026-10-25): only root-service units that mark an anomaly,
+    i.e. metric/KPI series with flagged minutes or error spans. In silver(), log and trace
+    units count whenever the service logged at all, so they are not anomaly evidence."""
+    return {u["id"] for u in units if root in u["services"] and u["minutes"]
+            and u["kind"] in ("metric", "kpi", "trace_error")}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--split", choices=["dev", "test"], default="dev")
@@ -68,12 +76,16 @@ def main():
                 answer = rc.evaluation_label(case["path"])["root_cause_service"]
                 metrics = tm.rca_case_metrics_tie_aware(services, [-mean_pos[s] for s in services], answer, "__none__")
                 gold = silver(units, answer)
+                strict = silver_strict(units, answer)
                 ev_ids = [u["id"] for u in evidence]
                 cited = [c for r in runs for c in r["cited_unit_ids"]]
                 row = {"case": case["id"], "status": "COMPLETE", "seconds": seconds, **{k: metrics[k] for k in ("AC@1", "AC@3", "AC@5", "Avg@5", "RR")},
                        "silver_precision": float(np.mean([e in gold for e in ev_ids])) if ev_ids else None,
                        "silver_recall": float(len(gold & set(ev_ids)) / len(gold)) if gold and ev_ids else None,
                        "attribution_precision": float(np.mean([c in gold for c in cited])) if cited else None,
+                       "strict_precision": float(np.mean([e in strict for e in ev_ids])) if ev_ids else None,
+                       "strict_recall": float(len(strict & set(ev_ids)) / len(strict)) if strict and ev_ids else None,
+                       "strict_attribution_precision": float(np.mean([c in strict for c in cited])) if cited else None,
                        "missing_names": sum(len(r["missing"]) for r in runs)}
                 summary["methods"][method].append(row)
                 mdir = out / method
