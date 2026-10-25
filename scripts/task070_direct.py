@@ -12,9 +12,10 @@ Methods (identical judge prompt; only evidence selection differs)
 - role_only: same role budget as the state methods (structure / observation) but
   observation units picked by the flat query, no states.
 - state_fixed: reasoning states SYMPTOM -> STRUCTURE -> CANDIDATES -> VERIFY with
-  VERIFY on the services whose first deviation is earliest.
-- state_dynamic: an LLM planner reads a label-free overview (deviation onsets per
-  service, call edges) and chooses which candidates to verify and the state order.
+  VERIFY on the three services with the largest deviation strength (flagged
+  metric-minutes; STATE_DEV_V2, was: earliest first deviation).
+- state_dynamic: an LLM planner reads a label-free overview (deviation strength and
+  onset per service, call edges) and chooses which candidates to verify and the state order.
 """
 import json
 import random
@@ -48,29 +49,56 @@ Task: Rank ALL candidate services from most to least likely root cause of the in
 RANKING: service > service > ... (every candidate exactly once)"""
 
 PLANNER_SYSTEM = "You plan evidence retrieval for diagnosing a microservice incident. Reply with JSON only."
+# STATE_DEV_V2 iteration 1 (30 dev cases, 2026-10-25): the v1 planner chose exactly frontend,
+# checkoutservice and currencyservice for VERIFY in 25 of 30 cases regardless of the case (root in VERIFY
+# 13/30), and the earliest-onset rule (state_fixed) put the root-cause service in VERIFY in only 10 of the
+# 26 completed cases: one noisy early
+# deviation (minutes 5-9) outranks a sustained one. v2 orders services by a label-free deviation
+# strength (flagged metric-minutes summed over the service's metric units, see deviation_strength)
+# and shows it to the planner; CANDIDATES/VERIFY of state_fixed use the same order.
+# STATE_DEV_V2 iteration 2 (REJECTED, reverted): excluding the symptom service frontend from VERIFY
+# lowered state_dynamic from 0.925 to 0.883 on the 30 dev cases.
+# STATE_DEV_V2 iteration 3 (REJECTED, reverted): state pools excluding units an earlier state chose,
+# and unused budget filled round-robin with further VERIFY units before the flat query. state_fixed rose
+# 0.892 -> 0.962 but state_dynamic fell 0.925 -> 0.898 (emailservice -0.133).
+# STATE_DEV_V2 iteration 4 (REJECTED, reverted): iteration 3 + the strongest-deviation service always in
+# VERIFY, planner choosing up to two more. state_dynamic 0.920 (< 0.925); state_fixed 0.962.
+# Final STATE_DEV_V2 design = iteration 1.
 PLANNER_TEMPLATE = """Incident: frontend latency increased.
 
-Label-free overview of the evidence store:
+Label-free overview of the evidence store (services ordered by deviation strength = number of flagged metric-minutes summed over the service's metrics):
 {overview}
 
-Reasoning states: SYMPTOM (user-facing latency), STRUCTURE (call relations), CANDIDATES (services with early deviations), VERIFY (detailed logs/traces of chosen services).
+Reasoning states: SYMPTOM (user-facing latency), STRUCTURE (call relations), CANDIDATES (services with strong, sustained deviations), VERIFY (detailed metrics/logs/traces of chosen services).
 
 Choose up to three services to VERIFY and the order of states. Reply with JSON:
 {{"verify": ["service", ...], "states": ["SYMPTOM", "STRUCTURE", "CANDIDATES", "VERIFY"]}}"""
 
 
+def deviation_strength(units, service):
+    """Label-free: flagged metric-minutes and flagged metric count of one service (v2)."""
+    flagged = [u for u in units if service in u["services"] and u["kind"] == "metric" and u["minutes"]]
+    return sum(len(u["minutes"]) for u in flagged), len(flagged)
+
+
+def strength_order(services, strength, onsets):
+    return sorted(services, key=lambda x: (-strength[x][0], onsets[x] is None, onsets[x] or 0, x))
+
+
 def case_overview(units, services):
     lines = []
     onsets = {s: _first_deviation(units, s) for s in services}
-    for s in sorted(services, key=lambda x: (onsets[x] is None, onsets[x] if onsets[x] is not None else 0, x)):
-        lines.append(f"- {s}: first metric deviation at minute {onsets[s]}" if onsets[s] is not None
+    strength = {s: deviation_strength(units, s) for s in services}
+    for s in strength_order(services, strength, onsets):
+        lines.append(f"- {s}: {strength[s][0]} flagged metric-minutes over {strength[s][1]} metrics, "
+                     f"first deviation at minute {onsets[s]}" if onsets[s] is not None
                      else f"- {s}: no metric deviation flagged")
     kpi = _first_deviation(units, KPI_LABEL)
     lines.append(f"- frontend latency KPI: first deviation at minute {kpi}" if kpi is not None
                  else "- frontend latency KPI: no deviation flagged")
     edges = [f"{a}->{b}" for a in services for b in services if a != b and _calls(units, a, b)]
     lines.append("- calls: " + (", ".join(edges) if edges else "none observed"))
-    return "\n".join(lines), onsets
+    return "\n".join(lines), onsets, strength
 
 
 def parse_ranking(text, candidates):
@@ -111,10 +139,10 @@ class DirectSelector:
         if method == "role_only":
             s = self._rank(key, units, structure, FLAT_QUERY, STATE_BUDGET["STRUCTURE"])
             return s + self._rank(key, units, observation, FLAT_QUERY, K_DIRECT - len(s)), info
-        overview, onsets = case_overview(units, services)
-        early = [s for s in sorted(services, key=lambda x: (onsets[x] is None, onsets[x] or 0, x))
-                 if onsets[s] is not None][:3]
-        states, verify = ["SYMPTOM", "STRUCTURE", "CANDIDATES", "VERIFY"], early
+        overview, onsets, strength = case_overview(units, services)
+        order = strength_order(services, strength, onsets)  # v2: was earliest-onset order
+        strong = [s for s in order if strength[s][0] > 0][:3]
+        states, verify = ["SYMPTOM", "STRUCTURE", "CANDIDATES", "VERIFY"], strong
         if method == "state_dynamic":
             text = self.client.inquire_messages(
                 [{"role": "system", "content": PLANNER_SYSTEM},
@@ -142,9 +170,9 @@ class DirectSelector:
                 picked = structure[: STATE_BUDGET[state]]
             elif state == "CANDIDATES":
                 picked = []
-                for s in sorted(services, key=lambda x: (onsets[x] is None, onsets[x] or 0, x)):
+                for s in order:  # v2: strongest service first, its most-flagged metric (was earliest)
                     first = sorted([u for u in observation if s in u["services"] and u["kind"] == "metric" and u["minutes"]],
-                                   key=lambda u: min(u["minutes"]))
+                                   key=lambda u: (-len(u["minutes"]), min(u["minutes"]), u["id"]))
                     picked += first[:1]
                 picked = picked[: STATE_BUDGET[state]]
             elif state == "VERIFY":
