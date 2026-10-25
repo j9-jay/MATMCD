@@ -12,6 +12,8 @@ Units
 - log_template (observation): per (container, masked template), per-minute counts.
 - trace_perf (observation): per (service, operation), per-minute span count and
   p90 duration.
+- trace_error (observation): per (service, operation) with error spans, per-minute
+  error span counts and gRPC status codes.
 - call_graph (structure): per caller service, callee services and call counts
   derived from parent/child spans.
 """
@@ -26,7 +28,8 @@ from task070_common import WORK
 
 Z_THRESHOLD = 3.0
 BASELINE_SECONDS = 300
-TOP_OPERATIONS = 40
+TOP_OPERATIONS = 40  # every RE2-OB case has 37 operations, so nothing is cut (audit 2026-10-25)
+GRPC_CODES = {1: "CANCELLED", 2: "UNKNOWN", 4: "DEADLINE_EXCEEDED", 13: "INTERNAL", 14: "UNAVAILABLE"}
 
 
 _MASKS = [
@@ -155,6 +158,19 @@ def build_case_corpus(path):
                 f"{_fmt_minutes(per_min['p90_ms'])}.")
         add({"id": None, "role": "observation", "kind": "trace_perf", "services": [service],
              "minutes": [int(m) for m in per_min.index], "text": text})
+
+    # Span error status (gRPC code != 0). RCAEval's own multi-source inputs include trace
+    # errors (tracets_err.csv); trace_perf above carries only counts and latency, so error
+    # spans get their own unit per (service, operation). Added 2026-10-25 (data audit).
+    status = pd.to_numeric(traces["statusCode"], errors="coerce")
+    errors = traces[status.notna() & (status != 0)].assign(code=status.astype("Int64"))
+    for (service, operation), group in errors.groupby(["service", "operationName"]):
+        per_min = group.groupby("minute").size()
+        codes = ", ".join(f"{GRPC_CODES.get(int(c), 'code')}({int(c)})={n}" for c, n in group["code"].value_counts().items())
+        add({"id": None, "role": "observation", "kind": "trace_error", "services": [service],
+             "minutes": [int(m) for m in per_min.index],
+             "text": (f"Trace errors of operation {operation} of {service}: {len(group)} error spans "
+                      f"(status {codes}). Per-minute error spans: {_fmt_minutes(per_min, '{:d}')}.")})
 
     # The case directory name (service_fault) equals an ordinary metric column name
     # present in every case (e.g. checkoutservice_cpu), so only the full path is a leak.
