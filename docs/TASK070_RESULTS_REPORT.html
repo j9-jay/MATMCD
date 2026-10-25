@@ -120,6 +120,7 @@ footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); border-top: 
   <p>목차</p>
   <ol>
     <li><a href="#s0">이 문서 읽는 법과 요약</a></li>
+    <li><a href="#s0b"><strong>감사와 재실험 (v2, 최신)</strong></a></li>
     <li><a href="#s1">출발점: MATMCD와 첫 시도</a></li>
     <li><a href="#s2">연구 아이디어와 가설</a></li>
     <li><a href="#s3">데이터</a></li>
@@ -140,7 +141,7 @@ footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); border-top: 
 
 <main>
 <header class="hero">
-  <p class="eyebrow">TASK_070 · 실험 설명서 겸 결과 보고서 · 2026-10-25</p>
+  <p class="eyebrow">TASK_070 · 실험 설명서 겸 결과 보고서 · 2026-10-26 갱신 (v2)</p>
   <h1>추론 상태 기반 근거 검색 실험: 처음부터 끝까지</h1>
   <p class="lede">이 실험이 무엇을 묻는지, 어떤 데이터로 어떤 장치를 만들었는지, 각 단계에서 무엇이 실제로 일어났는지, 그래서 어떤 결과가 나왔는지를 순서대로 모두 적었습니다. 실제 실행 기록에서 사례를 꺼내 입력부터 채점까지 따라가 보는 장도 있습니다. 앞에서부터 읽으면 뒤의 내용이 모두 이해되도록 썼습니다.</p>
 </header>
@@ -151,8 +152,128 @@ footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); border-top: 
   <p><strong>읽는 순서.</strong> 1장은 이 실험이 어디서 출발했는지, 2장은 무엇을 시험하는지입니다. 3~7장은 실험 장치(데이터, 근거, 방법, 판단, 채점)를 하나씩 뜯어서 설명합니다. 8장은 실제로 일이 진행된 순서, 9장은 실제 사례 하나를 처음부터 끝까지 따라가는 장입니다. 10~12장이 결과와 해석과 한계이고, 13장은 교수님께 설명할 때 쓸 수 있는 요약입니다. 처음 보는 용어는 처음 나올 때 설명하고, 15장 용어집에도 모았습니다.</p>
   <div class="box">
     <p class="tag">한 문단 요약</p>
+    <p><strong>먼저 읽어 주세요 (2026-10-26 갱신).</strong> 1~15장은 첫 번째 실험(v1)의 설명과 결과입니다. v1은 제안 방법을 개발 사례 10개(서비스 2개)로만 만든 결함이 있었습니다. 이를 바로잡은 재실험(v2)과 데이터 감사 결과는 바로 아래 <a href="#s0b">0-1장</a>에 있으며, 출력부 B와 카테고리 2의 최신 결과는 0-1장의 수치입니다. 아래 요약은 v1 기준입니다.</p>
     <p>LLM에게 "어느 서비스가 장애의 원인인가", "변수 A가 변수 B의 원인인가"를 판단시키면서, 판단에 쓸 근거를 두 가지 방식으로 골라 넣었습니다. 하나는 질문 하나로 비슷한 근거를 한꺼번에 고르는 <strong>flat RAG</strong>, 다른 하나는 판단 과정을 "구조 확인 → 원인 쪽 이상 확인 → 시간 순서 확인"처럼 <strong>추론 상태</strong>로 나누고 상태마다 맞는 근거를 고르는 <strong>제안 방법</strong>입니다. 같은 LLM, 같은 근거 풀, 같은 질문으로 비교했고, 방법과 평가 사례는 결과를 보기 전에 고정했습니다. 그 결과 제안 방법은 <strong>정답과 관련된 근거를 1.5~1.7배 더 많이 골라 왔지만, 최종 판단은 flat RAG보다 유의하게 낫지 않았습니다</strong>(주 평가 Avg@5 0.848 대 0.825, p=0.76). 계획 기능을 뺀 단순한 변형이 오히려 더 좋았고, 개발 단계에서 보였던 큰 우위(0.94 대 0.78)는 평가에서 사라졌습니다.</p>
   </div>
+</section>
+
+<!-- ============ 0-1 ============ -->
+<section id="s0b">
+  <h2><span class="num">0-1</span>감사와 재실험 (v2): 무엇이 잘못됐고 어떻게 바로잡았나</h2>
+
+  <h3>무엇이 잘못됐나</h3>
+  <p>제안 방법을 다듬는 개발 단계에서, 개발 데이터(반복 1의 30사례) 중 <strong>정렬 순서의 앞 10개만</strong> 썼습니다. 사례 목록이 폴더 이름의 알파벳순이라, 그 10개는 checkoutservice 6개와 currencyservice 4개였습니다. 장애 서비스 5개 중 2개뿐입니다. 시간을 줄이려는 실행자(Claude)의 판단이었고, 사용자 지시가 아니었으며, 보고하지 않았습니다.</p>
+  <p>그 결과 제안 방법이 그 두 서비스에 맞춰졌을 가능성이 생겼습니다. 사후에 v1 평가 결과를 서비스별로 나눠 보면 그 정황이 보입니다. 개발에 있던 서비스(12사례)에서는 제안 방법이 flat보다 +0.142 높았고, 개발에 없던 서비스(18사례)에서는 −0.056 낮았습니다.</p>
+
+  <h3>데이터 감사: 다른 축소나 누락은 없었나</h3>
+  <p>같은 종류의 문제가 더 있는지 코드 전체에서 상한값, 자르기, 쓰지 않은 원자료를 찾고, 실제로 무엇이 빠졌는지 개발 데이터(반복 1)로 측정했습니다.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>실측</th><th>판단과 조치</th></tr></thead>
+    <tbody>
+      <tr><td>trace 오류 상태</td><td>trace의 <code>statusCode</code>(오류 여부)가 근거 풀에 없었음. RCAEval 공식 코드의 다중 소스 방법은 trace 오류 시계열(<code>tracets_err.csv</code>)을 입력으로 씀. 개발 30사례 중 6사례(주로 패킷 손실 장애)에 오류 span 존재</td><td><strong>추가.</strong> (서비스, 연산)별 분당 오류 수와 gRPC 상태 코드를 담은 <code>trace_error</code> 근거 단위. 모든 방법에 공통</td></tr>
+      <tr><td>카테고리 2 웹 근거</td><td>페이지마다 앞 6구간(약 4,800자)만 보관해, 수집한 본문 1,009만 자 중 <strong>22%만</strong> 사용</td><td><strong>복구.</strong> 같은 검색 결과의 같은 상위 3개 링크를 본문 전체로 재수집(새 검색 없음). 근거 단위 1,261 → 4,824. 정답 누출 사후 검사 적중 0건</td></tr>
+      <tr><td>silver 근거 정의</td><td>정답 서비스의 로그·trace 단위는 이상 여부와 관계없이 기록만 있으면 정답 근거로 셈</td><td><strong>엄격한 지표 추가.</strong> 이상이 표시된 메트릭·KPI와 오류 근거만 정답 근거로 셈. 기존 지표도 함께 보고</td></tr>
+      <tr><td>trace 상위 40개 제한</td><td>모든 사례의 연산이 37개 → 잘린 것 없음</td><td>유지</td></tr>
+      <tr><td>로그 템플릿 200자 자르기</td><td>200자를 넘는 템플릿 0개</td><td>유지</td></tr>
+      <tr><td>메트릭 파일</td><td>RCAEval 공식 코드도 <code>simple_metrics.csv</code>를 같은 전처리로 사용</td><td>유지</td></tr>
+      <tr><td>이상 판정 기준 (처음 5분, |z|≥3)</td><td>정답 서비스는 30사례 모두 이상으로 표시됨. 그러나 "가장 먼저 이상해진 순서"로는 정답이 상위 3개 안에 든 경우가 12/30</td><td>공통 근거 풀은 유지. 제안 방법이 이 신호를 어떻게 쓸지는 재개발에서 개발 데이터로 정함</td></tr>
+      <tr><td>근거 수 24, 임베딩 BGE-M3</td><td>—</td><td>유지 (모든 방법 공통, 같은 예산에서 비교하는 설계). 한계로 명시</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>재개발은 어떻게 했나</h3>
+  <ol>
+    <li><strong>결과를 모르는 개발자:</strong> 이 대화와 평가 결과를 모르는 새 에이전트(서브에이전트)에게 맡겼습니다. 결과 문서 4개, git 기록, 기존 실행 결과 폴더를 보지 못하게 지시했고, 메모리에서도 평가 수치를 뺐습니다. 에이전트는 다른 폴더 이름만 한 번 보았고 내용은 열지 않았다고 보고했습니다.</li>
+    <li><strong>범위:</strong> 출력부 B의 제안 방법(state_fixed, state_dynamic)의 근거 선택 부분만 바꿀 수 있게 했습니다. 근거 풀, 근거 수, 판단 프롬프트, 기준선(none, flat, role_only), 모델은 고정했습니다.</li>
+    <li><strong>데이터:</strong> 반복 1의 30사례 전체(서비스 5개 × 장애 6종)를 썼고, 평가 데이터(반복 2)는 실행하지 않았습니다.</li>
+    <li><strong>채택 규칙 (미리 정함):</strong> 30사례 평균이 오르고 어느 서비스의 평균도 0.10 넘게 떨어지지 않을 때만 변경을 채택합니다. 시도는 최대 4번입니다.</li>
+  </ol>
+  <h4>개발 과정에서 관찰한 것과 바꾼 것</h4>
+  <ul>
+    <li><strong>관찰 1:</strong> 기존 계획기는 30사례 중 25사례에서 확인 대상으로 똑같이 frontend, checkoutservice, currencyservice를 골랐습니다. 사례와 관계없이 첫 개발 때의 두 서비스에 끌려가고 있었습니다.</li>
+    <li><strong>관찰 2:</strong> "가장 먼저 이상해진 서비스" 규칙으로는 정답 서비스가 1위가 되는 경우가 30사례 중 1번뿐이었습니다. 처음 몇 분의 작은 흔들림이 지속적인 이상보다 앞에 놓였기 때문입니다. 반면 "이상이 표시된 분의 수(이상 강도)"로 정렬하면 정답이 1위인 경우가 25/30, 상위 3개 안이 30/30이었습니다. 정답은 개발 데이터에서만 쓴 분석입니다.</li>
+    <li><strong>채택한 변경 (시도 1):</strong> 서비스 정렬을 이상 강도 순으로 바꿨습니다. CANDIDATES 상태는 강한 순서대로 서비스별 이상이 가장 많은 메트릭 하나씩, state_fixed의 VERIFY는 강도 상위 3개 서비스입니다. 계획기에게도 서비스별 이상 강도를 보여 줍니다.</li>
+    <li><strong>버린 변경 (시도 2~4):</strong> frontend를 확인 대상에서 빼기, 상태 간 중복 제거와 남는 자리를 확인 근거로 채우기, 가장 강한 서비스를 항상 확인하기. state_dynamic 기준으로 채택 규칙을 넘지 못해 되돌렸습니다.</li>
+  </ul>
+  <div class="scroll"><table>
+    <thead><tr><th>개발 데이터 Avg@5</th><th class="n">전체</th><th class="n">checkout</th><th class="n">currency</th><th class="n">email</th><th class="n">productcatalog</th><th class="n">recommendation</th></tr></thead>
+    <tbody>
+      <tr><td>flat</td><td class="n">0.810</td><td class="n">0.633</td><td class="n">0.900</td><td class="n">0.800</td><td class="n">0.800</td><td class="n">0.917</td></tr>
+      <tr><td>role_only</td><td class="n">0.837</td><td class="n">0.592</td><td class="n">0.808</td><td class="n">0.850</td><td class="n">0.967</td><td class="n">0.967</td></tr>
+      <tr><td>state_fixed 시작 → 최종</td><td class="n">0.787 → 0.892</td><td class="n">0.775 → 0.750</td><td class="n">1.000 → 0.967</td><td class="n">0.775 → 0.967</td><td class="n">0.742 → 0.842</td><td class="n">0.642 → 0.933</td></tr>
+      <tr class="me"><td>state_dynamic 시작 → 최종</td><td class="n">0.887 → 0.925</td><td class="n">0.900 → 0.875</td><td class="n">1.000 → 0.967</td><td class="n">0.817 → 0.967</td><td class="n">0.867 → 0.850</td><td class="n">0.850 → 0.967</td></tr>
+    </tbody>
+  </table></div>
+  <p class="caption">기록: <code>docs/TASK070_DEV_V2.md</code>, PR #22. 이후 동결 변경 기록(PR #23)을 남기고 평가했습니다.</p>
+
+  <h3>v2 평가 결과: 출력부 B (반복 2의 30사례)</h3>
+  <p>근거 풀이 바뀌었으므로 기준선을 포함한 5개 방법을 모두 다시 돌렸습니다.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>방법</th><th class="n">Avg@5</th><th class="n">AC@1</th><th class="n">RR</th><th class="n">실패</th><th class="n">엄격 근거 정밀도</th><th class="n">엄격 근거 재현율</th><th class="n">인용 정밀도</th></tr></thead>
+    <tbody>
+      <tr><td>none</td><td class="n">0.116</td><td class="n">0.033</td><td class="n">0.181</td><td class="n">0</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>flat</td><td class="n">0.828</td><td class="n">0.536</td><td class="n">0.723</td><td class="n">1</td><td class="n">0.040</td><td class="n">0.376</td><td class="n">0.212</td></tr>
+      <tr><td>role_only</td><td class="n best">0.890</td><td class="n">0.739</td><td class="n">0.834</td><td class="n">2</td><td class="n">0.039</td><td class="n">0.366</td><td class="n">0.176</td></tr>
+      <tr><td>state_fixed</td><td class="n">0.885</td><td class="n best">0.775</td><td class="n best">0.848</td><td class="n">3</td><td class="n best">0.083</td><td class="n best">0.685</td><td class="n best">0.283</td></tr>
+      <tr class="me"><td>state_dynamic</td><td class="n">0.830</td><td class="n">0.711</td><td class="n">0.799</td><td class="n">4</td><td class="n">0.080</td><td class="n">0.647</td><td class="n">0.279</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table>
+    <thead><tr><th>평가 Avg@5 서비스별</th><th class="n">checkout</th><th class="n">currency</th><th class="n">email</th><th class="n">productcatalog</th><th class="n">recommendation</th></tr></thead>
+    <tbody>
+      <tr><td>flat</td><td class="n">0.700</td><td class="n">0.808</td><td class="n">0.733</td><td class="n">0.933</td><td class="n">0.967</td></tr>
+      <tr><td>role_only</td><td class="n">0.767</td><td class="n">0.875</td><td class="n">0.933</td><td class="n">0.875</td><td class="n">1.000</td></tr>
+      <tr><td>state_fixed</td><td class="n">0.933</td><td class="n">0.933</td><td class="n">0.750</td><td class="n">0.933</td><td class="n">0.875</td></tr>
+      <tr class="me"><td>state_dynamic</td><td class="n">0.792</td><td class="n">0.842</td><td class="n">0.708</td><td class="n">0.933</td><td class="n">0.875</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table>
+    <thead><tr><th>짝 비교 (Avg@5)</th><th class="n">차이</th><th>95% 신뢰구간</th><th class="n">p</th><th class="n">승/패/무</th></tr></thead>
+    <tbody>
+      <tr><td>state_dynamic − flat</td><td class="n">+0.002</td><td class="m">[−0.140, +0.147]</td><td class="n">1.00</td><td class="n">10/7/13</td></tr>
+      <tr><td>state_fixed − flat</td><td class="n">+0.057</td><td class="m">[−0.038, +0.152]</td><td class="n">0.26</td><td class="n">11/4/15</td></tr>
+      <tr><td>role_only − flat</td><td class="n">+0.062</td><td class="m">[−0.035, +0.158]</td><td class="n">0.21</td><td class="n">10/3/17</td></tr>
+      <tr><td>state_dynamic − state_fixed</td><td class="n">−0.055</td><td class="m">[−0.190, +0.073]</td><td class="n">0.45</td><td class="n">3/5/22</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><strong>개발 → 평가:</strong> state_fixed는 0.892 → 0.885로 그대로 유지됐고, state_dynamic은 0.925 → 0.830으로 떨어졌습니다.</li>
+    <li><strong>실패 10건 (150회 중):</strong> 모두 판단 LLM의 응답 형식 또는 출력 한도 문제입니다. 순위 줄이 없거나, 굵은 글씨·번호 목록으로 쓰거나, 4,096 토큰을 넘은 경우입니다. 실패가 하나도 없는 21사례만 보면 flat 0.886, role_only 0.933, state_fixed 0.943, state_dynamic 0.900입니다(참고).</li>
+  </ul>
+
+  <h3>v2 평가 결과: 카테고리 2 (웹 스냅샷 v2, F1 / SHD)</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>방법</th><th>AutoMPG</th><th>DWD</th><th>Sachs</th><th>Asia</th><th>Child</th><th class="n">평균 F1</th><th class="n">평균 SHD</th></tr></thead>
+    <tbody>
+      <tr><td>pc_only</td><td class="m">0.143 / 8</td><td class="m">0.154 / 9</td><td class="m">0.444 / 24</td><td class="m">0.533 / 4</td><td class="m">0.419 / 22</td><td class="n">0.339</td><td class="n">13.4</td></tr>
+      <tr><td>none</td><td class="m">0.727 / 3</td><td class="m">0.444 / 5</td><td class="m">0.471 / 17</td><td class="m">0.182 / 9</td><td class="m">0.129 / 26</td><td class="n">0.391</td><td class="n">12.0</td></tr>
+      <tr><td>flat</td><td class="m">0.667 / 3</td><td class="m">0.400 / 6</td><td class="m">0.176 / 24</td><td class="m best">0.769 / 3</td><td class="m">0.435 / 25</td><td class="n">0.489</td><td class="n">12.2</td></tr>
+      <tr><td>role_only</td><td class="m">0.667 / 3</td><td class="m">0.444 / 5</td><td class="m">0.333 / 22</td><td class="m">0.462 / 5</td><td class="m">0.429 / 21</td><td class="n">0.467</td><td class="n best">11.2</td></tr>
+      <tr><td>state_fixed</td><td class="m">0.667 / 3</td><td class="m">0.444 / 5</td><td class="m">0.300 / 25</td><td class="m">0.571 / 4</td><td class="m best">0.511 / 20</td><td class="n best">0.499</td><td class="n">11.4</td></tr>
+      <tr class="me"><td>state_dynamic</td><td class="m">0.667 / 3</td><td class="m">0.444 / 5</td><td class="m">0.278 / 23</td><td class="m">0.462 / 6</td><td class="m best">0.511 / 20</td><td class="n">0.472</td><td class="n">11.4</td></tr>
+    </tbody>
+  </table></div>
+  <p class="caption">판단 실패 쌍 0건. 결과 폴더 <code>causal_run/20261025T135137Z</code>. 카테고리 2의 상태 설계는 개발 데이터가 없어 v1과 같습니다(근거 풀만 v2).</p>
+
+  <h3>v2로 갱신된 해석</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>가설</th><th>v2 판정</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td>H1 근거 품질 향상</td><td>지지</td><td>엄격 근거 정밀도 약 2배, 재현율 약 1.8배. v1과 달리 LLM의 인용 정밀도도 올랐음(0.28 대 0.21)</td></tr>
+      <tr><td>H2 판단 개선</td><td>지지되지 않음</td><td>flat 대비 차이는 30사례에서 유의하지 않음. 상태 고정·역할 분리는 +0.06 안팎의 방향성만 있음</td></tr>
+      <tr><td>H3 동적 계획 > 고정 규칙</td><td>지지되지 않음</td><td>독립적인 두 번의 개발 모두에서 계획기를 쓰는 방법이 평가에서 떨어짐. 고정 규칙은 일반화됨</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><strong>개발 사례 치우침을 바로잡은 효과:</strong> 고정 규칙(state_fixed)은 개발 성능이 평가에서 그대로 유지됐습니다. 이전에 개발과 평가가 어긋났던 원인 중 상당 부분이 치우친 개발 사례였다고 볼 수 있습니다. 계획기의 일반화 문제는 개발 사례를 바로잡아도 남았습니다.</li>
+    <li><strong>검출력의 걸림돌:</strong> 판단 응답의 형식 실패가 사례의 30%에서 하나 이상 발생해, 방법 간 차이와 비슷한 크기의 잡음을 만듭니다.</li>
+    <li><strong>다시 하지 않은 것 (한계):</strong>
+      <ul>
+        <li>출력부 A(보조 평가)는 v1의 10사례 개발 문제를 그대로 안고 있습니다(10.4절 수치).</li>
+        <li>MATMCD 카테고리 2 참고 기준선은 2개 데이터셋만 완료했습니다.</li>
+        <li>임베딩 모델과 근거 수는 다른 값과 비교하지 않았습니다.</li>
+      </ul></li>
+  </ul>
 </section>
 
 <!-- ============ 1 ============ -->
