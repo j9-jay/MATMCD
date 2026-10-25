@@ -19,9 +19,16 @@ def _hash(rel):
     return hashlib.sha256((PROJECT / rel).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
+AMENDMENTS = PROJECT / "configs/task070_frozen_amendments.json"
+
+
 def verify_frozen_cat2():
+    """Same rule as the G2 freeze: a file may differ only if an amendment records the
+    exact old -> new hash and the reason (added 2026-10-25)."""
     frozen = json.loads(OUT.read_text(encoding="utf-8"))
-    changed = [f for f, h in frozen["sha256"].items() if _hash(f) != h]
+    amendments = json.loads(AMENDMENTS.read_text(encoding="utf-8"))["amendments"] if AMENDMENTS.exists() else []
+    allowed = {(a["file"], a["old_sha256"], a["new_sha256"]) for a in amendments}
+    changed = [f for f, h in frozen["sha256"].items() if _hash(f) != h and (f, h, _hash(f)) not in allowed]
     if changed:
         raise RuntimeError(f"Category-2 files changed after freeze: {changed}")
     return frozen["profile_id"]

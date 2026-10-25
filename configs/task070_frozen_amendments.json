@@ -31,6 +31,33 @@
       "date_kst": "2026-10-25",
       "reason": "2026-10-25: 엄격한 silver 근거 지표(silver_strict) 추가 기록. 기존 지표 유지, 채점 방식 무변경 (PR #21)",
       "affects_category_1": true
+    },
+    {
+      "file": "scripts/task070_causal.py",
+      "old_sha256": "3499a2196cbb71b175b500aeb471da15183b9f0709e23dfe360361dc115f35f9",
+      "new_sha256": "74edd68e2cd6f2d51ff193ea227415e5cb5cae8d439838cddb90eaf0670b1aa0",
+      "date_kst": "2026-10-25",
+      "freeze": "G2",
+      "reason": "2026-10-25: 카테고리 2 근거 풀을 v2(corpus/causal_v2)로 읽도록 변경. 다른 동작 무변경",
+      "affects_category_1": false
+    },
+    {
+      "file": "scripts/task070_web_snapshot.py",
+      "old_sha256": "41282dab5787a4f26e8b4d573ec0353f271e5be21dfc6f8d6ed3100946144def",
+      "new_sha256": "22bbeb9de355afd30f9655658c35671e1de1f63b2f0446cd87e9257d7915c8ad",
+      "date_kst": "2026-10-25",
+      "freeze": "G2",
+      "reason": "2026-10-25 데이터 감사: v1 스냅샷은 페이지당 앞 6구간만 보관해 수집 본문의 22%만 사용. 같은 Serper 결과의 같은 상위 3개 링크를 본문 전체로 재수집(v2, 새 검색 없음), 사후 검사에 걸린 페이지는 중단 대신 제외·기록",
+      "affects_category_1": false
+    },
+    {
+      "file": "scripts/task070_web_snapshot.py",
+      "old_sha256": "52c44c7b69ae291e0e697cd531e729e83b465bd8390fa17a80a045ada8f39574",
+      "new_sha256": "22bbeb9de355afd30f9655658c35671e1de1f63b2f0446cd87e9257d7915c8ad",
+      "date_kst": "2026-10-25",
+      "freeze": "category 2",
+      "reason": "2026-10-25 데이터 감사: v1 스냅샷은 페이지당 앞 6구간만 보관해 수집 본문의 22%만 사용. 같은 Serper 결과의 같은 상위 3개 링크를 본문 전체로 재수집(v2, 새 검색 없음), 사후 검사에 걸린 페이지는 중단 대신 제외·기록",
+      "affects_category_1": false
     }
   ]
 }
