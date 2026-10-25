@@ -34,7 +34,11 @@ def n_candidates(run, method_names, case):
         path = run / m / f"{case}.json"
         if path.exists():
             return len(json.loads(path.read_text(encoding="utf-8"))["mean_positions"])
-    raise RuntimeError(f"No completed run gives the candidate count for {case}")
+    # Every method failed on this case: take the candidate count from the case data itself
+    # (services in the node table; label-free). Added 2026-10-25.
+    import task070_rcaeval as rc
+    path = {c["id"]: c["path"] for c in rc.cases()}[case]
+    return len(rc.node_table(path)[1]) - 1
 
 
 def paired(a, b, rng):

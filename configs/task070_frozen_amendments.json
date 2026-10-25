@@ -7,6 +7,30 @@
       "date_kst": "2026-10-19",
       "reason": "카테고리 2 공유 corpus에서 .pdf가 아닌 주소로 받은 PDF 바이너리 구간 26개 제외(readable 필터). 카테고리 2 실행 전, 카테고리 2 동결(task070_frozen_cat2.json)에 포함",
       "affects_category_1": false
+    },
+    {
+      "file": "scripts/task070_corpus.py",
+      "old_sha256": "101b508881363763a8f2feb76db458fa12c5a3fdf2a3178f7541b9332c3bf107",
+      "new_sha256": "079afdadc7966a109963431ad182d483b66eeb8050c7371d87cf63c436d7d3b8",
+      "date_kst": "2026-10-25",
+      "reason": "2026-10-25 데이터 감사: trace 오류(statusCode != 0) 근거 단위 trace_error 추가. RCAEval 공식 다중 소스 입력(tracets_err)에 포함된 정보가 빠져 있었음. 모든 방법 공통 (PR #21)",
+      "affects_category_1": true
+    },
+    {
+      "file": "scripts/task070_direct.py",
+      "old_sha256": "d7af2bfce3c740aba81eda4d72e82c17d8dd16c592b68fa3b3d5908d4260d1a6",
+      "new_sha256": "7ba9402ea97ad48bbc4084907a3cd2704895afa771dcb0e7786468fa3660d29c",
+      "date_kst": "2026-10-25",
+      "reason": "2026-10-25: 첫 개발이 반복 1 중 10사례(서비스 2개)만 사용한 문제로, 평가 결과를 모르는 서브에이전트가 반복 1의 30사례 전체로 제안 방법(state_fixed/state_dynamic)만 재개발(STATE_DEV_V2, PR #22). 공통 설정 무변경",
+      "affects_category_1": true
+    },
+    {
+      "file": "scripts/task070_direct_run.py",
+      "old_sha256": "5079bf7a641e9e5bb3f1de328fcf9549a593af3080a30585f4a28fef7a3ba6d1",
+      "new_sha256": "b65cc567cee4b4a5b4850cb7b3d5dff9a30b3c0b9deda08c7b39ec7b5bb81b21",
+      "date_kst": "2026-10-25",
+      "reason": "2026-10-25: 엄격한 silver 근거 지표(silver_strict) 추가 기록. 기존 지표 유지, 채점 방식 무변경 (PR #21)",
+      "affects_category_1": true
     }
   ]
 }
