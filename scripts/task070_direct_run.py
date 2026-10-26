@@ -86,7 +86,8 @@ def main():
                        "strict_precision": float(np.mean([e in strict for e in ev_ids])) if ev_ids else None,
                        "strict_recall": float(len(strict & set(ev_ids)) / len(strict)) if strict and ev_ids else None,
                        "strict_attribution_precision": float(np.mean([c in strict for c in cited])) if cited else None,
-                       "missing_names": sum(len(r["missing"]) for r in runs)}
+                       "missing_names": sum(len(r["missing"]) for r in runs),
+                       "evidence_roles": [u["role"] for u in evidence]}
                 summary["methods"][method].append(row)
                 mdir = out / method
                 mdir.mkdir(exist_ok=True)

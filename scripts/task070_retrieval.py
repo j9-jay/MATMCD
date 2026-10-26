@@ -32,12 +32,33 @@ class FlatRetriever:
             if path.exists() and json.loads(ids_path.read_text()) == ids:
                 matrix = np.load(path)
             else:
-                matrix = np.asarray(self.encoder.encode([u["text"] for u in units], kind="document"), dtype=np.float32)
+                matrix = self._encode_units(units)
                 path.parent.mkdir(parents=True, exist_ok=True)
                 np.save(path, matrix)
                 ids_path.write_text(json.dumps(ids))
             self.cache[case_id] = matrix
         return self.cache[case_id]
+
+    def _encode_units(self, units):
+        """Case units are encoded per case. Units marked shared (the Online Boutique wiki,
+        identical in every case) are encoded once and reused from a text-hash cache
+        (added 2026-10-27); the vectors are the same as per-case encoding would give."""
+        import hashlib
+        shared_path = WORK / "embeddings/shared_units.npz"
+        shared = dict(np.load(shared_path)) if shared_path.exists() else {}
+        keys = [hashlib.sha256(u["text"].encode("utf-8")).hexdigest() if u.get("shared") else None for u in units]
+        todo = [i for i, k in enumerate(keys) if k is None or k not in shared]
+        vectors = {}
+        if todo:
+            encoded = np.asarray(self.encoder.encode([units[i]["text"] for i in todo], kind="document"), dtype=np.float32)
+            for i, v in zip(todo, encoded):
+                vectors[i] = v
+                if keys[i] is not None:
+                    shared[keys[i]] = v
+            if any(keys[i] is not None for i in todo):
+                shared_path.parent.mkdir(parents=True, exist_ok=True)
+                np.savez(shared_path, **shared)
+        return np.stack([vectors[i] if i in vectors else shared[keys[i]] for i in range(len(units))]).astype(np.float32)
 
     def select(self, case_id, units, cause, effect, k=K_EVIDENCE):
         matrix = self._case_matrix(case_id, units)
