@@ -120,7 +120,8 @@ footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); border-top: 
   <p>목차</p>
   <ol>
     <li><a href="#s0">이 문서 읽는 법과 요약</a></li>
-    <li><a href="#s0b"><strong>감사와 재실험 (v2, 최신)</strong></a></li>
+    <li><a href="#s0c"><strong>v3 재실험 (최종 RCA 결과)</strong></a></li>
+    <li><a href="#s0b">감사와 재실험 v2 (RCA 무효)</a></li>
     <li><a href="#s1">출발점: MATMCD와 첫 시도</a></li>
     <li><a href="#s2">연구 아이디어와 가설</a></li>
     <li><a href="#s3">데이터</a></li>
@@ -141,7 +142,7 @@ footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); border-top: 
 
 <main>
 <header class="hero">
-  <p class="eyebrow">TASK_070 · 실험 설명서 겸 결과 보고서 · 2026-10-26 갱신 (v2)</p>
+  <p class="eyebrow">TASK_070 · 실험 설명서 겸 결과 보고서 · 2026-10-27 최종 갱신 (v3)</p>
   <h1>추론 상태 기반 근거 검색 실험: 처음부터 끝까지</h1>
   <p class="lede">이 실험이 무엇을 묻는지, 어떤 데이터로 어떤 장치를 만들었는지, 각 단계에서 무엇이 실제로 일어났는지, 그래서 어떤 결과가 나왔는지를 순서대로 모두 적었습니다. 실제 실행 기록에서 사례를 꺼내 입력부터 채점까지 따라가 보는 장도 있습니다. 앞에서부터 읽으면 뒤의 내용이 모두 이해되도록 썼습니다.</p>
 </header>
@@ -152,14 +153,138 @@ footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); border-top: 
   <p><strong>읽는 순서.</strong> 1장은 이 실험이 어디서 출발했는지, 2장은 무엇을 시험하는지입니다. 3~7장은 실험 장치(데이터, 근거, 방법, 판단, 채점)를 하나씩 뜯어서 설명합니다. 8장은 실제로 일이 진행된 순서, 9장은 실제 사례 하나를 처음부터 끝까지 따라가는 장입니다. 10~12장이 결과와 해석과 한계이고, 13장은 교수님께 설명할 때 쓸 수 있는 요약입니다. 처음 보는 용어는 처음 나올 때 설명하고, 15장 용어집에도 모았습니다.</p>
   <div class="box">
     <p class="tag">한 문단 요약</p>
-    <p><strong>먼저 읽어 주세요 (2026-10-26 갱신).</strong> 1~15장은 첫 번째 실험(v1)의 설명과 결과입니다. v1은 제안 방법을 개발 사례 10개(서비스 2개)로만 만든 결함이 있었습니다. 이를 바로잡은 재실험(v2)과 데이터 감사 결과는 바로 아래 <a href="#s0b">0-1장</a>에 있으며, 출력부 B와 카테고리 2의 최신 결과는 0-1장의 수치입니다. 아래 요약은 v1 기준입니다.</p>
+    <p><strong>먼저 읽어 주세요 (2026-10-27 최종 갱신).</strong> RCA 실험의 최종 결과는 <a href="#s0c">0-2장 v3</a>입니다. 그보다 앞선 RCA 실험 v1(1~15장)과 v2(0-1장)는 <strong>무효</strong>입니다. 사용자 계획서가 근거 풀에 요구한 시스템 구조 문서가 빠진 채 진행했기 때문입니다. 두 장은 경위 기록으로만 남깁니다. 인과 발견(카테고리 2)은 위키 대상이 아니므로 0-1장의 v2 결과를 보조로 유지합니다. 아래 요약은 무효인 v1 기준입니다.</p>
     <p>LLM에게 "어느 서비스가 장애의 원인인가", "변수 A가 변수 B의 원인인가"를 판단시키면서, 판단에 쓸 근거를 두 가지 방식으로 골라 넣었습니다. 하나는 질문 하나로 비슷한 근거를 한꺼번에 고르는 <strong>flat RAG</strong>, 다른 하나는 판단 과정을 "구조 확인 → 원인 쪽 이상 확인 → 시간 순서 확인"처럼 <strong>추론 상태</strong>로 나누고 상태마다 맞는 근거를 고르는 <strong>제안 방법</strong>입니다. 같은 LLM, 같은 근거 풀, 같은 질문으로 비교했고, 방법과 평가 사례는 결과를 보기 전에 고정했습니다. 그 결과 제안 방법은 <strong>정답과 관련된 근거를 1.5~1.7배 더 많이 골라 왔지만, 최종 판단은 flat RAG보다 유의하게 낫지 않았습니다</strong>(주 평가 Avg@5 0.848 대 0.825, p=0.76). 계획 기능을 뺀 단순한 변형이 오히려 더 좋았고, 개발 단계에서 보였던 큰 우위(0.94 대 0.78)는 평가에서 사라졌습니다.</p>
   </div>
 </section>
 
+<!-- ============ 0-2 (v3) ============ -->
+<section id="s0c">
+  <h2><span class="num">0-2</span>v3 재실험: 계획서대로 근거 풀을 갖춘 최종 RCA 실험</h2>
+
+  <h3>왜 다시 했나</h3>
+  <p>사용자 연구 계획서는 근거 풀에 텔레메트리(메트릭·로그·trace)뿐 아니라 <strong>시스템 구조 문서</strong>(서비스 topology, dependency, architecture document)를 넣도록 되어 있었습니다. 상태 흐름도 "텔레메트리 → 시스템 구조 → 가설 → 가설별 근거 → 원인"이었습니다. v1과 v2는 이 문서 없이 텔레메트리만으로 진행했으므로 계획된 실험이 아니었고, 무효로 처리합니다.</p>
+
+  <h3>근거 풀 보완: Online Boutique 팀 위키</h3>
+  <ul>
+    <li><strong>원본:</strong> GoogleCloudPlatform/microservices-demo, 태그 v0.9.0, commit <code>d138db5</code>. RCAEval 논문·저장소에 버전이 없어서, 데이터 수집 기간(2024-01-15~02-21) 직전의 마지막 릴리스로 추정했습니다(사용자 결정).</li>
+    <li><strong>생성 방식:</strong> 정적 분석으로 생성했습니다(파서와 템플릿, LLM이 쓴 문장 없음).
+      <ul>
+        <li>모든 사실에 원본 파일 경로와 줄 번호를 붙였습니다.</li>
+        <li>원본에 없는 항목은 이유와 함께 "Omitted"로 남겼습니다.</li>
+        <li>검증기가 25개 문서 전부에서 출처 없는 사실 줄 0개를 확인했습니다.</li>
+      </ul></li>
+    <li><strong>구성 (7개 장, 25개 문서):</strong>
+      <ul>
+        <li>아키텍처(개요, 서비스 목록, 의존 topology, 통신 행렬)</li>
+        <li>API(참조, 스키마, 제공·소비 관계, HTTP 경로)</li>
+        <li>코드·동작(구성요소, 호출 흐름, 오류 처리, 외부 의존)</li>
+        <li>데이터·저장소</li>
+        <li>인프라(쿠버네티스, 자원, 환경 변수, 서비스 메시)</li>
+        <li>빌드·테스트</li>
+        <li>관측(로그, 트레이싱)</li>
+      </ul></li>
+    <li><strong>근거 풀에 넣는 방식:</strong> 섹션 단위로 나누고 1,500자를 넘으면 줄 경계에서 나눴습니다(소제목·표 머리 반복). 근거 단위 502개가 모든 사례에 공통으로 들어갑니다.</li>
+    <li><strong>trace와의 대조:</strong> 코드에서 찾은 서비스 의존 관계 14개 중 RE2-OB trace에서 관찰되는 것은 9개입니다. cart, shipping, ad 서비스는 trace를 남기지 않기 때문입니다. 이전 근거 풀의 구조 정보는 실제 의존 관계의 3분의 1을 볼 수 없었습니다.</li>
+  </ul>
+
+  <h3>방법</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>방법</th><th>역할</th><th>근거 고르는 방식 (모두 24개)</th></tr></thead>
+    <tbody>
+      <tr><td>none</td><td>비교</td><td>근거 없음</td></tr>
+      <tr><td>flat</td><td>비교</td><td>질의 하나로 텔레메트리·문서 전체에서 상위 24개</td></tr>
+      <tr><td>role_only</td><td>비교</td><td>구조(호출 그래프) + 위키 문서 4개 + 관측 근거, 묶음마다 flat 질의 (개발 전에 규칙 고정)</td></tr>
+      <tr class="me"><td>state_fixed</td><td>제안</td><td>5단계 상태를 규칙으로 실행</td></tr>
+      <tr><td>state_dynamic</td><td>참고</td><td>같은 5단계, S3 가설을 계획기 LLM이 세움 (향후 확장용)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table>
+    <thead><tr><th>단계</th><th class="n">근거 수</th><th>state_fixed가 하는 일</th></tr></thead>
+    <tbody>
+      <tr><td>S1 텔레메트리</td><td class="n">7</td><td>KPI 1개, 이상 강도 상위 3개 서비스의 대표 이상 메트릭 3개, trace 오류 3개 (이상 표시가 없는 서비스는 의심하지 않음)</td></tr>
+      <tr><td>S2 시스템 구조</td><td class="n">5</td><td>의심 서비스가 나오는 관찰 호출 그래프 2개 + 위키 03·04·07·10(의존·통신·제공소비·호출 흐름) 3개</td></tr>
+      <tr><td>S3 가설</td><td class="n">—</td><td>의심 서비스마다 (서비스, 메커니즘) 하나. 메커니즘은 S1에서 고른 메트릭 종류로 정함: cpu, memory, disk, network, latency, load. trace 오류가 있으면 errors를 더함</td></tr>
+      <tr><td>S4 가설별 근거</td><td class="n">12</td><td>가설마다 그 서비스의 이상 메트릭·trace 오류를 먼저, 이어서 로그·trace. 메커니즘에 맞는 위키 문서 1개(예: memory → 18 자원·14 저장소·19 환경, errors → 11 오류 처리·05/06 API·24 로그)</td></tr>
+      <tr><td>S5</td><td class="n">—</td><td>판단 LLM이 후보 12개의 순위를 냄 (모든 방법 동일)</td></tr>
+    </tbody>
+  </table></div>
+  <p>남는 자리는 flat 질의로 채웁니다. 앞 단계(S1·S2)에서 고른 근거에 따라 S3의 가설이 정해지고, 그 가설이 S4의 검색을 바꿉니다.</p>
+
+  <h3>절차</h3>
+  <ol>
+    <li><strong>공통 수정 (개발 전에 확정, 모든 방법 공통):</strong>
+      <ul>
+        <li>판단 응답 해석의 형식 허용 범위를 넓혔습니다(<code>**RANKING:**</code> 등).</li>
+        <li>위키 임베딩 공유 캐시를 만들었습니다.</li>
+        <li>결과를 한 표로 비교하도록 했습니다.</li>
+      </ul></li>
+    <li><strong>개발:</strong> 평가 결과를 모르는 서브에이전트가 반복 1의 30사례(서비스 5개 × 장애 6종)로 개발했습니다.
+      <ul>
+        <li>시작 측정에서 state_fixed는 0.930이었습니다.</li>
+        <li>반복 1에서 S4가 이상 근거를 먼저 고르게 바꿔 0.965가 됐고, 채택했습니다.</li>
+        <li>반복 2(남는 자리를 S4에 배정)는 0.955로 내려가 기각했습니다.</li>
+        <li>채택 규칙은 미리 정했습니다: 30사례 평균 상승, 그리고 어느 서비스도 0.10 넘게 떨어지지 않을 것.</li>
+      </ul></li>
+    <li><strong>동결:</strong> 바뀐 파일의 해시와 사유를 기록했습니다.</li>
+    <li><strong>평가:</strong> 반복 2의 30사례로 한 번 평가했습니다. 사례·방법마다 후보 순서 3가지로 판단해 평균합니다.</li>
+  </ol>
+
+  <h3>결과 (반복 2의 30사례)</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>방법</th><th>역할</th><th>Avg@5 [95% CI]</th><th class="n">AC@1</th><th class="n">AC@3</th><th class="n">RR</th><th class="n">실패</th><th class="n">엄격 근거 정밀도</th><th class="n">엄격 근거 재현율</th><th class="n">인용 정밀도</th><th class="n">문서 비율</th></tr></thead>
+    <tbody>
+      <tr><td>none</td><td>비교</td><td class="m">0.116 [0.029, 0.220]</td><td class="n">0.033</td><td class="n">0.100</td><td class="n">0.181</td><td class="n">0</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>flat</td><td>비교</td><td class="m">0.480 [0.343, 0.620]</td><td class="n">0.250</td><td class="n">0.533</td><td class="n">0.425</td><td class="n">0</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.811</td></tr>
+      <tr><td>role_only</td><td>비교</td><td class="m">0.795 [0.668, 0.910]</td><td class="n">0.675</td><td class="n">0.825</td><td class="n">0.769</td><td class="n">3</td><td class="n">0.035</td><td class="n">0.333</td><td class="n">0.148</td><td class="n">0.167</td></tr>
+      <tr class="me"><td>state_fixed</td><td>제안</td><td class="m best">0.927 [0.850, 0.990]</td><td class="n best">0.856</td><td class="n best">0.950</td><td class="n best">0.903</td><td class="n">2</td><td class="n best">0.125</td><td class="n best">0.964</td><td class="n best">0.411</td><td class="n">0.387</td></tr>
+      <tr><td>state_dynamic</td><td>참고</td><td class="m">0.907 [0.823, 0.977]</td><td class="n">0.806</td><td class="n">0.917</td><td class="n">0.875</td><td class="n">2</td><td class="n">0.124</td><td class="n">0.952</td><td class="n">0.384</td><td class="n">0.376</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table>
+    <thead><tr><th>서비스별 Avg@5</th><th class="n">checkout</th><th class="n">currency</th><th class="n">email</th><th class="n">productcatalog</th><th class="n">recommendation</th></tr></thead>
+    <tbody>
+      <tr><td>none</td><td class="n">0.133</td><td class="n">0.178</td><td class="n">0.000</td><td class="n">0.267</td><td class="n">0.000</td></tr>
+      <tr><td>flat</td><td class="n">0.217</td><td class="n">0.867</td><td class="n">0.000</td><td class="n">0.817</td><td class="n">0.500</td></tr>
+      <tr><td>role_only</td><td class="n">0.650</td><td class="n">0.875</td><td class="n">0.575</td><td class="n">1.000</td><td class="n">0.875</td></tr>
+      <tr class="me"><td>state_fixed</td><td class="n">0.858</td><td class="n">1.000</td><td class="n">0.967</td><td class="n">0.808</td><td class="n">1.000</td></tr>
+      <tr><td>state_dynamic</td><td class="n">0.687</td><td class="n">1.000</td><td class="n">0.967</td><td class="n">0.883</td><td class="n">1.000</td></tr>
+    </tbody>
+  </table></div>
+  <p class="caption">
+    채점: 실패한 실행(판단 응답 형식, 7건)은 후보 전체 동점으로 채점했습니다. 실패가 하나도 없는 23사례만 보면 flat 0.470, role_only 0.878, state_fixed 0.978, state_dynamic 0.961입니다.<br>
+    신뢰구간: 사례 부트스트랩 1만 회입니다. 쌍별 검정은 하지 않고, 한 표에서 함께 비교합니다.<br>
+    결과 폴더: <code>head_b/test_20261026T184535Z</code>.
+  </p>
+
+  <h3>무엇을 보여 주나</h3>
+  <ul>
+    <li><strong>제안 방법이 순위와 근거 품질 모두 가장 높습니다.</strong>
+      <ul>
+        <li>state_fixed는 정답 서비스의 이상 근거를 96% 찾아 넣었고, 판단 LLM이 인용한 근거의 41%가 정답 관련 근거였습니다.</li>
+        <li>Avg@5 신뢰구간이 flat·none과 겹치지 않고, role_only와는 일부 겹칩니다.</li>
+      </ul></li>
+    <li><strong>flat의 한계:</strong> 문서가 섞인 근거 풀에서 flat은 근거의 81%를 위키 문서로 채웠고, 정답 관련 텔레메트리를 하나도 고르지 못했습니다(엄격 정밀도 0). 질의와 문장이 비슷한 문서가 숫자로 된 텔레메트리보다 높은 점수를 받기 때문입니다. "추론 단계에 맞춰 근거 종류를 나눠 고른다"는 아이디어가 해결하려는 문제가 그대로 드러난 결과입니다.</li>
+    <li><strong>역할 분리만으로는 부족합니다:</strong> role_only는 flat보다 높지만 state_fixed보다 낮습니다. 특히 checkout·email 서비스에서 차이가 큽니다. 가설에 맞춰 근거를 고르는 단계(S3·S4)가 더하는 몫이 보입니다.</li>
+    <li><strong>개발 대 평가:</strong> state_fixed는 0.965 → 0.927, state_dynamic은 0.965 → 0.907로, 개발 성능이 평가에서 크게 무너지지 않았습니다.</li>
+  </ul>
+
+  <h3>한계</h3>
+  <ul>
+    <li>반복 2는 이전(무효) 실험에서 결과를 본 데이터입니다. 결과를 모르는 서브에이전트가 개발하도록 해 대응했고, 그 사실을 밝힙니다.</li>
+    <li>seed 하나로 한 번 실행했고, 판단·계획 LLM은 4B 모델 하나입니다.</li>
+    <li>Online Boutique 버전은 추정입니다.</li>
+    <li>계획서의 진단·조치 문서(장애 패턴, incident report, runbook)는 원본 저장소에 없어 만들지 않았습니다.</li>
+    <li>출력부 A(보조)는 다시 실행하지 않았습니다.</li>
+    <li>판단 응답 형식 실패 7건을 동점으로 채점했습니다.</li>
+    <li>방법 간 차이는 쌍별 검정이 아니라 한 표의 신뢰구간으로만 제시합니다.</li>
+  </ul>
+</section>
+
 <!-- ============ 0-1 ============ -->
 <section id="s0b">
-  <h2><span class="num">0-1</span>감사와 재실험 (v2): 무엇이 잘못됐고 어떻게 바로잡았나</h2>
+  <h2><span class="num">0-1</span>감사와 재실험 (v2): 무엇이 잘못됐고 어떻게 바로잡았나 (RCA 부분 무효)</h2>
+  <div class="note"><p><strong>무효 표시 (2026-10-27):</strong> 이 장의 RCA(출력부 B) 결과는 근거 풀이 불완전한 상태(시스템 구조 문서 없음)에서 나왔으므로 무효입니다. 경위 기록으로만 남깁니다. 카테고리 2(인과 발견) 결과는 보조로 유지합니다.</p></div>
 
   <h3>무엇이 잘못됐나</h3>
   <p>제안 방법을 다듬는 개발 단계에서, 개발 데이터(반복 1의 30사례) 중 <strong>정렬 순서의 앞 10개만</strong> 썼습니다. 사례 목록이 폴더 이름의 알파벳순이라, 그 10개는 checkoutservice 6개와 currencyservice 4개였습니다. 장애 서비스 5개 중 2개뿐입니다. 시간을 줄이려는 실행자(Claude)의 판단이었고, 사용자 지시가 아니었으며, 보고하지 않았습니다.</p>
