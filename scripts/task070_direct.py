@@ -101,12 +101,23 @@ def case_overview(units, services):
     return "\n".join(lines), onsets, strength
 
 
+_MARKUP = re.compile(r"[*_`#]")
+
+
 def parse_ranking(text, candidates):
-    line = [l for l in (text or "").splitlines() if l.strip().upper().startswith("RANKING:")]
-    if not line:
+    """Last line starting with 'RANKING:'. 2026-10-27 (shared, all methods, decided before
+    development): markdown around the label is ignored ('**RANKING:** a > b', '### Ranking:'),
+    and a label alone on its line takes the next non-empty line as the ranking."""
+    lines = [_MARKUP.sub("", l).strip() for l in (text or "").splitlines()]
+    hits = [i for i, l in enumerate(lines) if l.upper().startswith("RANKING:")]
+    if not hits:
         raise ValueError("No RANKING line")
+    i = hits[-1]
+    body = lines[i].split(":", 1)[1].strip()
+    if not body:
+        body = next((l for l in lines[i + 1:] if l), "")
     names, seen = [], set()
-    for token in re.split(r">|,", line[-1].split(":", 1)[1]):
+    for token in re.split(r">|,", body):
         name = token.strip().strip("*`'\". ")
         if name in candidates and name not in seen:
             names.append(name)

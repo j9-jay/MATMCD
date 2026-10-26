@@ -1,11 +1,11 @@
-"""Aggregate a head B run (TASK_070) and compare methods case by case.
+"""Aggregate a head B run (TASK_070) into one table for all methods.
 
 Applies the frozen failure rule: a failed case-method run is scored as all
 candidates tied (AC@k = k/n, RR = H_n/n). Ranking metrics are averaged over all
 cases; evidence metrics (silver precision/recall, attribution precision) over the
-completed runs that have a value. Paired comparisons use the same cases for both
-methods: bootstrap 95% CI of the mean difference (10,000 resamples) and a
-two-sided sign-flip permutation test (100,000 draws), both with seed 0.
+completed runs that have a value. Since 2026-10-27 every method gets a case-bootstrap
+95% CI of its mean Avg@5 (10,000 resamples, seed 0), plus per-service means and a
+complete-case table; there are no pairwise tests (`paired` is kept for older analyses).
 
 Usage: python -B analyze_task070_head_b.py <head_b run dir>
 Writes <run dir>/analysis.json and prints a Markdown summary.
@@ -19,7 +19,8 @@ import numpy as np
 RANK_KEYS = ["AC@1", "AC@3", "AC@5", "Avg@5", "RR"]
 EVIDENCE_KEYS = ["silver_precision", "silver_recall", "attribution_precision",
                  "strict_precision", "strict_recall", "strict_attribution_precision"]
-PROPOSED = "state_dynamic"
+PROPOSED = "state_fixed"  # 2026-10-27: state_fixed is the proposed method; state_dynamic is a reference
+ROLES = {"state_fixed": "proposed", "state_dynamic": "reference"}
 SEED = 0
 
 
@@ -77,30 +78,47 @@ def main():
         entry["missing_names"] = int(sum(r["missing_names"] for r in done))
         entry["seconds_mean"] = float(np.mean([r["seconds"] for r in done])) if done else None
         table[m] = entry
+    # 2026-10-27 plan: one table for all methods (state_fixed = proposed, state_dynamic =
+    # reference), each mean with a case-bootstrap 95% CI; no pairwise tests.
     rng = np.random.default_rng(SEED)
-    comparisons = {}
-    for other in [m for m in methods if m != PROPOSED]:
-        comparisons[f"{PROPOSED}_vs_{other}"] = {
-            k: paired([s[k] for s in scores[PROPOSED]], [s[k] for s in scores[other]], rng)
-            for k in ["Avg@5", "AC@1", "RR"]}
+    for m in methods:
+        vals = np.array([s["Avg@5"] for s in scores[m]])
+        boot = vals[rng.integers(0, len(vals), size=(10000, len(vals)))].mean(axis=1)
+        table[m]["Avg@5_ci95"] = [float(np.percentile(boot, 2.5)), float(np.percentile(boot, 97.5))]
+        unit_kinds = [k for r in summary["methods"][m] if r["status"] == "COMPLETE" for k in r.get("evidence_roles", [])]
+        if unit_kinds:
+            table[m]["document_share"] = float(np.mean([k == "document" for k in unit_kinds]))
+    import task070_rcaeval as rc
+    service = {c["id"]: c["path"].split("/")[1].rsplit("_", 1)[0] for c in rc.cases()}
+    services = sorted({service[c] for c in cases})
+    per_service = {m: {s: float(np.mean([scores[m][i]["Avg@5"] for i, c in enumerate(cases) if service[c] == s]))
+                       for s in services} for m in methods}
+    failed_any = {c for m in methods for c in table[m]["failed_cases"]}
+    complete = [i for i, c in enumerate(cases) if c not in failed_any]
+    complete_only = {m: float(np.mean([scores[m][i]["Avg@5"] for i in complete])) if complete else None for m in methods}
     out = {"run": run.name, "cases": len(cases), "failure_rule": "failed run = all candidates tied",
-           "paired_test": {"bootstrap": 10000, "permutation_sign_flip": 100000, "seed": SEED},
-           "methods": table, "comparisons": comparisons,
+           "roles": {m: ROLES.get(m, "comparison") for m in methods},
+           "bootstrap": {"resamples": 10000, "seed": SEED, "note": "per-method CI only; no pairwise tests"},
+           "methods": table, "per_service_Avg@5": per_service,
+           "complete_cases": {"n": len(complete), "Avg@5": complete_only},
            "per_case": {m: dict(zip(cases, scores[m])) for m in methods}}
     (run / "analysis.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("| method | Avg@5 | AC@1 | AC@3 | RR | failed | silver P | silver R | attribution P |")
-    print("|---|---:|---:|---:|---:|---:|---:|---:|---:|")
     fmt = lambda v: "-" if v is None else f"{v:.3f}"
+    print("| method | role | Avg@5 (95% CI) | AC@1 | AC@3 | RR | failed | strict P | strict R | citation P | doc share |")
+    print("|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|")
     for m, e in table.items():
-        print(f"| {m} | {e['Avg@5']:.3f} | {e['AC@1']:.3f} | {e['AC@3']:.3f} | {e['RR']:.3f} | {e['failed']} | "
-              f"{fmt(e['silver_precision'])} | {fmt(e['silver_recall'])} | {fmt(e['attribution_precision'])} |")
+        lo, hi = e["Avg@5_ci95"]
+        print(f"| {m} | {ROLES.get(m, 'comparison')} | {e['Avg@5']:.3f} [{lo:.3f}, {hi:.3f}] | {e['AC@1']:.3f} | "
+              f"{e['AC@3']:.3f} | {e['RR']:.3f} | {e['failed']} | {fmt(e.get('strict_precision'))} | "
+              f"{fmt(e.get('strict_recall'))} | {fmt(e.get('attribution_precision'))} | {fmt(e.get('document_share'))} |")
     print()
-    print("| comparison | metric | diff | 95% CI | p | W/L/T |")
-    print("|---|---|---:|---|---:|---|")
-    for name, comp in comparisons.items():
-        for k, r in comp.items():
-            print(f"| {name} | {k} | {r['mean_diff']:+.3f} | [{r['ci95'][0]:+.3f}, {r['ci95'][1]:+.3f}] | "
-                  f"{r['p_permutation']:.4f} | {r['wins']}/{r['losses']}/{r['ties']} |")
+    print("| method | " + " | ".join(services) + " |")
+    print("|---|" + "---:|" * len(services))
+    for m in methods:
+        print(f"| {m} | " + " | ".join(f"{per_service[m][s]:.3f}" for s in services) + " |")
+    print()
+    print(f"complete cases (no method failed): {len(complete)} of {len(cases)}: "
+          + ", ".join(f"{m} {fmt(v)}" for m, v in complete_only.items()))
 
 
 if __name__ == "__main__":
