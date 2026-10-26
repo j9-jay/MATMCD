@@ -9,8 +9,8 @@ scored as expected values (task070_metrics tie-aware).
 Methods (identical judge prompt; only evidence selection differs)
 - none: no evidence.
 - flat: dense top-K for one case-level query.
-- role_only: same role budget as the state methods (structure / observation) but
-  observation units picked by the flat query, no states.
+- role_only: role buckets without states (structure, wiki documents, observation),
+  each bucket ranked by the flat query (v3 adds the document bucket).
 - state_fixed: reasoning states SYMPTOM -> STRUCTURE -> CANDIDATES -> VERIFY with
   VERIFY on the three services with the largest deviation strength (flagged
   metric-minutes; STATE_DEV_V2, was: earliest first deviation).
@@ -34,6 +34,7 @@ K_DIRECT = 24
 ORDER_REPEATS = 3
 SAMPLING = {"temperature": 0.0, "seed": 42, "max_tokens": 4096, "presence_penalty": 1.5}
 STATE_BUDGET = {"SYMPTOM": 4, "STRUCTURE": 4, "CANDIDATES": 8, "VERIFY": 8}
+ROLE_DOCUMENT_BUDGET = 4  # role_only baseline, v3: same size as its structure bucket
 FLAT_QUERY = ("Which service caused the incident that increased frontend latency? Errors, failures, "
               "abnormal resource usage, slow or failing calls.")
 
@@ -147,9 +148,14 @@ class DirectSelector:
             return self._rank(key, units, units, FLAT_QUERY, K_DIRECT), info
         structure = [u for u in units if u["role"] == "structure"]
         observation = [u for u in units if u["role"] == "observation"]
+        document = [u for u in units if u["role"] == "document"]
         if method == "role_only":
+            # v3 (2026-10-27, fixed before development): role buckets without states: structure
+            # units, wiki documents (ROLE_DOCUMENT_BUDGET), observations for the rest, each bucket
+            # ranked by the flat query.
             s = self._rank(key, units, structure, FLAT_QUERY, STATE_BUDGET["STRUCTURE"])
-            return s + self._rank(key, units, observation, FLAT_QUERY, K_DIRECT - len(s)), info
+            d = self._rank(key, units, document, FLAT_QUERY, ROLE_DOCUMENT_BUDGET)
+            return s + d + self._rank(key, units, observation, FLAT_QUERY, K_DIRECT - len(s) - len(d)), info
         overview, onsets, strength = case_overview(units, services)
         order = strength_order(services, strength, onsets)  # v2: was earliest-onset order
         strong = [s for s in order if strength[s][0] > 0][:3]

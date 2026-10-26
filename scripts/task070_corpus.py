@@ -180,8 +180,69 @@ def build_case_corpus(path):
     return units
 
 
+WIKI_CHARS = 1500  # D3: a wiki section longer than this is split at line boundaries (never cut mid-line)
+
+
+def _wiki_pieces(lines):
+    """Split one section's lines into pieces of at most WIKI_CHARS characters at line
+    boundaries. The latest sub-heading and, inside a table, the table's header and
+    separator rows are repeated at the start of every continuation piece."""
+    pieces, current, table_head, subheading = [], [], [], None
+    for i, line in enumerate(lines):
+        if line.startswith("#"):
+            subheading = line
+        if line.startswith("|") and i + 1 < len(lines) and re.fullmatch(r"\|(-+\|)+", lines[i + 1].replace(" ", "")):
+            table_head = [line, lines[i + 1]]
+        elif not line.startswith("|"):
+            table_head = [] if line.strip() else table_head
+        if current and len("\n".join(current + [line])) > WIKI_CHARS:
+            pieces.append(current)
+            current = [subheading] if subheading and line != subheading else []
+            if line.startswith("|") and line not in table_head:
+                current += table_head
+        current.append(line)
+    if any(l.strip() for l in current):
+        pieces.append(current)
+    return ["\n".join(p).strip() for p in pieces if "\n".join(p).strip()]
+
+
+def wiki_units(services):
+    """Online Boutique team wiki (v3 corpus, 2026-10-27): one unit per document section
+    (long sections split by _wiki_pieces). Identical in every case (`shared`), role
+    'document'. The provenance header stays in the documents and in the unit metadata."""
+    from task070_ob_wiki_common import OUT, WIKI
+    names = sorted(set(services) | {"redis"}, key=len, reverse=True)
+    units = []
+    for number, (folder, stem, title) in sorted(WIKI.items()):
+        path = OUT / folder / f"{stem}.md"
+        if not path.exists():
+            raise RuntimeError(f"Wiki document missing: {path}")
+        sections, name, body = [], None, []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.startswith("## "):
+                if name is not None:
+                    sections.append((name, body))
+                name, body = line[3:].strip(), []
+            elif name is not None:
+                body.append(line)
+        if name is not None:
+            sections.append((name, body))
+        for section, body in sections:
+            for k, piece in enumerate(_wiki_pieces(body)):
+                mentioned = [s for s in names if re.search(rf"(?<![\w-]){re.escape(s)}(?![\w-])", piece)]
+                units.append({"id": None, "role": "document", "kind": "wiki", "services": sorted(mentioned),
+                              "minutes": [], "shared": True, "wiki_doc": number, "wiki_section": section,
+                              "wiki_file": f"{folder}/{stem}.md", "wiki_piece": k,
+                              "text": f"Wiki {number:02d} {title} / {section}:\n{piece}"})
+    return units
+
+
 def write_case_corpus(case):
     units = build_case_corpus(case["path"])
+    services = rc.node_table(case["path"])[2]["services"]
+    for unit in wiki_units(services):  # v3: telemetry + team wiki (shared by every case)
+        unit["id"] = f"u{len(units):04d}"
+        units.append(unit)
     out = WORK / "corpus/re2ob" / f"{case['id']}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("".join(json.dumps(u, ensure_ascii=False) + "\n" for u in units), encoding="utf-8")
