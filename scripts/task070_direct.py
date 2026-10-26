@@ -63,6 +63,7 @@ S2_WIKI_DOCS = (3, 4, 7, 10)                           # topology, communication
 N_HYPOTHESES = 3
 S4_BUDGET = 12                                         # split evenly over the hypotheses
 S4_TELEMETRY_KINDS = ("metric", "log_template", "trace_perf", "trace_error")
+S4_ANOMALY_KINDS = ("metric", "trace_error")  # iteration 1: in S4 pools metrics are flagged ones only
 # mechanism key -> (phrase used in the state query, wiki docs searched in S4)
 MECHANISMS = {
     "cpu": ("CPU saturation", (18, 19)),
@@ -309,6 +310,8 @@ class DirectSelector:
         # S4 evidence per hypothesis: the service's telemetry and mechanism-specific wiki sections,
         # both ranked by a state query naming the service and mechanism.
         if hypotheses:
+            # DEV_V3 iteration 2 (REJECTED, reverted): budget left unused by S1/S2 given to S4 instead of
+            # the flat fill. state_fixed 0.965 -> 0.955, recommendationservice 1.000 -> 0.875.
             per = S4_BUDGET // len(hypotheses)
             wiki_k = max(1, per // 4)
             for h in hypotheses:
@@ -319,7 +322,13 @@ class DirectSelector:
                 tel = [u for u in observation if s in u["services"] and u["kind"] in S4_TELEMETRY_KINDS
                        and (u["kind"] != "metric" or u["minutes"])]  # metrics only when flagged
                 wiki4 = [u for u in document if u["wiki_doc"] in docs and s in u["services"]]
-                picked = self._rank(key, units, free(tel), q4, per - wiki_k)
+                # DEV_V3 iteration 1: anomaly-marked telemetry (flagged metrics, trace errors) first,
+                # each group ranked by the state query (start run: one ranking over all kinds picked
+                # normal log templates and health-check traces).
+                marked = [u for u in free(tel) if u["kind"] in S4_ANOMALY_KINDS]
+                picked = self._rank(key, units, marked, q4, per - wiki_k)
+                picked += self._rank(key, units, [u for u in free(tel) if u["kind"] not in S4_ANOMALY_KINDS], q4,
+                                     per - wiki_k - len(picked))
                 picked += self._rank(key, units, [u for u in free(wiki4) if u not in picked], q4, wiki_k)
                 take(f"S4_{s}", picked)
         info["stage_units"] = {t["stage"]: len(t.get("picked", [])) for t in trace if "picked" in t}
