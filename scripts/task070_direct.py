@@ -11,11 +11,15 @@ Methods (identical judge prompt; only evidence selection differs)
 - flat: dense top-K for one case-level query.
 - role_only: role buckets without states (structure, wiki documents, observation),
   each bucket ranked by the flat query (v3 adds the document bucket).
-- state_fixed: reasoning states SYMPTOM -> STRUCTURE -> CANDIDATES -> VERIFY with
-  VERIFY on the three services with the largest deviation strength (flagged
-  metric-minutes; STATE_DEV_V2, was: earliest first deviation).
-- state_dynamic: an LLM planner reads a label-free overview (deviation strength and
-  onset per service, call edges) and chooses which candidates to verify and the state order.
+- state_fixed (PROPOSED, DEV_V3 5-stage design, 2026-10-27): S1 telemetry (KPI, most-flagged
+  metric of the strongest-deviation services, trace errors) -> S2 structure (call graph and
+  wiki topology/call-flow sections of the suspects) -> S3 hypotheses (service, mechanism) by a
+  fixed label-free rule over the S1 selection -> S4 evidence per hypothesis (the service's
+  telemetry and mechanism-specific wiki sections, ranked by a state query naming the
+  mechanism) -> S5 the unchanged judge.
+- state_dynamic (REFERENCE): the same design, but S3 is a planner LLM call that reads the
+  S1+S2 evidence texts; an unparsable reply falls back to the state_fixed rule.
+(STATE_DEV_V2 design, replaced by DEV_V3: SYMPTOM -> STRUCTURE -> CANDIDATES -> VERIFY.)
 """
 import json
 import random
@@ -48,6 +52,47 @@ Evidence:
 
 Task: Rank ALL candidate services from most to least likely root cause of the incident. Justify the top three in at most five short sentences in total, citing evidence ids such as [E1]. On the last line write the full ranking exactly as:
 RANKING: service > service > ... (every candidate exactly once)"""
+
+# --- DEV_V3 5-stage reasoning-state design (state_fixed / state_dynamic), 2026-10-27 ---
+# Per-stage budgets (sum = K_DIRECT); a stage whose pool is short leaves its budget unused and
+# the unused budget is filled with the flat query, as for the earlier designs.
+S1_BUDGET = {"kpi": 1, "metric": 3, "trace_error": 3}  # 7: symptom + anomalous services
+N_SUSPECTS = 3                                         # strongest-deviation services in S1
+S2_BUDGET = {"call_graph": 2, "wiki": 3}               # 5: structure of the suspects
+S2_WIKI_DOCS = (3, 4, 7, 10)                           # topology, communication, provider/consumer, call flow
+N_HYPOTHESES = 3
+S4_BUDGET = 12                                         # split evenly over the hypotheses
+S4_TELEMETRY_KINDS = ("metric", "log_template", "trace_perf", "trace_error")
+S4_ANOMALY_KINDS = ("metric", "trace_error")  # iteration 1: in S4 pools metrics are flagged ones only
+# mechanism key -> (phrase used in the state query, wiki docs searched in S4)
+MECHANISMS = {
+    "cpu": ("CPU saturation", (18, 19)),
+    "memory": ("memory exhaustion", (18, 14, 19)),
+    "disk": ("disk I/O pressure", (14, 15, 18)),
+    "network": ("network or connection failure", (11, 17, 20)),
+    "latency": ("slow responses", (11, 24, 19)),
+    "load": ("abnormal request load", (18, 11)),
+    "errors": ("failing requests and errors", (11, 5, 6, 24)),
+}
+METRIC_MECHANISM = {"cpu": "cpu", "mem": "memory", "diskio": "disk", "socket": "network",
+                    "latency-90": "latency", "workload": "load", "error": "errors"}
+S1_QUERY = "frontend latency increase and failing requests"
+S2_QUERY = ("Dependencies and call flow of {suspects}: which services call them, which services they call, "
+            "upstream and downstream paths from frontend.")
+S4_QUERY = ("Hypothesis: {service} caused the incident through {phrase}. Evidence of {phrase} in {service}: "
+            "abnormal metrics, error logs, failing or slow calls, related configuration and error handling.")
+PLANNER3_SYSTEM = "You form root-cause hypotheses for a microservice incident. Reply with JSON only."
+PLANNER3_TEMPLATE = """Incident: frontend latency increased.
+
+Candidate root-cause services: {candidates}
+
+Evidence gathered so far (telemetry: user-facing symptom, anomalous services, trace errors; then system structure: call graph and wiki):
+{evidence}
+
+Mechanisms: cpu (CPU saturation), memory (memory exhaustion), disk (disk I/O pressure), network (network or connection failure), latency (slow responses), load (abnormal request load), errors (failing requests and errors).
+
+Form up to three root-cause hypotheses, most likely first. Each names one candidate service and one mechanism from the list. Reply with JSON:
+{{"hypotheses": [{{"service": "<candidate>", "mechanism": "<mechanism>"}}]}}"""
 
 PLANNER_SYSTEM = "You plan evidence retrieval for diagnosing a microservice incident. Reply with JSON only."
 # STATE_DEV_V2 iteration 1 (30 dev cases, 2026-10-25): the v1 planner chose exactly frontend,
@@ -100,6 +145,59 @@ def case_overview(units, services):
     edges = [f"{a}->{b}" for a in services for b in services if a != b and _calls(units, a, b)]
     lines.append("- calls: " + (", ".join(edges) if edges else "none observed"))
     return "\n".join(lines), onsets, strength
+
+
+def _metric_mechanism(unit):
+    """Mechanism key of a metric unit from its column suffix (e.g. checkoutservice_cpu -> cpu)."""
+    column = re.match(r"Metric (\S+) of service", unit["text"]).group(1)
+    return METRIC_MECHANISM.get(column.split("_", 1)[1] if "_" in column else "")
+
+
+def _error_spans(unit):
+    found = re.search(r": (\d+) error spans", unit["text"])
+    return int(found.group(1)) if found else 0
+
+
+def _flagged_metrics(observation, service):
+    """The service's metric units with flagged minutes, most-flagged first (label-free)."""
+    return sorted([u for u in observation if service in u["services"] and u["kind"] == "metric" and u["minutes"]],
+                  key=lambda u: (-len(u["minutes"]), min(u["minutes"]), u["id"]))
+
+
+def mechanisms_of(selected, service):
+    """S3 mechanism keys of a service from the given evidence: its flagged metrics (most-flagged
+    first, mapped by column suffix), then 'errors' if a trace_error unit of it is present."""
+    keys = [_metric_mechanism(u) for u in _flagged_metrics(selected, service)]
+    if any(u["kind"] == "trace_error" and service in u["services"] for u in selected):
+        keys.append("errors")
+    return list(dict.fromkeys(k for k in keys if k))
+
+
+def fixed_hypotheses(s1_units, suspects):
+    """S3 state_fixed rule (label-free): one hypothesis per S1 suspect in deviation-strength order;
+    mechanism from that service's S1 evidence (its most-flagged metric, trace errors)."""
+    return [{"service": s, "mechanisms": mechanisms_of(s1_units, s) or ["latency"]} for s in suspects[:N_HYPOTHESES]]
+
+
+def parse_hypotheses(text, services, s1_units, observation):
+    """state_dynamic S3: planner JSON -> hypotheses; None if nothing usable parses. A valid service
+    with a missing/unknown mechanism takes the state_fixed mechanism rule (its S1 evidence, else its
+    flagged metrics over the whole case)."""
+    try:
+        plan = json.loads(re.search(r"\{.*\}", text or "", re.S).group(0))
+        items = plan.get("hypotheses", []) if isinstance(plan, dict) else []
+    except (AttributeError, json.JSONDecodeError):
+        return None
+    hyps, seen = [], set()
+    for item in items if isinstance(items, list) else []:
+        if not isinstance(item, dict) or item.get("service") not in services or item["service"] in seen:
+            continue
+        s = item["service"]
+        mech = str(item.get("mechanism", "")).strip().lower()
+        mechs = [mech] if mech in MECHANISMS else (mechanisms_of(s1_units, s) or mechanisms_of(observation, s) or ["latency"])
+        hyps.append({"service": s, "mechanisms": mechs, "planner_mechanism": item.get("mechanism")})
+        seen.add(s)
+    return hyps[:N_HYPOTHESES] or None
 
 
 _MARKUP = re.compile(r"[*_`#]")
@@ -156,55 +254,88 @@ class DirectSelector:
             s = self._rank(key, units, structure, FLAT_QUERY, STATE_BUDGET["STRUCTURE"])
             d = self._rank(key, units, document, FLAT_QUERY, ROLE_DOCUMENT_BUDGET)
             return s + d + self._rank(key, units, observation, FLAT_QUERY, K_DIRECT - len(s) - len(d)), info
-        overview, onsets, strength = case_overview(units, services)
-        order = strength_order(services, strength, onsets)  # v2: was earliest-onset order
-        strong = [s for s in order if strength[s][0] > 0][:3]
-        states, verify = ["SYMPTOM", "STRUCTURE", "CANDIDATES", "VERIFY"], strong
-        if method == "state_dynamic":
-            text = self.client.inquire_messages(
-                [{"role": "system", "content": PLANNER_SYSTEM},
-                 {"role": "user", "content": PLANNER_TEMPLATE.format(overview=overview)}], temperature=0.0)
-            info["planner_response"] = text
-            try:
-                plan = json.loads(re.search(r"\{.*\}", text, re.S).group(0))
-                chosen_v = [s for s in plan.get("verify", []) if s in services][:3]
-                chosen_s = [s for s in plan.get("states", []) if s in STATE_BUDGET]
-                if chosen_v:
-                    verify = chosen_v
-                if chosen_s:
-                    states = list(dict.fromkeys(chosen_s))
-                info["plan_used_default"] = not (chosen_v and chosen_s)
-            except (AttributeError, json.JSONDecodeError):
-                info["plan_used_default"] = True
-        elif method != "state_fixed":
+        if method not in ("state_fixed", "state_dynamic"):
             raise ValueError(method)
+        # DEV_V3 5-stage design. Each stage draws only units no earlier stage chose.
+        onsets = {s: _first_deviation(units, s) for s in services}
+        strength = {s: deviation_strength(units, s) for s in services}
+        order = strength_order(services, strength, onsets)
         chosen, trace = [], []
-        for state in states:
-            if state == "SYMPTOM":
-                pool = [u for u in observation if "frontend" in u["services"] and (u["kind"] == "kpi" or u["minutes"])]
-                picked = self._rank(key, units, pool, "frontend latency increase and failing requests", STATE_BUDGET[state])
-            elif state == "STRUCTURE":
-                picked = structure[: STATE_BUDGET[state]]
-            elif state == "CANDIDATES":
-                picked = []
-                for s in order:  # v2: strongest service first, its most-flagged metric (was earliest)
-                    first = sorted([u for u in observation if s in u["services"] and u["kind"] == "metric" and u["minutes"]],
-                                   key=lambda u: (-len(u["minutes"]), min(u["minutes"]), u["id"]))
-                    picked += first[:1]
-                picked = picked[: STATE_BUDGET[state]]
-            elif state == "VERIFY":
-                picked = []
-                per = max(1, STATE_BUDGET[state] // max(1, len(verify)))
-                for s in verify:
-                    pool = [u for u in observation if s in u["services"] and u["kind"] in ("log_template", "trace_perf", "metric") and u not in picked]
-                    picked += self._rank(key, units, pool, f"errors, failures or abnormal behaviour of {s}", per)
-            picked = [u for u in picked if u not in chosen]
-            chosen += picked
-            trace.append({"state": state, "picked": [u["id"] for u in picked]})
+
+        def take(stage, picked):
+            seen, new = {u["id"] for u in chosen}, []
+            for u in picked:
+                if u["id"] not in seen:
+                    seen.add(u["id"])
+                    new.append(u)
+            chosen.extend(new)
+            trace.append({"stage": stage, "picked": [u["id"] for u in new]})
+            return new
+
+        def free(pool):
+            return [u for u in pool if u not in chosen]
+
+        # S1 telemetry: user-facing symptom (KPI), strongest-deviation services and their most-flagged
+        # metric, trace errors (most error spans first).
+        suspects = [s for s in order if strength[s][0] > 0][:N_SUSPECTS]
+        kpi = [u for u in observation if u["kind"] == "kpi"]
+        s1 = self._rank(key, units, kpi, S1_QUERY, S1_BUDGET["kpi"])
+        s1 += [m for s in suspects for m in _flagged_metrics(observation, s)[:1]][: S1_BUDGET["metric"]]
+        errors = sorted([u for u in observation if u["kind"] == "trace_error"],
+                        key=lambda u: (-_error_spans(u), -len(u["minutes"]), u["id"]))
+        s1 += errors[: S1_BUDGET["trace_error"]]
+        s1 = take("S1_telemetry", s1)
+        # S2 structure of the suspects: observed call graph and wiki topology/call-flow sections.
+        focus = suspects or list(dict.fromkeys(s for u in s1 if u["kind"] == "trace_error" for s in u["services"]))
+        q2 = S2_QUERY.format(suspects=", ".join(focus) if focus else "frontend")
+        calls = [u for u in structure if not focus or set(focus) & set(u["services"])]
+        wiki2 = [u for u in document if u["wiki_doc"] in S2_WIKI_DOCS and set(focus) & set(u["services"])]
+        s2 = self._rank(key, units, free(calls), q2, S2_BUDGET["call_graph"])
+        s2 += self._rank(key, units, free(wiki2), q2, S2_BUDGET["wiki"])
+        s2 = take("S2_structure", s2)
+        # S3 hypotheses (no retrieval), built from what S1/S2 selected.
+        fixed = fixed_hypotheses(s1, suspects)
+        hypotheses, info["plan_used_default"] = fixed, None
+        if method == "state_dynamic":
+            evidence = "\n".join(f"[{i}] {u['text']}" for i, u in enumerate(s1 + s2, 1)) or "(no evidence selected)"
+            text = self.client.inquire_messages(
+                [{"role": "system", "content": PLANNER3_SYSTEM},
+                 {"role": "user", "content": PLANNER3_TEMPLATE.format(candidates=", ".join(services), evidence=evidence)}],
+                temperature=0.0)
+            info["planner_response"] = text
+            parsed = parse_hypotheses(text, services, s1, observation)
+            info["plan_used_default"] = parsed is None
+            hypotheses = parsed if parsed is not None else fixed
+        trace.append({"stage": "S3_hypotheses", "hypotheses": hypotheses})
+        # S4 evidence per hypothesis: the service's telemetry and mechanism-specific wiki sections,
+        # both ranked by a state query naming the service and mechanism.
+        if hypotheses:
+            # DEV_V3 iteration 2 (REJECTED, reverted): budget left unused by S1/S2 given to S4 instead of
+            # the flat fill. state_fixed 0.965 -> 0.955, recommendationservice 1.000 -> 0.875.
+            per = S4_BUDGET // len(hypotheses)
+            wiki_k = max(1, per // 4)
+            for h in hypotheses:
+                s = h["service"]
+                phrase = " and ".join(MECHANISMS[m][0] for m in h["mechanisms"])
+                docs = list(dict.fromkeys(d for m in h["mechanisms"] for d in MECHANISMS[m][1]))
+                q4 = S4_QUERY.format(service=s, phrase=phrase)
+                tel = [u for u in observation if s in u["services"] and u["kind"] in S4_TELEMETRY_KINDS
+                       and (u["kind"] != "metric" or u["minutes"])]  # metrics only when flagged
+                wiki4 = [u for u in document if u["wiki_doc"] in docs and s in u["services"]]
+                # DEV_V3 iteration 1: anomaly-marked telemetry (flagged metrics, trace errors) first,
+                # each group ranked by the state query (start run: one ranking over all kinds picked
+                # normal log templates and health-check traces).
+                marked = [u for u in free(tel) if u["kind"] in S4_ANOMALY_KINDS]
+                picked = self._rank(key, units, marked, q4, per - wiki_k)
+                picked += self._rank(key, units, [u for u in free(tel) if u["kind"] not in S4_ANOMALY_KINDS], q4,
+                                     per - wiki_k - len(picked))
+                picked += self._rank(key, units, [u for u in free(wiki4) if u not in picked], q4, wiki_k)
+                take(f"S4_{s}", picked)
+        info["stage_units"] = {t["stage"]: len(t.get("picked", [])) for t in trace if "picked" in t}
         if len(chosen) < K_DIRECT:  # keep the same evidence budget as flat
-            extra = self._rank(key, units, [u for u in units if u not in chosen], FLAT_QUERY, K_DIRECT - len(chosen))
-            chosen += extra
-        info.update(states=states, verify=verify, trace=trace)
+            extra = self._rank(key, units, free(units), FLAT_QUERY, K_DIRECT - len(chosen))
+            take("flat_fill", extra)
+        info.update(suspects=suspects, hypotheses=hypotheses, trace=trace)
         return chosen[:K_DIRECT], info
 
 
