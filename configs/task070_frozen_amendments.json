@@ -58,6 +58,42 @@
       "freeze": "category 2",
       "reason": "2026-10-25 데이터 감사: v1 스냅샷은 페이지당 앞 6구간만 보관해 수집 본문의 22%만 사용. 같은 Serper 결과의 같은 상위 3개 링크를 본문 전체로 재수집(v2, 새 검색 없음), 사후 검사에 걸린 페이지는 중단 대신 제외·기록",
       "affects_category_1": false
+    },
+    {
+      "file": "scripts/task070_corpus.py",
+      "old_sha256": "101b508881363763a8f2feb76db458fa12c5a3fdf2a3178f7541b9332c3bf107",
+      "new_sha256": "85765d260c9a8f8d49c72303cdca72d4a8e6fb17bb68b2dc8f4979aceabc6842",
+      "date_kst": "2026-10-27",
+      "freeze": "G2",
+      "reason": "2026-10-27 v3: Online Boutique v0.9.0 팀 위키 25개 문서를 근거 풀에 추가(wiki_units, 섹션 단위, 공유 단위). 이전 실험은 계획서의 시스템 구조 문서가 빠진 불완전한 근거 풀이었음 (PR #28)",
+      "affects_category_1": true
+    },
+    {
+      "file": "scripts/task070_direct.py",
+      "old_sha256": "d7af2bfce3c740aba81eda4d72e82c17d8dd16c592b68fa3b3d5908d4260d1a6",
+      "new_sha256": "4ec74b1ab0caf4a530f61583f1bc86f6b0619810cc49a97ecd8d9a4f3c27effd",
+      "date_kst": "2026-10-27",
+      "freeze": "G2",
+      "reason": "2026-10-27 v3: 순위 해석 형식 허용(PR #27, 모든 방법 공통), role_only에 문서 묶음 추가(PR #28, 개발 전 고정), 평가 결과를 모르는 서브에이전트가 반복 1의 30사례로 5단계 상태(state_fixed 제안, state_dynamic 참고) 개발(DEV_V3, PR #29)",
+      "affects_category_1": true
+    },
+    {
+      "file": "scripts/task070_direct_run.py",
+      "old_sha256": "5079bf7a641e9e5bb3f1de328fcf9549a593af3080a30585f4a28fef7a3ba6d1",
+      "new_sha256": "236d827bd5bdfe7f993f412c4f6dd605abe1bc9145d0fecb5cea1638ca074122",
+      "date_kst": "2026-10-27",
+      "freeze": "G2",
+      "reason": "2026-10-27 v3: 고른 근거의 역할 목록(evidence_roles) 기록 추가. 채점 무변경 (PR #27)",
+      "affects_category_1": true
+    },
+    {
+      "file": "scripts/task070_retrieval.py",
+      "old_sha256": "88a6cf988f3e8decd64181c0f5b3b02334bba25451fa247ae5a572803508f453",
+      "new_sha256": "7f6ae6b111e510859a43bee7c5514724cfb09bc285540d24f9324a7ecc3f0363",
+      "date_kst": "2026-10-27",
+      "freeze": "G2",
+      "reason": "2026-10-27 v3: 공유 단위(위키) 임베딩을 텍스트 해시 캐시로 한 번만 계산. 벡터 값 동일 (PR #27)",
+      "affects_category_1": true
     }
   ]
 }
