@@ -275,9 +275,41 @@ footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); border-top: 
     <li>seed 하나로 한 번 실행했고, 판단·계획 LLM은 4B 모델 하나입니다.</li>
     <li>Online Boutique 버전은 추정입니다.</li>
     <li>계획서의 진단·조치 문서(장애 패턴, incident report, runbook)는 원본 저장소에 없어 만들지 않았습니다.</li>
-    <li>출력부 A(보조)는 다시 실행하지 않았습니다.</li>
+    <li>출력부 A(보조)는 v3 근거 풀로 다시 실행했지만, 출력부 A의 상태 검색기에는 5단계 설계가 적용되지 않았습니다(아래).</li>
     <li>판단 응답 형식 실패 7건을 동점으로 채점했습니다.</li>
     <li>방법 간 차이는 쌍별 검정이 아니라 한 표의 신뢰구간으로만 제시합니다.</li>
+  </ul>
+
+  <h3>출력부 A v3 재실행 (보조 평가, 반복 2의 30사례)</h3>
+  <p>출력부 A는 사례마다 변수 쌍 156개(서비스 12개 + KPI의 순서쌍) 각각에 근거 6개를 고르고, Yes/No 판단 → 제약 PC → KPI에서 RWR로 순위를 냅니다. 이번에는 코드와 설정을 바꾸지 않고, v3 근거 풀(위키 포함)로 다시 실행했습니다(사용자 결정 A안).</p>
+  <ul>
+    <li><strong>재사용:</strong> 근거 풀을 읽지 않는 PC만, none, MATMCD는 입력이 v1과 같으므로 v1 결과를 그대로 썼습니다.</li>
+    <li><strong>상태 검색기의 차이:</strong> 출력부 A의 상태 검색기는 v3 5단계 설계가 아니라, 그 전의 쌍별 상태 검색기입니다(구조 → 시간 순서 → 원인 행동). 이 검색기에는 위키를 고르는 상태가 없습니다. 상태 후보가 모자라 남은 자리를 flat 방식으로 채울 때만 위키가 들어갑니다.</li>
+    <li><strong>근거 풀 변화:</strong> v1에 비해 위키 502개와 trace_error 근거가 함께 늘었습니다. 그래서 v1 대비 변화는 두 요인을 나눠 볼 수 없습니다.</li>
+  </ul>
+  <div class="scroll wide"><table>
+    <thead><tr><th>방법</th><th>역할</th><th>Avg@5 [95% CI]</th><th class="n">AC@1</th><th class="n">RR</th><th class="n">실패</th><th class="n">평균 Yes</th><th class="n">문서 비율</th></tr></thead>
+    <tbody>
+      <tr><td>PC만</td><td>비교 (v1 재사용)</td><td>0.369 [0.244, 0.497]</td><td class="n">0.124</td><td class="n">0.332</td><td class="n">0</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>none</td><td>비교 (v1 재사용)</td><td>0.270 [0.168, 0.387]</td><td class="n">0.129</td><td class="n">0.289</td><td class="n">0</td><td class="n">3.0</td><td class="n">—</td></tr>
+      <tr><td>flat</td><td>비교</td><td>0.524 [0.397, 0.642]</td><td class="n">0.170</td><td class="n">0.415</td><td class="n">0</td><td class="n">56.3</td><td class="n">0.779</td></tr>
+      <tr><td>role_only</td><td>비교</td><td>0.461 [0.342, 0.575]</td><td class="n">0.155</td><td class="n">0.372</td><td class="n">1</td><td class="n">58.6</td><td class="n">0.774</td></tr>
+      <tr><td><strong>state_fixed</strong></td><td><strong>제안</strong></td><td>0.502 [0.373, 0.631]</td><td class="n">0.165</td><td class="n">0.408</td><td class="n">0</td><td class="n">68.8</td><td class="n">0.198</td></tr>
+      <tr><td>state_dynamic</td><td>참고</td><td>0.536 [0.402, 0.667]</td><td class="n">0.252</td><td class="n">0.465</td><td class="n">2</td><td class="n">69.3</td><td class="n">0.217</td></tr>
+      <tr><td>MATMCD</td><td>참고 (v1 재사용)</td><td>0.407 [0.275, 0.544]</td><td class="n">0.186</td><td class="n">0.376</td><td class="n">4</td><td class="n">—</td><td class="n">—</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">
+    실패 3건: 판단 응답에 마지막 &lt;Yes&gt;/&lt;No&gt;가 없는 형식 실패 2건(role_only ob-d316fc5409, state_dynamic ob-58ac96acc3)과 출력 길이 초과 1건(state_dynamic ob-fede62b0c3)입니다. 모두 동점으로 채점했고, 재시도 없이 다음 사례부터 새 폴더에서 이어 실행했습니다. 응답 원문이 남지 않아 원인은 알 수 없습니다(UNKNOWN).<br>
+    실패가 없는 23사례: flat 0.531, role_only 0.472, state_fixed 0.461, state_dynamic 0.554.<br>
+    서비스별 Avg@5 (checkout / currency / email / productcatalog / recommendation): flat 0.542 / 0.557 / 0.212 / 0.517 / 0.794, role_only 0.372 / 0.454 / 0.197 / 0.490 / 0.791, state_fixed 0.333 / 0.566 / 0.410 / 0.435 / 0.768, state_dynamic 0.335 / 0.671 / 0.256 / 0.665 / 0.756.<br>
+    결과 폴더: <code>head_a_test/20261027T005311Z</code>, <code>20261027T075559Z</code>, <code>20261027T104618Z</code>. 합산 <code>head_a_test/analysis_v3.json</code>.
+  </p>
+  <ul>
+    <li><strong>출력부 B와 다른 결과:</strong> 출력부 A에서는 방법 간 신뢰구간이 크게 겹치고, 출력부 B에서 본 state_fixed의 우위가 재현되지 않았습니다.</li>
+    <li><strong>문서 비율:</strong> flat·role_only는 고른 근거의 77~78%가 위키이고, 상태 방법은 20~22%입니다.</li>
+    <li><strong>v1 대비:</strong> flat(0.564 → 0.524)과 role_only(0.504 → 0.461)는 내려갔고, state_fixed(0.454 → 0.502)와 state_dynamic(0.510 → 0.536)은 올라갔습니다. 위키와 trace_error가 함께 바뀌어 원인을 나눌 수 없습니다.</li>
+    <li><strong>해석:</strong> 이 결과는 5단계 제안 방법을 평가한 것이 아닙니다. 기존 쌍별 검색기를 문서가 섞인 근거 풀에서 비교한 결과입니다. 5단계 설계를 쌍별 판단에 적용하는 것은 향후 과제입니다.</li>
   </ul>
 </section>
 
@@ -1080,7 +1112,7 @@ What the evidence store contains for these variables:
     <li>Sachs에서는 근거를 쓰는 모든 방법이 근거 없는 LLM보다 나쁩니다. 세포 신호 단백질 이름(예: PKC, PKA, Raf)이 일반 웹 문서에서 다른 뜻으로 쓰이거나, 일반론 문서가 섞인 영향일 수 있으나 확인하지 않았습니다.</li>
   </ul>
 
-  <h3>10.4 보조 평가: 출력부 A (평가 30사례)</h3>
+  <h3>10.4 보조 평가: 출력부 A (평가 30사례) — 무효, 0-2장의 v3 재실행 참조</h3>
   <div class="scroll wide"><table>
     <thead><tr><th>방법</th><th class="n">Avg@5</th><th class="n">AC@1</th><th class="n">AC@3</th><th class="n">RR</th><th class="n">실패</th><th class="n">평균 Yes (156쌍 중)</th><th class="n">평균 간선</th></tr></thead>
     <tbody>
