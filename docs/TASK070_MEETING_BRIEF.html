@@ -372,6 +372,19 @@ a { color: var(--accent); }
   return S1 + S2 + S4 + Fill  → 판단 LLM이 후보 서비스 순위 출력</pre>
   <p class="src">출처: scripts/task070_direct.py:259-339. state_dynamic은 S3만 계획기 LLM 호출 1회로 바꿉니다.</p>
 
+  <h4>단계별 검색 질문 (고정 틀, 빈칸만 앞 단계 결과로 채움)</h4>
+  <div class="scroll"><table>
+    <thead><tr><th>단계</th><th>질문 틀</th><th>빈칸에 들어간 값 (예: <code>ob-c87f926217</code>)</th><th>후보 범위</th></tr></thead>
+    <tbody>
+      <tr><td>S1</td><td><code>frontend latency increase and failing requests</code></td><td>없음</td><td>KPI 카드 (이상 메트릭·trace 오류는 질문 없이 이상 표시 수로 선택)</td></tr>
+      <tr><td>S2</td><td><code>Dependencies and call flow of {의심 서비스}: which services call them, …</code></td><td>emailservice, adservice, paymentservice</td><td>의심 서비스가 나오는 호출 관계 + 위키 03·04·07·10</td></tr>
+      <tr><td>S4</td><td><code>Hypothesis: {서비스} caused the incident through {원인 유형}. Evidence of …</code></td><td>emailservice / memory exhaustion (가설마다 1개)</td><td>그 서비스의 카드 + 원인 유형별 위키 (memory → 18·14·19)</td></tr>
+      <tr><td>채움</td><td><code>Which service caused the incident that increased frontend latency? …</code></td><td>없음 (flat과 같음)</td><td>아직 안 고른 전체</td></tr>
+    </tbody>
+  </table></div>
+  <p>앞 단계가 뒤 단계를 바꿉니다: 의심 서비스 → S2 질문·후보 · S1 메트릭 종류 → S3 원인 유형 → S4 질문·후보·위키 번호. 질문은 LLM이 만들지 않고, 사례당 보통 6개입니다.</p>
+  <p class="src">출처: scripts/task070_direct.py S1_QUERY, S2_QUERY, S4_QUERY, FLAT_QUERY</p>
+
   <h4>기존 MATMCD와 핵심 차이 <span class="tag add">추가</span></h4>
   <div class="scroll"><table>
     <thead><tr><th></th><th>MATMCD</th><th>제안 (state_fixed)</th></tr></thead>
