@@ -270,6 +270,20 @@ a { color: var(--accent); }
       </ul>
     </div>
   </div>
+  <h4>RCA 벤치마크 RCAEval RE2-OB: 데이터 예시</h4>
+  <p>쇼핑몰(서비스 12개)에 장애를 하나 넣고 <strong>24분 동안 기록</strong>한 것이 사례 하나입니다. 평가에는 30사례를 썼습니다(범인 서비스 5개 × 장애 유형 6개).</p>
+  <div class="scroll"><table>
+    <thead><tr><th>데이터</th><th>규모 (사례 1개)</th><th>예시 (<code>ob-c87f926217</code>, 범인 emailservice CPU)</th></tr></thead>
+    <tbody>
+      <tr><td>메트릭</td><td>1초마다 1,441행</td><td>email CPU 0.34 → <strong>20.04</strong> (20분), 응답 시간 0.005 → <strong>0.091</strong>초</td></tr>
+      <tr><td>로그</td><td>179,964줄</td><td>emailservice: "A request to send order confirmation email … has been received."</td></tr>
+      <tr><td>호출 기록</td><td>410,139줄</td><td>frontend → productcatalog <code>GetProduct</code>, 2,385μs, 정상</td></tr>
+      <tr><td>정답</td><td>폴더 이름</td><td><code>emailservice</code> (채점에만 사용)</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>문제:</strong> 24분 기록만 보고 후보 12개 서비스 중 범인 순위를 매깁니다. <strong>채점:</strong> 정답이 1위면 Avg@5 1.0, 3위면 0.6, 5위 밖이면 0입니다.</p>
+  <p class="src">RCAEval RE2-OB 폴더 RE2-OB/emailservice_cpu/2 (simple_metrics.csv, logs.csv, traces.csv). 장애 주입 시각 파일은 쓰지 않습니다.</p>
+
   <h4>인과 발견 벤치마크 5종: 데이터 예시</h4>
   <p>각 데이터는 변수 여러 개의 관측값 표와 전문가(또는 베이지안 네트워크)가 정한 정답 인과 그래프로 이루어집니다. 방법은 변수 쌍마다 "A가 바뀌면 B가 바뀌는가?"를 판단해 그래프를 만들고, 정답 그래프와 비교합니다.</p>
   <div class="scroll"><table>
