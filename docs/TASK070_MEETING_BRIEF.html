@@ -151,11 +151,7 @@ a { color: var(--accent); }
 <section id="s1">
   <h2><span class="num">1</span>지난 미팅 이후 진행 상황</h2>
 
-  <div class="fill">
-    <p><strong>지난 미팅 논의 요약</strong> <span class="tag add">추가 · 직접 작성</span></p>
-    <p>지난 미팅 메모가 저장소에 없어 비워 두었습니다. 논의한 내용과 받은 의견을 여기에 적어 주세요.</p>
-    <p>지난번에는 실험을 제대로 진행하지 못했습니다. 이후 한 일: 재현 규모 축소 결정 → RCAEval로 전환 → 실험 설계·동결 → 근거 풀 감사 → 위키 추가(v3) → 최종 평가.</p>
-  </div>
+  <p>지난번에는 실험을 제대로 진행하지 못했습니다. 이후 한 일: 재현 규모 축소 결정 → RCAEval로 전환 → 실험 설계·동결 → 근거 풀 감사 → 위키 추가(v3) → 최종 평가.</p>
 
   <h3 id="s1-paper">논문 재현 대상: LEMMA-RCA</h3>
   <div class="scroll"><table>
@@ -275,6 +271,45 @@ a { color: var(--accent); }
       </ul>
     </div>
   </div>
+  <h4>인과 발견 벤치마크 5종: 데이터 예시</h4>
+  <p>각 데이터는 변수 여러 개의 관측값 표와 전문가(또는 베이지안 네트워크)가 정한 정답 인과 그래프로 이루어집니다. 방법은 변수 쌍마다 "A가 바뀌면 B가 바뀌는가?"를 판단해 그래프를 만들고, 정답 그래프와 비교합니다.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>데이터</th><th>내용</th><th class="n">변수</th><th class="n">표본</th><th class="n">정답 간선</th><th>정답 간선 예시</th></tr></thead>
+    <tbody>
+      <tr><td>AutoMPG</td><td>자동차 연비 (연속값)</td><td class="n">5</td><td class="n">392</td><td class="n">5</td><td>Horsepower→Mpg, Weight→Mpg, Displacement→Horsepower</td></tr>
+      <tr><td>DWDClimate</td><td>독일 기상 관측소 (연속값)</td><td class="n">6</td><td class="n">349</td><td class="n">6</td><td>Altitude→Temperature, Latitude→Temperature, Altitude→Sunshine</td></tr>
+      <tr><td>SachsProtein</td><td>세포 단백질·인지질 발현량 (연속값)</td><td class="n">11</td><td class="n">7,466</td><td class="n">19</td><td>raf→mek, pkc→raf, plc→pip2</td></tr>
+      <tr><td>Asia</td><td>폐 질환 진단 (이산값, 베이지안 네트워크 표본)</td><td class="n">8</td><td class="n">1,000</td><td class="n">8</td><td>smoke→lung, smoke→bronc, either→xray</td></tr>
+      <tr><td>Child</td><td>신생아 선천성 심장병 (이산값, 베이지안 네트워크 표본)</td><td class="n">20</td><td class="n">1,000</td><td class="n">25</td><td>LungParench→CO2, CardiacMixing→HypoxiaInO2</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="box">
+      <p><strong>AutoMPG 관측값 (앞 3행)</strong></p>
+      <div class="scroll"><table>
+        <thead><tr><th class="n">Displacement</th><th class="n">Mpg</th><th class="n">Horsepower</th><th class="n">Weight</th><th class="n">Acceleration</th></tr></thead>
+        <tbody>
+          <tr><td class="n">307</td><td class="n">18</td><td class="n">130</td><td class="n">3504</td><td class="n">12</td></tr>
+          <tr><td class="n">350</td><td class="n">15</td><td class="n">165</td><td class="n">3693</td><td class="n">11.5</td></tr>
+          <tr><td class="n">318</td><td class="n">18</td><td class="n">150</td><td class="n">3436</td><td class="n">11</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="box">
+      <p><strong>Asia 관측값 (앞 3행, 상태 번호)</strong></p>
+      <div class="scroll"><table>
+        <thead><tr><th class="n">asia</th><th class="n">tub</th><th class="n">smoke</th><th class="n">lung</th><th class="n">bronc</th><th class="n">either</th><th class="n">xray</th><th class="n">dysp</th></tr></thead>
+        <tbody>
+          <tr><td class="n">0</td><td class="n">0</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">1</td></tr>
+          <tr><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">1</td></tr>
+          <tr><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+  <p>예: AutoMPG에서 (Weight, Mpg) 쌍에 대해 LLM이 "Weight가 바뀌면 Mpg가 바뀐다 = Yes"라고 답하면 그 간선은 PC 그래프의 필수 간선이 됩니다. 5개 변수면 순서쌍 20개를 판단합니다. 평가는 정답 간선과 비교한 Prc, F1, FPR, SHD, NHD입니다.</p>
+  <p class="src">MATMCD_DATA/datasets/causal_benchmarks_task070_v1 (AutoMPG·DWD·Sachs는 Takayama LLM-and-SCD 저장소 CSV 그대로, Asia·Child는 공식 BIF 표본 생성 절차 seed 42, 1,000개)</p>
+
   <h4>공통 조건과 바뀌는 조건 <span class="tag add">추가</span></h4>
   <div class="scroll"><table>
     <thead><tr><th>항목</th><th>모든 방법 공통</th><th>방법마다 다름</th></tr></thead>
