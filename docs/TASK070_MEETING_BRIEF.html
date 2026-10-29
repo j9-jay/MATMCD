@@ -89,6 +89,8 @@ td.c { text-align: center; }
 tr.prop td { background: var(--accent-soft); }
 td.best { font-weight: 700; color: var(--accent); }
 td.common { text-align: center; background: var(--base-soft); color: var(--muted); }
+tr.ref td { background: var(--base-soft); }
+tr.ref.first td { border-top: 2px solid var(--muted); }
 pre { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; overflow-x: auto; font-family: var(--font-data); font-size: 0.8rem; line-height: 1.6; margin: 8px 0; }
 .grid2 { display: grid; grid-template-columns: 1fr; gap: 14px; }
 @media (min-width: 760px) { .grid2 { grid-template-columns: 1fr 1fr; } }
@@ -488,9 +490,12 @@ a { color: var(--accent); }
       <tr><td>role_only</td><td>비교</td><td class="n">0.035</td><td class="n">0.333</td><td class="n">0.148</td><td class="n">0.167</td><td class="n">0.795 [0.668, 0.910]</td><td class="n">0.675</td><td class="n">0.769</td><td class="n">3</td></tr>
       <tr class="prop"><td><strong>state_fixed</strong></td><td><strong>제안</strong></td><td class="n best">0.125</td><td class="n best">0.964</td><td class="n best">0.411</td><td class="n">0.387</td><td class="n best">0.927 [0.850, 0.990]</td><td class="n best">0.856</td><td class="n best">0.903</td><td class="n">2</td></tr>
       <tr><td>state_dynamic</td><td>참고</td><td class="n">0.124</td><td class="n">0.952</td><td class="n">0.384</td><td class="n">0.376</td><td class="n">0.907 [0.823, 0.977]</td><td class="n">0.806</td><td class="n">0.875</td><td class="n">2</td></tr>
+      <tr class="ref first"><td>PC만 ※</td><td>기준선</td><td class="common" colspan="4" rowspan="2">해당 없음 (출력부 A, 근거 카드 없음)</td><td class="n">0.369 [0.244, 0.497]</td><td class="n">0.124</td><td class="n">0.332</td><td class="n">0</td></tr>
+      <tr class="ref"><td>MATMCD ※</td><td>기준선</td><td class="n">0.407 [0.275, 0.544]</td><td class="n">0.186</td><td class="n">0.376</td><td class="n">4</td></tr>
     </tbody>
   </table></div>
-  <p class="src">head_b/test_20261026T184535Z/analysis.json · 신뢰구간은 사례 부트스트랩 1만 회 · 실패 7건은 동점 채점 · 실패 없는 23사례: state_fixed 0.978, flat 0.470</p>
+  <p class="src">30사례 평균 (범인 서비스 5개 × 장애 유형 6개, 조합마다 1사례) · head_b/test_20261026T184535Z/analysis.json · 신뢰구간은 사례 부트스트랩 1만 회 · 실패는 후보 전체 동점으로 채점 · 실패 없는 23사례: state_fixed 0.978, flat 0.470</p>
+  <p class="src">※ PC만과 MATMCD는 같은 30사례를 출력부 A(쌍별 Yes/No → 제약 PC → RWR)로 실행한 결과입니다(head_a_test/analysis_v3.json). PC만은 근거를 쓰지 않고, MATMCD의 근거는 카드 단위가 아닌 서비스별 로그 요약 글이라 검색 성능 지표를 계산할 수 없습니다. 판단 경로가 다르므로 출력부 B 방법들과의 차이에는 근거 선택과 판단 방식의 효과가 함께 들어 있습니다. MATMCD 실패 4건은 LLM 응답 형식 문제이며, 실패 없는 사례만 보면 0.488입니다.</p>
 
   <p><strong>출력부 A (MATMCD와 같은 쌍별 판단 경로, 반복 2의 30사례)</strong></p>
   <div class="scroll"><table>
