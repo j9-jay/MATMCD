@@ -7,13 +7,16 @@
 
 ---
 
-## 0. 가장 중요한 발견 5가지
+## 0. 가장 중요한 발견 7가지
 
 1. **0.407은 MATMCD 논문의 공식 기록이 아니다.** MATMCD를 논문과 다른 데이터셋(RCAEval RE2-OB)에, 논문과 다른 모델(Qwen3.5-4B)로 돌린 이 저장소의 값이다. MATMCD 논문에는 이 데이터셋의 수치가 없다.
 2. **미팅 표에서 MATMCD(0.407)와 제안 방법(0.927)은 판단 경로가 달랐다.** MATMCD는 출력부 A(쌍별 판단 → 그래프 → 순위), 제안 방법은 출력부 B(근거를 모아 순위를 직접 출력)였다. 같은 출력부 A에서는 제안 방법이 0.502였다.
 3. **기존 방법(v0)은 이미 RCA 답을 생성하고 RCA 점수(Avg@5)를 측정했다.** 미팅 표에는 검색 지표와 RCA 지표가 함께 있었다.
 4. **교수님이 물은 숫자의 정체가 확인됐다.** "24"는 근거 개수, "754"로 들린 것은 단계별 개수 7·5·12, "4416"은 role_only의 4·4·16, "S1, S2 다음 S4"는 S3이 검색 없는 가설 단계라서였다. 이 값들을 왜 그렇게 정했는지의 **근거 기록은 없다.**
 5. **한 번도 평가에 쓰지 않은 데이터가 있다.** RE2-OB 반복 3의 30사례다. 반대로 평가에 쓴 반복 2의 30사례는 방법을 바꿔 가며 세 번 평가했다.
+
+6. **처음 계획의 주 실험은 "LEMMA-RCA에서 MATMCD와 1대1 비교, 지표는 MATMCD와 같은 MAP@10"이었다** (문서 B 9.1절). 조건도 같은 입력, 같은 후보 범위, 같은 LLM으로 맞추기로 했다. v0는 연산량 문제로 이 실험을 하지 못하고 확장 실험(RCAEval)만 했다. 교수님이 요구한 "공식 기록과 같은 경기장"은 처음 계획에 이미 있던 것이다.
+7. **처음 계획의 "정답 evidence" 지표는 Indicator Hit@K였다** (문서 B 9.2절). 문서 B는 RCAEval이 root-cause indicator를 제공한다고 적었다. v0는 이것 대신 코드 규칙으로 만든 silver 근거를 썼다. RCAEval의 indicator 라벨이 실제로 어떤 형태인지는 이번에 확인하지 않았다.
 
 ---
 
@@ -48,7 +51,7 @@
 
 - **출력부 A**: 서비스 쌍마다 Yes/No 판단(156쌍) → 제약 PC → 그래프 → RWR로 순위. MATMCD와 같은 경로.
 - **출력부 B**: 사례 하나에 근거 24개를 모아 LLM이 후보 서비스 12개의 순위를 직접 출력. 후보 순서를 바꿔 3회 반복해 평균.
-- 출력부 B는 개발 중에 출력부 A에서 제안 방법이 flat보다 낮게 나온 뒤(0.298 vs 0.462) 새로 만들어 주 출력부로 정했다(2026-10-19 사용자 결정).
+- 출력부 B는 개발 중에 출력부 A에서 제안 방법이 flat보다 낮게 나온 뒤(0.298 vs 0.462) 새로 만들어 주 출력부로 정했다(2026-10-19 사용자 결정). 다만 처음 계획(문서 B 4절)은 원래 "검색된 근거로 root cause를 직접 판단"하는 방식이었다(7.1절).
 
 ### 1.4 최종(v3) 결과 (확인됨)
 
@@ -196,24 +199,55 @@
 
 ## 7. P0-T7 처음 아이디어와 v0의 차이
 
-### 7.1 처음 아이디어 문서 (일부만 확인됨)
-- 파일: `E:\연구\Reasoning-State-Aware Evidence Retrieval for Microservice Incident Analysis.pdf`, 같은 이름의 "구현 및 실험 계획.pdf".
-- **확인 불가 (한글 본문)**: 설치된 도구(pdftotext)로는 한글이 깨져 추출되지 않았고, 페이지를 이미지로 읽는 도구(pdftoppm)는 설치돼 있지 않다. 새 도구를 설치하지 않았다.
-- 영문으로 추출된 부분에서 확인된 것:
-  - 근거 역할 4종: System Structure(토폴로지, 의존 관계, 아키텍처 문서), Observation(메트릭, 로그, trace), Diagnosis(알려진 장애 패턴, 사고 보고서, 트러블슈팅 문서), Action(런북, 플레이북, 복구 절차)
-  - 추론 단계 5개와 단계별 근거: ① Observation(메트릭/로그) ② System Structure(토폴로지/의존 관계/trace) ③ 원인 가설: Observation + Diagnosis ④ 가설 검증: Observation(후보 서비스의 메트릭/로그/trace) ⑤ Action(런북 등)
-  - 관련 연구 4편 언급: MATMCD(Findings of ACL 2025), mABC(Findings of EMNLP 2024), trace 관련 EMNLP 2025 논문, RepoGenesis(ACL 2026)
+### 7.1 처음 아이디어 문서 (확인됨, 2026-11-18 추가 확인)
+- 읽은 방법: 사용자 승인으로 Poppler 25.07.0을 winget으로 설치하고(저장소 밖의 시스템 변경), 두 PDF를 페이지 이미지로 변환해 전 페이지를 읽었다.
+- 문서 A: `E:\연구\Reasoning-State-Aware Evidence Retrieval for Microservice Incident Analysis.pdf` (5쪽, 2026-07-30 생성)
+- 문서 B: 같은 이름의 "구현 및 실험 계획.pdf" (6쪽, 2026-07-31 생성). 5.2절 다음이 8.3절이다. 6절, 7절, 8.1절, 8.2절은 PDF에 없다.
+
+#### 문서 A의 내용
+- **배경 (1절)**: Wikipedia 기반 multi-hop QA는 같은 성격의 passage를 차례로 잇는다. 장애 분석은 목적이 다른 정보(System Structure, Observation, Diagnosis, Action)를 쓴다. 이들은 추론 과정에서 하는 역할이 다르다.
+- **문제 정의 (2절)**: 장애 분석은 증상 이해 → 시스템 구조 파악 → 원인 후보 탐색 → telemetry를 통한 가설 검증 → root cause 판단 → resolution 탐색으로 진행되고, 단계마다 필요한 근거 종류와 탐색 범위가 바뀐다. flat retrieval은 역할이 다른 문서를 같은 공간에 두고 질의-문서 관련도로만 순위를 매겨, 같은 서비스 이름이나 오류 키워드 때문에 지금 단계와 무관한 근거가 상위에 온다.
+- **연구 질문 (2절 끝, 원문)**: "마이크로서비스 장애 분석에서 corpus의 evidence role과 reasoning stage를 명시적으로 정렬하고, 각 단계에 필요한 evidence type과 structural scope를 인식하여 선택적으로 탐색한다면 flat retrieval보다 더 정확하고 효율적인 multi-step reasoning이 가능한가?"
+- **핵심 아이디어 (3절)**:
+  - corpus를 문서 역할에 따라 구분하고, service topology와 evidence 간 관계를 함께 구성한다 (Role-Aware Structured Retrieval Space).
+  - 각 evidence에 연결할 정보의 예: 관련 service, evidence type, timestamp, service dependency, 다른 evidence와의 관계, reasoning 과정에서의 역할.
+  - 검색 때는 "현재 reasoning state를 기준으로 '현재 해결되지 않은 reasoning goal이 무엇인가?'를 파악한 다음 필요한 evidence role과 탐색 scope를 동적으로 예측하고, 이를 retrieval ranking에 반영"한다.
+  - 단계와 근거: 1 증상 이해 = Observation(metric/log), 2 장애 전파 구조 확인 = System Structure(topology/dependency/trace), 3 root cause 후보 생성 = Observation + Diagnosis(telemetry/failure pattern), 4 hypothesis 검증 = Observation(후보 서비스의 metric/log/trace), 5 해결 방법 탐색 = Action.
+- **기대 효과 (4절)**: 불필요한 noisy path 감소(검색 횟수, 토큰, 시간), 같은 표현으로 생기는 검색 모호성 감소, root-cause evidence chain의 완성도 향상, 추론 과정의 효율성과 해석 가능성(어느 단계에서 어떤 목적으로 고른 근거인지 명시).
+- **관련 연구 (5절)**: MATMCD(Findings of ACL 2025), mABC(Findings of EMNLP 2024), TraceLLM(EMNLP 2025), RepoGenesis(ACL 2026).
+
+#### 문서 B의 내용
+- **MATMCD를 고른 이유 (1절)**: 마이크로서비스 RCA를 직접 다룸, metric과 log를 함께 씀, 공식 코드와 데이터 공개, root-cause ranking 결과가 있어 같은 기준으로 평가 가능.
+- **MATMCD의 아쉬운 점 (3절)**: 검증할 쌍이 정해지기 전에 evidence를 검색·요약함 / 로그 조회가 서비스 이름 기준이라 무관한 이벤트가 섞임 / 요약 과정에서 필요한 정보(timestamp, 간헐적 오류, 이벤트 순서)가 빠질 수 있음 / 쌍마다 같은 맥락 정보를 씀.
+- **제안 방법 (4절)**: "MATMCD의 causal graph 보정 과정을 수정하는 것이 아니라, 동일한 metric과 log를 입력으로 사용하지만 root cause에 도달하는 과정은 다르게 구성". corpus의 이질성을 indexing 단계부터 반영하고, 추론 단계별로 필요한 evidence를 검색하고, **검색된 근거를 바탕으로 root cause를 직접 판단**한다. Action evidence 검색과 복구 방법 생성은 이번 연구에서 제외한다.
+- **구현 계획 (5절)**:
+  - 5.1 MATMCD 공식 구현으로 재현 (입력 형태, context, 판단 결과, ranking 과정, PR·CC 평가 방법 확인).
+  - 5.2 Evidence corpus: MATMCD와 같은 metric과 log를 쓰되 service dependency와 topology 정보를 함께 구성. topology가 제공되지 않으면 trace 호출 관계, service configuration, 공개된 구조로 구성. metric·log를 요약 하나로 저장하지 않고 검색 가능한 단위로 구성(Metric: 특정 service·metric·시간 구간의 변화, Log: 개별 event 또는 template, Trace: 개별 호출 관계·비정상 span·오류 응답, Architecture document: 역할과 dependency를 설명하는 문단, Incident document: 증상과 원인을 설명하는 문장).
+- **Reasoning state 구성 (8.3절)**: "초기 구현에서는 reasoning state를 LLM이 자유롭게 생성하지 않고, 다음 단계로 고정": 1 증상 이해, 2 시스템 구조 파악, 3 원인 후보 탐색, 4 Telemetry를 통한 가설 검증, 5 Root cause 판단. 이유: "별도의 복잡한 reasoning planner를 새로 만드는 것보다, 현재 reasoning state에 따라 evidence를 다르게 검색하는 효과를 먼저 확인하기 위해서".
+- **Evidence 검색과 판단 (8.4절)**:
+  - State 1: 최초 alert나 관찰된 장애 현상에서 incident의 시작점을 구성. 어떤 service에서 어떤 형태의 이상이 언제부터 발생했는지 확인.
+  - State 2: 증상 service를 시작점으로 dependency, topology, up/downstream 문서에서 관련 service 탐색. topology상 가까운 service를 모두 원인 후보로 고르지는 않음.
+  - State 3: 앞 단계에서 고른 service subgraph 안에서 root-cause hypothesis 생성.
+  - State 4: 각 hypothesis마다 별도의 retrieval query와 service·time scope 구성. **evidence가 부족하면 부족한 정보를 새로운 reasoning goal로 변환** (예: Payment에서 timeout은 확인됐지만 Checkout으로 전파됐다는 trace evidence가 부족 → Payment–Checkout trace를 추가 검색).
+  - State 5: 각 hypothesis에 연결된 evidence chain을 비교. 최종 출력은 MATMCD와 비교할 수 있도록 root-cause ranking.
+- **실험 계획 (9절)**:
+  - 9.1 LEMMA-RCA에서 MATMCD와 1대1 비교. 조건을 가능한 한 동일하게: 같은 metric과 log, 같은 root-cause candidate 범위, 같은 LLM, 같거나 유사한 context token budget, 같은 root-cause label, 같은 평가 지표. 주 지표는 MATMCD와 같은 MAP@10, 그리고 MAP@5, MRR, 데이터셋별 rank.
+  - 9.2 RCAEval 확장 실험. LEMMA-RCA는 failure case가 적어 일반 성능 판단에 한계. RCAEval(Online Boutique, Sock Shop, Train Ticket, 735 failure case). 지표: AC@1, AC@3, Avg@5, **Indicator Hit@K(검색 결과에 정답 evidence가 포함되는지)**, 토큰 수와 분석 시간.
 
 ### 7.2 v0로 오면서 바뀐 것 (확인됨, 출처 표시)
 
 | 항목 | 처음 아이디어 | v0 (v3 최종) | 출처 |
 |---|---|---|---|
-| 데이터셋 | LEMMA-RCA | RCAEval RE2-OB | RESEARCH_ROADMAP.md 끝, 미팅 자료 |
+| 데이터셋 | 주: LEMMA-RCA에서 MATMCD와 1대1 비교. 확장: RCAEval | RCAEval RE2-OB만 (LEMMA-RCA 1대1 비교는 연산량 문제로 포기) | 문서 B 9절, 미팅 자료 1절 |
+| 주 지표 | LEMMA-RCA: MAP@10 (MATMCD와 동일). RCAEval: AC@1, AC@3, Avg@5, Indicator Hit@K | Avg@5, AC@k, 규칙으로 만든 엄격 silver 근거 재현율 | 문서 B 9절, TASK_070 |
+| 공정 조건 | 같은 입력, 같은 후보 범위, 같은 LLM, 유사한 토큰 예산 | MATMCD는 웹 검색 + 로그 요약, 제안 방법은 고정 근거 풀(텔레메트리 + 위키). 판단 경로도 다름 | 문서 B 9.1절, 미팅 자료 2.1절 |
+| State 4의 추가 검색 | 근거가 부족하면 부족한 정보를 새 reasoning goal로 바꿔 추가 검색 | 없음. 가설마다 정해진 개수를 한 번 검색 | 문서 B 8.4절, TASK070_DEV_V3.md 1절 |
+| evidence 간 관계, 근거 chain | evidence에 다른 evidence와의 관계를 연결, hypothesis별 evidence chain 비교 | 근거 단위에 서비스·종류·역할 태그만. chain 구성 없음 | 문서 A 3절, 문서 B 8.4절 (v0 쪽은 문서 기록 기준, 코드 전체는 읽지 않음) |
 | Action 역할 | 포함 | 제외 | RESEARCH_ROADMAP.md:23 |
 | Diagnosis 문서 | 포함 | 없음 (원본 저장소에 장애 패턴·런북이 없어 만들지 않음) | TASK_070:214 |
 | System Structure 문서 | 포함 | v1·v2에는 없었고, v3에서 정적 분석 위키로 추가 | TASK_070:184-187 |
-| 출력 | 로드맵은 쌍별 판단 → PC → RWR | 주 출력부를 사례 단위 순위 직접 출력(B)으로 변경 | TASK_070:115 |
-| 제안 방법 | 동적 상태 | v3에서 고정 상태(state_fixed)로 변경, 동적은 참고 | TASK_070:192 |
+| 출력 | 문서 B 4절: 검색된 근거로 root cause를 직접 판단, 출력은 ranking | 2026-10-18 재계획에서 쌍별 판단 → PC → RWR(출력부 A)로 정했다가, 2026-10-19 사례 단위 순위 직접 출력(B)을 주 출력부로 변경. 결과적으로 B가 처음 계획과 같은 방향 | 문서 B 4절, TASK_070:16-26, 115 |
+| 제안 방법 | 문서 A는 동적 예측, 문서 B는 "초기 구현에서는 5단계로 고정" | v1·v2는 동적이 제안 방법, v3에서 고정(state_fixed)으로 변경 | 문서 A 3절, 문서 B 8.3절, TASK_070:192 |
 | 상태 설계 | 5단계(⑤는 Action) | 5단계: 텔레메트리 → 구조 → 가설 → 가설별 근거 → 판단 | TASK_070:191 |
 
 ### 7.3 결과를 보고 바꾼 것 (확인됨)
@@ -260,11 +294,8 @@
 
 AI가 결정하지 않는다. 사실과 선택지만 적는다.
 
-### G1-1. 처음 아이디어 문서의 한글 본문을 어떻게 읽을까
-P3 명세서 작성의 출발점인데 본문을 읽지 못했다.
-- 선택지 a: 사용자가 본문을 텍스트로 붙여 넣거나 원본(워드, 한글 등)을 제공
-- 선택지 b: PDF 읽기 도구 설치를 허용 (예: poppler의 pdftoppm, 또는 Python pypdf)
-- 선택지 c: 문서를 쓰지 않고 사용자가 P3에서 아이디어를 처음부터 말로 설명
+### G1-1. 처음 아이디어 문서의 한글 본문 (해결됨)
+2026-11-18 사용자가 도구 설치를 선택했다. Poppler 설치 후 두 문서를 모두 읽었고 7.1절에 내용을 적었다.
 
 ### G1-2. MASTER_PLAN의 전제 수정
 계획을 세울 때의 전제 두 가지가 사실과 달랐다.
