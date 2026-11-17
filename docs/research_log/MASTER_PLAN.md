@@ -1,7 +1,7 @@
 # MASTER PLAN — 처음 아이디어로 새로 구현 (계획 A)
 
 - 작성일: 2026-11-18
-- 상태: **P0 조사 완료, P0-G1 진행 중**. 보고서: [P0_CURRENT_STATE.md](P0_CURRENT_STATE.md). v0와 MATMCD 재현 실행 결과의 삭제를 실행했다(12절 진행 로그). 남은 항목: U14(삭제 후 정리), U13 세부(G1-3, G1-4).
+- 상태: **P0-G1 진행 중.** 보고서: [P0_CURRENT_STATE.md](P0_CURRENT_STATE.md). v0와 MATMCD 재현 실행 결과 삭제, AGENTS.md·README·INDEX 정리까지 끝났다. 남은 항목은 U13 세부(G1-3, G1-4): 새 방법을 LEMMA-RCA의 어느 사례·후보 범위·지표로 평가할지, RCAEval을 함께 쓸지.
 - 이 문서의 역할: 이 작업의 단일 기준 문서. 세션이 끊기거나 다른 AI 모델이 이어받아도 이 문서만 읽고 진행할 수 있어야 한다.
 - 진행 상황은 맨 아래 "12. 진행 로그"와 각 태스크의 체크박스에 기록한다.
 
@@ -89,7 +89,7 @@
 | U10 | ~~처음 아이디어 PDF의 한글 본문을 읽는 방법~~ 결정됨(2026-11-18): 도구 설치. Poppler로 두 문서를 읽어 P0 보고서 7.1절에 기록 | 종료 |
 | U12 | ~~MATMCD 재현 데이터 삭제 범위~~ 결정됨(2026-11-18): MATMCD 재현 실행 결과는 모두 지운다. LEMMA-RCA 원자료는 지우지 않는다(K13). 사용자가 목록을 확인했고 삭제를 실행함 | 종료 |
 | U13 | MATMCD의 공표 점수는 LEMMA-RCA 2사례의 값이다. 새 방법도 LEMMA-RCA 원자료로 실험한다(K13). 남은 세부: 어느 사례, 후보 범위와 필터, 지표, RCAEval을 함께 쓸지 (P0 보고서 G1-3, G1-4) | P1 결과 후 |
-| U14 | v0 삭제 후 남은 정리: (가) `docs/RESEARCH_ROADMAP.md`(v0의 연구 방향 문서)를 지울지, (나) TASK_070을 언급하는 README.md, tasks/INDEX.md, configs/scope.json, docs/RUNBOOK.md 등을 어떻게 고칠지 | 즉시 |
+| U14 | ~~v0 삭제 후 남은 정리~~ 결정됨(2026-11-18): 로드맵 삭제, README 첫 문단 수정과 재현 결과 절 삭제, tasks/INDEX.md 현재 목표·활성 TODO·백로그 수정, 과거 문서 12개의 깨진 TASK_070 링크를 글자로 교체. 30 Pod 재현 결과 문서(`docs/RCA_ORACLE30_*`, `tasks/TASK_050~053`)는 LEMMA-RCA 실험 준비에 참고가 될 수 있어 남김. 이름에 task070이 든 인과 발견 입력 준비물(`configs/scope.json`, `scripts/prepare_causal_benchmarks.py`)은 그대로 둠 | 종료 |
 | U11 | ~~`MATMCD/AGENTS.md`의 새 규칙과 맞지 않는 문장을 고칠지~~ 결정됨(2026-11-18): 고친다. 현재 목표, 작업 방식, 보존 예외, 승인 조건 절을 개정함. 상위 `E:/연구/AGENTS.md`는 충돌이 없어 그대로 둠 | 종료 |
 
 ---
@@ -458,3 +458,4 @@ MATMCD/docs/research_log/
 | 2026-11-18 | 사용자 결정: MATMCD 재현 실행 결과 삭제, v0(TASK_070) 삭제(K1 변경), LEMMA-RCA 원자료는 새 실험에 사용(K13), AGENTS.md 개정. `MATMCD/AGENTS.md`의 현재 목표·작업 방식·보존 예외·승인 조건 절을 고쳤다. 파일 삭제는 실행하지 않았다. | 🛑 삭제 대상 전체 목록을 사용자에게 보여 주고 확인받은 뒤 삭제. 삭제 후 README.md와 tasks/INDEX.md의 TASK_070 안내 수정 여부를 사용자에게 확인 |
 | 2026-11-18 | **삭제 실행** (사용자가 대상 목록 A·B·C를 확인하고 "모두 삭제" 지시). (A) `MATMCD_DATA/runs/matmcd_oracle30_pr20211203_v1` 2,027개 파일. (B) `MATMCD_DATA/task070` 폴더 전체 11,886개 파일(v0 실행 결과, 근거 풀, 임베딩, 웹 스냅샷, 위키, MATMCD 참고 기준선 결과, 로그). (C) 저장소의 v0 파일 44개(스크립트 31, 설정 5, 문서 7, 작업 기록 1). A와 B는 복구할 수 없다. C는 git 이력에 남으며 삭제 직전 커밋은 `2296ea6`이다. 지우지 않은 것: LEMMA-RCA 원자료와 `processed_data`, RCAEval 원자료, 인과 발견 데이터, MATMCD 공식 코드, 재현 기반 코드와 문서(`scripts/rca_*`, `docs/RCA_*`, `tasks/TASK_001~069`), `docs/RESEARCH_ROADMAP.md`. | 🛑 U14: 삭제 후 정리 방법을 사용자에게 확인. 이어서 U13 세부 |
 | 2026-11-18 | 사용자 지시로 `docs/RESEARCH_ROADMAP.md`(v0의 연구 방향 문서) 삭제. git 이력에 남는다(삭제 직전 커밋 `fa1572a`). U14의 (가)는 종료. | 🛑 U14 (나): TASK_070·로드맵을 언급하는 남은 파일의 정리 방법을 사용자에게 확인 |
+| 2026-11-18 | U14 정리 실행 (사용자: "전부 너 의견대로"). README, tasks/INDEX.md 수정, 과거 문서 12개의 깨진 링크 교체. 참고: `tasks/TASK_069` 머리말에 "LEMMA-RCA는 현재 PC에서 공정한 기준선을 만들기 어렵다, 후보 recall 0/5, 점수 포화"라는 기록이 있다. K13(LEMMA-RCA로 새 방법 실험)의 세부를 정할 때 반드시 읽을 것. `tasks/INDEX.md`의 "보류" 절에는 LEMMA-RCA 전체 후보 실행이 PC 메모리와 호출 규모 때문에 보류로 적혀 있다. | 🛑 U13: `tasks/TASK_069`, `docs/RCA_PC_MEMORY.md`, 30 Pod 문서를 읽고 사실을 정리한 뒤, 평가 데이터·후보 범위·지표의 후보를 사용자에게 제시 (P1과 함께) |

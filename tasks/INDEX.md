@@ -4,29 +4,15 @@
 
 ## 현재 목표
 
-**추론 상태 기반 근거 검색(사용자 방법)을 NLP 기여 실험으로 검증한다.** 작업 상세는 [TASK_070](TASK_070_state_aware_retrieval_experiments.md), 방향은 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)을 따른다.
+**2026-11-18 계획 A로 전환.** 사용자의 처음 아이디어(추론 상태 기반 근거 검색)를 명세서로 쓰고, 그대로 새로 구현해, 한 번 평가한다. 단계, 태스크, 결정 사항, 진행 로그는 [MASTER_PLAN](../docs/research_log/MASTER_PLAN.md)을 따른다.
 
-- 목표 학회는 ACL·EMNLP·NAACL·EACL·COLING이다. 과제는 근거 검색·귀속이며, RCA·인과 그래프 정확도는 하류 지표다. 엔지니어링 확장은 하지 않는다.
-- 카테고리 1: 장애 분석 — RCAEval RE2-OB. RE2-SS는 로그 템플릿 열이 없어 백로그로 이동(2026-10-18). 카테고리 2: 인과 발견 — MATMCD 벤치마크 5종.
-- 모든 방법은 공통 출력부(쌍별 Yes/No → 제약 PC → 그래프 → RWR)를 공유하고 근거 수집만 다르다. 핵심 비교 대상은 같은 corpus의 flat RAG이며 MATMCD는 외부 참고 기준선이다.
-- LEMMA-RCA 기준선(TASK_069)은 종료했다. 기존 정답 포함 30 Pod 결과는 조건부 분석과 동기 사례로만 쓴다.
+- MATMCD는 논문에 실린 공식 지표와 점수만 비교에 쓴다. 재현 실험은 하지 않는다.
+- LEMMA-RCA 원자료는 새 방법의 실험에 쓴다.
+- TASK_070(2026-10의 방법과 실험)은 2026-11-18에 삭제했다. 저장소 파일은 git 이력 `2296ea6`에 남아 있다.
 
-## 활성 TODO — TASK_070
+## 활성 TODO
 
-| ID | 작업 | 상태 |
-|---|---|---|
-| D-1~D-11 | 메트릭 묶기, SS KPI, 장애 구간, 동적 상태, 판단 프롬프트, 사례 분할, MATMCD 로그 변환, 웹 대체 경로, 양방향 Yes 처리, 샘플링, 반복 규칙. 권장안은 [실행 계획](../docs/EXPERIMENT_PLAN_TASK070.md) | **사용자 결정 필요** |
-| T1 | RCAEval RE2-OB/SS 다운로드·데이터 감사 | DONE — md5 일치, 각 90사례, KPI 확정(D-2) |
-| T2 | 카테고리 2 공식 파일 복원·데이터 준비 | DONE — 코드 3개 복원, 데이터 5종 준비(Takayama CSV, Asia·Child seed 42) |
-| G1 | 평가 규모 | DONE — B안: 반복 2의 30사례 고정(`configs/task070_testset.json`), 모든 방법 동일, 반복 3 미사용 |
-| T3 | 웹 스냅샷 수집·누출 검사 (무료 할당량 내) | TODO |
-| T4 | corpus 구성기 | DONE(카테고리 1) — 사례당 근거 125~170개, 템플릿은 전 사례 동일 규칙(D-7 수정) |
-| T5 | 공통 출력부·지표 연결 | DONE — 인과 발견 PC가 논문 표 1과 일치(AutoMPG·DWD), RCAEval 개발 PC만 Avg@5 0.31 |
-| T6 | 기준선: PC만, 검색 없는 LLM, flat RAG | TODO |
-| T7 | MATMCD 참고 기준선 | TODO |
-| T8 | 사용자 방법·ablation | TODO |
-| T9 | 평가·통계 검정 | TODO |
-| T10 | 결과 보고서 | TODO |
+현재 작업의 태스크는 이 문서가 아니라 MASTER_PLAN 6절에서 관리한다.
 
 ## 보류 — 현재 목표 범위 밖
 
@@ -43,7 +29,7 @@
 
 ## 백로그
 
-상세는 [연구 로드맵](../docs/RESEARCH_ROADMAP.md)의 R1~R13. 주요 항목: 연구 질문 확정과 지도교수 합의(R1), 정답 근거 label(R5), 여러 LLM·오염 분석(R8), 일반 QA 실험(R11, MuSiQue·HotpotQA), OpenRCA(R12), RCAEval RE2-SS(R14).
+2026-10의 백로그(R1~R14)는 연구 로드맵 문서와 함께 2026-11-18에 삭제했다(git 이력 `fa1572a`). 새 백로그가 생기면 MASTER_PLAN에 적는다.
 
 ## 완료·이력 Task
 
@@ -55,9 +41,9 @@
 | [004](TASK_004_environment_setup.md) | 공통 실행 환경 | DONE |
 | [005](TASK_005_model_setup.md) | 원본 API 모델 접근 | 보류 — 유료 API 미사용 |
 | [006](TASK_006_paths_and_preflight.md) | 외부 경로 연결·사전 점검 | DONE |
-| [007](TASK_007_run_original_experiments.md) | 전체 후보 2사례 실행 | 대체 — 현재 목표는 TASK_070 |
-| [008](TASK_008_evaluate_results.md) | 실제 순위 평가 | 이력 — LEMMA 평가는 TASK_069 종료로 미수행. 새 평가는 TASK_070 T9 |
-| [009](TASK_009_compare_with_paper.md) | 논문 표 4 비교 | 이력 — 표 4 비교는 수행하지 않음(TASK_069 종료). MATMCD는 TASK_070에서 참고 기준선 |
+| [007](TASK_007_run_original_experiments.md) | 전체 후보 2사례 실행 | 대체 — 당시 목표는 TASK_070(삭제됨 2026-11-18) |
+| [008](TASK_008_evaluate_results.md) | 실제 순위 평가 | 이력 — LEMMA 평가는 TASK_069 종료로 미수행. 새 평가는 TASK_070(삭제됨 2026-11-18) T9 |
+| [009](TASK_009_compare_with_paper.md) | 논문 표 4 비교 | 이력 — 표 4 비교는 수행하지 않음(TASK_069 종료). MATMCD는 TASK_070(삭제됨 2026-11-18)에서 참고 기준선 |
 | [010](TASK_010_supplementary_artifacts.md) | 공식 전처리·비교 자료 조사 | DONE |
 | [011](TASK_011_summary_output_directory.md)~[015](TASK_015_install_openai_embeddings.md) | 요약 경로, Chroma·lxml·embedding 어댑터 설치 | DONE |
 | [017](TASK_017_scope_rca_only.md) | RCA 범위 전환 | DONE |
@@ -75,7 +61,7 @@
 | [032](TASK_032_connect_provisional_rca_inputs.md)~[034](TASK_034_official_scenario_evidence.md) | 입력 연결, 지표 함수, 공식 시나리오 조사 | DONE |
 | [035](TASK_035_missing_log_policy.md)~[038](TASK_038_d01_public_case_research.md) | D01 로그 부재 정책, D02 대용량 로그 읽기 | DONE |
 | [039](TASK_039_select_three_rca_cases.md) | 세 사례 선택 | 대체 — TASK_044 |
-| [040](TASK_040_d03_original_graph_protocol.md)·[041](TASK_041_d04_original_evaluation_protocol.md) | D03 그래프 규약, D04 평가 규약 | DONE — 30 Pod 실행에 적용. TASK_070에서는 공통 출력부를 쓰므로 해당 없음 |
+| [040](TASK_040_d03_original_graph_protocol.md)·[041](TASK_041_d04_original_evaluation_protocol.md) | D03 그래프 규약, D04 평가 규약 | DONE — 30 Pod 실행에 적용. TASK_070(삭제됨 2026-11-18)에서는 공통 출력부를 쓰므로 해당 없음 |
 | [042](TASK_042_real_prompt_capacity.md)·[045](TASK_045_validate_context_81920.md) | D05 문맥 용량 → 81,920 | DONE |
 | [043](TASK_043_log_encoding_diagnosis.md) | D06 로그 UTF-8 처리 | DONE |
 | [044](TASK_044_select_two_rca_cases.md) | 두 사례 선택 (PR 20211203, CC 20231207) | DONE |
@@ -85,5 +71,6 @@
 | [053](TASK_053_oracle30_result_report.md) | 30 Pod 결과 분석 보고서 | DONE |
 | [054](TASK_054_github_setup_update.md) | GitHub 업데이트 (`3fe751c`) | DONE |
 | [069](TASK_069_blind_baseline.md) | LEMMA-RCA 정답 미사용 기준선 | 종료 — 후보 recall 0/5, 점수 포화 확인. TASK_070으로 대체 |
+| 070 | 추론 상태 기반 근거 검색 실험 (2026-10의 방법과 실험) | 삭제(2026-11-18, 사용자 결정) — 결과를 보며 여러 번 고친 버전이라 쓰지 않음. git 이력 `2296ea6` |
 
 삭제(2026-10-18, `2f0d66a`에 보존): 미팅·발표 자료 Task 054(교수님 보고 기획)·055·057~068, 저자 문의 목록 작업 056, 저자 문의 018(메일 발송 후 답신 없음, 2026-10-18 종료), 10월 2일 브리핑, 시점 스냅샷 문서 4개(`TASK_STATUS_20260926`, `RCA_READINESS`, `RCA_REBOOT_RETEST`, `LOCAL_COMPLETION_PROPOSAL`). 016은 이전 범위 정리에서 삭제했으며 번호를 재사용하지 않는다.
