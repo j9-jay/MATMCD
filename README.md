@@ -1,13 +1,8 @@
 # MATMCD RCA 로컬 기준선
 
-**현재 목표(2026-10-18):** 추론 상태 기반 근거 검색을 NLP 기여 실험으로 검증한다. 카테고리 1은 장애 분석(RCAEval RE2-OB), 카테고리 2는 인과 발견(MATMCD 벤치마크 5종)이다. 작업은 [TASK_070](tasks/TASK_070_state_aware_retrieval_experiments.md), 방향은 [연구 로드맵](docs/RESEARCH_ROADMAP.md), 전체 현황은 [작업 현황](tasks/INDEX.md)을 따른다.
+**현재 목표(2026-11-18):** 사용자의 처음 아이디어(추론 상태 기반 근거 검색)를 명세서로 쓰고, 그대로 새로 구현해, 한 번 평가한다(계획 A). 기준 문서는 [MASTER_PLAN](docs/research_log/MASTER_PLAN.md)이다. MATMCD는 논문에 실린 공식 지표와 점수만 비교에 쓰며 재현 실험은 하지 않는다. 2026-10의 TASK_070 방법과 실행 결과, MATMCD 재현 실행 결과는 2026-11-18에 삭제했다(저장소 파일은 git 이력 `2296ea6`). 과거 작업 목록은 [작업 현황](tasks/INDEX.md)에 있다.
 
 이 저장소는 MATMCD(ACL Findings 2025) 논문 §4.3·표 4의 마이크로서비스 RCA를 로컬에서 재구현한 기록과, 이를 참고 기준선으로 쓰는 후속 연구를 담는다. 원 논문 수치 일치는 목표가 아니며, 원 논문과 다른 조건을 모두 명시한다. LEMMA-RCA 기준선(TASK_069)은 후보 선정 문제로 종료했다.
-
-## 지금까지의 결과
-
-- **정답 포함 30 Pod 개발 실험 (PR 20211203):** 끝까지 실행했다. 잠정 정답 Pod 순위는 PC 4위, MATMCD 5위다. 정답을 후보에 강제로 넣었으므로 주 실험에서 제외하고 조건부 분석으로만 쓴다. [결과 보고서](docs/RCA_ORACLE30_RESULT_REPORT_20260927.md), [실행 조건](docs/RCA_ORACLE30_DEVELOPMENT.md).
-- **전체 후보 실행:** 미완료. PC 메모리 부족(D08)과 LLM 호출 규모 때문에 보류했다.
 
 ## 원 논문과 다른 주요 조건
 
