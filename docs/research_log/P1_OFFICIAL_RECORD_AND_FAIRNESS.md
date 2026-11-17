@@ -184,6 +184,33 @@ MAP@K = 사례별 max(K − 순위, 0) / K 의 평균
 - 저자에게 문의 메일을 보냈으나 답신이 없었다(`tasks/INDEX.md` 저자 문의 절).
 - **사용자 결정 필요 (G1-B)**: CC의 정답을 어떻게 채점할지. 명세서의 평가 절차(P3)에서 후보를 제시한다.
 
+### 4.4 Cloud Computing 정답 Pod의 공개 문서 재확인 (2026-11-18)
+
+사용자 지시로 공개 문서만 다시 읽었다. 메트릭과 로그 데이터는 보지 않았다.
+
+읽은 문서:
+- `raw_downloads/huggingface_lemma_rca_cloud_computing_preprocessed/README.md`
+- 같은 폴더 `scenario_documents/1207_README_en-US.pptx` (슬라이드 10장 전부, 그림 2장 포함)
+- `raw_downloads/huggingface_lemma_rca_cloud_computing_original/configuration/all_pod_before.txt`, `all_pod_after.txt`
+
+**슬라이드의 원문 (확인됨)**
+- 슬라이드 2: "One of the duplicated pods in the load balancer is running, but a latent bug causes the cpu to rise"
+- 슬라이드 4: "Root Cause Location: Increased cpu utilization due to latent bug in multiplexed productpage-v1", "Number of pods: 206", 장애 영향 시작 2023-12-07 16:53:03 (JST)
+- 슬라이드 5: "Affected pods: productpage-v1 one system", 측정 기간 2023/12/06 18:45 ~ 2023/12/08 17:00 (JST), CPU 부하 증가 2023/12/07 16:48 (JST)
+- README: 슬라이드 시각은 일본 표준시(JST), 데이터는 UTC. 9시간 차이.
+- **장애를 넣은 Pod의 전체 이름(접미어)은 어느 문서에도 없다.**
+
+**간접 단서 (추정, 확정 근거 아님)**
+1. Pod 목록의 변화: 측정 전 목록(`all_pod_before.txt`)에는 `productpage-v1-94d68db49-j7t55`와 `-vc8ct`가 있다. 측정 후 목록(`all_pod_after.txt`)에는 `-vc8ct`(나이 2일)와 새 Pod `-zvtz8`(나이 7시간 59분)이 있고 `-j7t55`가 없다. 측정 중이나 후에 `j7t55`가 교체됐다. 장애 Pod가 교체된 것일 수 있으나, 다른 이유(노드 교체 등)일 수도 있다.
+2. 슬라이드 3의 구성도: 장애 Pod가 세 번째 가용 영역의 맨 오른쪽 노드에 그려져 있다. 그러나 그림은 개념도이고, 그림의 가용 영역과 실제 노드(`j7t55`는 `ip-10-1-64-27`, `vc8ct`는 `ip-10-1-32-15`)를 잇는 정보가 없다. 판단에 쓸 수 없다.
+
+**새로 발견한 점 (확인됨)**
+- 측정 전 목록에는 `test` 네임스페이스에 `productpage-v1-7f4c6b8f9-6vmpx`라는 세 번째 Pod도 있다. 이름이 `productpage-v1`로 시작한다.
+- 공식 정답 표기 `productpage-v1`을 접두어로 맞추면 이 Pod도 걸린다. 장애 대상은 `book-info` 네임스페이스(슬라이드 4 "Fault Target Microservice book-info")이므로 이 Pod는 정답이 아니다.
+- 과거 기록은 후보를 2개로 적었다. 과거 임시 전처리 입력에 이 Pod가 빠져 있었는지는 이번에 확인하지 않았다. K14(걸러내지 않음)로 Pod 전체를 후보로 두면 이 Pod가 후보에 들어올 수 있어, 정답 판정 규칙에 네임스페이스를 포함해야 한다.
+
+**결론**: 공개 문서로는 두 복제본 중 어느 쪽인지 확정할 수 없다. G1-B는 여전히 사용자 결정이 필요하다.
+
 ---
 
 ## 5. P1-T2c 과거 기록의 LEMMA-RCA 관련 사실
