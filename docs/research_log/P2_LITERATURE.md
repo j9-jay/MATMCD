@@ -129,7 +129,7 @@
 | 논문 | 학회 | 데이터 | 과제와 지표 | 방법 | 확인 상태 |
 |---|---|---|---|---|---|
 | **OCEAN** (Zheng et al., "Online Multi-modal Root Cause Identification in Microservice Systems") | IEEE BigData 2025, arXiv 2410.10021 | Product Review만 ("2021년 5월~12월의 장애 4개"). 그 외 Online Boutique, Train Ticket | 순위. PR@K, MAP@K, MRR. 1회 실행 | 딥러닝 온라인 인과 학습. LLM 없음 | 원문 대조 완료 (표 II) |
-| **Free to Look, Free to Reason** (Bi et al.) | arXiv 2610.35767 (2026-10, 사전 공개) | LEMMA 10사례 중 5사례 선택. Product Review/Cloud Computing 구분 없음, 사례 목록 미공개. 후보 필터 없음(약 347개) | PR@1만 | LLM 하네스, LLM 에이전트, 비LLM 방법 비교 | 원문 대조 완료 (표 7) |
+| **Free to Look, Free to Reason** (Bi et al.) | arXiv 2610.35767 (2026-10, 사전 공개) | LEMMA 10사례 중 5사례 선택. Product Review/Cloud Computing 구분 없음, 사례 목록 미공개. 후보 거르기 여부 미기재 (표 1의 347은 무작위 적중률의 역수로 계산한 유효 후보 수이며 실제 Pod 수가 아님. 2026-11-19 정정, 9절) | PR@1만 | LLM 하네스, LLM 에이전트, 비LLM 방법 비교 | 원문 대조 완료 (표 7) |
 | **TimeRAG** (Park) | arXiv 2601.04709 (2026) | LemmaRCA Prod, Cloud | **순위 과제가 아님.** 4지선다 정답률과 GPT-4o 판정 승률 | RAG + LLM + 시계열 인코더 | 서브에이전트 보고 |
 | MiCCD (Cai et al.) | Neural Networks 2025 | "전처리된 IT 시스템 데이터" | 원인을 다중 분류로 보고 F1 | 인과·반사실 | 서브에이전트 보고 |
 | Kodela et al. | ICCDS 2025 | LEMMA-RCA | 분류 정확도 등 ">92%" | 딥러닝 + 랜덤 포레스트 | 초록만 |
@@ -211,7 +211,7 @@
 | MATMCD 표 4 | PR, CC | 데이터셋당 1 (날짜 불명) | 순위 K 미만 | EVT 필터 후 (규칙 미공개) | LLM 에이전트 + 인과 발견 | — |
 | LEMMA-RCA 표 3, 7 | PR, CC | 4사례로 보임 (날짜 불명) | 순위 K 이하 | 정상성 없는 Pod 제외 | 통계·인과 | 사례와 지표 계산이 다름. MRR은 계산 방식이 같으나 사례가 다름 |
 | OCEAN 표 II | PR만 | 4사례로 보임 | 이하 방식으로 보임 (PR@1이 0이 아님) | 미기재 | 딥러닝 | 위와 같음, CC 없음 |
-| Free to Look 표 7 | LEMMA 5사례 | 5 (목록 미공개) | PR@1만 | 필터 없음 | LLM, 비LLM | 지표가 다름 |
+| Free to Look 표 7 | LEMMA 5사례 | 5 (목록 미공개) | PR@1만 | 미기재 (2026-11-19 정정) | LLM, 비LLM | 지표가 다름 |
 
 - **새 방법이 따를 사례와 지표는 K14로 정해졌다(MATMCD 논문의 사례와 지표).** 그런데 이 표에서 보듯 같은 데이터셋의 다른 공표값들은 사례 수와 지표 계산 방식이 서로 다르다. 어느 값을 어떤 형태로 최종 표에 넣을지는 사용자가 정한다(7절).
 
@@ -239,3 +239,21 @@
 | Free to Look 표 7 LEMMA 열 | arxiv.org/html/2610.35767 | 일치 |
 | OCEAN 표 II, "one trial" | arxiv.org/html/2410.10021 | 일치 |
 | 그 외 (TimeRAG, MiCCD, 5절 논문들) | — | 대조하지 않음 |
+
+---
+
+## 9. 순위 대상에 KPI가 들어가는가 (2026-11-19 추가 조사, G1-F)
+
+사용자 지적("MATMCD만이 아니라 다른 논문도 같이 봐야 한다")으로 서브에이전트가 조사했다. 작업자가 LEMMA-RCA 공식 코드의 핵심 줄을 직접 대조했다(스크래치 클론, 프로젝트 파일 변경 없음).
+
+| 출처 | KPI 처리 | 근거 수준 |
+|---|---|---|
+| LEMMA-RCA 논문 v4 | 2절 과제 정의: RCA는 "KPI와 가장 관련 있는 상위 K개 개체(entity)"를 찾는다. KPI는 기준이며 후보로 정의되지 않음. PR의 KPI는 지연시간, CC는 지연시간·오류율·사용률 | 원문 확인. "KPI를 뺀다"는 명시 문장은 없음 |
+| LEMMA-RCA 공식 코드 `github.com/lemma-rca/rca_baselines` | `Baseline/FastPC/test_FastPC_pod_metric.py` 222행 `count[:-1]`로 KPI 점수를 버리고 Pod만 출력. 저장소의 유일한 지표 계산 스크립트 `Baseline/FastPC/baseline_evaluation.py`는 `Pod_level_combine_ranking.csv`의 `pod` 열만 읽음. 정답은 Pod 이름 | 작업자 대조 |
+| 같은 저장소 RCD, CIRCA, ε-Diagnosis (`metric_only/RCA_methods_metric.py` 144행), BARO (`baro_main_metric.py` 140행) | KPI 열을 입력에 넣고, 출력에서 KPI를 거르는 줄이 없음. 이 방법들의 지표 계산 스크립트는 공개되지 않아 논문 수치에서 KPI를 뺐는지는 알 수 없음 | 코드 확인, 논문 수치와의 관계 미확인 |
+| OCEAN (arXiv 2410.10021) | KPI는 인과 그래프의 노드이자 랜덤 워크 재시작 노드. 순위 대상은 "시스템 개체". Cloud Computing 미사용. 코드 미공개 | 원문 확인(서브에이전트). 명시적 제외 문장 없음 |
+| Free to Look (arXiv 2610.35767) | 후보는 인벤토리 개체. 메트릭 열은 그 열을 가진 개체로 바꿔 채점. KPI 언급 없음. 표 1의 347은 유효 후보 수 | 원문 확인(서브에이전트) |
+| MATMCD 공개 코드 `official/matmcd/LEMMA_experiment.py` 31-42행 | 모든 열(KPI `Latency` 포함)을 순위 목록에 남김 | 작업자 대조 |
+
+- 결론: KPI를 순위에 넣는 것은 MATMCD 공개 코드뿐이고, 나머지는 문장이나 코드로 개체(Pod)만을 후보로 둔다. 결정은 MASTER_PLAN K20.
+- 부수 확인: LEMMA-RCA 공식 평가 스크립트의 PR@k는 `min(k, 정답 수)`로 나누고, MRR은 첫 정답의 순위로 계산한다.
