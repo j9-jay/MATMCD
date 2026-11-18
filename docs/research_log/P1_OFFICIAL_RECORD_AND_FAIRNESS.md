@@ -257,6 +257,7 @@ MAP@K = 사례별 max(K − 순위, 0) / K 의 평균
 | 저장소 `scripts/local_llm_*.py`, `local_embedding.py` 등 | 로컬 LLM·임베딩 실행 환경 |
 
 - 아래 두 줄의 `original_prompts`와 `oracle30` 입력은 MATMCD 재현 전용으로 만든 것이다. 실행 결과가 아니라 준비 입력이어서 2026-11-18 삭제 목록에 없었다. 지울지는 사용자가 정한다 (G1-D).
+- **G1-D 결정 (2026-11-18, MASTER_PLAN K18)**: 후보 A. 세 폴더(`original_prompts_v1`, `original_prompts_d06_v1`, `oracle30_pr20211203_v1`)를 삭제했다. 위 표의 두 줄은 이제 존재하지 않는다.
 
 ---
 
